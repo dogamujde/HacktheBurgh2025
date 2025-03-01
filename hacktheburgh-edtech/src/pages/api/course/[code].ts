@@ -1,7 +1,7 @@
 import { NextApiRequest, NextApiResponse } from 'next';
 import fs from 'fs';
 import path from 'path';
-import { backendConfig } from '../../../config/backend';
+import backendConfig from '../../../config/backend';
 
 // Define types for our data
 type Course = {

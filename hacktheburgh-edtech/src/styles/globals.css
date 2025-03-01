@@ -58,3 +58,54 @@ a {
     @apply bg-white rounded-lg shadow-md p-4 hover:shadow-lg transition-shadow;
   }
 } 
+
+/* Card Flip Animation Styles */
+.card-container {
+  perspective: 1000px;
+  cursor: pointer;
+}
+
+.card-flipper {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  transition: transform 0.8s;
+  transform-style: preserve-3d;
+}
+
+.card-container.flipped .card-flipper {
+  transform: rotateY(180deg);
+}
+
+.card-front, .card-back {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  -webkit-backface-visibility: hidden; /* Safari */
+  backface-visibility: hidden;
+  border-radius: 0.5rem;
+  overflow: hidden;
+}
+
+.card-front {
+  background-color: white;
+  color: black;
+}
+
+.card-back {
+  background-color: white;
+  color: black;
+  transform: rotateY(180deg);
+}
+
+/* Animation for card when hovered */
+.card-container:hover {
+  box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
+  transition: box-shadow 0.3s ease;
+}
+
+/* Add subtle animation when card is clicked */
+.card-container:active {
+  transform: scale(0.98);
+  transition: transform 0.2s ease;
+} 

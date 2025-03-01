@@ -620,13 +620,56 @@ class DRPSScraper:
                     # Generic table processing for tables without specific captions
                     self._extract_generic_table_info(table, detailed_info)
             
-            # Check for standalone assessment information that might not be in a table we've processed
-            assessment_header = soup.find('td', text=re.compile("Assessment.*Further Info"))
-            if assessment_header and 'assessment' not in detailed_info:
-                assessment_cell = assessment_header.find_next('td')
-                if assessment_cell:
-                    cells = [assessment_header, assessment_cell]
-                    self._extract_assessment_info(cells, detailed_info)
+            # Look for assessment information in different formats
+            
+            # 1. Check for standalone assessment sections with various headers
+            assessment_headers = [
+                'Assessment', 'Assessment Information', 'Assessment Methods',
+                'Assessment (Further Info)', 'Assessment further info',
+                'Method of Assessment', 'Assessment details'
+            ]
+            
+            for header_text in assessment_headers:
+                # Try to find headers in various formats (th, td, strong, b, etc.)
+                for tag in ['td', 'th', 'strong', 'b', 'p', 'div']:
+                    assessment_header = soup.find(tag, text=re.compile(f"{header_text}", re.IGNORECASE))
+                    if assessment_header:
+                        # Try to find the content in different ways based on the structure
+                        if tag in ['td', 'th']:
+                            # It's probably in a table, so look for the next cell
+                            assessment_cell = assessment_header.find_next('td')
+                            if assessment_cell:
+                                cells = [assessment_header, assessment_cell]
+                                self._extract_assessment_info(cells, detailed_info)
+                                break
+                        else:
+                            # It might be a standalone section, try to get the parent and siblings
+                            parent = assessment_header.parent
+                            next_sibling = parent.find_next_sibling(['p', 'div', 'ul'])
+                            if next_sibling:
+                                # Create a mock cell structure to reuse our extraction logic
+                                mock_cells = [assessment_header, next_sibling]
+                                self._extract_assessment_info(mock_cells, detailed_info)
+                                break
+                
+                # If we found assessment info, no need to check other headers
+                if 'assessment' in detailed_info:
+                    break
+            
+            # 2. Look for tables with assessment information
+            for table in tables:
+                rows = table.find_all('tr')
+                for row in rows:
+                    cells = row.find_all(['th', 'td'])
+                    if len(cells) >= 2:
+                        header_cell = cells[0]
+                        header_text = header_cell.get_text(strip=True)
+                        
+                        # Check if this row contains assessment information
+                        if any(re.search(pattern, header_text, re.IGNORECASE) for pattern in 
+                              ['assessment', 'exam', 'coursework', 'evaluation']):
+                            self._extract_assessment_info(cells, detailed_info)
+                            break
             
             # Extract course description
             course_description = soup.find('td', text=re.compile("Course description")) or soup.find('th', text=re.compile("Course description"))
@@ -642,6 +685,15 @@ class DRPSScraper:
                 next_cell = summary_header.find_next('td')
                 if next_cell:
                     detailed_info['summary'] = next_cell.get_text(strip=True)
+            
+            # Ensure we have a consistent assessment_methods field for the frontend
+            if 'assessment' in detailed_info and 'assessment_methods' not in detailed_info:
+                if 'full_text' in detailed_info['assessment']:
+                    detailed_info['assessment_methods'] = detailed_info['assessment']['full_text']
+                elif 'details' in detailed_info['assessment']:
+                    detailed_info['assessment_methods'] = "\n".join(detailed_info['assessment']['details'])
+                elif 'assessment_formatted' in detailed_info:
+                    detailed_info['assessment_methods'] = detailed_info['assessment_formatted']
             
             return detailed_info
         except Exception as e:
@@ -690,7 +742,24 @@ class DRPSScraper:
             value = cells[1].get_text(strip=True)
             
             if "Pre-requisites" in header:
+                # Clean up prerequisites text
+                if value.strip() == "Students MUST have passed:" or value.strip().lower() == "students must have passed:":
+                    value = "No Prerequisites"
+                # Handle the specific case "Students MUST have passed: No Prerequisites"
+                elif re.match(r'^students\s+must\s+have\s+passed:?\s*no\s+prerequisites$', value.strip(), re.IGNORECASE):
+                    value = "No Prerequisites"
+                # If it starts with the phrase but has actual content after
+                elif value.strip().lower().startswith("students must have passed:"):
+                    # Extract actual prerequisites
+                    prereq_content = value.strip()[len("Students MUST have passed:"):].strip()
+                    if not prereq_content or prereq_content.lower() == "no prerequisites":  # If nothing after the prefix or it says "No Prerequisites"
+                        value = "No Prerequisites"
+                    else:
+                        value = prereq_content  # Keep just the actual prerequisites
+                
                 detailed_info['pre_requisites'] = value
+                # Add a properly formatted prerequisites field for the frontend
+                detailed_info['prerequisites'] = value
             elif "Co-requisites" in header:
                 detailed_info['co_requisites'] = value
             elif "Prohibited Combinations" in header:
@@ -731,7 +800,8 @@ class DRPSScraper:
             return
         
         # The second cell contains assessment information
-        assessment_text = cells[1].get_text(strip=True)
+        assessment_cell = cells[1]
+        assessment_text = assessment_cell.get_text(strip=True)
         
         # Extract percentages for different assessment types
         written_exam_match = re.search(r'Written\s+Exam\s+(\d+)\s*%', assessment_text)
@@ -746,11 +816,53 @@ class DRPSScraper:
             "full_text": assessment_text
         }
         
+        # Extract any additional assessment details (usually below the percentages)
+        assessment_details = []
+        
+        # Look for paragraph elements or lists in the assessment cell
+        paragraphs = assessment_cell.find_all('p')
+        if paragraphs:
+            for p in paragraphs:
+                text = p.get_text(strip=True)
+                if text and text not in assessment_details:
+                    assessment_details.append(text)
+        
+        # Look for list items
+        list_items = assessment_cell.find_all('li')
+        if list_items:
+            for li in list_items:
+                text = li.get_text(strip=True)
+                if text and text not in assessment_details:
+                    assessment_details.append(text)
+        
+        # If we couldn't find structured elements, try to extract information directly from the text
+        if not assessment_details and len(assessment_text) > 50:  # If it's a substantial text
+            # Try to split by common delimiters
+            split_text = re.split(r'[.;:]', assessment_text)
+            for part in split_text:
+                if len(part.strip()) > 10 and part.strip() not in assessment_details:
+                    assessment_details.append(part.strip())
+        
+        if assessment_details:
+            assessment["details"] = assessment_details
+        
+        # Store the full assessment information
         detailed_info['assessment'] = assessment
         
-        # Also store the formatted assessment string as requested
-        assessment_str = f"Assessment (Further Info) Written Exam {assessment['written_exam_percent']} %, Coursework {assessment['coursework_percent']} %, Practical Exam {assessment['practical_exam_percent']} %"
-        detailed_info['assessment_formatted'] = assessment_str
+        # Also store a formatted string version for easier display
+        formatted_assessment = []
+        if assessment["written_exam_percent"] > 0:
+            formatted_assessment.append(f"Written Exam: {assessment['written_exam_percent']}%")
+        if assessment["coursework_percent"] > 0:
+            formatted_assessment.append(f"Coursework: {assessment['coursework_percent']}%")
+        if assessment["practical_exam_percent"] > 0:
+            formatted_assessment.append(f"Practical Exam: {assessment['practical_exam_percent']}%")
+        
+        detailed_info['assessment_formatted'] = ", ".join(formatted_assessment)
+        
+        # Store the assessment details in a dedicated field for the frontend
+        if assessment_details:
+            detailed_info['assessment_methods'] = "\n".join(assessment_details)
     
     def _extract_visiting_students_info(self, table, detailed_info):
         """Extract information for visiting students."""

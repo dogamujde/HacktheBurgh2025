@@ -60,6 +60,47 @@ export default function CourseDetail() {
   const renderAttribute = (label: string, value: string | string[] | undefined) => {
     if (!value || (Array.isArray(value) && value.length === 0)) return null;
     
+    // Skip prerequisites section if there are no prerequisites or if it contains placeholder text
+    if (label === "Prerequisites" && 
+        (value === "" || 
+         value.toLowerCase().includes("none") || 
+         value.toLowerCase().includes("no prerequisites") ||
+         value.trim() === "Students MUST have passed:" || 
+         value.trim().match(/^students\s+must\s+have\s+passed:?\s*$/i))) {
+      return null;
+    }
+    
+    // Clean up prerequisites text if it starts with "Students MUST have passed:" but has actual content
+    if (label === "Prerequisites" && typeof value === 'string') {
+      // Handle the specific case "Students MUST have passed: No Prerequisites"
+      if (value.trim().match(/^students\s+must\s+have\s+passed:?\s*no\s+prerequisites$/i)) {
+        return null; // Skip displaying this redundant information
+      }
+      
+      // If it starts with the phrase but has actual content after
+      if (value.trim().match(/^students\s+must\s+have\s+passed:?\s*(.+)/i)) {
+        // Keep the actual prerequisites, removing the prefix
+        const match = value.trim().match(/^students\s+must\s+have\s+passed:?\s*(.+)/i);
+        if (match && match[1] && match[1].trim()) {
+          value = match[1].trim();
+        } else {
+          // If nothing meaningful after the prefix, return null
+          return null;
+        }
+      }
+    }
+    
+    // Skip assessment section if it contains placeholder or incorrect data
+    if (label === "Assessment Methods" && 
+        (value === "" || 
+         typeof value === 'string' && (
+           value.trim().length === 0 || 
+           value.toLowerCase() === "not available" ||
+           value.toLowerCase() === "n/a"
+         ))) {
+      return null;
+    }
+    
     return (
       <div className="py-4 sm:grid sm:grid-cols-3 sm:gap-4 sm:py-5">
         <dt className="text-sm font-medium text-gray-500">{label}</dt>
