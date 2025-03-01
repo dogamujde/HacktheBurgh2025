@@ -243,17 +243,6 @@
     "navigationhelp_&_informationhomeintroductionglossarysearch_dpts_and_coursesregulationsregulationsdegree_programmesintroductionbrowse dptscoursesintroductionhumanities_and_social_sciencescience_and_engineeringmedicine_and_veterinary_medicineother_informationcombined_course_timetableprospectusesimportant information": "Navigation"
   },
   {
-    "code": "KeyAvailable to all students - SVNot available to visiting students - SSPart-year visiting students only - VV",
-    "name": "Available to all students - SV",
-    "url": "",
-    "availability": "Key",
-    "period": "Not available to visiting students - SS",
-    "credits": "Part-year visiting students only - VV",
-    "subject": "Access",
-    "school_name": "Centre for Open Learning",
-    "college": "College of Arts, Humanities and Social Sciences"
-  },
-  {
     "code": "LEAP07001",
     "name": "LEAPS Transitions Course",
     "url": "http://www.drps.ed.ac.uk/24-25/dpt/cxleap07001.htm",
@@ -279,17 +268,6 @@
     "keywords": "Not entered",
     "course_organiser": "Miss Alice SmithTel:Email:alice.c.smith@ed.ac.uk",
     "navigationhelp_&_informationhomeintroductionglossarysearch_dpts_and_coursesregulationsregulationsdegree_programmesintroductionbrowse dptscoursesintroductionhumanities_and_social_sciencescience_and_engineeringmedicine_and_veterinary_medicineother_informationcombined_course_timetableprospectusesimportant information": "Navigation"
-  },
-  {
-    "code": "KeyAvailable to all students - SVNot available to visiting students - SSPart-year visiting students only - VV",
-    "name": "Available to all students - SV",
-    "url": "",
-    "availability": "Key",
-    "period": "Not available to visiting students - SS",
-    "credits": "Part-year visiting students only - VV",
-    "subject": "Lothians Equal Access Programmes for Schools",
-    "school_name": "Centre for Open Learning",
-    "college": "College of Arts, Humanities and Social Sciences"
   },
   {
     "code": "LLLA07108",
@@ -1344,7 +1322,7 @@
     "url": "http://www.drps.ed.ac.uk/24-25/dpt/cxllla07121.htm",
     "availability": "",
     "period": "Not delivered this year",
-    "credits": "How Art Works (Credit Plus)",
+    "credits": "10",
     "subject": "Creative Arts",
     "school_name": "Centre for Open Learning",
     "college": "College of Arts, Humanities and Social Sciences",
@@ -2936,7 +2914,7 @@
     "url": "http://www.drps.ed.ac.uk/24-25/dpt/cxarch11243.htm",
     "availability": "",
     "period": "Not delivered this year",
-    "credits": "Architecture and Urban Design Studio (non-Â­credit bearing)",
+    "credits": "0",
     "subject": "Creative Arts",
     "school_name": "Centre for Open Learning",
     "college": "College of Arts, Humanities and Social Sciences",
@@ -2957,23 +2935,12 @@
     "navigationhelp_&_informationhomeintroductionglossarysearch_dpts_and_coursesregulationsregulationsdegree_programmesintroductionbrowse dptscoursesintroductionhumanities_and_social_sciencescience_and_engineeringmedicine_and_veterinary_medicineother_informationcombined_course_timetableprospectusesimportant information": "Navigation"
   },
   {
-    "code": "KeyAvailable to all students - SVNot available to visiting students - SSPart-year visiting students only - VV",
-    "name": "Available to all students - SV",
-    "url": "",
-    "availability": "Key",
-    "period": "Not available to visiting students - SS",
-    "credits": "Part-year visiting students only - VV",
-    "subject": "Creative Arts",
-    "school_name": "Centre for Open Learning",
-    "college": "College of Arts, Humanities and Social Sciences"
-  },
-  {
     "code": "LLLD07002",
     "name": "Foundations of Counselling and Psychotherapy 1 (10 credit points)",
     "url": "http://www.drps.ed.ac.uk/24-25/dpt/cxllld07002.htm",
     "availability": "",
     "period": "Not delivered this year",
-    "credits": "Foundations of Counselling and Psychotherapy 1 (10 credit points)",
+    "credits": "10",
     "subject": "Health and Social Science",
     "school_name": "Centre for Open Learning",
     "college": "College of Arts, Humanities and Social Sciences",
@@ -2997,7 +2964,7 @@
     "url": "http://www.drps.ed.ac.uk/24-25/dpt/cxllld07003.htm",
     "availability": "",
     "period": "Not delivered this year",
-    "credits": "Foundations of Counselling and Psychotherapy 2 (10 credit points)",
+    "credits": "10",
     "subject": "Health and Social Science",
     "school_name": "Centre for Open Learning",
     "college": "College of Arts, Humanities and Social Sciences",
@@ -3021,7 +2988,7 @@
     "url": "http://www.drps.ed.ac.uk/24-25/dpt/cxllld07004.htm",
     "availability": "",
     "period": "Not delivered this year",
-    "credits": "Foundations of Counselling and Psychotherapy 3 (10 credit points)",
+    "credits": "10",
     "subject": "Health and Social Science",
     "school_name": "Centre for Open Learning",
     "college": "College of Arts, Humanities and Social Sciences",
@@ -3045,7 +3012,7 @@
     "url": "http://www.drps.ed.ac.uk/24-25/dpt/cxllld07001.htm",
     "availability": "",
     "period": "Not delivered this year",
-    "credits": "Introduction to Clinical Psychology (10 credit points)",
+    "credits": "10",
     "subject": "Health and Social Science",
     "school_name": "Centre for Open Learning",
     "college": "College of Arts, Humanities and Social Sciences",
@@ -3116,17 +3083,6 @@
     "keywords": "Not entered",
     "course_organiser": "Ms Christine PriceTel:(0131 6)51 5097Email:Christine.Price@ed.ac.uk",
     "navigationhelp_&_informationhomeintroductionglossarysearch_dpts_and_coursesregulationsregulationsdegree_programmesintroductionbrowse dptscoursesintroductionhumanities_and_social_sciencescience_and_engineeringmedicine_and_veterinary_medicineother_informationcombined_course_timetableprospectusesimportant information": "Navigation"
-  },
-  {
-    "code": "KeyAvailable to all students - SVNot available to visiting students - SSPart-year visiting students only - VV",
-    "name": "Available to all students - SV",
-    "url": "",
-    "availability": "Key",
-    "period": "Not available to visiting students - SS",
-    "credits": "Part-year visiting students only - VV",
-    "subject": "Health and Social Science",
-    "school_name": "Centre for Open Learning",
-    "college": "College of Arts, Humanities and Social Sciences"
   },
   {
     "code": "LLLE07042",
@@ -3547,7 +3503,7 @@
     "url": "http://www.drps.ed.ac.uk/24-25/dpt/cxllle07023.htm",
     "availability": "",
     "period": "Not delivered this year",
-    "credits": "Introducing Scottish Social History (Credit Plus)",
+    "credits": "10",
     "subject": "History, Classics and Archaeology",
     "school_name": "Centre for Open Learning",
     "college": "College of Arts, Humanities and Social Sciences",
@@ -4350,17 +4306,6 @@
     "keywords": "Late Antiquity,seventh century,Islam,Caliphate,Byzantine Empire,Late Roman Empire",
     "course_organiser": "Dr Marie LegendreTel:(01316)51 7112Email:Marie.Legendre@ed.ac.uk",
     "navigationhelp_&_informationhomeintroductionglossarysearch_dpts_and_coursesregulationsregulationsdegree_programmesintroductionbrowse dptscoursesintroductionhumanities_and_social_sciencescience_and_engineeringmedicine_and_veterinary_medicineother_informationcombined_course_timetableprospectusesimportant information": "Navigation"
-  },
-  {
-    "code": "KeyAvailable to all students - SVNot available to visiting students - SSPart-year visiting students only - VV",
-    "name": "Available to all students - SV",
-    "url": "",
-    "availability": "Key",
-    "period": "Not available to visiting students - SS",
-    "credits": "Part-year visiting students only - VV",
-    "subject": "History, Classics and Archaeology",
-    "school_name": "Centre for Open Learning",
-    "college": "College of Arts, Humanities and Social Sciences"
   },
   {
     "code": "LLLG07027",
@@ -5416,7 +5361,7 @@
     "url": "http://www.drps.ed.ac.uk/24-25/dpt/cxlllg07040.htm",
     "availability": "",
     "period": "Not delivered this year",
-    "credits": "Film Studies - Credit Plus",
+    "credits": "10",
     "subject": "Literature, Languages and Cultures",
     "school_name": "Centre for Open Learning",
     "college": "College of Arts, Humanities and Social Sciences",
@@ -5837,7 +5782,7 @@
     "url": "http://www.drps.ed.ac.uk/24-25/dpt/cxlllg07067.htm",
     "availability": "SS1",
     "period": "Lifelong Learning - Session 2",
-    "credits": "Introducing Cultural Studies (Credit Plus)",
+    "credits": "10",
     "subject": "Literature, Languages and Cultures",
     "school_name": "Centre for Open Learning",
     "college": "College of Arts, Humanities and Social Sciences",
@@ -6311,7 +6256,7 @@
     "url": "http://www.drps.ed.ac.uk/24-25/dpt/cxenli07001.htm",
     "availability": "SS1",
     "period": "Lifelong Learning - Session 2",
-    "credits": "Reading English Literature (Credit Plus)",
+    "credits": "10",
     "subject": "Literature, Languages and Cultures",
     "school_name": "Centre for Open Learning",
     "college": "College of Arts, Humanities and Social Sciences",
@@ -7516,17 +7461,6 @@
     "navigationhelp_&_informationhomeintroductionglossarysearch_dpts_and_coursesregulationsregulationsdegree_programmesintroductionbrowse dptscoursesintroductionhumanities_and_social_sciencescience_and_engineeringmedicine_and_veterinary_medicineother_informationcombined_course_timetableprospectusesimportant information": "Navigation"
   },
   {
-    "code": "KeyAvailable to all students - SVNot available to visiting students - SSPart-year visiting students only - VV",
-    "name": "Available to all students - SV",
-    "url": "",
-    "availability": "Key",
-    "period": "Not available to visiting students - SS",
-    "credits": "Part-year visiting students only - VV",
-    "subject": "Literature, Languages and Cultures",
-    "school_name": "Centre for Open Learning",
-    "college": "College of Arts, Humanities and Social Sciences"
-  },
-  {
     "code": "LLLI07001",
     "name": "20th-Century British Philosophers",
     "url": "http://www.drps.ed.ac.uk/24-25/dpt/cxllli07001.htm",
@@ -7657,7 +7591,7 @@
     "url": "http://www.drps.ed.ac.uk/24-25/dpt/cxphil07002.htm",
     "availability": "SS1",
     "period": "Lifelong Learning - Session 1",
-    "credits": "Introducing Philosophy (Credit Plus)",
+    "credits": "10",
     "subject": "Philosophy, Psychology and Language Sciences",
     "school_name": "Centre for Open Learning",
     "college": "College of Arts, Humanities and Social Sciences",
@@ -8081,17 +8015,6 @@
     "navigationhelp_&_informationhomeintroductionglossarysearch_dpts_and_coursesregulationsregulationsdegree_programmesintroductionbrowse dptscoursesintroductionhumanities_and_social_sciencescience_and_engineeringmedicine_and_veterinary_medicineother_informationcombined_course_timetableprospectusesimportant information": "Navigation"
   },
   {
-    "code": "KeyAvailable to all students - SVNot available to visiting students - SSPart-year visiting students only - VV",
-    "name": "Available to all students - SV",
-    "url": "",
-    "availability": "Key",
-    "period": "Not available to visiting students - SS",
-    "credits": "Part-year visiting students only - VV",
-    "subject": "Philosophy, Psychology and Language Sciences",
-    "school_name": "Centre for Open Learning",
-    "college": "College of Arts, Humanities and Social Sciences"
-  },
-  {
     "code": "LLLJ07004",
     "name": "An Introduction to Political Theory",
     "url": "http://www.drps.ed.ac.uk/24-25/dpt/cxlllj07004.htm",
@@ -8219,7 +8142,7 @@
     "url": "http://www.drps.ed.ac.uk/24-25/dpt/cxssps07005.htm",
     "availability": "",
     "period": "Not delivered this year",
-    "credits": "European Politics and Policies (Credit Plus)",
+    "credits": "10",
     "subject": "Social and Political Science",
     "school_name": "Centre for Open Learning",
     "college": "College of Arts, Humanities and Social Sciences",
@@ -8268,7 +8191,7 @@
     "url": "http://www.drps.ed.ac.uk/24-25/dpt/cxlllj07002.htm",
     "availability": "",
     "period": "Not delivered this year",
-    "credits": "Introducing Social Science (Credit Plus)",
+    "credits": "10",
     "subject": "Social and Political Science",
     "school_name": "Centre for Open Learning",
     "college": "College of Arts, Humanities and Social Sciences",
@@ -8840,7 +8763,7 @@
     "url": "http://www.drps.ed.ac.uk/24-25/dpt/cxpgsp11597.htm",
     "availability": "SV1",
     "period": "Full Year",
-    "credits": "Advanced Methods Workshops (10 credit)",
+    "credits": "10",
     "subject": "Social and Political Science",
     "school_name": "Centre for Open Learning",
     "college": "College of Arts, Humanities and Social Sciences",
@@ -8862,17 +8785,6 @@
     "keywords": "Not entered",
     "course_organiser": "Dr Christopher WretmanTel:Email:Christopher.Wretman@ed.ac.uk",
     "navigationhelp_&_informationhomeintroductionglossarysearch_dpts_and_coursesregulationsregulationsdegree_programmesintroductionbrowse dptscoursesintroductionhumanities_and_social_sciencescience_and_engineeringmedicine_and_veterinary_medicineother_informationcombined_course_timetableprospectusesimportant information": "Navigation"
-  },
-  {
-    "code": "KeyAvailable to all students - SVNot available to visiting students - SSPart-year visiting students only - VV",
-    "name": "Available to all students - SV",
-    "url": "",
-    "availability": "Key",
-    "period": "Not available to visiting students - SS",
-    "credits": "Part-year visiting students only - VV",
-    "subject": "Social and Political Science",
-    "school_name": "Centre for Open Learning",
-    "college": "College of Arts, Humanities and Social Sciences"
   },
   {
     "code": "LLLK07001",
@@ -9031,17 +8943,6 @@
     "navigationhelp_&_informationhomeintroductionglossarysearch_dpts_and_coursesregulationsregulationsdegree_programmesintroductionbrowse dptscoursesintroductionhumanities_and_social_sciencescience_and_engineeringmedicine_and_veterinary_medicineother_informationcombined_course_timetableprospectusesimportant information": "Navigation"
   },
   {
-    "code": "KeyAvailable to all students - SVNot available to visiting students - SSPart-year visiting students only - VV",
-    "name": "Available to all students - SV",
-    "url": "",
-    "availability": "Key",
-    "period": "Not available to visiting students - SS",
-    "credits": "Part-year visiting students only - VV",
-    "subject": "Education",
-    "school_name": "Centre for Open Learning",
-    "college": "College of Arts, Humanities and Social Sciences"
-  },
-  {
     "code": "LLLL07001",
     "name": "Introduction to Quantitative Data Analysis",
     "url": "http://www.drps.ed.ac.uk/24-25/dpt/cxllll07001.htm",
@@ -9117,17 +9018,6 @@
     "navigationhelp_&_informationhomeintroductionglossarysearch_dpts_and_coursesregulationsregulationsdegree_programmesintroductionbrowse dptscoursesintroductionhumanities_and_social_sciencescience_and_engineeringmedicine_and_veterinary_medicineother_informationcombined_course_timetableprospectusesimportant information": "Navigation"
   },
   {
-    "code": "KeyAvailable to all students - SVNot available to visiting students - SSPart-year visiting students only - VV",
-    "name": "Available to all students - SV",
-    "url": "",
-    "availability": "Key",
-    "period": "Not available to visiting students - SS",
-    "credits": "Part-year visiting students only - VV",
-    "subject": "Science",
-    "school_name": "Centre for Open Learning",
-    "college": "College of Arts, Humanities and Social Sciences"
-  },
-  {
     "code": "LLLM08002",
     "name": "Business Communication and Social Media",
     "url": "http://www.drps.ed.ac.uk/24-25/dpt/cxlllm08002.htm",
@@ -9176,17 +9066,6 @@
     "navigationhelp_&_informationhomeintroductionglossarysearch_dpts_and_coursesregulationsregulationsdegree_programmesintroductionbrowse dptscoursesintroductionhumanities_and_social_sciencescience_and_engineeringmedicine_and_veterinary_medicineother_informationcombined_course_timetableprospectusesimportant information": "Navigation"
   },
   {
-    "code": "KeyAvailable to all students - SVNot available to visiting students - SSPart-year visiting students only - VV",
-    "name": "Available to all students - SV",
-    "url": "",
-    "availability": "Key",
-    "period": "Not available to visiting students - SS",
-    "credits": "Part-year visiting students only - VV",
-    "subject": "Business",
-    "school_name": "Centre for Open Learning",
-    "college": "College of Arts, Humanities and Social Sciences"
-  },
-  {
     "code": "LLLN08001",
     "name": "International Law",
     "url": "http://www.drps.ed.ac.uk/24-25/dpt/cxllln08001.htm",
@@ -9209,17 +9088,6 @@
     "keywords": "Not entered",
     "course_organiser": "Mr Maximillian JaedeTel:Email:v1mjaede@exseed.ed.ac.uk",
     "navigationhelp_&_informationhomeintroductionglossarysearch_dpts_and_coursesregulationsregulationsdegree_programmesintroductionbrowse dptscoursesintroductionhumanities_and_social_sciencescience_and_engineeringmedicine_and_veterinary_medicineother_informationcombined_course_timetableprospectusesimportant information": "Navigation"
-  },
-  {
-    "code": "KeyAvailable to all students - SVNot available to visiting students - SSPart-year visiting students only - VV",
-    "name": "Available to all students - SV",
-    "url": "",
-    "availability": "Key",
-    "period": "Not available to visiting students - SS",
-    "credits": "Part-year visiting students only - VV",
-    "subject": "Law",
-    "school_name": "Centre for Open Learning",
-    "college": "College of Arts, Humanities and Social Sciences"
   },
   {
     "code": "LLLO07003",
@@ -9469,16 +9337,5 @@
     "keywords": "Not entered",
     "course_organiser": "Mrs Yana ProskurkinaTel:Email:yana.proskurkina@ed.ac.uk",
     "navigationhelp_&_informationhomeintroductionglossarysearch_dpts_and_coursesregulationsregulationsdegree_programmesintroductionbrowse dptscoursesintroductionhumanities_and_social_sciencescience_and_engineeringmedicine_and_veterinary_medicineother_informationcombined_course_timetableprospectusesimportant information": "Navigation"
-  },
-  {
-    "code": "KeyAvailable to all students - SVNot available to visiting students - SSPart-year visiting students only - VV",
-    "name": "Available to all students - SV",
-    "url": "",
-    "availability": "Key",
-    "period": "Not available to visiting students - SS",
-    "credits": "Part-year visiting students only - VV",
-    "subject": "Languages",
-    "school_name": "Centre for Open Learning",
-    "college": "College of Arts, Humanities and Social Sciences"
   }
 ]

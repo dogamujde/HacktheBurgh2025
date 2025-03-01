@@ -155,17 +155,6 @@
     "navigationhelp_&_informationhomeintroductionglossarysearch_dpts_and_coursesregulationsregulationsdegree_programmesintroductionbrowse dptscoursesintroductionhumanities_and_social_sciencescience_and_engineeringmedicine_and_veterinary_medicineother_informationcombined_course_timetableprospectusesimportant information": "Navigation"
   },
   {
-    "code": "KeyAvailable to all students - SVNot available to visiting students - SSPart-year visiting students only - VV",
-    "name": "Available to all students - SV",
-    "url": "",
-    "availability": "Key",
-    "period": "Not available to visiting students - SS",
-    "credits": "Part-year visiting students only - VV",
-    "subject": "Biochemistry",
-    "school_name": "School of Biological Sciences",
-    "college": "College of Science and Engineering"
-  },
-  {
     "code": "BILG08011",
     "name": "Animal Biology 2",
     "url": "http://www.drps.ed.ac.uk/24-25/dpt/cxbilg08011.htm",
@@ -1394,17 +1383,6 @@
     "navigationhelp_&_informationhomeintroductionglossarysearch_dpts_and_coursesregulationsregulationsdegree_programmesintroductionbrowse dptscoursesintroductionhumanities_and_social_sciencescience_and_engineeringmedicine_and_veterinary_medicineother_informationcombined_course_timetableprospectusesimportant information": "Navigation"
   },
   {
-    "code": "KeyAvailable to all students - SVNot available to visiting students - SSPart-year visiting students only - VV",
-    "name": "Available to all students - SV",
-    "url": "",
-    "availability": "Key",
-    "period": "Not available to visiting students - SS",
-    "credits": "Part-year visiting students only - VV",
-    "subject": "Biology",
-    "school_name": "School of Biological Sciences",
-    "college": "College of Science and Engineering"
-  },
-  {
     "code": "BITE10007",
     "name": "Biotechnology Industrial Visits and Core Skills",
     "url": "http://www.drps.ed.ac.uk/24-25/dpt/cxbite10007.htm",
@@ -1571,17 +1549,6 @@
     "navigationhelp_&_informationhomeintroductionglossarysearch_dpts_and_coursesregulationsregulationsdegree_programmesintroductionbrowse dptscoursesintroductionhumanities_and_social_sciencescience_and_engineeringmedicine_and_veterinary_medicineother_informationcombined_course_timetableprospectusesimportant information": "Navigation"
   },
   {
-    "code": "KeyAvailable to all students - SVNot available to visiting students - SSPart-year visiting students only - VV",
-    "name": "Available to all students - SV",
-    "url": "",
-    "availability": "Key",
-    "period": "Not available to visiting students - SS",
-    "credits": "Part-year visiting students only - VV",
-    "subject": "Biotechnology",
-    "school_name": "School of Biological Sciences",
-    "college": "College of Science and Engineering"
-  },
-  {
     "code": "CEBI10005",
     "name": "Cell Biology Research Project",
     "url": "http://www.drps.ed.ac.uk/24-25/dpt/cxcebi10005.htm",
@@ -1634,17 +1601,6 @@
     "keywords": "CEBICeBiFMHD",
     "course_organiser": "Prof Eric SchirmerTel:(0131 6)50 7090Email:E.Schirmer@ed.ac.uk",
     "navigationhelp_&_informationhomeintroductionglossarysearch_dpts_and_coursesregulationsregulationsdegree_programmesintroductionbrowse dptscoursesintroductionhumanities_and_social_sciencescience_and_engineeringmedicine_and_veterinary_medicineother_informationcombined_course_timetableprospectusesimportant information": "Navigation"
-  },
-  {
-    "code": "KeyAvailable to all students - SVNot available to visiting students - SSPart-year visiting students only - VV",
-    "name": "Available to all students - SV",
-    "url": "",
-    "availability": "Key",
-    "period": "Not available to visiting students - SS",
-    "credits": "Part-year visiting students only - VV",
-    "subject": "Cell Biology (Biological Sciences)",
-    "school_name": "School of Biological Sciences",
-    "college": "College of Science and Engineering"
   },
   {
     "code": "DEBI10032",
@@ -1812,17 +1768,6 @@
     "navigationhelp_&_informationhomeintroductionglossarysearch_dpts_and_coursesregulationsregulationsdegree_programmesintroductionbrowse dptscoursesintroductionhumanities_and_social_sciencescience_and_engineeringmedicine_and_veterinary_medicineother_informationcombined_course_timetableprospectusesimportant information": "Navigation"
   },
   {
-    "code": "KeyAvailable to all students - SVNot available to visiting students - SSPart-year visiting students only - VV",
-    "name": "Available to all students - SV",
-    "url": "",
-    "availability": "Key",
-    "period": "Not available to visiting students - SS",
-    "credits": "Part-year visiting students only - VV",
-    "subject": "Developmental Biology",
-    "school_name": "School of Biological Sciences",
-    "college": "College of Science and Engineering"
-  },
-  {
     "code": "ECLG10007",
     "name": "Biological Sciences (Ecology) Field Course",
     "url": "http://www.drps.ed.ac.uk/24-25/dpt/cxeclg10007.htm",
@@ -1954,17 +1899,6 @@
     "keywords": "Marine,coastal ocean ecosystems; biophysical processes and scales; marine policy and governance; cl",
     "course_organiser": "Dr Sebastian HennigeTel:(0131 6)50 5410Email:s.hennige@ed.ac.uk",
     "navigationhelp_&_informationhomeintroductionglossarysearch_dpts_and_coursesregulationsregulationsdegree_programmesintroductionbrowse dptscoursesintroductionhumanities_and_social_sciencescience_and_engineeringmedicine_and_veterinary_medicineother_informationcombined_course_timetableprospectusesimportant information": "Navigation"
-  },
-  {
-    "code": "KeyAvailable to all students - SVNot available to visiting students - SSPart-year visiting students only - VV",
-    "name": "Available to all students - SV",
-    "url": "",
-    "availability": "Key",
-    "period": "Not available to visiting students - SS",
-    "credits": "Part-year visiting students only - VV",
-    "subject": "Ecology",
-    "school_name": "School of Biological Sciences",
-    "college": "College of Science and Engineering"
   },
   {
     "code": "EVBI10011",
@@ -2132,17 +2066,6 @@
     "navigationhelp_&_informationhomeintroductionglossarysearch_dpts_and_coursesregulationsregulationsdegree_programmesintroductionbrowse dptscoursesintroductionhumanities_and_social_sciencescience_and_engineeringmedicine_and_veterinary_medicineother_informationcombined_course_timetableprospectusesimportant information": "Navigation"
   },
   {
-    "code": "KeyAvailable to all students - SVNot available to visiting students - SSPart-year visiting students only - VV",
-    "name": "Available to all students - SV",
-    "url": "",
-    "availability": "Key",
-    "period": "Not available to visiting students - SS",
-    "credits": "Part-year visiting students only - VV",
-    "subject": "Evolutionary Biology",
-    "school_name": "School of Biological Sciences",
-    "college": "College of Science and Engineering"
-  },
-  {
     "code": "GENE10019",
     "name": "Genetics Research Project",
     "url": "http://www.drps.ed.ac.uk/24-25/dpt/cxgene10019.htm",
@@ -2228,17 +2151,6 @@
     "navigationhelp_&_informationhomeintroductionglossarysearch_dpts_and_coursesregulationsregulationsdegree_programmesintroductionbrowse dptscoursesintroductionhumanities_and_social_sciencescience_and_engineeringmedicine_and_veterinary_medicineother_informationcombined_course_timetableprospectusesimportant information": "Navigation"
   },
   {
-    "code": "KeyAvailable to all students - SVNot available to visiting students - SSPart-year visiting students only - VV",
-    "name": "Available to all students - SV",
-    "url": "",
-    "availability": "Key",
-    "period": "Not available to visiting students - SS",
-    "credits": "Part-year visiting students only - VV",
-    "subject": "Genetics",
-    "school_name": "School of Biological Sciences",
-    "college": "College of Science and Engineering"
-  },
-  {
     "code": "PUHR11113",
     "name": "Infectious Disease Epidemiology",
     "url": "http://www.drps.ed.ac.uk/24-25/dpt/cxpuhr11113.htm",
@@ -2264,17 +2176,6 @@
     "keywords": "Epidemiology,data analysis,disease dynamics,infectious disease control,mathematical modelling",
     "course_organiser": "Dr Ting ShiTel:(0131 6)50 3197Email:Ting.Shi@ed.ac.uk",
     "navigationhelp_&_informationhomeintroductionglossarysearch_dpts_and_coursesregulationsregulationsdegree_programmesintroductionbrowse dptscoursesintroductionhumanities_and_social_sciencescience_and_engineeringmedicine_and_veterinary_medicineother_informationcombined_course_timetableprospectusesimportant information": "Navigation"
-  },
-  {
-    "code": "KeyAvailable to all students - SVNot available to visiting students - SSPart-year visiting students only - VV",
-    "name": "Available to all students - SV",
-    "url": "",
-    "availability": "Key",
-    "period": "Not available to visiting students - SS",
-    "credits": "Part-year visiting students only - VV",
-    "subject": "Infectious Diseases  (Biological Sciences)",
-    "school_name": "School of Biological Sciences",
-    "college": "College of Science and Engineering"
   },
   {
     "code": "IMMU10017",
@@ -2464,17 +2365,6 @@
     "navigationhelp_&_informationhomeintroductionglossarysearch_dpts_and_coursesregulationsregulationsdegree_programmesintroductionbrowse dptscoursesintroductionhumanities_and_social_sciencescience_and_engineeringmedicine_and_veterinary_medicineother_informationcombined_course_timetableprospectusesimportant information": "Navigation"
   },
   {
-    "code": "KeyAvailable to all students - SVNot available to visiting students - SSPart-year visiting students only - VV",
-    "name": "Available to all students - SV",
-    "url": "",
-    "availability": "Key",
-    "period": "Not available to visiting students - SS",
-    "credits": "Part-year visiting students only - VV",
-    "subject": "Immunology",
-    "school_name": "School of Biological Sciences",
-    "college": "College of Science and Engineering"
-  },
-  {
     "code": "MLBI10009",
     "name": "Gene Expression",
     "url": "http://www.drps.ed.ac.uk/24-25/dpt/cxmlbi10009.htm",
@@ -2614,17 +2504,6 @@
     "navigationhelp_&_informationhomeintroductionglossarysearch_dpts_and_coursesregulationsregulationsdegree_programmesintroductionbrowse dptscoursesintroductionhumanities_and_social_sciencescience_and_engineeringmedicine_and_veterinary_medicineother_informationcombined_course_timetableprospectusesimportant information": "Navigation"
   },
   {
-    "code": "KeyAvailable to all students - SVNot available to visiting students - SSPart-year visiting students only - VV",
-    "name": "Available to all students - SV",
-    "url": "",
-    "availability": "Key",
-    "period": "Not available to visiting students - SS",
-    "credits": "Part-year visiting students only - VV",
-    "subject": "Molecular Biology",
-    "school_name": "School of Biological Sciences",
-    "college": "College of Science and Engineering"
-  },
-  {
     "code": "MOGE10004",
     "name": "DNA Repair and Genome Instability",
     "url": "http://www.drps.ed.ac.uk/24-25/dpt/cxmoge10004.htm",
@@ -2706,17 +2585,6 @@
     "keywords": "Synoptic,Genetics,Cell,Molecular.",
     "course_organiser": "Dr Heidrun InterthalTel:(0131 6)50 5389Email:heidrun.interthal@ed.ac.uk",
     "navigationhelp_&_informationhomeintroductionglossarysearch_dpts_and_coursesregulationsregulationsdegree_programmesintroductionbrowse dptscoursesintroductionhumanities_and_social_sciencescience_and_engineeringmedicine_and_veterinary_medicineother_informationcombined_course_timetableprospectusesimportant information": "Navigation"
-  },
-  {
-    "code": "KeyAvailable to all students - SVNot available to visiting students - SSPart-year visiting students only - VV",
-    "name": "Available to all students - SV",
-    "url": "",
-    "availability": "Key",
-    "period": "Not available to visiting students - SS",
-    "credits": "Part-year visiting students only - VV",
-    "subject": "Molecular Genetics (Biological Sciences)",
-    "school_name": "School of Biological Sciences",
-    "college": "College of Science and Engineering"
   },
   {
     "code": "PGBI11084",
@@ -4705,17 +4573,6 @@
     "navigationhelp_&_informationhomeintroductionglossarysearch_dpts_and_coursesregulationsregulationsdegree_programmesintroductionbrowse dptscoursesintroductionhumanities_and_social_sciencescience_and_engineeringmedicine_and_veterinary_medicineother_informationcombined_course_timetableprospectusesimportant information": "Navigation"
   },
   {
-    "code": "KeyAvailable to all students - SVNot available to visiting students - SSPart-year visiting students only - VV",
-    "name": "Available to all students - SV",
-    "url": "",
-    "availability": "Key",
-    "period": "Not available to visiting students - SS",
-    "credits": "Part-year visiting students only - VV",
-    "subject": "Postgraduate",
-    "school_name": "School of Biological Sciences",
-    "college": "College of Science and Engineering"
-  },
-  {
     "code": "PLSC10004",
     "name": "Fungi and Plant Pathology",
     "url": "http://www.drps.ed.ac.uk/24-25/dpt/cxplsc10004.htm",
@@ -4962,17 +4819,6 @@
     "keywords": "PLSCSynoptc",
     "course_organiser": "Dr Annis RichardsonTel:(0131 6)50 5335Email:Annis.Richardson@ed.ac.uk",
     "navigationhelp_&_informationhomeintroductionglossarysearch_dpts_and_coursesregulationsregulationsdegree_programmesintroductionbrowse dptscoursesintroductionhumanities_and_social_sciencescience_and_engineeringmedicine_and_veterinary_medicineother_informationcombined_course_timetableprospectusesimportant information": "Navigation"
-  },
-  {
-    "code": "KeyAvailable to all students - SVNot available to visiting students - SSPart-year visiting students only - VV",
-    "name": "Available to all students - SV",
-    "url": "",
-    "availability": "Key",
-    "period": "Not available to visiting students - SS",
-    "credits": "Part-year visiting students only - VV",
-    "subject": "Plant Science",
-    "school_name": "School of Biological Sciences",
-    "college": "College of Science and Engineering"
   },
   {
     "code": "ZLGY10020",
@@ -5353,16 +5199,5 @@
     "keywords": "Conservation,ecology,population management",
     "course_organiser": "Dr Guillaume LatombeTel:Email:glatombe@ed.ac.uk",
     "navigationhelp_&_informationhomeintroductionglossarysearch_dpts_and_coursesregulationsregulationsdegree_programmesintroductionbrowse dptscoursesintroductionhumanities_and_social_sciencescience_and_engineeringmedicine_and_veterinary_medicineother_informationcombined_course_timetableprospectusesimportant information": "Navigation"
-  },
-  {
-    "code": "KeyAvailable to all students - SVNot available to visiting students - SSPart-year visiting students only - VV",
-    "name": "Available to all students - SV",
-    "url": "",
-    "availability": "Key",
-    "period": "Not available to visiting students - SS",
-    "credits": "Part-year visiting students only - VV",
-    "subject": "Zoology",
-    "school_name": "School of Biological Sciences",
-    "college": "College of Science and Engineering"
   }
 ]

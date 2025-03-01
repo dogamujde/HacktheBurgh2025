@@ -2172,7 +2172,7 @@
     "url": "http://www.drps.ed.ac.uk/24-25/dpt/cxgesc10001.htm",
     "availability": "SS1",
     "period": "Semester 2",
-    "credits": "Self-Designed Learning (10 credits; SCQF level 10; GeoSciences)",
+    "credits": "10",
     "subject": "Earth Science",
     "school_name": "School of Geosciences",
     "college": "College of Science and Engineering",
@@ -2353,17 +2353,6 @@
     "keywords": "Lake District",
     "course_organiser": "Dr Mark WilkinsonTel:(0131 6)50 5943Email:Mark.Wilkinson@ed.ac.uk",
     "navigationhelp_&_informationhomeintroductionglossarysearch_dpts_and_coursesregulationsregulationsdegree_programmesintroductionbrowse dptscoursesintroductionhumanities_and_social_sciencescience_and_engineeringmedicine_and_veterinary_medicineother_informationcombined_course_timetableprospectusesimportant information": "Navigation"
-  },
-  {
-    "code": "KeyAvailable to all students - SVNot available to visiting students - SSPart-year visiting students only - VV",
-    "name": "Available to all students - SV",
-    "url": "",
-    "availability": "Key",
-    "period": "Not available to visiting students - SS",
-    "credits": "Part-year visiting students only - VV",
-    "subject": "Earth Science",
-    "school_name": "School of Geosciences",
-    "college": "College of Science and Engineering"
   },
   {
     "code": "ECSC08008",
@@ -3143,17 +3132,6 @@
     "keywords": "Environmental geochemistry",
     "course_organiser": "Dr Margaret GrahamTel:(0131 6)50 4767Email:Margaret.Graham@ed.ac.uk",
     "navigationhelp_&_informationhomeintroductionglossarysearch_dpts_and_coursesregulationsregulationsdegree_programmesintroductionbrowse dptscoursesintroductionhumanities_and_social_sciencescience_and_engineeringmedicine_and_veterinary_medicineother_informationcombined_course_timetableprospectusesimportant information": "Navigation"
-  },
-  {
-    "code": "KeyAvailable to all students - SVNot available to visiting students - SSPart-year visiting students only - VV",
-    "name": "Available to all students - SV",
-    "url": "",
-    "availability": "Key",
-    "period": "Not available to visiting students - SS",
-    "credits": "Part-year visiting students only - VV",
-    "subject": "Ecological Science",
-    "school_name": "School of Geosciences",
-    "college": "College of Science and Engineering"
   },
   {
     "code": "ARCA08004",
@@ -4305,17 +4283,6 @@
     "keywords": "soil biology,soil classificiation",
     "course_organiser": "Dr Jennifer CarfraeTel:0131 535 4417Email:jennifer.carfrae@sruc.ac.uk",
     "navigationhelp_&_informationhomeintroductionglossarysearch_dpts_and_coursesregulationsregulationsdegree_programmesintroductionbrowse dptscoursesintroductionhumanities_and_social_sciencescience_and_engineeringmedicine_and_veterinary_medicineother_informationcombined_course_timetableprospectusesimportant information": "Navigation"
-  },
-  {
-    "code": "KeyAvailable to all students - SVNot available to visiting students - SSPart-year visiting students only - VV",
-    "name": "Available to all students - SV",
-    "url": "",
-    "availability": "Key",
-    "period": "Not available to visiting students - SS",
-    "credits": "Part-year visiting students only - VV",
-    "subject": "Environmental Courses",
-    "school_name": "School of Geosciences",
-    "college": "College of Science and Engineering"
   },
   {
     "code": "GEGR08015",
@@ -6184,17 +6151,6 @@
     "navigationhelp_&_informationhomeintroductionglossarysearch_dpts_and_coursesregulationsregulationsdegree_programmesintroductionbrowse dptscoursesintroductionhumanities_and_social_sciencescience_and_engineeringmedicine_and_veterinary_medicineother_informationcombined_course_timetableprospectusesimportant information": "Navigation"
   },
   {
-    "code": "KeyAvailable to all students - SVNot available to visiting students - SSPart-year visiting students only - VV",
-    "name": "Available to all students - SV",
-    "url": "",
-    "availability": "Key",
-    "period": "Not available to visiting students - SS",
-    "credits": "Part-year visiting students only - VV",
-    "subject": "Geography",
-    "school_name": "School of Geosciences",
-    "college": "College of Science and Engineering"
-  },
-  {
     "code": "GESC08003",
     "name": "The Dynamic Earth",
     "url": "http://www.drps.ed.ac.uk/24-25/dpt/cxgesc08003.htm",
@@ -6258,7 +6214,7 @@
     "url": "http://www.drps.ed.ac.uk/24-25/dpt/cxgesc10001.htm",
     "availability": "SS1",
     "period": "Semester 2",
-    "credits": "Self-Designed Learning (10 credits; SCQF level 10; GeoSciences)",
+    "credits": "10",
     "subject": "Geosciences",
     "school_name": "School of Geosciences",
     "college": "College of Science and Engineering",
@@ -6588,17 +6544,6 @@
     "navigationhelp_&_informationhomeintroductionglossarysearch_dpts_and_coursesregulationsregulationsdegree_programmesintroductionbrowse dptscoursesintroductionhumanities_and_social_sciencescience_and_engineeringmedicine_and_veterinary_medicineother_informationcombined_course_timetableprospectusesimportant information": "Navigation"
   },
   {
-    "code": "KeyAvailable to all students - SVNot available to visiting students - SSPart-year visiting students only - VV",
-    "name": "Available to all students - SV",
-    "url": "",
-    "availability": "Key",
-    "period": "Not available to visiting students - SS",
-    "credits": "Part-year visiting students only - VV",
-    "subject": "Geosciences",
-    "school_name": "School of Geosciences",
-    "college": "College of Science and Engineering"
-  },
-  {
     "code": "METE08001",
     "name": "Meteorology: Atmosphere and Environment",
     "url": "http://www.drps.ed.ac.uk/24-25/dpt/cxmete08001.htm",
@@ -6803,17 +6748,6 @@
     "keywords": "Climate Modelling",
     "course_organiser": "Prof Simon TettTel:(0131 6)50 5341Email:Simon.Tett@ed.ac.uk",
     "navigationhelp_&_informationhomeintroductionglossarysearch_dpts_and_coursesregulationsregulationsdegree_programmesintroductionbrowse dptscoursesintroductionhumanities_and_social_sciencescience_and_engineeringmedicine_and_veterinary_medicineother_informationcombined_course_timetableprospectusesimportant information": "Navigation"
-  },
-  {
-    "code": "KeyAvailable to all students - SVNot available to visiting students - SSPart-year visiting students only - VV",
-    "name": "Available to all students - SV",
-    "url": "",
-    "availability": "Key",
-    "period": "Not available to visiting students - SS",
-    "credits": "Part-year visiting students only - VV",
-    "subject": "Meteorology",
-    "school_name": "School of Geosciences",
-    "college": "College of Science and Engineering"
   },
   {
     "code": "PGGE08001",
@@ -10541,17 +10475,6 @@
     "navigationhelp_&_informationhomeintroductionglossarysearch_dpts_and_coursesregulationsregulationsdegree_programmesintroductionbrowse dptscoursesintroductionhumanities_and_social_sciencescience_and_engineeringmedicine_and_veterinary_medicineother_informationcombined_course_timetableprospectusesimportant information": "Navigation"
   },
   {
-    "code": "KeyAvailable to all students - SVNot available to visiting students - SSPart-year visiting students only - VV",
-    "name": "Available to all students - SV",
-    "url": "",
-    "availability": "Key",
-    "period": "Not available to visiting students - SS",
-    "credits": "Part-year visiting students only - VV",
-    "subject": "Postgraduate Courses (School of GeoSciences)",
-    "school_name": "School of Geosciences",
-    "college": "College of Science and Engineering"
-  },
-  {
     "code": "PRGE11006",
     "name": "Dissertation in Human Geography",
     "url": "http://www.drps.ed.ac.uk/24-25/dpt/cxprge11006.htm",
@@ -10776,16 +10699,5 @@
     "keywords": "Dissertation",
     "course_organiser": "Dr Mark ChapmanTel:(0131 6)50 8521Email:mark.chapman@ed.ac.uk",
     "navigationhelp_&_informationhomeintroductionglossarysearch_dpts_and_coursesregulationsregulationsdegree_programmesintroductionbrowse dptscoursesintroductionhumanities_and_social_sciencescience_and_engineeringmedicine_and_veterinary_medicineother_informationcombined_course_timetableprospectusesimportant information": "Navigation"
-  },
-  {
-    "code": "KeyAvailable to all students - SVNot available to visiting students - SSPart-year visiting students only - VV",
-    "name": "Available to all students - SV",
-    "url": "",
-    "availability": "Key",
-    "period": "Not available to visiting students - SS",
-    "credits": "Part-year visiting students only - VV",
-    "subject": "Postgrad Research Courses (School of GeoSciences)",
-    "school_name": "School of Geosciences",
-    "college": "College of Science and Engineering"
   }
 ]

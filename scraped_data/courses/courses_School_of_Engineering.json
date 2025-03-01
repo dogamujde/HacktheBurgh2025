@@ -1389,17 +1389,6 @@
     "navigationhelp_&_informationhomeintroductionglossarysearch_dpts_and_coursesregulationsregulationsdegree_programmesintroductionbrowse dptscoursesintroductionhumanities_and_social_sciencescience_and_engineeringmedicine_and_veterinary_medicineother_informationcombined_course_timetableprospectusesimportant information": "Navigation"
   },
   {
-    "code": "KeyAvailable to all students - SVNot available to visiting students - SSPart-year visiting students only - VV",
-    "name": "Available to all students - SV",
-    "url": "",
-    "availability": "Key",
-    "period": "Not available to visiting students - SS",
-    "credits": "Part-year visiting students only - VV",
-    "subject": "Chemical",
-    "school_name": "School of Engineering",
-    "college": "College of Science and Engineering"
-  },
-  {
     "code": "CIVE08012",
     "name": "Behaviour and Design of Structures 2",
     "url": "http://www.drps.ed.ac.uk/24-25/dpt/cxcive08012.htm",
@@ -3125,17 +3114,6 @@
     "keywords": "Numerical methods,computational mechanics",
     "course_organiser": "Dr Stefanos PapanicolopulosTel:(0131 6)50 7214Email:S.Papanicolopulos@ed.ac.uk",
     "navigationhelp_&_informationhomeintroductionglossarysearch_dpts_and_coursesregulationsregulationsdegree_programmesintroductionbrowse dptscoursesintroductionhumanities_and_social_sciencescience_and_engineeringmedicine_and_veterinary_medicineother_informationcombined_course_timetableprospectusesimportant information": "Navigation"
-  },
-  {
-    "code": "KeyAvailable to all students - SVNot available to visiting students - SSPart-year visiting students only - VV",
-    "name": "Available to all students - SV",
-    "url": "",
-    "availability": "Key",
-    "period": "Not available to visiting students - SS",
-    "credits": "Part-year visiting students only - VV",
-    "subject": "Civil",
-    "school_name": "School of Engineering",
-    "college": "College of Science and Engineering"
   },
   {
     "code": "ELEE08016",
@@ -5376,17 +5354,6 @@
     "navigationhelp_&_informationhomeintroductionglossarysearch_dpts_and_coursesregulationsregulationsdegree_programmesintroductionbrowse dptscoursesintroductionhumanities_and_social_sciencescience_and_engineeringmedicine_and_veterinary_medicineother_informationcombined_course_timetableprospectusesimportant information": "Navigation"
   },
   {
-    "code": "KeyAvailable to all students - SVNot available to visiting students - SSPart-year visiting students only - VV",
-    "name": "Available to all students - SV",
-    "url": "",
-    "availability": "Key",
-    "period": "Not available to visiting students - SS",
-    "credits": "Part-year visiting students only - VV",
-    "subject": "Electronics",
-    "school_name": "School of Engineering",
-    "college": "College of Science and Engineering"
-  },
-  {
     "code": "MAEE09004",
     "name": "Manufacturing Information Systems (MIS) 3",
     "url": "http://www.drps.ed.ac.uk/24-25/dpt/cxmaee09004.htm",
@@ -5609,17 +5576,6 @@
     "keywords": "Not entered",
     "course_organiser": "Dr Matjaz VidmarTel:(0131 6)50 7792Email:Matjaz.Vidmar@ed.ac.uk",
     "navigationhelp_&_informationhomeintroductionglossarysearch_dpts_and_coursesregulationsregulationsdegree_programmesintroductionbrowse dptscoursesintroductionhumanities_and_social_sciencescience_and_engineeringmedicine_and_veterinary_medicineother_informationcombined_course_timetableprospectusesimportant information": "Navigation"
-  },
-  {
-    "code": "KeyAvailable to all students - SVNot available to visiting students - SSPart-year visiting students only - VV",
-    "name": "Available to all students - SV",
-    "url": "",
-    "availability": "Key",
-    "period": "Not available to visiting students - SS",
-    "credits": "Part-year visiting students only - VV",
-    "subject": "Management (School of Engineering)",
-    "school_name": "School of Engineering",
-    "college": "College of Science and Engineering"
   },
   {
     "code": "MECE08009",
@@ -6835,17 +6791,6 @@
     "navigationhelp_&_informationhomeintroductionglossarysearch_dpts_and_coursesregulationsregulationsdegree_programmesintroductionbrowse dptscoursesintroductionhumanities_and_social_sciencescience_and_engineeringmedicine_and_veterinary_medicineother_informationcombined_course_timetableprospectusesimportant information": "Navigation"
   },
   {
-    "code": "KeyAvailable to all students - SVNot available to visiting students - SSPart-year visiting students only - VV",
-    "name": "Available to all students - SV",
-    "url": "",
-    "availability": "Key",
-    "period": "Not available to visiting students - SS",
-    "credits": "Part-year visiting students only - VV",
-    "subject": "Mechanical",
-    "school_name": "School of Engineering",
-    "college": "College of Science and Engineering"
-  },
-  {
     "code": "PGEE08002",
     "name": "Structural Mechanics (IMFSE)",
     "url": "http://www.drps.ed.ac.uk/24-25/dpt/cxpgee08002.htm",
@@ -6875,7 +6820,7 @@
     "url": "http://www.drps.ed.ac.uk/24-25/dpt/cxxxxx00901.htm",
     "availability": "SV1",
     "period": "Full Year",
-    "credits": "Doctoral Study External Credit (Level 9) Year 1",
+    "credits": "15",
     "subject": "Postgrad (School of Engineering)",
     "school_name": "School of Engineering",
     "college": "College of Science and Engineering"
@@ -6940,7 +6885,7 @@
     "url": "http://www.drps.ed.ac.uk/24-25/dpt/cxpgee10023.htm",
     "availability": "SS1",
     "period": "Semester 1",
-    "credits": "CDT-ISM, credits awarded at U of Glasgow, semester 1, Circuits and systems",
+    "credits": "10",
     "subject": "Postgrad (School of Engineering)",
     "school_name": "School of Engineering",
     "college": "College of Science and Engineering",
@@ -6967,7 +6912,7 @@
     "url": "http://www.drps.ed.ac.uk/24-25/dpt/cxpgee10020.htm",
     "availability": "SS1",
     "period": "Semester 1",
-    "credits": "CDT-ISM, credits awarded at U of Glasgow, semester 1, Lasers and Electro-optic systems M4",
+    "credits": "20",
     "subject": "Postgrad (School of Engineering)",
     "school_name": "School of Engineering",
     "college": "College of Science and Engineering",
@@ -6994,7 +6939,7 @@
     "url": "http://www.drps.ed.ac.uk/24-25/dpt/cxpgee10022.htm",
     "availability": "SS1",
     "period": "Semester 1",
-    "credits": "CDT-ISM, credits awarded at U of Glasgow, semester 1, Microelectronics in Consumer Products P4",
+    "credits": "10",
     "subject": "Postgrad (School of Engineering)",
     "school_name": "School of Engineering",
     "college": "College of Science and Engineering",
@@ -7210,7 +7155,7 @@
     "url": "http://www.drps.ed.ac.uk/24-25/dpt/cxxxxx01001.htm",
     "availability": "SV1",
     "period": "Full Year",
-    "credits": "Doctoral Study External Credit (Level 10) Year 1",
+    "credits": "15",
     "subject": "Postgrad (School of Engineering)",
     "school_name": "School of Engineering",
     "college": "College of Science and Engineering"
@@ -8592,7 +8537,7 @@
     "url": "http://www.drps.ed.ac.uk/24-25/dpt/cxpgee11132.htm",
     "availability": "SS1",
     "period": "Semester 1",
-    "credits": "CDT-ISM credits awarded at Glasgow, semester 1, Fundamentals of Sensing and Measurement",
+    "credits": "20",
     "subject": "Postgrad (School of Engineering)",
     "school_name": "School of Engineering",
     "college": "College of Science and Engineering",
@@ -8619,7 +8564,7 @@
     "url": "http://www.drps.ed.ac.uk/24-25/dpt/cxpgee11133.htm",
     "availability": "SS1",
     "period": "Semester 1",
-    "credits": "CDT-ISM credits awarded at U of Glasgow, semester 1, Research Methods in Sensing and Measurement",
+    "credits": "20",
     "subject": "Postgrad (School of Engineering)",
     "school_name": "School of Engineering",
     "college": "College of Science and Engineering",
@@ -8646,7 +8591,7 @@
     "url": "http://www.drps.ed.ac.uk/24-25/dpt/cxpgee11130.htm",
     "availability": "SS1",
     "period": "Semester 1",
-    "credits": "CDT-ISM, credits awarded at Glasgow, semester 1, detection and analysis of ionising radiation",
+    "credits": "10",
     "subject": "Postgrad (School of Engineering)",
     "school_name": "School of Engineering",
     "college": "College of Science and Engineering",
@@ -8673,7 +8618,7 @@
     "url": "http://www.drps.ed.ac.uk/24-25/dpt/cxpgee11134.htm",
     "availability": "SS1",
     "period": "Semester 1",
-    "credits": "CDT-ISM, credits awarded at U of Glasgow, semester 1, Digital signal processing",
+    "credits": "20",
     "subject": "Postgrad (School of Engineering)",
     "school_name": "School of Engineering",
     "college": "College of Science and Engineering",
@@ -8700,7 +8645,7 @@
     "url": "http://www.drps.ed.ac.uk/24-25/dpt/cxpgee11131.htm",
     "availability": "SS2",
     "period": "Semester 1",
-    "credits": "CDT-ISM, credits awarded at U of Glasgow, semester 1, Nanofabrication",
+    "credits": "10",
     "subject": "Postgrad (School of Engineering)",
     "school_name": "School of Engineering",
     "college": "College of Science and Engineering",
@@ -9186,7 +9131,7 @@
     "url": "http://www.drps.ed.ac.uk/24-25/dpt/cxxxxx01112.htm",
     "availability": "SV1",
     "period": "Semester 1",
-    "credits": "Doctoral Study External Credit (Level 11) Semester 1",
+    "credits": "60",
     "subject": "Postgrad (School of Engineering)",
     "school_name": "School of Engineering",
     "college": "College of Science and Engineering"
@@ -9197,7 +9142,7 @@
     "url": "http://www.drps.ed.ac.uk/24-25/dpt/cxxxxx01113.htm",
     "availability": "SV1",
     "period": "Semester 2",
-    "credits": "Doctoral Study External Credit (Level 11) Semester 2",
+    "credits": "60",
     "subject": "Postgrad (School of Engineering)",
     "school_name": "School of Engineering",
     "college": "College of Science and Engineering"
@@ -9208,7 +9153,7 @@
     "url": "http://www.drps.ed.ac.uk/24-25/dpt/cxxxxx01101.htm",
     "availability": "SV1",
     "period": "Full Year",
-    "credits": "Doctoral Study External Credit (Level 11) Year 1",
+    "credits": "10",
     "subject": "Postgrad (School of Engineering)",
     "school_name": "School of Engineering",
     "college": "College of Science and Engineering"
@@ -9219,7 +9164,7 @@
     "url": "http://www.drps.ed.ac.uk/24-25/dpt/cxxxxx01102.htm",
     "availability": "SV1",
     "period": "Full Year",
-    "credits": "Doctoral Study External Credit (Level 11) Year 1",
+    "credits": "15",
     "subject": "Postgrad (School of Engineering)",
     "school_name": "School of Engineering",
     "college": "College of Science and Engineering"
@@ -9230,7 +9175,7 @@
     "url": "http://www.drps.ed.ac.uk/24-25/dpt/cxxxxx01103.htm",
     "availability": "SV1",
     "period": "Full Year",
-    "credits": "Doctoral Study External Credit (Level 11) Year 1",
+    "credits": "20",
     "subject": "Postgrad (School of Engineering)",
     "school_name": "School of Engineering",
     "college": "College of Science and Engineering"
@@ -9241,7 +9186,7 @@
     "url": "http://www.drps.ed.ac.uk/24-25/dpt/cxxxxx01104.htm",
     "availability": "SV1",
     "period": "Full Year",
-    "credits": "Doctoral Study External Credit (Level 11) Year 1",
+    "credits": "30",
     "subject": "Postgrad (School of Engineering)",
     "school_name": "School of Engineering",
     "college": "College of Science and Engineering"
@@ -9252,7 +9197,7 @@
     "url": "http://www.drps.ed.ac.uk/24-25/dpt/cxxxxx01105.htm",
     "availability": "SV1",
     "period": "Full Year",
-    "credits": "Doctoral Study External Credit (Level 11) Year 1",
+    "credits": "40",
     "subject": "Postgrad (School of Engineering)",
     "school_name": "School of Engineering",
     "college": "College of Science and Engineering"
@@ -9263,7 +9208,7 @@
     "url": "http://www.drps.ed.ac.uk/24-25/dpt/cxxxxx01106.htm",
     "availability": "SV1",
     "period": "Full Year",
-    "credits": "Doctoral Study External Credit (Level 11) Year 1",
+    "credits": "45",
     "subject": "Postgrad (School of Engineering)",
     "school_name": "School of Engineering",
     "college": "College of Science and Engineering"
@@ -9274,7 +9219,7 @@
     "url": "http://www.drps.ed.ac.uk/24-25/dpt/cxxxxx01107.htm",
     "availability": "SV1",
     "period": "Full Year",
-    "credits": "Doctoral Study External Credit (Level 11) Year 1",
+    "credits": "55",
     "subject": "Postgrad (School of Engineering)",
     "school_name": "School of Engineering",
     "college": "College of Science and Engineering"
@@ -9285,7 +9230,7 @@
     "url": "http://www.drps.ed.ac.uk/24-25/dpt/cxxxxx01108.htm",
     "availability": "SV1",
     "period": "Full Year",
-    "credits": "Doctoral Study External Credit (Level 11) Year 1",
+    "credits": "60",
     "subject": "Postgrad (School of Engineering)",
     "school_name": "School of Engineering",
     "college": "College of Science and Engineering"
@@ -9296,7 +9241,7 @@
     "url": "http://www.drps.ed.ac.uk/24-25/dpt/cxxxxx01109.htm",
     "availability": "SV1",
     "period": "Full Year",
-    "credits": "Doctoral Study External Credit (Level 11) Year 1",
+    "credits": "70",
     "subject": "Postgrad (School of Engineering)",
     "school_name": "School of Engineering",
     "college": "College of Science and Engineering"
@@ -9307,7 +9252,7 @@
     "url": "http://www.drps.ed.ac.uk/24-25/dpt/cxxxxx01110.htm",
     "availability": "SV1",
     "period": "Full Year",
-    "credits": "Doctoral Study External Credit (Level 11) Year 1",
+    "credits": "80",
     "subject": "Postgrad (School of Engineering)",
     "school_name": "School of Engineering",
     "college": "College of Science and Engineering"
@@ -9318,7 +9263,7 @@
     "url": "http://www.drps.ed.ac.uk/24-25/dpt/cxxxxx01111.htm",
     "availability": "SV1",
     "period": "Full Year",
-    "credits": "Doctoral Study External Credit (Level 11) Year 1",
+    "credits": "85",
     "subject": "Postgrad (School of Engineering)",
     "school_name": "School of Engineering",
     "college": "College of Science and Engineering"
@@ -9329,7 +9274,7 @@
     "url": "http://www.drps.ed.ac.uk/24-25/dpt/cxxxxx01114.htm",
     "availability": "SV1",
     "period": "Full Year",
-    "credits": "Doctoral Study External Credit (Level 11) Year 2",
+    "credits": "10",
     "subject": "Postgrad (School of Engineering)",
     "school_name": "School of Engineering",
     "college": "College of Science and Engineering"
@@ -9340,7 +9285,7 @@
     "url": "http://www.drps.ed.ac.uk/24-25/dpt/cxxxxx01115.htm",
     "availability": "SV1",
     "period": "Full Year",
-    "credits": "Doctoral Study External Credit (Level 11) Year 2",
+    "credits": "15",
     "subject": "Postgrad (School of Engineering)",
     "school_name": "School of Engineering",
     "college": "College of Science and Engineering"
@@ -9351,7 +9296,7 @@
     "url": "http://www.drps.ed.ac.uk/24-25/dpt/cxxxxx01116.htm",
     "availability": "SV1",
     "period": "Full Year",
-    "credits": "Doctoral Study External Credit (Level 11) Year 2",
+    "credits": "20",
     "subject": "Postgrad (School of Engineering)",
     "school_name": "School of Engineering",
     "college": "College of Science and Engineering"
@@ -9362,7 +9307,7 @@
     "url": "http://www.drps.ed.ac.uk/24-25/dpt/cxxxxx01117.htm",
     "availability": "SV1",
     "period": "Full Year",
-    "credits": "Doctoral Study External Credit (Level 11) Year 2",
+    "credits": "30",
     "subject": "Postgrad (School of Engineering)",
     "school_name": "School of Engineering",
     "college": "College of Science and Engineering"
@@ -9373,7 +9318,7 @@
     "url": "http://www.drps.ed.ac.uk/24-25/dpt/cxxxxx01118.htm",
     "availability": "SV1",
     "period": "Full Year",
-    "credits": "Doctoral Study External Credit (Level 11) Year 2",
+    "credits": "40",
     "subject": "Postgrad (School of Engineering)",
     "school_name": "School of Engineering",
     "college": "College of Science and Engineering"
@@ -9384,7 +9329,7 @@
     "url": "http://www.drps.ed.ac.uk/24-25/dpt/cxxxxx01119.htm",
     "availability": "SV1",
     "period": "Full Year",
-    "credits": "Doctoral Study External Credit (Level 11) Year 2",
+    "credits": "45",
     "subject": "Postgrad (School of Engineering)",
     "school_name": "School of Engineering",
     "college": "College of Science and Engineering"
@@ -9395,7 +9340,7 @@
     "url": "http://www.drps.ed.ac.uk/24-25/dpt/cxxxxx01120.htm",
     "availability": "SV1",
     "period": "Full Year",
-    "credits": "Doctoral Study External Credit (Level 11) Year 2",
+    "credits": "60",
     "subject": "Postgrad (School of Engineering)",
     "school_name": "School of Engineering",
     "college": "College of Science and Engineering"
@@ -9406,7 +9351,7 @@
     "url": "http://www.drps.ed.ac.uk/24-25/dpt/cxxxxx01121.htm",
     "availability": "SV1",
     "period": "Full Year",
-    "credits": "Doctoral Study External Credit (Level 11) Year 3",
+    "credits": "10",
     "subject": "Postgrad (School of Engineering)",
     "school_name": "School of Engineering",
     "college": "College of Science and Engineering"
@@ -9417,7 +9362,7 @@
     "url": "http://www.drps.ed.ac.uk/24-25/dpt/cxxxxx01122.htm",
     "availability": "SV1",
     "period": "Full Year",
-    "credits": "Doctoral Study External Credit (Level 11) Year 3",
+    "credits": "15",
     "subject": "Postgrad (School of Engineering)",
     "school_name": "School of Engineering",
     "college": "College of Science and Engineering"
@@ -9428,7 +9373,7 @@
     "url": "http://www.drps.ed.ac.uk/24-25/dpt/cxxxxx01123.htm",
     "availability": "SV1",
     "period": "Full Year",
-    "credits": "Doctoral Study External Credit (Level 11) Year 3",
+    "credits": "20",
     "subject": "Postgrad (School of Engineering)",
     "school_name": "School of Engineering",
     "college": "College of Science and Engineering"
@@ -9439,7 +9384,7 @@
     "url": "http://www.drps.ed.ac.uk/24-25/dpt/cxxxxx01124.htm",
     "availability": "SV1",
     "period": "Full Year",
-    "credits": "Doctoral Study External Credit (Level 11) Year 3",
+    "credits": "30",
     "subject": "Postgrad (School of Engineering)",
     "school_name": "School of Engineering",
     "college": "College of Science and Engineering"
@@ -9450,7 +9395,7 @@
     "url": "http://www.drps.ed.ac.uk/24-25/dpt/cxxxxx01125.htm",
     "availability": "SV1",
     "period": "Full Year",
-    "credits": "Doctoral Study External Credit (Level 11) Year 3",
+    "credits": "45",
     "subject": "Postgrad (School of Engineering)",
     "school_name": "School of Engineering",
     "college": "College of Science and Engineering"
@@ -9461,7 +9406,7 @@
     "url": "http://www.drps.ed.ac.uk/24-25/dpt/cxxxxx01126.htm",
     "availability": "SV1",
     "period": "Full Year",
-    "credits": "Doctoral Study External Credit (Level 11) Year 4",
+    "credits": "10",
     "subject": "Postgrad (School of Engineering)",
     "school_name": "School of Engineering",
     "college": "College of Science and Engineering"
@@ -9472,7 +9417,7 @@
     "url": "http://www.drps.ed.ac.uk/24-25/dpt/cxxxxx01127.htm",
     "availability": "SV1",
     "period": "Full Year",
-    "credits": "Doctoral Study External Credit (Level 11) Year 4",
+    "credits": "15",
     "subject": "Postgrad (School of Engineering)",
     "school_name": "School of Engineering",
     "college": "College of Science and Engineering"
@@ -9483,7 +9428,7 @@
     "url": "http://www.drps.ed.ac.uk/24-25/dpt/cxxxxx01128.htm",
     "availability": "SV1",
     "period": "Full Year",
-    "credits": "Doctoral Study External Credit (Level 11) Year 4",
+    "credits": "30",
     "subject": "Postgrad (School of Engineering)",
     "school_name": "School of Engineering",
     "college": "College of Science and Engineering"
@@ -9926,7 +9871,7 @@
     "url": "http://www.drps.ed.ac.uk/24-25/dpt/cxpgee11195.htm",
     "availability": "SV1",
     "period": "Semester 1",
-    "credits": "Engineering Research Methods with Grand Challenge (MSc) (10 credits)",
+    "credits": "10",
     "subject": "Postgrad (School of Engineering)",
     "school_name": "School of Engineering",
     "college": "College of Science and Engineering",
@@ -9955,7 +9900,7 @@
     "url": "http://www.drps.ed.ac.uk/24-25/dpt/cxpgee11196.htm",
     "availability": "",
     "period": "Not delivered this year",
-    "credits": "Engineering Research Methods with Grand Challenge (MSc) (20 credits)",
+    "credits": "20",
     "subject": "Postgrad (School of Engineering)",
     "school_name": "School of Engineering",
     "college": "College of Science and Engineering",
@@ -12897,17 +12842,6 @@
     "navigationhelp_&_informationhomeintroductionglossarysearch_dpts_and_coursesregulationsregulationsdegree_programmesintroductionbrowse dptscoursesintroductionhumanities_and_social_sciencescience_and_engineeringmedicine_and_veterinary_medicineother_informationcombined_course_timetableprospectusesimportant information": "Navigation"
   },
   {
-    "code": "KeyAvailable to all students - SVNot available to visiting students - SSPart-year visiting students only - VV",
-    "name": "Available to all students - SV",
-    "url": "",
-    "availability": "Key",
-    "period": "Not available to visiting students - SS",
-    "credits": "Part-year visiting students only - VV",
-    "subject": "Postgrad (School of Engineering)",
-    "school_name": "School of Engineering",
-    "college": "College of Science and Engineering"
-  },
-  {
     "code": "SCEE08011",
     "name": "Engineering Design 1",
     "url": "http://www.drps.ed.ac.uk/24-25/dpt/cxscee08011.htm",
@@ -13905,16 +13839,5 @@
     "keywords": "Not entered",
     "course_organiser": "Prof Andrew MountTel:(0131 6)50 4747Email:A.Mount@ed.ac.uk",
     "navigationhelp_&_informationhomeintroductionglossarysearch_dpts_and_coursesregulationsregulationsdegree_programmesintroductionbrowse dptscoursesintroductionhumanities_and_social_sciencescience_and_engineeringmedicine_and_veterinary_medicineother_informationcombined_course_timetableprospectusesimportant information": "Navigation"
-  },
-  {
-    "code": "KeyAvailable to all students - SVNot available to visiting students - SSPart-year visiting students only - VV",
-    "name": "Available to all students - SV",
-    "url": "",
-    "availability": "Key",
-    "period": "Not available to visiting students - SS",
-    "credits": "Part-year visiting students only - VV",
-    "subject": "School (School of Engineering)",
-    "school_name": "School of Engineering",
-    "college": "College of Science and Engineering"
   }
 ]

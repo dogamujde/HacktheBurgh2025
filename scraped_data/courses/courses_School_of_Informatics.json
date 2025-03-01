@@ -1174,17 +1174,6 @@
     "navigationhelp_&_informationhomeintroductionglossarysearch_dpts_and_coursesregulationsregulationsdegree_programmesintroductionbrowse dptscoursesintroductionhumanities_and_social_sciencescience_and_engineeringmedicine_and_veterinary_medicineother_informationcombined_course_timetableprospectusesimportant information": "Navigation"
   },
   {
-    "code": "KeyAvailable to all students - SVNot available to visiting students - SSPart-year visiting students only - VV",
-    "name": "Available to all students - SV",
-    "url": "",
-    "availability": "Key",
-    "period": "Not available to visiting students - SS",
-    "credits": "Part-year visiting students only - VV",
-    "subject": "EPCC on-campus",
-    "school_name": "School of Informatics",
-    "college": "College of Science and Engineering"
-  },
-  {
     "code": "EPCD11020",
     "name": "Accelerated Systems: Principles and Practice",
     "url": "http://www.drps.ed.ac.uk/24-25/dpt/cxepcd11020.htm",
@@ -1769,17 +1758,6 @@
     "keywords": "OpenMP,Threads,TP,EPCC,HPC,High Performance Computing,Parallel,Programming,Parallelism,Computation",
     "course_organiser": "Dr Mark BullTel:(0131 6)50 6717Email:markb@epcc.ed.ac.uk",
     "navigationhelp_&_informationhomeintroductionglossarysearch_dpts_and_coursesregulationsregulationsdegree_programmesintroductionbrowse dptscoursesintroductionhumanities_and_social_sciencescience_and_engineeringmedicine_and_veterinary_medicineother_informationcombined_course_timetableprospectusesimportant information": "Navigation"
-  },
-  {
-    "code": "KeyAvailable to all students - SVNot available to visiting students - SSPart-year visiting students only - VV",
-    "name": "Available to all students - SV",
-    "url": "",
-    "availability": "Key",
-    "period": "Not available to visiting students - SS",
-    "credits": "Part-year visiting students only - VV",
-    "subject": "EPCD Online",
-    "school_name": "School of Informatics",
-    "college": "College of Science and Engineering"
   },
   {
     "code": "INFD11022",
@@ -2398,17 +2376,6 @@
     "keywords": "data science,healthcare data,R programming,ethics,data-driven innovation,data analysis,statistics",
     "course_organiser": "Mr Dimitrios DoudesisTel:Email:Dimitrios.Doudesis@ed.ac.uk",
     "navigationhelp_&_informationhomeintroductionglossarysearch_dpts_and_coursesregulationsregulationsdegree_programmesintroductionbrowse dptscoursesintroductionhumanities_and_social_sciencescience_and_engineeringmedicine_and_veterinary_medicineother_informationcombined_course_timetableprospectusesimportant information": "Navigation"
-  },
-  {
-    "code": "KeyAvailable to all students - SVNot available to visiting students - SSPart-year visiting students only - VV",
-    "name": "Available to all students - SV",
-    "url": "",
-    "availability": "Key",
-    "period": "Not available to visiting students - SS",
-    "credits": "Part-year visiting students only - VV",
-    "subject": "Informatics - Distance Learning",
-    "school_name": "School of Informatics",
-    "college": "College of Science and Engineering"
   },
   {
     "code": "INFR08031",
@@ -4590,7 +4557,7 @@
     "url": "http://www.drps.ed.ac.uk/24-25/dpt/cxinfr11115.htm",
     "availability": "SS1",
     "period": "Semester 1",
-    "credits": "Credits Awarded for Autonomous Systems Research [Heriot Watt University]",
+    "credits": "30",
     "subject": "Informatics",
     "school_name": "School of Informatics",
     "college": "College of Science and Engineering",
@@ -4617,7 +4584,7 @@
     "url": "http://www.drps.ed.ac.uk/24-25/dpt/cxinfr11116.htm",
     "availability": "SS1",
     "period": "Flexible",
-    "credits": "Credits Awarded for Taught Courses [Heriot Watt University] 1",
+    "credits": "15",
     "subject": "Informatics",
     "school_name": "School of Informatics",
     "college": "College of Science and Engineering",
@@ -4644,7 +4611,7 @@
     "url": "http://www.drps.ed.ac.uk/24-25/dpt/cxinfr11117.htm",
     "availability": "SS1",
     "period": "Flexible",
-    "credits": "Credits Awarded for Taught Courses [Heriot Watt University] 2",
+    "credits": "15",
     "subject": "Informatics",
     "school_name": "School of Informatics",
     "college": "College of Science and Engineering",
@@ -5148,7 +5115,7 @@
     "url": "http://www.drps.ed.ac.uk/24-25/dpt/cxinfr11204.htm",
     "availability": "",
     "period": "Not delivered this year",
-    "credits": "Individual Project in Advanced Natural Language Processing (80 credits)",
+    "credits": "80",
     "subject": "Informatics",
     "school_name": "School of Informatics",
     "college": "College of Science and Engineering",
@@ -5799,7 +5766,7 @@
     "url": "http://www.drps.ed.ac.uk/24-25/dpt/cxinfr11271.htm",
     "availability": "SS1",
     "period": "Full Year",
-    "credits": "Machine Learning Systems Project (100 credits)",
+    "credits": "100",
     "subject": "Informatics",
     "school_name": "School of Informatics",
     "college": "College of Science and Engineering",
@@ -5826,7 +5793,7 @@
     "url": "http://www.drps.ed.ac.uk/24-25/dpt/cxinfr11270.htm",
     "availability": "SS1",
     "period": "Full Year",
-    "credits": "Machine Learning Systems Project (60 credits)",
+    "credits": "60",
     "subject": "Informatics",
     "school_name": "School of Informatics",
     "college": "College of Science and Engineering",
@@ -5853,7 +5820,7 @@
     "url": "http://www.drps.ed.ac.uk/24-25/dpt/cxinfr11272.htm",
     "availability": "SS1",
     "period": "Full Year",
-    "credits": "Machine Learning Systems Project (80 credits)",
+    "credits": "80",
     "subject": "Informatics",
     "school_name": "School of Informatics",
     "college": "College of Science and Engineering",
@@ -7504,16 +7471,5 @@
     "keywords": "OpenMP,Threads,TP,EPCC,HPC,High Performance Computing,Parallel,Programming,Parallelism,Computational",
     "course_organiser": "Dr Mark BullTel:(0131 6)50 6717Email:markb@epcc.ed.ac.uk",
     "navigationhelp_&_informationhomeintroductionglossarysearch_dpts_and_coursesregulationsregulationsdegree_programmesintroductionbrowse dptscoursesintroductionhumanities_and_social_sciencescience_and_engineeringmedicine_and_veterinary_medicineother_informationcombined_course_timetableprospectusesimportant information": "Navigation"
-  },
-  {
-    "code": "KeyAvailable to all students - SVNot available to visiting students - SSPart-year visiting students only - VV",
-    "name": "Available to all students - SV",
-    "url": "",
-    "availability": "Key",
-    "period": "Not available to visiting students - SS",
-    "credits": "Part-year visiting students only - VV",
-    "subject": "Informatics",
-    "school_name": "School of Informatics",
-    "college": "College of Science and Engineering"
   }
 ]

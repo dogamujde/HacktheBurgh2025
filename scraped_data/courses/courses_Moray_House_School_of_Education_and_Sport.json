@@ -8679,17 +8679,6 @@
     "navigationhelp_&_informationhomeintroductionglossarysearch_dpts_and_coursesregulationsregulationsdegree_programmesintroductionbrowse dptscoursesintroductionhumanities_and_social_sciencescience_and_engineeringmedicine_and_veterinary_medicineother_informationcombined_course_timetableprospectusesimportant information": "Navigation"
   },
   {
-    "code": "KeyAvailable to all students - SVNot available to visiting students - SSPart-year visiting students only - VV",
-    "name": "Available to all students - SV",
-    "url": "",
-    "availability": "Key",
-    "period": "Not available to visiting students - SS",
-    "credits": "Part-year visiting students only - VV",
-    "subject": "Education",
-    "school_name": "Moray House School of Education and Sport",
-    "college": "College of Arts, Humanities and Social Sciences"
-  },
-  {
     "code": "REDU11074",
     "name": "Activist Social Research",
     "url": "http://www.drps.ed.ac.uk/24-25/dpt/cxredu11074.htm",
@@ -9930,17 +9919,6 @@
     "keywords": "Not entered",
     "course_organiser": "Prof Morwenna GriffithsTel:(0131 6)51 6104Email:morwenna.griffiths@ed.ac.uk",
     "navigationhelp_&_informationhomeintroductionglossarysearch_dpts_and_coursesregulationsregulationsdegree_programmesintroductionbrowse dptscoursesintroductionhumanities_and_social_sciencescience_and_engineeringmedicine_and_veterinary_medicineother_informationcombined_course_timetableprospectusesimportant information": "Navigation"
-  },
-  {
-    "code": "KeyAvailable to all students - SVNot available to visiting students - SSPart-year visiting students only - VV",
-    "name": "Available to all students - SV",
-    "url": "",
-    "availability": "Key",
-    "period": "Not available to visiting students - SS",
-    "credits": "Part-year visiting students only - VV",
-    "subject": "Research (EDU)",
-    "school_name": "Moray House School of Education and Sport",
-    "college": "College of Arts, Humanities and Social Sciences"
   },
   {
     "code": "LLLK07001",
@@ -11986,16 +11964,5 @@
     "keywords": "clinical,youth,health,performance,disability",
     "course_organiser": "Miss Sian SalmonTel:Email:Sian.Salmon@ed.ac.uk",
     "navigationhelp_&_informationhomeintroductionglossarysearch_dpts_and_coursesregulationsregulationsdegree_programmesintroductionbrowse dptscoursesintroductionhumanities_and_social_sciencescience_and_engineeringmedicine_and_veterinary_medicineother_informationcombined_course_timetableprospectusesimportant information": "Navigation"
-  },
-  {
-    "code": "KeyAvailable to all students - SVNot available to visiting students - SSPart-year visiting students only - VV",
-    "name": "Available to all students - SV",
-    "url": "",
-    "availability": "Key",
-    "period": "Not available to visiting students - SS",
-    "credits": "Part-year visiting students only - VV",
-    "subject": "Sport",
-    "school_name": "Moray House School of Education and Sport",
-    "college": "College of Arts, Humanities and Social Sciences"
   }
 ]

@@ -2320,7 +2320,7 @@
     "url": "http://www.drps.ed.ac.uk/24-25/dpt/cxlasc11186.htm",
     "availability": "SV1",
     "period": "Semester 2",
-    "credits": "Global Englishes MSc (10 credits)",
+    "credits": "10",
     "subject": "Language Sciences",
     "school_name": "School of Philosophy, Psychology and Language Sciences",
     "college": "College of Arts, Humanities and Social Sciences",
@@ -3056,7 +3056,7 @@
     "url": "http://www.drps.ed.ac.uk/24-25/dpt/cxlasc11137.htm",
     "availability": "SV1",
     "period": "Semester 1",
-    "credits": "Phonetics and Laboratory Phonology MSc (20 Credits)",
+    "credits": "20",
     "subject": "Language Sciences",
     "school_name": "School of Philosophy, Psychology and Language Sciences",
     "college": "College of Arts, Humanities and Social Sciences",
@@ -3167,7 +3167,7 @@
     "url": "http://www.drps.ed.ac.uk/24-25/dpt/cxlasc11169.htm",
     "availability": "SV1",
     "period": "Semester 1",
-    "credits": "Pragmatics (10 Credits)",
+    "credits": "10",
     "subject": "Language Sciences",
     "school_name": "School of Philosophy, Psychology and Language Sciences",
     "college": "College of Arts, Humanities and Social Sciences",
@@ -3621,7 +3621,7 @@
     "url": "http://www.drps.ed.ac.uk/24-25/dpt/cxlasc11142.htm",
     "availability": "SV1",
     "period": "Semester 2",
-    "credits": "Speech Production and Perception MSc (10 Credits)",
+    "credits": "10",
     "subject": "Language Sciences",
     "school_name": "School of Philosophy, Psychology and Language Sciences",
     "college": "College of Arts, Humanities and Social Sciences",
@@ -3650,7 +3650,7 @@
     "url": "http://www.drps.ed.ac.uk/24-25/dpt/cxlasc11138.htm",
     "availability": "SV1",
     "period": "Semester 2",
-    "credits": "Speech Production and Perception MSc (20 Credits)",
+    "credits": "20",
     "subject": "Language Sciences",
     "school_name": "School of Philosophy, Psychology and Language Sciences",
     "college": "College of Arts, Humanities and Social Sciences",
@@ -3787,23 +3787,12 @@
     "navigationhelp_&_informationhomeintroductionglossarysearch_dpts_and_coursesregulationsregulationsdegree_programmesintroductionbrowse dptscoursesintroductionhumanities_and_social_sciencescience_and_engineeringmedicine_and_veterinary_medicineother_informationcombined_course_timetableprospectusesimportant information": "Navigation"
   },
   {
-    "code": "KeyAvailable to all students - SVNot available to visiting students - SSPart-year visiting students only - VV",
-    "name": "Available to all students - SV",
-    "url": "",
-    "availability": "Key",
-    "period": "Not available to visiting students - SS",
-    "credits": "Part-year visiting students only - VV",
-    "subject": "Language Sciences",
-    "school_name": "School of Philosophy, Psychology and Language Sciences",
-    "college": "College of Arts, Humanities and Social Sciences"
-  },
-  {
     "code": "PHIL07002",
     "name": "Introducing Philosophy (Credit Plus)",
     "url": "http://www.drps.ed.ac.uk/24-25/dpt/cxphil07002.htm",
     "availability": "SS1",
     "period": "Lifelong Learning - Session 1",
-    "credits": "Introducing Philosophy (Credit Plus)",
+    "credits": "10",
     "subject": "Philosophy",
     "school_name": "School of Philosophy, Psychology and Language Sciences",
     "college": "College of Arts, Humanities and Social Sciences",
@@ -9795,17 +9784,6 @@
     "navigationhelp_&_informationhomeintroductionglossarysearch_dpts_and_coursesregulationsregulationsdegree_programmesintroductionbrowse dptscoursesintroductionhumanities_and_social_sciencescience_and_engineeringmedicine_and_veterinary_medicineother_informationcombined_course_timetableprospectusesimportant information": "Navigation"
   },
   {
-    "code": "KeyAvailable to all students - SVNot available to visiting students - SSPart-year visiting students only - VV",
-    "name": "Available to all students - SV",
-    "url": "",
-    "availability": "Key",
-    "period": "Not available to visiting students - SS",
-    "credits": "Part-year visiting students only - VV",
-    "subject": "Philosophy",
-    "school_name": "School of Philosophy, Psychology and Language Sciences",
-    "college": "College of Arts, Humanities and Social Sciences"
-  },
-  {
     "code": "PPLS08002",
     "name": "Introduction to Cognitive Science",
     "url": "http://www.drps.ed.ac.uk/24-25/dpt/cxppls08002.htm",
@@ -9833,17 +9811,6 @@
     "keywords": "Not entered",
     "course_organiser": "Dr Zachary HorneTel:Email:Zachary.Horne@ed.ac.uk",
     "navigationhelp_&_informationhomeintroductionglossarysearch_dpts_and_coursesregulationsregulationsdegree_programmesintroductionbrowse dptscoursesintroductionhumanities_and_social_sciencescience_and_engineeringmedicine_and_veterinary_medicineother_informationcombined_course_timetableprospectusesimportant information": "Navigation"
-  },
-  {
-    "code": "KeyAvailable to all students - SVNot available to visiting students - SSPart-year visiting students only - VV",
-    "name": "Available to all students - SV",
-    "url": "",
-    "availability": "Key",
-    "period": "Not available to visiting students - SS",
-    "credits": "Part-year visiting students only - VV",
-    "subject": "Philosophy, Psychology and Language Sciences",
-    "school_name": "School of Philosophy, Psychology and Language Sciences",
-    "college": "College of Arts, Humanities and Social Sciences"
   },
   {
     "code": "PSYL08014",
@@ -12329,16 +12296,5 @@
     "keywords": "r,statistics",
     "course_organiser": "Dr Martin CorleyTel:(0131 6)50 6682Email:Martin.Corley@ed.ac.uk",
     "navigationhelp_&_informationhomeintroductionglossarysearch_dpts_and_coursesregulationsregulationsdegree_programmesintroductionbrowse dptscoursesintroductionhumanities_and_social_sciencescience_and_engineeringmedicine_and_veterinary_medicineother_informationcombined_course_timetableprospectusesimportant information": "Navigation"
-  },
-  {
-    "code": "KeyAvailable to all students - SVNot available to visiting students - SSPart-year visiting students only - VV",
-    "name": "Available to all students - SV",
-    "url": "",
-    "availability": "Key",
-    "period": "Not available to visiting students - SS",
-    "credits": "Part-year visiting students only - VV",
-    "subject": "Psychology",
-    "school_name": "School of Philosophy, Psychology and Language Sciences",
-    "college": "College of Arts, Humanities and Social Sciences"
   }
 ]

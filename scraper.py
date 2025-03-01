@@ -492,6 +492,14 @@ class DRPSScraper:
                     if "course" in course_code.lower() or "code" in course_code.lower():
                         continue
                     
+                    # Skip rows that are likely legend/key information
+                    if any(keyword in course_code.lower() for keyword in ['key', 'legend', 'available', 'not available']):
+                        continue
+                    
+                    # Skip rows where the course code doesn't match the expected pattern (letters followed by numbers)
+                    if not re.match(r'^[A-Z]{2,}[0-9]{4,}$', course_code):
+                        continue
+                    
                     # Create basic course info
                     course_info = {
                         'code': course_code,
@@ -745,7 +753,7 @@ class DRPSScraper:
     def save_to_json(self, data, filename: str):
         """Save the scraped data to a JSON file."""
         try:
-            with open(filename, 'w', encoding='utf-8') as f:
+    with open(filename, 'w', encoding='utf-8') as f:
                 json.dump(data, f, indent=2, ensure_ascii=False)
             logger.info(f"Data saved to {filename}")
         except IOError as e:

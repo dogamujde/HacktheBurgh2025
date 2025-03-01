@@ -2287,17 +2287,6 @@
     "navigationhelp_&_informationhomeintroductionglossarysearch_dpts_and_coursesregulationsregulationsdegree_programmesintroductionbrowse dptscoursesintroductionhumanities_and_social_sciencescience_and_engineeringmedicine_and_veterinary_medicineother_informationcombined_course_timetableprospectusesimportant information": "Navigation"
   },
   {
-    "code": "KeyAvailable to all students - SVNot available to visiting students - SSPart-year visiting students only - VV",
-    "name": "Available to all students - SV",
-    "url": "",
-    "availability": "Key",
-    "period": "Not available to visiting students - SS",
-    "credits": "Part-year visiting students only - VV",
-    "subject": "Clinical Psychology",
-    "school_name": "School of Health in Social Science",
-    "college": "College of Arts, Humanities and Social Sciences"
-  },
-  {
     "code": "CNST08001",
     "name": "Counselling and Psychotherapy: Principles and Practices",
     "url": "http://www.drps.ed.ac.uk/24-25/dpt/cxcnst08001.htm",
@@ -2783,7 +2772,7 @@
     "url": "http://www.drps.ed.ac.uk/24-25/dpt/cxcnst11068.htm",
     "availability": "SS1",
     "period": "Flexible",
-    "credits": "Difference, diversity and power in counselling practice (20 credits)",
+    "credits": "20",
     "subject": "Counselling Studies",
     "school_name": "School of Health in Social Science",
     "college": "College of Arts, Humanities and Social Sciences",
@@ -2867,7 +2856,7 @@
     "url": "http://www.drps.ed.ac.uk/24-25/dpt/cxcnst11080.htm",
     "availability": "SS1",
     "period": "Flexible",
-    "credits": "Dissertation - MSc by Research in Counselling Studies (60 credits)",
+    "credits": "60",
     "subject": "Counselling Studies",
     "school_name": "School of Health in Social Science",
     "college": "College of Arts, Humanities and Social Sciences",
@@ -3790,7 +3779,7 @@
     "url": "http://www.drps.ed.ac.uk/24-25/dpt/cxcnst12014.htm",
     "availability": "SS1",
     "period": "Full Year",
-    "credits": "Professional Accreditation and Personal Development",
+    "credits": "20",
     "subject": "Counselling Studies",
     "school_name": "School of Health in Social Science",
     "college": "College of Arts, Humanities and Social Sciences",
@@ -3837,17 +3826,6 @@
     "keywords": "Not entered",
     "course_organiser": "Mr Adrian MartinezTel:Email:Adrian.F.Martinez@ed.ac.uk",
     "navigationhelp_&_informationhomeintroductionglossarysearch_dpts_and_coursesregulationsregulationsdegree_programmesintroductionbrowse dptscoursesintroductionhumanities_and_social_sciencescience_and_engineeringmedicine_and_veterinary_medicineother_informationcombined_course_timetableprospectusesimportant information": "Navigation"
-  },
-  {
-    "code": "KeyAvailable to all students - SVNot available to visiting students - SSPart-year visiting students only - VV",
-    "name": "Available to all students - SV",
-    "url": "",
-    "availability": "Key",
-    "period": "Not available to visiting students - SS",
-    "credits": "Part-year visiting students only - VV",
-    "subject": "Counselling Studies",
-    "school_name": "School of Health in Social Science",
-    "college": "College of Arts, Humanities and Social Sciences"
   },
   {
     "code": "ISSH11026",
@@ -4082,17 +4060,6 @@
     "keywords": "Not entered",
     "course_organiser": "Dr Eva Joanna AlexjukTel:(0131 6)51 3942Email:Jo.Alexjuk@ed.ac.uk",
     "navigationhelp_&_informationhomeintroductionglossarysearch_dpts_and_coursesregulationsregulationsdegree_programmesintroductionbrowse dptscoursesintroductionhumanities_and_social_sciencescience_and_engineeringmedicine_and_veterinary_medicineother_informationcombined_course_timetableprospectusesimportant information": "Navigation"
-  },
-  {
-    "code": "KeyAvailable to all students - SVNot available to visiting students - SSPart-year visiting students only - VV",
-    "name": "Available to all students - SV",
-    "url": "",
-    "availability": "Key",
-    "period": "Not available to visiting students - SS",
-    "credits": "Part-year visiting students only - VV",
-    "subject": "Interdisciplinary Social Sciences in Health",
-    "school_name": "School of Health in Social Science",
-    "college": "College of Arts, Humanities and Social Sciences"
   },
   {
     "code": "NUST08026",
@@ -6374,7 +6341,7 @@
     "url": "http://www.drps.ed.ac.uk/24-25/dpt/cxnust11078.htm",
     "availability": "",
     "period": "Not delivered this year",
-    "credits": "Research Methods in Nursing and Health Care A (20 credits)",
+    "credits": "20",
     "subject": "Nursing Studies",
     "school_name": "School of Health in Social Science",
     "college": "College of Arts, Humanities and Social Sciences",
@@ -6400,7 +6367,7 @@
     "url": "http://www.drps.ed.ac.uk/24-25/dpt/cxnust11077.htm",
     "availability": "",
     "period": "Not delivered this year",
-    "credits": "Research Methods in Nursing and Health Care B (20 credits)",
+    "credits": "20",
     "subject": "Nursing Studies",
     "school_name": "School of Health in Social Science",
     "college": "College of Arts, Humanities and Social Sciences",
@@ -6483,7 +6450,7 @@
     "url": "http://www.drps.ed.ac.uk/24-25/dpt/cxnust11075.htm",
     "availability": "",
     "period": "Not delivered this year",
-    "credits": "Supervised Reading (20 credits)",
+    "credits": "20",
     "subject": "Nursing Studies",
     "school_name": "School of Health in Social Science",
     "college": "College of Arts, Humanities and Social Sciences",
@@ -6644,17 +6611,6 @@
     "keywords": "Not entered",
     "course_organiser": "Mr Sharon LevyTel:(0131 6)50 9236Email:Sharon.Levy@ed.ac.uk",
     "navigationhelp_&_informationhomeintroductionglossarysearch_dpts_and_coursesregulationsregulationsdegree_programmesintroductionbrowse dptscoursesintroductionhumanities_and_social_sciencescience_and_engineeringmedicine_and_veterinary_medicineother_informationcombined_course_timetableprospectusesimportant information": "Navigation"
-  },
-  {
-    "code": "KeyAvailable to all students - SVNot available to visiting students - SSPart-year visiting students only - VV",
-    "name": "Available to all students - SV",
-    "url": "",
-    "availability": "Key",
-    "period": "Not available to visiting students - SS",
-    "credits": "Part-year visiting students only - VV",
-    "subject": "Nursing Studies",
-    "school_name": "School of Health in Social Science",
-    "college": "College of Arts, Humanities and Social Sciences"
   },
   {
     "code": "SHSS08004",
@@ -7506,16 +7462,5 @@
     "keywords": "research,research design,health,psychology,nursing,health care",
     "course_organiser": "Dr Marti BalaamTel:Email:Marti.Balaam@ed.ac.uk",
     "navigationhelp_&_informationhomeintroductionglossarysearch_dpts_and_coursesregulationsregulationsdegree_programmesintroductionbrowse dptscoursesintroductionhumanities_and_social_sciencescience_and_engineeringmedicine_and_veterinary_medicineother_informationcombined_course_timetableprospectusesimportant information": "Navigation"
-  },
-  {
-    "code": "KeyAvailable to all students - SVNot available to visiting students - SSPart-year visiting students only - VV",
-    "name": "Available to all students - SV",
-    "url": "",
-    "availability": "Key",
-    "period": "Not available to visiting students - SS",
-    "credits": "Part-year visiting students only - VV",
-    "subject": "School of Health in Social Science",
-    "school_name": "School of Health in Social Science",
-    "college": "College of Arts, Humanities and Social Sciences"
   }
 ]

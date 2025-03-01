@@ -414,17 +414,6 @@
     "navigationhelp_&_informationhomeintroductionglossarysearch_dpts_and_coursesregulationsregulationsdegree_programmesintroductionbrowse dptscoursesintroductionhumanities_and_social_sciencescience_and_engineeringmedicine_and_veterinary_medicineother_informationcombined_course_timetableprospectusesimportant information": "Navigation"
   },
   {
-    "code": "KeyAvailable to all students - SVNot available to visiting students - SSPart-year visiting students only - VV",
-    "name": "Available to all students - SV",
-    "url": "",
-    "availability": "Key",
-    "period": "Not available to visiting students - SS",
-    "credits": "Part-year visiting students only - VV",
-    "subject": "Postgraduate (School of Physics and Astronomy)",
-    "school_name": "School of Physics and Astronomy",
-    "college": "College of Science and Engineering"
-  },
-  {
     "code": "PHYS07001",
     "name": "Transition to University Mathematics for Physics",
     "url": "http://www.drps.ed.ac.uk/24-25/dpt/cxphys07001.htm",
@@ -2088,7 +2077,7 @@
     "url": "http://www.drps.ed.ac.uk/24-25/dpt/cxphys10103.htm",
     "availability": "",
     "period": "Not delivered this year",
-    "credits": "Physics Non-compulsory year abroad (full year) - Level 10, 30 Credits",
+    "credits": "30",
     "subject": "Undergraduate (School of Physics and Astronomy)",
     "school_name": "School of Physics and Astronomy",
     "college": "College of Science and Engineering",
@@ -2112,7 +2101,7 @@
     "url": "http://www.drps.ed.ac.uk/24-25/dpt/cxphys10104.htm",
     "availability": "",
     "period": "Not delivered this year",
-    "credits": "Physics Non-compulsory year abroad (full year) - Level 10, 60 Credits",
+    "credits": "60",
     "subject": "Undergraduate (School of Physics and Astronomy)",
     "school_name": "School of Physics and Astronomy",
     "college": "College of Science and Engineering",
@@ -2136,7 +2125,7 @@
     "url": "http://www.drps.ed.ac.uk/24-25/dpt/cxphys10109.htm",
     "availability": "SS1",
     "period": "Full Year",
-    "credits": "Physics Non-compulsory year abroad (full year) - Level 10, 90 Credits",
+    "credits": "90",
     "subject": "Undergraduate (School of Physics and Astronomy)",
     "school_name": "School of Physics and Astronomy",
     "college": "College of Science and Engineering",
@@ -3198,7 +3187,7 @@
     "url": "http://www.drps.ed.ac.uk/24-25/dpt/cxphys11062.htm",
     "availability": "SS1",
     "period": "Full Year",
-    "credits": "Physics Non-compulsory year abroad (full year) - Level 11, 30 Credits",
+    "credits": "30",
     "subject": "Undergraduate (School of Physics and Astronomy)",
     "school_name": "School of Physics and Astronomy",
     "college": "College of Science and Engineering",
@@ -3225,7 +3214,7 @@
     "url": "http://www.drps.ed.ac.uk/24-25/dpt/cxphys11057.htm",
     "availability": "",
     "period": "Not delivered this year",
-    "credits": "Physics Non-compulsory year abroad (full year) - Level 11, 60 Credits",
+    "credits": "60",
     "subject": "Undergraduate (School of Physics and Astronomy)",
     "school_name": "School of Physics and Astronomy",
     "college": "College of Science and Engineering",
@@ -3249,7 +3238,7 @@
     "url": "http://www.drps.ed.ac.uk/24-25/dpt/cxphys11058.htm",
     "availability": "",
     "period": "Not delivered this year",
-    "credits": "Physics Non-compulsory year abroad (full year) - Level 11, 90 Credits",
+    "credits": "90",
     "subject": "Undergraduate (School of Physics and Astronomy)",
     "school_name": "School of Physics and Astronomy",
     "college": "College of Science and Engineering",
@@ -3583,16 +3572,5 @@
     "keywords": "TelescopeProj",
     "course_organiser": "Dr Colin SnodgrassTel:(0131 6)68 8379Email:colin.snodgrass@ed.ac.uk",
     "navigationhelp_&_informationhomeintroductionglossarysearch_dpts_and_coursesregulationsregulationsdegree_programmesintroductionbrowse dptscoursesintroductionhumanities_and_social_sciencescience_and_engineeringmedicine_and_veterinary_medicineother_informationcombined_course_timetableprospectusesimportant information": "Navigation"
-  },
-  {
-    "code": "KeyAvailable to all students - SVNot available to visiting students - SSPart-year visiting students only - VV",
-    "name": "Available to all students - SV",
-    "url": "",
-    "availability": "Key",
-    "period": "Not available to visiting students - SS",
-    "credits": "Part-year visiting students only - VV",
-    "subject": "Undergraduate (School of Physics and Astronomy)",
-    "school_name": "School of Physics and Astronomy",
-    "college": "College of Science and Engineering"
   }
 ]

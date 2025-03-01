@@ -1301,7 +1301,7 @@
     "url": "http://www.drps.ed.ac.uk/24-25/dpt/cxchem10044.htm",
     "availability": "SS1",
     "period": "Full Year",
-    "credits": "Science Education Placement: Chemistry (40 credits)",
+    "credits": "40",
     "subject": "Chemistry",
     "school_name": "School of Chemistry",
     "college": "College of Science and Engineering",
@@ -1810,7 +1810,7 @@
     "url": "http://www.drps.ed.ac.uk/24-25/dpt/cxchem11058.htm",
     "availability": "SS1",
     "period": "Semester 1",
-    "credits": "CDT-OPTIMA credits awarded at Strathclyde - Entrepreneurship, Innovation and Commercialisation",
+    "credits": "10",
     "subject": "Chemistry",
     "school_name": "School of Chemistry",
     "college": "College of Science and Engineering",
@@ -2058,7 +2058,7 @@
     "url": "http://www.drps.ed.ac.uk/24-25/dpt/cxchem11011.htm",
     "availability": "SS1",
     "period": "Full Year",
-    "credits": "MSc Dissertation in Chemistry (180 credits)",
+    "credits": "180",
     "subject": "Chemistry",
     "school_name": "School of Chemistry",
     "college": "College of Science and Engineering",
@@ -2085,7 +2085,7 @@
     "url": "http://www.drps.ed.ac.uk/24-25/dpt/cxchem11013.htm",
     "availability": "SS1",
     "period": "Block 5 (Sem 2) and beyond",
-    "credits": "MSc Dissertation in Chemistry (60 credits)",
+    "credits": "60",
     "subject": "Chemistry",
     "school_name": "School of Chemistry",
     "college": "College of Science and Engineering",
@@ -2324,17 +2324,6 @@
     "keywords": "Not entered",
     "course_organiser": "Dr Annamaria LilienkampfTel:(0131 6)50 4812Email:Annamaria.Lilienkampf@ed.ac.uk",
     "navigationhelp_&_informationhomeintroductionglossarysearch_dpts_and_coursesregulationsregulationsdegree_programmesintroductionbrowse dptscoursesintroductionhumanities_and_social_sciencescience_and_engineeringmedicine_and_veterinary_medicineother_informationcombined_course_timetableprospectusesimportant information": "Navigation"
-  },
-  {
-    "code": "KeyAvailable to all students - SVNot available to visiting students - SSPart-year visiting students only - VV",
-    "name": "Available to all students - SV",
-    "url": "",
-    "availability": "Key",
-    "period": "Not available to visiting students - SS",
-    "credits": "Part-year visiting students only - VV",
-    "subject": "Chemistry",
-    "school_name": "School of Chemistry",
-    "college": "College of Science and Engineering"
   },
   {
     "code": "CHPH08002",
@@ -2728,17 +2717,6 @@
     "navigationhelp_&_informationhomeintroductionglossarysearch_dpts_and_coursesregulationsregulationsdegree_programmesintroductionbrowse dptscoursesintroductionhumanities_and_social_sciencescience_and_engineeringmedicine_and_veterinary_medicineother_informationcombined_course_timetableprospectusesimportant information": "Navigation"
   },
   {
-    "code": "KeyAvailable to all students - SVNot available to visiting students - SSPart-year visiting students only - VV",
-    "name": "Available to all students - SV",
-    "url": "",
-    "availability": "Key",
-    "period": "Not available to visiting students - SS",
-    "credits": "Part-year visiting students only - VV",
-    "subject": "Chemical Physics",
-    "school_name": "School of Chemistry",
-    "college": "College of Science and Engineering"
-  },
-  {
     "code": "CHEM08022",
     "name": "Biological Chemistry 1A",
     "url": "http://www.drps.ed.ac.uk/24-25/dpt/cxchem08022.htm",
@@ -2798,16 +2776,5 @@
     "keywords": "BC1B",
     "course_organiser": "Dr Peter KirsopTel:(0131 6)50 4719Email:p.kirsop@ed.ac.uk",
     "navigationhelp_&_informationhomeintroductionglossarysearch_dpts_and_coursesregulationsregulationsdegree_programmesintroductionbrowse dptscoursesintroductionhumanities_and_social_sciencescience_and_engineeringmedicine_and_veterinary_medicineother_informationcombined_course_timetableprospectusesimportant information": "Navigation"
-  },
-  {
-    "code": "KeyAvailable to all students - SVNot available to visiting students - SSPart-year visiting students only - VV",
-    "name": "Available to all students - SV",
-    "url": "",
-    "availability": "Key",
-    "period": "Not available to visiting students - SS",
-    "credits": "Part-year visiting students only - VV",
-    "subject": "Service Courses for Biology",
-    "school_name": "School of Chemistry",
-    "college": "College of Science and Engineering"
   }
 ]

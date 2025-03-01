@@ -588,17 +588,6 @@
     "navigationhelp_&_informationhomeintroductionglossarysearch_dpts_and_coursesregulationsregulationsdegree_programmesintroductionbrowse dptscoursesintroductionhumanities_and_social_sciencescience_and_engineeringmedicine_and_veterinary_medicineother_informationcombined_course_timetableprospectusesimportant information": "Navigation"
   },
   {
-    "code": "KeyAvailable to all students - SVNot available to visiting students - SSPart-year visiting students only - VV",
-    "name": "Available to all students - SV",
-    "url": "",
-    "availability": "Key",
-    "period": "Not available to visiting students - SS",
-    "credits": "Part-year visiting students only - VV",
-    "subject": "Animal Welfare and Animal Behaviour",
-    "school_name": "Royal (Dick) School of Veterinary Studies",
-    "college": "College of Medicine and Veterinary Medicine"
-  },
-  {
     "code": "BVMS08061",
     "name": "Animal Life & Food Safety 1",
     "url": "http://www.drps.ed.ac.uk/24-25/dpt/cxbvms08061.htm",
@@ -1393,17 +1382,6 @@
     "navigationhelp_&_informationhomeintroductionglossarysearch_dpts_and_coursesregulationsregulationsdegree_programmesintroductionbrowse dptscoursesintroductionhumanities_and_social_sciencescience_and_engineeringmedicine_and_veterinary_medicineother_informationcombined_course_timetableprospectusesimportant information": "Navigation"
   },
   {
-    "code": "KeyAvailable to all students - SVNot available to visiting students - SSPart-year visiting students only - VV",
-    "name": "Available to all students - SV",
-    "url": "",
-    "availability": "Key",
-    "period": "Not available to visiting students - SS",
-    "credits": "Part-year visiting students only - VV",
-    "subject": "BVMS",
-    "school_name": "Royal (Dick) School of Veterinary Studies",
-    "college": "College of Medicine and Veterinary Medicine"
-  },
-  {
     "code": "EQSC11048",
     "name": "Equine Behaviour, Welfare and Ethics",
     "url": "http://www.drps.ed.ac.uk/24-25/dpt/cxeqsc11048.htm",
@@ -1677,17 +1655,6 @@
     "keywords": "Methodology,statistics,data,science,communication",
     "course_organiser": "Mrs Bryony LancasterTel:(0131 6)50 8783Email:bryony.lancaster@ed.ac.uk",
     "navigationhelp_&_informationhomeintroductionglossarysearch_dpts_and_coursesregulationsregulationsdegree_programmesintroductionbrowse dptscoursesintroductionhumanities_and_social_sciencescience_and_engineeringmedicine_and_veterinary_medicineother_informationcombined_course_timetableprospectusesimportant information": "Navigation"
-  },
-  {
-    "code": "KeyAvailable to all students - SVNot available to visiting students - SSPart-year visiting students only - VV",
-    "name": "Available to all students - SV",
-    "url": "",
-    "availability": "Key",
-    "period": "Not available to visiting students - SS",
-    "credits": "Part-year visiting students only - VV",
-    "subject": "Equine Science",
-    "school_name": "Royal (Dick) School of Veterinary Studies",
-    "college": "College of Medicine and Veterinary Medicine"
   },
   {
     "code": "VESC07001",
@@ -8016,17 +7983,6 @@
     "navigationhelp_&_informationhomeintroductionglossarysearch_dpts_and_coursesregulationsregulationsdegree_programmesintroductionbrowse dptscoursesintroductionhumanities_and_social_sciencescience_and_engineeringmedicine_and_veterinary_medicineother_informationcombined_course_timetableprospectusesimportant information": "Navigation"
   },
   {
-    "code": "KeyAvailable to all students - SVNot available to visiting students - SSPart-year visiting students only - VV",
-    "name": "Available to all students - SV",
-    "url": "",
-    "availability": "Key",
-    "period": "Not available to visiting students - SS",
-    "credits": "Part-year visiting students only - VV",
-    "subject": "Veterinary Sciences",
-    "school_name": "Royal (Dick) School of Veterinary Studies",
-    "college": "College of Medicine and Veterinary Medicine"
-  },
-  {
     "code": "VETS08012",
     "name": "Animal Systems",
     "url": "http://www.drps.ed.ac.uk/24-25/dpt/cxvets08012.htm",
@@ -8574,16 +8530,5 @@
     "keywords": "Animal breeding; genetics; genetic improvement; farm animal genetic resources; breeding programmes",
     "course_organiser": "Prof Geoff SimmTel:(0131 6)51 7437Email:Geoff.Simm@ed.ac.uk",
     "navigationhelp_&_informationhomeintroductionglossarysearch_dpts_and_coursesregulationsregulationsdegree_programmesintroductionbrowse dptscoursesintroductionhumanities_and_social_sciencescience_and_engineeringmedicine_and_veterinary_medicineother_informationcombined_course_timetableprospectusesimportant information": "Navigation"
-  },
-  {
-    "code": "KeyAvailable to all students - SVNot available to visiting students - SSPart-year visiting students only - VV",
-    "name": "Available to all students - SV",
-    "url": "",
-    "availability": "Key",
-    "period": "Not available to visiting students - SS",
-    "credits": "Part-year visiting students only - VV",
-    "subject": "BSc Hons (Royal (Dick) Sch of Veterinary Studies)",
-    "school_name": "Royal (Dick) School of Veterinary Studies",
-    "college": "College of Medicine and Veterinary Medicine"
   }
 ]
