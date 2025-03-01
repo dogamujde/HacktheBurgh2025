@@ -24,63 +24,16 @@ type CollegeWithSchools = {
   schools: School[];
 };
 
-// Mock course data for our CourseCard components
-const mockCourses = [
-  {
-    code: "PUHR11083",
-    name: "Public health approaches to declining health, dying and bereavement",
-    period: "Semester 1",
-    school_name: "Deanery of Molecular Genetic and Population Health Sciences",
-    course_description: "This course explores public health approaches to end of life care, focusing on how health systems can better support people with terminal illness, their families and communities.",
-    credits: "20",
-    level: "11"
-  },
-  {
-    code: "PUHR11094",
-    name: "Qualitative Research for Public Health",
-    period: "Semester 2",
-    school_name: "Deanery of Molecular Genetic and Population Health Sciences",
-    course_description: "This course introduces students to qualitative research methods for public health research, including research design, data collection techniques, and analysis approaches.",
-    credits: "20",
-    level: "11"
-  },
-  {
-    code: "PUHR11088",
-    name: "Qualitative interviewing and data analysis for public health",
-    period: "Semester 1",
-    school_name: "Deanery of Molecular Genetic and Population Health Sciences",
-    course_description: "This course provides in-depth training in qualitative interviewing techniques and analytical methods for public health research, emphasizing practical skills.",
-    credits: "20",
-    level: "11"
-  },
-  {
-    code: "PUHR11118",
-    name: "Research Design for Epidemiology",
-    period: "Semester 1",
-    school_name: "Deanery of Molecular Genetic and Population Health Sciences",
-    course_description: "This course covers the principles and practice of epidemiological research design, including study types, sampling methods, and addressing bias and confounding.",
-    credits: "20",
-    level: "11"
-  },
-  {
-    code: "PUHR11100",
-    name: "Research Design for Public Health",
-    period: "Semester 2",
-    school_name: "Deanery of Molecular Genetic and Population Health Sciences",
-    course_description: "This course provides a comprehensive overview of research design approaches in public health, covering both quantitative and qualitative methodologies.",
-    credits: "20",
-    level: "11"
-  },
-  {
-    code: "GLHE11044",
-    name: "Introduction to Global Health",
-    period: "Full Year",
-    school_name: "Global Health Academy",
-    course_description: "This course provides a foundational understanding of global health challenges, focusing on determinants of health, health systems, and health policy at a global level.",
-    credits: "20",
-    level: "11"
-  }
-];
+// Course type definition
+type Course = {
+  code: string;
+  name: string;
+  period: string;
+  school_name: string;
+  course_description: string;
+  credits: string;
+  level: string;
+};
 
 export default function Home() {
   const [collegesWithSchools, setCollegesWithSchools] = useState<CollegeWithSchools[]>([]);
@@ -92,6 +45,25 @@ export default function Home() {
   const [showCourseCards, setShowCourseCards] = useState(true);
   const [currentPage, setCurrentPage] = useState(1);
   const coursesPerPage = 3;
+  
+  // Courses state
+  const [courses, setCourses] = useState<Course[]>([]);
+  
+  // New state for advanced filters
+  const [activeFilters, setActiveFilters] = useState({
+    searchTerm: '',
+    schools: [],
+    subjects: [],
+    creditLevels: [],
+    credits: { min: '0', max: '120' },
+    years: [],
+    courseLevel: '',
+    visitingStudents: false,
+    deliveryMethod: ''
+  });
+  
+  // Filter courses based on the active filters
+  const [filteredCourses, setFilteredCourses] = useState<Course[]>([]);
 
   useEffect(() => {
     const fetchData = async () => {
@@ -113,6 +85,18 @@ export default function Home() {
           throw new Error(`Error fetching schools: ${schoolsResponse.status}`);
         }
         const schoolsData = await schoolsResponse.json();
+        
+        // Fetch all courses data
+        const coursesResponse = await fetch('/api/courses');
+        if (!coursesResponse.ok) {
+          throw new Error(`Error fetching courses: ${coursesResponse.status}`);
+        }
+        const coursesData = await coursesResponse.json();
+        
+        // Set courses data
+        setCourses(coursesData.courses || []);
+        // Initialize filtered courses with all courses
+        setFilteredCourses(coursesData.courses || []);
         
         // Group schools by college
         const collegesMap = new Map<string, School[]>();
@@ -158,35 +142,141 @@ export default function Home() {
     let filtered = [...collegesWithSchools];
     
     // Filter by search term
-    if (searchTerm) {
+    if (activeFilters.searchTerm) {
       filtered = filtered.map(college => {
         const filteredSchools = college.schools.filter(school => 
-          school.name.toLowerCase().includes(searchTerm.toLowerCase())
+          school.name.toLowerCase().includes(activeFilters.searchTerm.toLowerCase())
         );
         return { ...college, schools: filteredSchools };
       }).filter(college => college.schools.length > 0);
     }
     
     // Filter by selected schools (multiple)
-    if (selectedSchools.length > 0) {
+    if (activeFilters.schools.length > 0) {
       filtered = filtered.map(college => {
         const filteredSchools = college.schools.filter(school => 
-          selectedSchools.includes(school.name)
+          activeFilters.schools.includes(school.name)
         );
         return { ...college, schools: filteredSchools };
       }).filter(college => college.schools.length > 0);
     }
     
     setFilteredColleges(filtered);
-  }, [collegesWithSchools, searchTerm, selectedSchools]);
-
-  const handleSearch = (term: string, schools: string[]) => {
-    setSearchTerm(term);
-    setSelectedSchools(schools);
+    
+    // Update search term and selected schools from activeFilters
+    setSearchTerm(activeFilters.searchTerm);
+    setSelectedSchools(activeFilters.schools);
+    
+    // Reset to first page when filters change
+    setCurrentPage(1);
+    
+    // Filter courses based on all active filters
+    filterCourses();
+  }, [collegesWithSchools, activeFilters]);
+  
+  // Function to filter courses based on all active filters
+  const filterCourses = () => {
+    let filtered = [...courses];
+    
+    // Filter by search term
+    if (activeFilters.searchTerm) {
+      const searchLower = activeFilters.searchTerm.toLowerCase();
+      filtered = filtered.filter(course => 
+        course.name.toLowerCase().includes(searchLower) || 
+        course.code.toLowerCase().includes(searchLower) ||
+        (course.course_description && course.course_description.toLowerCase().includes(searchLower))
+      );
+    }
+    
+    // Filter by schools
+    if (activeFilters.schools.length > 0) {
+      filtered = filtered.filter(course => 
+        activeFilters.schools.includes(course.school_name)
+      );
+    }
+    
+    // Filter by subjects (mock implementation - would need real subject data)
+    if (activeFilters.subjects.length > 0) {
+      // In a real app, you'd have subject data to filter on
+      // This is a placeholder that simulates subject filtering
+      filtered = filtered.filter(course => {
+        // Simulate matching subjects with course name or description
+        return activeFilters.subjects.some(subject => 
+          course.name.includes(subject) || 
+          (course.course_description && course.course_description.includes(subject))
+        );
+      });
+    }
+    
+    // Filter by credit levels
+    if (activeFilters.creditLevels.length > 0) {
+      filtered = filtered.filter(course => {
+        // Extract level number from credit_level string (e.g., "SCQF Level 8 (Year 1 Undergraduate)" -> 8)
+        const levelString = course.credit_level || '';
+        const levelMatch = levelString.match(/Level (\d+)/);
+        const level = levelMatch ? parseInt(levelMatch[1]) : null;
+        
+        return level && activeFilters.creditLevels.includes(level);
+      });
+    }
+    
+    // Filter by credit range
+    if (activeFilters.credits.min !== '0' || activeFilters.credits.max !== '120') {
+      filtered = filtered.filter(course => {
+        const courseCredits = parseInt(course.credits);
+        return courseCredits >= parseInt(activeFilters.credits.min) && 
+               courseCredits <= parseInt(activeFilters.credits.max);
+      });
+    }
+    
+    // Filter by course level (undergraduate/postgraduate)
+    if (activeFilters.courseLevel) {
+      filtered = filtered.filter(course => {
+        // Extract level number from credit_level string
+        const levelString = course.credit_level || '';
+        const levelMatch = levelString.match(/Level (\d+)/);
+        const level = levelMatch ? parseInt(levelMatch[1]) : null;
+        
+        // Also check if the string directly indicates undergraduate or postgraduate
+        const isPostgrad = levelString.toLowerCase().includes('postgraduate');
+        const isUndergrad = levelString.toLowerCase().includes('undergraduate');
+        
+        if (activeFilters.courseLevel === 'postgraduate') {
+          return isPostgrad || (level && level >= 11);
+        } else {
+          return isUndergrad || (level && level < 11);
+        }
+      });
+    }
+    
+    // Filter by delivery method
+    if (activeFilters.deliveryMethod) {
+      // This is a placeholder - in a real app you'd have delivery method data
+      filtered = filtered.filter(course => {
+        if (activeFilters.deliveryMethod === 'online') {
+          return course.period.includes('Online');
+        } else if (activeFilters.deliveryMethod === 'in-person') {
+          return !course.period.includes('Online');
+        }
+        return true; // For hybrid or when we don't have the data
+      });
+    }
+    
+    setFilteredCourses(filtered);
   };
 
-  const handleFilterChange = (schools: string[]) => {
-    setSelectedSchools(schools);
+  const handleSearch = (term: string, schools: string[]) => {
+    // This is called from SearchBar's simple search
+    setActiveFilters(prev => ({
+      ...prev,
+      searchTerm: term,
+      schools: schools
+    }));
+  };
+
+  const handleFilterChange = (filters: any) => {
+    // This is called when any filter changes in SearchBar
+    setActiveFilters(filters);
   };
 
   // Toggle between course cards and colleges view
@@ -194,11 +284,11 @@ export default function Home() {
     setShowCourseCards(!showCourseCards);
   };
 
-  // Calculate pagination values
-  const totalPages = Math.ceil(mockCourses.length / coursesPerPage);
+  // Calculate pagination values for filtered courses
+  const totalPages = Math.ceil(filteredCourses.length / coursesPerPage);
   const indexOfLastCourse = currentPage * coursesPerPage;
   const indexOfFirstCourse = indexOfLastCourse - coursesPerPage;
-  const currentCourses = mockCourses.slice(indexOfFirstCourse, indexOfLastCourse);
+  const currentCourses = filteredCourses.slice(indexOfFirstCourse, indexOfLastCourse);
 
   // Handle page change
   const handlePageChange = (pageNumber: number) => {
@@ -258,22 +348,47 @@ export default function Home() {
         ) : showCourseCards ? (
           // Course Cards Grid Layout with Pagination
           <div className="mt-12">
-            <h2 className="text-2xl font-bold text-blue-900 mb-8">Featured Courses</h2>
-            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
-              {currentCourses.map((course, index) => (
-                <CourseCard key={index} course={course} />
-              ))}
-            </div>
+            <h2 className="text-2xl font-bold text-blue-900 mb-8">Filtered Courses ({filteredCourses.length})</h2>
             
-            {/* Pagination component */}
-            <Pagination 
-              currentPage={currentPage}
-              totalPages={totalPages}
-              onPageChange={handlePageChange}
-            />
+            {currentCourses.length > 0 ? (
+              <>
+                <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+                  {currentCourses.map((course, index) => (
+                    <CourseCard key={index} course={course} />
+                  ))}
+                </div>
+                
+                {/* Pagination component */}
+                <Pagination 
+                  currentPage={currentPage}
+                  totalPages={totalPages}
+                  onPageChange={handlePageChange}
+                />
+              </>
+            ) : (
+              <div className="text-center py-12">
+                <p className="text-gray-500 text-xl">No courses found matching your filters.</p>
+                <button 
+                  onClick={() => setActiveFilters({
+                    searchTerm: '',
+                    schools: [],
+                    subjects: [],
+                    creditLevels: [],
+                    credits: { min: '0', max: '120' },
+                    years: [],
+                    courseLevel: '',
+                    visitingStudents: false,
+                    deliveryMethod: ''
+                  })} 
+                  className="mt-4 px-4 py-2 bg-blue-600 text-white rounded-md hover:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-blue-500"
+                >
+                  Clear Filters
+                </button>
+              </div>
+            )}
           </div>
         ) : (
-          // Original Colleges Layout
+          // Original Colleges Layout with updated filter handling and empty state
           <div className="mt-12 grid gap-8 md:grid-cols-2 lg:grid-cols-3">
             {filteredColleges.length > 0 ? (
               filteredColleges.map((college, index) => (
@@ -302,7 +417,17 @@ export default function Home() {
               <div className="col-span-3 text-center py-12">
                 <p className="text-gray-500 text-xl">No results found for your search criteria.</p>
                 <button 
-                  onClick={() => {setSearchTerm(''); setSelectedSchools([]);}} 
+                  onClick={() => setActiveFilters({
+                    searchTerm: '',
+                    schools: [],
+                    subjects: [],
+                    creditLevels: [],
+                    credits: { min: '0', max: '120' },
+                    years: [],
+                    courseLevel: '',
+                    visitingStudents: false,
+                    deliveryMethod: ''
+                  })} 
                   className="mt-4 px-4 py-2 bg-blue-600 text-white rounded-md hover:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-blue-500"
                 >
                   Clear Filters

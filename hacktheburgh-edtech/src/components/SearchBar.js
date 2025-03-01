@@ -1,8 +1,9 @@
-import { useState, useEffect, useRef } from 'react';
+import { useState, useEffect, useRef, useCallback } from 'react';
 
 const SearchBar = ({ onSearch, onFilterChange }) => {
+  // Basic search states
   const [searchTerm, setSearchTerm] = useState('');
-  const [selectedSchools, setSelectedSchools] = useState([]); // Changed to array for multiple selections
+  const [selectedSchools, setSelectedSchools] = useState([]);
   const [schools, setSchools] = useState([]);
   const [isLoading, setIsLoading] = useState(true);
   const [dropdownOpen, setDropdownOpen] = useState(false);
@@ -23,10 +24,24 @@ const SearchBar = ({ onSearch, onFilterChange }) => {
   const [visitingStudents, setVisitingStudents] = useState(false);
   const [deliveryMethod, setDeliveryMethod] = useState('');
   
+  // Combined filters state
+  const [activeFilters, setActiveFilters] = useState({
+    searchTerm: '',
+    schools: [],
+    subjects: [],
+    creditLevels: [],
+    credits: { min: '0', max: '120' },
+    years: [],
+    courseLevel: '',
+    visitingStudents: false,
+    deliveryMethod: ''
+  });
+  
   // Fetch schools for the dropdown
   useEffect(() => {
     const fetchSchools = async () => {
       try {
+        setIsLoading(true);
         const response = await fetch('/api/subjects');
         if (response.ok) {
           const data = await response.json();
@@ -70,13 +85,27 @@ const SearchBar = ({ onSearch, onFilterChange }) => {
       document.removeEventListener('mousedown', handleClickOutside);
     };
   }, []);
+  
+  // Apply all filters whenever activeFilters changes
+  useEffect(() => {
+    if (onSearch) {
+      onSearch(activeFilters.searchTerm, activeFilters.schools);
+    }
+    
+    if (onFilterChange) {
+      onFilterChange(activeFilters);
+    }
+  }, [activeFilters, onSearch, onFilterChange]);
 
   const handleSearchChange = (e) => {
     const value = e.target.value;
     setSearchTerm(value);
-    if (onSearch) {
-      onSearch(value, selectedSchools);
-    }
+    
+    // Update active filters with the new search term
+    setActiveFilters(prev => ({
+      ...prev,
+      searchTerm: value
+    }));
   };
 
   const handleSchoolSelection = (school) => {
@@ -84,9 +113,12 @@ const SearchBar = ({ onSearch, onFilterChange }) => {
     if (!selectedSchools.includes(school)) {
       const newSelectedSchools = [...selectedSchools, school];
       setSelectedSchools(newSelectedSchools);
-      if (onFilterChange) {
-        onFilterChange(newSelectedSchools);
-      }
+      
+      // Update active filters with the new schools
+      setActiveFilters(prev => ({
+        ...prev,
+        schools: newSelectedSchools
+      }));
     }
     
     // Clear search term and close dropdown
@@ -99,73 +131,18 @@ const SearchBar = ({ onSearch, onFilterChange }) => {
       school => school !== schoolToRemove
     );
     setSelectedSchools(newSelectedSchools);
-    if (onFilterChange) {
-      onFilterChange(newSelectedSchools);
-    }
+    
+    // Update active filters with the new schools
+    setActiveFilters(prev => ({
+      ...prev,
+      schools: newSelectedSchools
+    }));
   };
 
-  const clearFilters = () => {
+  const clearFilters = useCallback(() => {
+    // Reset all state variables
     setSelectedSchools([]);
     setSearchTerm('');
-    if (onSearch) {
-      onSearch('', []);
-    }
-    if (onFilterChange) {
-      onFilterChange([]);
-    }
-  };
-  
-  const handleSubjectSelection = (subject) => {
-    if (!selectedSubjects.includes(subject)) {
-      setSelectedSubjects([...selectedSubjects, subject]);
-    }
-    setSubjectSearchTerm('');
-  };
-  
-  const handleRemoveSubject = (subject) => {
-    setSelectedSubjects(selectedSubjects.filter(s => s !== subject));
-  };
-  
-  const handleCreditLevelToggle = (level) => {
-    if (creditLevels.includes(level)) {
-      setCreditLevels(creditLevels.filter(l => l !== level));
-    } else {
-      setCreditLevels([...creditLevels, level]);
-    }
-  };
-  
-  const handleYearFilterToggle = (year) => {
-    if (yearFilters.includes(year)) {
-      setYearFilters(yearFilters.filter(y => y !== year));
-    } else {
-      setYearFilters([...yearFilters, year]);
-    }
-  };
-  
-  const applyAdvancedSearch = () => {
-    // In a real application, you would combine all filters and pass them to the parent component
-    console.log('Advanced search applied with filters:', {
-      selectedSchools,
-      selectedSubjects,
-      creditLevels,
-      creditsRange: [minCredits, maxCredits],
-      yearFilters,
-      courseLevel,
-      visitingStudents,
-      deliveryMethod
-    });
-    
-    // Close the advanced search dropdown
-    setAdvancedSearchOpen(false);
-    
-    // Pass selected schools to the parent component for now
-    // In a real app, you'd pass all filters
-    if (onFilterChange) {
-      onFilterChange(selectedSchools);
-    }
-  };
-  
-  const resetAdvancedSearch = () => {
     setSelectedSubjects([]);
     setCreditLevels([]);
     setMinCredits('0');
@@ -174,6 +151,180 @@ const SearchBar = ({ onSearch, onFilterChange }) => {
     setCourseLevel('');
     setVisitingStudents(false);
     setDeliveryMethod('');
+    
+    // Reset all active filters
+    setActiveFilters({
+      searchTerm: '',
+      schools: [],
+      subjects: [],
+      creditLevels: [],
+      credits: { min: '0', max: '120' },
+      years: [],
+      courseLevel: '',
+      visitingStudents: false,
+      deliveryMethod: ''
+    });
+  }, []);
+  
+  const handleSubjectSelection = (subject) => {
+    if (!selectedSubjects.includes(subject)) {
+      const newSelectedSubjects = [...selectedSubjects, subject];
+      setSelectedSubjects(newSelectedSubjects);
+      
+      // Update active filters with the new subjects
+      setActiveFilters(prev => ({
+        ...prev,
+        subjects: newSelectedSubjects
+      }));
+    }
+    setSubjectSearchTerm('');
+  };
+  
+  const handleRemoveSubject = (subject) => {
+    const newSelectedSubjects = selectedSubjects.filter(s => s !== subject);
+    setSelectedSubjects(newSelectedSubjects);
+    
+    // Update active filters with the new subjects
+    setActiveFilters(prev => ({
+      ...prev,
+      subjects: newSelectedSubjects
+    }));
+  };
+  
+  const handleCreditLevelToggle = (level) => {
+    let newCreditLevels;
+    if (creditLevels.includes(level)) {
+      newCreditLevels = creditLevels.filter(l => l !== level);
+    } else {
+      newCreditLevels = [...creditLevels, level];
+    }
+    
+    setCreditLevels(newCreditLevels);
+    
+    // Update active filters with the new credit levels
+    setActiveFilters(prev => ({
+      ...prev,
+      creditLevels: newCreditLevels
+    }));
+  };
+  
+  const handleYearFilterToggle = (year) => {
+    let newYearFilters;
+    if (yearFilters.includes(year)) {
+      newYearFilters = yearFilters.filter(y => y !== year);
+    } else {
+      newYearFilters = [...yearFilters, year];
+    }
+    
+    setYearFilters(newYearFilters);
+    
+    // Update active filters with the new year filters
+    setActiveFilters(prev => ({
+      ...prev,
+      years: newYearFilters
+    }));
+  };
+  
+  const handleMinCreditsChange = (e) => {
+    const value = e.target.value;
+    setMinCredits(value);
+    
+    // Update active filters with the new min credits
+    setActiveFilters(prev => ({
+      ...prev,
+      credits: {
+        ...prev.credits,
+        min: value
+      }
+    }));
+  };
+  
+  const handleMaxCreditsChange = (e) => {
+    const value = e.target.value;
+    setMaxCredits(value);
+    
+    // Update active filters with the new max credits
+    setActiveFilters(prev => ({
+      ...prev,
+      credits: {
+        ...prev.credits,
+        max: value
+      }
+    }));
+  };
+  
+  const handleCourseLevelChange = (level) => {
+    setCourseLevel(level);
+    
+    // Update active filters with the new course level
+    setActiveFilters(prev => ({
+      ...prev,
+      courseLevel: level
+    }));
+  };
+  
+  const handleVisitingStudentsChange = () => {
+    const newValue = !visitingStudents;
+    setVisitingStudents(newValue);
+    
+    // Update active filters with the new visiting students value
+    setActiveFilters(prev => ({
+      ...prev,
+      visitingStudents: newValue
+    }));
+  };
+  
+  const handleDeliveryMethodChange = (e) => {
+    const value = e.target.value;
+    setDeliveryMethod(value);
+    
+    // Update active filters with the new delivery method
+    setActiveFilters(prev => ({
+      ...prev,
+      deliveryMethod: value
+    }));
+  };
+  
+  const applyAdvancedSearch = () => {
+    // Update active filters with all current filter states
+    setActiveFilters({
+      searchTerm,
+      schools: selectedSchools,
+      subjects: selectedSubjects,
+      creditLevels,
+      credits: { min: minCredits, max: maxCredits },
+      years: yearFilters,
+      courseLevel,
+      visitingStudents,
+      deliveryMethod
+    });
+    
+    // Close the advanced search dropdown
+    setAdvancedSearchOpen(false);
+  };
+  
+  const resetAdvancedSearch = () => {
+    // Reset advanced search filters
+    setSelectedSubjects([]);
+    setCreditLevels([]);
+    setMinCredits('0');
+    setMaxCredits('120');
+    setYearFilters([]);
+    setCourseLevel('');
+    setVisitingStudents(false);
+    setDeliveryMethod('');
+    
+    // Update active filters with reset advanced search values
+    setActiveFilters(prev => ({
+      ...prev,
+      subjects: [],
+      creditLevels: [],
+      credits: { min: '0', max: '120' },
+      years: [],
+      courseLevel: '',
+      visitingStudents: false,
+      deliveryMethod: ''
+    }));
   };
   
   // Filter schools based on search term
@@ -189,6 +340,16 @@ const SearchBar = ({ onSearch, onFilterChange }) => {
         subject.toLowerCase().includes(subjectSearchTerm.toLowerCase()) && 
         !selectedSubjects.includes(subject))
     : subjects.filter(subject => !selectedSubjects.includes(subject));
+
+  // Check if any advanced filters are active
+  const hasAdvancedFilters = selectedSubjects.length > 0 || 
+                             creditLevels.length > 0 || 
+                             yearFilters.length > 0 || 
+                             courseLevel !== '' || 
+                             visitingStudents || 
+                             deliveryMethod !== '' ||
+                             minCredits !== '0' || 
+                             maxCredits !== '120';
 
   return (
     <div className="w-full max-w-4xl mx-auto my-6 px-4">
@@ -265,8 +426,13 @@ const SearchBar = ({ onSearch, onFilterChange }) => {
         <div className="w-full md:w-auto relative" ref={advancedSearchRef}>
           <button
             onClick={() => setAdvancedSearchOpen(!advancedSearchOpen)}
-            className="w-full p-3 bg-blue-700 text-white rounded-lg shadow-sm focus:outline-none focus:ring-2 focus:ring-blue-500 hover:bg-blue-800 transition-colors"
+            className={`w-full p-3 ${hasAdvancedFilters ? 'bg-blue-800' : 'bg-blue-700'} text-white rounded-lg shadow-sm focus:outline-none focus:ring-2 focus:ring-blue-500 hover:bg-blue-800 transition-colors flex items-center`}
           >
+            {hasAdvancedFilters && (
+              <span className="inline-flex items-center justify-center w-5 h-5 mr-2 text-xs bg-white text-blue-800 rounded-full">
+                {selectedSubjects.length + creditLevels.length + yearFilters.length + (courseLevel ? 1 : 0) + (visitingStudents ? 1 : 0) + (deliveryMethod ? 1 : 0) + ((minCredits !== '0' || maxCredits !== '120') ? 1 : 0)}
+              </span>
+            )}
             Advanced Search
           </button>
           
@@ -346,7 +512,22 @@ const SearchBar = ({ onSearch, onFilterChange }) => {
               
               {/* SCQF Credit Level */}
               <div className="mb-4">
-                <label className="block text-sm font-medium text-gray-700 mb-1">SCQF Credit Level</label>
+                <label className="block text-sm font-medium text-gray-700 mb-1 flex items-center">
+                  SCQF Credit Level
+                  <div className="relative ml-1 group">
+                    <span className="cursor-help text-gray-500">
+                      <svg xmlns="http://www.w3.org/2000/svg" className="h-4 w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 16h-1v-4h-1m1-4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
+                      </svg>
+                    </span>
+                    <div className="absolute left-0 bottom-full mb-2 w-64 bg-black text-white text-xs rounded p-2 hidden group-hover:block z-10">
+                      <p>SCQF Level 7-10: Undergraduate levels</p>
+                      <p>SCQF Level 11-12: Postgraduate levels</p>
+                      <p>Level 7 = Year 1, Level 8 = Year 2, etc.</p>
+                      <div className="absolute left-0 top-full w-3 h-3 bg-black transform rotate-45"></div>
+                    </div>
+                  </div>
+                </label>
                 <div className="flex flex-wrap gap-2">
                   {[7, 8, 9, 10, 11, 12].map((level) => (
                     <label key={level} className="inline-flex items-center">
@@ -371,7 +552,7 @@ const SearchBar = ({ onSearch, onFilterChange }) => {
                     min="0"
                     max="120"
                     value={minCredits}
-                    onChange={(e) => setMinCredits(e.target.value)}
+                    onChange={handleMinCreditsChange}
                     className="w-20 p-2 border border-gray-300 rounded focus:ring-2 focus:ring-blue-500 focus:border-blue-500"
                   />
                   <span>to</span>
@@ -380,7 +561,7 @@ const SearchBar = ({ onSearch, onFilterChange }) => {
                     min="0"
                     max="120"
                     value={maxCredits}
-                    onChange={(e) => setMaxCredits(e.target.value)}
+                    onChange={handleMaxCreditsChange}
                     className="w-20 p-2 border border-gray-300 rounded focus:ring-2 focus:ring-blue-500 focus:border-blue-500"
                   />
                 </div>
@@ -414,7 +595,7 @@ const SearchBar = ({ onSearch, onFilterChange }) => {
                       name="courseLevel" 
                       value="undergraduate"
                       checked={courseLevel === 'undergraduate'} 
-                      onChange={() => setCourseLevel('undergraduate')}
+                      onChange={() => handleCourseLevelChange('undergraduate')}
                       className="h-4 w-4 text-blue-600 focus:ring-blue-500 border-gray-300"
                     />
                     <span className="ml-2 text-sm text-gray-700">Undergraduate</span>
@@ -425,7 +606,7 @@ const SearchBar = ({ onSearch, onFilterChange }) => {
                       name="courseLevel" 
                       value="postgraduate"
                       checked={courseLevel === 'postgraduate'} 
-                      onChange={() => setCourseLevel('postgraduate')}
+                      onChange={() => handleCourseLevelChange('postgraduate')}
                       className="h-4 w-4 text-blue-600 focus:ring-blue-500 border-gray-300"
                     />
                     <span className="ml-2 text-sm text-gray-700">Postgraduate</span>
@@ -439,7 +620,7 @@ const SearchBar = ({ onSearch, onFilterChange }) => {
                   <input 
                     type="checkbox" 
                     checked={visitingStudents} 
-                    onChange={() => setVisitingStudents(!visitingStudents)}
+                    onChange={handleVisitingStudentsChange}
                     className="h-4 w-4 text-blue-600 focus:ring-blue-500 border-gray-300 rounded"
                   />
                   <span className="ml-2 text-sm text-gray-700">Available to Visiting Students</span>
@@ -451,7 +632,7 @@ const SearchBar = ({ onSearch, onFilterChange }) => {
                 <label className="block text-sm font-medium text-gray-700 mb-1">Delivery Method</label>
                 <select 
                   value={deliveryMethod} 
-                  onChange={(e) => setDeliveryMethod(e.target.value)}
+                  onChange={handleDeliveryMethodChange}
                   className="w-full p-2 border border-gray-300 rounded focus:ring-2 focus:ring-blue-500 focus:border-blue-500"
                 >
                   <option value="">Any</option>
@@ -473,7 +654,7 @@ const SearchBar = ({ onSearch, onFilterChange }) => {
                   onClick={applyAdvancedSearch}
                   className="px-4 py-2 bg-blue-700 text-white rounded-lg hover:bg-blue-800 focus:outline-none focus:ring-2 focus:ring-blue-500"
                 >
-                  Search
+                  Apply Filters
                 </button>
               </div>
             </div>
@@ -481,59 +662,112 @@ const SearchBar = ({ onSearch, onFilterChange }) => {
         </div>
       </div>
 
-      {/* Selected Schools Tags */}
-      {selectedSchools.length > 0 && (
-        <div className="mt-4 flex flex-wrap gap-2">
-          {selectedSchools.map((school, index) => (
-            <div 
-              key={index}
-              className="inline-flex items-center bg-gray-200 text-gray-800 px-3 py-1 rounded-full text-sm"
-            >
-              {school}
+      {/* Selected Filters Display Section */}
+      <div className="mt-4">
+        {/* Selected Schools Tags */}
+        {selectedSchools.length > 0 && (
+          <div className="flex flex-wrap gap-2 mb-2">
+            {selectedSchools.map((school, index) => (
+              <div 
+                key={index}
+                className="inline-flex items-center bg-gray-200 text-gray-800 px-3 py-1 rounded-full text-sm"
+              >
+                {school}
+                <button
+                  onClick={() => handleRemoveSchool(school)}
+                  className="ml-2 text-gray-600 hover:text-gray-800 focus:outline-none"
+                  aria-label={`Remove ${school}`}
+                >
+                  <svg xmlns="http://www.w3.org/2000/svg" className="h-4 w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M6 18L18 6M6 6l12 12" />
+                  </svg>
+                </button>
+              </div>
+            ))}
+          </div>
+        )}
+        
+        {/* Search Term Tag */}
+        {searchTerm && (
+          <div className="flex flex-wrap gap-2 mb-2">
+            <div className="inline-flex items-center bg-blue-100 text-blue-800 px-3 py-1 rounded-full text-sm">
+              Search: {searchTerm}
               <button
-                onClick={() => handleRemoveSchool(school)}
-                className="ml-2 text-gray-600 hover:text-gray-800 focus:outline-none"
-                aria-label={`Remove ${school}`}
+                onClick={() => {
+                  setSearchTerm('');
+                  setActiveFilters(prev => ({ ...prev, searchTerm: '' }));
+                }}
+                className="ml-2 text-blue-600 hover:text-blue-800 focus:outline-none"
+                aria-label="Clear search"
               >
                 <svg xmlns="http://www.w3.org/2000/svg" className="h-4 w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M6 18L18 6M6 6l12 12" />
                 </svg>
               </button>
             </div>
-          ))}
-          
-          {/* Clear All Button */}
-          {selectedSchools.length > 1 && (
-            <button
-              onClick={clearFilters}
-              className="inline-flex items-center text-sm text-red-600 hover:text-red-800 ml-2"
-            >
-              Clear All
-            </button>
-          )}
-        </div>
-      )}
-      
-      {/* Search Term Tag */}
-      {searchTerm && (
-        <div className="mt-2 flex flex-wrap gap-2">
-          <div className="inline-flex items-center bg-blue-100 text-blue-800 px-3 py-1 rounded-full text-sm">
-            Search: {searchTerm}
-            <button
-              onClick={() => {
-                setSearchTerm('');
-                if (onSearch) onSearch('', selectedSchools);
-              }}
-              className="ml-2 text-blue-600 hover:text-blue-800 focus:outline-none"
-              aria-label="Clear search"
-            >
-              <svg xmlns="http://www.w3.org/2000/svg" className="h-4 w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M6 18L18 6M6 6l12 12" />
-              </svg>
-            </button>
           </div>
-        </div>
-      )}
+        )}
+        
+        {/* Display other active filters */}
+        {hasAdvancedFilters && (
+          <div className="flex flex-wrap gap-2 mb-2">
+            {/* Credit Levels */}
+            {creditLevels.length > 0 && (
+              <div className="inline-flex items-center bg-purple-100 text-purple-800 px-3 py-1 rounded-full text-sm">
+                Levels: {creditLevels.join(', ')}
+              </div>
+            )}
+            
+            {/* Credits Range */}
+            {(minCredits !== '0' || maxCredits !== '120') && (
+              <div className="inline-flex items-center bg-green-100 text-green-800 px-3 py-1 rounded-full text-sm">
+                Credits: {minCredits} - {maxCredits}
+              </div>
+            )}
+            
+            {/* Year Filters */}
+            {yearFilters.length > 0 && (
+              <div className="inline-flex items-center bg-yellow-100 text-yellow-800 px-3 py-1 rounded-full text-sm">
+                Years: {yearFilters.map(y => `Year ${y}`).join(', ')}
+              </div>
+            )}
+            
+            {/* Course Level */}
+            {courseLevel && (
+              <div className="inline-flex items-center bg-indigo-100 text-indigo-800 px-3 py-1 rounded-full text-sm">
+                {courseLevel === 'undergraduate' ? 'Undergraduate' : 'Postgraduate'}
+              </div>
+            )}
+            
+            {/* Visiting Students */}
+            {visitingStudents && (
+              <div className="inline-flex items-center bg-pink-100 text-pink-800 px-3 py-1 rounded-full text-sm">
+                Visiting Students
+              </div>
+            )}
+            
+            {/* Delivery Method */}
+            {deliveryMethod && (
+              <div className="inline-flex items-center bg-teal-100 text-teal-800 px-3 py-1 rounded-full text-sm">
+                {deliveryMethod === 'in-person' ? 'In-Person' : deliveryMethod === 'online' ? 'Online' : 'Hybrid'}
+              </div>
+            )}
+          </div>
+        )}
+        
+        {/* Clear All Filters Button - show when any filter is active */}
+        {(searchTerm || selectedSchools.length > 0 || hasAdvancedFilters) && (
+          <button
+            onClick={clearFilters}
+            className="inline-flex items-center text-sm text-red-600 hover:text-red-800 font-medium mt-2"
+          >
+            Clear All Filters
+            <svg xmlns="http://www.w3.org/2000/svg" className="h-4 w-4 ml-1" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 7l-.867 12.142A2 2 0 0116.138 21H7.862a2 2 0 01-1.995-1.858L5 7m5 4v6m4-6v6m1-10V4a1 1 0 00-1-1h-4a1 1 0 00-1 1v3M4 7h16" />
+            </svg>
+          </button>
+        )}
+      </div>
     </div>
   );
 };

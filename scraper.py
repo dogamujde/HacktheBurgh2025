@@ -620,6 +620,14 @@ class DRPSScraper:
                     # Generic table processing for tables without specific captions
                     self._extract_generic_table_info(table, detailed_info)
             
+            # Check for standalone assessment information that might not be in a table we've processed
+            assessment_header = soup.find('td', text=re.compile("Assessment.*Further Info"))
+            if assessment_header and 'assessment' not in detailed_info:
+                assessment_cell = assessment_header.find_next('td')
+                if assessment_cell:
+                    cells = [assessment_header, assessment_cell]
+                    self._extract_assessment_info(cells, detailed_info)
+            
             # Extract course description
             course_description = soup.find('td', text=re.compile("Course description")) or soup.find('th', text=re.compile("Course description"))
             if course_description:
@@ -712,8 +720,37 @@ class DRPSScraper:
                 detailed_info['timetable'] = value
             elif "Learning and Teaching activities" in header:
                 detailed_info['learning_activities'] = value
+            elif "Assessment" in header:
+                self._extract_assessment_info(cells, detailed_info)
             elif "Quota" in header:
                 detailed_info['quota'] = value
+    
+    def _extract_assessment_info(self, cells, detailed_info):
+        """Extract assessment information from course pages."""
+        if len(cells) < 2:
+            return
+        
+        # The second cell contains assessment information
+        assessment_text = cells[1].get_text(strip=True)
+        
+        # Extract percentages for different assessment types
+        written_exam_match = re.search(r'Written\s+Exam\s+(\d+)\s*%', assessment_text)
+        coursework_match = re.search(r'Coursework\s+(\d+)\s*%', assessment_text)
+        practical_exam_match = re.search(r'Practical\s+Exam\s+(\d+)\s*%', assessment_text)
+        
+        # Create a structured assessment object
+        assessment = {
+            "written_exam_percent": int(written_exam_match.group(1)) if written_exam_match else 0,
+            "coursework_percent": int(coursework_match.group(1)) if coursework_match else 0,
+            "practical_exam_percent": int(practical_exam_match.group(1)) if practical_exam_match else 0,
+            "full_text": assessment_text
+        }
+        
+        detailed_info['assessment'] = assessment
+        
+        # Also store the formatted assessment string as requested
+        assessment_str = f"Assessment (Further Info) Written Exam {assessment['written_exam_percent']} %, Coursework {assessment['coursework_percent']} %, Practical Exam {assessment['practical_exam_percent']} %"
+        detailed_info['assessment_formatted'] = assessment_str
     
     def _extract_visiting_students_info(self, table, detailed_info):
         """Extract information for visiting students."""
@@ -744,6 +781,14 @@ class DRPSScraper:
             header = cells[0].get_text(strip=True)
             value = cells[1].get_text(strip=True)
             
+            # Check for additional assessment information
+            if "Additional Information (Assessment)" in header:
+                detailed_info['additional_assessment_info'] = value
+                # If we already have a formatted assessment string, append this additional info
+                if 'assessment_formatted' in detailed_info:
+                    detailed_info['assessment_formatted'] += f" - {value}"
+                continue
+            
             # Convert header to a valid key name
             key = header.lower().replace(' ', '_').replace('/', '_').replace('(', '').replace(')', '')
             
@@ -753,7 +798,7 @@ class DRPSScraper:
     def save_to_json(self, data, filename: str):
         """Save the scraped data to a JSON file."""
         try:
-    with open(filename, 'w', encoding='utf-8') as f:
+            with open(filename, 'w', encoding='utf-8') as f:
                 json.dump(data, f, indent=2, ensure_ascii=False)
             logger.info(f"Data saved to {filename}")
         except IOError as e:

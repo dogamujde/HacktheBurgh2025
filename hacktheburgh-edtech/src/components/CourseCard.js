@@ -11,6 +11,22 @@ const CourseCard = ({ course }) => {
     ? course.course_description.substring(0, 150) + (course.course_description.length > 150 ? '...' : '') 
     : 'No description available';
 
+  // Determine the course level from credit_level or other properties
+  const fullLevelInfo = course.credit_level || course.level || course.scqf_level || '';
+  
+  // Extract just the level number if possible
+  let displayLevel = 'N/A';
+  if (fullLevelInfo) {
+    // Try to extract just the level number (e.g., "SCQF Level 8 (Year 1 Undergraduate)" -> "8")
+    const levelMatch = fullLevelInfo.match(/Level (\d+)/i);
+    if (levelMatch && levelMatch[1]) {
+      displayLevel = levelMatch[1];
+    } else {
+      // If no match, just use the full string
+      displayLevel = fullLevelInfo;
+    }
+  }
+
   return (
     <div className="bg-white border border-gray-200 rounded-lg shadow-md p-5 hover:shadow-lg transition-shadow">
       <Link href={`/course/${course.code}`}>
@@ -33,7 +49,7 @@ const CourseCard = ({ course }) => {
           {/* Credits Badge */}
           <div className="flex items-center justify-between">
             <span className="inline-flex items-center px-3 py-1 text-sm font-medium rounded-full bg-blue-100 text-blue-800">
-              {course.credits || 'N/A'} Credits • Level {course.level || 'N/A'}
+              {course.credits || 'N/A'} Credits • Level {displayLevel}
             </span>
             
             {/* View Details link */}

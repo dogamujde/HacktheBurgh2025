@@ -34,9 +34,6 @@ const Navbar = () => {
               <Link href="/courses" className="hover:text-blue-200 transition-colors duration-200 border-b-2 border-transparent hover:border-blue-200">
                 Courses
               </Link>
-              <Link href="/degrees" className="hover:text-blue-200 transition-colors duration-200 border-b-2 border-transparent hover:border-blue-200">
-                Degrees
-              </Link>
               <Link href="/my-courses" className="hover:text-blue-200 transition-colors duration-200 border-b-2 border-transparent hover:border-blue-200">
                 My Courses
               </Link>
@@ -82,9 +79,6 @@ const Navbar = () => {
           </Link>
           <Link href="/courses" className="hover:text-blue-200 py-2 transition-colors duration-200">
             Courses
-          </Link>
-          <Link href="/degrees" className="hover:text-blue-200 py-2 transition-colors duration-200">
-            Degrees
           </Link>
           <Link href="/my-courses" className="hover:text-blue-200 py-2 transition-colors duration-200">
             My Courses
