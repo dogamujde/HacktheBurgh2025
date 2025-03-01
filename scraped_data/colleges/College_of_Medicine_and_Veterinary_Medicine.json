@@ -1,0 +1,47 @@
+{
+  "name": "College of Medicine and Veterinary Medicine",
+  "schools": [
+    {
+      "name": "College of Medicine and Veterinary Medicine",
+      "url": "http://www.drps.ed.ac.uk/24-25/dpt/cx_s_su845.htm",
+      "college": "College of Medicine and Veterinary Medicine",
+      "schedule": "Schedule ",
+      "code": "su845"
+    },
+    {
+      "name": "Edinburgh Medical School",
+      "url": "http://www.drps.ed.ac.uk/24-25/dpt/cx_s_su640.htm",
+      "college": "College of Medicine and Veterinary Medicine",
+      "schedule": "Schedule R",
+      "code": "su640"
+    },
+    {
+      "name": "Royal (Dick) School of Veterinary Studies",
+      "url": "http://www.drps.ed.ac.uk/24-25/dpt/cx_s_su336.htm",
+      "college": "College of Medicine and Veterinary Medicine",
+      "schedule": "Schedule S",
+      "code": "su336"
+    },
+    {
+      "name": "Deanery of Biomedical Sciences",
+      "url": "http://www.drps.ed.ac.uk/24-25/dpt/cx_s_su722.htm",
+      "college": "College of Medicine and Veterinary Medicine",
+      "schedule": "Schedule T",
+      "code": "su722"
+    },
+    {
+      "name": "Deanery of Clinical Sciences",
+      "url": "http://www.drps.ed.ac.uk/24-25/dpt/cx_s_su723.htm",
+      "college": "College of Medicine and Veterinary Medicine",
+      "schedule": "Schedule U",
+      "code": "su723"
+    },
+    {
+      "name": "Deanery of Molecular, Genetic and Population Health Sciences",
+      "url": "http://www.drps.ed.ac.uk/24-25/dpt/cx_s_su724.htm",
+      "college": "College of Medicine and Veterinary Medicine",
+      "schedule": "Schedule V",
+      "code": "su724"
+    }
+  ]
+}

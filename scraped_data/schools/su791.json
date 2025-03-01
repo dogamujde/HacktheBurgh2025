@@ -1,0 +1,65 @@
+{
+  "name": "Edinburgh College of Art",
+  "url": "http://www.drps.ed.ac.uk/24-25/dpt/cx_s_su791.htm",
+  "college": "College of Arts, Humanities and Social Sciences",
+  "schedule": "Schedule A",
+  "code": "su791",
+  "subjects": [
+    {
+      "name": "Architecture and Landscape Architecture",
+      "url": "http://www.drps.ed.ac.uk/24-25/dpt/cx_sb_arch.htm",
+      "school_name": "Edinburgh College of Art",
+      "school_code": "su791",
+      "college": "College of Arts, Humanities and Social Sciences"
+    },
+    {
+      "name": "Architecture - History",
+      "url": "http://www.drps.ed.ac.uk/24-25/dpt/cx_sb_arhi.htm",
+      "school_name": "Edinburgh College of Art",
+      "school_code": "su791",
+      "college": "College of Arts, Humanities and Social Sciences"
+    },
+    {
+      "name": "Architecture - Heriot-Watt University",
+      "url": "http://www.drps.ed.ac.uk/24-25/dpt/cx_sb_arhw.htm",
+      "school_name": "Edinburgh College of Art",
+      "school_code": "su791",
+      "college": "College of Arts, Humanities and Social Sciences"
+    },
+    {
+      "name": "Art",
+      "url": "http://www.drps.ed.ac.uk/24-25/dpt/cx_sb_artx.htm",
+      "school_name": "Edinburgh College of Art",
+      "school_code": "su791",
+      "college": "College of Arts, Humanities and Social Sciences"
+    },
+    {
+      "name": "Common Courses (Edinburgh College of Art)",
+      "url": "http://www.drps.ed.ac.uk/24-25/dpt/cx_sb_cace.htm",
+      "school_name": "Edinburgh College of Art",
+      "school_code": "su791",
+      "college": "College of Arts, Humanities and Social Sciences"
+    },
+    {
+      "name": "Design",
+      "url": "http://www.drps.ed.ac.uk/24-25/dpt/cx_sb_desi.htm",
+      "school_name": "Edinburgh College of Art",
+      "school_code": "su791",
+      "college": "College of Arts, Humanities and Social Sciences"
+    },
+    {
+      "name": "History of Art",
+      "url": "http://www.drps.ed.ac.uk/24-25/dpt/cx_sb_hiar.htm",
+      "school_name": "Edinburgh College of Art",
+      "school_code": "su791",
+      "college": "College of Arts, Humanities and Social Sciences"
+    },
+    {
+      "name": "Music",
+      "url": "http://www.drps.ed.ac.uk/24-25/dpt/cx_sb_musi.htm",
+      "school_name": "Edinburgh College of Art",
+      "school_code": "su791",
+      "college": "College of Arts, Humanities and Social Sciences"
+    }
+  ]
+}

@@ -1,0 +1,23 @@
+{
+  "name": "School of Physics and Astronomy",
+  "url": "http://www.drps.ed.ac.uk/24-25/dpt/cx_s_su744.htm",
+  "college": "College of Science and Engineering",
+  "schedule": "Schedule Q",
+  "code": "su744",
+  "subjects": [
+    {
+      "name": "Postgraduate (School of Physics and Astronomy)",
+      "url": "http://www.drps.ed.ac.uk/24-25/dpt/cx_sb_pgph.htm",
+      "school_name": "School of Physics and Astronomy",
+      "school_code": "su744",
+      "college": "College of Science and Engineering"
+    },
+    {
+      "name": "Undergraduate (School of Physics and Astronomy)",
+      "url": "http://www.drps.ed.ac.uk/24-25/dpt/cx_sb_phys.htm",
+      "school_name": "School of Physics and Astronomy",
+      "school_code": "su744",
+      "college": "College of Science and Engineering"
+    }
+  ]
+}

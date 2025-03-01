@@ -1,0 +1,44 @@
+{
+  "name": "Royal (Dick) School of Veterinary Studies",
+  "url": "http://www.drps.ed.ac.uk/24-25/dpt/cx_s_su336.htm",
+  "college": "College of Medicine and Veterinary Medicine",
+  "schedule": "Schedule S",
+  "code": "su336",
+  "subjects": [
+    {
+      "name": "Animal Welfare and Animal Behaviour",
+      "url": "http://www.drps.ed.ac.uk/24-25/dpt/cx_sb_awab.htm",
+      "school_name": "Royal (Dick) School of Veterinary Studies",
+      "school_code": "su336",
+      "college": "College of Medicine and Veterinary Medicine"
+    },
+    {
+      "name": "BVMS",
+      "url": "http://www.drps.ed.ac.uk/24-25/dpt/cx_sb_bvms.htm",
+      "school_name": "Royal (Dick) School of Veterinary Studies",
+      "school_code": "su336",
+      "college": "College of Medicine and Veterinary Medicine"
+    },
+    {
+      "name": "Equine Science",
+      "url": "http://www.drps.ed.ac.uk/24-25/dpt/cx_sb_eqsc.htm",
+      "school_name": "Royal (Dick) School of Veterinary Studies",
+      "school_code": "su336",
+      "college": "College of Medicine and Veterinary Medicine"
+    },
+    {
+      "name": "Veterinary Sciences",
+      "url": "http://www.drps.ed.ac.uk/24-25/dpt/cx_sb_vesc.htm",
+      "school_name": "Royal (Dick) School of Veterinary Studies",
+      "school_code": "su336",
+      "college": "College of Medicine and Veterinary Medicine"
+    },
+    {
+      "name": "BSc Hons (Royal (Dick) Sch of Veterinary Studies)",
+      "url": "http://www.drps.ed.ac.uk/24-25/dpt/cx_sb_vets.htm",
+      "school_name": "Royal (Dick) School of Veterinary Studies",
+      "school_code": "su336",
+      "college": "College of Medicine and Veterinary Medicine"
+    }
+  ]
+}

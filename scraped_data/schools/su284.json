@@ -1,0 +1,16 @@
+{
+  "name": "School of Economics",
+  "url": "http://www.drps.ed.ac.uk/24-25/dpt/cx_s_su284.htm",
+  "college": "College of Arts, Humanities and Social Sciences",
+  "schedule": "Schedule W",
+  "code": "su284",
+  "subjects": [
+    {
+      "name": "Economics",
+      "url": "http://www.drps.ed.ac.uk/24-25/dpt/cx_sb_ecnm.htm",
+      "school_name": "School of Economics",
+      "school_code": "su284",
+      "college": "College of Arts, Humanities and Social Sciences"
+    }
+  ]
+}

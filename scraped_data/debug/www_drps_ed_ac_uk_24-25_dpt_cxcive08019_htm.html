@@ -1,0 +1,467 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Course Catalogue - Soil Mechanics 2 (CIVE08019)</title>
+<meta name="type" content="DPT"></meta>
+<meta name="modcode" content="CIVE08019"></meta>
+<meta name="modname" content="Soil Mechanics 2"></meta>
+<meta name="modkeywords" content="soil mechanics,multi-phase,soil description,stresses,Mohr's circle"></meta>
+<meta name="modschool" content=""></meta>
+<meta name="modsubj" content=""></meta>
+<meta name="modsubj" content=""></meta>
+<!-- use stylesheets from DRPS -->
+<link rel="stylesheet" type="text/css" href="http://www.ed.ac.uk/other/styles.css">
+<link rel="stylesheet" type="text/css" href="../css/dp.css">
+<link rel="stylesheet" type="text/css" href="../24-25/dpts/dpt.css">
+
+<!-- add SITS styles -->
+<style type="text/css">
+
+.rowhead1 { font-family: 'Trebuchet MS', 'Lucida Grande', Verdana, Arial, Helvetica, sans-serif; 
+font-size: 75%;  color: #555555; /* replaces 25476C */
+background-color: #EEEEFF; /* replaces EAEEF5 */
+font-weight: bold;
+}
+
+.data1nobg { font-family: 'Trebuchet MS', 'Lucida Grande', Verdana, Arial, Helvetica, sans-serif;  
+color: #333; /* replaces 666 */
+font-weight: normal }
+
+.sitstablegrid {
+	width:100%; /* overall default table width */
+	margin-bottom:20px; /* separator space below each table */
+}
+
+.sitstablegrid caption {	
+	font-family: 'Trebuchet MS', 'Lucida Grande', Verdana, Arial, Helvetica, sans-serif;
+	font-size:75%;	
+	color: #FFFFFF;
+	padding:6px;
+	font-weight: bold;
+	text-align: left;
+	background:#232B5A; /* replaces 25476c */
+}
+
+.sitstablegrid caption,
+.sitstablegrid th, 
+.sitstablegrid td {
+	font-family: 'Trebuchet MS', 'Lucida Grande', Verdana, Arial, Helvetica, sans-serif;
+	font-size:75%;
+	padding: 4px;
+	vertical-align:top;
+}
+
+.sitstablegrid th {
+	background-color:#232B5A; /* replaces 36a7e9 */
+	padding-right: 5px; /* required to keep right aligned TH row headings from edge of cell */
+	color:#FFFFFF;
+	border:1px solid #CCCCCC;
+	border-collapse:collapse;
+}
+
+.sitstablegrid {
+	background-color: #FFFFFF; /* background shade applied to all cells */
+	border: 1px solid #cccccc; /* table outline box */
+	border-collapse: collapse;
+}
+
+.sitstablegrid th, 
+.sitstablegrid td {
+	border: 1px solid #cccccc; /* draws grid lines for sitstablegrid style class */
+	}
+
+#sitspagetitle {
+} 
+  
+h1.sitspagetitle {
+	font-family: 'Trebuchet MS', 'Lucida Grande', Verdana, Arial, Helvetica, sans-serif;
+	font-size: 80%;
+	color: #232B5A; /* replaces 25476c */
+	font-weight: bold;
+	border-bottom:1px solid #232B5A; /* replaces 25476c */
+}
+
+</style>
+</head>
+
+<body>
+<!-- header from DRPS -->
+<table width="100%" border="0" cellspacing="0" cellpadding="0" style="background-color: #232B5A;">
+<tr>
+<td width="84" align="left" valign="top">
+<a href="http://www.ed.ac.uk" class="headertext"><img src="http://www.drps.ed.ac.uk/images/logo.jpg" alt="The University of Edinburgh" name="logo" width="84" height="84" border="0" id="logo"></a>
+</td>
+
+<td align="left" width="100%">
+<h3 class="page_title">THE UNIVERSITY of EDINBURGH</h3>
+<h1 class="page_title">DEGREE REGULATIONS & PROGRAMMES OF STUDY 2024/2025</h1>
+<!-- <h3 style ="color:red" class="page_title">Draft Edition - Due to be published Thursday 11th April 2024</h3> -->
+<h3 style ="color:red" class="page_title">Timetable information in the Course Catalogue may be subject to change.</h3>
+</td>
+
+<td align="left">
+
+<table border="0" cellpadding="0" cellspacing="0" style="margin-right:20px;"><tr>
+<td style="white-space:nowrap">
+<a href="http://www.ed.ac.uk" class="headertext"><img src="../images/arrow.gif" width="16" height="11" border="0" alt=""></a><a href="http://www.ed.ac.uk" class="headertext">University&nbsp;Homepage</a>
+<br />
+<a href="../index.php" class="headertext"><img src="../images/arrow.gif" width="16" height="11" border="0" alt=""></a><a href="../index.php" class="headertext">DRPS Homepage</a>
+<br />
+<a href="cx_search.htm" class="headertext"><img src="../images/arrow.gif" width="16" height="11" border="0" alt=""></a><a href="cx_search.htm" class="headertext">DRPS Search</a>
+<br />
+<a href="../contact.php" class="headertext"><img src="../images/arrow.gif" width="16" height="11" border="0" alt=""></a><a href="../contact.php" class="headertext">DRPS Contact</a>
+</td></tr>
+</table>
+
+</td></tr>
+</table>
+
+<div class="college"><a href="../index.php">DRPS</a>&nbsp;:&nbsp;Course Catalogue&nbsp;:&nbsp;<a href="cx_s_su748.htm">School of Engineering</a>&nbsp;:&nbsp;<a href="cx_sb_cive.htm">Civil</a></div>
+
+<table width="100%" border="0" cellpadding="6" cellspacing="0" class="content">
+<tr valign="top"><td>
+<!-- IMPORTANT Any changes to this SRL should be tested as follows:
+- via 'View Course' and 'Amend Course' in Curriculum Management -> CCAM containter, 
+- on linking from within OCSS/OCE 
+- the course catalogue (post March '10.
+If any additional SITS classes are used  (eg sitstablenogrid) then these must be added
+to SLPs CX_CRSHDR1 and CX_CRSHDR2 for the course catalogue. The course catalogue SRL cannot include sits.css as this overwrites
+University website styles -->
+
+<!-- temp variables passed in to determine various display options as follows -->
+<!-- GSL_TMP1: blank or not CCAM: limited details displayed (link from OCSS, course catalogue); "CCAM" = all details; CCAMSUM = called from CCAM input/Amend course task (CCAM1_A4) so don't need instance data, no pre-requisites etc (because editable on on task screen ) -->
+<!-- GSL_TMP2: Academic Year: if not null then a MAV(s) in single year is/are displayed for delivery; if null then SRL uses SLP CURRENT_AYR_CODE to display all MAV from current year forwards -->
+<!-- GSL_TMP3: Display Portal links: Y or null - display links; N - don't display links (could link to external web server) -->
+<!-- GSL_TMP4:passed in and passed through to CLASSES_TAB SRL. If set to Y then First class and additional info displayed-->
+<!-- GSL_TMP5.GSL=DRPS if this is called via DRPS publish, else null-->
+<!-- GSL_TMP6.GSL=visiting students from slp sma_vs_r which calls task sma_vs_r -->
+<!-- GSL_TMP6 and in syp: siw_mod_001 -->
+
+<!--
+START IN MOD.COURSE_DETS </br>
+gsl_tmp6: </br>
+gsl_tmp1:NULL </br>
+
+-->
+
+
+
+<style type="text/css">
+<!--
+#sitspagetabs-vert { 
+display: none;
+}
+-->
+</style>
+<!-- Course name, code, credits, subject area, brief description -->
+<br />
+<h1 id="sitspagetitle" class="sitspagetitle" style="font-size:150%;">Undergraduate Course: Soil Mechanics 2 (CIVE08019)</h1>
+<table class="sitstablegrid">
+
+<!--FB 2/1/11 is course marked as closed? -->
+
+
+<caption>Course Outline</caption>
+<tr>
+<td class="rowhead1" width="15%">School</td><td width="35%">School of Engineering</td>
+<td class="rowhead1" width="15%">College</td><td width="35%">College of Science and Engineering</td>
+</tr>
+<tr>
+<td class="rowhead1" width="15%">Credit level (Normal year taken)</td><td width="35%">SCQF Level 8 (Year 2 Undergraduate)</td>
+
+<td class="rowhead1" width="15%">Availability</td><td width="35%">Available to all students</td>
+</tr>
+<tr>
+<td class="rowhead1" width="15%">SCQF Credits</td><td width="35%">10</td>
+<td class="rowhead1" width="15%">ECTS Credits</td><td width="35%">5</td>
+</tr>
+<tr>
+
+</tr>
+<tr>
+<td class="rowhead1" width ="15%">Summary</td><td width="85%" colspan="99">This course introduces the basic concepts of the mechanics of soils. It covers the fundamental multi-phase nature of soils, provides an understanding of soil description and classification, the effective stress concept and elementary seepage and compaction problems.</td>
+</tr>
+<tr>
+<td class="rowhead1" width ="15%">Course description</td><td width="85%" colspan="99">
+    
+    LECTURES<br />
+<br />
+L1 Introduction to soil mechanics<br />
+Aims and challenges of geotechnical engineering. Structure of the course. Course content. References with comments. Engineering units and dimensions. Introduction to laboratory programme.<br />
+<br />
+L2 Mass-volume relationships 1<br />
+Multiphase nature of soils. Volume relationships: void ratio, porosity, degree of saturation. Mass relationships: water content, bulk density, solid density, dry density, unit weight, submerged unit weight, specific gravity, relative density.<br />
+<br />
+L3 Mass-volume relationships 2<br />
+Soil phase diagram. Worked example.<br />
+<br />
+L4 Mass-volume relationships 3<br />
+Further examples.<br />
+<br />
+L5 Nature and formation of soils<br />
+Definition of a soil. Physical and chemical weathering. Residual and transported soils. Clay soil.<br />
+<br />
+L6 Description and Classification of soils<br />
+Soil description and classification (BS593 ). Material and mass characteristics of a soil. Particle size analysis, grading curves, effective grain size and uniformity coefficient. Limit tests (BS1377). Plasticity chart. Engineering applications of the Atterberg limits.<br />
+<br />
+L7 Effective stress concept 1<br />
+Principle of effective stress. Physical interpretation. Total and effective vertical stress and pore water pressure.<br />
+<br />
+L8 Effective stress concept 2<br />
+Total and effective stresses. Worked example.<br />
+<br />
+L9 Effective stress concept 3<br />
+Partially saturated soils. Capillary head. Worked example.<br />
+<br />
+L10  Stresses in soils 1<br />
+Geostatic stress condition. Lateral stress coefficient. Horizontal and vertical stresses. Normal and overconsolidation. Ko condition.<br />
+<br />
+L11 Stresses in soils 2<br />
+Definition of stresses in two dimensions. Mohr's diagram method of stress analysis. Total and effective stress Mohr's circles. Worked example.<br />
+<br />
+L12 Stresses in soils 3<br />
+Further worked examples.<br />
+<br />
+L13 Permeability of soils 1<br />
+Flow of water through soil: total head, pressure head. Darcy's law: hydraulic gradient, permeability coefficient k, typical values of k, Hazen's equation. Laboratory measurement of permeability: constant head permeameter and falling head permeameter.<br />
+<br />
+L14 Permeability of soils 2<br />
+Reliability of laboratory measurement of permeability. Field methods of measurement: well pumping test.<br />
+<br />
+L15 Seepage in soils 1<br />
+One-dimensional seepage: effective stress under seepage, critical hydraulic gradient, quick sand phenomenon, piping failure. Two-dimensional seepage: steady state flow and transient flow, assumptions and derivation of differential equation for 2-D seepage. <br />
+<br />
+L16 Seepage in soils 2 and concluding remarks<br />
+Flow net construction and uses in the solution of geotechnical seepage problems. Worked example. Recap on the main aspects of the topics covered in this course.<br />
+<br />
+L17 Theory of compaction<br />
+Definition of compaction. Soil properties and definitions: air voids, dry density, phase relationships.<br />
+<br />
+L18 Laboratory compaction tests<br />
+Light compaction, heavy compaction, vibratory compaction. Field density determination: sand replacement, core cutter. Optimum moisture content and maximum dry density.<br />
+<br />
+L19 Field compaction plant<br />
+Smooth wheeled rollers, pneumatic-tyred rollers, vibratory compactors, sheepsfoot rollers.<br />
+<br />
+L20  Revision<br />
+<br />
+<br />
+TUTORIALS<br />
+<br />
+Tutorial exercises are given with supervised tutorial classes. The aim is to give the students ample opportunities to develop skills in applying the theories and methods learned to solve elementary geotechnical engineering problems. The exercises cover a great variety of elementary geotechnical problems in varying degrees of difficulty.<br />
+<br />
+Tutorial Exercise 1 Mass-volume relationship and soil classification:<br />
+This tutorial is intended for developing skills in basic calculations of the masses and volumes of the different components of a soil. Exercises for soil description and soil classification are also included.<br />
+<br />
+Tutorial Exercise 2 Total and effective stresses:<br />
+This tutorial is intended for students to develop skills in calculating the pore water pressure, total and effective geostatic stresses given the soil profile. Exercises for using Mohr's circle method of stress analysis are also included.<br />
+<br />
+Tutorial Exercise 3 Permeability and Seepage:<br />
+This tutorial is intended for developing skills in solving geotechnical problems relating to soil permeability and seepage. The student should become familiar with the deduction of coefficient of permeability from different laboratory and in-situ methods, and the solution of 1-D and 2-D seepage problems.<br />
+<br />
+Tutorial Exercise 4 Compaction:<br />
+Phase relationships; compaction curves; air void contours.<br />
+<br />
+<br />
+LABORATORIES<br />
+<br />
+Laboratory classes are undertaken in the Soil Mechanics Laboratories. The students work in groups under the supervision of a laboratory demonstrator. The aim is to train the student in proper laboratory test techniques, including the analysis of results and the evaluation of relevant properties.<br />
+<br />
+Laboratory 1 Determination of plastic and liquid limits:<br />
+The experiments to determine the plastic limit and liquid limit of a clay soil are performed in accordance to BS1377: 1990 . The results lead to the determination of the plasticity index and the use of the plasticity chart.<br />
+<br />
+Laboratory 2 Compaction, maximum dry density:<br />
+The experiment to determine the relationship between dry density and water content is performed in accordance to Test 12 of BS1377: 1990. The optimum water content which gives the maximum dry density for a certain compactive effort is determined.<br />
+<br />
+Laboratory 3 Determination of coefficient of permeability:<br />
+The coefficient of permeability of a sand is determined by using a constant head permeameter. <br />
+<br />
+Laboratory 4 Direct shear box test:<br />
+The shear strength parameters of a dry sand are measured by using a direct shear box. The stress and displacement changes during shearing are also studied. This experiment forms the first introduction into shear strength of soils, which is covered extensively in Geotechnical Engineering 3.
+    
+    
+</td>
+</tr>
+</table>
+
+<!-- Entry requirements (including additional costs ) -->
+<!-- don't show pre-reqs, co-reqs and prohibited combinations if called from CCAM1_A4 amend task -->
+<!-- Show Pre-requisites etc for CCAM VIEW/OCE/Course catalogue but not CCAM Amend  -->
+
+<table class="sitstablegrid">
+<caption>Entry Requirements (not applicable to Visiting Students)</caption>
+<tr>
+<td class="rowhead1" width="15%">Pre-requisites</td>
+
+<td width="35%"> Students MUST have passed:    
+<a href="cxcive08001.htm" " target="_blank"title="View Course details. Opens in a new window.">Civil Engineering 1 (CIVE08001)</a><span class="data1nobgred"></span> <span class="data1nobgred"></span> <br /></td>
+<td class="rowhead1" width="15%">Co-requisites</td><td width="35%"></td>
+</tr>
+<tr>
+<td class="rowhead1" width="15%">Prohibited Combinations</td><td width="35%"></td>
+
+
+<td class="rowhead1" width="15%">Other requirements</td><td width="35%"> None</td>
+</tr>
+
+<!-- show add costs for portal View Course, course catalogue and from OCE, but only if there are some -->
+
+
+</table>
+
+<!-- visting students information -FB 20110426 added High Demand Course-->
+
+<table class="sitstablegrid">
+<caption>Information for Visiting Students</caption> 
+<tr>
+<td class="rowhead1" width="15%">Pre-requisites</td><td width="85%" colspan="4">None</td>
+</tr>
+<tr>
+		<td class="rowhead1" width="15%">High Demand Course?</td>
+		<td class="data1nobg" width="85%" colspan="4">Yes</td>
+    </tr>
+</table>
+
+
+<!-- Delivery information -FB 14/1/11 added GSL_TMP5.GSL=DRPS-->
+<!-- Class times -->
+
+
+
+
+
+<table class="sitstablegrid">
+<caption>Course Delivery Information</caption>
+
+
+
+
+
+
+
+
+
+
+<tr><td width="100%">Not being delivered</td></tr></table>
+
+<!-- Learning outcomes, FB 1/4/11 add other learning outcomes for ECA -->
+<table class="sitstablegrid">
+<caption>Learning Outcomes</caption> 
+<tr>
+<td>
+    On completion of this course, the student will be able to:
+    <ol style="font-family:inherit;font-size:inherit;">
+        <li>Demonstrate ability to explain the multiphase nature of soils and to derive quantities relating to the volumes and masses of the different phases of a soil</li><li>demonstrate ability to apply the effective stress concept to solve elementary geotechnical problems</li><li>describe and classify a soil according to BS5930</li><li>demonstrate skills in soil permeability and compaction measurement and skills in the solution of seepage related problems</li>
+    </ol>
+</td>
+</tr>
+</table>
+
+<table class="sitstablegrid">
+<caption>Reading List</caption> 
+<tr><td>Recommended reading:<br />
+J.A. Knappett and R.F. Craig, Craig's Soil Mechanics, Spon Press, 2012.<br />
+T.W. Lambe and R.V. Whitman, Soil Mechanics, Wiley, SI version, 1979.<br />
+<br />
+Background reading:<br />
+G.E. Barnes, Soil Mechanics: Principles and Practice, Macmillan, 2010.<br />
+M. Bolton, A Guide to Soil Mechanics, M.D.&amp; K.Bolton, 1991.<br />
+W. Powrie, Soil Mechanics: Concepts and Applications, CRC Press, 2013.</td></tr> 
+</table>
+
+<!-- CG 14/10/09 changed to show additional costs here only for CCAM amend function -->
+
+
+<table class="sitstablegrid">
+<caption>Additional Information</caption>
+
+<tr>
+<td class="rowhead1" width="15%">Graduate Attributes and Skills</td>
+<td width="85%">Not entered</td>
+</tr>
+
+
+
+<tr>
+<td class="rowhead1" width="15%">Keywords</td><td width="85%">soil mechanics,multi-phase,soil description,stresses,Mohr's circle</td>
+</tr>
+</table>
+
+<!-- Contact information -->
+<table class="sitstablegrid">
+<caption>Contacts</caption> 
+<tr>
+<td class="rowhead1"  width="15%">Course organiser</td><td width="35%">Dr Jin Sun<br>
+<b>Tel:</b> (0131 6)51 9028<br>
+<b>Email:</b> J.Sun@ed.ac.uk</td>
+<td class="rowhead1" width="15%">Course secretary</td><td width="35%">Mr Craig Hovell<br>
+<b>Tel:</b> (0131 6)51 7080<br>
+<b>Email:</b> c.hovell@ed.ac.uk</td>
+</tr>  
+</table>
+
+<!-- if called from CCAM then show extra course details -->
+
+
+</td>
+<td><table width="100%" border="0" cellspacing="0" cellpadding="0">
+<tr><td bgcolor="#999999">
+
+<table width="100%" border="0" cellspacing="1" cellpadding="3">
+<tr><td bgcolor="#FFFFFF" class="subboxtitle">Navigation</td></tr>
+<tr><td bgcolor="#FFFFFF" class="subboxsection" style="white-space:nowrap">Help &amp; Information</td></tr>
+<tr><td bgcolor="#FFFFFF"><a class="subboxitem" href="../index.php">Home</a></td></tr>
+<tr><td bgcolor="#FFFFFF"><a class="subboxitem" href="../regulations/main_intro.php">Introduction</a></td></tr>
+<tr><td bgcolor="#FFFFFF"><a class="subboxitem" href="../whole_glossary.php">Glossary</a></td></tr>
+<tr><td bgcolor="#FFFFFF"><a class="subboxitem" href="cx_search.htm">Search DPTs and Courses</a></td></tr>
+<tr><td bgcolor="#FFFFFF" class="subboxsection" style="white-space:nowrap">Regulations</td></tr>
+<tr><td bgcolor="#FFFFFF"><a class="subboxitem" href="../regulations/index.php">Regulations</a></td></tr>
+<tr><td bgcolor="#FFFFFF" class="subboxsection"  style="white-space:nowrap">Degree Programmes</td></tr>
+<tr><td bgcolor="#FFFFFF"><a class="subboxitem" href="../regulations/dpt_intro.php">Introduction</a></td></tr>
+<tr><td bgcolor="#FFFFFF"><a class="subboxitem" href="drpsindex.htm">Browse&nbsp;DPTs</a></td></tr>
+<tr><td bgcolor="#FFFFFF" class="subboxsection">Courses</td></tr>
+<tr><td bgcolor="#FFFFFF"><a class="subboxitem" href="../regulations/course_intro.php">Introduction</a></td></tr>
+<tr><td bgcolor="#FFFFFF"><a class="subboxitem" href="cx_colhss.htm" style="white-space:nowrap">Humanities and Social Science</a></td></tr>
+<tr><td bgcolor="#FFFFFF"><a class="subboxitem" href="cx_colsce.htm" style="white-space:nowrap">Science and Engineering</a></td></tr>
+<tr><td bgcolor="#FFFFFF"><a class="subboxitem" href="cx_colmvm.htm" style="white-space:nowrap">Medicine and Veterinary Medicine</a></td></tr>
+<tr><td bgcolor="#FFFFFF" class="subboxsection" style="white-space:nowrap">Other Information</td></tr>
+<tr><td bgcolor="#FFFFFF"><a class="subboxitem" href="https://browser.ted.is.ed.ac.uk" target="_blank">Combined Course Timetable </a></td></tr>
+<tr><td bgcolor="#FFFFFF"><a class="subboxitem" href="http://www.ed.ac.uk/studying/" title="Prospectuses">Prospectuses</a></td></tr>
+<tr><td bgcolor="#FFFFFF"><a class="subboxitem" href="../regulations/important.php">Important&nbsp;Information</a></td></tr>
+<tr><td bgcolor="#FFFFFF" class="subboxtitle" style="height:5px;font-size:1px;">&nbsp;</td></tr>
+</table>
+
+</td></tr>
+</table></td>   
+</tr>
+</table>
+
+<div class="footer">
+  <div style="float:right">
+    <a href="http://www.ed.ac.uk/about/website/privacy">Privacy &amp; cookies</a>
+  </div>
+  <em>&copy; Copyright 2024 The University of Edinburgh -  15 January 2025 8:55 pm</em>
+</div>
+<script async src="https://www.googletagmanager.com/gtag/js?id=trackingCode">
+  var trackingCode = window.location.hostname.substr(0, 4) === 'www.' ? 'G-9VG3160DSR' : 'G-J3QFR7R34Z';
+  </script>
+  
+  <script>
+  var key = window.location.hostname.substr(0, 4) === 'www.' ? 'G-9VG3160DSR' : 'G-J3QFR7R34Z';
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+  
+    gtag('config', key);
+  </script>
+  
+  <script>
+  var key = window.location.hostname.substr(0, 4) === 'www.' ? 'GTM-M38Z4T4' : 'GTM-KC9RP53';
+  (function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+  new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+  j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+  'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+  })(window,document,'script','dataLayer',key);</script>
+</body>
+</html>

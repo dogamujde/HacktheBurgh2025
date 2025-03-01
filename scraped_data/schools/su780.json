@@ -1,0 +1,30 @@
+{
+  "name": "Business School",
+  "url": "http://www.drps.ed.ac.uk/24-25/dpt/cx_s_su780.htm",
+  "college": "College of Arts, Humanities and Social Sciences",
+  "schedule": "Schedule H",
+  "code": "su780",
+  "subjects": [
+    {
+      "name": "Accounting",
+      "url": "http://www.drps.ed.ac.uk/24-25/dpt/cx_sb_accn.htm",
+      "school_name": "Business School",
+      "school_code": "su780",
+      "college": "College of Arts, Humanities and Social Sciences"
+    },
+    {
+      "name": "Business Studies",
+      "url": "http://www.drps.ed.ac.uk/24-25/dpt/cx_sb_bust.htm",
+      "school_name": "Business School",
+      "school_code": "su780",
+      "college": "College of Arts, Humanities and Social Sciences"
+    },
+    {
+      "name": "Common Courses (Management School)",
+      "url": "http://www.drps.ed.ac.uk/24-25/dpt/cx_sb_cmse.htm",
+      "school_name": "Business School",
+      "school_code": "su780",
+      "college": "College of Arts, Humanities and Social Sciences"
+    }
+  ]
+}

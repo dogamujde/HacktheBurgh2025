@@ -1,0 +1,65 @@
+{
+  "name": "School of Geosciences",
+  "url": "http://www.drps.ed.ac.uk/24-25/dpt/cx_s_su849.htm",
+  "college": "College of Science and Engineering",
+  "schedule": "Schedule N",
+  "code": "su849",
+  "subjects": [
+    {
+      "name": "Earth Science",
+      "url": "http://www.drps.ed.ac.uk/24-25/dpt/cx_sb_easc.htm",
+      "school_name": "School of Geosciences",
+      "school_code": "su849",
+      "college": "College of Science and Engineering"
+    },
+    {
+      "name": "Ecological Science",
+      "url": "http://www.drps.ed.ac.uk/24-25/dpt/cx_sb_ecsc.htm",
+      "school_name": "School of Geosciences",
+      "school_code": "su849",
+      "college": "College of Science and Engineering"
+    },
+    {
+      "name": "Environmental Courses",
+      "url": "http://www.drps.ed.ac.uk/24-25/dpt/cx_sb_envi.htm",
+      "school_name": "School of Geosciences",
+      "school_code": "su849",
+      "college": "College of Science and Engineering"
+    },
+    {
+      "name": "Geography",
+      "url": "http://www.drps.ed.ac.uk/24-25/dpt/cx_sb_gegr.htm",
+      "school_name": "School of Geosciences",
+      "school_code": "su849",
+      "college": "College of Science and Engineering"
+    },
+    {
+      "name": "Geosciences",
+      "url": "http://www.drps.ed.ac.uk/24-25/dpt/cx_sb_gesc.htm",
+      "school_name": "School of Geosciences",
+      "school_code": "su849",
+      "college": "College of Science and Engineering"
+    },
+    {
+      "name": "Meteorology",
+      "url": "http://www.drps.ed.ac.uk/24-25/dpt/cx_sb_mete.htm",
+      "school_name": "School of Geosciences",
+      "school_code": "su849",
+      "college": "College of Science and Engineering"
+    },
+    {
+      "name": "Postgraduate Courses (School of GeoSciences)",
+      "url": "http://www.drps.ed.ac.uk/24-25/dpt/cx_sb_pgge.htm",
+      "school_name": "School of Geosciences",
+      "school_code": "su849",
+      "college": "College of Science and Engineering"
+    },
+    {
+      "name": "Postgrad Research Courses (School of GeoSciences)",
+      "url": "http://www.drps.ed.ac.uk/24-25/dpt/cx_sb_prge.htm",
+      "school_name": "School of Geosciences",
+      "school_code": "su849",
+      "college": "College of Science and Engineering"
+    }
+  ]
+}

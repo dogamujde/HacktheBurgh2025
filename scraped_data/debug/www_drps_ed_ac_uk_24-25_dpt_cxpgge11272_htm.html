@@ -1,0 +1,545 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Course Catalogue - GIS and Spatial Analytics for Health (PGGE11272)</title>
+<meta name="type" content="DPT"></meta>
+<meta name="modcode" content="PGGE11272"></meta>
+<meta name="modname" content="GIS and Spatial Analytics for Health"></meta>
+<meta name="modkeywords" content="GIS,spatial analysis,clustering,environmental factors,health inequalities"></meta>
+<meta name="modschool" content=""></meta>
+<meta name="modsubj" content=""></meta>
+<meta name="modsubj" content=""></meta>
+<!-- use stylesheets from DRPS -->
+<link rel="stylesheet" type="text/css" href="http://www.ed.ac.uk/other/styles.css">
+<link rel="stylesheet" type="text/css" href="../css/dp.css">
+<link rel="stylesheet" type="text/css" href="../24-25/dpts/dpt.css">
+
+<!-- add SITS styles -->
+<style type="text/css">
+
+.rowhead1 { font-family: 'Trebuchet MS', 'Lucida Grande', Verdana, Arial, Helvetica, sans-serif; 
+font-size: 75%;  color: #555555; /* replaces 25476C */
+background-color: #EEEEFF; /* replaces EAEEF5 */
+font-weight: bold;
+}
+
+.data1nobg { font-family: 'Trebuchet MS', 'Lucida Grande', Verdana, Arial, Helvetica, sans-serif;  
+color: #333; /* replaces 666 */
+font-weight: normal }
+
+.sitstablegrid {
+	width:100%; /* overall default table width */
+	margin-bottom:20px; /* separator space below each table */
+}
+
+.sitstablegrid caption {	
+	font-family: 'Trebuchet MS', 'Lucida Grande', Verdana, Arial, Helvetica, sans-serif;
+	font-size:75%;	
+	color: #FFFFFF;
+	padding:6px;
+	font-weight: bold;
+	text-align: left;
+	background:#232B5A; /* replaces 25476c */
+}
+
+.sitstablegrid caption,
+.sitstablegrid th, 
+.sitstablegrid td {
+	font-family: 'Trebuchet MS', 'Lucida Grande', Verdana, Arial, Helvetica, sans-serif;
+	font-size:75%;
+	padding: 4px;
+	vertical-align:top;
+}
+
+.sitstablegrid th {
+	background-color:#232B5A; /* replaces 36a7e9 */
+	padding-right: 5px; /* required to keep right aligned TH row headings from edge of cell */
+	color:#FFFFFF;
+	border:1px solid #CCCCCC;
+	border-collapse:collapse;
+}
+
+.sitstablegrid {
+	background-color: #FFFFFF; /* background shade applied to all cells */
+	border: 1px solid #cccccc; /* table outline box */
+	border-collapse: collapse;
+}
+
+.sitstablegrid th, 
+.sitstablegrid td {
+	border: 1px solid #cccccc; /* draws grid lines for sitstablegrid style class */
+	}
+
+#sitspagetitle {
+} 
+  
+h1.sitspagetitle {
+	font-family: 'Trebuchet MS', 'Lucida Grande', Verdana, Arial, Helvetica, sans-serif;
+	font-size: 80%;
+	color: #232B5A; /* replaces 25476c */
+	font-weight: bold;
+	border-bottom:1px solid #232B5A; /* replaces 25476c */
+}
+
+</style>
+</head>
+
+<body>
+<!-- header from DRPS -->
+<table width="100%" border="0" cellspacing="0" cellpadding="0" style="background-color: #232B5A;">
+<tr>
+<td width="84" align="left" valign="top">
+<a href="http://www.ed.ac.uk" class="headertext"><img src="http://www.drps.ed.ac.uk/images/logo.jpg" alt="The University of Edinburgh" name="logo" width="84" height="84" border="0" id="logo"></a>
+</td>
+
+<td align="left" width="100%">
+<h3 class="page_title">THE UNIVERSITY of EDINBURGH</h3>
+<h1 class="page_title">DEGREE REGULATIONS & PROGRAMMES OF STUDY 2024/2025</h1>
+<!-- <h3 style ="color:red" class="page_title">Draft Edition - Due to be published Thursday 11th April 2024</h3> -->
+<h3 style ="color:red" class="page_title">Timetable information in the Course Catalogue may be subject to change.</h3>
+</td>
+
+<td align="left">
+
+<table border="0" cellpadding="0" cellspacing="0" style="margin-right:20px;"><tr>
+<td style="white-space:nowrap">
+<a href="http://www.ed.ac.uk" class="headertext"><img src="../images/arrow.gif" width="16" height="11" border="0" alt=""></a><a href="http://www.ed.ac.uk" class="headertext">University&nbsp;Homepage</a>
+<br />
+<a href="../index.php" class="headertext"><img src="../images/arrow.gif" width="16" height="11" border="0" alt=""></a><a href="../index.php" class="headertext">DRPS Homepage</a>
+<br />
+<a href="cx_search.htm" class="headertext"><img src="../images/arrow.gif" width="16" height="11" border="0" alt=""></a><a href="cx_search.htm" class="headertext">DRPS Search</a>
+<br />
+<a href="../contact.php" class="headertext"><img src="../images/arrow.gif" width="16" height="11" border="0" alt=""></a><a href="../contact.php" class="headertext">DRPS Contact</a>
+</td></tr>
+</table>
+
+</td></tr>
+</table>
+
+<div class="college"><a href="../index.php">DRPS</a>&nbsp;:&nbsp;Course Catalogue&nbsp;:&nbsp;<a href="cx_s_su849.htm">School of Geosciences</a>&nbsp;:&nbsp;<a href="cx_sb_pgge.htm">Postgraduate Courses (School of GeoSciences)</a></div>
+
+<table width="100%" border="0" cellpadding="6" cellspacing="0" class="content">
+<tr valign="top"><td>
+<!-- IMPORTANT Any changes to this SRL should be tested as follows:
+- via 'View Course' and 'Amend Course' in Curriculum Management -> CCAM containter, 
+- on linking from within OCSS/OCE 
+- the course catalogue (post March '10.
+If any additional SITS classes are used  (eg sitstablenogrid) then these must be added
+to SLPs CX_CRSHDR1 and CX_CRSHDR2 for the course catalogue. The course catalogue SRL cannot include sits.css as this overwrites
+University website styles -->
+
+<!-- temp variables passed in to determine various display options as follows -->
+<!-- GSL_TMP1: blank or not CCAM: limited details displayed (link from OCSS, course catalogue); "CCAM" = all details; CCAMSUM = called from CCAM input/Amend course task (CCAM1_A4) so don't need instance data, no pre-requisites etc (because editable on on task screen ) -->
+<!-- GSL_TMP2: Academic Year: if not null then a MAV(s) in single year is/are displayed for delivery; if null then SRL uses SLP CURRENT_AYR_CODE to display all MAV from current year forwards -->
+<!-- GSL_TMP3: Display Portal links: Y or null - display links; N - don't display links (could link to external web server) -->
+<!-- GSL_TMP4:passed in and passed through to CLASSES_TAB SRL. If set to Y then First class and additional info displayed-->
+<!-- GSL_TMP5.GSL=DRPS if this is called via DRPS publish, else null-->
+<!-- GSL_TMP6.GSL=visiting students from slp sma_vs_r which calls task sma_vs_r -->
+<!-- GSL_TMP6 and in syp: siw_mod_001 -->
+
+<!--
+START IN MOD.COURSE_DETS </br>
+gsl_tmp6: </br>
+gsl_tmp1:NULL </br>
+
+-->
+
+
+
+<style type="text/css">
+<!--
+#sitspagetabs-vert { 
+display: none;
+}
+-->
+</style>
+<!-- Course name, code, credits, subject area, brief description -->
+<br />
+<h1 id="sitspagetitle" class="sitspagetitle" style="font-size:150%;">Postgraduate Course: GIS and Spatial Analytics for Health (PGGE11272)</h1>
+<table class="sitstablegrid">
+
+<!--FB 2/1/11 is course marked as closed? -->
+
+
+<caption>Course Outline</caption>
+<tr>
+<td class="rowhead1" width="15%">School</td><td width="35%">School of Geosciences</td>
+<td class="rowhead1" width="15%">College</td><td width="35%">College of Science and Engineering</td>
+</tr>
+<tr>
+<td class="rowhead1" width="15%">Credit level (Normal year taken)</td><td width="35%">SCQF Level 11 (Postgraduate)</td>
+
+<td class="rowhead1" width="15%">Availability</td><td width="35%">Available to all students</td>
+</tr>
+<tr>
+<td class="rowhead1" width="15%">SCQF Credits</td><td width="35%">20</td>
+<td class="rowhead1" width="15%">ECTS Credits</td><td width="35%">10</td>
+</tr>
+<tr>
+
+</tr>
+<tr>
+<td class="rowhead1" width ="15%">Summary</td><td width="85%" colspan="99">The course provides an introduction to the concepts, methods and practical skills of GIS and spatial analysis used for health research. These will be taught through lectures and practical work. Students will develop their knowledge and skills in the analysis of geospatial health data.<br />
+<br />
+</td>
+</tr>
+<tr>
+<td class="rowhead1" width ="15%">Course description</td><td width="85%" colspan="99">
+    
+    Geographical aspects of health and healthcare are an important part of public health research and practice. Using GIS in health systems and policy is crucial for uncovering the spatial pattern of disease, analysing causative factors of disease, and informing policy and potential health interventions. Recent years have seen rapid growth in applications of GIS and spatial analysis in health research. This 'spatial turn' is in line with increasing availability of health related geospatial data and demands from public health authorities in health governance. <br />
+<br />
+This module aims to introduce theories, methods, and practical skills of GIS and spatial analysis in health and healthcare. It focuses on the application of GIS and spatial analysis techniques to quantitative epidemiological research questions and public health intelligence work. The role of GIS and spatial analysis will be introduced in the following analytical areas: the mapping of health data; analysis of spatial clustering in health events; measuring and modelling exposure to risk factors, evaluation of health inequalities, ecological analysis of risk factors, interpolation of health-related indicator and spatial access to health care and social care. This course has been designed to mix lectures and practicals together providing hands-on opportunities for students to learn the methods and skills in analysis in addition to understanding of the key concepts of health data analysis
+    
+    
+</td>
+</tr>
+</table>
+
+<!-- Entry requirements (including additional costs ) -->
+<!-- don't show pre-reqs, co-reqs and prohibited combinations if called from CCAM1_A4 amend task -->
+<!-- Show Pre-requisites etc for CCAM VIEW/OCE/Course catalogue but not CCAM Amend  -->
+
+<table class="sitstablegrid">
+<caption>Entry Requirements (not applicable to Visiting Students)</caption>
+<tr>
+<td class="rowhead1" width="15%">Pre-requisites</td>
+
+<td width="35%"></td>
+<td class="rowhead1" width="15%">Co-requisites</td><td width="35%"></td>
+</tr>
+<tr>
+<td class="rowhead1" width="15%">Prohibited Combinations</td><td width="35%"></td>
+
+
+<td class="rowhead1" width="15%">Other requirements</td><td width="35%"> None</td>
+</tr>
+
+<!-- show add costs for portal View Course, course catalogue and from OCE, but only if there are some -->
+
+
+</table>
+
+<!-- visting students information -FB 20110426 added High Demand Course-->
+
+<table class="sitstablegrid">
+<caption>Information for Visiting Students</caption> 
+<tr>
+<td class="rowhead1" width="15%">Pre-requisites</td><td width="85%" colspan="4">None</td>
+</tr>
+<tr>
+		<td class="rowhead1" width="15%">High Demand Course?</td>
+		<td class="data1nobg" width="85%" colspan="4">Yes</td>
+    </tr>
+</table>
+
+
+<!-- Delivery information -FB 14/1/11 added GSL_TMP5.GSL=DRPS-->
+<!-- Class times -->
+
+
+
+
+
+<table class="sitstablegrid">
+<caption>Course Delivery Information</caption>
+
+
+
+
+
+
+
+
+
+
+<!-- GSL_TMP1 = indicates whether a list of different courses' classes will be displayed. Values: Y - display course code
+at top of table, suppress additional and first class information. If blank then assume single course, so 
+don't display course code, but do display additional class and first class information.  This is so table can be used in individual MOD/MAV report or when listing a number of MODs (eg listing teaching activities for a list of SMAs)  -->
+
+<!-- GSL_TMP2 - display links to other SRLs (links won't work this from published (IPP)) N: don't, otherwise do-->
+<!-- GSL_TMP4 - Set to Y if first class and additional information to be displayed -->
+<!-- GSL_TMP5- Set to DRPS if SRL called via DRPS publish path- SRL not used for timetable and VS (uses CLASSES_TAB2)-->
+
+<!-- calling SRL must specify table, table caption (if required) eg:
+<table class="sitstablegrid">
+<caption>Course Delivery </caption> 
+---- call to this SRL ----
+</table> -->
+
+
+
+<tr><td colspan="99" style="height:5px;"></td></tr>
+<!--
+<tr><td colspan="99" style="height:5px;"> 
+ IN MAV_CLASSES_TAB </br>
+GSLTMP1:N</br>
+GSLTMP2:N </br>
+GSLTMP3: </br>
+GSLTMP4:Y </br>
+GSLTMP5:DRPS </br>
+GSLTMP6: </br>
+</td></tr>
+-->
+
+<tr>
+<td class="rowhead1" colspan="2" style="width:50%;">Academic year 2024/25, Available to all students (SV1) 
+  <!-- Quota moved from mod.course_dets cms call 882028 -->
+</td>
+<td class="rowhead1" colspan="99">Quota:&nbsp;&nbsp;40</td>
+</tr>
+
+<!-- Course start (delivery period) -->
+<tr><td class="rowhead1" width ="5%">Course Start</td>
+<td colspan="14">Semester 2</td>
+</tr>
+
+<!-- Course start date (for invoiced courses) -->
+
+
+<!-- VISITING STUDENTS : gsl_tmp6 is set up in mod.course_dets for visiting students only. setup from slp: sma_vs_r then calls mod.course_dets. Test in url_link for this gsl_tmp6  -->
+
+<!-- ayr code: 24 fixed 22 -->
+<td class="rowhead1" width="15%" target="_blank">Timetable </td>
+	<td class="data1nobg" colspan ="99">
+<a href="https://browser.ted.is.ed.ac.uk/generate/?courses%5B%5D=PGGE11272_SV1_SEM2
+&period=SEM2&week=26-37" target="_blank">Timetable</a></td>
+
+
+
+
+
+
+
+
+
+<tr>
+<td class="rowhead1" style="width:15%;">Learning and Teaching activities <a href="http://www.studentsystems.is.ed.ac.uk/staff/Support/User_Guides/CCAM//Teaching_Learning.htm" target="_blank">(Further Info)</a></td>
+
+<td colspan="14"> 
+ Total Hours:
+200
+
+(
+
+
+
+
+
+
+
+
+
+
+
+
+ Programme Level Learning and Teaching Hours 4,
+
+Directed Learning and Independent Learning Hours
+196 )
+
+</td>
+</tr>
+
+<!-- Display Futher L&T Notes -->
+
+
+<!-- Display Assessment details -->
+<tr>
+<td class="rowhead1" style="width:15%;">Assessment <a href="http://www.studentsystems.is.ed.ac.uk/staff/Support/User_Guides/CCAM//Assessment_Methods.htm" target="_blank">(Further Info)</a></td>
+
+<td colspan="14"> 
+  Written Exam
+0 %,
+Coursework
+100 %,
+Practical Exam
+0 %
+</td>
+</tr>
+
+<tr>
+<tr>
+<td class="rowhead1" stlye="width:15%;">Additional Information (Assessment)</td>
+<td colspan="14">Coursework	100%<br />
+<br />
+Project 1: Socio-spatial patterning of exposure to tobacco retailing, 2000 words group report, 40%; 400 words individual reflection, 10%<br />
+Set: week 2, Due: Week 7 <br />
+<br />
+Project 2: Ecological analysis of COVID-19, 2000 words report, 50%<br />
+Set: week 6, Due: Week 12 <br />
+</td>
+</tr>
+
+
+<tr>
+<td class="rowhead1" stlye="width:15%;">Feedback</td>
+<td colspan="14">Students will be given feedback on a formative assessment and summative assessments within three weeks of submission</td>
+</tr>
+
+<!--FB 11Oct10: Exam info displayed if it exists, 14/1/11:do not display stationery and comments for GSL_TMP5=DRPS-->
+
+
+
+<tr>
+<td class="rowhead1" colspan="99">No Exam Information</td>
+</tr>
+
+
+<!--31/1/11 FB-Teaching load display if exists-->
+
+
+
+<!--Get MABs based on MAP code on MAV
+output heading for Standard student
+SEL on sequence 001-099: <td class="data1nobg"><<DATA FIELD>></td> 
+SEL on sequence 001-099: <td class="data1nobg"><<DATA FIELD>></td> 
+SEL on sequence 001-099: <td class="data1nobg"><<DATA FIELD>></td> 
+
+output VS student heading
+select on sequence >= 101:  select on sequence >= 101:  select on sequence >= 101:  -->
+
+
+<!-- Learning outcomes, FB 1/4/11 add other learning outcomes for ECA -->
+<table class="sitstablegrid">
+<caption>Learning Outcomes</caption> 
+<tr>
+<td>
+    On completion of this course, the student will be able to:
+    <ol style="font-family:inherit;font-size:inherit;">
+        <li>Understand characteristics of geospatial health data</li><li>Understand the main theories and methods for disease mapping</li><li>Understand the theories and methods for hotspots of disease clustering</li><li>Understand the spatial data types, issues with spatial analysis and be familiar with a variety of methods of spatial inferential analysis in health research</li><li>Be able to implement the methods using ArcGIS and special software packages</li>
+    </ol>
+</td>
+</tr>
+</table>
+
+<table class="sitstablegrid">
+<caption>Reading List</caption> 
+<tr><td>Armstrong, M.P., Rushton, G. and Zimmerman, D.L., 1999. Geographically masking health data to preserve confidentiality. Statistics in medicine, 18(5), pp.497-525.                                                                               <br />
+Biggeri, A., Barbone, F., Lagazio, C., Bovenzi, M. and Stanta, G., 1996.   Air pollution and lung cancer in Trieste, Italy: spatial analysis of risk as a function of distance from sources. Environmental health perspectives, 104(7), pp.750-754.                                                                              <br />
+Bonita, R., Beaglehole, R., Kjellstrom, T. (2006) Basic epidemiology, 2nd Ed. World Health Organization (WHO), Geneva, Switzerland. Pp 219.                                                                                                      <br />
+Cromley, E.K. &amp; McLafferty, S.L. (2012) GIS and Public health. 2nd Edition. Guilford Press. New York. pp 503. ISBN 978-1-60918-750-7.     <br />
+Elliott, P., Wakefield, J.C., Best, N.G. and Briggs, D.J. eds., 2000. Spatial epidemiology: methods and applications (Vol. 15). Oxford: Oxford University Press.                                                                                          Exeter, D., Boyle, P.J., Feng, Z., Flowerdew, R. and Scheirloh, N., 2005. The creation of'consistent areas through time'(CATTs) in Scotland, 1981-2001.                                                                                                    Gatrell, A.C. and LÃ¶ytÃ¶nen, M., 1998. GIS and health research: an introduction. In GIS and Health (pp. 21-34). CRC Press.                      <br />
+Gatrell, A.C. and Elliott, S.J., 2014. Geographies of health: An introduction. John Wiley &amp; Sons.                                                                                 Gatrell, A. and Senior, M., 1999. Health and health care applications. Geographical Information systems: Principles, techniques, applications and management.                                                                                 Haining, R.P.  2003. Spatial data analysis: theory and practice. Cambridge University Press.                                                                                     Jerrett, M., Burnett, R.T., Beckerman, B.S., Turner, M.C., Krewski, D., Thurston, G., Martin, R.V., van Donkelaar, A., Hughes, E., Shi, Y. and Gapstur, S.M., 2013. Spatial analysis of air pollution and mortality in California. American journal of respiratory and critical care medicine, 188(5), pp.593-599.                                                                                      Luo, W. and Qi, Y., 2009. An enhanced two-step floating catchment area (E2SFCA) method for measuring spatial accessibility to primary care physicians. Health &amp; place, 15(4), pp.1100-1107.                               Norman, P., Rees, P. and Boyle, P., 2003. Achieving data compatibility over space and time: creating consistent geographical zones. International journal of population geography, 9(5), pp.365-386.                                   Norman, P., Boyle, P., Exeter, D., Feng, Z. and Popham, F., 2011. Rising premature mortality in the UKÂ¿s persistently deprived areas: Only a Scottish phenomenon?. Social science &amp; medicine, 73(11), pp.1575-1584.                                                                                               <br />
+Pearce, J., Cherrie, M., Shortt, N., Deary, I. and Ward Thompson, C., 2018. Life course of place: A longitudinal study of mental health and place. Transactions of the Institute of British Geographers, 43(4), pp.555-572                                                                                             <br />
+Peiffer, D., Robinson, T.P., Stevenson, M., Stevens, K.B., Rogers, D.J. and Clements, A.C., 2008. Spatial analysis in epidemiology (Vol. 142, No. 10.1093). Oxford: Oxford University Press.                                          Richardson, D.B., Volkow, N.D., Kwan, M.P., Kaplan, R.M., Goodchild, M.F. and Croyle, R.T., 2013. Spatial turn in health research. Science, 339(6126), pp.1390-1392.                                                                              Ruiz, M.O., Tedesco, C., McTighe, T.J., Austin, C. and Kitron, U., 2004. Environmental and social determinants of human risk during a West Nile virus outbreak in the greater Chicago area, 2002. International Journal of Health Geographics, 3(1), p.8.                                                          <br />
+ Schuurman, N., Peters, P.A. and Oliver, L.N., 2009. Are obesity and physical activity clustered? A spatial analysis linked to residential density. Obesity, 17(12), pp.2202-2209.                                                             Shortt, N.K., Rind, E., Pearce, J., Mitchell, R. and Curtis, S., 2018. Alcohol risk environments, vulnerability, and social inequalities in alcohol consumption. Annals of the American Association of Geographers, 108(5), pp.1210-1227.                                                                                    <br />
+Wheeler, D.C., 2007. A comparison of spatial clustering and cluster detection techniques for childhood leukemia incidence in Ohio, 1996Â¿2003. International Journal of Health Geographics, 6(1), p.13               <br />
+<br />
+</td></tr> 
+</table>
+
+<!-- CG 14/10/09 changed to show additional costs here only for CCAM amend function -->
+
+
+<table class="sitstablegrid">
+<caption>Additional Information</caption>
+
+<tr>
+<td class="rowhead1" width="15%">Graduate Attributes and Skills</td>
+<td width="85%">This course will provide the students with a range of highly marketable skills and introduce them to methods sought after by employers. These analytical skills have been identified by our Industrial External Examiner, professional bodies and graduate feedback as highly valued in the job market. The students also obtain skills in logical thinking, project work, organisation and report-writing.<br />
+<br />
+</td>
+</tr>
+
+<tr>
+<td class="rowhead1" width="15%">Special Arrangements</td>
+<td width="85%">This course is open to postgraduate and undergraduate students in the School of Geosciences. Undergraduate Geography students wishing to enrol should have passed Principles of GIS GEGR10137.<br />
+<br />
+Postgraduate students from other Schools should contact the Course Organiser and Course Administrator to check suitability and availability.<br />
+</td>
+</tr>
+
+
+
+<tr>
+<td class="rowhead1" width="15%">Additional Class Delivery Information</td>
+<td width="85%">Practicals and Lectures<br />
+Lectures: Thursday 2-4pm <br />
+Practicals: Thursday  4-6pm.<br />
+<br />
+Course location: Geography (Old Infirmary), Drummond Street, GOI_2.13 (lecture) GOI_1.26 (practical)</td>
+</tr>
+
+<tr>
+<td class="rowhead1" width="15%">Keywords</td><td width="85%">GIS,spatial analysis,clustering,environmental factors,health inequalities</td>
+</tr>
+</table>
+
+<!-- Contact information -->
+<table class="sitstablegrid">
+<caption>Contacts</caption> 
+<tr>
+<td class="rowhead1"  width="15%">Course organiser</td><td width="35%">Dr Zhiqiang Feng<br>
+<b>Tel:</b> (0131) 242 6374<br>
+<b>Email:</b> Zhiqiang.Feng@ed.ac.uk</td>
+<td class="rowhead1" width="15%">Course secretary</td><td width="35%">Dr Beata Kohlbek<br>
+<b>Tel:</b> <br>
+<b>Email:</b> Beata.Kohlbek@ed.ac.uk</td>
+</tr>  
+</table>
+
+<!-- if called from CCAM then show extra course details -->
+
+
+</td>
+<td><table width="100%" border="0" cellspacing="0" cellpadding="0">
+<tr><td bgcolor="#999999">
+
+<table width="100%" border="0" cellspacing="1" cellpadding="3">
+<tr><td bgcolor="#FFFFFF" class="subboxtitle">Navigation</td></tr>
+<tr><td bgcolor="#FFFFFF" class="subboxsection" style="white-space:nowrap">Help &amp; Information</td></tr>
+<tr><td bgcolor="#FFFFFF"><a class="subboxitem" href="../index.php">Home</a></td></tr>
+<tr><td bgcolor="#FFFFFF"><a class="subboxitem" href="../regulations/main_intro.php">Introduction</a></td></tr>
+<tr><td bgcolor="#FFFFFF"><a class="subboxitem" href="../whole_glossary.php">Glossary</a></td></tr>
+<tr><td bgcolor="#FFFFFF"><a class="subboxitem" href="cx_search.htm">Search DPTs and Courses</a></td></tr>
+<tr><td bgcolor="#FFFFFF" class="subboxsection" style="white-space:nowrap">Regulations</td></tr>
+<tr><td bgcolor="#FFFFFF"><a class="subboxitem" href="../regulations/index.php">Regulations</a></td></tr>
+<tr><td bgcolor="#FFFFFF" class="subboxsection"  style="white-space:nowrap">Degree Programmes</td></tr>
+<tr><td bgcolor="#FFFFFF"><a class="subboxitem" href="../regulations/dpt_intro.php">Introduction</a></td></tr>
+<tr><td bgcolor="#FFFFFF"><a class="subboxitem" href="drpsindex.htm">Browse&nbsp;DPTs</a></td></tr>
+<tr><td bgcolor="#FFFFFF" class="subboxsection">Courses</td></tr>
+<tr><td bgcolor="#FFFFFF"><a class="subboxitem" href="../regulations/course_intro.php">Introduction</a></td></tr>
+<tr><td bgcolor="#FFFFFF"><a class="subboxitem" href="cx_colhss.htm" style="white-space:nowrap">Humanities and Social Science</a></td></tr>
+<tr><td bgcolor="#FFFFFF"><a class="subboxitem" href="cx_colsce.htm" style="white-space:nowrap">Science and Engineering</a></td></tr>
+<tr><td bgcolor="#FFFFFF"><a class="subboxitem" href="cx_colmvm.htm" style="white-space:nowrap">Medicine and Veterinary Medicine</a></td></tr>
+<tr><td bgcolor="#FFFFFF" class="subboxsection" style="white-space:nowrap">Other Information</td></tr>
+<tr><td bgcolor="#FFFFFF"><a class="subboxitem" href="https://browser.ted.is.ed.ac.uk" target="_blank">Combined Course Timetable </a></td></tr>
+<tr><td bgcolor="#FFFFFF"><a class="subboxitem" href="http://www.ed.ac.uk/studying/" title="Prospectuses">Prospectuses</a></td></tr>
+<tr><td bgcolor="#FFFFFF"><a class="subboxitem" href="../regulations/important.php">Important&nbsp;Information</a></td></tr>
+<tr><td bgcolor="#FFFFFF" class="subboxtitle" style="height:5px;font-size:1px;">&nbsp;</td></tr>
+</table>
+
+</td></tr>
+</table></td>   
+</tr>
+</table>
+
+<div class="footer">
+  <div style="float:right">
+    <a href="http://www.ed.ac.uk/about/website/privacy">Privacy &amp; cookies</a>
+  </div>
+  <em>&copy; Copyright 2024 The University of Edinburgh -  15 January 2025 9:31 pm</em>
+</div>
+<script async src="https://www.googletagmanager.com/gtag/js?id=trackingCode">
+  var trackingCode = window.location.hostname.substr(0, 4) === 'www.' ? 'G-9VG3160DSR' : 'G-J3QFR7R34Z';
+  </script>
+  
+  <script>
+  var key = window.location.hostname.substr(0, 4) === 'www.' ? 'G-9VG3160DSR' : 'G-J3QFR7R34Z';
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+  
+    gtag('config', key);
+  </script>
+  
+  <script>
+  var key = window.location.hostname.substr(0, 4) === 'www.' ? 'GTM-M38Z4T4' : 'GTM-KC9RP53';
+  (function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+  new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+  j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+  'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+  })(window,document,'script','dataLayer',key);</script>
+</body>
+</html>

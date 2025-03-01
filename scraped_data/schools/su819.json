@@ -1,0 +1,30 @@
+{
+  "name": "Moray House School of Education and Sport",
+  "url": "http://www.drps.ed.ac.uk/24-25/dpt/cx_s_su819.htm",
+  "college": "College of Arts, Humanities and Social Sciences",
+  "schedule": "Schedule C",
+  "code": "su819",
+  "subjects": [
+    {
+      "name": "Education",
+      "url": "http://www.drps.ed.ac.uk/24-25/dpt/cx_sb_edua.htm",
+      "school_name": "Moray House School of Education and Sport",
+      "school_code": "su819",
+      "college": "College of Arts, Humanities and Social Sciences"
+    },
+    {
+      "name": "Research (EDU)",
+      "url": "http://www.drps.ed.ac.uk/24-25/dpt/cx_sb_redu.htm",
+      "school_name": "Moray House School of Education and Sport",
+      "school_code": "su819",
+      "college": "College of Arts, Humanities and Social Sciences"
+    },
+    {
+      "name": "Sport",
+      "url": "http://www.drps.ed.ac.uk/24-25/dpt/cx_sb_sprt.htm",
+      "school_name": "Moray House School of Education and Sport",
+      "school_code": "su819",
+      "college": "College of Arts, Humanities and Social Sciences"
+    }
+  ]
+}

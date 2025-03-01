@@ -1,0 +1,37 @@
+{
+  "name": "School of Philosophy, Psychology and Language Sciences",
+  "url": "http://www.drps.ed.ac.uk/24-25/dpt/cx_s_su793.htm",
+  "college": "College of Arts, Humanities and Social Sciences",
+  "schedule": "Schedule I",
+  "code": "su793",
+  "subjects": [
+    {
+      "name": "Language Sciences",
+      "url": "http://www.drps.ed.ac.uk/24-25/dpt/cx_sb_lasc.htm",
+      "school_name": "School of Philosophy, Psychology and Language Sciences",
+      "school_code": "su793",
+      "college": "College of Arts, Humanities and Social Sciences"
+    },
+    {
+      "name": "Philosophy",
+      "url": "http://www.drps.ed.ac.uk/24-25/dpt/cx_sb_phil.htm",
+      "school_name": "School of Philosophy, Psychology and Language Sciences",
+      "school_code": "su793",
+      "college": "College of Arts, Humanities and Social Sciences"
+    },
+    {
+      "name": "Philosophy, Psychology and Language Sciences",
+      "url": "http://www.drps.ed.ac.uk/24-25/dpt/cx_sb_ppls.htm",
+      "school_name": "School of Philosophy, Psychology and Language Sciences",
+      "school_code": "su793",
+      "college": "College of Arts, Humanities and Social Sciences"
+    },
+    {
+      "name": "Psychology",
+      "url": "http://www.drps.ed.ac.uk/24-25/dpt/cx_sb_psyl.htm",
+      "school_name": "School of Philosophy, Psychology and Language Sciences",
+      "school_code": "su793",
+      "college": "College of Arts, Humanities and Social Sciences"
+    }
+  ]
+}

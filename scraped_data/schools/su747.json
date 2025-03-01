@@ -1,0 +1,37 @@
+{
+  "name": "School of Informatics",
+  "url": "http://www.drps.ed.ac.uk/24-25/dpt/cx_s_su747.htm",
+  "college": "College of Science and Engineering",
+  "schedule": "Schedule O",
+  "code": "su747",
+  "subjects": [
+    {
+      "name": "EPCC on-campus",
+      "url": "http://www.drps.ed.ac.uk/24-25/dpt/cx_sb_epcc.htm",
+      "school_name": "School of Informatics",
+      "school_code": "su747",
+      "college": "College of Science and Engineering"
+    },
+    {
+      "name": "EPCD Online",
+      "url": "http://www.drps.ed.ac.uk/24-25/dpt/cx_sb_epcd.htm",
+      "school_name": "School of Informatics",
+      "school_code": "su747",
+      "college": "College of Science and Engineering"
+    },
+    {
+      "name": "Informatics - Distance Learning",
+      "url": "http://www.drps.ed.ac.uk/24-25/dpt/cx_sb_infd.htm",
+      "school_name": "School of Informatics",
+      "school_code": "su747",
+      "college": "College of Science and Engineering"
+    },
+    {
+      "name": "Informatics",
+      "url": "http://www.drps.ed.ac.uk/24-25/dpt/cx_sb_infr.htm",
+      "school_name": "School of Informatics",
+      "school_code": "su747",
+      "college": "College of Science and Engineering"
+    }
+  ]
+}

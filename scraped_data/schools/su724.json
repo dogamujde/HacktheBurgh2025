@@ -1,0 +1,44 @@
+{
+  "name": "Deanery of Molecular, Genetic and Population Health Sciences",
+  "url": "http://www.drps.ed.ac.uk/24-25/dpt/cx_s_su724.htm",
+  "college": "College of Medicine and Veterinary Medicine",
+  "schedule": "Schedule V",
+  "code": "su724",
+  "subjects": [
+    {
+      "name": "Forensic Medicine and Science",
+      "url": "http://www.drps.ed.ac.uk/24-25/dpt/cx_sb_fren.htm",
+      "school_name": "Deanery of Molecular, Genetic and Population Health Sciences",
+      "school_code": "su724",
+      "college": "College of Medicine and Veterinary Medicine"
+    },
+    {
+      "name": "Global Health",
+      "url": "http://www.drps.ed.ac.uk/24-25/dpt/cx_sb_glhe.htm",
+      "school_name": "Deanery of Molecular, Genetic and Population Health Sciences",
+      "school_code": "su724",
+      "college": "College of Medicine and Veterinary Medicine"
+    },
+    {
+      "name": "Health Information",
+      "url": "http://www.drps.ed.ac.uk/24-25/dpt/cx_sb_hein.htm",
+      "school_name": "Deanery of Molecular, Genetic and Population Health Sciences",
+      "school_code": "su724",
+      "college": "College of Medicine and Veterinary Medicine"
+    },
+    {
+      "name": "Molecular and Clinical Medicine",
+      "url": "http://www.drps.ed.ac.uk/24-25/dpt/cx_sb_mclm.htm",
+      "school_name": "Deanery of Molecular, Genetic and Population Health Sciences",
+      "school_code": "su724",
+      "college": "College of Medicine and Veterinary Medicine"
+    },
+    {
+      "name": "Public Health Research",
+      "url": "http://www.drps.ed.ac.uk/24-25/dpt/cx_sb_puhr.htm",
+      "school_name": "Deanery of Molecular, Genetic and Population Health Sciences",
+      "school_code": "su724",
+      "college": "College of Medicine and Veterinary Medicine"
+    }
+  ]
+}

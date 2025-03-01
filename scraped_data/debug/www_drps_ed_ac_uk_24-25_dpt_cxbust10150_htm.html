@@ -1,0 +1,597 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Course Catalogue - Interactive Retailing (BUST10150)</title>
+<meta name="type" content="DPT"></meta>
+<meta name="modcode" content="BUST10150"></meta>
+<meta name="modname" content="Interactive Retailing"></meta>
+<meta name="modkeywords" content=""></meta>
+<meta name="modschool" content=""></meta>
+<meta name="modsubj" content=""></meta>
+<meta name="modsubj" content=""></meta>
+<!-- use stylesheets from DRPS -->
+<link rel="stylesheet" type="text/css" href="http://www.ed.ac.uk/other/styles.css">
+<link rel="stylesheet" type="text/css" href="../css/dp.css">
+<link rel="stylesheet" type="text/css" href="../24-25/dpts/dpt.css">
+
+<!-- add SITS styles -->
+<style type="text/css">
+
+.rowhead1 { font-family: 'Trebuchet MS', 'Lucida Grande', Verdana, Arial, Helvetica, sans-serif; 
+font-size: 75%;  color: #555555; /* replaces 25476C */
+background-color: #EEEEFF; /* replaces EAEEF5 */
+font-weight: bold;
+}
+
+.data1nobg { font-family: 'Trebuchet MS', 'Lucida Grande', Verdana, Arial, Helvetica, sans-serif;  
+color: #333; /* replaces 666 */
+font-weight: normal }
+
+.sitstablegrid {
+	width:100%; /* overall default table width */
+	margin-bottom:20px; /* separator space below each table */
+}
+
+.sitstablegrid caption {	
+	font-family: 'Trebuchet MS', 'Lucida Grande', Verdana, Arial, Helvetica, sans-serif;
+	font-size:75%;	
+	color: #FFFFFF;
+	padding:6px;
+	font-weight: bold;
+	text-align: left;
+	background:#232B5A; /* replaces 25476c */
+}
+
+.sitstablegrid caption,
+.sitstablegrid th, 
+.sitstablegrid td {
+	font-family: 'Trebuchet MS', 'Lucida Grande', Verdana, Arial, Helvetica, sans-serif;
+	font-size:75%;
+	padding: 4px;
+	vertical-align:top;
+}
+
+.sitstablegrid th {
+	background-color:#232B5A; /* replaces 36a7e9 */
+	padding-right: 5px; /* required to keep right aligned TH row headings from edge of cell */
+	color:#FFFFFF;
+	border:1px solid #CCCCCC;
+	border-collapse:collapse;
+}
+
+.sitstablegrid {
+	background-color: #FFFFFF; /* background shade applied to all cells */
+	border: 1px solid #cccccc; /* table outline box */
+	border-collapse: collapse;
+}
+
+.sitstablegrid th, 
+.sitstablegrid td {
+	border: 1px solid #cccccc; /* draws grid lines for sitstablegrid style class */
+	}
+
+#sitspagetitle {
+} 
+  
+h1.sitspagetitle {
+	font-family: 'Trebuchet MS', 'Lucida Grande', Verdana, Arial, Helvetica, sans-serif;
+	font-size: 80%;
+	color: #232B5A; /* replaces 25476c */
+	font-weight: bold;
+	border-bottom:1px solid #232B5A; /* replaces 25476c */
+}
+
+</style>
+</head>
+
+<body>
+<!-- header from DRPS -->
+<table width="100%" border="0" cellspacing="0" cellpadding="0" style="background-color: #232B5A;">
+<tr>
+<td width="84" align="left" valign="top">
+<a href="http://www.ed.ac.uk" class="headertext"><img src="http://www.drps.ed.ac.uk/images/logo.jpg" alt="The University of Edinburgh" name="logo" width="84" height="84" border="0" id="logo"></a>
+</td>
+
+<td align="left" width="100%">
+<h3 class="page_title">THE UNIVERSITY of EDINBURGH</h3>
+<h1 class="page_title">DEGREE REGULATIONS & PROGRAMMES OF STUDY 2024/2025</h1>
+<!-- <h3 style ="color:red" class="page_title">Draft Edition - Due to be published Thursday 11th April 2024</h3> -->
+<h3 style ="color:red" class="page_title">Timetable information in the Course Catalogue may be subject to change.</h3>
+</td>
+
+<td align="left">
+
+<table border="0" cellpadding="0" cellspacing="0" style="margin-right:20px;"><tr>
+<td style="white-space:nowrap">
+<a href="http://www.ed.ac.uk" class="headertext"><img src="../images/arrow.gif" width="16" height="11" border="0" alt=""></a><a href="http://www.ed.ac.uk" class="headertext">University&nbsp;Homepage</a>
+<br />
+<a href="../index.php" class="headertext"><img src="../images/arrow.gif" width="16" height="11" border="0" alt=""></a><a href="../index.php" class="headertext">DRPS Homepage</a>
+<br />
+<a href="cx_search.htm" class="headertext"><img src="../images/arrow.gif" width="16" height="11" border="0" alt=""></a><a href="cx_search.htm" class="headertext">DRPS Search</a>
+<br />
+<a href="../contact.php" class="headertext"><img src="../images/arrow.gif" width="16" height="11" border="0" alt=""></a><a href="../contact.php" class="headertext">DRPS Contact</a>
+</td></tr>
+</table>
+
+</td></tr>
+</table>
+
+<div class="college"><a href="../index.php">DRPS</a>&nbsp;:&nbsp;Course Catalogue&nbsp;:&nbsp;<a href="cx_s_su780.htm">Business School</a>&nbsp;:&nbsp;<a href="cx_sb_bust.htm">Business Studies</a></div>
+
+<table width="100%" border="0" cellpadding="6" cellspacing="0" class="content">
+<tr valign="top"><td>
+<!-- IMPORTANT Any changes to this SRL should be tested as follows:
+- via 'View Course' and 'Amend Course' in Curriculum Management -> CCAM containter, 
+- on linking from within OCSS/OCE 
+- the course catalogue (post March '10.
+If any additional SITS classes are used  (eg sitstablenogrid) then these must be added
+to SLPs CX_CRSHDR1 and CX_CRSHDR2 for the course catalogue. The course catalogue SRL cannot include sits.css as this overwrites
+University website styles -->
+
+<!-- temp variables passed in to determine various display options as follows -->
+<!-- GSL_TMP1: blank or not CCAM: limited details displayed (link from OCSS, course catalogue); "CCAM" = all details; CCAMSUM = called from CCAM input/Amend course task (CCAM1_A4) so don't need instance data, no pre-requisites etc (because editable on on task screen ) -->
+<!-- GSL_TMP2: Academic Year: if not null then a MAV(s) in single year is/are displayed for delivery; if null then SRL uses SLP CURRENT_AYR_CODE to display all MAV from current year forwards -->
+<!-- GSL_TMP3: Display Portal links: Y or null - display links; N - don't display links (could link to external web server) -->
+<!-- GSL_TMP4:passed in and passed through to CLASSES_TAB SRL. If set to Y then First class and additional info displayed-->
+<!-- GSL_TMP5.GSL=DRPS if this is called via DRPS publish, else null-->
+<!-- GSL_TMP6.GSL=visiting students from slp sma_vs_r which calls task sma_vs_r -->
+<!-- GSL_TMP6 and in syp: siw_mod_001 -->
+
+<!--
+START IN MOD.COURSE_DETS </br>
+gsl_tmp6: </br>
+gsl_tmp1:NULL </br>
+
+-->
+
+
+
+<style type="text/css">
+<!--
+#sitspagetabs-vert { 
+display: none;
+}
+-->
+</style>
+<!-- Course name, code, credits, subject area, brief description -->
+<br />
+<h1 id="sitspagetitle" class="sitspagetitle" style="font-size:150%;">Undergraduate Course: Interactive Retailing (BUST10150)</h1>
+<table class="sitstablegrid">
+
+<!--FB 2/1/11 is course marked as closed? -->
+
+
+<caption>Course Outline</caption>
+<tr>
+<td class="rowhead1" width="15%">School</td><td width="35%">Business School</td>
+<td class="rowhead1" width="15%">College</td><td width="35%">College of Arts, Humanities and Social Sciences</td>
+</tr>
+<tr>
+<td class="rowhead1" width="15%">Credit level (Normal year taken)</td><td width="35%">SCQF Level 10 (Year 3 Undergraduate)</td>
+
+<td class="rowhead1" width="15%">Availability</td><td width="35%">Available to all students</td>
+</tr>
+<tr>
+<td class="rowhead1" width="15%">SCQF Credits</td><td width="35%">20</td>
+<td class="rowhead1" width="15%">ECTS Credits</td><td width="35%">10</td>
+</tr>
+<tr>
+
+</tr>
+<tr>
+<td class="rowhead1" width ="15%">Summary</td><td width="85%" colspan="99">Retailing is a pervasive element of society and marketing. Yet the scope of retailing has been challenged by changes in consumption, technology, competition, and society. As a result, retailers have been forced to adapt to be successful. This course offers students the opportunity to study and understand retailing and how to address these challenges.</td>
+</tr>
+<tr>
+<td class="rowhead1" width ="15%">Course description</td><td width="85%" colspan="99">
+    
+    This course is designed to introduce students to key retailing principles and key terms, to complement other speciality courses, such as services marketing, brand culture, and financial services marketing. By the end of the course, students should be able to discuss current challenges and opportunities in retailing.<br />
+<br />
+The course provides an overview of the organising principles and strategies applied by retailers in today's changing environment. Further, we will cover a wide spectrum of retail channels with a focus on creating seamless customer experiences while developing a competitive edge. Specifically, we will review multiple and omnichannel retailing as well as changes to the retail environment. We will emphasise decision-making processes for both consumers and retail managers. Finally, we will discuss the role of technology in retailing and how retailers incorporate new technologies into business strategies.<br />
+<br />
+The course is delivered across the semester, as follows:<br />
+-  Introduction to Retailing<br />
+-  Types of Retailers and New Trends in Retailing<br />
+-  Location<br />
+- Atmospherics<br />
+-  Omnichannel Retailing<br />
+-  Customer-Centric Mindset<br />
+-  Retailing Strategies<br />
+-  Merchandising<br />
+-  Technology in Retailing<br />
+-  Luxury Retailing
+    
+    
+</td>
+</tr>
+</table>
+
+<!-- Entry requirements (including additional costs ) -->
+<!-- don't show pre-reqs, co-reqs and prohibited combinations if called from CCAM1_A4 amend task -->
+<!-- Show Pre-requisites etc for CCAM VIEW/OCE/Course catalogue but not CCAM Amend  -->
+
+<table class="sitstablegrid">
+<caption>Entry Requirements (not applicable to Visiting Students)</caption>
+<tr>
+<td class="rowhead1" width="15%">Pre-requisites</td>
+
+<td width="35%"> Students MUST have passed:    
+<a href="cxbust08004.htm" " target="_blank"title="View Course details. Opens in a new window.">Marketing (BUST08004)</a><span class="data1nobgred"></span> <span class="data1nobgred"></span> <br /></td>
+<td class="rowhead1" width="15%">Co-requisites</td><td width="35%"></td>
+</tr>
+<tr>
+<td class="rowhead1" width="15%">Prohibited Combinations</td><td width="35%"></td>
+
+
+<td class="rowhead1" width="15%">Other requirements</td><td width="35%"> None</td>
+</tr>
+
+<!-- show add costs for portal View Course, course catalogue and from OCE, but only if there are some -->
+
+
+</table>
+
+<!-- visting students information -FB 20110426 added High Demand Course-->
+
+<table class="sitstablegrid">
+<caption>Information for Visiting Students</caption> 
+<tr>
+<td class="rowhead1" width="15%">Pre-requisites</td><td width="85%" colspan="4">Visiting students must have at least 4 Business courses at grade B or above.  This MUST INCLUDE at least one Marketing course at intermediate level.  This course cannot be taken alongside BUST08004 Marketing.  We will only consider University/College level courses.</td>
+</tr>
+<tr>
+		<td class="rowhead1" width="15%">High Demand Course?</td>
+		<td class="data1nobg" width="85%" colspan="4">Yes</td>
+    </tr>
+</table>
+
+
+<!-- Delivery information -FB 14/1/11 added GSL_TMP5.GSL=DRPS-->
+<!-- Class times -->
+
+
+
+
+
+<table class="sitstablegrid">
+<caption>Course Delivery Information</caption>
+
+
+
+
+
+
+
+
+
+
+<!-- GSL_TMP1 = indicates whether a list of different courses' classes will be displayed. Values: Y - display course code
+at top of table, suppress additional and first class information. If blank then assume single course, so 
+don't display course code, but do display additional class and first class information.  This is so table can be used in individual MOD/MAV report or when listing a number of MODs (eg listing teaching activities for a list of SMAs)  -->
+
+<!-- GSL_TMP2 - display links to other SRLs (links won't work this from published (IPP)) N: don't, otherwise do-->
+<!-- GSL_TMP4 - Set to Y if first class and additional information to be displayed -->
+<!-- GSL_TMP5- Set to DRPS if SRL called via DRPS publish path- SRL not used for timetable and VS (uses CLASSES_TAB2)-->
+
+<!-- calling SRL must specify table, table caption (if required) eg:
+<table class="sitstablegrid">
+<caption>Course Delivery </caption> 
+---- call to this SRL ----
+</table> -->
+
+
+
+<tr><td colspan="99" style="height:5px;"></td></tr>
+<!--
+<tr><td colspan="99" style="height:5px;"> 
+ IN MAV_CLASSES_TAB </br>
+GSLTMP1:N</br>
+GSLTMP2:N </br>
+GSLTMP3: </br>
+GSLTMP4:Y </br>
+GSLTMP5:DRPS </br>
+GSLTMP6: </br>
+</td></tr>
+-->
+
+<tr>
+<td class="rowhead1" colspan="2" style="width:50%;">Academic year 2024/25, Available to all students (SV1) 
+  <!-- Quota moved from mod.course_dets cms call 882028 -->
+</td>
+<td class="rowhead1" colspan="99">Quota:&nbsp;&nbsp;120</td>
+</tr>
+
+<!-- Course start (delivery period) -->
+<tr><td class="rowhead1" width ="5%">Course Start</td>
+<td colspan="14">Semester 2</td>
+</tr>
+
+<!-- Course start date (for invoiced courses) -->
+
+
+<!-- VISITING STUDENTS : gsl_tmp6 is set up in mod.course_dets for visiting students only. setup from slp: sma_vs_r then calls mod.course_dets. Test in url_link for this gsl_tmp6  -->
+
+<!-- ayr code: 24 fixed 22 -->
+<td class="rowhead1" width="15%" target="_blank">Timetable </td>
+	<td class="data1nobg" colspan ="99">
+<a href="https://browser.ted.is.ed.ac.uk/generate/?courses%5B%5D=BUST10150_SV1_SEM2
+&period=SEM2&week=26-37" target="_blank">Timetable</a></td>
+
+
+
+
+
+
+
+
+
+<tr>
+<td class="rowhead1" style="width:15%;">Learning and Teaching activities <a href="http://www.studentsystems.is.ed.ac.uk/staff/Support/User_Guides/CCAM//Teaching_Learning.htm" target="_blank">(Further Info)</a></td>
+
+<td colspan="14"> 
+ Total Hours:
+200
+
+(
+ Lecture Hours 20,
+
+ Dissertation/Project Supervision Hours 1,
+
+ Fieldwork Hours 3,
+ External Visit Hours 1,
+
+ Feedback/Feedforward Hours 1,
+ Formative Assessment Hours 1,
+ Summative Assessment Hours 2,
+
+
+ Programme Level Learning and Teaching Hours 4,
+
+Directed Learning and Independent Learning Hours
+167 )
+
+</td>
+</tr>
+
+<!-- Display Futher L&T Notes -->
+
+
+<!-- Display Assessment details -->
+<tr>
+<td class="rowhead1" style="width:15%;">Assessment <a href="http://www.studentsystems.is.ed.ac.uk/staff/Support/User_Guides/CCAM//Assessment_Methods.htm" target="_blank">(Further Info)</a></td>
+
+<td colspan="14"> 
+  Written Exam
+0 %,
+Coursework
+100 %,
+Practical Exam
+0 %
+</td>
+</tr>
+
+<tr>
+<tr>
+<td class="rowhead1" stlye="width:15%;">Additional Information (Assessment)</td>
+<td colspan="14">Group Project: 50%<br />
+Individual Assignment: 50%</td>
+</tr>
+
+
+<tr>
+<td class="rowhead1" stlye="width:15%;">Feedback</td>
+<td colspan="14">Students will be given written feedback on their group work assessment. They will be marked on the extent to which they identify relevant background information to make sound recommendations and the tactical ideas. Concerning the tactical ideas, students will be marked on their creativity, problem-solving to define the ideas in light of the background analysis, and communication skills. <br />
+<br />
+ The group report and the course lectures will prepare students for the individual assignment, given the knowledge required to make recommendations and compare strategies. The group report feedback will help students understand their skill in applying the concepts and theories learned in class to a scenario, preparing them for the individual case-based assignment.</td>
+</tr>
+
+<!--FB 11Oct10: Exam info displayed if it exists, 14/1/11:do not display stationery and comments for GSL_TMP5=DRPS-->
+
+
+
+<tr>
+<td class="rowhead1" colspan="99">No Exam Information</td>
+</tr>
+
+
+<!--31/1/11 FB-Teaching load display if exists-->
+
+
+
+<!--Get MABs based on MAP code on MAV
+output heading for Standard student
+SEL on sequence 001-099: <td class="data1nobg"><<DATA FIELD>></td> 
+
+output VS student heading
+select on sequence >= 101:  -->
+
+
+<!-- Learning outcomes, FB 1/4/11 add other learning outcomes for ECA -->
+<table class="sitstablegrid">
+<caption>Learning Outcomes</caption> 
+<tr>
+<td>
+    On completion of this course, the student will be able to:
+    <ol style="font-family:inherit;font-size:inherit;">
+        <li>Define key retailing terms and concepts (e.g. retailing, merchandising, omnichannel retailing, etc).</li><li>Assess critically the key drivers of retail change and how these are reflected in consumers' desires.</li><li>Critically evaluate the components of retailing strategy.</li><li>Understand and discuss critically how retailers can educate, excite, engage, and develop experiences for consumers.</li><li>Understand and explain retail strategies of specific stores and/or pairs of stores.</li>
+    </ol>
+</td>
+</tr>
+</table>
+
+<table class="sitstablegrid">
+<caption>Reading List</caption> 
+<tr><td>Week 1: <br />
+- Grewal, D. et al. (2017). The Future of Retailing. Journal of Retailing, 93(1), 1-6.<br />
+- Souiden, N. et al. (2019). New Trends in Retailing and Services. Journal of Retai.ling and Consumer Services, 50, 286-288.<br />
+- Mende, M. &amp; Noble, S. (2019). Retail Apocalypse or Golden Opportunity for Retail Frontline Management? Journal of Retailing, 95(2), 84-89.<br />
+- Roggeveen, A.L. &amp; Sethuraman, R. (2020). Customer-Interfacing Retail Technologies in 2020 &amp; Beyond: An Integrative Framework and Research Directions. Journal of Retailing, 96(3), 299-309.<br />
+<br />
+Week 2:<br />
+- Correa, J.C. et al. (2019). Evaluation of Collaborative Consumption of Food Delivery Services through Web Mining Techniques. Journal of Retailing and Consumer Services, 46, 45-50.<br />
+- Hollander, S. (1960). The Wheel of Retailing. Journal of Marketing, 25(1), 37-42.<br />
+- Gahinet, M. &amp; Cliquet, G. (2018). Proximity and Time in Convenience Store Patronage: Kairos More than Chronos. Journal of Retailing and Consumer Services, 43, 1-9.<br />
+- Roggeveen, A.L. et al. (2020). How the COVID-19 Pandemic May Change the World of Retailing. Journal of Retailing, 96(2), 169-171.<br />
+<br />
+Week 3:<br />
+- Delvecchio, D. et al. (2009). The Effects of Discount Location and Frame on ConsumersÂ¿ Price Estimates. Journal of Retailing, 85(3), 336-346.<br />
+- Vittorino, M.A. (2012). Empirical Entry Games with Complementarities: An Application to the Shopping Center Industry. Journal of Marketing Research, 49(2), 175-191.<br />
+- Souiden, N. et al. (2019). ConsumersÂ¿ Attitude and Adoption of Location-based Coupons: The Case of the Retail Fast Food Sector. Journal of Retailing and Consumer Services, 47, 116-132.<br />
+- Simpson, P. (2019). Is Jeff Bezos the Saviour of the British High Street? Management Today.<br />
+<br />
+Week 4:<br />
+- Thomas, M. et al. (2011). How Credit Card Payments Increase Unhealthy Food Purchases: Visceral Regulation of Vices. Journal of Consumer Research, 38(1), 126-139.<br />
+- Spence, C. et al. (2014). Store Atmospherics: A Multisensory Perspective. Psychology &amp; Marketing, 31(7), 472-488.<br />
+- Boden, J. et al. (2020). The Effect of Credit Card versus Mobile Payment on Convenience and ConsumersÂ¿ Willingness to Pay. Journal of Retailing and Consumer Services, 52, 101910.<br />
+- Izadi, A. et al. (2019). The Way the Wind Blows: Direction of Airflow Energizes Consumers and Fuels Creative Engagement. Journal of Retailing, 95(4), 143-157.<br />
+<br />
+Week 5:<br />
+- Hult, G. et al. (2019). Antecedents and Consequences of Customer Satisfaction: Do They Differ Across Online and Offline Purchases? Journal of Retailing, 95(1), 10-23.<br />
+- Baxendale, S. et al. (2015). The Impact of Different Touchpoints on Brand Consideration. Journal of Retailing, 91(2), 235-253.<br />
+- Herhausen, D. et al. (2015). Integrating Bricks with Clicks: Retailer-Level and Channel-Level Outcomes of OnlineÂ¿Offline Channel Integration. Journal of Retailing, 91(2), 309-325.<br />
+- Wang, R.J. et al. (2015). On the Go: How Mobile Shopping Affects Customer Purchase Behavior. Journal of Retailing, 91(2), 217-234.<br />
+- Ap, T. (2019). Harvey Nichols Launches Omnichannel Concept Store. WomenÂ¿s Wear Daily. <br />
+<br />
+Week 6:<br />
+- Sokolova, K. &amp; Kefi, H. (2019). Instagram and YouTube Bloggers Promote it, Why Should I Buy? How Credibility and Parasocial Interaction Influence Purchase Intentions. Journal of Retailing and Consumer Services, 53, 101742.<br />
+- Herhausen, D. et al. (2019). Loyalty Formation for Different Customer Journey Segments. Journal of Retailing, 95(3), 9-29.<br />
+- Roggeveen, A.L. et al. (2019). The DAST Framework for Retail Atmospherics: The Impact of In- and Out-of-Store Retail Journey Touchpoints on the Customer Experience. Journal of Retailing, 96(1), 128-137.<br />
+- Colicev, A. et al. (2018). Improving Consumer Mindset Metrics and Shareholder Value through Social Media: The Different Roles of Owned and Earned Media. Journal of Marketing, 82(1), 37-56.<br />
+<br />
+Week 7:<br />
+- Verhoef, P. C. et al. (2009). Customer Experience Creation: Determinants, Dynamics and Management Strategies. Journal of Retailing, 85(1), 31-41.<br />
+- HÃ¶gberg, J. et al. (2019). Creating Brand Engagement through In-store Gamified Customer Experiences. Journal of Retailing and Consumer Services, 50, 122-130.<br />
+- Yang, X. et al. (2017). Competitive Retailer Strategies for New Market Research, Entry and Positioning Decisions. Journal of Retailing, 93(2), 172-186.<br />
+- Bradlow, E.T. (2017). The Role of Big Data and Predictive Analytics in Retailing. Journal of Retailing, 93(1), 79-85.<br />
+<br />
+Week 8:<br />
+- Page, B. et al. (2019). Comparing Two Supermarket Layouts: The Effect of a Middle Aisle on Basket Size, Spend, Trip Duration, and Endcap Use. Journal of Retailing and Consumer Services, 47, 49-56.<br />
+- Puccinelli, N.M. et al. (2013). Are Men Seduced by Red? The Effect of Red Versus Black Prices on Price Perceptions. Journal of Retailing, 89(2), 115-125.<br />
+- Ketron, S. (2018). Perceived Product Sizes in Visually Complex Environments. Journal of Retailing, 94(2), 154-166.<br />
+- Ketron, S. et al. (2016). Overcoming Information Overload in Retail Environments: Imagination and Sales Promotion in a Wine Context. Journal of Retailing and Consumer Services, 33, 23-32.<br />
+<br />
+Week 9:<br />
+- Sundstrom, M. et al. (2019). Clicking the Boredom Away- Exploring Impulse Buying Behavior Online. Journal of Retailing and Consumer Services, 47, 150-156.<br />
+- Papagiannidis, S. et al. (2013). Modelling the Determinants of a Simulated Experience in a Virtual Retail Store and UsersÂ¿ Product Purchasing Intentions. Journal of Marketing Management, 29(13/14), 1462-1492.<br />
+- Heller, J. et al. (2019). Touching the Untouchable: Exploring Multi-Sensory Augmented Reality in the Context of Online Retailing. Journal of Retailing, 95(4), 219-234.<br />
+- Cowan, K. et al. (2021). Perception is RealityÂ¿ How Digital Retail Environments Influence Brand Perceptions through Presence. Journal of Business Research, 123, 86-96.<br />
+<br />
+Week 10:<br />
+- Dion, D. &amp; Borraz, S. (2015). Managing Heritage Brands: A Study of the Sacralization of Heritage Stores in the Luxury Industry. Journal of Retailing and Consumer Services, 22, 77-84.<br />
+- Cowan, K. &amp; Spielmann, N. (2017). The Influence of Rituals on Luxury Product Consumption: Implications for Brands. Journal of Brand Management, 24(5), 391-404.<br />
+- Desmichel, P. &amp; Kocher, B. (2019). Luxury Single- versus Multi-Brand Stores: The Effect of Consumers' Hedonic Goals on Brand Comparisons. Journal of Retailing, 96(2), 203-219.<br />
+</td></tr> 
+</table>
+
+<!-- CG 14/10/09 changed to show additional costs here only for CCAM amend function -->
+
+
+<table class="sitstablegrid">
+<caption>Additional Information</caption>
+
+<tr>
+<td class="rowhead1" width="15%">Graduate Attributes and Skills</td>
+<td width="85%">Cognitive Skills<br />
+After completing this course, students should be able to:<br />
+- Understand how to manage and sustain successful individual and group relationships in order to achieve positive and responsible outcomes, in a range of virtual and face-to-face environments<br />
+- Be self-motivated; curious; show initiative; set, achieve and surpass goals; as well as demonstrating adaptability, capable of handling complexity and ambiguity, with a willingness to learn; as well as being able to demonstrate the use digital and other tools to carry out tasks effectively, productively, and with attention to quality<br />
+<br />
+Practice: Applied Knowledge, Skills and Understanding<br />
+After completing this course, students should be able to:<br />
+- Work with a variety of organisations, their stakeholders, and the communities they serve - learning from them, and aiding them to achieve responsible, sustainable and enterprising solutions to complex problems.<br />
+- Apply creative, innovative, entrepreneurial, sustainable and responsible business solutions to address social, economic and environmental global challenges.<br />
+<br />
+Communication, ICT, and Numeracy Skills<br />
+After completing this course, students should be able to:<br />
+- Convey meaning and message through a wide range of communication tools, including digital technology and social media; to understand how to use these tools to communicate in ways that sustain positive and responsible relationships.<br />
+- Critically evaluate and present digital and other sources, research methods, data and information; discern their limitations, accuracy, validity, reliability and suitability; and apply responsibly in a wide variety of organisational contexts.<br />
+<br />
+Knowledge and Understanding<br />
+After completing this course, students should be able to:<br />
+- Demonstrate a thorough knowledge and understanding of contemporary organisational disciplines; comprehend the role of business within the contemporary world; and critically evaluate and synthesise primary and secondary research and sources of evidence in order to make, and present, well informed and transparent organisation-related decisions, which have a positive global impact.<br />
+</td>
+</tr>
+
+
+
+<tr>
+<td class="rowhead1" width="15%">Keywords</td><td width="85%">Not entered</td>
+</tr>
+</table>
+
+<!-- Contact information -->
+<table class="sitstablegrid">
+<caption>Contacts</caption> 
+<tr>
+<td class="rowhead1"  width="15%">Course organiser</td><td width="35%">Dr Kirsten Cowan<br>
+<b>Tel:</b> <br>
+<b>Email:</b> Kirsten.Cowan@ed.ac.uk</td>
+<td class="rowhead1" width="15%">Course secretary</td><td width="35%">Miss Emma Allison<br>
+<b>Tel:</b> <br>
+<b>Email:</b> ealliso2@ed.ac.uk</td>
+</tr>  
+</table>
+
+<!-- if called from CCAM then show extra course details -->
+
+
+</td>
+<td><table width="100%" border="0" cellspacing="0" cellpadding="0">
+<tr><td bgcolor="#999999">
+
+<table width="100%" border="0" cellspacing="1" cellpadding="3">
+<tr><td bgcolor="#FFFFFF" class="subboxtitle">Navigation</td></tr>
+<tr><td bgcolor="#FFFFFF" class="subboxsection" style="white-space:nowrap">Help &amp; Information</td></tr>
+<tr><td bgcolor="#FFFFFF"><a class="subboxitem" href="../index.php">Home</a></td></tr>
+<tr><td bgcolor="#FFFFFF"><a class="subboxitem" href="../regulations/main_intro.php">Introduction</a></td></tr>
+<tr><td bgcolor="#FFFFFF"><a class="subboxitem" href="../whole_glossary.php">Glossary</a></td></tr>
+<tr><td bgcolor="#FFFFFF"><a class="subboxitem" href="cx_search.htm">Search DPTs and Courses</a></td></tr>
+<tr><td bgcolor="#FFFFFF" class="subboxsection" style="white-space:nowrap">Regulations</td></tr>
+<tr><td bgcolor="#FFFFFF"><a class="subboxitem" href="../regulations/index.php">Regulations</a></td></tr>
+<tr><td bgcolor="#FFFFFF" class="subboxsection"  style="white-space:nowrap">Degree Programmes</td></tr>
+<tr><td bgcolor="#FFFFFF"><a class="subboxitem" href="../regulations/dpt_intro.php">Introduction</a></td></tr>
+<tr><td bgcolor="#FFFFFF"><a class="subboxitem" href="drpsindex.htm">Browse&nbsp;DPTs</a></td></tr>
+<tr><td bgcolor="#FFFFFF" class="subboxsection">Courses</td></tr>
+<tr><td bgcolor="#FFFFFF"><a class="subboxitem" href="../regulations/course_intro.php">Introduction</a></td></tr>
+<tr><td bgcolor="#FFFFFF"><a class="subboxitem" href="cx_colhss.htm" style="white-space:nowrap">Humanities and Social Science</a></td></tr>
+<tr><td bgcolor="#FFFFFF"><a class="subboxitem" href="cx_colsce.htm" style="white-space:nowrap">Science and Engineering</a></td></tr>
+<tr><td bgcolor="#FFFFFF"><a class="subboxitem" href="cx_colmvm.htm" style="white-space:nowrap">Medicine and Veterinary Medicine</a></td></tr>
+<tr><td bgcolor="#FFFFFF" class="subboxsection" style="white-space:nowrap">Other Information</td></tr>
+<tr><td bgcolor="#FFFFFF"><a class="subboxitem" href="https://browser.ted.is.ed.ac.uk" target="_blank">Combined Course Timetable </a></td></tr>
+<tr><td bgcolor="#FFFFFF"><a class="subboxitem" href="http://www.ed.ac.uk/studying/" title="Prospectuses">Prospectuses</a></td></tr>
+<tr><td bgcolor="#FFFFFF"><a class="subboxitem" href="../regulations/important.php">Important&nbsp;Information</a></td></tr>
+<tr><td bgcolor="#FFFFFF" class="subboxtitle" style="height:5px;font-size:1px;">&nbsp;</td></tr>
+</table>
+
+</td></tr>
+</table></td>   
+</tr>
+</table>
+
+<div class="footer">
+  <div style="float:right">
+    <a href="http://www.ed.ac.uk/about/website/privacy">Privacy &amp; cookies</a>
+  </div>
+  <em>&copy; Copyright 2024 The University of Edinburgh -  15 January 2025 8:53 pm</em>
+</div>
+<script async src="https://www.googletagmanager.com/gtag/js?id=trackingCode">
+  var trackingCode = window.location.hostname.substr(0, 4) === 'www.' ? 'G-9VG3160DSR' : 'G-J3QFR7R34Z';
+  </script>
+  
+  <script>
+  var key = window.location.hostname.substr(0, 4) === 'www.' ? 'G-9VG3160DSR' : 'G-J3QFR7R34Z';
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+  
+    gtag('config', key);
+  </script>
+  
+  <script>
+  var key = window.location.hostname.substr(0, 4) === 'www.' ? 'GTM-M38Z4T4' : 'GTM-KC9RP53';
+  (function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+  new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+  j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+  'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+  })(window,document,'script','dataLayer',key);</script>
+</body>
+</html>

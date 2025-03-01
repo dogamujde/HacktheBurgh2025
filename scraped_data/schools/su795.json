@@ -1,0 +1,107 @@
+{
+  "name": "School of Literatures, Languages and Cultures",
+  "url": "http://www.drps.ed.ac.uk/24-25/dpt/cx_s_su795.htm",
+  "college": "College of Arts, Humanities and Social Sciences",
+  "schedule": "Schedule G",
+  "code": "su795",
+  "subjects": [
+    {
+      "name": "Asian Studies",
+      "url": "http://www.drps.ed.ac.uk/24-25/dpt/cx_sb_asst.htm",
+      "school_name": "School of Literatures, Languages and Cultures",
+      "school_code": "su795",
+      "college": "College of Arts, Humanities and Social Sciences"
+    },
+    {
+      "name": "Celtic",
+      "url": "http://www.drps.ed.ac.uk/24-25/dpt/cx_sb_celt.htm",
+      "school_name": "School of Literatures, Languages and Cultures",
+      "school_code": "su795",
+      "college": "College of Arts, Humanities and Social Sciences"
+    },
+    {
+      "name": "Common Courses (School of Lit, Lang and Cult)",
+      "url": "http://www.drps.ed.ac.uk/24-25/dpt/cx_sb_cllc.htm",
+      "school_name": "School of Literatures, Languages and Cultures",
+      "school_code": "su795",
+      "college": "College of Arts, Humanities and Social Sciences"
+    },
+    {
+      "name": "European Languages and Cultures - Common Courses",
+      "url": "http://www.drps.ed.ac.uk/24-25/dpt/cx_sb_elcc.htm",
+      "school_name": "School of Literatures, Languages and Cultures",
+      "school_code": "su795",
+      "college": "College of Arts, Humanities and Social Sciences"
+    },
+    {
+      "name": "European Languages and Cultures - French",
+      "url": "http://www.drps.ed.ac.uk/24-25/dpt/cx_sb_elcf.htm",
+      "school_name": "School of Literatures, Languages and Cultures",
+      "school_code": "su795",
+      "college": "College of Arts, Humanities and Social Sciences"
+    },
+    {
+      "name": "European Languages and Cultures - German",
+      "url": "http://www.drps.ed.ac.uk/24-25/dpt/cx_sb_elcg.htm",
+      "school_name": "School of Literatures, Languages and Cultures",
+      "school_code": "su795",
+      "college": "College of Arts, Humanities and Social Sciences"
+    },
+    {
+      "name": "European Languages and Cultures - Hispanic Studies",
+      "url": "http://www.drps.ed.ac.uk/24-25/dpt/cx_sb_elch.htm",
+      "school_name": "School of Literatures, Languages and Cultures",
+      "school_code": "su795",
+      "college": "College of Arts, Humanities and Social Sciences"
+    },
+    {
+      "name": "European Languages and Cultures - Italian",
+      "url": "http://www.drps.ed.ac.uk/24-25/dpt/cx_sb_elci.htm",
+      "school_name": "School of Literatures, Languages and Cultures",
+      "school_code": "su795",
+      "college": "College of Arts, Humanities and Social Sciences"
+    },
+    {
+      "name": "European Languages and Cultures - Russian Studies",
+      "url": "http://www.drps.ed.ac.uk/24-25/dpt/cx_sb_elcr.htm",
+      "school_name": "School of Literatures, Languages and Cultures",
+      "school_code": "su795",
+      "college": "College of Arts, Humanities and Social Sciences"
+    },
+    {
+      "name": "European Languages & Cultures - Scandinavian Stud",
+      "url": "http://www.drps.ed.ac.uk/24-25/dpt/cx_sb_elcs.htm",
+      "school_name": "School of Literatures, Languages and Cultures",
+      "school_code": "su795",
+      "college": "College of Arts, Humanities and Social Sciences"
+    },
+    {
+      "name": "English - Academic (International Students Only)",
+      "url": "http://www.drps.ed.ac.uk/24-25/dpt/cx_sb_enai.htm",
+      "school_name": "School of Literatures, Languages and Cultures",
+      "school_code": "su795",
+      "college": "College of Arts, Humanities and Social Sciences"
+    },
+    {
+      "name": "English Literature",
+      "url": "http://www.drps.ed.ac.uk/24-25/dpt/cx_sb_enli.htm",
+      "school_name": "School of Literatures, Languages and Cultures",
+      "school_code": "su795",
+      "college": "College of Arts, Humanities and Social Sciences"
+    },
+    {
+      "name": "Islamic and Middle Eastern Studies",
+      "url": "http://www.drps.ed.ac.uk/24-25/dpt/cx_sb_imes.htm",
+      "school_name": "School of Literatures, Languages and Cultures",
+      "school_code": "su795",
+      "college": "College of Arts, Humanities and Social Sciences"
+    },
+    {
+      "name": "Scottish Ethnology",
+      "url": "http://www.drps.ed.ac.uk/24-25/dpt/cx_sb_scet.htm",
+      "school_name": "School of Literatures, Languages and Cultures",
+      "school_code": "su795",
+      "college": "College of Arts, Humanities and Social Sciences"
+    }
+  ]
+}

@@ -1,0 +1,585 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Course Catalogue - Machine Learning, Big Data and Text Analysis for Economists (ECNM11094)</title>
+<meta name="type" content="DPT"></meta>
+<meta name="modcode" content="ECNM11094"></meta>
+<meta name="modname" content="Machine Learning, Big Data and Text Analysis for Economists"></meta>
+<meta name="modkeywords" content=""></meta>
+<meta name="modschool" content=""></meta>
+<meta name="modsubj" content=""></meta>
+<meta name="modsubj" content=""></meta>
+<!-- use stylesheets from DRPS -->
+<link rel="stylesheet" type="text/css" href="http://www.ed.ac.uk/other/styles.css">
+<link rel="stylesheet" type="text/css" href="../css/dp.css">
+<link rel="stylesheet" type="text/css" href="../24-25/dpts/dpt.css">
+
+<!-- add SITS styles -->
+<style type="text/css">
+
+.rowhead1 { font-family: 'Trebuchet MS', 'Lucida Grande', Verdana, Arial, Helvetica, sans-serif; 
+font-size: 75%;  color: #555555; /* replaces 25476C */
+background-color: #EEEEFF; /* replaces EAEEF5 */
+font-weight: bold;
+}
+
+.data1nobg { font-family: 'Trebuchet MS', 'Lucida Grande', Verdana, Arial, Helvetica, sans-serif;  
+color: #333; /* replaces 666 */
+font-weight: normal }
+
+.sitstablegrid {
+	width:100%; /* overall default table width */
+	margin-bottom:20px; /* separator space below each table */
+}
+
+.sitstablegrid caption {	
+	font-family: 'Trebuchet MS', 'Lucida Grande', Verdana, Arial, Helvetica, sans-serif;
+	font-size:75%;	
+	color: #FFFFFF;
+	padding:6px;
+	font-weight: bold;
+	text-align: left;
+	background:#232B5A; /* replaces 25476c */
+}
+
+.sitstablegrid caption,
+.sitstablegrid th, 
+.sitstablegrid td {
+	font-family: 'Trebuchet MS', 'Lucida Grande', Verdana, Arial, Helvetica, sans-serif;
+	font-size:75%;
+	padding: 4px;
+	vertical-align:top;
+}
+
+.sitstablegrid th {
+	background-color:#232B5A; /* replaces 36a7e9 */
+	padding-right: 5px; /* required to keep right aligned TH row headings from edge of cell */
+	color:#FFFFFF;
+	border:1px solid #CCCCCC;
+	border-collapse:collapse;
+}
+
+.sitstablegrid {
+	background-color: #FFFFFF; /* background shade applied to all cells */
+	border: 1px solid #cccccc; /* table outline box */
+	border-collapse: collapse;
+}
+
+.sitstablegrid th, 
+.sitstablegrid td {
+	border: 1px solid #cccccc; /* draws grid lines for sitstablegrid style class */
+	}
+
+#sitspagetitle {
+} 
+  
+h1.sitspagetitle {
+	font-family: 'Trebuchet MS', 'Lucida Grande', Verdana, Arial, Helvetica, sans-serif;
+	font-size: 80%;
+	color: #232B5A; /* replaces 25476c */
+	font-weight: bold;
+	border-bottom:1px solid #232B5A; /* replaces 25476c */
+}
+
+</style>
+</head>
+
+<body>
+<!-- header from DRPS -->
+<table width="100%" border="0" cellspacing="0" cellpadding="0" style="background-color: #232B5A;">
+<tr>
+<td width="84" align="left" valign="top">
+<a href="http://www.ed.ac.uk" class="headertext"><img src="http://www.drps.ed.ac.uk/images/logo.jpg" alt="The University of Edinburgh" name="logo" width="84" height="84" border="0" id="logo"></a>
+</td>
+
+<td align="left" width="100%">
+<h3 class="page_title">THE UNIVERSITY of EDINBURGH</h3>
+<h1 class="page_title">DEGREE REGULATIONS & PROGRAMMES OF STUDY 2024/2025</h1>
+<!-- <h3 style ="color:red" class="page_title">Draft Edition - Due to be published Thursday 11th April 2024</h3> -->
+<h3 style ="color:red" class="page_title">Timetable information in the Course Catalogue may be subject to change.</h3>
+</td>
+
+<td align="left">
+
+<table border="0" cellpadding="0" cellspacing="0" style="margin-right:20px;"><tr>
+<td style="white-space:nowrap">
+<a href="http://www.ed.ac.uk" class="headertext"><img src="../images/arrow.gif" width="16" height="11" border="0" alt=""></a><a href="http://www.ed.ac.uk" class="headertext">University&nbsp;Homepage</a>
+<br />
+<a href="../index.php" class="headertext"><img src="../images/arrow.gif" width="16" height="11" border="0" alt=""></a><a href="../index.php" class="headertext">DRPS Homepage</a>
+<br />
+<a href="cx_search.htm" class="headertext"><img src="../images/arrow.gif" width="16" height="11" border="0" alt=""></a><a href="cx_search.htm" class="headertext">DRPS Search</a>
+<br />
+<a href="../contact.php" class="headertext"><img src="../images/arrow.gif" width="16" height="11" border="0" alt=""></a><a href="../contact.php" class="headertext">DRPS Contact</a>
+</td></tr>
+</table>
+
+</td></tr>
+</table>
+
+<div class="college"><a href="../index.php">DRPS</a>&nbsp;:&nbsp;Course Catalogue&nbsp;:&nbsp;<a href="cx_s_su284.htm">School of Economics</a>&nbsp;:&nbsp;<a href="cx_sb_ecnm.htm">Economics</a></div>
+
+<table width="100%" border="0" cellpadding="6" cellspacing="0" class="content">
+<tr valign="top"><td>
+<!-- IMPORTANT Any changes to this SRL should be tested as follows:
+- via 'View Course' and 'Amend Course' in Curriculum Management -> CCAM containter, 
+- on linking from within OCSS/OCE 
+- the course catalogue (post March '10.
+If any additional SITS classes are used  (eg sitstablenogrid) then these must be added
+to SLPs CX_CRSHDR1 and CX_CRSHDR2 for the course catalogue. The course catalogue SRL cannot include sits.css as this overwrites
+University website styles -->
+
+<!-- temp variables passed in to determine various display options as follows -->
+<!-- GSL_TMP1: blank or not CCAM: limited details displayed (link from OCSS, course catalogue); "CCAM" = all details; CCAMSUM = called from CCAM input/Amend course task (CCAM1_A4) so don't need instance data, no pre-requisites etc (because editable on on task screen ) -->
+<!-- GSL_TMP2: Academic Year: if not null then a MAV(s) in single year is/are displayed for delivery; if null then SRL uses SLP CURRENT_AYR_CODE to display all MAV from current year forwards -->
+<!-- GSL_TMP3: Display Portal links: Y or null - display links; N - don't display links (could link to external web server) -->
+<!-- GSL_TMP4:passed in and passed through to CLASSES_TAB SRL. If set to Y then First class and additional info displayed-->
+<!-- GSL_TMP5.GSL=DRPS if this is called via DRPS publish, else null-->
+<!-- GSL_TMP6.GSL=visiting students from slp sma_vs_r which calls task sma_vs_r -->
+<!-- GSL_TMP6 and in syp: siw_mod_001 -->
+
+<!--
+START IN MOD.COURSE_DETS </br>
+gsl_tmp6: </br>
+gsl_tmp1:NULL </br>
+
+-->
+
+
+
+<style type="text/css">
+<!--
+#sitspagetabs-vert { 
+display: none;
+}
+-->
+</style>
+<!-- Course name, code, credits, subject area, brief description -->
+<br />
+<h1 id="sitspagetitle" class="sitspagetitle" style="font-size:150%;">Postgraduate Course: Machine Learning, Big Data and Text Analysis for Economists (ECNM11094)</h1>
+<table class="sitstablegrid">
+
+<!--FB 2/1/11 is course marked as closed? -->
+
+
+<caption>Course Outline</caption>
+<tr>
+<td class="rowhead1" width="15%">School</td><td width="35%">School of Economics</td>
+<td class="rowhead1" width="15%">College</td><td width="35%">College of Arts, Humanities and Social Sciences</td>
+</tr>
+<tr>
+<td class="rowhead1" width="15%">Credit level (Normal year taken)</td><td width="35%">SCQF Level 11 (Postgraduate)</td>
+
+<td class="rowhead1" width="15%">Availability</td><td width="35%">Available to all students</td>
+</tr>
+<tr>
+<td class="rowhead1" width="15%">SCQF Credits</td><td width="35%">10</td>
+<td class="rowhead1" width="15%">ECTS Credits</td><td width="35%">5</td>
+</tr>
+<tr>
+
+</tr>
+<tr>
+<td class="rowhead1" width ="15%">Summary</td><td width="85%" colspan="99">This course provides an introduction to Machine Learning, Big Data and Text Analysis tools, with an emphasis on their applications in Economics. In the first part of the course, students will learn about the most popular methods for classification and prediction, as well as tools for working with large datasets. The second part of the course focuses on practical tools for working with text and string variables, including statistical text analysis methods. The course is delivered through a series of lectures that include in-class Python examples.</td>
+</tr>
+<tr>
+<td class="rowhead1" width ="15%">Course description</td><td width="85%" colspan="99">
+    
+    This course provides an introduction to the main methods in Machine Learning, Big Data and Text Analysis and it discusses some empirical applications in the Economic literature. <br />
+<br />
+This course combines lectures, in-class examples, and exercises to teach students how to implement machine learning methods with actual data. Examples and studies from the economics literature are used to illustrate some of the topics. While no previous knowledge of machine learning or experience with Python is required, experience with data and programming in statistical packages like Stata is highly recommended. The course aims to provide essential elements required to implement theoretical algorithms using real data but does not provide a deep training in Python. <br />
+<br />
+The first part of the course gives an overview of the most popular methods for classification and prediction and discusses some tools for working with large datasets. Prediction and classification are the two most important tasks that ML can perform. The empirical literature in Economics is increasingly relying on these tasks with two purposes. First, to understand features in the data. Second, to analyse and organize large datasets in order to generate new information in a semi-automated way, a process also known as Data Mining. This new and user-ready information extracted from large and/or unstructured datasets (such as images or text corpuses) is used later to answering economic research questions. <br />
+<br />
+The second part of the course covers a number of practical tools and methods for working with text data and string variables. Text has rapidly become a major source of information for Economic studies, but traditional statistical methods are unfeasible to analyse this type of data. The typical size of these databases and the complex dependencies across the elements in the text (e.g. across words) require that analysis are performed using Machine Learning methods.
+    
+    
+</td>
+</tr>
+</table>
+
+<!-- Entry requirements (including additional costs ) -->
+<!-- don't show pre-reqs, co-reqs and prohibited combinations if called from CCAM1_A4 amend task -->
+<!-- Show Pre-requisites etc for CCAM VIEW/OCE/Course catalogue but not CCAM Amend  -->
+
+<table class="sitstablegrid">
+<caption>Entry Requirements (not applicable to Visiting Students)</caption>
+<tr>
+<td class="rowhead1" width="15%">Pre-requisites</td>
+
+<td width="35%"></td>
+<td class="rowhead1" width="15%">Co-requisites</td><td width="35%"></td>
+</tr>
+<tr>
+<td class="rowhead1" width="15%">Prohibited Combinations</td><td width="35%"></td>
+
+
+<td class="rowhead1" width="15%">Other requirements</td><td width="35%"> Students should be registered for MSc Mathematical Economics and Econometrics.  All other students must email sgpe@ed.ac.uk in advance to request permission.</td>
+</tr>
+
+<!-- show add costs for portal View Course, course catalogue and from OCE, but only if there are some -->
+
+
+</table>
+
+<!-- visting students information -FB 20110426 added High Demand Course-->
+
+<table class="sitstablegrid">
+<caption>Information for Visiting Students</caption> 
+<tr>
+<td class="rowhead1" width="15%">Pre-requisites</td><td width="85%" colspan="4">None</td>
+</tr>
+<tr>
+		<td class="rowhead1" width="15%">High Demand Course?</td>
+		<td class="data1nobg" width="85%" colspan="4">Yes</td>
+    </tr>
+</table>
+
+
+<!-- Delivery information -FB 14/1/11 added GSL_TMP5.GSL=DRPS-->
+<!-- Class times -->
+
+
+
+
+
+<table class="sitstablegrid">
+<caption>Course Delivery Information</caption>
+
+
+
+
+
+
+
+
+
+
+<!-- GSL_TMP1 = indicates whether a list of different courses' classes will be displayed. Values: Y - display course code
+at top of table, suppress additional and first class information. If blank then assume single course, so 
+don't display course code, but do display additional class and first class information.  This is so table can be used in individual MOD/MAV report or when listing a number of MODs (eg listing teaching activities for a list of SMAs)  -->
+
+<!-- GSL_TMP2 - display links to other SRLs (links won't work this from published (IPP)) N: don't, otherwise do-->
+<!-- GSL_TMP4 - Set to Y if first class and additional information to be displayed -->
+<!-- GSL_TMP5- Set to DRPS if SRL called via DRPS publish path- SRL not used for timetable and VS (uses CLASSES_TAB2)-->
+
+<!-- calling SRL must specify table, table caption (if required) eg:
+<table class="sitstablegrid">
+<caption>Course Delivery </caption> 
+---- call to this SRL ----
+</table> -->
+
+
+
+<tr><td colspan="99" style="height:5px;"></td></tr>
+<!--
+<tr><td colspan="99" style="height:5px;"> 
+ IN MAV_CLASSES_TAB </br>
+GSLTMP1:N</br>
+GSLTMP2:N </br>
+GSLTMP3: </br>
+GSLTMP4:Y </br>
+GSLTMP5:DRPS </br>
+GSLTMP6: </br>
+</td></tr>
+-->
+
+<tr>
+<td class="rowhead1" colspan="2" style="width:50%;">Academic year 2024/25, Available to all students (SV1) 
+  <!-- Quota moved from mod.course_dets cms call 882028 -->
+</td>
+<td class="rowhead1" colspan="99">Quota:&nbsp;&nbsp;None</td>
+</tr>
+
+<!-- Course start (delivery period) -->
+<tr><td class="rowhead1" width ="5%">Course Start</td>
+<td colspan="14">Block 4 (Sem 2)</td>
+</tr>
+
+<!-- Course start date (for invoiced courses) -->
+
+
+<!-- VISITING STUDENTS : gsl_tmp6 is set up in mod.course_dets for visiting students only. setup from slp: sma_vs_r then calls mod.course_dets. Test in url_link for this gsl_tmp6  -->
+
+<!-- ayr code: 24 fixed 22 -->
+<td class="rowhead1" width="15%" target="_blank">Timetable </td>
+	<td class="data1nobg" colspan ="99">
+<a href="https://browser.ted.is.ed.ac.uk/generate/?courses%5B%5D=ECNM11094_SV1_SB4
+&period=SB4&week=32-37" target="_blank">Timetable</a></td>
+
+
+
+
+
+
+
+
+
+<tr>
+<td class="rowhead1" style="width:15%;">Learning and Teaching activities <a href="http://www.studentsystems.is.ed.ac.uk/staff/Support/User_Guides/CCAM//Teaching_Learning.htm" target="_blank">(Further Info)</a></td>
+
+<td colspan="14"> 
+ Total Hours:
+100
+
+(
+ Lecture Hours 18,
+
+
+
+
+
+
+
+
+
+
+
+ Programme Level Learning and Teaching Hours 2,
+
+Directed Learning and Independent Learning Hours
+80 )
+
+</td>
+</tr>
+
+<!-- Display Futher L&T Notes -->
+
+
+<!-- Display Assessment details -->
+<tr>
+<td class="rowhead1" style="width:15%;">Assessment <a href="http://www.studentsystems.is.ed.ac.uk/staff/Support/User_Guides/CCAM//Assessment_Methods.htm" target="_blank">(Further Info)</a></td>
+
+<td colspan="14"> 
+  Written Exam
+80 %,
+Coursework
+20 %,
+Practical Exam
+0 %
+</td>
+</tr>
+
+<tr>
+<tr>
+<td class="rowhead1" stlye="width:15%;">Additional Information (Assessment)</td>
+<td colspan="14">There is an in-person exam worth 80% of the course marks. The exam is based on the material covered during the lectures and required readings. <br />
+<br />
+The remaining 20% of the marks corresponds to a coursework activity (computer exercise) that students need to submit.</td>
+</tr>
+
+
+<tr>
+<td class="rowhead1" stlye="width:15%;">Feedback</td>
+<td colspan="14">Feedback on all coursework assessment must be provided within 16 calendar days.</td>
+</tr>
+
+<!--FB 11Oct10: Exam info displayed if it exists, 14/1/11:do not display stationery and comments for GSL_TMP5=DRPS-->
+
+
+
+<tr>
+<td class="rowhead1" colspan="99">No Exam Information</td>
+</tr>
+
+
+<!--31/1/11 FB-Teaching load display if exists-->
+
+
+
+<!--Get MABs based on MAP code on MAV
+output heading for Standard student
+SEL on sequence 001-099: <td class="data1nobg"><<DATA FIELD>></td> 
+
+output VS student heading
+select on sequence >= 101:  -->
+
+
+<!-- Learning outcomes, FB 1/4/11 add other learning outcomes for ECA -->
+<table class="sitstablegrid">
+<caption>Learning Outcomes</caption> 
+<tr>
+<td>
+    On completion of this course, the student will be able to:
+    <ol style="font-family:inherit;font-size:inherit;">
+        <li>Implement the main algorithms for classification and prediction tasks</li><li>Use text data and perform statistical analysis on it</li><li>Organise, process and create large datasets based on semi-structured information</li><li>Understand how Machine Learning methods have been applied into the Economic literature</li>
+    </ol>
+</td>
+</tr>
+</table>
+
+<table class="sitstablegrid">
+<caption>Reading List</caption> 
+<tr><td>The main reference of the course will be the slides used in the lectures and the material used for the in-class activities. Students can get a deeper understanding of some models and techniques covered in the course from the references below.  <br />
+<br />
+Textbooks on Statistical Learning: <br />
+<br />
+Hastie, T., Tibshirani, R. &amp; Friedman, J. (2009). Â¿The Elements of Statistical Learning: Data Mining, Inference, and PredictionÂ¿, 2nd Edition, Springer, New York. [Essential Reading] <br />
+<br />
+James, G., Witten, D., Hastie, T. &amp; Tibshirani, R. (2013). Â¿An Introduction to Statistical Learning with Applications in RÂ¿, Springer, New York. Free available from Editor Site [Essential Reading] <br />
+<br />
+Chollet, F. (2017). Â¿Deep Learning with PythonÂ¿. Manning. ISBN: 9781617294433. [Recommended Reference] <br />
+<br />
+Other references and articles that may be used during the course (this list can be updated during the course, depending on the material covered):  <br />
+<br />
+Bandiera, O., Hansen, S., Prat, A., and Sadun, R. (2017) Â¿CEO Behavior and Firm Performance.Â¿ NBER Working Paper 23248. <br />
+<br />
+Baker, S., Bloom, N., and Davis. S., (2016), Â¿Measuring Economic Policy Uncertainty.Â¿ Quarterly Journal of Economics 131(4): 1593Â¿636. <br />
+<br />
+Bird, S., Klein, E., and Loper, E. (2009) Â¿Natural Language Processing with Python.Â¿ OÂ¿Reilly, ISBN: 978-0-596-51649-9. <br />
+<br />
+Breiman, L. (2001). Random forests. Machine learning, 45(1), 5-32. <br />
+<br />
+Chernozhukov, Victor, et al. Â¿Double machine learning for treatment and causal parameters.Â¿ (working paper) <br />
+<br />
+Duchi, J., Hazan, E., and Singer, Y., (2011), Â¿Adaptive Subgradient Methods for Online Learning and Stochastic OptimizationÂ¿, Journal of Machine Learning Research 12 (2011) 2121-2159. <br />
+<br />
+Fawcett, T., (2016), Â¿An introduction to ROC analysis.Â¿, Pattern Recognition Letters, Volume 27, Issue 8. 861-874, ISSN 0167-8655, <br />
+<br />
+Gentzkow, M., Kelly, B., Taddy, M. (2019) Â¿Text as DataÂ¿, Journal of Economic Literature 2019, 57(3), 535Â¿574 <br />
+<br />
+Gentzkow, M. and Shapiro, J.M. (2010), Â¿What Drives Media Slant? Evidence From U.S. Daily Newspapers.Â¿, Econometrica, 78: 35-71. doi:10.3982/ECTA7195 <br />
+<br />
+Gilchrist, D.S. Sands, E. G. (2016). Â¿Something to Talk About: Social Spillovers in Movie ConsumptionÂ¿, Journal of Political Economy. vol. 24(105), pp. 1339-1382. <br />
+<br />
+Freund, Y. (1995) Â¿Boosting a weak learning algorithm by majority.Â¿, Information and Computation 121(2), 256Â¿285. <br />
+<br />
+Friedman, J. (2002), Â¿Stochastic gradient boosting.Â¿, Computational Statistics &amp; Data Analysis 38(4). <br />
+<br />
+Friedman, J.  and Schapire, R. (1997), Â¿A decision-theoretic generalization of online learning and an application to boosting.Â¿ Journal of Computer and System Sciences 55(1), 119Â¿139. <br />
+<br />
+Ginsberg, J., Mohebbi, M. H., Patel, R. S., Brammer, L., Smolinski, M. S., and Brilliant, Larry (2009). &quot;Detecting influenza epidemics using search engine query data&quot;. Nature 457 (7232): 1012Â¿1014. <br />
+<br />
+Goldberg, Y. 2016. Â¿A Primer on Neural Network Models for Natural Language Processing.Â¿ Journal of Artificial Intelligence Research 57(1), 345Â¿420. <br />
+<br />
+Hansen, S., McMahon, M. &amp; Prat, A. (2018) Â¿Transparency and Deliberation within the FOMC: A Computational Linguistics Approach.Â¿ Quarterly Journal of Economics 133(2): 801Â¿70. <br />
+<br />
+Lazer, D., Kennedy, R., King, G., and Vespignani, A., (2014), Â¿The Parable of Google Flu: Traps in Big Data Analysis.Â¿ Science 343(6176), 1203Â¿05. <br />
+<br />
+Le, Q. and Mikolov, T. (2014), Â¿Distributed Representations of Sentences and Documents.Â¿ Proceedings of Machine Learning Research 32, 1188Â¿96. <br />
+<br />
+Manning, C., Raghavan, P., and SchÃ¼tze, H. (2008), Introduction to Information Retrieval, Cambridge: Cambridge University Press. <br />
+<br />
+Mayr, A., Binder, H., Gefeller, O., and Schmid, M. (2014) Â¿The Evolution of Boosting Algorithms. From Machine Learning to Statistical Modelling.Â¿ Methods Inf Med 2014; 53(6), 419-427. <br />
+<br />
+Mikolov, T., Sutskever, I.,Chen, K., Corrado, G., and Dean, J., (2013), Â¿Distributed Representations of Words and Phrases and Their Compositionality.Â¿ In Proceedings of the 26th International Conference on Neural Information Processing Systems, edited by C. J. C. Burges, L. Bottou, M. Welling, Z.  Ghahramani, and K. Q. Weinberger, 3111Â¿19. Red Hook: Curran Associates. Morin, Frederic, and Yoshua Bengio. 2005. <br />
+<br />
+Mullainathan, S., Spiess, J. (2017). Machine learning: An applied econometric approach. Journal of Economic Perspectives, 31(2), 87-106. <br />
+<br />
+Porter, M., (1980), Â¿An Algorithm for Suffix Stripping.Â¿ Program 14(3): 130Â¿37. <br />
+<br />
+Stephens-Davidowitz, S., (2014), Â¿The Cost of Racial Animus on a Black Candidate: Evidence Using Google Search Data.Â¿ Journal of Public Economics 118(C): 26Â¿40. <br />
+<br />
+Stock, J. and Trebbi, F. (2003), Â¿Who Invented Instrumental Variable Regression?Â¿, Journal of Economic Perspectives 17(3), 177Â¿194. <br />
+<br />
+Srivastava, N., Hinton, G., Krizhevsky, A., Sutskever, I., Salakhutdinov, R. (2014) Â¿Dropout: A Simple Way to Prevent Neural Networks from OverfittingÂ¿ Journal of Machine Learning Research 15, 1929-1958. <br />
+<br />
+Taddy, M. (2013). Â¿Measuring Political Sentiment on Twitter: Factor Optimal Design for Multinomial Inverse Regression.Â¿ Technometrics 55 (4), 415Â¿25. <br />
+<br />
+Taddy, M. (2013). Â¿Multinomial Inverse Regression for Text Analysis.Â¿ Journal of the American Statistical Association 108(503), 755Â¿70. <br />
+<br />
+Taddy, M. (2012). Â¿On Estimation and Selection for Topic Models.Â¿ In Proceedings of the 15th International Conference on Artificial Intelligence and Statistics, 1184Â¿93. New York: Association for Computing Machinery. <br />
+<br />
+Tibshirani, R. (1996). Â¿Regression Shrinkage and Selection via the Lasso.Â¿ Journal of the Royal Statistical Society, Series B (Methodological) 58(1): 267Â¿88. <br />
+<br />
+Varian, H. R. (2014). Big data: New tricks for econometrics. The Journal of Economic Perspectives, 28(2), 3-27.</td></tr> 
+</table>
+
+<!-- CG 14/10/09 changed to show additional costs here only for CCAM amend function -->
+
+
+<table class="sitstablegrid">
+<caption>Additional Information</caption>
+
+<tr>
+<td class="rowhead1" width="15%">Course URL</td>
+<td width="85%"><a href="www.sgpe.ac.uk" target="_blank" title="View Website. Opens in a new window.">www.sgpe.ac.uk</a></td>
+</tr>
+
+<tr>
+<td class="rowhead1" width="15%">Graduate Attributes and Skills</td>
+<td width="85%">Not entered</td>
+</tr>
+
+
+
+<tr>
+<td class="rowhead1" width="15%">Keywords</td><td width="85%">Not entered</td>
+</tr>
+</table>
+
+<!-- Contact information -->
+<table class="sitstablegrid">
+<caption>Contacts</caption> 
+<tr>
+<td class="rowhead1"  width="15%">Course organiser</td><td width="35%">Dr Diego Battiston<br>
+<b>Tel:</b> <br>
+<b>Email:</b> Diego.Battiston@ed.ac.uk</td>
+<td class="rowhead1" width="15%">Course secretary</td><td width="35%"></td>
+</tr>  
+</table>
+
+<!-- if called from CCAM then show extra course details -->
+
+
+</td>
+<td><table width="100%" border="0" cellspacing="0" cellpadding="0">
+<tr><td bgcolor="#999999">
+
+<table width="100%" border="0" cellspacing="1" cellpadding="3">
+<tr><td bgcolor="#FFFFFF" class="subboxtitle">Navigation</td></tr>
+<tr><td bgcolor="#FFFFFF" class="subboxsection" style="white-space:nowrap">Help &amp; Information</td></tr>
+<tr><td bgcolor="#FFFFFF"><a class="subboxitem" href="../index.php">Home</a></td></tr>
+<tr><td bgcolor="#FFFFFF"><a class="subboxitem" href="../regulations/main_intro.php">Introduction</a></td></tr>
+<tr><td bgcolor="#FFFFFF"><a class="subboxitem" href="../whole_glossary.php">Glossary</a></td></tr>
+<tr><td bgcolor="#FFFFFF"><a class="subboxitem" href="cx_search.htm">Search DPTs and Courses</a></td></tr>
+<tr><td bgcolor="#FFFFFF" class="subboxsection" style="white-space:nowrap">Regulations</td></tr>
+<tr><td bgcolor="#FFFFFF"><a class="subboxitem" href="../regulations/index.php">Regulations</a></td></tr>
+<tr><td bgcolor="#FFFFFF" class="subboxsection"  style="white-space:nowrap">Degree Programmes</td></tr>
+<tr><td bgcolor="#FFFFFF"><a class="subboxitem" href="../regulations/dpt_intro.php">Introduction</a></td></tr>
+<tr><td bgcolor="#FFFFFF"><a class="subboxitem" href="drpsindex.htm">Browse&nbsp;DPTs</a></td></tr>
+<tr><td bgcolor="#FFFFFF" class="subboxsection">Courses</td></tr>
+<tr><td bgcolor="#FFFFFF"><a class="subboxitem" href="../regulations/course_intro.php">Introduction</a></td></tr>
+<tr><td bgcolor="#FFFFFF"><a class="subboxitem" href="cx_colhss.htm" style="white-space:nowrap">Humanities and Social Science</a></td></tr>
+<tr><td bgcolor="#FFFFFF"><a class="subboxitem" href="cx_colsce.htm" style="white-space:nowrap">Science and Engineering</a></td></tr>
+<tr><td bgcolor="#FFFFFF"><a class="subboxitem" href="cx_colmvm.htm" style="white-space:nowrap">Medicine and Veterinary Medicine</a></td></tr>
+<tr><td bgcolor="#FFFFFF" class="subboxsection" style="white-space:nowrap">Other Information</td></tr>
+<tr><td bgcolor="#FFFFFF"><a class="subboxitem" href="https://browser.ted.is.ed.ac.uk" target="_blank">Combined Course Timetable </a></td></tr>
+<tr><td bgcolor="#FFFFFF"><a class="subboxitem" href="http://www.ed.ac.uk/studying/" title="Prospectuses">Prospectuses</a></td></tr>
+<tr><td bgcolor="#FFFFFF"><a class="subboxitem" href="../regulations/important.php">Important&nbsp;Information</a></td></tr>
+<tr><td bgcolor="#FFFFFF" class="subboxtitle" style="height:5px;font-size:1px;">&nbsp;</td></tr>
+</table>
+
+</td></tr>
+</table></td>   
+</tr>
+</table>
+
+<div class="footer">
+  <div style="float:right">
+    <a href="http://www.ed.ac.uk/about/website/privacy">Privacy &amp; cookies</a>
+  </div>
+  <em>&copy; Copyright 2024 The University of Edinburgh -  15 January 2025 9:04 pm</em>
+</div>
+<script async src="https://www.googletagmanager.com/gtag/js?id=trackingCode">
+  var trackingCode = window.location.hostname.substr(0, 4) === 'www.' ? 'G-9VG3160DSR' : 'G-J3QFR7R34Z';
+  </script>
+  
+  <script>
+  var key = window.location.hostname.substr(0, 4) === 'www.' ? 'G-9VG3160DSR' : 'G-J3QFR7R34Z';
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+  
+    gtag('config', key);
+  </script>
+  
+  <script>
+  var key = window.location.hostname.substr(0, 4) === 'www.' ? 'GTM-M38Z4T4' : 'GTM-KC9RP53';
+  (function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+  new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+  j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+  'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+  })(window,document,'script','dataLayer',key);</script>
+</body>
+</html>

@@ -1,0 +1,16 @@
+{
+  "name": "School of Law",
+  "url": "http://www.drps.ed.ac.uk/24-25/dpt/cx_s_su161.htm",
+  "college": "College of Arts, Humanities and Social Sciences",
+  "schedule": "Schedule F",
+  "code": "su161",
+  "subjects": [
+    {
+      "name": "Law",
+      "url": "http://www.drps.ed.ac.uk/24-25/dpt/cx_sb_laws.htm",
+      "school_name": "School of Law",
+      "school_code": "su161",
+      "college": "College of Arts, Humanities and Social Sciences"
+    }
+  ]
+}

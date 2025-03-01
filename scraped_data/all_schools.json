@@ -1,0 +1,184 @@
+[
+  {
+    "name": "Edinburgh College of Art",
+    "url": "http://www.drps.ed.ac.uk/24-25/dpt/cx_s_su791.htm",
+    "college": "College of Arts, Humanities and Social Sciences",
+    "schedule": "Schedule A",
+    "code": "su791"
+  },
+  {
+    "name": "School of Divinity",
+    "url": "http://www.drps.ed.ac.uk/24-25/dpt/cx_s_su151.htm",
+    "college": "College of Arts, Humanities and Social Sciences",
+    "schedule": "Schedule B",
+    "code": "su151"
+  },
+  {
+    "name": "Moray House School of Education and Sport",
+    "url": "http://www.drps.ed.ac.uk/24-25/dpt/cx_s_su819.htm",
+    "college": "College of Arts, Humanities and Social Sciences",
+    "schedule": "Schedule C",
+    "code": "su819"
+  },
+  {
+    "name": "School of Health in Social Science",
+    "url": "http://www.drps.ed.ac.uk/24-25/dpt/cx_s_su796.htm",
+    "college": "College of Arts, Humanities and Social Sciences",
+    "schedule": "Schedule D",
+    "code": "su796"
+  },
+  {
+    "name": "School of History, Classics and Archaeology",
+    "url": "http://www.drps.ed.ac.uk/24-25/dpt/cx_s_su792.htm",
+    "college": "College of Arts, Humanities and Social Sciences",
+    "schedule": "Schedule E",
+    "code": "su792"
+  },
+  {
+    "name": "School of Law",
+    "url": "http://www.drps.ed.ac.uk/24-25/dpt/cx_s_su161.htm",
+    "college": "College of Arts, Humanities and Social Sciences",
+    "schedule": "Schedule F",
+    "code": "su161"
+  },
+  {
+    "name": "School of Literatures, Languages and Cultures",
+    "url": "http://www.drps.ed.ac.uk/24-25/dpt/cx_s_su795.htm",
+    "college": "College of Arts, Humanities and Social Sciences",
+    "schedule": "Schedule G",
+    "code": "su795"
+  },
+  {
+    "name": "Business School",
+    "url": "http://www.drps.ed.ac.uk/24-25/dpt/cx_s_su780.htm",
+    "college": "College of Arts, Humanities and Social Sciences",
+    "schedule": "Schedule H",
+    "code": "su780"
+  },
+  {
+    "name": "School of Philosophy, Psychology and Language Sciences",
+    "url": "http://www.drps.ed.ac.uk/24-25/dpt/cx_s_su793.htm",
+    "college": "College of Arts, Humanities and Social Sciences",
+    "schedule": "Schedule I",
+    "code": "su793"
+  },
+  {
+    "name": "School of Social and Political Science",
+    "url": "http://www.drps.ed.ac.uk/24-25/dpt/cx_s_su809.htm",
+    "college": "College of Arts, Humanities and Social Sciences",
+    "schedule": "Schedule J",
+    "code": "su809"
+  },
+  {
+    "name": "School of Economics",
+    "url": "http://www.drps.ed.ac.uk/24-25/dpt/cx_s_su284.htm",
+    "college": "College of Arts, Humanities and Social Sciences",
+    "schedule": "Schedule W",
+    "code": "su284"
+  },
+  {
+    "name": "Centre for Open Learning",
+    "url": "http://www.drps.ed.ac.uk/24-25/dpt/cx_s_su755.htm",
+    "college": "College of Arts, Humanities and Social Sciences",
+    "schedule": "Schedule X",
+    "code": "su755"
+  },
+  {
+    "name": "Edinburgh Futures Institute",
+    "url": "http://www.drps.ed.ac.uk/24-25/dpt/cx_s_su973.htm",
+    "college": "College of Arts, Humanities and Social Sciences",
+    "schedule": "Schedule Y",
+    "code": "su973"
+  },
+  {
+    "name": "School of Biological Sciences",
+    "url": "http://www.drps.ed.ac.uk/24-25/dpt/cx_s_su541.htm",
+    "college": "College of Science and Engineering",
+    "schedule": "Schedule K",
+    "code": "su541"
+  },
+  {
+    "name": "School of Chemistry",
+    "url": "http://www.drps.ed.ac.uk/24-25/dpt/cx_s_su240.htm",
+    "college": "College of Science and Engineering",
+    "schedule": "Schedule L",
+    "code": "su240"
+  },
+  {
+    "name": "School of Engineering",
+    "url": "http://www.drps.ed.ac.uk/24-25/dpt/cx_s_su748.htm",
+    "college": "College of Science and Engineering",
+    "schedule": "Schedule M",
+    "code": "su748"
+  },
+  {
+    "name": "School of Geosciences",
+    "url": "http://www.drps.ed.ac.uk/24-25/dpt/cx_s_su849.htm",
+    "college": "College of Science and Engineering",
+    "schedule": "Schedule N",
+    "code": "su849"
+  },
+  {
+    "name": "School of Informatics",
+    "url": "http://www.drps.ed.ac.uk/24-25/dpt/cx_s_su747.htm",
+    "college": "College of Science and Engineering",
+    "schedule": "Schedule O",
+    "code": "su747"
+  },
+  {
+    "name": "School of Mathematics",
+    "url": "http://www.drps.ed.ac.uk/24-25/dpt/cx_s_su253.htm",
+    "college": "College of Science and Engineering",
+    "schedule": "Schedule P",
+    "code": "su253"
+  },
+  {
+    "name": "School of Physics and Astronomy",
+    "url": "http://www.drps.ed.ac.uk/24-25/dpt/cx_s_su744.htm",
+    "college": "College of Science and Engineering",
+    "schedule": "Schedule Q",
+    "code": "su744"
+  },
+  {
+    "name": "College of Medicine and Veterinary Medicine",
+    "url": "http://www.drps.ed.ac.uk/24-25/dpt/cx_s_su845.htm",
+    "college": "College of Medicine and Veterinary Medicine",
+    "schedule": "Schedule ",
+    "code": "su845"
+  },
+  {
+    "name": "Edinburgh Medical School",
+    "url": "http://www.drps.ed.ac.uk/24-25/dpt/cx_s_su640.htm",
+    "college": "College of Medicine and Veterinary Medicine",
+    "schedule": "Schedule R",
+    "code": "su640"
+  },
+  {
+    "name": "Royal (Dick) School of Veterinary Studies",
+    "url": "http://www.drps.ed.ac.uk/24-25/dpt/cx_s_su336.htm",
+    "college": "College of Medicine and Veterinary Medicine",
+    "schedule": "Schedule S",
+    "code": "su336"
+  },
+  {
+    "name": "Deanery of Biomedical Sciences",
+    "url": "http://www.drps.ed.ac.uk/24-25/dpt/cx_s_su722.htm",
+    "college": "College of Medicine and Veterinary Medicine",
+    "schedule": "Schedule T",
+    "code": "su722"
+  },
+  {
+    "name": "Deanery of Clinical Sciences",
+    "url": "http://www.drps.ed.ac.uk/24-25/dpt/cx_s_su723.htm",
+    "college": "College of Medicine and Veterinary Medicine",
+    "schedule": "Schedule U",
+    "code": "su723"
+  },
+  {
+    "name": "Deanery of Molecular, Genetic and Population Health Sciences",
+    "url": "http://www.drps.ed.ac.uk/24-25/dpt/cx_s_su724.htm",
+    "college": "College of Medicine and Veterinary Medicine",
+    "schedule": "Schedule V",
+    "code": "su724"
+  }
+]

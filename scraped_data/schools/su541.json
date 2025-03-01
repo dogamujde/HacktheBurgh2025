@@ -1,0 +1,114 @@
+{
+  "name": "School of Biological Sciences",
+  "url": "http://www.drps.ed.ac.uk/24-25/dpt/cx_s_su541.htm",
+  "college": "College of Science and Engineering",
+  "schedule": "Schedule K",
+  "code": "su541",
+  "subjects": [
+    {
+      "name": "Biochemistry",
+      "url": "http://www.drps.ed.ac.uk/24-25/dpt/cx_sb_bich.htm",
+      "school_name": "School of Biological Sciences",
+      "school_code": "su541",
+      "college": "College of Science and Engineering"
+    },
+    {
+      "name": "Biology",
+      "url": "http://www.drps.ed.ac.uk/24-25/dpt/cx_sb_bilg.htm",
+      "school_name": "School of Biological Sciences",
+      "school_code": "su541",
+      "college": "College of Science and Engineering"
+    },
+    {
+      "name": "Biotechnology",
+      "url": "http://www.drps.ed.ac.uk/24-25/dpt/cx_sb_bite.htm",
+      "school_name": "School of Biological Sciences",
+      "school_code": "su541",
+      "college": "College of Science and Engineering"
+    },
+    {
+      "name": "Cell Biology (Biological Sciences)",
+      "url": "http://www.drps.ed.ac.uk/24-25/dpt/cx_sb_cebi.htm",
+      "school_name": "School of Biological Sciences",
+      "school_code": "su541",
+      "college": "College of Science and Engineering"
+    },
+    {
+      "name": "Developmental Biology",
+      "url": "http://www.drps.ed.ac.uk/24-25/dpt/cx_sb_debi.htm",
+      "school_name": "School of Biological Sciences",
+      "school_code": "su541",
+      "college": "College of Science and Engineering"
+    },
+    {
+      "name": "Ecology",
+      "url": "http://www.drps.ed.ac.uk/24-25/dpt/cx_sb_eclg.htm",
+      "school_name": "School of Biological Sciences",
+      "school_code": "su541",
+      "college": "College of Science and Engineering"
+    },
+    {
+      "name": "Evolutionary Biology",
+      "url": "http://www.drps.ed.ac.uk/24-25/dpt/cx_sb_evbi.htm",
+      "school_name": "School of Biological Sciences",
+      "school_code": "su541",
+      "college": "College of Science and Engineering"
+    },
+    {
+      "name": "Genetics",
+      "url": "http://www.drps.ed.ac.uk/24-25/dpt/cx_sb_gene.htm",
+      "school_name": "School of Biological Sciences",
+      "school_code": "su541",
+      "college": "College of Science and Engineering"
+    },
+    {
+      "name": "Infectious Diseases  (Biological Sciences)",
+      "url": "http://www.drps.ed.ac.uk/24-25/dpt/cx_sb_idbi.htm",
+      "school_name": "School of Biological Sciences",
+      "school_code": "su541",
+      "college": "College of Science and Engineering"
+    },
+    {
+      "name": "Immunology",
+      "url": "http://www.drps.ed.ac.uk/24-25/dpt/cx_sb_immu.htm",
+      "school_name": "School of Biological Sciences",
+      "school_code": "su541",
+      "college": "College of Science and Engineering"
+    },
+    {
+      "name": "Molecular Biology",
+      "url": "http://www.drps.ed.ac.uk/24-25/dpt/cx_sb_mlbi.htm",
+      "school_name": "School of Biological Sciences",
+      "school_code": "su541",
+      "college": "College of Science and Engineering"
+    },
+    {
+      "name": "Molecular Genetics (Biological Sciences)",
+      "url": "http://www.drps.ed.ac.uk/24-25/dpt/cx_sb_moge.htm",
+      "school_name": "School of Biological Sciences",
+      "school_code": "su541",
+      "college": "College of Science and Engineering"
+    },
+    {
+      "name": "Postgraduate",
+      "url": "http://www.drps.ed.ac.uk/24-25/dpt/cx_sb_pgbi.htm",
+      "school_name": "School of Biological Sciences",
+      "school_code": "su541",
+      "college": "College of Science and Engineering"
+    },
+    {
+      "name": "Plant Science",
+      "url": "http://www.drps.ed.ac.uk/24-25/dpt/cx_sb_plsc.htm",
+      "school_name": "School of Biological Sciences",
+      "school_code": "su541",
+      "college": "College of Science and Engineering"
+    },
+    {
+      "name": "Zoology",
+      "url": "http://www.drps.ed.ac.uk/24-25/dpt/cx_sb_zlgy.htm",
+      "school_name": "School of Biological Sciences",
+      "school_code": "su541",
+      "college": "College of Science and Engineering"
+    }
+  ]
+}

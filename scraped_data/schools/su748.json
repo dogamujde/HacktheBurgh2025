@@ -1,0 +1,58 @@
+{
+  "name": "School of Engineering",
+  "url": "http://www.drps.ed.ac.uk/24-25/dpt/cx_s_su748.htm",
+  "college": "College of Science and Engineering",
+  "schedule": "Schedule M",
+  "code": "su748",
+  "subjects": [
+    {
+      "name": "Chemical",
+      "url": "http://www.drps.ed.ac.uk/24-25/dpt/cx_sb_chee.htm",
+      "school_name": "School of Engineering",
+      "school_code": "su748",
+      "college": "College of Science and Engineering"
+    },
+    {
+      "name": "Civil",
+      "url": "http://www.drps.ed.ac.uk/24-25/dpt/cx_sb_cive.htm",
+      "school_name": "School of Engineering",
+      "school_code": "su748",
+      "college": "College of Science and Engineering"
+    },
+    {
+      "name": "Electronics",
+      "url": "http://www.drps.ed.ac.uk/24-25/dpt/cx_sb_elee.htm",
+      "school_name": "School of Engineering",
+      "school_code": "su748",
+      "college": "College of Science and Engineering"
+    },
+    {
+      "name": "Management (School of Engineering)",
+      "url": "http://www.drps.ed.ac.uk/24-25/dpt/cx_sb_maee.htm",
+      "school_name": "School of Engineering",
+      "school_code": "su748",
+      "college": "College of Science and Engineering"
+    },
+    {
+      "name": "Mechanical",
+      "url": "http://www.drps.ed.ac.uk/24-25/dpt/cx_sb_mece.htm",
+      "school_name": "School of Engineering",
+      "school_code": "su748",
+      "college": "College of Science and Engineering"
+    },
+    {
+      "name": "Postgrad (School of Engineering)",
+      "url": "http://www.drps.ed.ac.uk/24-25/dpt/cx_sb_pgee.htm",
+      "school_name": "School of Engineering",
+      "school_code": "su748",
+      "college": "College of Science and Engineering"
+    },
+    {
+      "name": "School (School of Engineering)",
+      "url": "http://www.drps.ed.ac.uk/24-25/dpt/cx_sb_scee.htm",
+      "school_name": "School of Engineering",
+      "school_code": "su748",
+      "college": "College of Science and Engineering"
+    }
+  ]
+}

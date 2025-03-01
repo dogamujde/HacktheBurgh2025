@@ -1,0 +1,23 @@
+{
+  "name": "School of Divinity",
+  "url": "http://www.drps.ed.ac.uk/24-25/dpt/cx_s_su151.htm",
+  "college": "College of Arts, Humanities and Social Sciences",
+  "schedule": "Schedule B",
+  "code": "su151",
+  "subjects": [
+    {
+      "name": "Biblical Studies",
+      "url": "http://www.drps.ed.ac.uk/24-25/dpt/cx_sb_bist.htm",
+      "school_name": "School of Divinity",
+      "school_code": "su151",
+      "college": "College of Arts, Humanities and Social Sciences"
+    },
+    {
+      "name": "Divinity",
+      "url": "http://www.drps.ed.ac.uk/24-25/dpt/cx_sb_divi.htm",
+      "school_name": "School of Divinity",
+      "school_code": "su151",
+      "college": "College of Arts, Humanities and Social Sciences"
+    }
+  ]
+}

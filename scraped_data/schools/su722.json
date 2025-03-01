@@ -1,0 +1,93 @@
+{
+  "name": "Deanery of Biomedical Sciences",
+  "url": "http://www.drps.ed.ac.uk/24-25/dpt/cx_s_su722.htm",
+  "college": "College of Medicine and Veterinary Medicine",
+  "schedule": "Schedule T",
+  "code": "su722",
+  "subjects": [
+    {
+      "name": "Anaesthesia, Critical Care and Pain",
+      "url": "http://www.drps.ed.ac.uk/24-25/dpt/cx_sb_accp.htm",
+      "school_name": "Deanery of Biomedical Sciences",
+      "school_code": "su722",
+      "college": "College of Medicine and Veterinary Medicine"
+    },
+    {
+      "name": "Biomedical Sciences",
+      "url": "http://www.drps.ed.ac.uk/24-25/dpt/cx_sb_bime.htm",
+      "school_name": "Deanery of Biomedical Sciences",
+      "school_code": "su722",
+      "college": "College of Medicine and Veterinary Medicine"
+    },
+    {
+      "name": "Epidemiology (Biomedical Sciences)",
+      "url": "http://www.drps.ed.ac.uk/24-25/dpt/cx_sb_eibm.htm",
+      "school_name": "Deanery of Biomedical Sciences",
+      "school_code": "su722",
+      "college": "College of Medicine and Veterinary Medicine"
+    },
+    {
+      "name": "Emerging and Neglected Infectious Diseases",
+      "url": "http://www.drps.ed.ac.uk/24-25/dpt/cx_sb_emnd.htm",
+      "school_name": "Deanery of Biomedical Sciences",
+      "school_code": "su722",
+      "college": "College of Medicine and Veterinary Medicine"
+    },
+    {
+      "name": "Integrative Biomedical Sciences (Zhejiang)",
+      "url": "http://www.drps.ed.ac.uk/24-25/dpt/cx_sb_ibms.htm",
+      "school_name": "Deanery of Biomedical Sciences",
+      "school_code": "su722",
+      "college": "College of Medicine and Veterinary Medicine"
+    },
+    {
+      "name": "International Animal Health",
+      "url": "http://www.drps.ed.ac.uk/24-25/dpt/cx_sb_inah.htm",
+      "school_name": "Deanery of Biomedical Sciences",
+      "school_code": "su722",
+      "college": "College of Medicine and Veterinary Medicine"
+    },
+    {
+      "name": "Microbiology and Infection (Biomedical Sciences)",
+      "url": "http://www.drps.ed.ac.uk/24-25/dpt/cx_sb_mibm.htm",
+      "school_name": "Deanery of Biomedical Sciences",
+      "school_code": "su722",
+      "college": "College of Medicine and Veterinary Medicine"
+    },
+    {
+      "name": "Medical Sciences (Biomedical Sciences)",
+      "url": "http://www.drps.ed.ac.uk/24-25/dpt/cx_sb_msbm.htm",
+      "school_name": "Deanery of Biomedical Sciences",
+      "school_code": "su722",
+      "college": "College of Medicine and Veterinary Medicine"
+    },
+    {
+      "name": "Neuroscience (Biomedical Sciences)",
+      "url": "http://www.drps.ed.ac.uk/24-25/dpt/cx_sb_nebm.htm",
+      "school_name": "Deanery of Biomedical Sciences",
+      "school_code": "su722",
+      "college": "College of Medicine and Veterinary Medicine"
+    },
+    {
+      "name": "Pharmacology (Biomedical Sciences)",
+      "url": "http://www.drps.ed.ac.uk/24-25/dpt/cx_sb_phbm.htm",
+      "school_name": "Deanery of Biomedical Sciences",
+      "school_code": "su722",
+      "college": "College of Medicine and Veterinary Medicine"
+    },
+    {
+      "name": "Physiology (Biomedical Sciences)",
+      "url": "http://www.drps.ed.ac.uk/24-25/dpt/cx_sb_pybm.htm",
+      "school_name": "Deanery of Biomedical Sciences",
+      "school_code": "su722",
+      "college": "College of Medicine and Veterinary Medicine"
+    },
+    {
+      "name": "Reproductive Biology",
+      "url": "http://www.drps.ed.ac.uk/24-25/dpt/cx_sb_repb.htm",
+      "school_name": "Deanery of Biomedical Sciences",
+      "school_code": "su722",
+      "college": "College of Medicine and Veterinary Medicine"
+    }
+  ]
+}

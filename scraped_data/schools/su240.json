@@ -1,0 +1,30 @@
+{
+  "name": "School of Chemistry",
+  "url": "http://www.drps.ed.ac.uk/24-25/dpt/cx_s_su240.htm",
+  "college": "College of Science and Engineering",
+  "schedule": "Schedule L",
+  "code": "su240",
+  "subjects": [
+    {
+      "name": "Chemistry",
+      "url": "http://www.drps.ed.ac.uk/24-25/dpt/cx_sb_chem.htm",
+      "school_name": "School of Chemistry",
+      "school_code": "su240",
+      "college": "College of Science and Engineering"
+    },
+    {
+      "name": "Chemical Physics",
+      "url": "http://www.drps.ed.ac.uk/24-25/dpt/cx_sb_chph.htm",
+      "school_name": "School of Chemistry",
+      "school_code": "su240",
+      "college": "College of Science and Engineering"
+    },
+    {
+      "name": "Service Courses for Biology",
+      "url": "http://www.drps.ed.ac.uk/24-25/dpt/cx_sb_scbi.htm",
+      "school_name": "School of Chemistry",
+      "school_code": "su240",
+      "college": "College of Science and Engineering"
+    }
+  ]
+}

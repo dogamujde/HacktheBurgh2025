@@ -1,0 +1,54 @@
+{
+  "name": "College of Science and Engineering",
+  "schools": [
+    {
+      "name": "School of Biological Sciences",
+      "url": "http://www.drps.ed.ac.uk/24-25/dpt/cx_s_su541.htm",
+      "college": "College of Science and Engineering",
+      "schedule": "Schedule K",
+      "code": "su541"
+    },
+    {
+      "name": "School of Chemistry",
+      "url": "http://www.drps.ed.ac.uk/24-25/dpt/cx_s_su240.htm",
+      "college": "College of Science and Engineering",
+      "schedule": "Schedule L",
+      "code": "su240"
+    },
+    {
+      "name": "School of Engineering",
+      "url": "http://www.drps.ed.ac.uk/24-25/dpt/cx_s_su748.htm",
+      "college": "College of Science and Engineering",
+      "schedule": "Schedule M",
+      "code": "su748"
+    },
+    {
+      "name": "School of Geosciences",
+      "url": "http://www.drps.ed.ac.uk/24-25/dpt/cx_s_su849.htm",
+      "college": "College of Science and Engineering",
+      "schedule": "Schedule N",
+      "code": "su849"
+    },
+    {
+      "name": "School of Informatics",
+      "url": "http://www.drps.ed.ac.uk/24-25/dpt/cx_s_su747.htm",
+      "college": "College of Science and Engineering",
+      "schedule": "Schedule O",
+      "code": "su747"
+    },
+    {
+      "name": "School of Mathematics",
+      "url": "http://www.drps.ed.ac.uk/24-25/dpt/cx_s_su253.htm",
+      "college": "College of Science and Engineering",
+      "schedule": "Schedule P",
+      "code": "su253"
+    },
+    {
+      "name": "School of Physics and Astronomy",
+      "url": "http://www.drps.ed.ac.uk/24-25/dpt/cx_s_su744.htm",
+      "college": "College of Science and Engineering",
+      "schedule": "Schedule Q",
+      "code": "su744"
+    }
+  ]
+}

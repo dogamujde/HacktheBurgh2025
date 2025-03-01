@@ -1,0 +1,16 @@
+{
+  "name": "College of Medicine and Veterinary Medicine",
+  "url": "http://www.drps.ed.ac.uk/24-25/dpt/cx_s_su845.htm",
+  "college": "College of Medicine and Veterinary Medicine",
+  "schedule": "Schedule ",
+  "code": "su845",
+  "subjects": [
+    {
+      "name": "Transkills PGR (Medicine)",
+      "url": "http://www.drps.ed.ac.uk/24-25/dpt/cx_sb_tpgr.htm",
+      "school_name": "College of Medicine and Veterinary Medicine",
+      "school_code": "su845",
+      "college": "College of Medicine and Veterinary Medicine"
+    }
+  ]
+}

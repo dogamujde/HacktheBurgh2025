@@ -1,0 +1,44 @@
+{
+  "name": "School of Health in Social Science",
+  "url": "http://www.drps.ed.ac.uk/24-25/dpt/cx_s_su796.htm",
+  "college": "College of Arts, Humanities and Social Sciences",
+  "schedule": "Schedule D",
+  "code": "su796",
+  "subjects": [
+    {
+      "name": "Clinical Psychology",
+      "url": "http://www.drps.ed.ac.uk/24-25/dpt/cx_sb_clps.htm",
+      "school_name": "School of Health in Social Science",
+      "school_code": "su796",
+      "college": "College of Arts, Humanities and Social Sciences"
+    },
+    {
+      "name": "Counselling Studies",
+      "url": "http://www.drps.ed.ac.uk/24-25/dpt/cx_sb_cnst.htm",
+      "school_name": "School of Health in Social Science",
+      "school_code": "su796",
+      "college": "College of Arts, Humanities and Social Sciences"
+    },
+    {
+      "name": "Interdisciplinary Social Sciences in Health",
+      "url": "http://www.drps.ed.ac.uk/24-25/dpt/cx_sb_issh.htm",
+      "school_name": "School of Health in Social Science",
+      "school_code": "su796",
+      "college": "College of Arts, Humanities and Social Sciences"
+    },
+    {
+      "name": "Nursing Studies",
+      "url": "http://www.drps.ed.ac.uk/24-25/dpt/cx_sb_nust.htm",
+      "school_name": "School of Health in Social Science",
+      "school_code": "su796",
+      "college": "College of Arts, Humanities and Social Sciences"
+    },
+    {
+      "name": "School of Health in Social Science",
+      "url": "http://www.drps.ed.ac.uk/24-25/dpt/cx_sb_shss.htm",
+      "school_name": "School of Health in Social Science",
+      "school_code": "su796",
+      "college": "College of Arts, Humanities and Social Sciences"
+    }
+  ]
+}

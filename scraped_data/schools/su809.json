@@ -1,0 +1,86 @@
+{
+  "name": "School of Social and Political Science",
+  "url": "http://www.drps.ed.ac.uk/24-25/dpt/cx_s_su809.htm",
+  "college": "College of Arts, Humanities and Social Sciences",
+  "schedule": "Schedule J",
+  "code": "su809",
+  "subjects": [
+    {
+      "name": "African Studies",
+      "url": "http://www.drps.ed.ac.uk/24-25/dpt/cx_sb_afri.htm",
+      "school_name": "School of Social and Political Science",
+      "school_code": "su809",
+      "college": "College of Arts, Humanities and Social Sciences"
+    },
+    {
+      "name": "International Public Health Policy",
+      "url": "http://www.drps.ed.ac.uk/24-25/dpt/cx_sb_iphp.htm",
+      "school_name": "School of Social and Political Science",
+      "school_code": "su809",
+      "college": "College of Arts, Humanities and Social Sciences"
+    },
+    {
+      "name": "Postgrad (School of Social and Political Studies)",
+      "url": "http://www.drps.ed.ac.uk/24-25/dpt/cx_sb_pgsp.htm",
+      "school_name": "School of Social and Political Science",
+      "school_code": "su809",
+      "college": "College of Arts, Humanities and Social Sciences"
+    },
+    {
+      "name": "Politics",
+      "url": "http://www.drps.ed.ac.uk/24-25/dpt/cx_sb_plit.htm",
+      "school_name": "School of Social and Political Science",
+      "school_code": "su809",
+      "college": "College of Arts, Humanities and Social Sciences"
+    },
+    {
+      "name": "South Asian Studies",
+      "url": "http://www.drps.ed.ac.uk/24-25/dpt/cx_sb_sast.htm",
+      "school_name": "School of Social and Political Science",
+      "school_code": "su809",
+      "college": "College of Arts, Humanities and Social Sciences"
+    },
+    {
+      "name": "Social Anthropology",
+      "url": "http://www.drps.ed.ac.uk/24-25/dpt/cx_sb_scan.htm",
+      "school_name": "School of Social and Political Science",
+      "school_code": "su809",
+      "college": "College of Arts, Humanities and Social Sciences"
+    },
+    {
+      "name": "Sociology",
+      "url": "http://www.drps.ed.ac.uk/24-25/dpt/cx_sb_scil.htm",
+      "school_name": "School of Social and Political Science",
+      "school_code": "su809",
+      "college": "College of Arts, Humanities and Social Sciences"
+    },
+    {
+      "name": "Social Policy",
+      "url": "http://www.drps.ed.ac.uk/24-25/dpt/cx_sb_scpl.htm",
+      "school_name": "School of Social and Political Science",
+      "school_code": "su809",
+      "college": "College of Arts, Humanities and Social Sciences"
+    },
+    {
+      "name": "Social Work",
+      "url": "http://www.drps.ed.ac.uk/24-25/dpt/cx_sb_scwr.htm",
+      "school_name": "School of Social and Political Science",
+      "school_code": "su809",
+      "college": "College of Arts, Humanities and Social Sciences"
+    },
+    {
+      "name": "School (School of Social and Political Studies)",
+      "url": "http://www.drps.ed.ac.uk/24-25/dpt/cx_sb_ssps.htm",
+      "school_name": "School of Social and Political Science",
+      "school_code": "su809",
+      "college": "College of Arts, Humanities and Social Sciences"
+    },
+    {
+      "name": "Science, Technology and Innovation Studies",
+      "url": "http://www.drps.ed.ac.uk/24-25/dpt/cx_sb_stis.htm",
+      "school_name": "School of Social and Political Science",
+      "school_code": "su809",
+      "college": "College of Arts, Humanities and Social Sciences"
+    }
+  ]
+}

@@ -1,0 +1,556 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Course Catalogue - Audio Programming (MUSI10108)</title>
+<meta name="type" content="DPT"></meta>
+<meta name="modcode" content="MUSI10108"></meta>
+<meta name="modname" content="Audio Programming"></meta>
+<meta name="modkeywords" content="Audio,Programming,Music,coding,c++,sound,technology"></meta>
+<meta name="modschool" content=""></meta>
+<meta name="modsubj" content=""></meta>
+<meta name="modsubj" content=""></meta>
+<!-- use stylesheets from DRPS -->
+<link rel="stylesheet" type="text/css" href="http://www.ed.ac.uk/other/styles.css">
+<link rel="stylesheet" type="text/css" href="../css/dp.css">
+<link rel="stylesheet" type="text/css" href="../24-25/dpts/dpt.css">
+
+<!-- add SITS styles -->
+<style type="text/css">
+
+.rowhead1 { font-family: 'Trebuchet MS', 'Lucida Grande', Verdana, Arial, Helvetica, sans-serif; 
+font-size: 75%;  color: #555555; /* replaces 25476C */
+background-color: #EEEEFF; /* replaces EAEEF5 */
+font-weight: bold;
+}
+
+.data1nobg { font-family: 'Trebuchet MS', 'Lucida Grande', Verdana, Arial, Helvetica, sans-serif;  
+color: #333; /* replaces 666 */
+font-weight: normal }
+
+.sitstablegrid {
+	width:100%; /* overall default table width */
+	margin-bottom:20px; /* separator space below each table */
+}
+
+.sitstablegrid caption {	
+	font-family: 'Trebuchet MS', 'Lucida Grande', Verdana, Arial, Helvetica, sans-serif;
+	font-size:75%;	
+	color: #FFFFFF;
+	padding:6px;
+	font-weight: bold;
+	text-align: left;
+	background:#232B5A; /* replaces 25476c */
+}
+
+.sitstablegrid caption,
+.sitstablegrid th, 
+.sitstablegrid td {
+	font-family: 'Trebuchet MS', 'Lucida Grande', Verdana, Arial, Helvetica, sans-serif;
+	font-size:75%;
+	padding: 4px;
+	vertical-align:top;
+}
+
+.sitstablegrid th {
+	background-color:#232B5A; /* replaces 36a7e9 */
+	padding-right: 5px; /* required to keep right aligned TH row headings from edge of cell */
+	color:#FFFFFF;
+	border:1px solid #CCCCCC;
+	border-collapse:collapse;
+}
+
+.sitstablegrid {
+	background-color: #FFFFFF; /* background shade applied to all cells */
+	border: 1px solid #cccccc; /* table outline box */
+	border-collapse: collapse;
+}
+
+.sitstablegrid th, 
+.sitstablegrid td {
+	border: 1px solid #cccccc; /* draws grid lines for sitstablegrid style class */
+	}
+
+#sitspagetitle {
+} 
+  
+h1.sitspagetitle {
+	font-family: 'Trebuchet MS', 'Lucida Grande', Verdana, Arial, Helvetica, sans-serif;
+	font-size: 80%;
+	color: #232B5A; /* replaces 25476c */
+	font-weight: bold;
+	border-bottom:1px solid #232B5A; /* replaces 25476c */
+}
+
+</style>
+</head>
+
+<body>
+<!-- header from DRPS -->
+<table width="100%" border="0" cellspacing="0" cellpadding="0" style="background-color: #232B5A;">
+<tr>
+<td width="84" align="left" valign="top">
+<a href="http://www.ed.ac.uk" class="headertext"><img src="http://www.drps.ed.ac.uk/images/logo.jpg" alt="The University of Edinburgh" name="logo" width="84" height="84" border="0" id="logo"></a>
+</td>
+
+<td align="left" width="100%">
+<h3 class="page_title">THE UNIVERSITY of EDINBURGH</h3>
+<h1 class="page_title">DEGREE REGULATIONS & PROGRAMMES OF STUDY 2024/2025</h1>
+<!-- <h3 style ="color:red" class="page_title">Draft Edition - Due to be published Thursday 11th April 2024</h3> -->
+<h3 style ="color:red" class="page_title">Timetable information in the Course Catalogue may be subject to change.</h3>
+</td>
+
+<td align="left">
+
+<table border="0" cellpadding="0" cellspacing="0" style="margin-right:20px;"><tr>
+<td style="white-space:nowrap">
+<a href="http://www.ed.ac.uk" class="headertext"><img src="../images/arrow.gif" width="16" height="11" border="0" alt=""></a><a href="http://www.ed.ac.uk" class="headertext">University&nbsp;Homepage</a>
+<br />
+<a href="../index.php" class="headertext"><img src="../images/arrow.gif" width="16" height="11" border="0" alt=""></a><a href="../index.php" class="headertext">DRPS Homepage</a>
+<br />
+<a href="cx_search.htm" class="headertext"><img src="../images/arrow.gif" width="16" height="11" border="0" alt=""></a><a href="cx_search.htm" class="headertext">DRPS Search</a>
+<br />
+<a href="../contact.php" class="headertext"><img src="../images/arrow.gif" width="16" height="11" border="0" alt=""></a><a href="../contact.php" class="headertext">DRPS Contact</a>
+</td></tr>
+</table>
+
+</td></tr>
+</table>
+
+<div class="college"><a href="../index.php">DRPS</a>&nbsp;:&nbsp;Course Catalogue&nbsp;:&nbsp;<a href="cx_s_su791.htm">Edinburgh College of Art</a>&nbsp;:&nbsp;<a href="cx_sb_musi.htm">Music</a></div>
+
+<table width="100%" border="0" cellpadding="6" cellspacing="0" class="content">
+<tr valign="top"><td>
+<!-- IMPORTANT Any changes to this SRL should be tested as follows:
+- via 'View Course' and 'Amend Course' in Curriculum Management -> CCAM containter, 
+- on linking from within OCSS/OCE 
+- the course catalogue (post March '10.
+If any additional SITS classes are used  (eg sitstablenogrid) then these must be added
+to SLPs CX_CRSHDR1 and CX_CRSHDR2 for the course catalogue. The course catalogue SRL cannot include sits.css as this overwrites
+University website styles -->
+
+<!-- temp variables passed in to determine various display options as follows -->
+<!-- GSL_TMP1: blank or not CCAM: limited details displayed (link from OCSS, course catalogue); "CCAM" = all details; CCAMSUM = called from CCAM input/Amend course task (CCAM1_A4) so don't need instance data, no pre-requisites etc (because editable on on task screen ) -->
+<!-- GSL_TMP2: Academic Year: if not null then a MAV(s) in single year is/are displayed for delivery; if null then SRL uses SLP CURRENT_AYR_CODE to display all MAV from current year forwards -->
+<!-- GSL_TMP3: Display Portal links: Y or null - display links; N - don't display links (could link to external web server) -->
+<!-- GSL_TMP4:passed in and passed through to CLASSES_TAB SRL. If set to Y then First class and additional info displayed-->
+<!-- GSL_TMP5.GSL=DRPS if this is called via DRPS publish, else null-->
+<!-- GSL_TMP6.GSL=visiting students from slp sma_vs_r which calls task sma_vs_r -->
+<!-- GSL_TMP6 and in syp: siw_mod_001 -->
+
+<!--
+START IN MOD.COURSE_DETS </br>
+gsl_tmp6: </br>
+gsl_tmp1:NULL </br>
+
+-->
+
+
+
+<style type="text/css">
+<!--
+#sitspagetabs-vert { 
+display: none;
+}
+-->
+</style>
+<!-- Course name, code, credits, subject area, brief description -->
+<br />
+<h1 id="sitspagetitle" class="sitspagetitle" style="font-size:150%;">Undergraduate Course: Audio Programming (MUSI10108)</h1>
+<table class="sitstablegrid">
+
+<!--FB 2/1/11 is course marked as closed? -->
+
+
+<caption>Course Outline</caption>
+<tr>
+<td class="rowhead1" width="15%">School</td><td width="35%">Edinburgh College of Art</td>
+<td class="rowhead1" width="15%">College</td><td width="35%">College of Arts, Humanities and Social Sciences</td>
+</tr>
+<tr>
+<td class="rowhead1" width="15%">Credit level (Normal year taken)</td><td width="35%">SCQF Level 10 (Year 3 Undergraduate)</td>
+
+<td class="rowhead1" width="15%">Availability</td><td width="35%">Available to all students</td>
+</tr>
+<tr>
+<td class="rowhead1" width="15%">SCQF Credits</td><td width="35%">20</td>
+<td class="rowhead1" width="15%">ECTS Credits</td><td width="35%">10</td>
+</tr>
+<tr>
+
+</tr>
+<tr>
+<td class="rowhead1" width ="15%">Summary</td><td width="85%" colspan="99">This course provides an introduction to programming creative audio applications. The focus is on developing competencies in professional level tools and practices. You will learn to code in C++ within the JUCE environment, a helpful framework for producing standalone audio applications for different devices and operating systems, and for producing VST plugins, audio units and related technologies.</td>
+</tr>
+<tr>
+<td class="rowhead1" width ="15%">Course description</td><td width="85%" colspan="99">
+    
+    In this course you will explore professional-level audio software development as a creative process. A founding premise for the course is that creating musical software is a creative musical act. There is a strong technical core to the course as you will be learning to program in C++. This necessitates a focus on some of the fundamental aspects of computer programming. You will then use the JUCE environment, an open source framework for creating audio applications in C++, to bring your creative ideas into practice.<br />
+<br />
+The course begins with the basics of coding in C++: creating variables, using arrays, and compiling code. You will progress to making simple sounds in the JUCE framework, looking at the DSP loop for generating sounds sample-by-sample. You will then move on to using the Maximilian library to bring standard audio building blocks such as oscillators, filters, envelopes and sample players, into play. This will allow you to build up more intricate sonic applications. Finally, you will design and build basic interface elements, creating sliders, dials and other controls to provide an interface to your application.<br />
+<br />
+Despite the clear and deliberate technical emphasis throughout the course, a central aim is to demystify the act of programming, and to bring sound practitioners behind the curtain, so to speak, showing what is behind the technologies that enable real-time music creation. C++ and JUCE are industry standards, and provide an important technical skill set for artists, composers and acousticians to explore.<br />
+<br />
+Class sessions take the form of weekly 2 hour lectures and weekly 1 hour small group tutorials.
+    
+    
+</td>
+</tr>
+</table>
+
+<!-- Entry requirements (including additional costs ) -->
+<!-- don't show pre-reqs, co-reqs and prohibited combinations if called from CCAM1_A4 amend task -->
+<!-- Show Pre-requisites etc for CCAM VIEW/OCE/Course catalogue but not CCAM Amend  -->
+
+<table class="sitstablegrid">
+<caption>Entry Requirements (not applicable to Visiting Students)</caption>
+<tr>
+<td class="rowhead1" width="15%">Pre-requisites</td>
+
+<td width="35%"></td>
+<td class="rowhead1" width="15%">Co-requisites</td><td width="35%"></td>
+</tr>
+<tr>
+<td class="rowhead1" width="15%">Prohibited Combinations</td><td width="35%"></td>
+
+
+<td class="rowhead1" width="15%">Other requirements</td><td width="35%"> None</td>
+</tr>
+
+<!-- show add costs for portal View Course, course catalogue and from OCE, but only if there are some -->
+
+
+</table>
+
+<!-- visting students information -FB 20110426 added High Demand Course-->
+
+<table class="sitstablegrid">
+<caption>Information for Visiting Students</caption> 
+<tr>
+<td class="rowhead1" width="15%">Pre-requisites</td><td width="85%" colspan="4">None</td>
+</tr>
+<tr>
+		<td class="rowhead1" width="15%">High Demand Course?</td>
+		<td class="data1nobg" width="85%" colspan="4">Yes</td>
+    </tr>
+</table>
+
+
+<!-- Delivery information -FB 14/1/11 added GSL_TMP5.GSL=DRPS-->
+<!-- Class times -->
+
+
+
+
+
+<table class="sitstablegrid">
+<caption>Course Delivery Information</caption>
+
+
+
+
+
+
+
+
+
+
+<!-- GSL_TMP1 = indicates whether a list of different courses' classes will be displayed. Values: Y - display course code
+at top of table, suppress additional and first class information. If blank then assume single course, so 
+don't display course code, but do display additional class and first class information.  This is so table can be used in individual MOD/MAV report or when listing a number of MODs (eg listing teaching activities for a list of SMAs)  -->
+
+<!-- GSL_TMP2 - display links to other SRLs (links won't work this from published (IPP)) N: don't, otherwise do-->
+<!-- GSL_TMP4 - Set to Y if first class and additional information to be displayed -->
+<!-- GSL_TMP5- Set to DRPS if SRL called via DRPS publish path- SRL not used for timetable and VS (uses CLASSES_TAB2)-->
+
+<!-- calling SRL must specify table, table caption (if required) eg:
+<table class="sitstablegrid">
+<caption>Course Delivery </caption> 
+---- call to this SRL ----
+</table> -->
+
+
+
+<tr><td colspan="99" style="height:5px;"></td></tr>
+<!--
+<tr><td colspan="99" style="height:5px;"> 
+ IN MAV_CLASSES_TAB </br>
+GSLTMP1:N</br>
+GSLTMP2:N </br>
+GSLTMP3: </br>
+GSLTMP4:Y </br>
+GSLTMP5:DRPS </br>
+GSLTMP6: </br>
+</td></tr>
+-->
+
+<tr>
+<td class="rowhead1" colspan="2" style="width:50%;">Academic year 2024/25, Available to all students (SV1) 
+  <!-- Quota moved from mod.course_dets cms call 882028 -->
+</td>
+<td class="rowhead1" colspan="99">Quota:&nbsp;&nbsp;20</td>
+</tr>
+
+<!-- Course start (delivery period) -->
+<tr><td class="rowhead1" width ="5%">Course Start</td>
+<td colspan="14">Semester 2</td>
+</tr>
+
+<!-- Course start date (for invoiced courses) -->
+
+
+<!-- VISITING STUDENTS : gsl_tmp6 is set up in mod.course_dets for visiting students only. setup from slp: sma_vs_r then calls mod.course_dets. Test in url_link for this gsl_tmp6  -->
+
+<!-- ayr code: 24 fixed 22 -->
+<td class="rowhead1" width="15%" target="_blank">Timetable </td>
+	<td class="data1nobg" colspan ="99">
+<a href="https://browser.ted.is.ed.ac.uk/generate/?courses%5B%5D=MUSI10108_SV1_SEM2
+&period=SEM2&week=26-37" target="_blank">Timetable</a></td>
+
+
+
+
+
+
+
+
+
+<tr>
+<td class="rowhead1" style="width:15%;">Learning and Teaching activities <a href="http://www.studentsystems.is.ed.ac.uk/staff/Support/User_Guides/CCAM//Teaching_Learning.htm" target="_blank">(Further Info)</a></td>
+
+<td colspan="14"> 
+ Total Hours:
+200
+
+(
+ Lecture Hours 22,
+ Seminar/Tutorial Hours 11,
+
+
+
+
+
+
+
+ Summative Assessment Hours 1,
+
+
+ Programme Level Learning and Teaching Hours 4,
+
+Directed Learning and Independent Learning Hours
+162 )
+
+</td>
+</tr>
+
+<!-- Display Futher L&T Notes -->
+
+
+<!-- Display Assessment details -->
+<tr>
+<td class="rowhead1" style="width:15%;">Assessment <a href="http://www.studentsystems.is.ed.ac.uk/staff/Support/User_Guides/CCAM//Assessment_Methods.htm" target="_blank">(Further Info)</a></td>
+
+<td colspan="14"> 
+  Written Exam
+0 %,
+Coursework
+100 %,
+Practical Exam
+0 %
+</td>
+</tr>
+
+<tr>
+<tr>
+<td class="rowhead1" stlye="width:15%;">Additional Information (Assessment)</td>
+<td colspan="14">Assessment will consist of 3 assignments. Assignment 1 is formative, assignments 2 &amp; 3 are summative.<br />
+<br />
+Assignment 1 (formative, 0% of course mark): Audio programming challenge 1<br />
+A short audio programming challenge, to be submitted early in the semester. The submission will consist of C++ code along with inline comments explaining the functionality of your code.<br />
+<br />
+Assignment 2 (summative, 35% of course mark): Audio programming challenge 2<br />
+A short audio programming challenge, to be submitted towards the start of the second half of the semester. The submission will consist of C++ code along with inline comments explaining the functionality of your code.<br />
+<br />
+Assignment 3 (summative, 65% of course mark): <br />
+Audio Application<br />
+Design and build a creative standalone audio application.<br />
+This will comprise an audio software submission, supported by an audio recording of the software being used, and a 1000 word report on the project aims and approach. This will be submitted at the end of the semester.</td>
+</tr>
+
+
+<tr>
+<td class="rowhead1" stlye="width:15%;">Feedback</td>
+<td colspan="14">Regular unassessed programming challenges will be assigned for which verbal feedback will be given to the class cohort. This will go over the key issues and difficult elements from the challenges.<br />
+<br />
+Example solutions for the more substantial formative assessment 1 will be provided for reference. <br />
+<br />
+You will receive written feedback on all summative assignments.<br />
+</td>
+</tr>
+
+<!--FB 11Oct10: Exam info displayed if it exists, 14/1/11:do not display stationery and comments for GSL_TMP5=DRPS-->
+
+
+
+<tr>
+<td class="rowhead1" colspan="99">No Exam Information</td>
+</tr>
+
+
+<!--31/1/11 FB-Teaching load display if exists-->
+
+
+
+<!--Get MABs based on MAP code on MAV
+output heading for Standard student
+SEL on sequence 001-099: <td class="data1nobg"><<DATA FIELD>></td> 
+SEL on sequence 001-099: <td class="data1nobg"><<DATA FIELD>></td> 
+SEL on sequence 001-099: <td class="data1nobg"><<DATA FIELD>></td> 
+
+output VS student heading
+select on sequence >= 101:  select on sequence >= 101:  select on sequence >= 101:  -->
+
+
+<!-- Learning outcomes, FB 1/4/11 add other learning outcomes for ECA -->
+<table class="sitstablegrid">
+<caption>Learning Outcomes</caption> 
+<tr>
+<td>
+    On completion of this course, the student will be able to:
+    <ol style="font-family:inherit;font-size:inherit;">
+        <li>Write well formulated C++ code according to industry standard practice</li><li>Construct a range of digital signal processing algorithms in C++/JUCE, appropriate to the task of real-time audio processing</li><li>Design and implement an audio application using C++/JUCE that explores a specific objective</li><li>Identify, assess, and resolve problems throughout the design and implementation phases of audio application development</li>
+    </ol>
+</td>
+</tr>
+</table>
+
+<table class="sitstablegrid">
+<caption>Learning Resources</caption> 
+<tr><td>BOOKS<br />
+- Horton, I. (2020). Beginning C++, From Beginner to Pro, Springer.<br />
+- Boulanger, R. and Lazzarini, V. (2011) The Audio Programming Book, MIT Press<br />
+- Pirkle, W. (2013), Designing Audio Effect Plug-Ins in C++. Focal Press.<br />
+<br />
+LEARNING RESOURCES<br />
+General online C++ learning resources: <br />
+- http://www.learn-c.org/<br />
+- http://www.cplusplus.com<br />
+<br />
+More specialised C++ Audio DSP learning resources<br />
+- The JUCE Audio Programmer tutorial series: https://www.youtube.com/playlist?list=PLLgJJsrdwhPxa6-02-CeHW8ocwSwl2jnu<br />
+- JUCE tutorials: https://juce.com/learn/tutorials</td></tr> 
+</table>
+
+<!-- CG 14/10/09 changed to show additional costs here only for CCAM amend function -->
+
+
+<table class="sitstablegrid">
+<caption>Additional Information</caption>
+
+<tr>
+<td class="rowhead1" width="15%">Graduate Attributes and Skills</td>
+<td width="85%">The University has identified several groups of abilities that should be developed as part of the University of Edinburgh training experience, and to enhance your employability as a graduate. These abilities take your skill-base beyond academic knowledge. They relate to this course in a number of specific ways, as outlined below.<br />
+<br />
+Enquiry and lifelong learning<br />
+All components of the course provide this to some degree but your lectures, in particular, provide an important framework upon which you can build these attributes. This University considers itself to be a research-led institution and you will be exposed to cutting edge information. In this course, you will be shown how to develop your own programming skills, and more importantly, the ability to develop your skills by yourself during the course and beyond the course, so that you can continue to explore and develop creative avenues through coding practices.<br />
+<br />
+Aspiration and personal development<br />
+The course should provide you with the tools to begin to explore your own creative projects through programming. Although we can only go so far with this course, the course can be a window into a new world, that you can explore. The foundations of professional level programming can open up the possibility of a wide range of avenues and lead to many more ambitious projects.<br />
+<br />
+Research and enquiry<br />
+The practical skills you learn on this course are enhanced by encouraging further reading of books, online resources, research papers, and tutorials. The practical project will allow you to research and explore your chosen topic for yourself, and to find your way among the many resources available on the topic.<br />
+<br />
+Personal and intellectual autonomy<br />
+By reading and engaging with materials for the various submissions, you will learn to develop your own coding skills, and the ability to solve your own problems, and to seek help when necessary from a variety of sources.<br />
+<br />
+Personal effectiveness<br />
+The ability to organise and summarise your thoughts and material in a flexible and accessible way is a core feature required for personal effectiveness. Planning, time management and reflection are central to this. By providing you with a timetable where key submission dates are highlighted, we encourage you to develop your effectiveness throughout this course. These same skills extend to other courses and also to your overall ability to maximise your achievement while studying at this University.<br />
+<br />
+Communication<br />
+It is important that you develop skills to interact constructively with others and convey knowledgeable and balanced views. In the practical classes you will be encouraged to share ideas and insights with other students, to seek help and provide help where necessary. You will also be encouraged to engage with online forums: asking for help in a clear, legible and friendly manner, and posting help yourself if possible.</td>
+</tr>
+
+
+
+<tr>
+<td class="rowhead1" width="15%">Keywords</td><td width="85%">Audio,Programming,Music,coding,c++,sound,technology</td>
+</tr>
+</table>
+
+<!-- Contact information -->
+<table class="sitstablegrid">
+<caption>Contacts</caption> 
+<tr>
+<td class="rowhead1"  width="15%">Course organiser</td><td width="35%">Dr Tom Mudd<br>
+<b>Tel:</b> (0131 6)50 2808<br>
+<b>Email:</b> tmudd@exseed.ed.ac.uk</td>
+<td class="rowhead1" width="15%">Course secretary</td><td width="35%">Miss Laura Duff<br>
+<b>Tel:</b> <br>
+<b>Email:</b> lduff4@ed.ac.uk</td>
+</tr>  
+</table>
+
+<!-- if called from CCAM then show extra course details -->
+
+
+</td>
+<td><table width="100%" border="0" cellspacing="0" cellpadding="0">
+<tr><td bgcolor="#999999">
+
+<table width="100%" border="0" cellspacing="1" cellpadding="3">
+<tr><td bgcolor="#FFFFFF" class="subboxtitle">Navigation</td></tr>
+<tr><td bgcolor="#FFFFFF" class="subboxsection" style="white-space:nowrap">Help &amp; Information</td></tr>
+<tr><td bgcolor="#FFFFFF"><a class="subboxitem" href="../index.php">Home</a></td></tr>
+<tr><td bgcolor="#FFFFFF"><a class="subboxitem" href="../regulations/main_intro.php">Introduction</a></td></tr>
+<tr><td bgcolor="#FFFFFF"><a class="subboxitem" href="../whole_glossary.php">Glossary</a></td></tr>
+<tr><td bgcolor="#FFFFFF"><a class="subboxitem" href="cx_search.htm">Search DPTs and Courses</a></td></tr>
+<tr><td bgcolor="#FFFFFF" class="subboxsection" style="white-space:nowrap">Regulations</td></tr>
+<tr><td bgcolor="#FFFFFF"><a class="subboxitem" href="../regulations/index.php">Regulations</a></td></tr>
+<tr><td bgcolor="#FFFFFF" class="subboxsection"  style="white-space:nowrap">Degree Programmes</td></tr>
+<tr><td bgcolor="#FFFFFF"><a class="subboxitem" href="../regulations/dpt_intro.php">Introduction</a></td></tr>
+<tr><td bgcolor="#FFFFFF"><a class="subboxitem" href="drpsindex.htm">Browse&nbsp;DPTs</a></td></tr>
+<tr><td bgcolor="#FFFFFF" class="subboxsection">Courses</td></tr>
+<tr><td bgcolor="#FFFFFF"><a class="subboxitem" href="../regulations/course_intro.php">Introduction</a></td></tr>
+<tr><td bgcolor="#FFFFFF"><a class="subboxitem" href="cx_colhss.htm" style="white-space:nowrap">Humanities and Social Science</a></td></tr>
+<tr><td bgcolor="#FFFFFF"><a class="subboxitem" href="cx_colsce.htm" style="white-space:nowrap">Science and Engineering</a></td></tr>
+<tr><td bgcolor="#FFFFFF"><a class="subboxitem" href="cx_colmvm.htm" style="white-space:nowrap">Medicine and Veterinary Medicine</a></td></tr>
+<tr><td bgcolor="#FFFFFF" class="subboxsection" style="white-space:nowrap">Other Information</td></tr>
+<tr><td bgcolor="#FFFFFF"><a class="subboxitem" href="https://browser.ted.is.ed.ac.uk" target="_blank">Combined Course Timetable </a></td></tr>
+<tr><td bgcolor="#FFFFFF"><a class="subboxitem" href="http://www.ed.ac.uk/studying/" title="Prospectuses">Prospectuses</a></td></tr>
+<tr><td bgcolor="#FFFFFF"><a class="subboxitem" href="../regulations/important.php">Important&nbsp;Information</a></td></tr>
+<tr><td bgcolor="#FFFFFF" class="subboxtitle" style="height:5px;font-size:1px;">&nbsp;</td></tr>
+</table>
+
+</td></tr>
+</table></td>   
+</tr>
+</table>
+
+<div class="footer">
+  <div style="float:right">
+    <a href="http://www.ed.ac.uk/about/website/privacy">Privacy &amp; cookies</a>
+  </div>
+  <em>&copy; Copyright 2024 The University of Edinburgh -  15 January 2025 9:28 pm</em>
+</div>
+<script async src="https://www.googletagmanager.com/gtag/js?id=trackingCode">
+  var trackingCode = window.location.hostname.substr(0, 4) === 'www.' ? 'G-9VG3160DSR' : 'G-J3QFR7R34Z';
+  </script>
+  
+  <script>
+  var key = window.location.hostname.substr(0, 4) === 'www.' ? 'G-9VG3160DSR' : 'G-J3QFR7R34Z';
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+  
+    gtag('config', key);
+  </script>
+  
+  <script>
+  var key = window.location.hostname.substr(0, 4) === 'www.' ? 'GTM-M38Z4T4' : 'GTM-KC9RP53';
+  (function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+  new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+  j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+  'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+  })(window,document,'script','dataLayer',key);</script>
+</body>
+</html>

@@ -1,0 +1,23 @@
+{
+  "name": "Edinburgh Medical School",
+  "url": "http://www.drps.ed.ac.uk/24-25/dpt/cx_s_su640.htm",
+  "college": "College of Medicine and Veterinary Medicine",
+  "schedule": "Schedule R",
+  "code": "su640",
+  "subjects": [
+    {
+      "name": "MBChB",
+      "url": "http://www.drps.ed.ac.uk/24-25/dpt/cx_sb_mbch.htm",
+      "school_name": "Edinburgh Medical School",
+      "school_code": "su640",
+      "college": "College of Medicine and Veterinary Medicine"
+    },
+    {
+      "name": "Medical Education",
+      "url": "http://www.drps.ed.ac.uk/24-25/dpt/cx_sb_meed.htm",
+      "school_name": "Edinburgh Medical School",
+      "school_code": "su640",
+      "college": "College of Medicine and Veterinary Medicine"
+    }
+  ]
+}

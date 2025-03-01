@@ -1,0 +1,198 @@
+{
+  "name": "Deanery of Clinical Sciences",
+  "url": "http://www.drps.ed.ac.uk/24-25/dpt/cx_s_su723.htm",
+  "college": "College of Medicine and Veterinary Medicine",
+  "schedule": "Schedule U",
+  "code": "su723",
+  "subjects": [
+    {
+      "name": "Cardiovascular Biology",
+      "url": "http://www.drps.ed.ac.uk/24-25/dpt/cx_sb_cbio.htm",
+      "school_name": "Deanery of Clinical Sciences",
+      "school_code": "su723",
+      "college": "College of Medicine and Veterinary Medicine"
+    },
+    {
+      "name": "Clinical Ophthalmology",
+      "url": "http://www.drps.ed.ac.uk/24-25/dpt/cx_sb_coph.htm",
+      "school_name": "Deanery of Clinical Sciences",
+      "school_code": "su723",
+      "college": "College of Medicine and Veterinary Medicine"
+    },
+    {
+      "name": "Critical Care",
+      "url": "http://www.drps.ed.ac.uk/24-25/dpt/cx_sb_crca.htm",
+      "school_name": "Deanery of Clinical Sciences",
+      "school_code": "su723",
+      "college": "College of Medicine and Veterinary Medicine"
+    },
+    {
+      "name": "Dentistry",
+      "url": "http://www.drps.ed.ac.uk/24-25/dpt/cx_sb_dent.htm",
+      "school_name": "Deanery of Clinical Sciences",
+      "school_code": "su723",
+      "college": "College of Medicine and Veterinary Medicine"
+    },
+    {
+      "name": "Endodontics",
+      "url": "http://www.drps.ed.ac.uk/24-25/dpt/cx_sb_endo.htm",
+      "school_name": "Deanery of Clinical Sciences",
+      "school_code": "su723",
+      "college": "College of Medicine and Veterinary Medicine"
+    },
+    {
+      "name": "General Surgery",
+      "url": "http://www.drps.ed.ac.uk/24-25/dpt/cx_sb_gens.htm",
+      "school_name": "Deanery of Clinical Sciences",
+      "school_code": "su723",
+      "college": "College of Medicine and Veterinary Medicine"
+    },
+    {
+      "name": "General Courses (Medicine)",
+      "url": "http://www.drps.ed.ac.uk/24-25/dpt/cx_sb_gmed.htm",
+      "school_name": "Deanery of Clinical Sciences",
+      "school_code": "su723",
+      "college": "College of Medicine and Veterinary Medicine"
+    },
+    {
+      "name": "Internal Medicine",
+      "url": "http://www.drps.ed.ac.uk/24-25/dpt/cx_sb_imed.htm",
+      "school_name": "Deanery of Clinical Sciences",
+      "school_code": "su723",
+      "college": "College of Medicine and Veterinary Medicine"
+    },
+    {
+      "name": "Integrated Medical Sciences Engagement",
+      "url": "http://www.drps.ed.ac.uk/24-25/dpt/cx_sb_imse.htm",
+      "school_name": "Deanery of Clinical Sciences",
+      "school_code": "su723",
+      "college": "College of Medicine and Veterinary Medicine"
+    },
+    {
+      "name": "Life Sciences",
+      "url": "http://www.drps.ed.ac.uk/24-25/dpt/cx_sb_lisc.htm",
+      "school_name": "Deanery of Clinical Sciences",
+      "school_code": "su723",
+      "college": "College of Medicine and Veterinary Medicine"
+    },
+    {
+      "name": "Restorative Dentistry",
+      "url": "http://www.drps.ed.ac.uk/24-25/dpt/cx_sb_mres.htm",
+      "school_name": "Deanery of Clinical Sciences",
+      "school_code": "su723",
+      "college": "College of Medicine and Veterinary Medicine"
+    },
+    {
+      "name": "Neuroscience (Medicine)",
+      "url": "http://www.drps.ed.ac.uk/24-25/dpt/cx_sb_neme.htm",
+      "school_name": "Deanery of Clinical Sciences",
+      "school_code": "su723",
+      "college": "College of Medicine and Veterinary Medicine"
+    },
+    {
+      "name": "Orthodontics",
+      "url": "http://www.drps.ed.ac.uk/24-25/dpt/cx_sb_orth.htm",
+      "school_name": "Deanery of Clinical Sciences",
+      "school_code": "su723",
+      "college": "College of Medicine and Veterinary Medicine"
+    },
+    {
+      "name": "Pain Management",
+      "url": "http://www.drps.ed.ac.uk/24-25/dpt/cx_sb_pama.htm",
+      "school_name": "Deanery of Clinical Sciences",
+      "school_code": "su723",
+      "college": "College of Medicine and Veterinary Medicine"
+    },
+    {
+      "name": "Primary Care Ophthalmology",
+      "url": "http://www.drps.ed.ac.uk/24-25/dpt/cx_sb_pcop.htm",
+      "school_name": "Deanery of Clinical Sciences",
+      "school_code": "su723",
+      "college": "College of Medicine and Veterinary Medicine"
+    },
+    {
+      "name": "Paediatric Dentistry",
+      "url": "http://www.drps.ed.ac.uk/24-25/dpt/cx_sb_pden.htm",
+      "school_name": "Deanery of Clinical Sciences",
+      "school_code": "su723",
+      "college": "College of Medicine and Veterinary Medicine"
+    },
+    {
+      "name": "Paediatric Emergency Medicine",
+      "url": "http://www.drps.ed.ac.uk/24-25/dpt/cx_sb_pecm.htm",
+      "school_name": "Deanery of Clinical Sciences",
+      "school_code": "su723",
+      "college": "College of Medicine and Veterinary Medicine"
+    },
+    {
+      "name": "Prosthodontics",
+      "url": "http://www.drps.ed.ac.uk/24-25/dpt/cx_sb_pros.htm",
+      "school_name": "Deanery of Clinical Sciences",
+      "school_code": "su723",
+      "college": "College of Medicine and Veterinary Medicine"
+    },
+    {
+      "name": "Patient Safety and Human Factors",
+      "url": "http://www.drps.ed.ac.uk/24-25/dpt/cx_sb_pshf.htm",
+      "school_name": "Deanery of Clinical Sciences",
+      "school_code": "su723",
+      "college": "College of Medicine and Veterinary Medicine"
+    },
+    {
+      "name": "Regenerative Medicine and Tissue Repair",
+      "url": "http://www.drps.ed.ac.uk/24-25/dpt/cx_sb_regm.htm",
+      "school_name": "Deanery of Clinical Sciences",
+      "school_code": "su723",
+      "college": "College of Medicine and Veterinary Medicine"
+    },
+    {
+      "name": "Reproductive Sciences",
+      "url": "http://www.drps.ed.ac.uk/24-25/dpt/cx_sb_repr.htm",
+      "school_name": "Deanery of Clinical Sciences",
+      "school_code": "su723",
+      "college": "College of Medicine and Veterinary Medicine"
+    },
+    {
+      "name": "Stem Cells and Translational Neurology",
+      "url": "http://www.drps.ed.ac.uk/24-25/dpt/cx_sb_stem.htm",
+      "school_name": "Deanery of Clinical Sciences",
+      "school_code": "su723",
+      "college": "College of Medicine and Veterinary Medicine"
+    },
+    {
+      "name": "Surgical Sciences",
+      "url": "http://www.drps.ed.ac.uk/24-25/dpt/cx_sb_surg.htm",
+      "school_name": "Deanery of Clinical Sciences",
+      "school_code": "su723",
+      "college": "College of Medicine and Veterinary Medicine"
+    },
+    {
+      "name": "Trauma and Orthopaedics",
+      "url": "http://www.drps.ed.ac.uk/24-25/dpt/cx_sb_tror.htm",
+      "school_name": "Deanery of Clinical Sciences",
+      "school_code": "su723",
+      "college": "College of Medicine and Veterinary Medicine"
+    },
+    {
+      "name": "Urology",
+      "url": "http://www.drps.ed.ac.uk/24-25/dpt/cx_sb_uchm.htm",
+      "school_name": "Deanery of Clinical Sciences",
+      "school_code": "su723",
+      "college": "College of Medicine and Veterinary Medicine"
+    },
+    {
+      "name": "Vascular and Endovascular Surgery",
+      "url": "http://www.drps.ed.ac.uk/24-25/dpt/cx_sb_vchm.htm",
+      "school_name": "Deanery of Clinical Sciences",
+      "school_code": "su723",
+      "college": "College of Medicine and Veterinary Medicine"
+    },
+    {
+      "name": "Surgical Writing and Evidence Based Practice",
+      "url": "http://www.drps.ed.ac.uk/24-25/dpt/cx_sb_webp.htm",
+      "school_name": "Deanery of Clinical Sciences",
+      "school_code": "su723",
+      "college": "College of Medicine and Veterinary Medicine"
+    }
+  ]
+}

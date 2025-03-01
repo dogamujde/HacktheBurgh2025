@@ -1,0 +1,93 @@
+{
+  "name": "School of History, Classics and Archaeology",
+  "url": "http://www.drps.ed.ac.uk/24-25/dpt/cx_s_su792.htm",
+  "college": "College of Arts, Humanities and Social Sciences",
+  "schedule": "Schedule E",
+  "code": "su792",
+  "subjects": [
+    {
+      "name": "Ancient History",
+      "url": "http://www.drps.ed.ac.uk/24-25/dpt/cx_sb_anhi.htm",
+      "school_name": "School of History, Classics and Archaeology",
+      "school_code": "su792",
+      "college": "College of Arts, Humanities and Social Sciences"
+    },
+    {
+      "name": "Archaeology",
+      "url": "http://www.drps.ed.ac.uk/24-25/dpt/cx_sb_arca.htm",
+      "school_name": "School of History, Classics and Archaeology",
+      "school_code": "su792",
+      "college": "College of Arts, Humanities and Social Sciences"
+    },
+    {
+      "name": "Classical Art/Classical Archaeology",
+      "url": "http://www.drps.ed.ac.uk/24-25/dpt/cx_sb_caca.htm",
+      "school_name": "School of History, Classics and Archaeology",
+      "school_code": "su792",
+      "college": "College of Arts, Humanities and Social Sciences"
+    },
+    {
+      "name": "Common Course (History, Classics and Archaeology)",
+      "url": "http://www.drps.ed.ac.uk/24-25/dpt/cx_sb_chca.htm",
+      "school_name": "School of History, Classics and Archaeology",
+      "school_code": "su792",
+      "college": "College of Arts, Humanities and Social Sciences"
+    },
+    {
+      "name": "Classics General",
+      "url": "http://www.drps.ed.ac.uk/24-25/dpt/cx_sb_clge.htm",
+      "school_name": "School of History, Classics and Archaeology",
+      "school_code": "su792",
+      "college": "College of Arts, Humanities and Social Sciences"
+    },
+    {
+      "name": "Classical Literature in Translation",
+      "url": "http://www.drps.ed.ac.uk/24-25/dpt/cx_sb_cltr.htm",
+      "school_name": "School of History, Classics and Archaeology",
+      "school_code": "su792",
+      "college": "College of Arts, Humanities and Social Sciences"
+    },
+    {
+      "name": "Economic and Social History",
+      "url": "http://www.drps.ed.ac.uk/24-25/dpt/cx_sb_ecsh.htm",
+      "school_name": "School of History, Classics and Archaeology",
+      "school_code": "su792",
+      "college": "College of Arts, Humanities and Social Sciences"
+    },
+    {
+      "name": "Greek",
+      "url": "http://www.drps.ed.ac.uk/24-25/dpt/cx_sb_gree.htm",
+      "school_name": "School of History, Classics and Archaeology",
+      "school_code": "su792",
+      "college": "College of Arts, Humanities and Social Sciences"
+    },
+    {
+      "name": "History",
+      "url": "http://www.drps.ed.ac.uk/24-25/dpt/cx_sb_hist.htm",
+      "school_name": "School of History, Classics and Archaeology",
+      "school_code": "su792",
+      "college": "College of Arts, Humanities and Social Sciences"
+    },
+    {
+      "name": "Latin",
+      "url": "http://www.drps.ed.ac.uk/24-25/dpt/cx_sb_lati.htm",
+      "school_name": "School of History, Classics and Archaeology",
+      "school_code": "su792",
+      "college": "College of Arts, Humanities and Social Sciences"
+    },
+    {
+      "name": "Postgraduate (History, Classics and Archaeology)",
+      "url": "http://www.drps.ed.ac.uk/24-25/dpt/cx_sb_pghc.htm",
+      "school_name": "School of History, Classics and Archaeology",
+      "school_code": "su792",
+      "college": "College of Arts, Humanities and Social Sciences"
+    },
+    {
+      "name": "Scottish History",
+      "url": "http://www.drps.ed.ac.uk/24-25/dpt/cx_sb_schi.htm",
+      "school_name": "School of History, Classics and Archaeology",
+      "school_code": "su792",
+      "college": "College of Arts, Humanities and Social Sciences"
+    }
+  ]
+}

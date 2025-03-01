@@ -1,0 +1,100 @@
+{
+  "name": "Centre for Open Learning",
+  "url": "http://www.drps.ed.ac.uk/24-25/dpt/cx_s_su755.htm",
+  "college": "College of Arts, Humanities and Social Sciences",
+  "schedule": "Schedule X",
+  "code": "su755",
+  "subjects": [
+    {
+      "name": "Access",
+      "url": "http://www.drps.ed.ac.uk/24-25/dpt/cx_sb_aace.htm",
+      "school_name": "Centre for Open Learning",
+      "school_code": "su755",
+      "college": "College of Arts, Humanities and Social Sciences"
+    },
+    {
+      "name": "Lothians Equal Access Programmes for Schools",
+      "url": "http://www.drps.ed.ac.uk/24-25/dpt/cx_sb_leap.htm",
+      "school_name": "Centre for Open Learning",
+      "school_code": "su755",
+      "college": "College of Arts, Humanities and Social Sciences"
+    },
+    {
+      "name": "Creative Arts",
+      "url": "http://www.drps.ed.ac.uk/24-25/dpt/cx_sb_llla.htm",
+      "school_name": "Centre for Open Learning",
+      "school_code": "su755",
+      "college": "College of Arts, Humanities and Social Sciences"
+    },
+    {
+      "name": "Health and Social Science",
+      "url": "http://www.drps.ed.ac.uk/24-25/dpt/cx_sb_llld.htm",
+      "school_name": "Centre for Open Learning",
+      "school_code": "su755",
+      "college": "College of Arts, Humanities and Social Sciences"
+    },
+    {
+      "name": "History, Classics and Archaeology",
+      "url": "http://www.drps.ed.ac.uk/24-25/dpt/cx_sb_llle.htm",
+      "school_name": "Centre for Open Learning",
+      "school_code": "su755",
+      "college": "College of Arts, Humanities and Social Sciences"
+    },
+    {
+      "name": "Literature, Languages and Cultures",
+      "url": "http://www.drps.ed.ac.uk/24-25/dpt/cx_sb_lllg.htm",
+      "school_name": "Centre for Open Learning",
+      "school_code": "su755",
+      "college": "College of Arts, Humanities and Social Sciences"
+    },
+    {
+      "name": "Philosophy, Psychology and Language Sciences",
+      "url": "http://www.drps.ed.ac.uk/24-25/dpt/cx_sb_llli.htm",
+      "school_name": "Centre for Open Learning",
+      "school_code": "su755",
+      "college": "College of Arts, Humanities and Social Sciences"
+    },
+    {
+      "name": "Social and Political Science",
+      "url": "http://www.drps.ed.ac.uk/24-25/dpt/cx_sb_lllj.htm",
+      "school_name": "Centre for Open Learning",
+      "school_code": "su755",
+      "college": "College of Arts, Humanities and Social Sciences"
+    },
+    {
+      "name": "Education",
+      "url": "http://www.drps.ed.ac.uk/24-25/dpt/cx_sb_lllk.htm",
+      "school_name": "Centre for Open Learning",
+      "school_code": "su755",
+      "college": "College of Arts, Humanities and Social Sciences"
+    },
+    {
+      "name": "Science",
+      "url": "http://www.drps.ed.ac.uk/24-25/dpt/cx_sb_llll.htm",
+      "school_name": "Centre for Open Learning",
+      "school_code": "su755",
+      "college": "College of Arts, Humanities and Social Sciences"
+    },
+    {
+      "name": "Business",
+      "url": "http://www.drps.ed.ac.uk/24-25/dpt/cx_sb_lllm.htm",
+      "school_name": "Centre for Open Learning",
+      "school_code": "su755",
+      "college": "College of Arts, Humanities and Social Sciences"
+    },
+    {
+      "name": "Law",
+      "url": "http://www.drps.ed.ac.uk/24-25/dpt/cx_sb_llln.htm",
+      "school_name": "Centre for Open Learning",
+      "school_code": "su755",
+      "college": "College of Arts, Humanities and Social Sciences"
+    },
+    {
+      "name": "Languages",
+      "url": "http://www.drps.ed.ac.uk/24-25/dpt/cx_sb_lllo.htm",
+      "school_name": "Centre for Open Learning",
+      "school_code": "su755",
+      "college": "College of Arts, Humanities and Social Sciences"
+    }
+  ]
+}

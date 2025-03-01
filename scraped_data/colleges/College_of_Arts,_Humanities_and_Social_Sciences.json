@@ -1,0 +1,96 @@
+{
+  "name": "College of Arts, Humanities and Social Sciences",
+  "schools": [
+    {
+      "name": "Edinburgh College of Art",
+      "url": "http://www.drps.ed.ac.uk/24-25/dpt/cx_s_su791.htm",
+      "college": "College of Arts, Humanities and Social Sciences",
+      "schedule": "Schedule A",
+      "code": "su791"
+    },
+    {
+      "name": "School of Divinity",
+      "url": "http://www.drps.ed.ac.uk/24-25/dpt/cx_s_su151.htm",
+      "college": "College of Arts, Humanities and Social Sciences",
+      "schedule": "Schedule B",
+      "code": "su151"
+    },
+    {
+      "name": "Moray House School of Education and Sport",
+      "url": "http://www.drps.ed.ac.uk/24-25/dpt/cx_s_su819.htm",
+      "college": "College of Arts, Humanities and Social Sciences",
+      "schedule": "Schedule C",
+      "code": "su819"
+    },
+    {
+      "name": "School of Health in Social Science",
+      "url": "http://www.drps.ed.ac.uk/24-25/dpt/cx_s_su796.htm",
+      "college": "College of Arts, Humanities and Social Sciences",
+      "schedule": "Schedule D",
+      "code": "su796"
+    },
+    {
+      "name": "School of History, Classics and Archaeology",
+      "url": "http://www.drps.ed.ac.uk/24-25/dpt/cx_s_su792.htm",
+      "college": "College of Arts, Humanities and Social Sciences",
+      "schedule": "Schedule E",
+      "code": "su792"
+    },
+    {
+      "name": "School of Law",
+      "url": "http://www.drps.ed.ac.uk/24-25/dpt/cx_s_su161.htm",
+      "college": "College of Arts, Humanities and Social Sciences",
+      "schedule": "Schedule F",
+      "code": "su161"
+    },
+    {
+      "name": "School of Literatures, Languages and Cultures",
+      "url": "http://www.drps.ed.ac.uk/24-25/dpt/cx_s_su795.htm",
+      "college": "College of Arts, Humanities and Social Sciences",
+      "schedule": "Schedule G",
+      "code": "su795"
+    },
+    {
+      "name": "Business School",
+      "url": "http://www.drps.ed.ac.uk/24-25/dpt/cx_s_su780.htm",
+      "college": "College of Arts, Humanities and Social Sciences",
+      "schedule": "Schedule H",
+      "code": "su780"
+    },
+    {
+      "name": "School of Philosophy, Psychology and Language Sciences",
+      "url": "http://www.drps.ed.ac.uk/24-25/dpt/cx_s_su793.htm",
+      "college": "College of Arts, Humanities and Social Sciences",
+      "schedule": "Schedule I",
+      "code": "su793"
+    },
+    {
+      "name": "School of Social and Political Science",
+      "url": "http://www.drps.ed.ac.uk/24-25/dpt/cx_s_su809.htm",
+      "college": "College of Arts, Humanities and Social Sciences",
+      "schedule": "Schedule J",
+      "code": "su809"
+    },
+    {
+      "name": "School of Economics",
+      "url": "http://www.drps.ed.ac.uk/24-25/dpt/cx_s_su284.htm",
+      "college": "College of Arts, Humanities and Social Sciences",
+      "schedule": "Schedule W",
+      "code": "su284"
+    },
+    {
+      "name": "Centre for Open Learning",
+      "url": "http://www.drps.ed.ac.uk/24-25/dpt/cx_s_su755.htm",
+      "college": "College of Arts, Humanities and Social Sciences",
+      "schedule": "Schedule X",
+      "code": "su755"
+    },
+    {
+      "name": "Edinburgh Futures Institute",
+      "url": "http://www.drps.ed.ac.uk/24-25/dpt/cx_s_su973.htm",
+      "college": "College of Arts, Humanities and Social Sciences",
+      "schedule": "Schedule Y",
+      "code": "su973"
+    }
+  ]
+}

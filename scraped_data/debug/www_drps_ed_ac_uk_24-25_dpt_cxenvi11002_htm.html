@@ -1,0 +1,586 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Course Catalogue - Introduction to Three Dimensional Climate Modelling (ENVI11002)</title>
+<meta name="type" content="DPT"></meta>
+<meta name="modcode" content="ENVI11002"></meta>
+<meta name="modname" content="Introduction to Three Dimensional Climate Modelling"></meta>
+<meta name="modkeywords" content="Climate Modelling"></meta>
+<meta name="modschool" content=""></meta>
+<meta name="modsubj" content=""></meta>
+<meta name="modsubj" content=""></meta>
+<!-- use stylesheets from DRPS -->
+<link rel="stylesheet" type="text/css" href="http://www.ed.ac.uk/other/styles.css">
+<link rel="stylesheet" type="text/css" href="../css/dp.css">
+<link rel="stylesheet" type="text/css" href="../24-25/dpts/dpt.css">
+
+<!-- add SITS styles -->
+<style type="text/css">
+
+.rowhead1 { font-family: 'Trebuchet MS', 'Lucida Grande', Verdana, Arial, Helvetica, sans-serif; 
+font-size: 75%;  color: #555555; /* replaces 25476C */
+background-color: #EEEEFF; /* replaces EAEEF5 */
+font-weight: bold;
+}
+
+.data1nobg { font-family: 'Trebuchet MS', 'Lucida Grande', Verdana, Arial, Helvetica, sans-serif;  
+color: #333; /* replaces 666 */
+font-weight: normal }
+
+.sitstablegrid {
+	width:100%; /* overall default table width */
+	margin-bottom:20px; /* separator space below each table */
+}
+
+.sitstablegrid caption {	
+	font-family: 'Trebuchet MS', 'Lucida Grande', Verdana, Arial, Helvetica, sans-serif;
+	font-size:75%;	
+	color: #FFFFFF;
+	padding:6px;
+	font-weight: bold;
+	text-align: left;
+	background:#232B5A; /* replaces 25476c */
+}
+
+.sitstablegrid caption,
+.sitstablegrid th, 
+.sitstablegrid td {
+	font-family: 'Trebuchet MS', 'Lucida Grande', Verdana, Arial, Helvetica, sans-serif;
+	font-size:75%;
+	padding: 4px;
+	vertical-align:top;
+}
+
+.sitstablegrid th {
+	background-color:#232B5A; /* replaces 36a7e9 */
+	padding-right: 5px; /* required to keep right aligned TH row headings from edge of cell */
+	color:#FFFFFF;
+	border:1px solid #CCCCCC;
+	border-collapse:collapse;
+}
+
+.sitstablegrid {
+	background-color: #FFFFFF; /* background shade applied to all cells */
+	border: 1px solid #cccccc; /* table outline box */
+	border-collapse: collapse;
+}
+
+.sitstablegrid th, 
+.sitstablegrid td {
+	border: 1px solid #cccccc; /* draws grid lines for sitstablegrid style class */
+	}
+
+#sitspagetitle {
+} 
+  
+h1.sitspagetitle {
+	font-family: 'Trebuchet MS', 'Lucida Grande', Verdana, Arial, Helvetica, sans-serif;
+	font-size: 80%;
+	color: #232B5A; /* replaces 25476c */
+	font-weight: bold;
+	border-bottom:1px solid #232B5A; /* replaces 25476c */
+}
+
+</style>
+</head>
+
+<body>
+<!-- header from DRPS -->
+<table width="100%" border="0" cellspacing="0" cellpadding="0" style="background-color: #232B5A;">
+<tr>
+<td width="84" align="left" valign="top">
+<a href="http://www.ed.ac.uk" class="headertext"><img src="http://www.drps.ed.ac.uk/images/logo.jpg" alt="The University of Edinburgh" name="logo" width="84" height="84" border="0" id="logo"></a>
+</td>
+
+<td align="left" width="100%">
+<h3 class="page_title">THE UNIVERSITY of EDINBURGH</h3>
+<h1 class="page_title">DEGREE REGULATIONS & PROGRAMMES OF STUDY 2024/2025</h1>
+<!-- <h3 style ="color:red" class="page_title">Draft Edition - Due to be published Thursday 11th April 2024</h3> -->
+<h3 style ="color:red" class="page_title">Timetable information in the Course Catalogue may be subject to change.</h3>
+</td>
+
+<td align="left">
+
+<table border="0" cellpadding="0" cellspacing="0" style="margin-right:20px;"><tr>
+<td style="white-space:nowrap">
+<a href="http://www.ed.ac.uk" class="headertext"><img src="../images/arrow.gif" width="16" height="11" border="0" alt=""></a><a href="http://www.ed.ac.uk" class="headertext">University&nbsp;Homepage</a>
+<br />
+<a href="../index.php" class="headertext"><img src="../images/arrow.gif" width="16" height="11" border="0" alt=""></a><a href="../index.php" class="headertext">DRPS Homepage</a>
+<br />
+<a href="cx_search.htm" class="headertext"><img src="../images/arrow.gif" width="16" height="11" border="0" alt=""></a><a href="cx_search.htm" class="headertext">DRPS Search</a>
+<br />
+<a href="../contact.php" class="headertext"><img src="../images/arrow.gif" width="16" height="11" border="0" alt=""></a><a href="../contact.php" class="headertext">DRPS Contact</a>
+</td></tr>
+</table>
+
+</td></tr>
+</table>
+
+<div class="college"><a href="../index.php">DRPS</a>&nbsp;:&nbsp;Course Catalogue&nbsp;:&nbsp;<a href="cx_s_su849.htm">School of Geosciences</a>&nbsp;:&nbsp;<a href="cx_sb_mete.htm">Meteorology</a></div>
+
+<table width="100%" border="0" cellpadding="6" cellspacing="0" class="content">
+<tr valign="top"><td>
+<!-- IMPORTANT Any changes to this SRL should be tested as follows:
+- via 'View Course' and 'Amend Course' in Curriculum Management -> CCAM containter, 
+- on linking from within OCSS/OCE 
+- the course catalogue (post March '10.
+If any additional SITS classes are used  (eg sitstablenogrid) then these must be added
+to SLPs CX_CRSHDR1 and CX_CRSHDR2 for the course catalogue. The course catalogue SRL cannot include sits.css as this overwrites
+University website styles -->
+
+<!-- temp variables passed in to determine various display options as follows -->
+<!-- GSL_TMP1: blank or not CCAM: limited details displayed (link from OCSS, course catalogue); "CCAM" = all details; CCAMSUM = called from CCAM input/Amend course task (CCAM1_A4) so don't need instance data, no pre-requisites etc (because editable on on task screen ) -->
+<!-- GSL_TMP2: Academic Year: if not null then a MAV(s) in single year is/are displayed for delivery; if null then SRL uses SLP CURRENT_AYR_CODE to display all MAV from current year forwards -->
+<!-- GSL_TMP3: Display Portal links: Y or null - display links; N - don't display links (could link to external web server) -->
+<!-- GSL_TMP4:passed in and passed through to CLASSES_TAB SRL. If set to Y then First class and additional info displayed-->
+<!-- GSL_TMP5.GSL=DRPS if this is called via DRPS publish, else null-->
+<!-- GSL_TMP6.GSL=visiting students from slp sma_vs_r which calls task sma_vs_r -->
+<!-- GSL_TMP6 and in syp: siw_mod_001 -->
+
+<!--
+START IN MOD.COURSE_DETS </br>
+gsl_tmp6: </br>
+gsl_tmp1:NULL </br>
+
+-->
+
+
+
+<style type="text/css">
+<!--
+#sitspagetabs-vert { 
+display: none;
+}
+-->
+</style>
+<!-- Course name, code, credits, subject area, brief description -->
+<br />
+<h1 id="sitspagetitle" class="sitspagetitle" style="font-size:150%;">Undergraduate Course: Introduction to Three Dimensional Climate Modelling (ENVI11002)</h1>
+<table class="sitstablegrid">
+
+<!--FB 2/1/11 is course marked as closed? -->
+
+
+<caption>Course Outline</caption>
+<tr>
+<td class="rowhead1" width="15%">School</td><td width="35%">School of Geosciences</td>
+<td class="rowhead1" width="15%">College</td><td width="35%">College of Science and Engineering</td>
+</tr>
+<tr>
+<td class="rowhead1" width="15%">Credit level (Normal year taken)</td><td width="35%">SCQF Level 11 (Year 5 Undergraduate)</td>
+
+<td class="rowhead1" width="15%">Availability</td><td width="35%">Available to all students</td>
+</tr>
+<tr>
+<td class="rowhead1" width="15%">SCQF Credits</td><td width="35%">10</td>
+<td class="rowhead1" width="15%">ECTS Credits</td><td width="35%">5</td>
+</tr>
+<tr>
+
+</tr>
+<tr>
+<td class="rowhead1" width ="15%">Summary</td><td width="85%" colspan="99">The aim of the course is to provide a theoretical and practical introduction to three dimensional climate modelling. This will allow students to have an appreciation of the strengths and weaknesses of climate models and for some to subsequently carry out projects which make use of climate models.  <br />
+The course is structured as a set of guided readings of the text book An Introduction to Three Dimensional Climate Modelling, 2nd Edition by Washington and Parker.   With a group project to develop practical skills in running and analysing climate models. <br />
+ Students will be expected to read selected parts of the text and come to the class to discuss areas where they are uncertain. The lecturer will aim to clarify areas where the class are uncertain and provide guidance and structure for the next set of readings. <br />
+</td>
+</tr>
+<tr>
+<td class="rowhead1" width ="15%">Course description</td><td width="85%" colspan="99">
+    
+    Syllabus <br />
+10 Sessions (Block 1): <br />
+The numbers refer to sections &amp; sub-sections in An Introduction to Three Dimensional Climate Modelling, 2nd edition.  <br />
+Session 1: Introduction. <br />
+-	Course aims.  <br />
+-	Climate System - land and Ocean. (section 2.1, 2.2, 2.4.1-2.4.4) <br />
+ <br />
+Session 2: Equations of motion for the Atmosphere &amp; the Oceans  <br />
+(Students who have not studied Atmospheric Dynamics might  find this session difficult) <br />
+-	Governing Equations for the Atmosphere sections 3.1-3.3 (pp 49-69)  <br />
+-	Governing equations for the Ocean (3.8.1 &amp; 3.8.3-3.8.4) <br />
+ <br />
+Session 3: Grid Point Methods <br />
+-	Grid-point methods (Sections 4.1 &amp; 4.2) <br />
+-	Semi-Lagrangian methods for advection. (4.7) <br />
+ <br />
+Session 4: Spectral Methods <br />
+-	Spectral Methods (4.4 &amp; 4.5) <br />
+Session 5: Spectral Methods (ctd)<br />
+-	 supplementary material  <br />
+ <br />
+Session 6: Discussion on Numerical  Methods (covering sessions 3, 4 &amp; 5).  <br />
+ <br />
+Session 7: Radiation &amp; Parameterisation <br />
+-	Radiation  (3.6.1-3.6.5) <br />
+-	Clouds (3.6.6.-3.6.9) <br />
+ <br />
+Session 8: Group project briefing  <br />
+  <br />
+Session 9: Evaluation and model use <br />
+-	Sensitivity to Initial Conditions <br />
+-	Simulations of Present Climate (5.1, 5.2, 5.5) <br />
+-	Using Models to understand possible future climates (6.6 &amp; 6.10) <br />
+ <br />
+Session 10: Student topic presentations<br />
+<br />
+The course will be run as a set of guiding readings largely of parts of the textbook &quot;Introduction to Three Dimensional Climate Modelling&quot; by Washington and Parkinson supplemented by Vallis and other material. There will be ten  1hour seminars over the semester. In seven  of the seminars, the lecturer will outline the key ideas for the next fortnights reading and have some discussion on the previous reading. These seminars will occur roughly fortnightly and be interspersed with four seminars organised as question and answer sessions, driven by student need. In these seminars the lecturer will help students with material that they have found difficult. Students are expected to spend 9 hours/week working through readings; doing problems etc. <br />
+<br />
+The course functions on the assumption that level 11 students are mature enough to be self-learners. So students will be expected, perhaps with some guidance, to seek out additional material and read some literature. <br />
+ To supplement the theoretical study practical training in how to run the Unified Model (or other climate models). Two Â½ day labs  Wed 2-5 in weeks 3 and 5. <br />
+<br />
+Further Course Information https://path.is.ed.ac.uk/courses/ENVI11002_SV1_SEM1<br />
+
+    
+    
+</td>
+</tr>
+</table>
+
+<!-- Entry requirements (including additional costs ) -->
+<!-- don't show pre-reqs, co-reqs and prohibited combinations if called from CCAM1_A4 amend task -->
+<!-- Show Pre-requisites etc for CCAM VIEW/OCE/Course catalogue but not CCAM Amend  -->
+
+<table class="sitstablegrid">
+<caption>Entry Requirements (not applicable to Visiting Students)</caption>
+<tr>
+<td class="rowhead1" width="15%">Pre-requisites</td>
+
+<td width="35%"> Students MUST have passed:    
+<a href="cxphys08043.htm" " target="_blank"title="View Course details. Opens in a new window.">Dynamics and Vector Calculus (PHYS08043)</a><span class="data1nobgred"></span> <span class="data1nobgred">OR</span>   
+<a href="cxphys08052.htm" " target="_blank"title="View Course details. Opens in a new window.">Introductory Dynamics (PHYS08052)</a><span class="data1nobgred"></span> <span class="data1nobgred"></span> <br /></td>
+<td class="rowhead1" width="15%">Co-requisites</td><td width="35%"></td>
+</tr>
+<tr>
+<td class="rowhead1" width="15%">Prohibited Combinations</td><td width="35%"></td>
+
+
+<td class="rowhead1" width="15%">Other requirements</td><td width="35%"> Students are strongly recommended to have some experience with programming computers prior to the course.</td>
+</tr>
+
+<!-- show add costs for portal View Course, course catalogue and from OCE, but only if there are some -->
+
+
+</table>
+
+<!-- visting students information -FB 20110426 added High Demand Course-->
+
+<table class="sitstablegrid">
+<caption>Information for Visiting Students</caption> 
+<tr>
+<td class="rowhead1" width="15%">Pre-requisites</td><td width="85%" colspan="4">None</td>
+</tr>
+<tr>
+		<td class="rowhead1" width="15%">High Demand Course?</td>
+		<td class="data1nobg" width="85%" colspan="4">Yes</td>
+    </tr>
+</table>
+
+
+<!-- Delivery information -FB 14/1/11 added GSL_TMP5.GSL=DRPS-->
+<!-- Class times -->
+
+
+
+
+
+<table class="sitstablegrid">
+<caption>Course Delivery Information</caption>
+
+
+
+
+
+
+
+
+
+
+<!-- GSL_TMP1 = indicates whether a list of different courses' classes will be displayed. Values: Y - display course code
+at top of table, suppress additional and first class information. If blank then assume single course, so 
+don't display course code, but do display additional class and first class information.  This is so table can be used in individual MOD/MAV report or when listing a number of MODs (eg listing teaching activities for a list of SMAs)  -->
+
+<!-- GSL_TMP2 - display links to other SRLs (links won't work this from published (IPP)) N: don't, otherwise do-->
+<!-- GSL_TMP4 - Set to Y if first class and additional information to be displayed -->
+<!-- GSL_TMP5- Set to DRPS if SRL called via DRPS publish path- SRL not used for timetable and VS (uses CLASSES_TAB2)-->
+
+<!-- calling SRL must specify table, table caption (if required) eg:
+<table class="sitstablegrid">
+<caption>Course Delivery </caption> 
+---- call to this SRL ----
+</table> -->
+
+
+
+<tr><td colspan="99" style="height:5px;"></td></tr>
+<!--
+<tr><td colspan="99" style="height:5px;"> 
+ IN MAV_CLASSES_TAB </br>
+GSLTMP1:N</br>
+GSLTMP2:N </br>
+GSLTMP3: </br>
+GSLTMP4:Y </br>
+GSLTMP5:DRPS </br>
+GSLTMP6: </br>
+</td></tr>
+-->
+
+<tr>
+<td class="rowhead1" colspan="2" style="width:50%;">Academic year 2024/25, Available to all students (SV1) 
+  <!-- Quota moved from mod.course_dets cms call 882028 -->
+</td>
+<td class="rowhead1" colspan="99">Quota:&nbsp;&nbsp;20</td>
+</tr>
+
+<!-- Course start (delivery period) -->
+<tr><td class="rowhead1" width ="5%">Course Start</td>
+<td colspan="14">Semester 1</td>
+</tr>
+
+<!-- Course start date (for invoiced courses) -->
+
+
+<!-- VISITING STUDENTS : gsl_tmp6 is set up in mod.course_dets for visiting students only. setup from slp: sma_vs_r then calls mod.course_dets. Test in url_link for this gsl_tmp6  -->
+
+<!-- ayr code: 24 fixed 22 -->
+<td class="rowhead1" width="15%" target="_blank">Timetable </td>
+	<td class="data1nobg" colspan ="99">
+<a href="https://browser.ted.is.ed.ac.uk/generate/?courses%5B%5D=ENVI11002_SV1_SEM1
+&period=SEM1&week=9-19" target="_blank">Timetable</a></td>
+
+
+
+
+
+
+
+
+
+<tr>
+<td class="rowhead1" style="width:15%;">Learning and Teaching activities <a href="http://www.studentsystems.is.ed.ac.uk/staff/Support/User_Guides/CCAM//Teaching_Learning.htm" target="_blank">(Further Info)</a></td>
+
+<td colspan="14"> 
+ Total Hours:
+100
+
+(
+ Lecture Hours 22,
+
+
+
+
+
+
+
+
+
+
+
+ Programme Level Learning and Teaching Hours 2,
+
+Directed Learning and Independent Learning Hours
+76 )
+
+</td>
+</tr>
+
+<!-- Display Futher L&T Notes -->
+
+
+<!-- Display Assessment details -->
+<tr>
+<td class="rowhead1" style="width:15%;">Assessment <a href="http://www.studentsystems.is.ed.ac.uk/staff/Support/User_Guides/CCAM//Assessment_Methods.htm" target="_blank">(Further Info)</a></td>
+
+<td colspan="14"> 
+  Written Exam
+50 %,
+Coursework
+50 %,
+Practical Exam
+0 %
+</td>
+</tr>
+
+<tr>
+<tr>
+<td class="rowhead1" stlye="width:15%;">Additional Information (Assessment)</td>
+<td colspan="14">Assessment Details <br />
+Written Exam: 50%, Course Work: 50 %, Practical Exam: 0%. <br />
+ <br />
+The exam will be two questions out of three. Two of the questions will be theoretical where the students can demonstrate their understanding of the theoretical concepts in the course and a third essay based one where students can demonstrate their understanding of how to use climate models and some broader reading. <br />
+ <br />
+The course work is a group exercise which will be assessed using a similar marking scheme to project work. Students are expected to keep a diary and individual students can receive more or less marks based on their contribution to the report. This will be assessed using peer marking moderated by the course organiser.  <br />
+ <br />
+Assessment Deadlines <br />
+A modelling and analysis group exercise will be taken in weeks 6 to 10  with a group report to be handed in at 12noon, Tuesday Week 9<br />
+<br />
+Students must attain an overall mark of 40% (or above) to pass the course.<br />
+</td>
+</tr>
+
+
+<tr>
+<td class="rowhead1" stlye="width:15%;">Feedback</td>
+<td colspan="14">At each of the sessions after the first session students will be given an opportunity to discuss their reading and receive feedback from the course lecturer.  <br />
+ <br />
+Feedback and guidance will be given during the practical modelling and analysis exercise.  <br />
+</td>
+</tr>
+
+<!--FB 11Oct10: Exam info displayed if it exists, 14/1/11:do not display stationery and comments for GSL_TMP5=DRPS-->
+
+
+<tr>
+<td class="rowhead1" colspan="99">Exam Information</td>
+</tr>
+<tr>
+    <td class="rowhead1">Exam Diet</td>
+    <td class="rowhead1" colspan="2">Paper Name</td>
+    <td class="rowhead1" >Hours & Minutes</td>
+    
+	<td class="rowhead1" colspan="11"></td>
+
+ </tr>
+<tr>
+<td class="data1nobg" nowrap="nowrap">Main Exam Diet S1 (December)</td><td colspan="2">Introduction to Three Dimensional Climate Modelling (ENVI11002)</td><td>1:90</td><td colspan="11"></td></tr><tr><td class="data1nobg" nowrap="nowrap">Main Exam Diet S2 (April/May)</td><td colspan="2">Introduction to Three Dimensional Climate Modelling (ENVI11002)</td><td>:90</td><td colspan="11"></td></tr><tr>
+</tr>
+
+
+
+<!--31/1/11 FB-Teaching load display if exists-->
+
+
+
+<!--Get MABs based on MAP code on MAV
+output heading for Standard student
+SEL on sequence 001-099: <td class="data1nobg"><<DATA FIELD>></td> 
+SEL on sequence 001-099: <td class="data1nobg"><<DATA FIELD>></td> 
+SEL on sequence 001-099: <td class="data1nobg"><<DATA FIELD>></td> 
+SEL on sequence 001-099: <td class="data1nobg"><<DATA FIELD>></td> 
+
+output VS student heading
+select on sequence >= 101:  select on sequence >= 101:  select on sequence >= 101:  select on sequence >= 101:  -->
+
+
+<!-- Learning outcomes, FB 1/4/11 add other learning outcomes for ECA -->
+<table class="sitstablegrid">
+<caption>Learning Outcomes</caption> 
+<tr>
+<td>
+    On completion of this course, the student will be able to:
+    <ol style="font-family:inherit;font-size:inherit;">
+        <li>Have a theoretical understanding of the principals underlying three dimensional climate models</li><li> Have a theoretical understanding of how climate models work</li><li>Have a practical understanding of how to run a climate model</li><li>Have a practical understanding of how to analyse climate model output</li>
+    </ol>
+</td>
+</tr>
+</table>
+
+<table class="sitstablegrid">
+<caption>Reading List</caption> 
+<tr><td>Essential Reading <br />
+Washington and Parker (2005) 'An Introduction to Three Dimensional Climate Modelling, 2nd Edition' . University Science Books. The 2nd edition is quite different from the 1st edition.  <br />
+Further Reading  <br />
+Geoffrey K. Vallis (2017) Atmospheric and Oceanic Fluid Dynamics Cambridge University Press, 2nd Edition. Vallis makes much more use of vector calculus in some derivations than do Washington and Parker. <br />
+</td></tr> 
+</table>
+
+<!-- CG 14/10/09 changed to show additional costs here only for CCAM amend function -->
+
+
+<table class="sitstablegrid">
+<caption>Additional Information</caption>
+
+<tr>
+<td class="rowhead1" width="15%">Graduate Attributes and Skills</td>
+<td width="85%">Not entered</td>
+</tr>
+
+
+
+<tr>
+<td class="rowhead1" width="15%">Additional Class Delivery Information</td>
+<td width="85%">Two 1-hour sessions in weeks 1-3 &amp; 9 and 10.</td>
+</tr>
+
+<tr>
+<td class="rowhead1" width="15%">Keywords</td><td width="85%">Climate Modelling</td>
+</tr>
+</table>
+
+<!-- Contact information -->
+<table class="sitstablegrid">
+<caption>Contacts</caption> 
+<tr>
+<td class="rowhead1"  width="15%">Course organiser</td><td width="35%">Prof Simon Tett<br>
+<b>Tel:</b> (0131 6)50 5341<br>
+<b>Email:</b> Simon.Tett@ed.ac.uk</td>
+<td class="rowhead1" width="15%">Course secretary</td><td width="35%">Mr Johan De Klerk<br>
+<b>Tel:</b> (0131 6)50 7010<br>
+<b>Email:</b> johan.deklerk@ed.ac.uk</td>
+</tr>  
+</table>
+
+<!-- if called from CCAM then show extra course details -->
+
+
+</td>
+<td><table width="100%" border="0" cellspacing="0" cellpadding="0">
+<tr><td bgcolor="#999999">
+
+<table width="100%" border="0" cellspacing="1" cellpadding="3">
+<tr><td bgcolor="#FFFFFF" class="subboxtitle">Navigation</td></tr>
+<tr><td bgcolor="#FFFFFF" class="subboxsection" style="white-space:nowrap">Help &amp; Information</td></tr>
+<tr><td bgcolor="#FFFFFF"><a class="subboxitem" href="../index.php">Home</a></td></tr>
+<tr><td bgcolor="#FFFFFF"><a class="subboxitem" href="../regulations/main_intro.php">Introduction</a></td></tr>
+<tr><td bgcolor="#FFFFFF"><a class="subboxitem" href="../whole_glossary.php">Glossary</a></td></tr>
+<tr><td bgcolor="#FFFFFF"><a class="subboxitem" href="cx_search.htm">Search DPTs and Courses</a></td></tr>
+<tr><td bgcolor="#FFFFFF" class="subboxsection" style="white-space:nowrap">Regulations</td></tr>
+<tr><td bgcolor="#FFFFFF"><a class="subboxitem" href="../regulations/index.php">Regulations</a></td></tr>
+<tr><td bgcolor="#FFFFFF" class="subboxsection"  style="white-space:nowrap">Degree Programmes</td></tr>
+<tr><td bgcolor="#FFFFFF"><a class="subboxitem" href="../regulations/dpt_intro.php">Introduction</a></td></tr>
+<tr><td bgcolor="#FFFFFF"><a class="subboxitem" href="drpsindex.htm">Browse&nbsp;DPTs</a></td></tr>
+<tr><td bgcolor="#FFFFFF" class="subboxsection">Courses</td></tr>
+<tr><td bgcolor="#FFFFFF"><a class="subboxitem" href="../regulations/course_intro.php">Introduction</a></td></tr>
+<tr><td bgcolor="#FFFFFF"><a class="subboxitem" href="cx_colhss.htm" style="white-space:nowrap">Humanities and Social Science</a></td></tr>
+<tr><td bgcolor="#FFFFFF"><a class="subboxitem" href="cx_colsce.htm" style="white-space:nowrap">Science and Engineering</a></td></tr>
+<tr><td bgcolor="#FFFFFF"><a class="subboxitem" href="cx_colmvm.htm" style="white-space:nowrap">Medicine and Veterinary Medicine</a></td></tr>
+<tr><td bgcolor="#FFFFFF" class="subboxsection" style="white-space:nowrap">Other Information</td></tr>
+<tr><td bgcolor="#FFFFFF"><a class="subboxitem" href="https://browser.ted.is.ed.ac.uk" target="_blank">Combined Course Timetable </a></td></tr>
+<tr><td bgcolor="#FFFFFF"><a class="subboxitem" href="http://www.ed.ac.uk/studying/" title="Prospectuses">Prospectuses</a></td></tr>
+<tr><td bgcolor="#FFFFFF"><a class="subboxitem" href="../regulations/important.php">Important&nbsp;Information</a></td></tr>
+<tr><td bgcolor="#FFFFFF" class="subboxtitle" style="height:5px;font-size:1px;">&nbsp;</td></tr>
+</table>
+
+</td></tr>
+</table></td>   
+</tr>
+</table>
+
+<div class="footer">
+  <div style="float:right">
+    <a href="http://www.ed.ac.uk/about/website/privacy">Privacy &amp; cookies</a>
+  </div>
+  <em>&copy; Copyright 2024 The University of Edinburgh -  15 January 2025 9:13 pm</em>
+</div>
+<script async src="https://www.googletagmanager.com/gtag/js?id=trackingCode">
+  var trackingCode = window.location.hostname.substr(0, 4) === 'www.' ? 'G-9VG3160DSR' : 'G-J3QFR7R34Z';
+  </script>
+  
+  <script>
+  var key = window.location.hostname.substr(0, 4) === 'www.' ? 'G-9VG3160DSR' : 'G-J3QFR7R34Z';
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+  
+    gtag('config', key);
+  </script>
+  
+  <script>
+  var key = window.location.hostname.substr(0, 4) === 'www.' ? 'GTM-M38Z4T4' : 'GTM-KC9RP53';
+  (function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+  new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+  j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+  'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+  })(window,document,'script','dataLayer',key);</script>
+</body>
+</html>
