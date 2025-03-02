@@ -12,6 +12,8 @@ type Course = {
   level?: string;
   semester?: string;
   year?: string;
+  school_name?: string;
+  school?: string;
   [key: string]: any; // For additional fields from detailed info
 };
 
@@ -29,166 +31,191 @@ export default async function handler(
   }
 
   try {
-    const { school, code, search, years } = req.query;
+    const { school, search } = req.query;
+    const coursesDir = path.join(process.cwd(), '..', 'scraped_data', 'courses');
     
-    console.log('API Request Query Parameters:', {
-      school: school || 'not provided',
-      code: code || 'not provided',
-      search: search || 'not provided',
-      years: years || 'not provided'
-    });
-
-    const coursesDir = path.resolve(backendConfig.scrapedDataDir, 'courses');
-    let allCourses: Course[] = [];
+    // Check if directory exists
+    if (!fs.existsSync(coursesDir)) {
+      console.error(`Courses directory not found: ${coursesDir}`);
+      console.log('Current working directory:', process.cwd());
+      
+      // Try an alternative path
+      const altCoursesDir = path.join(process.cwd(), 'scraped_data', 'courses');
+      if (fs.existsSync(altCoursesDir)) {
+        console.log(`Using alternative path: ${altCoursesDir}`);
+        // Use the alternative path instead
+        return altPathHandler(req, res);
+      }
+      
+      return res.status(500).json({ error: 'Courses directory not found' });
+    }
     
-    // Read all course data from JSON files
     const files = fs.readdirSync(coursesDir);
+    let allCourses: Course[] = [];
+    let totalProcessed = 0;
+    let totalInvalid = 0;
+    let schoolsChecked: string[] = [];
+    
+    const schoolsList = school ? (school as string).split(',') : [];
+    console.log('Requested schools:', schoolsList);
+    
+    // If schools are requested, first check all files regardless of name
+    if (schoolsList.length > 0) {
+      console.log('Looking for schools in all files since school filter is active');
+    }
     
     for (const file of files) {
       if (file.endsWith('.json')) {
+        const filePath = path.join(coursesDir, file);
+        
         try {
-          const filePath = path.join(coursesDir, file);
           const fileData = JSON.parse(fs.readFileSync(filePath, 'utf8'));
+          totalProcessed++;
           
-          // Filter by school if provided
-          if (school && !file.toLowerCase().includes((school as string).toLowerCase())) {
-            continue;
+          // Don't pre-filter files by name when school filter is active
+          // We need to check ALL files for course.school_name
+          let shouldCheckFile = true;
+          
+          if (schoolsList.length > 0) {
+            schoolsChecked.push(file);
           }
           
+          // Process courses in the file
           if (Array.isArray(fileData)) {
-            allCourses = [...allCourses, ...fileData];
+            const filteredCourses = fileData.filter(course => {
+              // Check both school_name and school fields for match if school filter is provided
+              if (schoolsList.length > 0) {
+                const courseSchool = course.school_name || course.school || '';
+                const matchesRequestedSchool = schoolsList.some(requestedSchool => {
+                  return courseSchool.toLowerCase().includes(requestedSchool.toLowerCase());
+                });
+                
+                if (!matchesRequestedSchool) {
+                  return false;
+                }
+              }
+              
+              // Search filter
+              if (search && typeof search === 'string') {
+                const searchLower = search.toLowerCase();
+                const nameMatch = (course.name || course.title || '').toLowerCase().includes(searchLower);
+                const codeMatch = (course.code || '').toLowerCase().includes(searchLower);
+                const descMatch = (course.course_description || '').toLowerCase().includes(searchLower);
+                
+                return nameMatch || codeMatch || descMatch;
+              }
+              
+              return true;
+            });
+            
+            if (filteredCourses.length > 0) {
+              console.log(`Found ${filteredCourses.length} matching courses in ${file}`);
+            }
+            
+            allCourses = [...allCourses, ...filteredCourses];
           }
-        } catch (fileError) {
-          console.error(`Error reading/parsing file ${file}:`, fileError);
-          // Continue with other files instead of breaking the entire API
-          continue;
+        } catch (error) {
+          totalInvalid++;
+          console.error(`Error parsing ${file}:`, error);
+          // Continue processing other files even if one has an error
         }
       }
     }
     
-    let courses = allCourses;
+    console.log(`Processed ${totalProcessed} files, ${totalInvalid} invalid, found ${allCourses.length} courses`);
+    console.log('Schools checked:', schoolsChecked);
     
-    // Filter by course code if provided
-    if (code) {
-      const codeSearch = (code as string).toLowerCase();
-      courses = courses.filter(course => 
-        course.code && course.code.toLowerCase().includes(codeSearch)
-      );
-    }
-    
-    // Filter by years if provided
-    if (years) {
-      try {
-        // Parse the years from the comma-separated string and convert to numbers
-        const yearValues = (years as string)
-          .split(',')
-          .map(year => year.trim())
-          .map(year => parseInt(year))
-          .filter(year => !isNaN(year));
-        
-        console.log('Years filter (parsed values):', yearValues);
-        
-        if (yearValues.length > 0) {
-          const originalCount = courses.length;
-          
-          // Enhanced year extraction and filtering logic
-          courses = courses.filter(course => {
-            // Skip courses without necessary data
-            if (!course) return false;
-            
-            // Extract year from credit_level or level string (e.g., "SCQF Level 8 (Year 1 Undergraduate)" -> 1)
-            const levelString = (course.credit_level || course.level || '').toString();
-            
-            // Skip courses with no level information
-            if (!levelString) {
-              return false;
-            }
-            
-            // Direct year pattern matching - this is the most reliable method
-            const yearMatch = levelString.match(/Year (\d+)/i);
-            if (yearMatch) {
-              const year = parseInt(yearMatch[1]);
-              return yearValues.includes(year);
-            }
-            
-            // For postgraduate courses
-            if (levelString.toLowerCase().includes('postgraduate')) {
-              return yearValues.includes(5);
-            }
-            
-            // Try to infer year from SCQF level
-            const levelMatch = levelString.match(/Level (\d+)/i);
-            if (levelMatch) {
-              const level = parseInt(levelMatch[1]);
-              
-              // For undergraduate courses
-              if (levelString.toLowerCase().includes('undergraduate')) {
-                // Map SCQF levels to years:
-                // Level 7-8 → Year 1
-                // Level 9 → Year 2
-                // Level 10 → Year 3/4
-                // Level 11+ → Postgraduate
-                if (level === 7 || level === 8) return yearValues.includes(1);
-                if (level === 9) return yearValues.includes(2);
-                if (level === 10) return yearValues.includes(3) || yearValues.includes(4);
-                if (level >= 11) return yearValues.includes(5);
-              }
-              
-              // More general mapping as fallback
-              if (level >= 7 && level <= 10) {
-                const year = Math.min(Math.ceil((level - 6) / 2), 4);
-                return yearValues.includes(year);
-              }
-            }
-            
-            return false;
-          });
-          
-          console.log(`Filtered from ${originalCount} to ${courses.length} courses based on year filter`);
-        } else {
-          console.log('No valid year values provided in years parameter');
-        }
-      } catch (error) {
-        console.error('Error processing years filter:', error);
-      }
-    }
-    
-    // Filter by search term if provided
-    if (search) {
-      const searchTerm = (search as string).toLowerCase();
-      courses = courses.filter(course => {
-        // Check both title and name properties (handle inconsistencies in data)
-        const title = course.title || course.name || '';
-        const description = course.course_description || '';
-        
-        return (
-          title.toLowerCase().includes(searchTerm) || 
-          course.code.toLowerCase().includes(searchTerm) ||
-          description.toLowerCase().includes(searchTerm)
-        );
-      });
-      
-      // Sort courses to prioritize those with search term in the name
-      courses.sort((a, b) => {
-        const titleA = (a.title || a.name || '').toLowerCase();
-        const titleB = (b.title || b.name || '').toLowerCase();
-        
-        // Check if search term is in the name/title
-        const searchInTitleA = titleA.includes(searchTerm);
-        const searchInTitleB = titleB.includes(searchTerm);
-        
-        // Prioritize courses with search term in title/name
-        if (searchInTitleA && !searchInTitleB) return -1;
-        if (!searchInTitleA && searchInTitleB) return 1;
-        
-        // If both have or don't have the search term in title/name, keep original order
-        return 0;
-      });
-    }
-    
-    res.status(200).json({ courses });
+    res.status(200).json({ courses: allCourses });
   } catch (error) {
-    console.error('Error fetching courses:', error);
+    console.error('Error in API route:', error);
+    res.status(500).json({ error: 'Failed to fetch courses' });
+  }
+}
+
+// Helper function to handle the alternative path
+function altPathHandler(req: NextApiRequest, res: NextApiResponse<ResponseData>) {
+  try {
+    const { school, search } = req.query;
+    const coursesDir = path.join(process.cwd(), 'scraped_data', 'courses');
+    
+    console.log(`Using path: ${coursesDir}`);
+    
+    const files = fs.readdirSync(coursesDir);
+    let allCourses: Course[] = [];
+    let totalProcessed = 0;
+    let totalInvalid = 0;
+    let schoolsChecked: string[] = [];
+    
+    const schoolsList = school ? (school as string).split(',') : [];
+    console.log('Requested schools:', schoolsList);
+    
+    // If schools are requested, first check all files regardless of name
+    if (schoolsList.length > 0) {
+      console.log('Looking for schools in all files since school filter is active');
+    }
+    
+    for (const file of files) {
+      if (file.endsWith('.json')) {
+        const filePath = path.join(coursesDir, file);
+        
+        try {
+          const fileData = JSON.parse(fs.readFileSync(filePath, 'utf8'));
+          totalProcessed++;
+          
+          // Don't pre-filter files by name when school filter is active
+          // We need to check ALL files for course.school_name
+          if (schoolsList.length > 0) {
+            schoolsChecked.push(file);
+          }
+          
+          // Process courses in the file
+          if (Array.isArray(fileData)) {
+            const filteredCourses = fileData.filter(course => {
+              // Check both school_name and school fields for match if school filter is provided
+              if (schoolsList.length > 0) {
+                const courseSchool = course.school_name || course.school || '';
+                const matchesRequestedSchool = schoolsList.some(requestedSchool => {
+                  return courseSchool.toLowerCase().includes(requestedSchool.toLowerCase());
+                });
+                
+                if (!matchesRequestedSchool) {
+                  return false;
+                }
+              }
+              
+              // Search filter
+              if (search && typeof search === 'string') {
+                const searchLower = search.toLowerCase();
+                const nameMatch = (course.name || course.title || '').toLowerCase().includes(searchLower);
+                const codeMatch = (course.code || '').toLowerCase().includes(searchLower);
+                const descMatch = (course.course_description || '').toLowerCase().includes(searchLower);
+                
+                return nameMatch || codeMatch || descMatch;
+              }
+              
+              return true;
+            });
+            
+            if (filteredCourses.length > 0) {
+              console.log(`Found ${filteredCourses.length} matching courses in ${file}`);
+            }
+            
+            allCourses = [...allCourses, ...filteredCourses];
+          }
+        } catch (error) {
+          totalInvalid++;
+          console.error(`Error parsing ${file}:`, error);
+          // Continue processing other files even if one has an error
+        }
+      }
+    }
+    
+    console.log(`Processed ${totalProcessed} files, ${totalInvalid} invalid, found ${allCourses.length} courses`);
+    console.log('Schools checked:', schoolsChecked);
+    
+    res.status(200).json({ courses: allCourses });
+  } catch (error) {
+    console.error('Error in API route:', error);
     res.status(500).json({ error: 'Failed to fetch courses' });
   }
 } 

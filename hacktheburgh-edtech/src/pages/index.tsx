@@ -48,6 +48,7 @@ export default function Home() {
   
   // Courses state
   const [courses, setCourses] = useState<Course[]>([]);
+  const [totalResults, setTotalResults] = useState(0);
   
   // New state for advanced filters
   const [activeFilters, setActiveFilters] = useState({
@@ -179,70 +180,65 @@ export default function Home() {
     const fetchFilteredCourses = async () => {
       try {
         setLoading(true);
+        setError(null);
         
-        // Build query parameters for the API request
+        // Prepare API URL with filters
         const params = new URLSearchParams();
         
+        // Add school filters if selected
+        if (activeFilters.schools.length > 0) {
+          params.append('school', activeFilters.schools.join(','));
+          console.log('Sending schools to API:', activeFilters.schools.join(','));
+        }
+        
+        // Add search term if present
         if (activeFilters.searchTerm) {
           params.append('search', activeFilters.searchTerm);
         }
         
-        if (activeFilters.schools.length > 0) {
-          // Just use the first school for simplicity (API limitation)
-          params.append('school', activeFilters.schools[0]);
-        }
-        
+        // Add other filters as needed
         if (activeFilters.years.length > 0) {
-          // Convert years to a comma-separated string - already validated as numeric in SearchBar
           params.append('years', activeFilters.years.join(','));
         }
         
-        // Fetch courses with filters applied
-        const url = `/api/courses${params.toString() ? `?${params.toString()}` : ''}`;
+        const requestUrl = `/api/courses?${params.toString()}`;
+        console.log('Requesting courses from:', requestUrl);
         
-        const response = await fetch(url);
+        const response = await fetch(requestUrl);
         
         if (!response.ok) {
-          throw new Error(`Error fetching filtered courses: ${response.status} ${response.statusText}`);
+          throw new Error(`API responded with status: ${response.status}`);
         }
         
         const data = await response.json();
         
-        // Apply any client-side filters that aren't handled by the API
-        let filteredResults = data.courses || [];
-        
-        // Filter by additional criteria not handled by the API
-        if (activeFilters.subjects.length > 0 || 
-            activeFilters.creditLevels.length > 0 || 
-            activeFilters.credits.min !== '0' || 
-            activeFilters.credits.max !== '120' ||
-            activeFilters.courseLevel ||
-            activeFilters.visitingStudents ||
-            activeFilters.deliveryMethod) {
-          
-          // Apply these filters client-side
-          if (activeFilters.subjects.length > 0) {
-            filteredResults = filteredResults.filter(course => {
-              const name = course.name || course.title || '';
-              const description = course.course_description || '';
-              return activeFilters.subjects.some(subject => 
-                name.includes(subject) || description.includes(subject)
-              );
-            });
-          }
-          
-          // Continue with other filters as needed...
+        if (!data.courses) {
+          console.error('API response missing courses array:', data);
+          setError('Failed to load courses: Invalid API response format');
+          setFilteredCourses([]);
+          setLoading(false);
+          return;
         }
         
-        // Update the filtered courses state
-        setFilteredCourses(filteredResults);
-        setLoading(false);
+        console.log(`Received ${data.courses.length} courses from API`);
+        
+        // Apply client-side filtering for any filters not handled by the API
+        let filtered = data.courses;
+        
+        // Additional client-side filtering if needed
+        filtered = filterCourses(filtered);
+        
+        setTotalResults(filtered.length);
+        setFilteredCourses(filtered);
+        
+        // Reset to first page when filters change
+        setCurrentPage(1);
       } catch (error) {
         console.error('Error fetching filtered courses:', error);
+        setError('Failed to load courses. Please try again later.');
+        setFilteredCourses([]);
+      } finally {
         setLoading(false);
-        
-        // Fallback to client-side filtering if API fails
-        filterCourses();
       }
     };
     
@@ -260,171 +256,190 @@ export default function Home() {
   }, [activeFilters, courses]);
   
   // Function to filter courses based on all active filters
-  const filterCourses = () => {
-    let filtered = [...courses];
+  const filterCourses = (coursesToFilter = courses) => {
+    console.log('Filtering courses client-side:', { activeFilters, coursesCount: coursesToFilter.length });
+    
+    if (!coursesToFilter || coursesToFilter.length === 0) {
+      console.log('No courses to filter');
+      return [];
+    }
+    
+    let filtered = [...coursesToFilter];
+    
+    // Log initial state
+    console.log(`Starting with ${filtered.length} courses before applying filters`);
     
     // Filter by search term
     if (activeFilters.searchTerm) {
-      const searchLower = activeFilters.searchTerm.toLowerCase();
+      const searchTermLower = activeFilters.searchTerm.toLowerCase();
       filtered = filtered.filter(course => {
-        const name = course.name || course.title || '';
-        const description = course.course_description || '';
-        const code = course.code || '';
+        const name = (course.name || course.title || '').toLowerCase();
+        const code = (course.code || '').toLowerCase();
+        const description = (course.course_description || '').toLowerCase();
         
-        return name.toLowerCase().includes(searchLower) || 
-               code.toLowerCase().includes(searchLower) ||
-               description.toLowerCase().includes(searchLower);
+        return name.includes(searchTermLower) || 
+               code.includes(searchTermLower) || 
+               description.includes(searchTermLower);
       });
       
-      // Sort filtered courses to prioritize matches in the name
-      filtered.sort((a, b) => {
-        const nameA = (a.name || a.title || '').toLowerCase();
-        const nameB = (b.name || b.title || '').toLowerCase();
-        
-        // Check if search term is in the name
-        const searchInNameA = nameA.includes(searchLower);
-        const searchInNameB = nameB.includes(searchLower);
-        
-        // Prioritize courses with search term in name
-        if (searchInNameA && !searchInNameB) return -1;
-        if (!searchInNameA && searchInNameB) return 1;
-        
-        // If both have or don't have the search term in name, keep original order
-        return 0;
-      });
+      console.log(`After search term filtering, found ${filtered.length} courses`);
     }
     
     // Filter by schools
     if (activeFilters.schools.length > 0) {
-      filtered = filtered.filter(course => 
-        course.school_name && activeFilters.schools.includes(course.school_name)
-      );
-    }
-    
-    // Filter by subjects (mock implementation - would need real subject data)
-    if (activeFilters.subjects.length > 0) {
-      // In a real app, you'd have subject data to filter on
-      // This is a placeholder that simulates subject filtering
+      console.log('Filtering by schools:', activeFilters.schools);
+      
       filtered = filtered.filter(course => {
-        // Simulate matching subjects with course name or description
-        const name = course.name || course.title || '';
-        const description = course.course_description || '';
-        
-        return activeFilters.subjects.some(subject => 
-          name.includes(subject) || 
-          description.includes(subject)
-        );
-      });
-    }
-    
-    // Filter by year
-    if (activeFilters.years.length > 0) {
-      filtered = filtered.filter(course => {
-        // Extract year from credit_level or level string (e.g., "SCQF Level 8 (Year 1 Undergraduate)" -> 1)
-        const levelString = (course.credit_level || course.level || '').toString();
-        
-        // Skip courses with no level information
-        if (!levelString) {
+        // Make sure we have either school_name or school data
+        if (!course.school_name && !course.school) {
           return false;
         }
         
-        // Direct year pattern matching - this is the most reliable method
-        const yearMatch = levelString.match(/Year (\d+)/i);
-        if (yearMatch) {
-          const year = parseInt(yearMatch[1]);
-          return activeFilters.years.includes(year);
+        // Check if any of the selected schools match the course's school or school_name
+        const matchesSchool = activeFilters.schools.some(school => {
+          const schoolLower = school.toLowerCase();
+          return (course.school_name && course.school_name.toLowerCase().includes(schoolLower)) ||
+                 (course.school && course.school.toLowerCase().includes(schoolLower));
+        });
+        
+        // For debugging, log some sample results
+        if (matchesSchool && filtered.length < 5) {
+          console.log('School match found:', {
+            courseSchoolName: course.school_name,
+            courseSchool: course.school,
+            selectedSchools: activeFilters.schools,
+            courseName: course.name || course.title
+          });
         }
         
-        // For postgraduate courses
-        if (levelString.toLowerCase().includes('postgraduate')) {
-          return activeFilters.years.includes(5);
-        }
-        
-        // Try to infer year from SCQF level
-        const levelMatch = levelString.match(/Level (\d+)/i);
-        if (levelMatch) {
-          const level = parseInt(levelMatch[1]);
-          
-          // For undergraduate courses
-          if (levelString.toLowerCase().includes('undergraduate')) {
-            // Map SCQF levels to years:
-            // Level 7-8 → Year 1
-            // Level 9 → Year 2
-            // Level 10 → Year 3/4
-            // Level 11+ → Postgraduate
-            if (level === 7 || level === 8) return activeFilters.years.includes(1);
-            if (level === 9) return activeFilters.years.includes(2);
-            if (level === 10) return activeFilters.years.includes(3) || activeFilters.years.includes(4);
-            if (level >= 11) return activeFilters.years.includes(5);
-          }
-          
-          // More general mapping as fallback
-          if (level >= 7 && level <= 10) {
-            const year = Math.min(Math.ceil((level - 6) / 2), 4);
-            return activeFilters.years.includes(year);
-          }
-        }
-        
-        return false;
+        return matchesSchool;
       });
+      
+      console.log('After school filtering, found', filtered.length, 'courses');
+    }
+    
+    // Filter by subjects
+    if (activeFilters.subjects.length > 0) {
+      filtered = filtered.filter(course => {
+        const name = (course.name || course.title || '').toLowerCase();
+        const description = (course.course_description || '').toLowerCase();
+        
+        return activeFilters.subjects.some(subject => 
+          name.includes(subject.toLowerCase()) || 
+          description.includes(subject.toLowerCase())
+        );
+      });
+      
+      console.log(`After subject filtering, found ${filtered.length} courses`);
     }
     
     // Filter by credit levels
     if (activeFilters.creditLevels.length > 0) {
       filtered = filtered.filter(course => {
-        // Extract level number from credit_level string (e.g., "SCQF Level 8 (Year 1 Undergraduate)" -> 8)
-        const levelString = course.credit_level || course.level || '';
-        const levelMatch = levelString.match(/Level (\d+)/);
-        const level = levelMatch ? parseInt(levelMatch[1]) : null;
+        const creditLevel = (course.credit_level || course.level || '').toLowerCase();
         
-        return level && activeFilters.creditLevels.includes(level);
+        return activeFilters.creditLevels.some(level => 
+          creditLevel.includes(level.toLowerCase())
+        );
       });
+      
+      console.log(`After credit level filtering, found ${filtered.length} courses`);
     }
     
     // Filter by credit range
     if (activeFilters.credits.min !== '0' || activeFilters.credits.max !== '120') {
       filtered = filtered.filter(course => {
-        const courseCredits = parseInt(course.credits || '0');
-        return !isNaN(courseCredits) && 
-               courseCredits >= parseInt(activeFilters.credits.min) && 
-               courseCredits <= parseInt(activeFilters.credits.max);
+        // Extract the credit value as a number
+        const creditString = course.credits || '';
+        const creditValue = parseInt(creditString.match(/\d+/)?.[0] || '0', 10);
+        
+        const minCredits = parseInt(activeFilters.credits.min || '0', 10);
+        const maxCredits = parseInt(activeFilters.credits.max || '120', 10);
+        
+        return creditValue >= minCredits && creditValue <= maxCredits;
       });
+      
+      console.log(`After credit range filtering, found ${filtered.length} courses`);
     }
     
-    // Filter by course level (undergraduate/postgraduate)
+    // Filter by year (1-5)
+    if (activeFilters.years.length > 0) {
+      filtered = filtered.filter(course => {
+        const levelString = (course.credit_level || course.level || '').toLowerCase();
+        
+        // Try to extract the year
+        const yearMatch = levelString.match(/year (\d+)/i);
+        if (yearMatch) {
+          const year = parseInt(yearMatch[1], 10);
+          return activeFilters.years.includes(year.toString());
+        }
+        
+        // Check for postgraduate
+        if (levelString.includes('postgraduate') && activeFilters.years.includes('5')) {
+          return true;
+        }
+        
+        // Try to infer from SCQF level
+        const levelMatch = levelString.match(/level (\d+)/i);
+        if (levelMatch) {
+          const level = parseInt(levelMatch[1], 10);
+          
+          // Map SCQF levels to years
+          if ((level === 7 || level === 8) && activeFilters.years.includes('1')) return true;
+          if (level === 9 && activeFilters.years.includes('2')) return true;
+          if (level === 10 && (activeFilters.years.includes('3') || activeFilters.years.includes('4'))) return true;
+          if (level >= 11 && activeFilters.years.includes('5')) return true;
+        }
+        
+        return false;
+      });
+      
+      console.log(`After year filtering, found ${filtered.length} courses`);
+    }
+    
+    // Filter by course level
     if (activeFilters.courseLevel) {
       filtered = filtered.filter(course => {
-        // Extract level number from credit_level string
-        const levelString = course.credit_level || course.level || '';
-        const levelMatch = levelString.match(/Level (\d+)/);
-        const level = levelMatch ? parseInt(levelMatch[1]) : null;
+        const levelString = (course.credit_level || course.level || '').toLowerCase();
         
-        // Also check if the string directly indicates undergraduate or postgraduate
-        const isPostgrad = levelString.toLowerCase().includes('postgraduate');
-        const isUndergrad = levelString.toLowerCase().includes('undergraduate');
-        
-        if (activeFilters.courseLevel === 'postgraduate') {
-          return isPostgrad || (level && level >= 11);
-        } else {
-          return isUndergrad || (level && level < 11);
+        if (activeFilters.courseLevel === 'undergraduate') {
+          return levelString.includes('undergraduate') || 
+                 (levelString.match(/level [7-9]/i) !== null) ||
+                 (levelString.match(/level 10/i) !== null);
+        } else if (activeFilters.courseLevel === 'postgraduate') {
+          return levelString.includes('postgraduate') || 
+                 (levelString.match(/level 1[1-2]/i) !== null);
         }
+        
+        return true;
       });
+      
+      console.log(`After course level filtering, found ${filtered.length} courses`);
+    }
+    
+    // Filter by visiting students
+    if (activeFilters.visitingStudents) {
+      filtered = filtered.filter(course => {
+        // This would depend on your data structure
+        return course.visiting_students === true ||
+               (course.course_description || '').toLowerCase().includes('visiting student');
+      });
+      
+      console.log(`After visiting students filtering, found ${filtered.length} courses`);
     }
     
     // Filter by delivery method
     if (activeFilters.deliveryMethod) {
-      // This is a placeholder - in a real app you'd have delivery method data
       filtered = filtered.filter(course => {
-        if (activeFilters.deliveryMethod === 'online') {
-          return course.period.includes('Online');
-        } else if (activeFilters.deliveryMethod === 'in-person') {
-          return !course.period.includes('Online');
-        }
-        return true; // For hybrid or when we don't have the data
+        const deliveryMethod = (course.delivery_method || '').toLowerCase();
+        return deliveryMethod === activeFilters.deliveryMethod.toLowerCase();
       });
+      
+      console.log(`After delivery method filtering, found ${filtered.length} courses`);
     }
     
-    setFilteredCourses(filtered);
+    console.log(`Final filtered count: ${filtered.length} courses`);
+    return filtered;
   };
 
   const handleSearch = (term: string, schools: string[]) => {

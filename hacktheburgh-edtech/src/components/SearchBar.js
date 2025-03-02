@@ -115,34 +115,57 @@ const SearchBar = ({ onSearch, onFilterChange }) => {
   };
 
   const handleSchoolSelection = (school) => {
-    // Only add if it's not already selected
-    if (!selectedSchools.includes(school)) {
-      const newSelectedSchools = [...selectedSchools, school];
-      setSelectedSchools(newSelectedSchools);
-      
-      // Update active filters with the new schools
-      setActiveFilters(prev => ({
-        ...prev,
-        schools: newSelectedSchools
-      }));
+    console.log(`Selected school: "${school}"`);
+    
+    // First check if it's already in the selected schools list
+    if (selectedSchools.some(s => s.toLowerCase() === school.toLowerCase())) {
+      console.log(`School "${school}" already selected, skipping`);
+      return;
     }
     
-    // Clear search term and close dropdown
+    // Add the school to the list
+    const updatedSchools = [...selectedSchools, school];
+    setSelectedSchools(updatedSchools);
+    
+    // Update active filters
+    const updatedFilters = {
+      ...activeFilters,
+      schools: updatedSchools
+    };
+    setActiveFilters(updatedFilters);
+    
+    // Clear the search and close the dropdown
     setSchoolSearchTerm('');
     setDropdownOpen(false);
+    
+    // Trigger search immediately to show feedback to the user
+    onSearch(searchTerm, updatedSchools);
+    onFilterChange(updatedFilters);
+    
+    console.log(`Updated selected schools: ${updatedSchools.join(', ')}`);
   };
   
   const handleRemoveSchool = (schoolToRemove) => {
-    const newSelectedSchools = selectedSchools.filter(
-      school => school !== schoolToRemove
-    );
-    setSelectedSchools(newSelectedSchools);
+    console.log(`Removing school: "${schoolToRemove}"`);
     
-    // Update active filters with the new schools
-    setActiveFilters(prev => ({
-      ...prev,
-      schools: newSelectedSchools
-    }));
+    // Remove the school from the list
+    const updatedSchools = selectedSchools.filter(
+      school => school.toLowerCase() !== schoolToRemove.toLowerCase()
+    );
+    setSelectedSchools(updatedSchools);
+    
+    // Update active filters
+    const updatedFilters = {
+      ...activeFilters,
+      schools: updatedSchools
+    };
+    setActiveFilters(updatedFilters);
+    
+    // Trigger search immediately to show feedback to the user
+    onSearch(searchTerm, updatedSchools);
+    onFilterChange(updatedFilters);
+    
+    console.log(`Updated selected schools after removal: ${updatedSchools.join(', ')}`);
   };
 
   const clearFilters = useCallback(() => {
@@ -340,13 +363,49 @@ const SearchBar = ({ onSearch, onFilterChange }) => {
     }));
   };
   
-  // Filter schools based on search term
+  // Filter schools based on search term - make sure we handle case sensitivity properly
   const filteredSchools = schoolSearchTerm
-    ? schools.filter(school => 
-        school.toLowerCase().includes(schoolSearchTerm.toLowerCase()) && 
-        !selectedSchools.includes(school))
-    : schools.filter(school => !selectedSchools.includes(school));
-    
+    ? schools.filter(school => {
+        // Case-insensitive search
+        const schoolLower = school.toLowerCase();
+        const searchTermLower = schoolSearchTerm.toLowerCase();
+        
+        // Check if it's already selected - with proper case-insensitive comparison
+        const isAlreadySelected = selectedSchools.some(
+          selected => selected.toLowerCase() === schoolLower
+        );
+        
+        const matches = schoolLower.includes(searchTermLower) && !isAlreadySelected;
+        
+        // Debug logging
+        if (matches && filteredSchools && filteredSchools.length < 5) {
+          console.log('School match in dropdown:', {
+            school,
+            searchTerm: schoolSearchTerm,
+            isAlreadySelected
+          });
+        }
+        
+        return matches;
+      })
+    : schools.filter(school => {
+        // Check if it's already selected - with case insensitivity
+        const schoolLower = school.toLowerCase();
+        const isAlreadySelected = selectedSchools.some(
+          selected => selected.toLowerCase() === schoolLower
+        );
+        
+        return !isAlreadySelected;
+      });
+
+  // School Selection button text
+  const getSchoolButtonText = () => {
+    if (isLoading) return 'Loading schools...';
+    if (selectedSchools.length === 0) return 'Select schools';
+    if (selectedSchools.length === 1) return selectedSchools[0];
+    return `${selectedSchools.length} schools selected`;
+  };
+  
   // Filter subjects based on search term
   const filteredSubjects = subjectSearchTerm
     ? subjects.filter(subject => 
@@ -384,15 +443,18 @@ const SearchBar = ({ onSearch, onFilterChange }) => {
             onClick={() => setDropdownOpen(!dropdownOpen)}
             className="w-full p-3 bg-white border border-gray-300 rounded-lg shadow-sm focus:outline-none focus:ring-2 focus:ring-blue-500 flex justify-between items-center"
             disabled={isLoading}
+            aria-label="Select schools"
+            aria-expanded={dropdownOpen}
           >
             <span className="text-gray-700 truncate">
-              {isLoading ? 'Loading schools...' : 'Select schools'}
+              {getSchoolButtonText()}
             </span>
             <svg 
               className={`w-5 h-5 text-gray-500 transition-transform ${dropdownOpen ? 'transform rotate-180' : ''}`} 
               xmlns="http://www.w3.org/2000/svg" 
               viewBox="0 0 20 20" 
               fill="currentColor"
+              aria-hidden="true"
             >
               <path fillRule="evenodd" d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z" clipRule="evenodd" />
             </svg>
