@@ -70,13 +70,363 @@ const CourseCard = ({ course }) => {
     setIsFlipped(!isFlipped);
   };
 
-  // Generate activity data for pie chart (mock data if not available)
-  const activityData = {
-    lectures: parseInt(course.lecture_hours) || 20,
-    tutorials: parseInt(course.tutorial_hours) || 10,
-    lab: parseInt(course.practical_hours) || 5,
-    independent: parseInt(course.independent_hours) || 65
+  // Generate activity data from actual course data
+  const extractActivityData = () => {
+    // Debug: Log course code for tracking
+    console.log(`Extracting activities for course: ${course.code}`);
+    
+    // Try to find activity data in multiple possible locations in the course object
+    const activities = {
+      lectures: 0,
+      tutorials: 0,
+      lab: 0,
+      independent: 0
+    };
+    
+    // First check if we have a "learning_activities" field and parse it
+    if (course.learning_activities) {
+      console.log(`Found learning_activities for ${course.code}:`, course.learning_activities);
+      try {
+        // If learning_activities is a string, try to parse it as JSON
+        let activitiesData = course.learning_activities;
+        if (typeof activitiesData === 'string') {
+          // Try to parse the string as JSON
+          try {
+            activitiesData = JSON.parse(activitiesData);
+            console.log(`Successfully parsed JSON for ${course.code}:`, activitiesData);
+          } catch (e) {
+            console.log(`Not valid JSON for ${course.code}, trying regex extraction`);
+            // If it's not valid JSON, check if it's a string with hours information
+            // Enhanced regex patterns to catch more variations
+            const lectureMatch = activitiesData.match(/(?:lecture|lectures|teaching|class)[s]?\s*(?:hours|time)?[:=\s-]+\s*(\d+)/i);
+            const tutorialMatch = activitiesData.match(/(?:tutorial|tutorials|seminar|seminars|workshop|workshops)[s]?\s*(?:hours|time)?[:=\s-]+\s*(\d+)/i);
+            const labMatch = activitiesData.match(/(?:lab|labs|practical|practicals|fieldwork)[s]?\s*(?:hours|time)?[:=\s-]+\s*(\d+)/i);
+            
+            // Expanded regex for independent learning to catch "Directed Learning and Independent Learning Hours" variations
+            const independentMatch = activitiesData.match(/(?:independent|self[\s-_]study|private|personal|unsupervised|directed(?:\s+learning)?(?:\s+and\s+independent(?:\s+learning)?)?)[s]?\s*(?:hours|time|work|learning)?[:=\s-]+\s*(\d+)/i);
+            
+            // Also check for total hours in case we need to calculate percentages
+            const totalHoursMatch = activitiesData.match(/(?:total\s+hours)[:=\s-]+\s*(\d+)/i);
+            
+            console.log(`Regex matches for ${course.code}:`, {
+              lectureMatch, tutorialMatch, labMatch, independentMatch, totalHoursMatch
+            });
+            
+            if (lectureMatch) activities.lectures = parseInt(lectureMatch[1]);
+            if (tutorialMatch) activities.tutorials = parseInt(tutorialMatch[1]);
+            if (labMatch) activities.lab = parseInt(labMatch[1]);
+            if (independentMatch) activities.independent = parseInt(independentMatch[1]);
+            
+            // If we have a total hours specified and independent study isn't found,
+            // we can try to calculate it based on the difference
+            if (totalHoursMatch && activities.independent === 0) {
+              const totalFromText = parseInt(totalHoursMatch[1]);
+              const sumOfOthers = activities.lectures + activities.tutorials + activities.lab;
+              
+              if (totalFromText > sumOfOthers) {
+                activities.independent = totalFromText - sumOfOthers;
+                console.log(`Calculated independent hours for ${course.code} from total: ${activities.independent}`);
+              }
+            }
+          }
+        }
+        
+        // If we have parsed JSON or object, extract the values
+        if (typeof activitiesData === 'object' && activitiesData !== null) {
+          // Map different terms to our activity categories
+          const lectureTerms = ['lectures', 'lecture', 'lecture_hours', 'lectureHours', 
+                               'scheduled_lecture', 'lecture_scheduled', 'teaching', 'classes',
+                               'class_hours', 'classHours', 'teaching_hours', 'teachingHours'];
+          
+          const tutorialTerms = ['tutorials', 'tutorial', 'tutorial_hours', 'tutorialHours', 
+                                'scheduled_tutorial', 'tutorial_scheduled', 'seminars', 'seminar',
+                                'workshop', 'workshops', 'seminar_hours', 'seminarHours',
+                                'workshop_hours', 'workshopHours'];
+          
+          const labTerms = ['lab', 'practical', 'lab_hours', 'practical_hours', 
+                          'labHours', 'practicalHours', 'scheduled_lab', 'lab_scheduled',
+                          'scheduled_practical', 'practical_scheduled', 'fieldwork',
+                          'fieldwork_hours', 'fieldworkHours'];
+          
+          const independentTerms = ['independent', 'self_study', 'independent_hours', 'independentHours',
+                                   'self_study_hours', 'selfStudyHours', 'unscheduled', 'unsupervised',
+                                   'private_study', 'personal_study', 'privateStudy', 'personalStudy',
+                                   'directed_learning_and_independent_learning', 'directed_learning',
+                                   'directed_learning_hours', 'directedLearningHours'];
+          
+          // Look for lecture-type activities
+          for (const term of lectureTerms) {
+            if (activitiesData[term] !== undefined && !isNaN(parseInt(activitiesData[term]))) {
+              activities.lectures = parseInt(activitiesData[term]);
+              console.log(`Found lecture hours for ${course.code} using term '${term}': ${activities.lectures}`);
+              break;
+            }
+          }
+          
+          // Look for tutorial-type activities
+          for (const term of tutorialTerms) {
+            if (activitiesData[term] !== undefined && !isNaN(parseInt(activitiesData[term]))) {
+              activities.tutorials = parseInt(activitiesData[term]);
+              console.log(`Found tutorial hours for ${course.code} using term '${term}': ${activities.tutorials}`);
+              break;
+            }
+          }
+          
+          // Look for lab-type activities
+          for (const term of labTerms) {
+            if (activitiesData[term] !== undefined && !isNaN(parseInt(activitiesData[term]))) {
+              activities.lab = parseInt(activitiesData[term]);
+              console.log(`Found lab hours for ${course.code} using term '${term}': ${activities.lab}`);
+              break;
+            }
+          }
+          
+          // Look for independent-type activities
+          for (const term of independentTerms) {
+            if (activitiesData[term] !== undefined && !isNaN(parseInt(activitiesData[term]))) {
+              activities.independent = parseInt(activitiesData[term]);
+              console.log(`Found independent hours for ${course.code} using term '${term}': ${activities.independent}`);
+              break;
+            }
+          }
+          
+          // Also check for nested structures
+          const checkNestedObject = (obj, path, category) => {
+            const parts = path.split('.');
+            let current = obj;
+            
+            for (const part of parts) {
+              if (current[part] === undefined) return false;
+              current = current[part];
+            }
+            
+            if (!isNaN(parseInt(current))) {
+              activities[category] = parseInt(current);
+              console.log(`Found ${category} hours for ${course.code} from nested path '${path}': ${activities[category]}`);
+              return true;
+            }
+            return false;
+          };
+          
+          // Check nested paths if we haven't found values yet
+          if (activities.lectures === 0) {
+            checkNestedObject(activitiesData, 'scheduled.lecture', 'lectures') || 
+            checkNestedObject(activitiesData, 'hours.lecture', 'lectures') ||
+            checkNestedObject(activitiesData, 'scheduled.teaching', 'lectures') ||
+            checkNestedObject(activitiesData, 'hours.teaching', 'lectures');
+          }
+          
+          if (activities.tutorials === 0) {
+            checkNestedObject(activitiesData, 'scheduled.tutorial', 'tutorials') || 
+            checkNestedObject(activitiesData, 'hours.tutorial', 'tutorials') ||
+            checkNestedObject(activitiesData, 'scheduled.seminar', 'tutorials') ||
+            checkNestedObject(activitiesData, 'hours.seminar', 'tutorials') ||
+            checkNestedObject(activitiesData, 'scheduled.workshop', 'tutorials') ||
+            checkNestedObject(activitiesData, 'hours.workshop', 'tutorials');
+          }
+          
+          if (activities.lab === 0) {
+            checkNestedObject(activitiesData, 'scheduled.lab', 'lab') || 
+            checkNestedObject(activitiesData, 'hours.lab', 'lab') ||
+            checkNestedObject(activitiesData, 'scheduled.practical', 'lab') ||
+            checkNestedObject(activitiesData, 'hours.practical', 'lab');
+          }
+          
+          if (activities.independent === 0) {
+            checkNestedObject(activitiesData, 'hours.independent', 'independent') || 
+            checkNestedObject(activitiesData, 'hours.self_study', 'independent');
+          }
+        }
+      } catch (error) {
+        // If any error occurs during parsing, we'll fall back to other methods
+        console.error(`Error parsing learning_activities for ${course.code}:`, error);
+      }
+    }
+    
+    // If learning_activities didn't have data, try traditional methods as fallback
+    // For lectures
+    if (activities.lectures === 0) {
+      if (course.lecture_hours !== undefined) {
+        activities.lectures = parseInt(course.lecture_hours) || 0;
+        console.log(`Found lecture hours for ${course.code} from lecture_hours: ${activities.lectures}`);
+      } else if (course.scheduled_hours?.lecture !== undefined) {
+        activities.lectures = parseInt(course.scheduled_hours.lecture) || 0;
+        console.log(`Found lecture hours for ${course.code} from scheduled_hours.lecture: ${activities.lectures}`);
+      } else if (course.activities?.lectures !== undefined) {
+        activities.lectures = parseInt(course.activities.lectures) || 0;
+        console.log(`Found lecture hours for ${course.code} from activities.lectures: ${activities.lectures}`);
+      } else if (course.hours?.lecture !== undefined) {
+        activities.lectures = parseInt(course.hours.lecture) || 0;
+        console.log(`Found lecture hours for ${course.code} from hours.lecture: ${activities.lectures}`);
+      } else if (course.teaching_hours !== undefined) {
+        activities.lectures = parseInt(course.teaching_hours) || 0;
+        console.log(`Found lecture hours for ${course.code} from teaching_hours: ${activities.lectures}`);
+      } else if (course.class_hours !== undefined) {
+        activities.lectures = parseInt(course.class_hours) || 0;
+        console.log(`Found lecture hours for ${course.code} from class_hours: ${activities.lectures}`);
+      }
+    }
+    
+    // For tutorials
+    if (activities.tutorials === 0) {
+      if (course.tutorial_hours !== undefined) {
+        activities.tutorials = parseInt(course.tutorial_hours) || 0;
+        console.log(`Found tutorial hours for ${course.code} from tutorial_hours: ${activities.tutorials}`);
+      } else if (course.scheduled_hours?.tutorial !== undefined) {
+        activities.tutorials = parseInt(course.scheduled_hours.tutorial) || 0;
+        console.log(`Found tutorial hours for ${course.code} from scheduled_hours.tutorial: ${activities.tutorials}`);
+      } else if (course.activities?.tutorials !== undefined) {
+        activities.tutorials = parseInt(course.activities.tutorials) || 0;
+        console.log(`Found tutorial hours for ${course.code} from activities.tutorials: ${activities.tutorials}`);
+      } else if (course.hours?.tutorial !== undefined) {
+        activities.tutorials = parseInt(course.hours.tutorial) || 0;
+        console.log(`Found tutorial hours for ${course.code} from hours.tutorial: ${activities.tutorials}`);
+      } else if (course.seminar_hours !== undefined) {
+        activities.tutorials = parseInt(course.seminar_hours) || 0;
+        console.log(`Found tutorial hours for ${course.code} from seminar_hours: ${activities.tutorials}`);
+      } else if (course.workshop_hours !== undefined) {
+        activities.tutorials = parseInt(course.workshop_hours) || 0;
+        console.log(`Found tutorial hours for ${course.code} from workshop_hours: ${activities.tutorials}`);
+      }
+    }
+    
+    // For labs/practicals
+    if (activities.lab === 0) {
+      if (course.practical_hours !== undefined) {
+        activities.lab = parseInt(course.practical_hours) || 0;
+        console.log(`Found lab hours for ${course.code} from practical_hours: ${activities.lab}`);
+      } else if (course.lab_hours !== undefined) {
+        activities.lab = parseInt(course.lab_hours) || 0;
+        console.log(`Found lab hours for ${course.code} from lab_hours: ${activities.lab}`);
+      } else if (course.scheduled_hours?.practical !== undefined) {
+        activities.lab = parseInt(course.scheduled_hours.practical) || 0;
+        console.log(`Found lab hours for ${course.code} from scheduled_hours.practical: ${activities.lab}`);
+      } else if (course.scheduled_hours?.lab !== undefined) {
+        activities.lab = parseInt(course.scheduled_hours.lab) || 0;
+        console.log(`Found lab hours for ${course.code} from scheduled_hours.lab: ${activities.lab}`);
+      } else if (course.activities?.lab !== undefined) {
+        activities.lab = parseInt(course.activities.lab) || 0;
+        console.log(`Found lab hours for ${course.code} from activities.lab: ${activities.lab}`);
+      } else if (course.activities?.practical !== undefined) {
+        activities.lab = parseInt(course.activities.practical) || 0;
+        console.log(`Found lab hours for ${course.code} from activities.practical: ${activities.lab}`);
+      } else if (course.hours?.lab !== undefined) {
+        activities.lab = parseInt(course.hours.lab) || 0;
+        console.log(`Found lab hours for ${course.code} from hours.lab: ${activities.lab}`);
+      } else if (course.hours?.practical !== undefined) {
+        activities.lab = parseInt(course.hours.practical) || 0;
+        console.log(`Found lab hours for ${course.code} from hours.practical: ${activities.lab}`);
+      } else if (course.fieldwork_hours !== undefined) {
+        activities.lab = parseInt(course.fieldwork_hours) || 0;
+        console.log(`Found lab hours for ${course.code} from fieldwork_hours: ${activities.lab}`);
+      }
+    }
+    
+    // For independent study
+    if (activities.independent === 0) {
+      if (course.independent_hours !== undefined) {
+        activities.independent = parseInt(course.independent_hours) || 0;
+        console.log(`Found independent hours for ${course.code} from independent_hours: ${activities.independent}`);
+      } else if (course.self_study_hours !== undefined) {
+        activities.independent = parseInt(course.self_study_hours) || 0;
+        console.log(`Found independent hours for ${course.code} from self_study_hours: ${activities.independent}`);
+      } else if (course.scheduled_hours?.independent !== undefined) {
+        activities.independent = parseInt(course.scheduled_hours.independent) || 0;
+        console.log(`Found independent hours for ${course.code} from scheduled_hours.independent: ${activities.independent}`);
+      } else if (course.scheduled_hours?.self_study !== undefined) {
+        activities.independent = parseInt(course.scheduled_hours.self_study) || 0;
+        console.log(`Found independent hours for ${course.code} from scheduled_hours.self_study: ${activities.independent}`);
+      } else if (course.activities?.independent !== undefined) {
+        activities.independent = parseInt(course.activities.independent) || 0;
+        console.log(`Found independent hours for ${course.code} from activities.independent: ${activities.independent}`);
+      } else if (course.activities?.self_study !== undefined) {
+        activities.independent = parseInt(course.activities.self_study) || 0;
+        console.log(`Found independent hours for ${course.code} from activities.self_study: ${activities.independent}`);
+      } else if (course.hours?.independent !== undefined) {
+        activities.independent = parseInt(course.hours.independent) || 0;
+        console.log(`Found independent hours for ${course.code} from hours.independent: ${activities.independent}`);
+      } else if (course.hours?.self_study !== undefined) {
+        activities.independent = parseInt(course.hours.self_study) || 0;
+        console.log(`Found independent hours for ${course.code} from hours.self_study: ${activities.independent}`);
+      } else if (course.private_study_hours !== undefined) {
+        activities.independent = parseInt(course.private_study_hours) || 0;
+        console.log(`Found independent hours for ${course.code} from private_study_hours: ${activities.independent}`);
+      } else if (course.personal_study_hours !== undefined) {
+        activities.independent = parseInt(course.personal_study_hours) || 0;
+        console.log(`Found independent hours for ${course.code} from personal_study_hours: ${activities.independent}`);
+      }
+    }
+    
+    // Calculate total hours
+    const totalHours = activities.lectures + activities.tutorials + activities.lab + activities.independent;
+    console.log(`Total hours for ${course.code}: ${totalHours}`, activities);
+    
+    // If we have no data or total is 0, use some reasonable defaults based on credit value
+    if (totalHours === 0) {
+      // Estimate based on credits (10 hours per credit is standard)
+      const credits = parseInt(course.credits) || 20;
+      const estimatedTotal = credits * 10;
+      
+      console.log(`No activity data found for ${course.code}. Using defaults based on ${credits} credits (${estimatedTotal} hours total)`);
+      
+      // Split using typical ratios for university courses
+      const percentages = {
+        lectures: 20, // 20% lectures
+        tutorials: 10, // 10% tutorials
+        lab: 5, // 5% lab work
+        independent: 65 // 65% independent study
+      };
+      
+      console.log(`Default percentages for ${course.code}:`, percentages);
+      return percentages;
+    }
+    
+    // Convert hours to percentages - use more precise calculations first
+    const rawPercentages = {
+      lectures: (activities.lectures / totalHours) * 100,
+      tutorials: (activities.tutorials / totalHours) * 100,
+      lab: (activities.lab / totalHours) * 100,
+      independent: (activities.independent / totalHours) * 100
+    };
+    
+    // Then round them while keeping track of the rounding errors
+    let percentages = {
+      lectures: Math.round(rawPercentages.lectures),
+      tutorials: Math.round(rawPercentages.tutorials),
+      lab: Math.round(rawPercentages.lab),
+      independent: Math.round(rawPercentages.independent)
+    };
+    
+    // Ensure percentages add up to exactly 100%
+    const totalPercentage = percentages.lectures + percentages.tutorials + percentages.lab + percentages.independent;
+    
+    if (totalPercentage !== 100) {
+      console.log(`Adjusting percentages for ${course.code}: total was ${totalPercentage}%`);
+      
+      // Find the largest value to adjust (based on raw percentages to preserve proportions)
+      const largestKey = Object.keys(rawPercentages).reduce((a, b) => 
+        rawPercentages[a] > rawPercentages[b] ? a : b
+      );
+      
+      // Adjust the largest value to make total 100%
+      percentages[largestKey] += (100 - totalPercentage);
+      console.log(`Adjusted ${largestKey} by ${100 - totalPercentage} to make total 100%`);
+    }
+    
+    // Final validation - just to be absolutely certain we have 100%
+    const finalTotal = percentages.lectures + percentages.tutorials + percentages.lab + percentages.independent;
+    if (finalTotal !== 100) {
+      console.error(`Error: Percentages for ${course.code} still don't add up to 100% (${finalTotal}%)`);
+      // Force correction on independent study as a last resort
+      percentages.independent += (100 - finalTotal);
+    }
+    
+    console.log(`Final percentages for ${course.code}:`, percentages);
+    return percentages;
   };
+
+  // Get activity data for THIS SPECIFIC COURSE instance - ensures unique graph per course
+  const activityData = React.useMemo(() => extractActivityData(), [course.code]);
 
   // Get assessment info - handle multiple possible formats
   let assessmentInfo = {
@@ -162,6 +512,65 @@ const CourseCard = ({ course }) => {
   // Check if there's a meaningful full_text beyond our defaults
   const hasAssessmentInfo = assessmentInfo.full_text !== 'Assessment information not provided by DRPS' && 
                             assessmentInfo.full_text !== 'No formal exam, coursework-only assessment';
+  
+  // Check if there's assessment percentage data to display in the pie chart
+  const hasAssessmentPercentages = assessmentInfo.written_exam_percent > 0 || 
+                                  assessmentInfo.coursework_percent > 0 || 
+                                  assessmentInfo.practical_exam_percent > 0;
+  
+  // Generate the conic gradient for the pie chart
+  const generatePieChartGradient = () => {
+    const written = assessmentInfo.written_exam_percent;
+    const coursework = assessmentInfo.coursework_percent;
+    const practical = assessmentInfo.practical_exam_percent;
+    
+    // Calculate start and end angles for each segment
+    let segments = [];
+    let currentAngle = 0;
+    
+    if (written > 0) {
+      const writtenAngle = (written / 100) * 360;
+      segments.push({
+        start: currentAngle,
+        end: currentAngle + writtenAngle,
+        color: '#3b82f6' // Blue for written exams
+      });
+      currentAngle += writtenAngle;
+    }
+    
+    if (coursework > 0) {
+      const courseworkAngle = (coursework / 100) * 360;
+      segments.push({
+        start: currentAngle,
+        end: currentAngle + courseworkAngle,
+        color: '#ef4444' // Red for coursework
+      });
+      currentAngle += courseworkAngle;
+    }
+    
+    if (practical > 0) {
+      const practicalAngle = (practical / 100) * 360;
+      segments.push({
+        start: currentAngle,
+        end: currentAngle + practicalAngle,
+        color: '#22c55e' // Green for practical exams
+      });
+    }
+    
+    // Create the conic gradient string
+    if (segments.length === 0) return 'conic-gradient(#e5e7eb 0deg, #e5e7eb 360deg)'; // Empty gray circle
+    
+    let gradientString = 'conic-gradient(';
+    segments.forEach((segment, index) => {
+      gradientString += `${segment.color} ${segment.start}deg, ${segment.color} ${segment.end}deg`;
+      if (index < segments.length - 1) {
+        gradientString += ', ';
+      }
+    });
+    gradientString += ')';
+    
+    return gradientString;
+  };
 
   return (
     <div 
@@ -218,23 +627,60 @@ const CourseCard = ({ course }) => {
                   <p className="text-sm text-gray-700">
                     {assessmentInfo.full_text || 'Not specified'}
                   </p>
+                  
+                  {/* Assessment Percentages as Tags */}
                   <div className="flex flex-wrap mt-1 gap-1">
                     {assessmentInfo.written_exam_percent > 0 && (
-                      <span className="text-xs px-2 py-1 bg-yellow-100 text-yellow-800 rounded-full">
+                      <span className="text-xs px-2 py-1 bg-blue-100 text-blue-800 rounded-full">
                         Exam {assessmentInfo.written_exam_percent}%
                       </span>
                     )}
                     {assessmentInfo.coursework_percent > 0 && (
-                      <span className="text-xs px-2 py-1 bg-green-100 text-green-800 rounded-full">
+                      <span className="text-xs px-2 py-1 bg-red-100 text-red-800 rounded-full">
                         Coursework {assessmentInfo.coursework_percent}%
                       </span>
                     )}
                     {assessmentInfo.practical_exam_percent > 0 && (
-                      <span className="text-xs px-2 py-1 bg-purple-100 text-purple-800 rounded-full">
+                      <span className="text-xs px-2 py-1 bg-green-100 text-green-800 rounded-full">
                         Practical {assessmentInfo.practical_exam_percent}%
                       </span>
                     )}
                   </div>
+                  
+                  {/* Assessment Pie Chart - Make sure it's visible */}
+                  {hasAssessmentPercentages && (
+                    <div className="mt-3 mb-2">
+                      <div className="flex items-center justify-center">
+                        <div 
+                          className="w-20 h-20 rounded-full border border-gray-200 overflow-hidden" 
+                          style={{ 
+                            background: generatePieChartGradient(),
+                            boxShadow: '0 1px 3px rgba(0,0,0,0.1)'
+                          }}
+                        ></div>
+                      </div>
+                      <div className="flex justify-center text-xs mt-2 gap-2">
+                        {assessmentInfo.written_exam_percent > 0 && (
+                          <span className="flex items-center">
+                            <span className="w-3 h-3 inline-block bg-blue-500 rounded-full mr-1"></span>
+                            Exam
+                          </span>
+                        )}
+                        {assessmentInfo.coursework_percent > 0 && (
+                          <span className="flex items-center">
+                            <span className="w-3 h-3 inline-block bg-red-500 rounded-full mr-1"></span>
+                            Coursework
+                          </span>
+                        )}
+                        {assessmentInfo.practical_exam_percent > 0 && (
+                          <span className="flex items-center">
+                            <span className="w-3 h-3 inline-block bg-green-500 rounded-full mr-1"></span>
+                            Practical
+                          </span>
+                        )}
+                      </div>
+                    </div>
+                  )}
                 </>
               ) : (
                 <p className="text-sm text-gray-700">
@@ -254,8 +700,6 @@ const CourseCard = ({ course }) => {
               </div>
             )}
             
-            {/* Keywords section removed */}
-            
             {/* Requirements - only show if there's actual content */}
             {course.pre_requisites && (
               <div className="mb-2">
@@ -274,17 +718,39 @@ const CourseCard = ({ course }) => {
           {/* Pie Chart Visualization (simplified visual representation) */}
           <div className="mt-auto">
             <h4 className="text-md font-semibold mb-1">Course Activities:</h4>
+            {/* Activity bars with percentage widths */}
             <div className="flex items-center space-x-1">
-              <div className="h-4 bg-blue-500 rounded-l" style={{ width: `${activityData.lectures}%` }} title={`Lectures: ${activityData.lectures}%`}></div>
-              <div className="h-4 bg-green-500" style={{ width: `${activityData.tutorials}%` }} title={`Tutorials: ${activityData.tutorials}%`}></div>
-              <div className="h-4 bg-yellow-500" style={{ width: `${activityData.lab}%` }} title={`Lab: ${activityData.lab}%`}></div>
-              <div className="h-4 bg-purple-500 rounded-r" style={{ width: `${activityData.independent}%` }} title={`Independent: ${activityData.independent}%`}></div>
+              <div className="h-4 bg-blue-500 rounded-l" 
+                style={{ width: `${activityData.lectures}%`, minWidth: activityData.lectures > 0 ? '8px' : '0' }} 
+                title={`Lectures: ${activityData.lectures}%`}>
+              </div>
+              <div className="h-4 bg-green-500" 
+                style={{ width: `${activityData.tutorials}%`, minWidth: activityData.tutorials > 0 ? '8px' : '0' }} 
+                title={`Tutorials: ${activityData.tutorials}%`}>
+              </div>
+              <div className="h-4 bg-yellow-500" 
+                style={{ width: `${activityData.lab}%`, minWidth: activityData.lab > 0 ? '8px' : '0' }} 
+                title={`Lab: ${activityData.lab}%`}>
+              </div>
+              <div className="h-4 bg-purple-500 rounded-r" 
+                style={{ width: `${activityData.independent}%`, minWidth: activityData.independent > 0 ? '8px' : '0' }} 
+                title={`Independent: ${activityData.independent}%`}>
+              </div>
             </div>
+            {/* Activity labels with percentages */}
             <div className="flex justify-between text-xs mt-1">
-              <span className="text-blue-500">Lectures</span>
-              <span className="text-green-500">Tutorials</span>
-              <span className="text-yellow-500">Lab</span>
-              <span className="text-purple-500">Independent</span>
+              <span className={`${activityData.lectures > 0 ? 'text-blue-500' : 'text-gray-400'}`}>
+                {activityData.lectures}% Lectures
+              </span>
+              <span className={`${activityData.tutorials > 0 ? 'text-green-500' : 'text-gray-400'}`}>
+                {activityData.tutorials}% Tutorials
+              </span>
+              <span className={`${activityData.lab > 0 ? 'text-yellow-500' : 'text-gray-400'}`}>
+                {activityData.lab}% Lab
+              </span>
+              <span className={`${activityData.independent > 0 ? 'text-purple-500' : 'text-gray-400'}`}>
+                {activityData.independent}% Independent
+              </span>
             </div>
             <div className="text-center text-gray-500 text-xs mt-3">
               Click to flip back

@@ -56,7 +56,7 @@
     "prohibited_combinations": "",
     "academic_year": "Quota:  120",
     "course_start": "Semester 1",
-    "learning_activities": "Total Hours:\n200\n\n(\n Lecture Hours 20,\n\n\n Supervised Practical/Workshop/Studio Hours 30,\n\n\nOnline Activities 20,\n\n\n Summative Assessment Hours 20,\n\n\n Programme Level Learning and Teaching Hours 4,\n\nDirected Learning and Independent Learning Hours\n106 )",
+    "learning_activities": "Total Hours: 200 ( Lecture Hours 20, Supervised Practical/Workshop/Studio Hours 30, Online Activities 20, Summative Assessment Hours 20, Programme Level Learning and Teaching Hours 4, Directed Learning and Independent Learning Hours 106 )",
     "assessment": {
       "written_exam_percent": 0,
       "coursework_percent": 100,
@@ -157,7 +157,7 @@
     "prohibited_combinations": "",
     "academic_year": "Quota:  87",
     "course_start": "Semester 2",
-    "learning_activities": "Total Hours:\n200\n\n(\n Lecture Hours 54,\n\n\n\n\n\n\n\n\n\n\n\n Programme Level Learning and Teaching Hours 4,\n\nDirected Learning and Independent Learning Hours\n142 )",
+    "learning_activities": "Total Hours: 200 ( Lecture Hours 54, Programme Level Learning and Teaching Hours 4, Directed Learning and Independent Learning Hours 142 )",
     "assessment": {
       "written_exam_percent": 0,
       "coursework_percent": 100,
@@ -196,7 +196,7 @@
     "prohibited_combinations": "",
     "academic_year": "Quota:  120",
     "course_start": "Semester 1",
-    "learning_activities": "Total Hours:\n200\n\n(\n Lecture Hours 44,\n Seminar/Tutorial Hours 10,\n\n\n\n\n\n\n\n\n\n Other Study Hours 40,\n Programme Level Learning and Teaching Hours 4,\n\nDirected Learning and Independent Learning Hours\n102 )",
+    "learning_activities": "Total Hours: 200 ( Lecture Hours 44, Seminar/Tutorial Hours 10, Other Study Hours 40, Programme Level Learning and Teaching Hours 4, Directed Learning and Independent Learning Hours 102 )",
     "assessment": {
       "written_exam_percent": 0,
       "coursework_percent": 100,
@@ -274,7 +274,7 @@
     "high_demand": "Yes",
     "academic_year": "Quota:  150",
     "course_start": "Semester 1",
-    "learning_activities": "Total Hours:\n200\n\n(\n Lecture Hours 20,\n Seminar/Tutorial Hours 30,\n\n\n\n\n\n\n\n\n\n Other Study Hours 50,\n Programme Level Learning and Teaching Hours 4,\n\nDirected Learning and Independent Learning Hours\n96 )",
+    "learning_activities": "Total Hours: 200 ( Lecture Hours 20, Seminar/Tutorial Hours 30, Other Study Hours 50, Programme Level Learning and Teaching Hours 4, Directed Learning and Independent Learning Hours 96 )",
     "assessment": {
       "written_exam_percent": 40,
       "coursework_percent": 60,
@@ -315,7 +315,7 @@
     "high_demand": "Yes",
     "academic_year": "Quota:  36",
     "course_start": "16/09/2024",
-    "learning_activities": "Total Hours:\n200\n\n(\n Lecture Hours 20,\n\n\n Supervised Practical/Workshop/Studio Hours 18,\n Fieldwork Hours 16,\n\n\n Feedback/Feedforward Hours 2,\n Formative Assessment Hours 2,\n Summative Assessment Hours 2,\n\n\n Programme Level Learning and Teaching Hours 4,\n\nDirected Learning and Independent Learning Hours\n136 )",
+    "learning_activities": "Total Hours: 200 ( Lecture Hours 20, Supervised Practical/Workshop/Studio Hours 18, Fieldwork Hours 16, Feedback/Feedforward Hours 2, Formative Assessment Hours 2, Summative Assessment Hours 2, Programme Level Learning and Teaching Hours 4, Directed Learning and Independent Learning Hours 136 )",
     "assessment": {
       "written_exam_percent": 50,
       "coursework_percent": 50,
@@ -389,7 +389,7 @@
     "prohibited_combinations": "",
     "academic_year": "Quota:  120",
     "course_start": "Blocks 4-5 (Sem 2)",
-    "learning_activities": "Total Hours:\n200\n\n(\n Lecture Hours 6,\n\n\n\n Fieldwork Hours 110,\n\n\n Feedback/Feedforward Hours 16,\n\n\n\n Other Study Hours 4,\n Programme Level Learning and Teaching Hours 4,\n\nDirected Learning and Independent Learning Hours\n60 )",
+    "learning_activities": "Total Hours: 200 ( Lecture Hours 6, Fieldwork Hours 110, Feedback/Feedforward Hours 16, Other Study Hours 4, Programme Level Learning and Teaching Hours 4, Directed Learning and Independent Learning Hours 60 )",
     "assessment": {
       "written_exam_percent": 0,
       "coursework_percent": 100,
@@ -429,7 +429,7 @@
     "additional_costs": "Living costs whilst on site in NW Scotland. All accommodation, transport and supervision/demonstration costs are borne by the School.",
     "academic_year": "Quota:  45",
     "course_start": "Semester 2",
-    "learning_activities": "Total Hours:\n200\n\n(\n Lecture Hours 3,\n\n\n\n Fieldwork Hours 120,\n\n\n\n\n\n\n Other Study Hours 64,\n Programme Level Learning and Teaching Hours 4,\n\nDirected Learning and Independent Learning Hours\n9 )",
+    "learning_activities": "Total Hours: 200 ( Lecture Hours 3, Fieldwork Hours 120, Other Study Hours 64, Programme Level Learning and Teaching Hours 4, Directed Learning and Independent Learning Hours 9 )",
     "assessment": {
       "written_exam_percent": 0,
       "coursework_percent": 100,
@@ -470,7 +470,7 @@
     "high_demand": "Yes",
     "academic_year": "Quota:  100",
     "course_start": "Semester 2",
-    "learning_activities": "Total Hours:\n200\n\n(\n Lecture Hours 114,\n\n\n\n\n\n\n\n\n\n\n\n Programme Level Learning and Teaching Hours 4,\n\nDirected Learning and Independent Learning Hours\n82 )",
+    "learning_activities": "Total Hours: 200 ( Lecture Hours 114, Programme Level Learning and Teaching Hours 4, Directed Learning and Independent Learning Hours 82 )",
     "assessment": {
       "written_exam_percent": 0,
       "coursework_percent": 100,
@@ -545,7 +545,7 @@
     "prohibited_combinations": "",
     "academic_year": "Quota:  31",
     "course_start": "Semester 1",
-    "learning_activities": "Total Hours:\n100\n\n(\n\n\n\n\n\n\n\n\n\n\n\n\n Programme Level Learning and Teaching Hours 2,\n\nDirected Learning and Independent Learning Hours\n98 )",
+    "learning_activities": "Total Hours: 100 ( Programme Level Learning and Teaching Hours 2, Directed Learning and Independent Learning Hours 98 )",
     "assessment": {
       "written_exam_percent": 0,
       "coursework_percent": 100,
@@ -616,7 +616,7 @@
     "high_demand": "Yes",
     "academic_year": "Quota:  90",
     "course_start": "Semester 2",
-    "learning_activities": "Total Hours:\n200\n\n(\n Lecture Hours 30,\n\n\n Supervised Practical/Workshop/Studio Hours 15,\n\n\n\n Feedback/Feedforward Hours 3,\n\n Summative Assessment Hours 3,\n\n\n Programme Level Learning and Teaching Hours 4,\n\nDirected Learning and Independent Learning Hours\n145 )",
+    "learning_activities": "Total Hours: 200 ( Lecture Hours 30, Supervised Practical/Workshop/Studio Hours 15, Feedback/Feedforward Hours 3, Summative Assessment Hours 3, Programme Level Learning and Teaching Hours 4, Directed Learning and Independent Learning Hours 145 )",
     "assessment": {
       "written_exam_percent": 70,
       "coursework_percent": 30,
@@ -728,7 +728,7 @@
     "high_demand": "Yes",
     "academic_year": "Quota:  86",
     "course_start": "Semester 1",
-    "learning_activities": "Total Hours:\n200\n\n(\n Lecture Hours 20,\n\n\n Supervised Practical/Workshop/Studio Hours 9,\n\n\n\n Feedback/Feedforward Hours 2,\n\n Summative Assessment Hours 2,\n\n\n Programme Level Learning and Teaching Hours 4,\n\nDirected Learning and Independent Learning Hours\n163 )",
+    "learning_activities": "Total Hours: 200 ( Lecture Hours 20, Supervised Practical/Workshop/Studio Hours 9, Feedback/Feedforward Hours 2, Summative Assessment Hours 2, Programme Level Learning and Teaching Hours 4, Directed Learning and Independent Learning Hours 163 )",
     "assessment": {
       "written_exam_percent": 50,
       "coursework_percent": 50,
@@ -770,7 +770,7 @@
     "high_demand": "Yes",
     "academic_year": "Quota:  150",
     "course_start": "Semester 2",
-    "learning_activities": "Total Hours:\n200\n\n(\n Lecture Hours 24,\n\n\n Supervised Practical/Workshop/Studio Hours 27,\n\n\n\n Feedback/Feedforward Hours 3,\n\n Summative Assessment Hours 3,\n\n\n Programme Level Learning and Teaching Hours 4,\n\nDirected Learning and Independent Learning Hours\n139 )",
+    "learning_activities": "Total Hours: 200 ( Lecture Hours 24, Supervised Practical/Workshop/Studio Hours 27, Feedback/Feedforward Hours 3, Summative Assessment Hours 3, Programme Level Learning and Teaching Hours 4, Directed Learning and Independent Learning Hours 139 )",
     "assessment": {
       "written_exam_percent": 50,
       "coursework_percent": 50,
@@ -813,7 +813,7 @@
     "high_demand": "Yes",
     "academic_year": "Quota:  26",
     "course_start": "Semester 2",
-    "learning_activities": "Total Hours:\n200\n\n(\n Lecture Hours 22,\n Seminar/Tutorial Hours 10,\n\n Supervised Practical/Workshop/Studio Hours 9,\n\n\n\n Feedback/Feedforward Hours 3,\n\n Summative Assessment Hours 3,\n\n\n Programme Level Learning and Teaching Hours 4,\n\nDirected Learning and Independent Learning Hours\n149 )",
+    "learning_activities": "Total Hours: 200 ( Lecture Hours 22, Seminar/Tutorial Hours 10, Supervised Practical/Workshop/Studio Hours 9, Feedback/Feedforward Hours 3, Summative Assessment Hours 3, Programme Level Learning and Teaching Hours 4, Directed Learning and Independent Learning Hours 149 )",
     "assessment": {
       "written_exam_percent": 70,
       "coursework_percent": 30,
@@ -853,7 +853,7 @@
     "prohibited_combinations": "",
     "academic_year": "Quota:  120",
     "course_start": "Semester 2",
-    "learning_activities": "Total Hours:\n200\n\n(\n Lecture Hours 17,\n\n\n Supervised Practical/Workshop/Studio Hours 40,\n\n\n\n Feedback/Feedforward Hours 20,\n\n\n\n\n Programme Level Learning and Teaching Hours 4,\n\nDirected Learning and Independent Learning Hours\n119 )",
+    "learning_activities": "Total Hours: 200 ( Lecture Hours 17, Supervised Practical/Workshop/Studio Hours 40, Feedback/Feedforward Hours 20, Programme Level Learning and Teaching Hours 4, Directed Learning and Independent Learning Hours 119 )",
     "assessment": {
       "written_exam_percent": 50,
       "coursework_percent": 50,
@@ -893,7 +893,7 @@
     "additional_costs": "****** This Course ONLY open to 3rd-year Environmental Geoscience students ******",
     "academic_year": "Quota:  None",
     "course_start": "Semester 2",
-    "learning_activities": "Total Hours:\n200\n\n(\n Lecture Hours 3,\n\n\n Supervised Practical/Workshop/Studio Hours 8,\n Fieldwork Hours 24,\n\n\n Feedback/Feedforward Hours 3,\n\n Summative Assessment Hours 1,\n\n\n Programme Level Learning and Teaching Hours 4,\n\nDirected Learning and Independent Learning Hours\n157 )",
+    "learning_activities": "Total Hours: 200 ( Lecture Hours 3, Supervised Practical/Workshop/Studio Hours 8, Fieldwork Hours 24, Feedback/Feedforward Hours 3, Summative Assessment Hours 1, Programme Level Learning and Teaching Hours 4, Directed Learning and Independent Learning Hours 157 )",
     "assessment": {
       "written_exam_percent": 0,
       "coursework_percent": 100,
@@ -933,7 +933,7 @@
     "prohibited_combinations": "",
     "academic_year": "Quota:  None",
     "course_start": "Full Year",
-    "learning_activities": "Total Hours:\n200\n\n(\n Lecture Hours 4,\n Seminar/Tutorial Hours 8,\n\n\n Fieldwork Hours 85,\n\n\n\n\n\n\n\n Programme Level Learning and Teaching Hours 4,\n\nDirected Learning and Independent Learning Hours\n99 )",
+    "learning_activities": "Total Hours: 200 ( Lecture Hours 4, Seminar/Tutorial Hours 8, Fieldwork Hours 85, Programme Level Learning and Teaching Hours 4, Directed Learning and Independent Learning Hours 99 )",
     "assessment": {
       "written_exam_percent": 0,
       "coursework_percent": 100,
@@ -974,7 +974,7 @@
     "high_demand": "Yes",
     "academic_year": "Quota:  35",
     "course_start": "Semester 1",
-    "learning_activities": "Total Hours:\n200\n\n(\n Lecture Hours 20,\n Seminar/Tutorial Hours 30,\n\n\n\n\n\n Feedback/Feedforward Hours 5,\n\n Summative Assessment Hours 2,\n Revision Session Hours 3,\n\n Programme Level Learning and Teaching Hours 4,\n\nDirected Learning and Independent Learning Hours\n136 )",
+    "learning_activities": "Total Hours: 200 ( Lecture Hours 20, Seminar/Tutorial Hours 30, Feedback/Feedforward Hours 5, Summative Assessment Hours 2, Revision Session Hours 3, Programme Level Learning and Teaching Hours 4, Directed Learning and Independent Learning Hours 136 )",
     "assessment": {
       "written_exam_percent": 50,
       "coursework_percent": 50,
@@ -1015,7 +1015,7 @@
     "high_demand": "Yes",
     "academic_year": "Quota:  25",
     "course_start": "Semester 1",
-    "learning_activities": "Total Hours:\n200\n\n(\n Lecture Hours 18,\n Seminar/Tutorial Hours 10,\n\n Supervised Practical/Workshop/Studio Hours 30,\n\n\n\n Feedback/Feedforward Hours 2,\n\n Summative Assessment Hours 2,\n\n\n Programme Level Learning and Teaching Hours 4,\n\nDirected Learning and Independent Learning Hours\n134 )",
+    "learning_activities": "Total Hours: 200 ( Lecture Hours 18, Seminar/Tutorial Hours 10, Supervised Practical/Workshop/Studio Hours 30, Feedback/Feedforward Hours 2, Summative Assessment Hours 2, Programme Level Learning and Teaching Hours 4, Directed Learning and Independent Learning Hours 134 )",
     "assessment": {
       "written_exam_percent": 30,
       "coursework_percent": 70,
@@ -1113,7 +1113,7 @@
     "prohibited_combinations": "",
     "academic_year": "Quota:  None",
     "course_start": "Full Year",
-    "learning_activities": "Total Hours:\n200\n\n(\n Lecture Hours 18,\n Seminar/Tutorial Hours 10,\n\n Supervised Practical/Workshop/Studio Hours 30,\n\n\n\n Feedback/Feedforward Hours 2,\n\n Summative Assessment Hours 2,\n\n\n Programme Level Learning and Teaching Hours 4,\n\nDirected Learning and Independent Learning Hours\n134 )",
+    "learning_activities": "Total Hours: 200 ( Lecture Hours 18, Seminar/Tutorial Hours 10, Supervised Practical/Workshop/Studio Hours 30, Feedback/Feedforward Hours 2, Summative Assessment Hours 2, Programme Level Learning and Teaching Hours 4, Directed Learning and Independent Learning Hours 134 )",
     "assessment": {
       "written_exam_percent": 0,
       "coursework_percent": 100,
@@ -1154,7 +1154,7 @@
     "high_demand": "Yes",
     "academic_year": "Quota:  None",
     "course_start": "Semester 2",
-    "learning_activities": "Total Hours:\n200\n\n(\n Lecture Hours 22,\n Seminar/Tutorial Hours 11,\n\n Supervised Practical/Workshop/Studio Hours 17,\n\n\n\n\n\n Summative Assessment Hours 2,\n\n\n Programme Level Learning and Teaching Hours 4,\n\nDirected Learning and Independent Learning Hours\n144 )",
+    "learning_activities": "Total Hours: 200 ( Lecture Hours 22, Seminar/Tutorial Hours 11, Supervised Practical/Workshop/Studio Hours 17, Summative Assessment Hours 2, Programme Level Learning and Teaching Hours 4, Directed Learning and Independent Learning Hours 144 )",
     "assessment": {
       "written_exam_percent": 50,
       "coursework_percent": 50,
@@ -1231,7 +1231,7 @@
     "high_demand": "Yes",
     "academic_year": "Quota:  None",
     "course_start": "Semester 1",
-    "learning_activities": "Total Hours:\n100\n\n(\n Lecture Hours 15,\n\n\n\n\n\n\n Feedback/Feedforward Hours 3,\n\n Summative Assessment Hours 2,\n\n\n Programme Level Learning and Teaching Hours 2,\n\nDirected Learning and Independent Learning Hours\n78 )",
+    "learning_activities": "Total Hours: 100 ( Lecture Hours 15, Feedback/Feedforward Hours 3, Summative Assessment Hours 2, Programme Level Learning and Teaching Hours 2, Directed Learning and Independent Learning Hours 78 )",
     "assessment": {
       "written_exam_percent": 100,
       "coursework_percent": 0,
@@ -1272,7 +1272,7 @@
     "high_demand": "Yes",
     "academic_year": "Quota:  None",
     "course_start": "Semester 1",
-    "learning_activities": "Total Hours:\n200\n\n(\n Lecture Hours 10,\n Seminar/Tutorial Hours 20,\n\n\n\n\n\n Feedback/Feedforward Hours 3,\n\n\n\n\n Programme Level Learning and Teaching Hours 4,\n\nDirected Learning and Independent Learning Hours\n163 )",
+    "learning_activities": "Total Hours: 200 ( Lecture Hours 10, Seminar/Tutorial Hours 20, Feedback/Feedforward Hours 3, Programme Level Learning and Teaching Hours 4, Directed Learning and Independent Learning Hours 163 )",
     "assessment": {
       "written_exam_percent": 60,
       "coursework_percent": 40,
@@ -1313,7 +1313,7 @@
     "high_demand": "Yes",
     "academic_year": "Quota:  40",
     "course_start": "Semester 2",
-    "learning_activities": "Total Hours:\n200\n\n(\n Lecture Hours 8,\n Seminar/Tutorial Hours 27,\n\n\n\n\n\n Feedback/Feedforward Hours 3,\n\n\n\n\n Programme Level Learning and Teaching Hours 4,\n\nDirected Learning and Independent Learning Hours\n158 )",
+    "learning_activities": "Total Hours: 200 ( Lecture Hours 8, Seminar/Tutorial Hours 27, Feedback/Feedforward Hours 3, Programme Level Learning and Teaching Hours 4, Directed Learning and Independent Learning Hours 158 )",
     "assessment": {
       "written_exam_percent": 0,
       "coursework_percent": 100,
@@ -1353,7 +1353,7 @@
     "additional_costs": "to be confirmed",
     "academic_year": "Quota:  None",
     "course_start": "Full Year",
-    "learning_activities": "Total Hours:\n400\n\n(\n Lecture Hours 1,\n Seminar/Tutorial Hours 15,\n\n\n\n\n\n\n\n\n\n\n Programme Level Learning and Teaching Hours 8,\n\nDirected Learning and Independent Learning Hours\n376 )",
+    "learning_activities": "Total Hours: 400 ( Lecture Hours 1, Seminar/Tutorial Hours 15, Programme Level Learning and Teaching Hours 8, Directed Learning and Independent Learning Hours 376 )",
     "assessment": {
       "written_exam_percent": 0,
       "coursework_percent": 100,
@@ -1457,7 +1457,7 @@
     "high_demand": "Yes",
     "academic_year": "Quota:  None",
     "course_start": "Semester 2",
-    "learning_activities": "Total Hours:\n200\n\n(\n\n\n\n\n\n\n\n\n\n\n\n\n Programme Level Learning and Teaching Hours 4,\n\nDirected Learning and Independent Learning Hours\n196 )",
+    "learning_activities": "Total Hours: 200 ( Programme Level Learning and Teaching Hours 4, Directed Learning and Independent Learning Hours 196 )",
     "assessment": {
       "written_exam_percent": 50,
       "coursework_percent": 50,
@@ -1496,7 +1496,7 @@
     "prohibited_combinations": "",
     "academic_year": "Quota:  None",
     "course_start": "Semester 1",
-    "learning_activities": "Total Hours:\n100\n\n(\n\n\n\n\n Fieldwork Hours 40,\n\n\n\n\n\n\n\n Programme Level Learning and Teaching Hours 2,\n\nDirected Learning and Independent Learning Hours\n58 )",
+    "learning_activities": "Total Hours: 100 ( Fieldwork Hours 40, Programme Level Learning and Teaching Hours 2, Directed Learning and Independent Learning Hours 58 )",
     "assessment": {
       "written_exam_percent": 0,
       "coursework_percent": 100,
@@ -1535,7 +1535,7 @@
     "prohibited_combinations": "",
     "academic_year": "Quota:  None",
     "course_start": "Full Year",
-    "learning_activities": "Total Hours:\n400\n\n(\n\n\n\n\n\n\n\n\n\n\n\n\n Programme Level Learning and Teaching Hours 8,\n\nDirected Learning and Independent Learning Hours\n392 )",
+    "learning_activities": "Total Hours: 400 ( Programme Level Learning and Teaching Hours 8, Directed Learning and Independent Learning Hours 392 )",
     "assessment": {
       "written_exam_percent": 0,
       "coursework_percent": 100,
@@ -1577,7 +1577,7 @@
     "high_demand": "Yes",
     "academic_year": "Quota:  26",
     "course_start": "Semester 1",
-    "learning_activities": "Total Hours:\n100\n\n(\n\n Seminar/Tutorial Hours 14,\n\n\n Fieldwork Hours 3,\n\n\n\n\n Summative Assessment Hours 2,\n\n\n Programme Level Learning and Teaching Hours 2,\n\nDirected Learning and Independent Learning Hours\n79 )",
+    "learning_activities": "Total Hours: 100 ( Seminar/Tutorial Hours 14, Fieldwork Hours 3, Summative Assessment Hours 2, Programme Level Learning and Teaching Hours 2, Directed Learning and Independent Learning Hours 79 )",
     "assessment": {
       "written_exam_percent": 70,
       "coursework_percent": 30,
@@ -1619,7 +1619,7 @@
     "high_demand": "Yes",
     "academic_year": "Quota:  None",
     "course_start": "Full Year",
-    "learning_activities": "Total Hours:\n200\n\n(\n Lecture Hours 24,\n Seminar/Tutorial Hours 10,\n\n\n Fieldwork Hours 80,\n\n\n Feedback/Feedforward Hours 2,\n\n Summative Assessment Hours 3,\n\n\n Programme Level Learning and Teaching Hours 4,\n\nDirected Learning and Independent Learning Hours\n77 )",
+    "learning_activities": "Total Hours: 200 ( Lecture Hours 24, Seminar/Tutorial Hours 10, Fieldwork Hours 80, Feedback/Feedforward Hours 2, Summative Assessment Hours 3, Programme Level Learning and Teaching Hours 4, Directed Learning and Independent Learning Hours 77 )",
     "assessment": {
       "written_exam_percent": 75,
       "coursework_percent": 25,
@@ -1662,7 +1662,7 @@
     "high_demand": "Yes",
     "academic_year": "Quota:  None",
     "course_start": "Full Year",
-    "learning_activities": "Total Hours:\n200\n\n(\n Lecture Hours 24,\n Seminar/Tutorial Hours 10,\n\n\n Fieldwork Hours 80,\n\n\n Feedback/Feedforward Hours 2,\n\n Summative Assessment Hours 3,\n\n\n Programme Level Learning and Teaching Hours 4,\n\nDirected Learning and Independent Learning Hours\n77 )",
+    "learning_activities": "Total Hours: 200 ( Lecture Hours 24, Seminar/Tutorial Hours 10, Fieldwork Hours 80, Feedback/Feedforward Hours 2, Summative Assessment Hours 3, Programme Level Learning and Teaching Hours 4, Directed Learning and Independent Learning Hours 77 )",
     "assessment": {
       "written_exam_percent": 75,
       "coursework_percent": 25,
@@ -1702,7 +1702,7 @@
     "prohibited_combinations": "",
     "academic_year": "Quota:  36",
     "course_start": "Full Year",
-    "learning_activities": "Total Hours:\n200\n\n(\n Lecture Hours 4,\n Seminar/Tutorial Hours 8,\n\n\n Fieldwork Hours 182,\n\n\n Feedback/Feedforward Hours 2,\n\n\n\n\n Programme Level Learning and Teaching Hours 4,\n\nDirected Learning and Independent Learning Hours\n0 )",
+    "learning_activities": "Total Hours: 200 ( Lecture Hours 4, Seminar/Tutorial Hours 8, Fieldwork Hours 182, Feedback/Feedforward Hours 2, Programme Level Learning and Teaching Hours 4, Directed Learning and Independent Learning Hours 0 )",
     "assessment": {
       "written_exam_percent": 0,
       "coursework_percent": 100,
@@ -1744,7 +1744,7 @@
     "high_demand": "Yes",
     "academic_year": "Quota:  60",
     "course_start": "Semester 1",
-    "learning_activities": "Total Hours:\n100\n\n(\n Lecture Hours 12,\n Seminar/Tutorial Hours 6,\n\n\n\n\n\n Feedback/Feedforward Hours 2,\n\n Summative Assessment Hours 3,\n\n\n Programme Level Learning and Teaching Hours 2,\n\nDirected Learning and Independent Learning Hours\n75 )",
+    "learning_activities": "Total Hours: 100 ( Lecture Hours 12, Seminar/Tutorial Hours 6, Feedback/Feedforward Hours 2, Summative Assessment Hours 3, Programme Level Learning and Teaching Hours 2, Directed Learning and Independent Learning Hours 75 )",
     "assessment": {
       "written_exam_percent": 70,
       "coursework_percent": 30,
@@ -1786,7 +1786,7 @@
     "high_demand": "Yes",
     "academic_year": "Quota:  30",
     "course_start": "Semester 1",
-    "learning_activities": "Total Hours:\n100\n\n(\n Lecture Hours 7,\n Seminar/Tutorial Hours 14,\n\n\n\n\n\n\n\n\n\n\n Programme Level Learning and Teaching Hours 2,\n\nDirected Learning and Independent Learning Hours\n77 )",
+    "learning_activities": "Total Hours: 100 ( Lecture Hours 7, Seminar/Tutorial Hours 14, Programme Level Learning and Teaching Hours 2, Directed Learning and Independent Learning Hours 77 )",
     "assessment": {
       "written_exam_percent": 0,
       "coursework_percent": 100,
@@ -1827,7 +1827,7 @@
     "high_demand": "Yes",
     "academic_year": "Quota:  None",
     "course_start": "Full Year",
-    "learning_activities": "Total Hours:\n400\n\n(\n\n Seminar/Tutorial Hours 11,\n\n\n\n\n\n\n\n\n\n\n Programme Level Learning and Teaching Hours 8,\n\nDirected Learning and Independent Learning Hours\n381 )",
+    "learning_activities": "Total Hours: 400 ( Seminar/Tutorial Hours 11, Programme Level Learning and Teaching Hours 8, Directed Learning and Independent Learning Hours 381 )",
     "assessment": {
       "written_exam_percent": 0,
       "coursework_percent": 100,
@@ -1869,7 +1869,7 @@
     "high_demand": "Yes",
     "academic_year": "Quota:  None",
     "course_start": "Semester 2",
-    "learning_activities": "Total Hours:\n100\n\n(\n Lecture Hours 16,\n Seminar/Tutorial Hours 6,\n\n\n\n\n\n Feedback/Feedforward Hours 2,\n\n Summative Assessment Hours 2,\n\n\n Programme Level Learning and Teaching Hours 2,\n\nDirected Learning and Independent Learning Hours\n72 )",
+    "learning_activities": "Total Hours: 100 ( Lecture Hours 16, Seminar/Tutorial Hours 6, Feedback/Feedforward Hours 2, Summative Assessment Hours 2, Programme Level Learning and Teaching Hours 2, Directed Learning and Independent Learning Hours 72 )",
     "assessment": {
       "written_exam_percent": 70,
       "coursework_percent": 30,
@@ -1911,7 +1911,7 @@
     "high_demand": "Yes",
     "academic_year": "Quota:  None",
     "course_start": "Semester 2",
-    "learning_activities": "Total Hours:\n200\n\n(\n Lecture Hours 27,\n Seminar/Tutorial Hours 7,\n\n Supervised Practical/Workshop/Studio Hours 9,\n\n\n\n Feedback/Feedforward Hours 3,\n\n Summative Assessment Hours 2,\n\n\n Programme Level Learning and Teaching Hours 4,\n\nDirected Learning and Independent Learning Hours\n148 )",
+    "learning_activities": "Total Hours: 200 ( Lecture Hours 27, Seminar/Tutorial Hours 7, Supervised Practical/Workshop/Studio Hours 9, Feedback/Feedforward Hours 3, Summative Assessment Hours 2, Programme Level Learning and Teaching Hours 4, Directed Learning and Independent Learning Hours 148 )",
     "assessment": {
       "written_exam_percent": 60,
       "coursework_percent": 40,
@@ -1979,7 +1979,7 @@
     "high_demand": "Yes",
     "academic_year": "Quota:  None",
     "course_start": "Full Year",
-    "learning_activities": "Total Hours:\n200\n\n(\n Lecture Hours 30,\n Seminar/Tutorial Hours 17,\n\n Supervised Practical/Workshop/Studio Hours 16,\n\n\n\n Feedback/Feedforward Hours 2,\n\n Summative Assessment Hours 3,\n\n\n Programme Level Learning and Teaching Hours 4,\n\nDirected Learning and Independent Learning Hours\n128 )",
+    "learning_activities": "Total Hours: 200 ( Lecture Hours 30, Seminar/Tutorial Hours 17, Supervised Practical/Workshop/Studio Hours 16, Feedback/Feedforward Hours 2, Summative Assessment Hours 3, Programme Level Learning and Teaching Hours 4, Directed Learning and Independent Learning Hours 128 )",
     "assessment": {
       "written_exam_percent": 50,
       "coursework_percent": 50,
@@ -2019,7 +2019,7 @@
     "additional_costs": "N/A",
     "academic_year": "Quota:  40",
     "course_start": "Semester 1",
-    "learning_activities": "Total Hours:\n100\n\n(\n\n Seminar/Tutorial Hours 12,\n\n Supervised Practical/Workshop/Studio Hours 18,\n\n\n\n\n\n Summative Assessment Hours 10,\n\n\n Programme Level Learning and Teaching Hours 2,\n\nDirected Learning and Independent Learning Hours\n58 )",
+    "learning_activities": "Total Hours: 100 ( Seminar/Tutorial Hours 12, Supervised Practical/Workshop/Studio Hours 18, Summative Assessment Hours 10, Programme Level Learning and Teaching Hours 2, Directed Learning and Independent Learning Hours 58 )",
     "assessment": {
       "written_exam_percent": 0,
       "coursework_percent": 100,
@@ -2059,7 +2059,7 @@
     "additional_costs": "Travel, accommodation, visas etc. as required. Students will be salaried for the placement duration.",
     "academic_year": "Quota:  None",
     "course_start": "Full Year",
-    "learning_activities": "Total Hours:\n600\n\n(\n\n\n\n\n\n\n\n\n\n\n\n\n Programme Level Learning and Teaching Hours 12,\n\nDirected Learning and Independent Learning Hours\n588 )",
+    "learning_activities": "Total Hours: 600 ( Programme Level Learning and Teaching Hours 12, Directed Learning and Independent Learning Hours 588 )",
     "assessment": {
       "written_exam_percent": 0,
       "coursework_percent": 100,
@@ -2101,7 +2101,7 @@
     "high_demand": "Yes",
     "academic_year": "Quota:  None",
     "course_start": "Full Year",
-    "learning_activities": "Total Hours:\n400\n\n(\n\n\n Dissertation/Project Supervision Hours 22,\n\n\n\n\n\n\n\n\n\n Programme Level Learning and Teaching Hours 8,\n\nDirected Learning and Independent Learning Hours\n370 )",
+    "learning_activities": "Total Hours: 400 ( Dissertation/Project Supervision Hours 22, Programme Level Learning and Teaching Hours 8, Directed Learning and Independent Learning Hours 370 )",
     "assessment": {
       "written_exam_percent": 0,
       "coursework_percent": 100,
@@ -2200,7 +2200,7 @@
     "high_demand": "Yes",
     "academic_year": "Quota:  22",
     "course_start": "Flexible",
-    "learning_activities": "Total Hours:\n200\n\n(\n Lecture Hours 10,\n\n\n\n\n\n\n\n\n\n\n Other Study Hours 100,\n Programme Level Learning and Teaching Hours 4,\n\nDirected Learning and Independent Learning Hours\n86 )",
+    "learning_activities": "Total Hours: 200 ( Lecture Hours 10, Other Study Hours 100, Programme Level Learning and Teaching Hours 4, Directed Learning and Independent Learning Hours 86 )",
     "assessment": {
       "written_exam_percent": 0,
       "coursework_percent": 100,
@@ -2243,7 +2243,7 @@
     "high_demand": "Yes",
     "academic_year": "Quota:  80",
     "course_start": "Semester 2",
-    "learning_activities": "Total Hours:\n100\n\n(\n Lecture Hours 30,\n\n\n\n\n\n\n\n\n\n\n\n Programme Level Learning and Teaching Hours 2,\n\nDirected Learning and Independent Learning Hours\n68 )",
+    "learning_activities": "Total Hours: 100 ( Lecture Hours 30, Programme Level Learning and Teaching Hours 2, Directed Learning and Independent Learning Hours 68 )",
     "assessment": {
       "written_exam_percent": 0,
       "coursework_percent": 100,
@@ -2314,7 +2314,7 @@
     "high_demand": "Yes",
     "academic_year": "Quota:  None",
     "course_start": "Semester 1",
-    "learning_activities": "Total Hours:\n100\n\n(\n Lecture Hours 10,\n Seminar/Tutorial Hours 20,\n\n\n\n\n\n Feedback/Feedforward Hours 3,\n\n Summative Assessment Hours 2,\n\n\n Programme Level Learning and Teaching Hours 2,\n\nDirected Learning and Independent Learning Hours\n63 )",
+    "learning_activities": "Total Hours: 100 ( Lecture Hours 10, Seminar/Tutorial Hours 20, Feedback/Feedforward Hours 3, Summative Assessment Hours 2, Programme Level Learning and Teaching Hours 2, Directed Learning and Independent Learning Hours 63 )",
     "assessment": {
       "written_exam_percent": 80,
       "coursework_percent": 20,
@@ -2356,7 +2356,7 @@
     "high_demand": "Yes",
     "academic_year": "Quota:  None",
     "course_start": "Semester 2",
-    "learning_activities": "Total Hours:\n100\n\n(\n\n\n\n\n\n\n\n\n\n\n\n\n Programme Level Learning and Teaching Hours 2,\n\nDirected Learning and Independent Learning Hours\n98 )",
+    "learning_activities": "Total Hours: 100 ( Programme Level Learning and Teaching Hours 2, Directed Learning and Independent Learning Hours 98 )",
     "assessment": {
       "written_exam_percent": 0,
       "coursework_percent": 100,
@@ -2426,7 +2426,7 @@
     "high_demand": "Yes",
     "academic_year": "Quota:  None",
     "course_start": "Semester 2",
-    "learning_activities": "Total Hours:\n200\n\n(\n Lecture Hours 20,\n Seminar/Tutorial Hours 30,\n\n Supervised Practical/Workshop/Studio Hours 30,\n\n\n\n\n\n\n\n\n Programme Level Learning and Teaching Hours 4,\n\nDirected Learning and Independent Learning Hours\n116 )",
+    "learning_activities": "Total Hours: 200 ( Lecture Hours 20, Seminar/Tutorial Hours 30, Supervised Practical/Workshop/Studio Hours 30, Programme Level Learning and Teaching Hours 4, Directed Learning and Independent Learning Hours 116 )",
     "assessment": {
       "written_exam_percent": 40,
       "coursework_percent": 60,
@@ -2498,7 +2498,7 @@
     "prohibited_combinations": "",
     "academic_year": "Quota:  16",
     "course_start": "Semester 2",
-    "learning_activities": "Total Hours:\n100\n\n(\n Lecture Hours 15,\n Seminar/Tutorial Hours 7,\n\n\n Fieldwork Hours 8,\n\n\n\n\n\n\n\n Programme Level Learning and Teaching Hours 2,\n\nDirected Learning and Independent Learning Hours\n68 )",
+    "learning_activities": "Total Hours: 100 ( Lecture Hours 15, Seminar/Tutorial Hours 7, Fieldwork Hours 8, Programme Level Learning and Teaching Hours 2, Directed Learning and Independent Learning Hours 68 )",
     "assessment": {
       "written_exam_percent": 0,
       "coursework_percent": 100,
@@ -2541,7 +2541,7 @@
     "high_demand": "Yes",
     "academic_year": "Quota:  20",
     "course_start": "Semester 2",
-    "learning_activities": "Total Hours:\n100\n\n(\n Lecture Hours 10,\n\n\n Supervised Practical/Workshop/Studio Hours 30,\n\n\n\n\n\n\n\n\n Programme Level Learning and Teaching Hours 2,\n\nDirected Learning and Independent Learning Hours\n58 )",
+    "learning_activities": "Total Hours: 100 ( Lecture Hours 10, Supervised Practical/Workshop/Studio Hours 30, Programme Level Learning and Teaching Hours 2, Directed Learning and Independent Learning Hours 58 )",
     "assessment": {
       "written_exam_percent": 0,
       "coursework_percent": 100,
@@ -2583,7 +2583,7 @@
     "high_demand": "Yes",
     "academic_year": "Quota:  None",
     "course_start": "Semester 1",
-    "learning_activities": "Total Hours:\n200\n\n(\n Lecture Hours 14,\n\n\n Supervised Practical/Workshop/Studio Hours 42,\n Fieldwork Hours 36,\n\n\n Feedback/Feedforward Hours 3,\n\n\n\n\n Programme Level Learning and Teaching Hours 4,\n\nDirected Learning and Independent Learning Hours\n101 )",
+    "learning_activities": "Total Hours: 200 ( Lecture Hours 14, Supervised Practical/Workshop/Studio Hours 42, Fieldwork Hours 36, Feedback/Feedforward Hours 3, Programme Level Learning and Teaching Hours 4, Directed Learning and Independent Learning Hours 101 )",
     "assessment": {
       "written_exam_percent": 50,
       "coursework_percent": 50,
@@ -2622,7 +2622,7 @@
     "prohibited_combinations": "",
     "academic_year": "Quota:  40",
     "course_start": "Semester 1",
-    "learning_activities": "Total Hours:\n200\n\n(\n Lecture Hours 11,\n\n\n Supervised Practical/Workshop/Studio Hours 24,\n Fieldwork Hours 32,\n\n\n Feedback/Feedforward Hours 6,\n\n Summative Assessment Hours 65,\n\n\n Programme Level Learning and Teaching Hours 4,\n\nDirected Learning and Independent Learning Hours\n58 )",
+    "learning_activities": "Total Hours: 200 ( Lecture Hours 11, Supervised Practical/Workshop/Studio Hours 24, Fieldwork Hours 32, Feedback/Feedforward Hours 6, Summative Assessment Hours 65, Programme Level Learning and Teaching Hours 4, Directed Learning and Independent Learning Hours 58 )",
     "assessment": {
       "written_exam_percent": 50,
       "coursework_percent": 50,
@@ -2698,7 +2698,7 @@
     "high_demand": "Yes",
     "academic_year": "Quota:  None",
     "course_start": "Full Year",
-    "learning_activities": "Total Hours:\n200\n\n(\n Lecture Hours 36,\n Seminar/Tutorial Hours 10,\n\n Supervised Practical/Workshop/Studio Hours 3,\n\n\n\n\n\n Summative Assessment Hours 24,\n Revision Session Hours 2,\n\n Programme Level Learning and Teaching Hours 4,\n\nDirected Learning and Independent Learning Hours\n121 )",
+    "learning_activities": "Total Hours: 200 ( Lecture Hours 36, Seminar/Tutorial Hours 10, Supervised Practical/Workshop/Studio Hours 3, Summative Assessment Hours 24, Revision Session Hours 2, Programme Level Learning and Teaching Hours 4, Directed Learning and Independent Learning Hours 121 )",
     "assessment": {
       "written_exam_percent": 70,
       "coursework_percent": 30,
@@ -2775,7 +2775,7 @@
     "high_demand": "Yes",
     "academic_year": "Quota:  None",
     "course_start": "Semester 2",
-    "learning_activities": "Total Hours:\n200\n\n(\n\n\n\n\n\n\n\n\n\n\n\n\n Programme Level Learning and Teaching Hours 4,\n\nDirected Learning and Independent Learning Hours\n196 )",
+    "learning_activities": "Total Hours: 200 ( Programme Level Learning and Teaching Hours 4, Directed Learning and Independent Learning Hours 196 )",
     "assessment": {
       "written_exam_percent": 0,
       "coursework_percent": 100,
@@ -2814,7 +2814,7 @@
     "prohibited_combinations": "",
     "academic_year": "Quota:  None",
     "course_start": "Full Year",
-    "learning_activities": "Total Hours:\n200\n\n(\n Lecture Hours 13,\n Seminar/Tutorial Hours 1,\n\n Supervised Practical/Workshop/Studio Hours 39,\n\n\n\n\n\n\n Revision Session Hours 1,\n\n Programme Level Learning and Teaching Hours 4,\n\nDirected Learning and Independent Learning Hours\n142 )",
+    "learning_activities": "Total Hours: 200 ( Lecture Hours 13, Seminar/Tutorial Hours 1, Supervised Practical/Workshop/Studio Hours 39, Revision Session Hours 1, Programme Level Learning and Teaching Hours 4, Directed Learning and Independent Learning Hours 142 )",
     "assessment": {
       "written_exam_percent": 0,
       "coursework_percent": 100,
@@ -2892,7 +2892,7 @@
     "high_demand": "Yes",
     "academic_year": "Quota:  21",
     "course_start": "13/01/2025",
-    "learning_activities": "Total Hours:\n100\n\n(\n Lecture Hours 16,\n\n\n\n Fieldwork Hours 8,\n\n\n\n\n\n\n\n Programme Level Learning and Teaching Hours 2,\n\nDirected Learning and Independent Learning Hours\n74 )",
+    "learning_activities": "Total Hours: 100 ( Lecture Hours 16, Fieldwork Hours 8, Programme Level Learning and Teaching Hours 2, Directed Learning and Independent Learning Hours 74 )",
     "assessment": {
       "written_exam_percent": 0,
       "coursework_percent": 100,
@@ -2932,7 +2932,7 @@
     "prohibited_combinations": "Students MUST NOT also be takingPetroleum Systems (EASC10108)",
     "academic_year": "Quota:  11",
     "course_start": "Semester 1",
-    "learning_activities": "Total Hours:\n100\n\n(\n Lecture Hours 4,\n\n\n Supervised Practical/Workshop/Studio Hours 12,\n Fieldwork Hours 16,\n\n\n Feedback/Feedforward Hours 3,\n\n Summative Assessment Hours 12,\n\n\n Programme Level Learning and Teaching Hours 2,\n\nDirected Learning and Independent Learning Hours\n51 )",
+    "learning_activities": "Total Hours: 100 ( Lecture Hours 4, Supervised Practical/Workshop/Studio Hours 12, Fieldwork Hours 16, Feedback/Feedforward Hours 3, Summative Assessment Hours 12, Programme Level Learning and Teaching Hours 2, Directed Learning and Independent Learning Hours 51 )",
     "assessment": {
       "written_exam_percent": 0,
       "coursework_percent": 100,
@@ -2971,7 +2971,7 @@
     "prohibited_combinations": "",
     "academic_year": "Quota:  20",
     "course_start": "13/01/2025",
-    "learning_activities": "Total Hours:\n100\n\n(\n\n\n\n\n\n\n\n Feedback/Feedforward Hours 2,\n\n\n\n\n Programme Level Learning and Teaching Hours 2,\n\nDirected Learning and Independent Learning Hours\n96 )",
+    "learning_activities": "Total Hours: 100 ( Feedback/Feedforward Hours 2, Programme Level Learning and Teaching Hours 2, Directed Learning and Independent Learning Hours 96 )",
     "assessment": {
       "written_exam_percent": 0,
       "coursework_percent": 100,
@@ -3010,7 +3010,7 @@
     "prohibited_combinations": "",
     "academic_year": "Quota:  20",
     "course_start": "Semester 1",
-    "learning_activities": "Total Hours:\n100\n\n(\n Lecture Hours 10,\n\n\n Supervised Practical/Workshop/Studio Hours 12,\n\n\n\n\n\n Summative Assessment Hours 10,\n\n\n Programme Level Learning and Teaching Hours 2,\n\nDirected Learning and Independent Learning Hours\n66 )",
+    "learning_activities": "Total Hours: 100 ( Lecture Hours 10, Supervised Practical/Workshop/Studio Hours 12, Summative Assessment Hours 10, Programme Level Learning and Teaching Hours 2, Directed Learning and Independent Learning Hours 66 )",
     "assessment": {
       "written_exam_percent": 0,
       "coursework_percent": 100,
@@ -3050,7 +3050,7 @@
     "additional_costs": "Travel, accommodation, visas etc as required. Students will be salaried for the placement duration.",
     "academic_year": "Quota:  None",
     "course_start": "Full Year",
-    "learning_activities": "Total Hours:\n600\n\n(\n Lecture Hours 12,\n\n\n\n\n\n\n\n\n\n\n\n Programme Level Learning and Teaching Hours 12,\n\nDirected Learning and Independent Learning Hours\n576 )",
+    "learning_activities": "Total Hours: 600 ( Lecture Hours 12, Programme Level Learning and Teaching Hours 12, Directed Learning and Independent Learning Hours 576 )",
     "assessment": {
       "written_exam_percent": 0,
       "coursework_percent": 100,
@@ -3116,7 +3116,7 @@
     "high_demand": "Yes",
     "academic_year": "Quota:  None",
     "course_start": "Full Year",
-    "learning_activities": "Total Hours:\n200\n\n(\n\n\n\n\n\n\n\n\n\n\n\n\n Programme Level Learning and Teaching Hours 4,\n\nDirected Learning and Independent Learning Hours\n196 )",
+    "learning_activities": "Total Hours: 200 ( Programme Level Learning and Teaching Hours 4, Directed Learning and Independent Learning Hours 196 )",
     "assessment": {
       "written_exam_percent": 0,
       "coursework_percent": 100,
@@ -3156,7 +3156,7 @@
     "additional_costs": "None",
     "academic_year": "Quota:  None",
     "course_start": "Semester 1",
-    "learning_activities": "Total Hours:\n200\n\n(\n Lecture Hours 20,\n\n\n\n\n\n\n\n\n\n\n\n Programme Level Learning and Teaching Hours 4,\n\nDirected Learning and Independent Learning Hours\n176 )",
+    "learning_activities": "Total Hours: 200 ( Lecture Hours 20, Programme Level Learning and Teaching Hours 4, Directed Learning and Independent Learning Hours 176 )",
     "assessment": {
       "written_exam_percent": 0,
       "coursework_percent": 100,
@@ -3223,7 +3223,7 @@
     "high_demand": "Yes",
     "academic_year": "Quota:  68",
     "course_start": "Semester 2",
-    "learning_activities": "Total Hours:\n200\n\n(\n Lecture Hours 44,\n Seminar/Tutorial Hours 6,\n\n\n\n\n\n\n\n\n\n\n Programme Level Learning and Teaching Hours 4,\n\nDirected Learning and Independent Learning Hours\n146 )",
+    "learning_activities": "Total Hours: 200 ( Lecture Hours 44, Seminar/Tutorial Hours 6, Programme Level Learning and Teaching Hours 4, Directed Learning and Independent Learning Hours 146 )",
     "assessment": {
       "written_exam_percent": 60,
       "coursework_percent": 40,
@@ -3262,7 +3262,7 @@
     "prohibited_combinations": "",
     "academic_year": "Quota:  96",
     "course_start": "Block 5 (Sem 2) and beyond",
-    "learning_activities": "Total Hours:\n200\n\n(\n Lecture Hours 9,\n\n Dissertation/Project Supervision Hours 1,\n Supervised Practical/Workshop/Studio Hours 29,\n Fieldwork Hours 34,\n\n\n\n\n\n\n\n Programme Level Learning and Teaching Hours 4,\n\nDirected Learning and Independent Learning Hours\n123 )",
+    "learning_activities": "Total Hours: 200 ( Lecture Hours 9, Dissertation/Project Supervision Hours 1, Supervised Practical/Workshop/Studio Hours 29, Fieldwork Hours 34, Programme Level Learning and Teaching Hours 4, Directed Learning and Independent Learning Hours 123 )",
     "assessment": {
       "written_exam_percent": 0,
       "coursework_percent": 100,
@@ -3302,7 +3302,7 @@
     "prohibited_combinations": "",
     "academic_year": "Quota:  None",
     "course_start": "Semester 1",
-    "learning_activities": "Total Hours:\n200\n\n(\n\n\n\n\n\n\n\n\n\n\n\n\n Programme Level Learning and Teaching Hours 4,\n\nDirected Learning and Independent Learning Hours\n196 )",
+    "learning_activities": "Total Hours: 200 ( Programme Level Learning and Teaching Hours 4, Directed Learning and Independent Learning Hours 196 )",
     "assessment": {
       "written_exam_percent": 0,
       "coursework_percent": 100,
@@ -3341,7 +3341,7 @@
     "prohibited_combinations": "",
     "academic_year": "Quota:  None",
     "course_start": "Semester 1",
-    "learning_activities": "Total Hours:\n200\n\n(\n Lecture Hours 25,\n\n Dissertation/Project Supervision Hours 20,\n Supervised Practical/Workshop/Studio Hours 15,\n Fieldwork Hours 15,\n\n\n Feedback/Feedforward Hours 3,\n Formative Assessment Hours 2,\n Summative Assessment Hours 2,\n Revision Session Hours 2,\n\n Programme Level Learning and Teaching Hours 4,\n\nDirected Learning and Independent Learning Hours\n112 )",
+    "learning_activities": "Total Hours: 200 ( Lecture Hours 25, Dissertation/Project Supervision Hours 20, Supervised Practical/Workshop/Studio Hours 15, Fieldwork Hours 15, Feedback/Feedforward Hours 3, Formative Assessment Hours 2, Summative Assessment Hours 2, Revision Session Hours 2, Programme Level Learning and Teaching Hours 4, Directed Learning and Independent Learning Hours 112 )",
     "assessment": {
       "written_exam_percent": 50,
       "coursework_percent": 50,
@@ -3383,7 +3383,7 @@
     "high_demand": "Yes",
     "academic_year": "Quota:  None",
     "course_start": "Semester 2",
-    "learning_activities": "Total Hours:\n200\n\n(\n Lecture Hours 28,\n Seminar/Tutorial Hours 3,\n\n Supervised Practical/Workshop/Studio Hours 16,\n\n\n\n Feedback/Feedforward Hours 1,\n Formative Assessment Hours 6,\n Summative Assessment Hours 2,\n Revision Session Hours 1,\n\n Programme Level Learning and Teaching Hours 4,\n\nDirected Learning and Independent Learning Hours\n139 )",
+    "learning_activities": "Total Hours: 200 ( Lecture Hours 28, Seminar/Tutorial Hours 3, Supervised Practical/Workshop/Studio Hours 16, Feedback/Feedforward Hours 1, Formative Assessment Hours 6, Summative Assessment Hours 2, Revision Session Hours 1, Programme Level Learning and Teaching Hours 4, Directed Learning and Independent Learning Hours 139 )",
     "assessment": {
       "written_exam_percent": 70,
       "coursework_percent": 30,
@@ -3459,7 +3459,7 @@
     "prohibited_combinations": "",
     "academic_year": "Quota:  125",
     "course_start": "Semester 2",
-    "learning_activities": "Total Hours:\n200\n\n(\n Lecture Hours 22,\n Seminar/Tutorial Hours 3,\n\n\n\n\n\n\n\n\n\n\n Programme Level Learning and Teaching Hours 4,\n\nDirected Learning and Independent Learning Hours\n171 )",
+    "learning_activities": "Total Hours: 200 ( Lecture Hours 22, Seminar/Tutorial Hours 3, Programme Level Learning and Teaching Hours 4, Directed Learning and Independent Learning Hours 171 )",
     "assessment": {
       "written_exam_percent": 70,
       "coursework_percent": 30,
@@ -3498,7 +3498,7 @@
     "prohibited_combinations": "",
     "academic_year": "Quota:  None",
     "course_start": "Semester 2",
-    "learning_activities": "Total Hours:\n200\n\n(\n Lecture Hours 20,\n Seminar/Tutorial Hours 10,\n\n\n\n\n\n\n\n\n\n\n Programme Level Learning and Teaching Hours 4,\n\nDirected Learning and Independent Learning Hours\n166 )",
+    "learning_activities": "Total Hours: 200 ( Lecture Hours 20, Seminar/Tutorial Hours 10, Programme Level Learning and Teaching Hours 4, Directed Learning and Independent Learning Hours 166 )",
     "assessment": {
       "written_exam_percent": 0,
       "coursework_percent": 100,
@@ -3537,7 +3537,7 @@
     "prohibited_combinations": "",
     "academic_year": "Quota:  None",
     "course_start": "Semester 1",
-    "learning_activities": "Total Hours:\n200\n\n(\n Lecture Hours 6,\n\n\n Supervised Practical/Workshop/Studio Hours 6,\n Fieldwork Hours 60,\n\n\n\n\n Summative Assessment Hours 2,\n\n\n Programme Level Learning and Teaching Hours 4,\n\nDirected Learning and Independent Learning Hours\n122 )",
+    "learning_activities": "Total Hours: 200 ( Lecture Hours 6, Supervised Practical/Workshop/Studio Hours 6, Fieldwork Hours 60, Summative Assessment Hours 2, Programme Level Learning and Teaching Hours 4, Directed Learning and Independent Learning Hours 122 )",
     "assessment": {
       "written_exam_percent": 0,
       "coursework_percent": 100,
@@ -3578,7 +3578,7 @@
     "high_demand": "Yes",
     "academic_year": "Quota:  70",
     "course_start": "Semester 2",
-    "learning_activities": "Total Hours:\n200\n\n(\n Lecture Hours 21,\n Seminar/Tutorial Hours 6,\n\n Supervised Practical/Workshop/Studio Hours 6,\n\n External Visit Hours 9,\n\n Feedback/Feedforward Hours 1,\n\n Summative Assessment Hours 2,\n\n\n Programme Level Learning and Teaching Hours 4,\n\nDirected Learning and Independent Learning Hours\n151 )",
+    "learning_activities": "Total Hours: 200 ( Lecture Hours 21, Seminar/Tutorial Hours 6, Supervised Practical/Workshop/Studio Hours 6, External Visit Hours 9, Feedback/Feedforward Hours 1, Summative Assessment Hours 2, Programme Level Learning and Teaching Hours 4, Directed Learning and Independent Learning Hours 151 )",
     "assessment": {
       "written_exam_percent": 50,
       "coursework_percent": 50,
@@ -3620,7 +3620,7 @@
     "high_demand": "Yes",
     "academic_year": "Quota:  45",
     "course_start": "Semester 2",
-    "learning_activities": "Total Hours:\n200\n\n(\n Lecture Hours 33,\n Seminar/Tutorial Hours 5,\n\n Supervised Practical/Workshop/Studio Hours 22,\n Fieldwork Hours 3,\n\n\n\n\n Summative Assessment Hours 2,\n Revision Session Hours 3,\n\n Programme Level Learning and Teaching Hours 4,\n\nDirected Learning and Independent Learning Hours\n128 )",
+    "learning_activities": "Total Hours: 200 ( Lecture Hours 33, Seminar/Tutorial Hours 5, Supervised Practical/Workshop/Studio Hours 22, Fieldwork Hours 3, Summative Assessment Hours 2, Revision Session Hours 3, Programme Level Learning and Teaching Hours 4, Directed Learning and Independent Learning Hours 128 )",
     "assessment": {
       "written_exam_percent": 50,
       "coursework_percent": 50,
@@ -3662,7 +3662,7 @@
     "high_demand": "Yes",
     "academic_year": "Quota:  None",
     "course_start": "Semester 1",
-    "learning_activities": "Total Hours:\n200\n\n(\n Lecture Hours 21,\n Seminar/Tutorial Hours 3,\n\n Supervised Practical/Workshop/Studio Hours 9,\n\n\n\n Feedback/Feedforward Hours 1,\n\n Summative Assessment Hours 6,\n Revision Session Hours 3,\n\n Programme Level Learning and Teaching Hours 4,\n\nDirected Learning and Independent Learning Hours\n153 )",
+    "learning_activities": "Total Hours: 200 ( Lecture Hours 21, Seminar/Tutorial Hours 3, Supervised Practical/Workshop/Studio Hours 9, Feedback/Feedforward Hours 1, Summative Assessment Hours 6, Revision Session Hours 3, Programme Level Learning and Teaching Hours 4, Directed Learning and Independent Learning Hours 153 )",
     "assessment": {
       "written_exam_percent": 0,
       "coursework_percent": 100,
@@ -3704,7 +3704,7 @@
     "high_demand": "Yes",
     "academic_year": "Quota:  25",
     "course_start": "Semester 1",
-    "learning_activities": "Total Hours:\n200\n\n(\n Lecture Hours 32,\n\n\n\n\n\n\n\n\n\n\n\n Programme Level Learning and Teaching Hours 4,\n\nDirected Learning and Independent Learning Hours\n164 )",
+    "learning_activities": "Total Hours: 200 ( Lecture Hours 32, Programme Level Learning and Teaching Hours 4, Directed Learning and Independent Learning Hours 164 )",
     "assessment": {
       "written_exam_percent": 0,
       "coursework_percent": 100,
@@ -3744,7 +3744,7 @@
     "additional_costs": "No",
     "academic_year": "Quota:  None",
     "course_start": "Full Year",
-    "learning_activities": "Total Hours:\n100\n\n(\n\n Seminar/Tutorial Hours 12,\n\n\n\n\n\n\n\n\n\n\n Programme Level Learning and Teaching Hours 2,\n\nDirected Learning and Independent Learning Hours\n86 )",
+    "learning_activities": "Total Hours: 100 ( Seminar/Tutorial Hours 12, Programme Level Learning and Teaching Hours 2, Directed Learning and Independent Learning Hours 86 )",
     "assessment": {
       "written_exam_percent": 0,
       "coursework_percent": 100,
@@ -3813,7 +3813,7 @@
     "high_demand": "Yes",
     "academic_year": "Quota:  35",
     "course_start": "Semester 1",
-    "learning_activities": "Total Hours:\n200\n\n(\n Lecture Hours 22,\n\n\n\n\n\n\n\n\n\n\n\n Programme Level Learning and Teaching Hours 4,\n\nDirected Learning and Independent Learning Hours\n174 )",
+    "learning_activities": "Total Hours: 200 ( Lecture Hours 22, Programme Level Learning and Teaching Hours 4, Directed Learning and Independent Learning Hours 174 )",
     "assessment": {
       "written_exam_percent": 0,
       "coursework_percent": 100,
@@ -3854,7 +3854,7 @@
     "additional_costs": "Travel to field sites may be needed",
     "academic_year": "Quota:  None",
     "course_start": "Semester 2",
-    "learning_activities": "Total Hours:\n400\n\n(\n\n Seminar/Tutorial Hours 12,\n\n\n\n\n\n\n\n\n\n\n Programme Level Learning and Teaching Hours 8,\n\nDirected Learning and Independent Learning Hours\n380 )",
+    "learning_activities": "Total Hours: 400 ( Seminar/Tutorial Hours 12, Programme Level Learning and Teaching Hours 8, Directed Learning and Independent Learning Hours 380 )",
     "assessment": {
       "written_exam_percent": 0,
       "coursework_percent": 100,
@@ -3894,7 +3894,7 @@
     "additional_costs": "Travel to field sites may be needed",
     "academic_year": "Quota:  None",
     "course_start": "Semester 2",
-    "learning_activities": "Total Hours:\n400\n\n(\n\n\n\n\n\n\n\n\n\n\n\n\n Programme Level Learning and Teaching Hours 8,\n\nDirected Learning and Independent Learning Hours\n392 )",
+    "learning_activities": "Total Hours: 400 ( Programme Level Learning and Teaching Hours 8, Directed Learning and Independent Learning Hours 392 )",
     "assessment": {
       "written_exam_percent": 0,
       "coursework_percent": 100,
@@ -3933,7 +3933,7 @@
     "prohibited_combinations": "",
     "academic_year": "Quota:  None",
     "course_start": "Semester 1",
-    "learning_activities": "Total Hours:\n200\n\n(\n\n Seminar/Tutorial Hours 6,\n Dissertation/Project Supervision Hours 6,\n Supervised Practical/Workshop/Studio Hours 12,\n Fieldwork Hours 32,\n External Visit Hours 14,\n\n Feedback/Feedforward Hours 1,\n\n Summative Assessment Hours 5,\n\n\n Programme Level Learning and Teaching Hours 4,\n\nDirected Learning and Independent Learning Hours\n120 )",
+    "learning_activities": "Total Hours: 200 ( Seminar/Tutorial Hours 6, Dissertation/Project Supervision Hours 6, Supervised Practical/Workshop/Studio Hours 12, Fieldwork Hours 32, External Visit Hours 14, Feedback/Feedforward Hours 1, Summative Assessment Hours 5, Programme Level Learning and Teaching Hours 4, Directed Learning and Independent Learning Hours 120 )",
     "assessment": {
       "written_exam_percent": 0,
       "coursework_percent": 100,
@@ -4010,7 +4010,7 @@
     "high_demand": "Yes",
     "academic_year": "Quota:  25",
     "course_start": "Semester 1",
-    "learning_activities": "Total Hours:\n200\n\n(\n Lecture Hours 8,\n Seminar/Tutorial Hours 10,\n\n Supervised Practical/Workshop/Studio Hours 10,\n\n\n\n Feedback/Feedforward Hours 2,\n\n\n\n\n Programme Level Learning and Teaching Hours 4,\n\nDirected Learning and Independent Learning Hours\n166 )",
+    "learning_activities": "Total Hours: 200 ( Lecture Hours 8, Seminar/Tutorial Hours 10, Supervised Practical/Workshop/Studio Hours 10, Feedback/Feedforward Hours 2, Programme Level Learning and Teaching Hours 4, Directed Learning and Independent Learning Hours 166 )",
     "assessment": {
       "written_exam_percent": 0,
       "coursework_percent": 100,
@@ -4169,7 +4169,7 @@
     "additional_costs": "None",
     "academic_year": "Quota:  None",
     "course_start": "Semester 1",
-    "learning_activities": "Total Hours:\n100\n\n(\n Lecture Hours 32,\n\n\n\n\n\n\n\n\n\n\n\n Programme Level Learning and Teaching Hours 2,\n\nDirected Learning and Independent Learning Hours\n66 )",
+    "learning_activities": "Total Hours: 100 ( Lecture Hours 32, Programme Level Learning and Teaching Hours 2, Directed Learning and Independent Learning Hours 66 )",
     "assessment": {
       "written_exam_percent": 0,
       "coursework_percent": 100,
@@ -4241,7 +4241,7 @@
     "prohibited_combinations": "",
     "academic_year": "Quota:  41",
     "course_start": "Semester 1",
-    "learning_activities": "Total Hours:\n100\n\n(\n Lecture Hours 22,\n\n\n\n\n\n\n\n\n\n\n\n Programme Level Learning and Teaching Hours 2,\n\nDirected Learning and Independent Learning Hours\n76 )",
+    "learning_activities": "Total Hours: 100 ( Lecture Hours 22, Programme Level Learning and Teaching Hours 2, Directed Learning and Independent Learning Hours 76 )",
     "assessment": {
       "written_exam_percent": 0,
       "coursework_percent": 100,
@@ -4282,7 +4282,7 @@
     "high_demand": "Yes",
     "academic_year": "Quota:  0",
     "course_start": "Semester 1",
-    "learning_activities": "Total Hours:\n200\n\n(\n Lecture Hours 22,\n Seminar/Tutorial Hours 9,\n\n\n\n\n\n\n\n\n\n\n Programme Level Learning and Teaching Hours 4,\n\nDirected Learning and Independent Learning Hours\n165 )",
+    "learning_activities": "Total Hours: 200 ( Lecture Hours 22, Seminar/Tutorial Hours 9, Programme Level Learning and Teaching Hours 4, Directed Learning and Independent Learning Hours 165 )",
     "assessment": {
       "written_exam_percent": 0,
       "coursework_percent": 80,
@@ -4324,7 +4324,7 @@
     "high_demand": "Yes",
     "academic_year": "Quota:  120",
     "course_start": "Semester 2",
-    "learning_activities": "Total Hours:\n200\n\n(\n Lecture Hours 22,\n Seminar/Tutorial Hours 9,\n\n\n\n\n\n\n\n\n\n\n Programme Level Learning and Teaching Hours 4,\n\nDirected Learning and Independent Learning Hours\n165 )",
+    "learning_activities": "Total Hours: 200 ( Lecture Hours 22, Seminar/Tutorial Hours 9, Programme Level Learning and Teaching Hours 4, Directed Learning and Independent Learning Hours 165 )",
     "assessment": {
       "written_exam_percent": 0,
       "coursework_percent": 80,
@@ -4402,7 +4402,7 @@
     "high_demand": "Yes",
     "academic_year": "Quota:  252",
     "course_start": "Semester 1",
-    "learning_activities": "Total Hours:\n200\n\n(\n Lecture Hours 30,\n Seminar/Tutorial Hours 10,\n\n\n\n\n\n Feedback/Feedforward Hours 1,\n\n Summative Assessment Hours 2,\n\n\n Programme Level Learning and Teaching Hours 4,\n\nDirected Learning and Independent Learning Hours\n153 )",
+    "learning_activities": "Total Hours: 200 ( Lecture Hours 30, Seminar/Tutorial Hours 10, Feedback/Feedforward Hours 1, Summative Assessment Hours 2, Programme Level Learning and Teaching Hours 4, Directed Learning and Independent Learning Hours 153 )",
     "assessment": {
       "written_exam_percent": 40,
       "coursework_percent": 60,
@@ -4444,7 +4444,7 @@
     "high_demand": "Yes",
     "academic_year": "Quota:  248",
     "course_start": "Semester 2",
-    "learning_activities": "Total Hours:\n200\n\n(\n Lecture Hours 30,\n Seminar/Tutorial Hours 10,\n\n\n\n\n\n Feedback/Feedforward Hours 1,\n\n Summative Assessment Hours 2,\n\n\n Programme Level Learning and Teaching Hours 4,\n\nDirected Learning and Independent Learning Hours\n153 )",
+    "learning_activities": "Total Hours: 200 ( Lecture Hours 30, Seminar/Tutorial Hours 10, Feedback/Feedforward Hours 1, Summative Assessment Hours 2, Programme Level Learning and Teaching Hours 4, Directed Learning and Independent Learning Hours 153 )",
     "assessment": {
       "written_exam_percent": 40,
       "coursework_percent": 60,
@@ -4551,7 +4551,7 @@
     "high_demand": "Yes",
     "academic_year": "Quota:  90",
     "course_start": "Semester 2",
-    "learning_activities": "Total Hours:\n200\n\n(\n Lecture Hours 25,\n Seminar/Tutorial Hours 5,\n\n Supervised Practical/Workshop/Studio Hours 22,\n\n\n\n\n\n\n\n\n Programme Level Learning and Teaching Hours 4,\n\nDirected Learning and Independent Learning Hours\n144 )",
+    "learning_activities": "Total Hours: 200 ( Lecture Hours 25, Seminar/Tutorial Hours 5, Supervised Practical/Workshop/Studio Hours 22, Programme Level Learning and Teaching Hours 4, Directed Learning and Independent Learning Hours 144 )",
     "assessment": {
       "written_exam_percent": 50,
       "coursework_percent": 15,
@@ -4593,7 +4593,7 @@
     "high_demand": "Yes",
     "academic_year": "Quota:  36",
     "course_start": "16/09/2024",
-    "learning_activities": "Total Hours:\n200\n\n(\n Lecture Hours 20,\n\n\n Supervised Practical/Workshop/Studio Hours 18,\n Fieldwork Hours 16,\n\n\n Feedback/Feedforward Hours 2,\n Formative Assessment Hours 2,\n Summative Assessment Hours 2,\n\n\n Programme Level Learning and Teaching Hours 4,\n\nDirected Learning and Independent Learning Hours\n136 )",
+    "learning_activities": "Total Hours: 200 ( Lecture Hours 20, Supervised Practical/Workshop/Studio Hours 18, Fieldwork Hours 16, Feedback/Feedforward Hours 2, Formative Assessment Hours 2, Summative Assessment Hours 2, Programme Level Learning and Teaching Hours 4, Directed Learning and Independent Learning Hours 136 )",
     "assessment": {
       "written_exam_percent": 50,
       "coursework_percent": 50,
@@ -4706,7 +4706,7 @@
     "high_demand": "Yes",
     "academic_year": "Quota:  None",
     "course_start": "Semester 2",
-    "learning_activities": "Total Hours:\n200\n\n(\n\n\n\n\n\n\n\n\n\n\n\n\n Programme Level Learning and Teaching Hours 4,\n\nDirected Learning and Independent Learning Hours\n196 )",
+    "learning_activities": "Total Hours: 200 ( Programme Level Learning and Teaching Hours 4, Directed Learning and Independent Learning Hours 196 )",
     "assessment": {
       "written_exam_percent": 30,
       "coursework_percent": 70,
@@ -4749,7 +4749,7 @@
     "high_demand": "Yes",
     "academic_year": "Quota:  220",
     "course_start": "Semester 1",
-    "learning_activities": "Total Hours:\n200\n\n(\n Lecture Hours 22,\n Seminar/Tutorial Hours 10,\n\n Supervised Practical/Workshop/Studio Hours 7,\n\n\n\n Feedback/Feedforward Hours 2,\n Formative Assessment Hours 4,\n Summative Assessment Hours 2,\n\n\n Programme Level Learning and Teaching Hours 4,\n\nDirected Learning and Independent Learning Hours\n149 )",
+    "learning_activities": "Total Hours: 200 ( Lecture Hours 22, Seminar/Tutorial Hours 10, Supervised Practical/Workshop/Studio Hours 7, Feedback/Feedforward Hours 2, Formative Assessment Hours 4, Summative Assessment Hours 2, Programme Level Learning and Teaching Hours 4, Directed Learning and Independent Learning Hours 149 )",
     "assessment": {
       "written_exam_percent": 50,
       "coursework_percent": 50,
@@ -4791,7 +4791,7 @@
     "high_demand": "Yes",
     "academic_year": "Quota:  80",
     "course_start": "Semester 1",
-    "learning_activities": "Total Hours:\n200\n\n(\n Lecture Hours 30,\n\n\n Supervised Practical/Workshop/Studio Hours 12,\n\n\n\n Feedback/Feedforward Hours 2,\n\n Summative Assessment Hours 2,\n\n\n Programme Level Learning and Teaching Hours 4,\n\nDirected Learning and Independent Learning Hours\n150 )",
+    "learning_activities": "Total Hours: 200 ( Lecture Hours 30, Supervised Practical/Workshop/Studio Hours 12, Feedback/Feedforward Hours 2, Summative Assessment Hours 2, Programme Level Learning and Teaching Hours 4, Directed Learning and Independent Learning Hours 150 )",
     "assessment": {
       "written_exam_percent": 50,
       "coursework_percent": 50,
@@ -4833,7 +4833,7 @@
     "high_demand": "Yes",
     "academic_year": "Quota:  None",
     "course_start": "Semester 2",
-    "learning_activities": "Total Hours:\n200\n\n(\n Lecture Hours 31,\n Seminar/Tutorial Hours 8,\n\n Supervised Practical/Workshop/Studio Hours 5,\n\n\n\n Feedback/Feedforward Hours 2,\n\n Summative Assessment Hours 2,\n\n\n Programme Level Learning and Teaching Hours 4,\n\nDirected Learning and Independent Learning Hours\n148 )",
+    "learning_activities": "Total Hours: 200 ( Lecture Hours 31, Seminar/Tutorial Hours 8, Supervised Practical/Workshop/Studio Hours 5, Feedback/Feedforward Hours 2, Summative Assessment Hours 2, Programme Level Learning and Teaching Hours 4, Directed Learning and Independent Learning Hours 148 )",
     "assessment": {
       "written_exam_percent": 70,
       "coursework_percent": 30,
@@ -4875,7 +4875,7 @@
     "high_demand": "Yes",
     "academic_year": "Quota:  86",
     "course_start": "Semester 1",
-    "learning_activities": "Total Hours:\n200\n\n(\n Lecture Hours 20,\n\n\n Supervised Practical/Workshop/Studio Hours 9,\n\n\n\n Feedback/Feedforward Hours 2,\n\n Summative Assessment Hours 2,\n\n\n Programme Level Learning and Teaching Hours 4,\n\nDirected Learning and Independent Learning Hours\n163 )",
+    "learning_activities": "Total Hours: 200 ( Lecture Hours 20, Supervised Practical/Workshop/Studio Hours 9, Feedback/Feedforward Hours 2, Summative Assessment Hours 2, Programme Level Learning and Teaching Hours 4, Directed Learning and Independent Learning Hours 163 )",
     "assessment": {
       "written_exam_percent": 50,
       "coursework_percent": 50,
@@ -4917,7 +4917,7 @@
     "high_demand": "Yes",
     "academic_year": "Quota:  150",
     "course_start": "Semester 2",
-    "learning_activities": "Total Hours:\n200\n\n(\n Lecture Hours 24,\n\n\n Supervised Practical/Workshop/Studio Hours 27,\n\n\n\n Feedback/Feedforward Hours 3,\n\n Summative Assessment Hours 3,\n\n\n Programme Level Learning and Teaching Hours 4,\n\nDirected Learning and Independent Learning Hours\n139 )",
+    "learning_activities": "Total Hours: 200 ( Lecture Hours 24, Supervised Practical/Workshop/Studio Hours 27, Feedback/Feedforward Hours 3, Summative Assessment Hours 3, Programme Level Learning and Teaching Hours 4, Directed Learning and Independent Learning Hours 139 )",
     "assessment": {
       "written_exam_percent": 50,
       "coursework_percent": 50,
@@ -4960,7 +4960,7 @@
     "high_demand": "Yes",
     "academic_year": "Quota:  26",
     "course_start": "Semester 2",
-    "learning_activities": "Total Hours:\n200\n\n(\n Lecture Hours 22,\n Seminar/Tutorial Hours 10,\n\n Supervised Practical/Workshop/Studio Hours 9,\n\n\n\n Feedback/Feedforward Hours 3,\n\n Summative Assessment Hours 3,\n\n\n Programme Level Learning and Teaching Hours 4,\n\nDirected Learning and Independent Learning Hours\n149 )",
+    "learning_activities": "Total Hours: 200 ( Lecture Hours 22, Seminar/Tutorial Hours 10, Supervised Practical/Workshop/Studio Hours 9, Feedback/Feedforward Hours 3, Summative Assessment Hours 3, Programme Level Learning and Teaching Hours 4, Directed Learning and Independent Learning Hours 149 )",
     "assessment": {
       "written_exam_percent": 70,
       "coursework_percent": 30,
@@ -5000,7 +5000,7 @@
     "prohibited_combinations": "",
     "academic_year": "Quota:  None",
     "course_start": "Semester 1",
-    "learning_activities": "Total Hours:\n200\n\n(\n Lecture Hours 25,\n\n Dissertation/Project Supervision Hours 20,\n Supervised Practical/Workshop/Studio Hours 15,\n Fieldwork Hours 15,\n\n\n Feedback/Feedforward Hours 3,\n Formative Assessment Hours 2,\n Summative Assessment Hours 2,\n Revision Session Hours 2,\n\n Programme Level Learning and Teaching Hours 4,\n\nDirected Learning and Independent Learning Hours\n112 )",
+    "learning_activities": "Total Hours: 200 ( Lecture Hours 25, Dissertation/Project Supervision Hours 20, Supervised Practical/Workshop/Studio Hours 15, Fieldwork Hours 15, Feedback/Feedforward Hours 3, Formative Assessment Hours 2, Summative Assessment Hours 2, Revision Session Hours 2, Programme Level Learning and Teaching Hours 4, Directed Learning and Independent Learning Hours 112 )",
     "assessment": {
       "written_exam_percent": 50,
       "coursework_percent": 50,
@@ -5042,7 +5042,7 @@
     "high_demand": "Yes",
     "academic_year": "Quota:  None",
     "course_start": "Semester 2",
-    "learning_activities": "Total Hours:\n200\n\n(\n Lecture Hours 28,\n Seminar/Tutorial Hours 3,\n\n Supervised Practical/Workshop/Studio Hours 16,\n\n\n\n Feedback/Feedforward Hours 1,\n Formative Assessment Hours 6,\n Summative Assessment Hours 2,\n Revision Session Hours 1,\n\n Programme Level Learning and Teaching Hours 4,\n\nDirected Learning and Independent Learning Hours\n139 )",
+    "learning_activities": "Total Hours: 200 ( Lecture Hours 28, Seminar/Tutorial Hours 3, Supervised Practical/Workshop/Studio Hours 16, Feedback/Feedforward Hours 1, Formative Assessment Hours 6, Summative Assessment Hours 2, Revision Session Hours 1, Programme Level Learning and Teaching Hours 4, Directed Learning and Independent Learning Hours 139 )",
     "assessment": {
       "written_exam_percent": 70,
       "coursework_percent": 30,
@@ -5084,7 +5084,7 @@
     "high_demand": "Yes",
     "academic_year": "Quota:  70",
     "course_start": "Semester 2",
-    "learning_activities": "Total Hours:\n200\n\n(\n Lecture Hours 21,\n Seminar/Tutorial Hours 6,\n\n Supervised Practical/Workshop/Studio Hours 6,\n\n External Visit Hours 9,\n\n Feedback/Feedforward Hours 1,\n\n Summative Assessment Hours 2,\n\n\n Programme Level Learning and Teaching Hours 4,\n\nDirected Learning and Independent Learning Hours\n151 )",
+    "learning_activities": "Total Hours: 200 ( Lecture Hours 21, Seminar/Tutorial Hours 6, Supervised Practical/Workshop/Studio Hours 6, External Visit Hours 9, Feedback/Feedforward Hours 1, Summative Assessment Hours 2, Programme Level Learning and Teaching Hours 4, Directed Learning and Independent Learning Hours 151 )",
     "assessment": {
       "written_exam_percent": 50,
       "coursework_percent": 50,
@@ -5125,7 +5125,7 @@
     "additional_costs": "****** This Course ONLY open to 3rd-year Environmental Geoscience students ******",
     "academic_year": "Quota:  None",
     "course_start": "Semester 2",
-    "learning_activities": "Total Hours:\n200\n\n(\n Lecture Hours 3,\n\n\n Supervised Practical/Workshop/Studio Hours 8,\n Fieldwork Hours 24,\n\n\n Feedback/Feedforward Hours 3,\n\n Summative Assessment Hours 1,\n\n\n Programme Level Learning and Teaching Hours 4,\n\nDirected Learning and Independent Learning Hours\n157 )",
+    "learning_activities": "Total Hours: 200 ( Lecture Hours 3, Supervised Practical/Workshop/Studio Hours 8, Fieldwork Hours 24, Feedback/Feedforward Hours 3, Summative Assessment Hours 1, Programme Level Learning and Teaching Hours 4, Directed Learning and Independent Learning Hours 157 )",
     "assessment": {
       "written_exam_percent": 0,
       "coursework_percent": 100,
@@ -5167,7 +5167,7 @@
     "high_demand": "Yes",
     "academic_year": "Quota:  45",
     "course_start": "Semester 2",
-    "learning_activities": "Total Hours:\n200\n\n(\n Lecture Hours 33,\n Seminar/Tutorial Hours 5,\n\n Supervised Practical/Workshop/Studio Hours 22,\n Fieldwork Hours 3,\n\n\n\n\n Summative Assessment Hours 2,\n Revision Session Hours 3,\n\n Programme Level Learning and Teaching Hours 4,\n\nDirected Learning and Independent Learning Hours\n128 )",
+    "learning_activities": "Total Hours: 200 ( Lecture Hours 33, Seminar/Tutorial Hours 5, Supervised Practical/Workshop/Studio Hours 22, Fieldwork Hours 3, Summative Assessment Hours 2, Revision Session Hours 3, Programme Level Learning and Teaching Hours 4, Directed Learning and Independent Learning Hours 128 )",
     "assessment": {
       "written_exam_percent": 50,
       "coursework_percent": 50,
@@ -5209,7 +5209,7 @@
     "high_demand": "Yes",
     "academic_year": "Quota:  50",
     "course_start": "Semester 2",
-    "learning_activities": "Total Hours:\n200\n\n(\n Lecture Hours 8,\n Seminar/Tutorial Hours 20,\n\n\n\n\n\n\n\n\n\n\n Programme Level Learning and Teaching Hours 4,\n\nDirected Learning and Independent Learning Hours\n168 )",
+    "learning_activities": "Total Hours: 200 ( Lecture Hours 8, Seminar/Tutorial Hours 20, Programme Level Learning and Teaching Hours 4, Directed Learning and Independent Learning Hours 168 )",
     "assessment": {
       "written_exam_percent": 0,
       "coursework_percent": 100,
@@ -5248,7 +5248,7 @@
     "prohibited_combinations": "Students MUST NOT also be takingLand Use and Water Resources (ECSC10012)",
     "academic_year": "Quota:  40",
     "course_start": "Semester 1",
-    "learning_activities": "Total Hours:\n200\n\n(\n\n\n\n\n\n\n\n\n\n\n\n\n Programme Level Learning and Teaching Hours 4,\n\nDirected Learning and Independent Learning Hours\n196 )",
+    "learning_activities": "Total Hours: 200 ( Programme Level Learning and Teaching Hours 4, Directed Learning and Independent Learning Hours 196 )",
     "assessment": {
       "written_exam_percent": 60,
       "coursework_percent": 40,
@@ -5289,7 +5289,7 @@
     "prohibited_combinations": "",
     "academic_year": "Quota:  None",
     "course_start": "Semester 1",
-    "learning_activities": "Total Hours:\n200\n\n(\n\n Seminar/Tutorial Hours 6,\n Dissertation/Project Supervision Hours 6,\n Supervised Practical/Workshop/Studio Hours 12,\n Fieldwork Hours 32,\n External Visit Hours 14,\n\n Feedback/Feedforward Hours 1,\n\n Summative Assessment Hours 5,\n\n\n Programme Level Learning and Teaching Hours 4,\n\nDirected Learning and Independent Learning Hours\n120 )",
+    "learning_activities": "Total Hours: 200 ( Seminar/Tutorial Hours 6, Dissertation/Project Supervision Hours 6, Supervised Practical/Workshop/Studio Hours 12, Fieldwork Hours 32, External Visit Hours 14, Feedback/Feedforward Hours 1, Summative Assessment Hours 5, Programme Level Learning and Teaching Hours 4, Directed Learning and Independent Learning Hours 120 )",
     "assessment": {
       "written_exam_percent": 0,
       "coursework_percent": 100,
@@ -5332,7 +5332,7 @@
     "high_demand": "Yes",
     "academic_year": "Quota:  None",
     "course_start": "Full Year",
-    "learning_activities": "Total Hours:\n400\n\n(\n\n\n Dissertation/Project Supervision Hours 22,\n\n\n\n\n\n\n\n\n\n Programme Level Learning and Teaching Hours 8,\n\nDirected Learning and Independent Learning Hours\n370 )",
+    "learning_activities": "Total Hours: 400 ( Dissertation/Project Supervision Hours 22, Programme Level Learning and Teaching Hours 8, Directed Learning and Independent Learning Hours 370 )",
     "assessment": {
       "written_exam_percent": 0,
       "coursework_percent": 100,
@@ -5373,7 +5373,7 @@
     "high_demand": "Yes",
     "academic_year": "Quota:  40",
     "course_start": "Semester 1",
-    "learning_activities": "Total Hours:\n200\n\n(\n\n Seminar/Tutorial Hours 20,\n\n\n\n\n\n\n\n\n\n\n Programme Level Learning and Teaching Hours 4,\n\nDirected Learning and Independent Learning Hours\n176 )",
+    "learning_activities": "Total Hours: 200 ( Seminar/Tutorial Hours 20, Programme Level Learning and Teaching Hours 4, Directed Learning and Independent Learning Hours 176 )",
     "assessment": {
       "written_exam_percent": 60,
       "coursework_percent": 40,
@@ -5415,7 +5415,7 @@
     "high_demand": "Yes",
     "academic_year": "Quota:  None",
     "course_start": "Semester 2",
-    "learning_activities": "Total Hours:\n100\n\n(\n\n\n\n\n\n\n\n\n\n\n\n\n Programme Level Learning and Teaching Hours 2,\n\nDirected Learning and Independent Learning Hours\n98 )",
+    "learning_activities": "Total Hours: 100 ( Programme Level Learning and Teaching Hours 2, Directed Learning and Independent Learning Hours 98 )",
     "assessment": {
       "written_exam_percent": 0,
       "coursework_percent": 100,
@@ -5518,7 +5518,7 @@
     "prohibited_combinations": "",
     "academic_year": "Quota:  40",
     "course_start": "Semester 1",
-    "learning_activities": "Total Hours:\n200\n\n(\n Lecture Hours 44,\n\n\n\n\n\n\n\n\n\n\n\n Programme Level Learning and Teaching Hours 4,\n\nDirected Learning and Independent Learning Hours\n152 )",
+    "learning_activities": "Total Hours: 200 ( Lecture Hours 44, Programme Level Learning and Teaching Hours 4, Directed Learning and Independent Learning Hours 152 )",
     "assessment": {
       "written_exam_percent": 0,
       "coursework_percent": 100,
@@ -5560,7 +5560,7 @@
     "high_demand": "Yes",
     "academic_year": "Quota:  40",
     "course_start": "Semester 2",
-    "learning_activities": "Total Hours:\n200\n\n(\n Lecture Hours 20,\n\n\n\n\n\n\n\n\n\n\n\n Programme Level Learning and Teaching Hours 4,\n\nDirected Learning and Independent Learning Hours\n176 )",
+    "learning_activities": "Total Hours: 200 ( Lecture Hours 20, Programme Level Learning and Teaching Hours 4, Directed Learning and Independent Learning Hours 176 )",
     "assessment": {
       "written_exam_percent": 0,
       "coursework_percent": 100,
@@ -5601,7 +5601,7 @@
     "high_demand": "Yes",
     "academic_year": "Quota:  38",
     "course_start": "Semester 2",
-    "learning_activities": "Total Hours:\n200\n\n(\n Lecture Hours 22,\n\n\n\n Fieldwork Hours 6,\n\n\n Feedback/Feedforward Hours 2,\n\n Summative Assessment Hours 2,\n\n\n Programme Level Learning and Teaching Hours 4,\n\nDirected Learning and Independent Learning Hours\n164 )",
+    "learning_activities": "Total Hours: 200 ( Lecture Hours 22, Fieldwork Hours 6, Feedback/Feedforward Hours 2, Summative Assessment Hours 2, Programme Level Learning and Teaching Hours 4, Directed Learning and Independent Learning Hours 164 )",
     "assessment": {
       "written_exam_percent": 50,
       "coursework_percent": 50,
@@ -5641,7 +5641,7 @@
     "prohibited_combinations": "",
     "academic_year": "Quota:  None",
     "course_start": "Block 5 (sem 2)",
-    "learning_activities": "Total Hours:\n600\n\n(\n\n\n\n\n\n\n\n\n\n\n\n\n Programme Level Learning and Teaching Hours 12,\n\nDirected Learning and Independent Learning Hours\n588 )",
+    "learning_activities": "Total Hours: 600 ( Programme Level Learning and Teaching Hours 12, Directed Learning and Independent Learning Hours 588 )",
     "assessment": {
       "written_exam_percent": 0,
       "coursework_percent": 100,
@@ -5680,7 +5680,7 @@
     "prohibited_combinations": "",
     "academic_year": "Quota:  None",
     "course_start": "Block 5 (sem 2)",
-    "learning_activities": "Total Hours:\n600\n\n(\n\n\n\n\n\n\n\n\n\n\n\n\n Programme Level Learning and Teaching Hours 12,\n\nDirected Learning and Independent Learning Hours\n588 )",
+    "learning_activities": "Total Hours: 600 ( Programme Level Learning and Teaching Hours 12, Directed Learning and Independent Learning Hours 588 )",
     "assessment": {
       "written_exam_percent": 0,
       "coursework_percent": 100,
@@ -5753,7 +5753,7 @@
     "prohibited_combinations": "",
     "academic_year": "Quota:  40",
     "course_start": "Semester 2",
-    "learning_activities": "Total Hours:\n200\n\n(\n Lecture Hours 30,\n Seminar/Tutorial Hours 10,\n\n\n\n\n\n\n\n\n\n\n Programme Level Learning and Teaching Hours 4,\n\nDirected Learning and Independent Learning Hours\n156 )",
+    "learning_activities": "Total Hours: 200 ( Lecture Hours 30, Seminar/Tutorial Hours 10, Programme Level Learning and Teaching Hours 4, Directed Learning and Independent Learning Hours 156 )",
     "assessment": {
       "written_exam_percent": 0,
       "coursework_percent": 100,
@@ -5792,7 +5792,7 @@
     "prohibited_combinations": "",
     "academic_year": "Quota:  40",
     "course_start": "Semester 1",
-    "learning_activities": "Total Hours:\n200\n\n(\n Lecture Hours 33,\n\n\n\n\n\n\n\n\n\n\n\n Programme Level Learning and Teaching Hours 4,\n\nDirected Learning and Independent Learning Hours\n163 )",
+    "learning_activities": "Total Hours: 200 ( Lecture Hours 33, Programme Level Learning and Teaching Hours 4, Directed Learning and Independent Learning Hours 163 )",
     "assessment": {
       "written_exam_percent": 0,
       "coursework_percent": 100,
@@ -5831,7 +5831,7 @@
     "prohibited_combinations": "",
     "academic_year": "Quota:  40",
     "course_start": "Semester 1",
-    "learning_activities": "Total Hours:\n200\n\n(\n Lecture Hours 30,\n\n\n\n\n\n\n\n\n\n\n\n Programme Level Learning and Teaching Hours 4,\n\nDirected Learning and Independent Learning Hours\n166 )",
+    "learning_activities": "Total Hours: 200 ( Lecture Hours 30, Programme Level Learning and Teaching Hours 4, Directed Learning and Independent Learning Hours 166 )",
     "assessment": {
       "written_exam_percent": 0,
       "coursework_percent": 100,
@@ -5873,7 +5873,7 @@
     "high_demand": "Yes",
     "academic_year": "Quota:  130",
     "course_start": "Semester 1",
-    "learning_activities": "Total Hours:\n200\n\n(\n Lecture Hours 20,\n Seminar/Tutorial Hours 8,\n\n\n\n\n\n Feedback/Feedforward Hours 3,\n\n\n\n Other Study Hours 22,\n Programme Level Learning and Teaching Hours 4,\n\nDirected Learning and Independent Learning Hours\n143 )",
+    "learning_activities": "Total Hours: 200 ( Lecture Hours 20, Seminar/Tutorial Hours 8, Feedback/Feedforward Hours 3, Other Study Hours 22, Programme Level Learning and Teaching Hours 4, Directed Learning and Independent Learning Hours 143 )",
     "assessment": {
       "written_exam_percent": 0,
       "coursework_percent": 100,
@@ -5942,7 +5942,7 @@
     "prohibited_combinations": "",
     "academic_year": "Quota:  43",
     "course_start": "Semester 2",
-    "learning_activities": "Total Hours:\n200\n\n(\n\n\n\n\n\n\n\n\n\n\n\n\n Programme Level Learning and Teaching Hours 4,\n\nDirected Learning and Independent Learning Hours\n196 )",
+    "learning_activities": "Total Hours: 200 ( Programme Level Learning and Teaching Hours 4, Directed Learning and Independent Learning Hours 196 )",
     "assessment": {
       "written_exam_percent": 0,
       "coursework_percent": 100,
@@ -6019,7 +6019,7 @@
     "prohibited_combinations": "",
     "academic_year": "Quota:  129",
     "course_start": "Semester 1",
-    "learning_activities": "Total Hours:\n200\n\n(\n Lecture Hours 34,\n\n\n\n\n\n\n\n\n\n\n\n Programme Level Learning and Teaching Hours 4,\n\nDirected Learning and Independent Learning Hours\n162 )",
+    "learning_activities": "Total Hours: 200 ( Lecture Hours 34, Programme Level Learning and Teaching Hours 4, Directed Learning and Independent Learning Hours 162 )",
     "assessment": {
       "written_exam_percent": 40,
       "coursework_percent": 60,
@@ -6061,7 +6061,7 @@
     "high_demand": "Yes",
     "academic_year": "Quota:  130",
     "course_start": "Semester 2",
-    "learning_activities": "Total Hours:\n200\n\n(\n Lecture Hours 20,\n Seminar/Tutorial Hours 6,\n\n\n\n\n\n\n\n\n\n Other Study Hours 4,\n Programme Level Learning and Teaching Hours 4,\n\nDirected Learning and Independent Learning Hours\n166 )",
+    "learning_activities": "Total Hours: 200 ( Lecture Hours 20, Seminar/Tutorial Hours 6, Other Study Hours 4, Programme Level Learning and Teaching Hours 4, Directed Learning and Independent Learning Hours 166 )",
     "assessment": {
       "written_exam_percent": 0,
       "coursework_percent": 100,
@@ -6103,7 +6103,7 @@
     "high_demand": "Yes",
     "academic_year": "Quota:  None",
     "course_start": "Semester 2",
-    "learning_activities": "Total Hours:\n200\n\n(\n\n\n\n\n\n\n\n\n\n\n\n\n Programme Level Learning and Teaching Hours 4,\n\nDirected Learning and Independent Learning Hours\n196 )",
+    "learning_activities": "Total Hours: 200 ( Programme Level Learning and Teaching Hours 4, Directed Learning and Independent Learning Hours 196 )",
     "assessment": {
       "written_exam_percent": 30,
       "coursework_percent": 70,
@@ -6146,7 +6146,7 @@
     "high_demand": "Yes",
     "academic_year": "Quota:  120",
     "course_start": "Semester 1",
-    "learning_activities": "Total Hours:\n200\n\n(\n Lecture Hours 18,\n Seminar/Tutorial Hours 8,\n\n\n\n\n\n\n\n\n\n\n Programme Level Learning and Teaching Hours 4,\n\nDirected Learning and Independent Learning Hours\n170 )",
+    "learning_activities": "Total Hours: 200 ( Lecture Hours 18, Seminar/Tutorial Hours 8, Programme Level Learning and Teaching Hours 4, Directed Learning and Independent Learning Hours 170 )",
     "assessment": {
       "written_exam_percent": 50,
       "coursework_percent": 50,
@@ -6188,7 +6188,7 @@
     "high_demand": "Yes",
     "academic_year": "Quota:  220",
     "course_start": "Semester 1",
-    "learning_activities": "Total Hours:\n200\n\n(\n Lecture Hours 22,\n Seminar/Tutorial Hours 10,\n\n Supervised Practical/Workshop/Studio Hours 7,\n\n\n\n Feedback/Feedforward Hours 2,\n Formative Assessment Hours 4,\n Summative Assessment Hours 2,\n\n\n Programme Level Learning and Teaching Hours 4,\n\nDirected Learning and Independent Learning Hours\n149 )",
+    "learning_activities": "Total Hours: 200 ( Lecture Hours 22, Seminar/Tutorial Hours 10, Supervised Practical/Workshop/Studio Hours 7, Feedback/Feedforward Hours 2, Formative Assessment Hours 4, Summative Assessment Hours 2, Programme Level Learning and Teaching Hours 4, Directed Learning and Independent Learning Hours 149 )",
     "assessment": {
       "written_exam_percent": 50,
       "coursework_percent": 50,
@@ -6230,7 +6230,7 @@
     "high_demand": "Yes",
     "academic_year": "Quota:  220",
     "course_start": "Semester 2",
-    "learning_activities": "Total Hours:\n200\n\n(\n Lecture Hours 20,\n\n\n Supervised Practical/Workshop/Studio Hours 10,\n\n\n\n Feedback/Feedforward Hours 3,\n\n Summative Assessment Hours 40,\n\n\n Programme Level Learning and Teaching Hours 4,\n\nDirected Learning and Independent Learning Hours\n123 )",
+    "learning_activities": "Total Hours: 200 ( Lecture Hours 20, Supervised Practical/Workshop/Studio Hours 10, Feedback/Feedforward Hours 3, Summative Assessment Hours 40, Programme Level Learning and Teaching Hours 4, Directed Learning and Independent Learning Hours 123 )",
     "assessment": {
       "written_exam_percent": 60,
       "coursework_percent": 40,
@@ -6270,7 +6270,7 @@
     "prohibited_combinations": "",
     "academic_year": "Quota:  38",
     "course_start": "Semester 1",
-    "learning_activities": "Total Hours:\n200\n\n(\n\n\n\n\n\n\n\n\n\n\n\n\n Programme Level Learning and Teaching Hours 4,\n\nDirected Learning and Independent Learning Hours\n196 )",
+    "learning_activities": "Total Hours: 200 ( Programme Level Learning and Teaching Hours 4, Directed Learning and Independent Learning Hours 196 )",
     "assessment": {
       "written_exam_percent": 0,
       "coursework_percent": 100,
@@ -6310,7 +6310,7 @@
     "prohibited_combinations": "",
     "academic_year": "Quota:  120",
     "course_start": "Semester 2",
-    "learning_activities": "Total Hours:\n200\n\n(\n Lecture Hours 5,\n Seminar/Tutorial Hours 5,\n\n\n Fieldwork Hours 50,\n\n\n Feedback/Feedforward Hours 4,\n\n\n\n Other Study Hours 68,\n Programme Level Learning and Teaching Hours 4,\n\nDirected Learning and Independent Learning Hours\n64 )",
+    "learning_activities": "Total Hours: 200 ( Lecture Hours 5, Seminar/Tutorial Hours 5, Fieldwork Hours 50, Feedback/Feedforward Hours 4, Other Study Hours 68, Programme Level Learning and Teaching Hours 4, Directed Learning and Independent Learning Hours 64 )",
     "assessment": {
       "written_exam_percent": 0,
       "coursework_percent": 100,
@@ -6386,7 +6386,7 @@
     "prohibited_combinations": "",
     "academic_year": "Quota:  23",
     "course_start": "Semester 2",
-    "learning_activities": "Total Hours:\n200\n\n(\n\n Seminar/Tutorial Hours 8,\n\n\n Fieldwork Hours 70,\n\n\n\n\n\n\n\n Programme Level Learning and Teaching Hours 4,\n\nDirected Learning and Independent Learning Hours\n118 )",
+    "learning_activities": "Total Hours: 200 ( Seminar/Tutorial Hours 8, Fieldwork Hours 70, Programme Level Learning and Teaching Hours 4, Directed Learning and Independent Learning Hours 118 )",
     "assessment": {
       "written_exam_percent": 0,
       "coursework_percent": 100,
@@ -6426,7 +6426,7 @@
     "prohibited_combinations": "",
     "academic_year": "Quota:  22",
     "course_start": "Semester 2",
-    "learning_activities": "Total Hours:\n200\n\n(\n\n Seminar/Tutorial Hours 8,\n\n\n Fieldwork Hours 70,\n\n\n\n\n\n\n\n Programme Level Learning and Teaching Hours 4,\n\nDirected Learning and Independent Learning Hours\n118 )",
+    "learning_activities": "Total Hours: 200 ( Seminar/Tutorial Hours 8, Fieldwork Hours 70, Programme Level Learning and Teaching Hours 4, Directed Learning and Independent Learning Hours 118 )",
     "assessment": {
       "written_exam_percent": 0,
       "coursework_percent": 100,
@@ -6550,7 +6550,7 @@
     "prohibited_combinations": "",
     "academic_year": "Quota:  None",
     "course_start": "Semester 1",
-    "learning_activities": "Total Hours:\n200\n\n(\n Lecture Hours 22,\n\n\n Supervised Practical/Workshop/Studio Hours 16,\n\n\n\n\n\n\n\n\n Programme Level Learning and Teaching Hours 4,\n\nDirected Learning and Independent Learning Hours\n158 )",
+    "learning_activities": "Total Hours: 200 ( Lecture Hours 22, Supervised Practical/Workshop/Studio Hours 16, Programme Level Learning and Teaching Hours 4, Directed Learning and Independent Learning Hours 158 )",
     "assessment": {
       "written_exam_percent": 0,
       "coursework_percent": 100,
@@ -6590,7 +6590,7 @@
     "prohibited_combinations": "",
     "academic_year": "Quota:  None",
     "course_start": "Semester 1",
-    "learning_activities": "Total Hours:\n200\n\n(\n\n\n\n\n\n\n\n\n\n\n\n\n Programme Level Learning and Teaching Hours 4,\n\nDirected Learning and Independent Learning Hours\n196 )",
+    "learning_activities": "Total Hours: 200 ( Programme Level Learning and Teaching Hours 4, Directed Learning and Independent Learning Hours 196 )",
     "assessment": {
       "written_exam_percent": 0,
       "coursework_percent": 100,
@@ -6630,7 +6630,7 @@
     "prohibited_combinations": "",
     "academic_year": "Quota:  None",
     "course_start": "Semester 2",
-    "learning_activities": "Total Hours:\n200\n\n(\n\n\n\n Supervised Practical/Workshop/Studio Hours 10,\n Fieldwork Hours 7,\n\n\n\n\n\n\n\n Programme Level Learning and Teaching Hours 4,\n\nDirected Learning and Independent Learning Hours\n179 )",
+    "learning_activities": "Total Hours: 200 ( Supervised Practical/Workshop/Studio Hours 10, Fieldwork Hours 7, Programme Level Learning and Teaching Hours 4, Directed Learning and Independent Learning Hours 179 )",
     "assessment": {
       "written_exam_percent": 0,
       "coursework_percent": 100,
@@ -6766,7 +6766,7 @@
     "prohibited_combinations": "",
     "academic_year": "Quota:  None",
     "course_start": "Semester 1",
-    "learning_activities": "Total Hours:\n200\n\n(\n Lecture Hours 11,\n Seminar/Tutorial Hours 8,\n\n\n\n\n\n Feedback/Feedforward Hours 2,\n\n\n\n\n Programme Level Learning and Teaching Hours 4,\n\nDirected Learning and Independent Learning Hours\n175 )",
+    "learning_activities": "Total Hours: 200 ( Lecture Hours 11, Seminar/Tutorial Hours 8, Feedback/Feedforward Hours 2, Programme Level Learning and Teaching Hours 4, Directed Learning and Independent Learning Hours 175 )",
     "assessment": {
       "written_exam_percent": 0,
       "coursework_percent": 100,
@@ -6839,7 +6839,7 @@
     "prohibited_combinations": "",
     "academic_year": "Quota:  28",
     "course_start": "Semester 2",
-    "learning_activities": "Total Hours:\n200\n\n(\n Lecture Hours 9,\n Seminar/Tutorial Hours 18,\n\n\n Fieldwork Hours 5,\n\n\n\n\n\n\n\n Programme Level Learning and Teaching Hours 4,\n\nDirected Learning and Independent Learning Hours\n164 )",
+    "learning_activities": "Total Hours: 200 ( Lecture Hours 9, Seminar/Tutorial Hours 18, Fieldwork Hours 5, Programme Level Learning and Teaching Hours 4, Directed Learning and Independent Learning Hours 164 )",
     "assessment": {
       "written_exam_percent": 0,
       "coursework_percent": 100,
@@ -6879,7 +6879,7 @@
     "prohibited_combinations": "",
     "academic_year": "Quota:  40",
     "course_start": "Semester 1",
-    "learning_activities": "Total Hours:\n200\n\n(\n\n\n\n\n\n\n\n\n\n\n\n\n Programme Level Learning and Teaching Hours 4,\n\nDirected Learning and Independent Learning Hours\n196 )",
+    "learning_activities": "Total Hours: 200 ( Programme Level Learning and Teaching Hours 4, Directed Learning and Independent Learning Hours 196 )",
     "assessment": {
       "written_exam_percent": 0,
       "coursework_percent": 100,
@@ -6919,7 +6919,7 @@
     "prohibited_combinations": "Students MUST NOT also be takingLand Use and Water Resources (ECSC10012)",
     "academic_year": "Quota:  40",
     "course_start": "Semester 1",
-    "learning_activities": "Total Hours:\n200\n\n(\n\n\n\n\n\n\n\n\n\n\n\n\n Programme Level Learning and Teaching Hours 4,\n\nDirected Learning and Independent Learning Hours\n196 )",
+    "learning_activities": "Total Hours: 200 ( Programme Level Learning and Teaching Hours 4, Directed Learning and Independent Learning Hours 196 )",
     "assessment": {
       "written_exam_percent": 60,
       "coursework_percent": 40,
@@ -6960,7 +6960,7 @@
     "prohibited_combinations": "",
     "academic_year": "Quota:  35",
     "course_start": "Semester 1",
-    "learning_activities": "Total Hours:\n200\n\n(\n\n\n\n\n\n\n\n\n\n\n\n\n Programme Level Learning and Teaching Hours 4,\n\nDirected Learning and Independent Learning Hours\n196 )",
+    "learning_activities": "Total Hours: 200 ( Programme Level Learning and Teaching Hours 4, Directed Learning and Independent Learning Hours 196 )",
     "assessment": {
       "written_exam_percent": 0,
       "coursework_percent": 100,
@@ -7001,7 +7001,7 @@
     "additional_costs": "None",
     "academic_year": "Quota:  40",
     "course_start": "Semester 1",
-    "learning_activities": "Total Hours:\n200\n\n(\n Lecture Hours 30,\n\n\n\n\n\n\n\n\n\n\n\n Programme Level Learning and Teaching Hours 4,\n\nDirected Learning and Independent Learning Hours\n166 )",
+    "learning_activities": "Total Hours: 200 ( Lecture Hours 30, Programme Level Learning and Teaching Hours 4, Directed Learning and Independent Learning Hours 166 )",
     "assessment": {
       "written_exam_percent": 0,
       "coursework_percent": 100,
@@ -7076,7 +7076,7 @@
     "high_demand": "Yes",
     "academic_year": "Quota:  38",
     "course_start": "Semester 2",
-    "learning_activities": "Total Hours:\n200\n\n(\n Lecture Hours 32,\n\n\n\n\n\n\n\n\n\n\n\n Programme Level Learning and Teaching Hours 4,\n\nDirected Learning and Independent Learning Hours\n164 )",
+    "learning_activities": "Total Hours: 200 ( Lecture Hours 32, Programme Level Learning and Teaching Hours 4, Directed Learning and Independent Learning Hours 164 )",
     "assessment": {
       "written_exam_percent": 0,
       "coursework_percent": 100,
@@ -7118,7 +7118,7 @@
     "high_demand": "Yes",
     "academic_year": "Quota:  40",
     "course_start": "Semester 1",
-    "learning_activities": "Total Hours:\n200\n\n(\n Lecture Hours 20,\n\n\n Supervised Practical/Workshop/Studio Hours 16,\n Fieldwork Hours 8,\n\n\n\n Formative Assessment Hours 2,\n Summative Assessment Hours 80,\n\n\n Programme Level Learning and Teaching Hours 4,\n\nDirected Learning and Independent Learning Hours\n70 )",
+    "learning_activities": "Total Hours: 200 ( Lecture Hours 20, Supervised Practical/Workshop/Studio Hours 16, Fieldwork Hours 8, Formative Assessment Hours 2, Summative Assessment Hours 80, Programme Level Learning and Teaching Hours 4, Directed Learning and Independent Learning Hours 70 )",
     "assessment": {
       "written_exam_percent": 0,
       "coursework_percent": 100,
@@ -7209,7 +7209,7 @@
     "prohibited_combinations": "",
     "academic_year": "Quota:  None",
     "course_start": "Semester 2",
-    "learning_activities": "Total Hours:\n200\n\n(\n\n\n\n\n\n\n\n\n\n\n\n\n Programme Level Learning and Teaching Hours 4,\n\nDirected Learning and Independent Learning Hours\n196 )",
+    "learning_activities": "Total Hours: 200 ( Programme Level Learning and Teaching Hours 4, Directed Learning and Independent Learning Hours 196 )",
     "assessment": {
       "written_exam_percent": 0,
       "coursework_percent": 100,
@@ -7249,7 +7249,7 @@
     "prohibited_combinations": "",
     "academic_year": "Quota:  40",
     "course_start": "Semester 1",
-    "learning_activities": "Total Hours:\n200\n\n(\n Lecture Hours 22,\n Seminar/Tutorial Hours 4,\n\n\n Fieldwork Hours 16,\n\n\n Feedback/Feedforward Hours 10,\n\n Summative Assessment Hours 4,\n\n\n Programme Level Learning and Teaching Hours 4,\n\nDirected Learning and Independent Learning Hours\n140 )",
+    "learning_activities": "Total Hours: 200 ( Lecture Hours 22, Seminar/Tutorial Hours 4, Fieldwork Hours 16, Feedback/Feedforward Hours 10, Summative Assessment Hours 4, Programme Level Learning and Teaching Hours 4, Directed Learning and Independent Learning Hours 140 )",
     "assessment": {
       "written_exam_percent": 0,
       "coursework_percent": 100,
@@ -7388,7 +7388,7 @@
     "prohibited_combinations": "",
     "academic_year": "Quota:  None",
     "course_start": "Full Year",
-    "learning_activities": "Total Hours:\n400\n\n(\n\n\n Dissertation/Project Supervision Hours 6,\n\n\n\n\n Feedback/Feedforward Hours 2,\n\n\n\n\n Programme Level Learning and Teaching Hours 8,\n\nDirected Learning and Independent Learning Hours\n384 )",
+    "learning_activities": "Total Hours: 400 ( Dissertation/Project Supervision Hours 6, Feedback/Feedforward Hours 2, Programme Level Learning and Teaching Hours 8, Directed Learning and Independent Learning Hours 384 )",
     "assessment": {
       "written_exam_percent": 0,
       "coursework_percent": 100,
@@ -7488,7 +7488,7 @@
     "high_demand": "Yes",
     "academic_year": "Quota:  None",
     "course_start": "Semester 2",
-    "learning_activities": "Total Hours:\n200\n\n(\n Lecture Hours 20,\n Seminar/Tutorial Hours 8,\n\n\n\n\n\n Feedback/Feedforward Hours 8,\n\n Summative Assessment Hours 2,\n Revision Session Hours 2,\n\n Programme Level Learning and Teaching Hours 4,\n\nDirected Learning and Independent Learning Hours\n156 )",
+    "learning_activities": "Total Hours: 200 ( Lecture Hours 20, Seminar/Tutorial Hours 8, Feedback/Feedforward Hours 8, Summative Assessment Hours 2, Revision Session Hours 2, Programme Level Learning and Teaching Hours 4, Directed Learning and Independent Learning Hours 156 )",
     "assessment": {
       "written_exam_percent": 0,
       "coursework_percent": 100,
@@ -7530,7 +7530,7 @@
     "high_demand": "Yes",
     "academic_year": "Quota:  40",
     "course_start": "Semester 1",
-    "learning_activities": "Total Hours:\n200\n\n(\n\n Seminar/Tutorial Hours 20,\n\n\n\n\n\n\n\n\n\n\n Programme Level Learning and Teaching Hours 4,\n\nDirected Learning and Independent Learning Hours\n176 )",
+    "learning_activities": "Total Hours: 200 ( Seminar/Tutorial Hours 20, Programme Level Learning and Teaching Hours 4, Directed Learning and Independent Learning Hours 176 )",
     "assessment": {
       "written_exam_percent": 60,
       "coursework_percent": 40,
@@ -7570,7 +7570,7 @@
     "prohibited_combinations": "",
     "academic_year": "Quota:  38",
     "course_start": "Semester 2",
-    "learning_activities": "Total Hours:\n200\n\n(\n Lecture Hours 22,\n\n\n Supervised Practical/Workshop/Studio Hours 22,\n\n\n\n\n\n\n\n\n Programme Level Learning and Teaching Hours 4,\n\nDirected Learning and Independent Learning Hours\n152 )",
+    "learning_activities": "Total Hours: 200 ( Lecture Hours 22, Supervised Practical/Workshop/Studio Hours 22, Programme Level Learning and Teaching Hours 4, Directed Learning and Independent Learning Hours 152 )",
     "assessment": {
       "written_exam_percent": 0,
       "coursework_percent": 100,
@@ -7645,7 +7645,7 @@
     "high_demand": "Yes",
     "academic_year": "Quota:  38",
     "course_start": "Semester 2",
-    "learning_activities": "Total Hours:\n200\n\n(\n Lecture Hours 22,\n\n\n Supervised Practical/Workshop/Studio Hours 6,\n\n\n\n\n\n Summative Assessment Hours 40,\n\n\n Programme Level Learning and Teaching Hours 4,\n\nDirected Learning and Independent Learning Hours\n128 )",
+    "learning_activities": "Total Hours: 200 ( Lecture Hours 22, Supervised Practical/Workshop/Studio Hours 6, Summative Assessment Hours 40, Programme Level Learning and Teaching Hours 4, Directed Learning and Independent Learning Hours 128 )",
     "assessment": {
       "written_exam_percent": 40,
       "coursework_percent": 60,
@@ -7750,7 +7750,7 @@
     "high_demand": "Yes",
     "academic_year": "Quota:  38",
     "course_start": "Semester 2",
-    "learning_activities": "Total Hours:\n200\n\n(\n Lecture Hours 22,\n Seminar/Tutorial Hours 7,\n\n\n\n\n\n\n\n\n\n\n Programme Level Learning and Teaching Hours 4,\n\nDirected Learning and Independent Learning Hours\n167 )",
+    "learning_activities": "Total Hours: 200 ( Lecture Hours 22, Seminar/Tutorial Hours 7, Programme Level Learning and Teaching Hours 4, Directed Learning and Independent Learning Hours 167 )",
     "assessment": {
       "written_exam_percent": 60,
       "coursework_percent": 40,
@@ -7790,7 +7790,7 @@
     "prohibited_combinations": "",
     "academic_year": "Quota:  34",
     "course_start": "Semester 1",
-    "learning_activities": "Total Hours:\n200\n\n(\n\n\n\n\n Fieldwork Hours 100,\n\n\n Feedback/Feedforward Hours 2,\n\n\n\n\n Programme Level Learning and Teaching Hours 4,\n\nDirected Learning and Independent Learning Hours\n94 )",
+    "learning_activities": "Total Hours: 200 ( Fieldwork Hours 100, Feedback/Feedforward Hours 2, Programme Level Learning and Teaching Hours 4, Directed Learning and Independent Learning Hours 94 )",
     "assessment": {
       "written_exam_percent": 0,
       "coursework_percent": 100,
@@ -7866,7 +7866,7 @@
     "high_demand": "Yes",
     "academic_year": "Quota:  59",
     "course_start": "Semester 1",
-    "learning_activities": "Total Hours:\n200\n\n(\n Lecture Hours 30,\n\n\n\n\n\n\n\n\n\n\n\n Programme Level Learning and Teaching Hours 4,\n\nDirected Learning and Independent Learning Hours\n166 )",
+    "learning_activities": "Total Hours: 200 ( Lecture Hours 30, Programme Level Learning and Teaching Hours 4, Directed Learning and Independent Learning Hours 166 )",
     "assessment": {
       "written_exam_percent": 0,
       "coursework_percent": 100,
@@ -7906,7 +7906,7 @@
     "prohibited_combinations": "",
     "academic_year": "Quota:  40",
     "course_start": "Semester 1",
-    "learning_activities": "Total Hours:\n200\n\n(\n Lecture Hours 44,\n\n\n\n\n\n\n\n\n\n\n\n Programme Level Learning and Teaching Hours 4,\n\nDirected Learning and Independent Learning Hours\n152 )",
+    "learning_activities": "Total Hours: 200 ( Lecture Hours 44, Programme Level Learning and Teaching Hours 4, Directed Learning and Independent Learning Hours 152 )",
     "assessment": {
       "written_exam_percent": 0,
       "coursework_percent": 100,
@@ -7946,7 +7946,7 @@
     "prohibited_combinations": "",
     "academic_year": "Quota:  40",
     "course_start": "Semester 1",
-    "learning_activities": "Total Hours:\n200\n\n(\n Lecture Hours 10,\n Seminar/Tutorial Hours 18,\n\n\n\n\n\n Feedback/Feedforward Hours 9,\n\n\n\n\n Programme Level Learning and Teaching Hours 4,\n\nDirected Learning and Independent Learning Hours\n159 )",
+    "learning_activities": "Total Hours: 200 ( Lecture Hours 10, Seminar/Tutorial Hours 18, Feedback/Feedforward Hours 9, Programme Level Learning and Teaching Hours 4, Directed Learning and Independent Learning Hours 159 )",
     "assessment": {
       "written_exam_percent": 0,
       "coursework_percent": 100,
@@ -8046,7 +8046,7 @@
     "prohibited_combinations": "",
     "academic_year": "Quota:  None",
     "course_start": "Semester 2",
-    "learning_activities": "Total Hours:\n200\n\n(\n\n\n\n\n\n\n\n\n\n\n\n\n Programme Level Learning and Teaching Hours 4,\n\nDirected Learning and Independent Learning Hours\n196 )",
+    "learning_activities": "Total Hours: 200 ( Programme Level Learning and Teaching Hours 4, Directed Learning and Independent Learning Hours 196 )",
     "assessment": {
       "written_exam_percent": 0,
       "coursework_percent": 100,
@@ -8086,7 +8086,7 @@
     "prohibited_combinations": "",
     "academic_year": "Quota:  45",
     "course_start": "Semester 1",
-    "learning_activities": "Total Hours:\n200\n\n(\n\n\n\n\n\n\n\n\n\n\n\n\n Programme Level Learning and Teaching Hours 4,\n\nDirected Learning and Independent Learning Hours\n196 )",
+    "learning_activities": "Total Hours: 200 ( Programme Level Learning and Teaching Hours 4, Directed Learning and Independent Learning Hours 196 )",
     "assessment": {
       "written_exam_percent": 0,
       "coursework_percent": 100,
@@ -8126,7 +8126,7 @@
     "prohibited_combinations": "",
     "academic_year": "Quota:  40",
     "course_start": "Semester 2",
-    "learning_activities": "Total Hours:\n200\n\n(\n\n\n\n\n\n\n\n\n\n\n\n\n Programme Level Learning and Teaching Hours 4,\n\nDirected Learning and Independent Learning Hours\n196 )",
+    "learning_activities": "Total Hours: 200 ( Programme Level Learning and Teaching Hours 4, Directed Learning and Independent Learning Hours 196 )",
     "assessment": {
       "written_exam_percent": 0,
       "coursework_percent": 100,
@@ -8166,7 +8166,7 @@
     "prohibited_combinations": "",
     "academic_year": "Quota:  40",
     "course_start": "Semester 1",
-    "learning_activities": "Total Hours:\n200\n\n(\n\n\n\n\n\n\n\n\n\n\n\n\n Programme Level Learning and Teaching Hours 4,\n\nDirected Learning and Independent Learning Hours\n196 )",
+    "learning_activities": "Total Hours: 200 ( Programme Level Learning and Teaching Hours 4, Directed Learning and Independent Learning Hours 196 )",
     "assessment": {
       "written_exam_percent": 0,
       "coursework_percent": 100,
@@ -8206,7 +8206,7 @@
     "prohibited_combinations": "",
     "academic_year": "Quota:  40",
     "course_start": "Semester 2",
-    "learning_activities": "Total Hours:\n200\n\n(\n Lecture Hours 28,\n\n\n\n\n\n\n\n\n\n\n\n Programme Level Learning and Teaching Hours 4,\n\nDirected Learning and Independent Learning Hours\n168 )",
+    "learning_activities": "Total Hours: 200 ( Lecture Hours 28, Programme Level Learning and Teaching Hours 4, Directed Learning and Independent Learning Hours 168 )",
     "assessment": {
       "written_exam_percent": 0,
       "coursework_percent": 100,
@@ -8246,7 +8246,7 @@
     "prohibited_combinations": "",
     "academic_year": "Quota:  38",
     "course_start": "Semester 2",
-    "learning_activities": "Total Hours:\n200\n\n(\n Lecture Hours 26,\n\n\n\n\n\n\n\n\n\n\n\n Programme Level Learning and Teaching Hours 4,\n\nDirected Learning and Independent Learning Hours\n170 )",
+    "learning_activities": "Total Hours: 200 ( Lecture Hours 26, Programme Level Learning and Teaching Hours 4, Directed Learning and Independent Learning Hours 170 )",
     "assessment": {
       "written_exam_percent": 0,
       "coursework_percent": 100,
@@ -8288,7 +8288,7 @@
     "high_demand": "Yes",
     "academic_year": "Quota:  38",
     "course_start": "Semester 2",
-    "learning_activities": "Total Hours:\n200\n\n(\n Lecture Hours 22,\n\n\n\n Fieldwork Hours 6,\n\n\n Feedback/Feedforward Hours 2,\n\n Summative Assessment Hours 2,\n\n\n Programme Level Learning and Teaching Hours 4,\n\nDirected Learning and Independent Learning Hours\n164 )",
+    "learning_activities": "Total Hours: 200 ( Lecture Hours 22, Fieldwork Hours 6, Feedback/Feedforward Hours 2, Summative Assessment Hours 2, Programme Level Learning and Teaching Hours 4, Directed Learning and Independent Learning Hours 164 )",
     "assessment": {
       "written_exam_percent": 50,
       "coursework_percent": 50,
@@ -8328,7 +8328,7 @@
     "prohibited_combinations": "",
     "academic_year": "Quota:  38",
     "course_start": "Semester 2",
-    "learning_activities": "Total Hours:\n200\n\n(\n Lecture Hours 26,\n\n\n\n\n\n\n\n\n\n\n\n Programme Level Learning and Teaching Hours 4,\n\nDirected Learning and Independent Learning Hours\n170 )",
+    "learning_activities": "Total Hours: 200 ( Lecture Hours 26, Programme Level Learning and Teaching Hours 4, Directed Learning and Independent Learning Hours 170 )",
     "assessment": {
       "written_exam_percent": 0,
       "coursework_percent": 100,
@@ -8370,7 +8370,7 @@
     "high_demand": "Yes",
     "academic_year": "Quota:  0",
     "course_start": "Semester 2",
-    "learning_activities": "Total Hours:\n200\n\n(\n Lecture Hours 10,\n Seminar/Tutorial Hours 21,\n\n\n\n\n\n\n\n\n\n\n Programme Level Learning and Teaching Hours 4,\n\nDirected Learning and Independent Learning Hours\n165 )",
+    "learning_activities": "Total Hours: 200 ( Lecture Hours 10, Seminar/Tutorial Hours 21, Programme Level Learning and Teaching Hours 4, Directed Learning and Independent Learning Hours 165 )",
     "assessment": {
       "written_exam_percent": 0,
       "coursework_percent": 100,
@@ -8411,7 +8411,7 @@
     "high_demand": "Yes",
     "academic_year": "Quota:  115",
     "course_start": "Semester 1",
-    "learning_activities": "Total Hours:\n200\n\n(\n Lecture Hours 30,\n\n\n Supervised Practical/Workshop/Studio Hours 30,\n Fieldwork Hours 10,\n\n\n\n\n\n\n Other Study Hours 30,\n Programme Level Learning and Teaching Hours 4,\n\nDirected Learning and Independent Learning Hours\n96 )",
+    "learning_activities": "Total Hours: 200 ( Lecture Hours 30, Supervised Practical/Workshop/Studio Hours 30, Fieldwork Hours 10, Other Study Hours 30, Programme Level Learning and Teaching Hours 4, Directed Learning and Independent Learning Hours 96 )",
     "assessment": {
       "written_exam_percent": 0,
       "coursework_percent": 100,
@@ -8452,7 +8452,7 @@
     "high_demand": "Yes",
     "academic_year": "Quota:  0",
     "course_start": "Semester 2",
-    "learning_activities": "Total Hours:\n200\n\n(\n\n\n\n\n\n\nOnline Activities 48,\n\n\n\n\n\n Programme Level Learning and Teaching Hours 4,\n\nDirected Learning and Independent Learning Hours\n148 )",
+    "learning_activities": "Total Hours: 200 ( Online Activities 48, Programme Level Learning and Teaching Hours 4, Directed Learning and Independent Learning Hours 148 )",
     "assessment": {
       "written_exam_percent": 0,
       "coursework_percent": 100,
@@ -8491,7 +8491,7 @@
     "prohibited_combinations": "",
     "academic_year": "Quota:  20",
     "course_start": "13/01/2025",
-    "learning_activities": "Total Hours:\n100\n\n(\n\n\n\n\n\n\n\n Feedback/Feedforward Hours 2,\n\n\n\n\n Programme Level Learning and Teaching Hours 2,\n\nDirected Learning and Independent Learning Hours\n96 )",
+    "learning_activities": "Total Hours: 100 ( Feedback/Feedforward Hours 2, Programme Level Learning and Teaching Hours 2, Directed Learning and Independent Learning Hours 96 )",
     "assessment": {
       "written_exam_percent": 0,
       "coursework_percent": 100,
@@ -8556,7 +8556,7 @@
     "prohibited_combinations": "",
     "academic_year": "Quota:  30",
     "course_start": "Semester 1",
-    "learning_activities": "Total Hours:\n200\n\n(\n Lecture Hours 18,\n Seminar/Tutorial Hours 18,\n\n\n Fieldwork Hours 10,\n\n\n\n\n\n\n\n Programme Level Learning and Teaching Hours 4,\n\nDirected Learning and Independent Learning Hours\n150 )",
+    "learning_activities": "Total Hours: 200 ( Lecture Hours 18, Seminar/Tutorial Hours 18, Fieldwork Hours 10, Programme Level Learning and Teaching Hours 4, Directed Learning and Independent Learning Hours 150 )",
     "assessment": {
       "written_exam_percent": 0,
       "coursework_percent": 100,
@@ -8595,7 +8595,7 @@
     "prohibited_combinations": "",
     "academic_year": "Quota:  38",
     "course_start": "Semester 1",
-    "learning_activities": "Total Hours:\n200\n\n(\n Lecture Hours 22,\n Seminar/Tutorial Hours 11,\n\n Supervised Practical/Workshop/Studio Hours 4,\n\n\n\n\n\n\n\n\n Programme Level Learning and Teaching Hours 4,\n\nDirected Learning and Independent Learning Hours\n159 )",
+    "learning_activities": "Total Hours: 200 ( Lecture Hours 22, Seminar/Tutorial Hours 11, Supervised Practical/Workshop/Studio Hours 4, Programme Level Learning and Teaching Hours 4, Directed Learning and Independent Learning Hours 159 )",
     "assessment": {
       "written_exam_percent": 0,
       "coursework_percent": 100,
@@ -8634,7 +8634,7 @@
     "prohibited_combinations": "",
     "academic_year": "Quota:  0",
     "course_start": "Semester 2",
-    "learning_activities": "Total Hours:\n200\n\n(\n Lecture Hours 22,\n\n\n\n\n\n\n\n\n\n\n\n Programme Level Learning and Teaching Hours 4,\n\nDirected Learning and Independent Learning Hours\n174 )",
+    "learning_activities": "Total Hours: 200 ( Lecture Hours 22, Programme Level Learning and Teaching Hours 4, Directed Learning and Independent Learning Hours 174 )",
     "assessment": {
       "written_exam_percent": 0,
       "coursework_percent": 100,
@@ -8676,7 +8676,7 @@
     "high_demand": "Yes",
     "academic_year": "Quota:  None",
     "course_start": "Semester 2",
-    "learning_activities": "Total Hours:\n100\n\n(\n Lecture Hours 20,\n\n\n\n\n\n\n\n\n Summative Assessment Hours 2,\n\n\n Programme Level Learning and Teaching Hours 2,\n\nDirected Learning and Independent Learning Hours\n76 )",
+    "learning_activities": "Total Hours: 100 ( Lecture Hours 20, Summative Assessment Hours 2, Programme Level Learning and Teaching Hours 2, Directed Learning and Independent Learning Hours 76 )",
     "assessment": {
       "written_exam_percent": 0,
       "coursework_percent": 100,
@@ -8715,7 +8715,7 @@
     "prohibited_combinations": "",
     "academic_year": "Quota:  None",
     "course_start": "Full Year",
-    "learning_activities": "Total Hours:\n400\n\n(\n\n\n\n\n\n\n\n\n\n\n\n\n Programme Level Learning and Teaching Hours 8,\n\nDirected Learning and Independent Learning Hours\n392 )",
+    "learning_activities": "Total Hours: 400 ( Programme Level Learning and Teaching Hours 8, Directed Learning and Independent Learning Hours 392 )",
     "assessment": {
       "written_exam_percent": 0,
       "coursework_percent": 100,
@@ -8755,7 +8755,7 @@
     "additional_costs": "Students will undertake an independent research project on an area of their choice in the field of Geoscience.  They will draw on skills acquired in courses on Research Methods and Transferable Skills or Scientific computing skills as well as Project Design and Literature Analysis to ensure that the project is well designed and achievable.",
     "academic_year": "Quota:  None",
     "course_start": "Full Year",
-    "learning_activities": "Total Hours:\n400\n\n(\n\n\n\n Supervised Practical/Workshop/Studio Hours 392,\n\n\n\n\n\n\n\n\n Programme Level Learning and Teaching Hours 8,\n\nDirected Learning and Independent Learning Hours\n0 )",
+    "learning_activities": "Total Hours: 400 ( Supervised Practical/Workshop/Studio Hours 392, Programme Level Learning and Teaching Hours 8, Directed Learning and Independent Learning Hours 0 )",
     "assessment": {
       "written_exam_percent": 0,
       "coursework_percent": 100,
@@ -8798,7 +8798,7 @@
     "high_demand": "Yes",
     "academic_year": "Quota:  None",
     "course_start": "Flexible",
-    "learning_activities": "Total Hours:\n200\n\n(\n\n\n\n\n Fieldwork Hours 100,\n\n\n\n\n\n\n\n Programme Level Learning and Teaching Hours 4,\n\nDirected Learning and Independent Learning Hours\n96 )",
+    "learning_activities": "Total Hours: 200 ( Fieldwork Hours 100, Programme Level Learning and Teaching Hours 4, Directed Learning and Independent Learning Hours 96 )",
     "assessment": {
       "written_exam_percent": 0,
       "coursework_percent": 100,
@@ -8839,7 +8839,7 @@
     "additional_costs": "None.",
     "academic_year": "Quota:  40",
     "course_start": "Semester 1",
-    "learning_activities": "Total Hours:\n200\n\n(\n\n Seminar/Tutorial Hours 10,\n\n Supervised Practical/Workshop/Studio Hours 100,\n\n\n\n Feedback/Feedforward Hours 2,\n\n\n\n\n Programme Level Learning and Teaching Hours 4,\n\nDirected Learning and Independent Learning Hours\n84 )",
+    "learning_activities": "Total Hours: 200 ( Seminar/Tutorial Hours 10, Supervised Practical/Workshop/Studio Hours 100, Feedback/Feedforward Hours 2, Programme Level Learning and Teaching Hours 4, Directed Learning and Independent Learning Hours 84 )",
     "assessment": {
       "written_exam_percent": 0,
       "coursework_percent": 100,
@@ -8879,7 +8879,7 @@
     "additional_costs": "None.",
     "academic_year": "Quota:  None",
     "course_start": "Semester 1",
-    "learning_activities": "Total Hours:\n100\n\n(\n\n\n\n Supervised Practical/Workshop/Studio Hours 25,\n\n\n\n Feedback/Feedforward Hours 2,\n\n\n\n\n Programme Level Learning and Teaching Hours 2,\n\nDirected Learning and Independent Learning Hours\n71 )",
+    "learning_activities": "Total Hours: 100 ( Supervised Practical/Workshop/Studio Hours 25, Feedback/Feedforward Hours 2, Programme Level Learning and Teaching Hours 2, Directed Learning and Independent Learning Hours 71 )",
     "assessment": {
       "written_exam_percent": 0,
       "coursework_percent": 100,
@@ -8920,7 +8920,7 @@
     "high_demand": "Yes",
     "academic_year": "Quota:  0",
     "course_start": "13/01/2025",
-    "learning_activities": "Total Hours:\n200\n\n(\n\n\n\n\n\n\nOnline Activities 48,\n\n\n\n\n\n Programme Level Learning and Teaching Hours 4,\n\nDirected Learning and Independent Learning Hours\n148 )",
+    "learning_activities": "Total Hours: 200 ( Online Activities 48, Programme Level Learning and Teaching Hours 4, Directed Learning and Independent Learning Hours 148 )",
     "assessment": {
       "written_exam_percent": 0,
       "coursework_percent": 100,
@@ -8961,7 +8961,7 @@
     "high_demand": "Yes",
     "academic_year": "Quota:  80",
     "course_start": "Semester 1",
-    "learning_activities": "Total Hours:\n200\n\n(\n Lecture Hours 30,\n\n\n Supervised Practical/Workshop/Studio Hours 12,\n\n\n\n Feedback/Feedforward Hours 2,\n\n Summative Assessment Hours 2,\n\n\n Programme Level Learning and Teaching Hours 4,\n\nDirected Learning and Independent Learning Hours\n150 )",
+    "learning_activities": "Total Hours: 200 ( Lecture Hours 30, Supervised Practical/Workshop/Studio Hours 12, Feedback/Feedforward Hours 2, Summative Assessment Hours 2, Programme Level Learning and Teaching Hours 4, Directed Learning and Independent Learning Hours 150 )",
     "assessment": {
       "written_exam_percent": 50,
       "coursework_percent": 50,
@@ -9003,7 +9003,7 @@
     "high_demand": "Yes",
     "academic_year": "Quota:  None",
     "course_start": "Semester 2",
-    "learning_activities": "Total Hours:\n200\n\n(\n Lecture Hours 31,\n Seminar/Tutorial Hours 8,\n\n Supervised Practical/Workshop/Studio Hours 5,\n\n\n\n Feedback/Feedforward Hours 2,\n\n Summative Assessment Hours 2,\n\n\n Programme Level Learning and Teaching Hours 4,\n\nDirected Learning and Independent Learning Hours\n148 )",
+    "learning_activities": "Total Hours: 200 ( Lecture Hours 31, Seminar/Tutorial Hours 8, Supervised Practical/Workshop/Studio Hours 5, Feedback/Feedforward Hours 2, Summative Assessment Hours 2, Programme Level Learning and Teaching Hours 4, Directed Learning and Independent Learning Hours 148 )",
     "assessment": {
       "written_exam_percent": 70,
       "coursework_percent": 30,
@@ -9044,7 +9044,7 @@
     "high_demand": "Yes",
     "academic_year": "Quota:  None",
     "course_start": "Semester 2",
-    "learning_activities": "Total Hours:\n100\n\n(\n Lecture Hours 16,\n Seminar/Tutorial Hours 4,\n\n\n\n\n\n Feedback/Feedforward Hours 1,\n\n Summative Assessment Hours 2,\n\n\n Programme Level Learning and Teaching Hours 2,\n\nDirected Learning and Independent Learning Hours\n75 )",
+    "learning_activities": "Total Hours: 100 ( Lecture Hours 16, Seminar/Tutorial Hours 4, Feedback/Feedforward Hours 1, Summative Assessment Hours 2, Programme Level Learning and Teaching Hours 2, Directed Learning and Independent Learning Hours 75 )",
     "assessment": {
       "written_exam_percent": 80,
       "coursework_percent": 20,
@@ -9086,7 +9086,7 @@
     "high_demand": "Yes",
     "academic_year": "Quota:  None",
     "course_start": "Semester 1",
-    "learning_activities": "Total Hours:\n100\n\n(\n Lecture Hours 16,\n Seminar/Tutorial Hours 4,\n\n\n\n\n\n Feedback/Feedforward Hours 3,\n\n Summative Assessment Hours 2,\n\n\n Programme Level Learning and Teaching Hours 2,\n\nDirected Learning and Independent Learning Hours\n73 )",
+    "learning_activities": "Total Hours: 100 ( Lecture Hours 16, Seminar/Tutorial Hours 4, Feedback/Feedforward Hours 3, Summative Assessment Hours 2, Programme Level Learning and Teaching Hours 2, Directed Learning and Independent Learning Hours 73 )",
     "assessment": {
       "written_exam_percent": 80,
       "coursework_percent": 20,
@@ -9126,7 +9126,7 @@
     "prohibited_combinations": "Students MUST NOT also be takingPetroleum Systems (EASC10108)",
     "academic_year": "Quota:  11",
     "course_start": "Semester 1",
-    "learning_activities": "Total Hours:\n100\n\n(\n Lecture Hours 4,\n\n\n Supervised Practical/Workshop/Studio Hours 12,\n Fieldwork Hours 16,\n\n\n Feedback/Feedforward Hours 3,\n\n Summative Assessment Hours 12,\n\n\n Programme Level Learning and Teaching Hours 2,\n\nDirected Learning and Independent Learning Hours\n51 )",
+    "learning_activities": "Total Hours: 100 ( Lecture Hours 4, Supervised Practical/Workshop/Studio Hours 12, Fieldwork Hours 16, Feedback/Feedforward Hours 3, Summative Assessment Hours 12, Programme Level Learning and Teaching Hours 2, Directed Learning and Independent Learning Hours 51 )",
     "assessment": {
       "written_exam_percent": 0,
       "coursework_percent": 100,
@@ -9167,7 +9167,7 @@
     "high_demand": "Yes",
     "academic_year": "Quota:  None",
     "course_start": "Semester 2",
-    "learning_activities": "Total Hours:\n100\n\n(\n Lecture Hours 15,\n Seminar/Tutorial Hours 1,\n\n Supervised Practical/Workshop/Studio Hours 2,\n\n\n\n\n\n Summative Assessment Hours 2,\n\n\n Programme Level Learning and Teaching Hours 2,\n\nDirected Learning and Independent Learning Hours\n78 )",
+    "learning_activities": "Total Hours: 100 ( Lecture Hours 15, Seminar/Tutorial Hours 1, Supervised Practical/Workshop/Studio Hours 2, Summative Assessment Hours 2, Programme Level Learning and Teaching Hours 2, Directed Learning and Independent Learning Hours 78 )",
     "assessment": {
       "written_exam_percent": 80,
       "coursework_percent": 20,
@@ -9209,7 +9209,7 @@
     "high_demand": "Yes",
     "academic_year": "Quota:  20",
     "course_start": "Semester 1",
-    "learning_activities": "Total Hours:\n100\n\n(\n Lecture Hours 22,\n\n\n\n\n\n\n\n\n\n\n\n Programme Level Learning and Teaching Hours 2,\n\nDirected Learning and Independent Learning Hours\n76 )",
+    "learning_activities": "Total Hours: 100 ( Lecture Hours 22, Programme Level Learning and Teaching Hours 2, Directed Learning and Independent Learning Hours 76 )",
     "assessment": {
       "written_exam_percent": 50,
       "coursework_percent": 50,
@@ -9251,7 +9251,7 @@
     "high_demand": "Yes",
     "academic_year": "Quota:  30",
     "course_start": "28/04/2025",
-    "learning_activities": "Total Hours:\n100\n\n(\n\n\n\n\n\n\nOnline Activities 20,\n\n\n\n\n\n Programme Level Learning and Teaching Hours 2,\n\nDirected Learning and Independent Learning Hours\n78 )",
+    "learning_activities": "Total Hours: 100 ( Online Activities 20, Programme Level Learning and Teaching Hours 2, Directed Learning and Independent Learning Hours 78 )",
     "assessment": {
       "written_exam_percent": 0,
       "coursework_percent": 100,
@@ -9292,7 +9292,7 @@
     "high_demand": "Yes",
     "academic_year": "Quota:  40",
     "course_start": "Semester 2",
-    "learning_activities": "Total Hours:\n200\n\n(\n Lecture Hours 20,\n Seminar/Tutorial Hours 10,\n\n Supervised Practical/Workshop/Studio Hours 4,\n\n\n\n\n\n Summative Assessment Hours 100,\n\n\n Programme Level Learning and Teaching Hours 4,\n\nDirected Learning and Independent Learning Hours\n62 )",
+    "learning_activities": "Total Hours: 200 ( Lecture Hours 20, Seminar/Tutorial Hours 10, Supervised Practical/Workshop/Studio Hours 4, Summative Assessment Hours 100, Programme Level Learning and Teaching Hours 4, Directed Learning and Independent Learning Hours 62 )",
     "assessment": {
       "written_exam_percent": 0,
       "coursework_percent": 100,
@@ -9369,7 +9369,7 @@
     "additional_costs": "Students will need to purchase one of the two books on running workshops. The more expensive of the two is Â£18.99 for a new version of the paperback edition, so that is the most they will need to spend. However, there are used copies (and for one of them an e-book edition) for considerably cheaper.",
     "academic_year": "Quota:  20",
     "course_start": "Semester 2",
-    "learning_activities": "Total Hours:\n200\n\n(\n Lecture Hours 20,\n\n\n Supervised Practical/Workshop/Studio Hours 20,\n\n\n\n\n Formative Assessment Hours 24,\n Summative Assessment Hours 132,\n\n\n Programme Level Learning and Teaching Hours 4,\n\nDirected Learning and Independent Learning Hours\n0 )",
+    "learning_activities": "Total Hours: 200 ( Lecture Hours 20, Supervised Practical/Workshop/Studio Hours 20, Formative Assessment Hours 24, Summative Assessment Hours 132, Programme Level Learning and Teaching Hours 4, Directed Learning and Independent Learning Hours 0 )",
     "assessment": {
       "written_exam_percent": 0,
       "coursework_percent": 100,
@@ -9410,7 +9410,7 @@
     "high_demand": "Yes",
     "academic_year": "Quota:  0",
     "course_start": "Semester 2",
-    "learning_activities": "Total Hours:\n200\n\n(\n Lecture Hours 44,\n\n\n\n\n\n\n\n\n\n\n\n Programme Level Learning and Teaching Hours 4,\n\nDirected Learning and Independent Learning Hours\n152 )",
+    "learning_activities": "Total Hours: 200 ( Lecture Hours 44, Programme Level Learning and Teaching Hours 4, Directed Learning and Independent Learning Hours 152 )",
     "assessment": {
       "written_exam_percent": 0,
       "coursework_percent": 100,
@@ -9508,7 +9508,7 @@
     "prohibited_combinations": "",
     "academic_year": "Quota:  32",
     "course_start": "Semester 2",
-    "learning_activities": "Total Hours:\n200\n\n(\n\n\n\n\n\n\n\n\n\n\n\n\n Programme Level Learning and Teaching Hours 4,\n\nDirected Learning and Independent Learning Hours\n196 )",
+    "learning_activities": "Total Hours: 200 ( Programme Level Learning and Teaching Hours 4, Directed Learning and Independent Learning Hours 196 )",
     "assessment": {
       "written_exam_percent": 0,
       "coursework_percent": 100,
@@ -9727,7 +9727,7 @@
     "high_demand": "Yes",
     "academic_year": "Quota:  40",
     "course_start": "Semester 2",
-    "learning_activities": "Total Hours:\n200\n\n(\n\n\n\n\n\n\n\n\n\n\n\n\n Programme Level Learning and Teaching Hours 4,\n\nDirected Learning and Independent Learning Hours\n196 )",
+    "learning_activities": "Total Hours: 200 ( Programme Level Learning and Teaching Hours 4, Directed Learning and Independent Learning Hours 196 )",
     "assessment": {
       "written_exam_percent": 0,
       "coursework_percent": 100,
@@ -9766,7 +9766,7 @@
     "prohibited_combinations": "",
     "academic_year": "Quota:  0",
     "course_start": "Semester 2",
-    "learning_activities": "Total Hours:\n200\n\n(\n Lecture Hours 40,\n\n\n\n\n\n\n\n\n\n\n\n Programme Level Learning and Teaching Hours 4,\n\nDirected Learning and Independent Learning Hours\n156 )",
+    "learning_activities": "Total Hours: 200 ( Lecture Hours 40, Programme Level Learning and Teaching Hours 4, Directed Learning and Independent Learning Hours 156 )",
     "assessment": {
       "written_exam_percent": 0,
       "coursework_percent": 100,
@@ -9807,7 +9807,7 @@
     "high_demand": "Yes",
     "academic_year": "Quota:  30",
     "course_start": "Semester 2",
-    "learning_activities": "Total Hours:\n200\n\n(\n Lecture Hours 18,\n Seminar/Tutorial Hours 18,\n\n\n\n\n\n Feedback/Feedforward Hours 8,\n Formative Assessment Hours 16,\n\n\n\n Programme Level Learning and Teaching Hours 4,\n\nDirected Learning and Independent Learning Hours\n136 )",
+    "learning_activities": "Total Hours: 200 ( Lecture Hours 18, Seminar/Tutorial Hours 18, Feedback/Feedforward Hours 8, Formative Assessment Hours 16, Programme Level Learning and Teaching Hours 4, Directed Learning and Independent Learning Hours 136 )",
     "assessment": {
       "written_exam_percent": 0,
       "coursework_percent": 100,
@@ -9939,7 +9939,7 @@
     "prohibited_combinations": "",
     "academic_year": "Quota:  40",
     "course_start": "Semester 1",
-    "learning_activities": "Total Hours:\n200\n\n(\n Lecture Hours 40,\n\n\n\n\n\n\n\n\n\n\n\n Programme Level Learning and Teaching Hours 4,\n\nDirected Learning and Independent Learning Hours\n156 )",
+    "learning_activities": "Total Hours: 200 ( Lecture Hours 40, Programme Level Learning and Teaching Hours 4, Directed Learning and Independent Learning Hours 156 )",
     "assessment": {
       "written_exam_percent": 0,
       "coursework_percent": 100,
@@ -9978,7 +9978,7 @@
     "prohibited_combinations": "",
     "academic_year": "Quota:  42",
     "course_start": "Semester 2",
-    "learning_activities": "Total Hours:\n200\n\n(\n\n\n\n\n\n\nOnline Activities 40,\n\n\n\n\n\n Programme Level Learning and Teaching Hours 4,\n\nDirected Learning and Independent Learning Hours\n156 )",
+    "learning_activities": "Total Hours: 200 ( Online Activities 40, Programme Level Learning and Teaching Hours 4, Directed Learning and Independent Learning Hours 156 )",
     "assessment": {
       "written_exam_percent": 0,
       "coursework_percent": 100,
@@ -10085,7 +10085,7 @@
     "prohibited_combinations": "",
     "academic_year": "Quota:  40",
     "course_start": "Semester 2",
-    "learning_activities": "Total Hours:\n200\n\n(\n Lecture Hours 22,\n\n\n\n\n\n\n\n\n\n\n\n Programme Level Learning and Teaching Hours 4,\n\nDirected Learning and Independent Learning Hours\n174 )",
+    "learning_activities": "Total Hours: 200 ( Lecture Hours 22, Programme Level Learning and Teaching Hours 4, Directed Learning and Independent Learning Hours 174 )",
     "assessment": {
       "written_exam_percent": 0,
       "coursework_percent": 100,
@@ -10124,7 +10124,7 @@
     "prohibited_combinations": "",
     "academic_year": "Quota:  32",
     "course_start": "13/01/2025",
-    "learning_activities": "Total Hours:\n200\n\n(\n\n\n\n\n\n\nOnline Activities 40,\n\n\n\n\n\n Programme Level Learning and Teaching Hours 4,\n\nDirected Learning and Independent Learning Hours\n156 )",
+    "learning_activities": "Total Hours: 200 ( Online Activities 40, Programme Level Learning and Teaching Hours 4, Directed Learning and Independent Learning Hours 156 )",
     "assessment": {
       "written_exam_percent": 0,
       "coursework_percent": 100,
@@ -10198,7 +10198,7 @@
     "prohibited_combinations": "",
     "academic_year": "Quota:  None",
     "course_start": "",
-    "learning_activities": "Total Hours:\n200\n\n(\n\n\n\n\n\n\nOnline Activities 40,\n\n\n\n\n\n Programme Level Learning and Teaching Hours 4,\n\nDirected Learning and Independent Learning Hours\n156 )",
+    "learning_activities": "Total Hours: 200 ( Online Activities 40, Programme Level Learning and Teaching Hours 4, Directed Learning and Independent Learning Hours 156 )",
     "assessment": {
       "written_exam_percent": 0,
       "coursework_percent": 100,
@@ -10275,7 +10275,7 @@
     "high_demand": "Yes",
     "academic_year": "Quota:  0",
     "course_start": "Semester 1",
-    "learning_activities": "Total Hours:\n200\n\n(\n\n\n\n\n\n\n\n\n\n\n\n\n Programme Level Learning and Teaching Hours 4,\n\nDirected Learning and Independent Learning Hours\n196 )",
+    "learning_activities": "Total Hours: 200 ( Programme Level Learning and Teaching Hours 4, Directed Learning and Independent Learning Hours 196 )",
     "assessment": {
       "written_exam_percent": 0,
       "coursework_percent": 100,
@@ -10314,7 +10314,7 @@
     "prohibited_combinations": "",
     "academic_year": "Quota:  0",
     "course_start": "Semester 2",
-    "learning_activities": "Total Hours:\n200\n\n(\n Lecture Hours 24,\n Seminar/Tutorial Hours 3,\n\n Supervised Practical/Workshop/Studio Hours 3,\n\n\n\n\n\n\n\n\n Programme Level Learning and Teaching Hours 4,\n\nDirected Learning and Independent Learning Hours\n166 )",
+    "learning_activities": "Total Hours: 200 ( Lecture Hours 24, Seminar/Tutorial Hours 3, Supervised Practical/Workshop/Studio Hours 3, Programme Level Learning and Teaching Hours 4, Directed Learning and Independent Learning Hours 166 )",
     "assessment": {
       "written_exam_percent": 0,
       "coursework_percent": 80,
@@ -10355,7 +10355,7 @@
     "high_demand": "Yes",
     "academic_year": "Quota:  0",
     "course_start": "Semester 2",
-    "learning_activities": "Total Hours:\n200\n\n(\n Lecture Hours 10,\n Seminar/Tutorial Hours 21,\n\n\n\n\n\n\n\n\n\n\n Programme Level Learning and Teaching Hours 4,\n\nDirected Learning and Independent Learning Hours\n165 )",
+    "learning_activities": "Total Hours: 200 ( Lecture Hours 10, Seminar/Tutorial Hours 21, Programme Level Learning and Teaching Hours 4, Directed Learning and Independent Learning Hours 165 )",
     "assessment": {
       "written_exam_percent": 0,
       "coursework_percent": 100,
@@ -10394,7 +10394,7 @@
     "prohibited_combinations": "",
     "academic_year": "Quota:  None",
     "course_start": "Semester 2",
-    "learning_activities": "Total Hours:\n200\n\n(\n\n\n\n\n\n\n\n\n\n\n\n\n Programme Level Learning and Teaching Hours 4,\n\nDirected Learning and Independent Learning Hours\n196 )",
+    "learning_activities": "Total Hours: 200 ( Programme Level Learning and Teaching Hours 4, Directed Learning and Independent Learning Hours 196 )",
     "assessment": {
       "written_exam_percent": 0,
       "coursework_percent": 100,
@@ -10433,7 +10433,7 @@
     "prohibited_combinations": "",
     "academic_year": "Quota:  35",
     "course_start": "Semester 1",
-    "learning_activities": "Total Hours:\n200\n\n(\n\n\n\n\n\n\n\n\n\n\n\n\n Programme Level Learning and Teaching Hours 4,\n\nDirected Learning and Independent Learning Hours\n196 )",
+    "learning_activities": "Total Hours: 200 ( Programme Level Learning and Teaching Hours 4, Directed Learning and Independent Learning Hours 196 )",
     "assessment": {
       "written_exam_percent": 0,
       "coursework_percent": 100,
@@ -10472,7 +10472,7 @@
     "prohibited_combinations": "",
     "academic_year": "Quota:  None",
     "course_start": "Block 5 (sem 2)",
-    "learning_activities": "Total Hours:\n600\n\n(\n\n\n\n\n\n\n\n\n\n\n\n\n Programme Level Learning and Teaching Hours 12,\n\nDirected Learning and Independent Learning Hours\n588 )",
+    "learning_activities": "Total Hours: 600 ( Programme Level Learning and Teaching Hours 12, Directed Learning and Independent Learning Hours 588 )",
     "assessment": {
       "written_exam_percent": 0,
       "coursework_percent": 100,
@@ -10513,7 +10513,7 @@
     "high_demand": "Yes",
     "academic_year": "Quota:  None",
     "course_start": "Block 5 (sem 2)",
-    "learning_activities": "Total Hours:\n600\n\n(\n\n\n\n\n\n\n\n\n\n\n\n\n Programme Level Learning and Teaching Hours 12,\n\nDirected Learning and Independent Learning Hours\n588 )",
+    "learning_activities": "Total Hours: 600 ( Programme Level Learning and Teaching Hours 12, Directed Learning and Independent Learning Hours 588 )",
     "assessment": {
       "written_exam_percent": 0,
       "coursework_percent": 100,
@@ -10552,7 +10552,7 @@
     "prohibited_combinations": "",
     "academic_year": "Quota:  None",
     "course_start": "Block 5 (sem 2)",
-    "learning_activities": "Total Hours:\n600\n\n(\n\n\n\n\n\n\n\n\n\n\n\n\n Programme Level Learning and Teaching Hours 12,\n\nDirected Learning and Independent Learning Hours\n588 )",
+    "learning_activities": "Total Hours: 600 ( Programme Level Learning and Teaching Hours 12, Directed Learning and Independent Learning Hours 588 )",
     "assessment": {
       "written_exam_percent": 0,
       "coursework_percent": 100,
@@ -10592,7 +10592,7 @@
     "prohibited_combinations": "",
     "academic_year": "Quota:  None",
     "course_start": "Block 5 (sem 2)",
-    "learning_activities": "Total Hours:\n600\n\n(\n\n\n\n\n\n\n\n\n\n\n\n\n Programme Level Learning and Teaching Hours 12,\n\nDirected Learning and Independent Learning Hours\n588 )",
+    "learning_activities": "Total Hours: 600 ( Programme Level Learning and Teaching Hours 12, Directed Learning and Independent Learning Hours 588 )",
     "assessment": {
       "written_exam_percent": 0,
       "coursework_percent": 100,
@@ -10634,7 +10634,7 @@
     "high_demand": "Yes",
     "academic_year": "Quota:  None",
     "course_start": "Block 5 (sem 2)",
-    "learning_activities": "Total Hours:\n600\n\n(\n\n\n\n\n\n\n\n\n\n\n\n\n Programme Level Learning and Teaching Hours 12,\n\nDirected Learning and Independent Learning Hours\n588 )",
+    "learning_activities": "Total Hours: 600 ( Programme Level Learning and Teaching Hours 12, Directed Learning and Independent Learning Hours 588 )",
     "assessment": {
       "written_exam_percent": 0,
       "coursework_percent": 100,
@@ -10674,7 +10674,7 @@
     "prohibited_combinations": "",
     "academic_year": "Quota:  None",
     "course_start": "Block 5 (sem 2)",
-    "learning_activities": "Total Hours:\n600\n\n(\n\n\n\n\n\n\n\n\n\n\n\n\n Programme Level Learning and Teaching Hours 12,\n\nDirected Learning and Independent Learning Hours\n588 )",
+    "learning_activities": "Total Hours: 600 ( Programme Level Learning and Teaching Hours 12, Directed Learning and Independent Learning Hours 588 )",
     "assessment": {
       "written_exam_percent": 0,
       "coursework_percent": 100,
@@ -10765,7 +10765,7 @@
     "prohibited_combinations": "",
     "academic_year": "Quota:  None",
     "course_start": "Block 5 (sem 2)",
-    "learning_activities": "Total Hours:\n600\n\n(\n\n\n\n\n\n\n\n\n\n\n\n\n Programme Level Learning and Teaching Hours 12,\n\nDirected Learning and Independent Learning Hours\n588 )",
+    "learning_activities": "Total Hours: 600 ( Programme Level Learning and Teaching Hours 12, Directed Learning and Independent Learning Hours 588 )",
     "assessment": {
       "written_exam_percent": 0,
       "coursework_percent": 100,
@@ -10804,7 +10804,7 @@
     "prohibited_combinations": "",
     "academic_year": "Quota:  1",
     "course_start": "Full Year",
-    "learning_activities": "Total Hours:\n400\n\n(\n\n\n\n\n\n\n\n\n\n\n\n\n Programme Level Learning and Teaching Hours 8,\n\nDirected Learning and Independent Learning Hours\n392 )",
+    "learning_activities": "Total Hours: 400 ( Programme Level Learning and Teaching Hours 8, Directed Learning and Independent Learning Hours 392 )",
     "assessment": {
       "written_exam_percent": 0,
       "coursework_percent": 100,
@@ -10843,7 +10843,7 @@
     "prohibited_combinations": "",
     "academic_year": "Quota:  None",
     "course_start": "Block 5 (sem 2)",
-    "learning_activities": "Total Hours:\n600\n\n(\n\n\n\n\n\n\n\n\n\n\n\n\n Programme Level Learning and Teaching Hours 12,\n\nDirected Learning and Independent Learning Hours\n588 )",
+    "learning_activities": "Total Hours: 600 ( Programme Level Learning and Teaching Hours 12, Directed Learning and Independent Learning Hours 588 )",
     "assessment": {
       "written_exam_percent": 0,
       "coursework_percent": 100,
@@ -10882,7 +10882,7 @@
     "prohibited_combinations": "",
     "academic_year": "Quota:  None",
     "course_start": "Block 5 (sem 2)",
-    "learning_activities": "Total Hours:\n600\n\n(\n\n\n\n\n\n\n\n\n\n\n\n\n Programme Level Learning and Teaching Hours 12,\n\nDirected Learning and Independent Learning Hours\n588 )",
+    "learning_activities": "Total Hours: 600 ( Programme Level Learning and Teaching Hours 12, Directed Learning and Independent Learning Hours 588 )",
     "assessment": {
       "written_exam_percent": 0,
       "coursework_percent": 100,
@@ -10921,7 +10921,7 @@
     "prohibited_combinations": "",
     "academic_year": "Quota:  None",
     "course_start": "Block 5 (sem 2)",
-    "learning_activities": "Total Hours:\n600\n\n(\n\n\n\n\n\n\n\n\n\n\n\n\n Programme Level Learning and Teaching Hours 12,\n\nDirected Learning and Independent Learning Hours\n588 )",
+    "learning_activities": "Total Hours: 600 ( Programme Level Learning and Teaching Hours 12, Directed Learning and Independent Learning Hours 588 )",
     "assessment": {
       "written_exam_percent": 0,
       "coursework_percent": 100,
@@ -10960,7 +10960,7 @@
     "prohibited_combinations": "",
     "academic_year": "Quota:  None",
     "course_start": "Block 5 (sem 2)",
-    "learning_activities": "Total Hours:\n600\n\n(\n\n\n\n\n\n\n\n\n\n\n\n\n Programme Level Learning and Teaching Hours 12,\n\nDirected Learning and Independent Learning Hours\n588 )",
+    "learning_activities": "Total Hours: 600 ( Programme Level Learning and Teaching Hours 12, Directed Learning and Independent Learning Hours 588 )",
     "assessment": {
       "written_exam_percent": 0,
       "coursework_percent": 100,
@@ -10999,7 +10999,7 @@
     "prohibited_combinations": "",
     "academic_year": "Quota:  None",
     "course_start": "Block 5 (sem 2)",
-    "learning_activities": "Total Hours:\n600\n\n(\n\n\n\n\n\n\n\n\n\n\n\n\n Programme Level Learning and Teaching Hours 12,\n\nDirected Learning and Independent Learning Hours\n588 )",
+    "learning_activities": "Total Hours: 600 ( Programme Level Learning and Teaching Hours 12, Directed Learning and Independent Learning Hours 588 )",
     "assessment": {
       "written_exam_percent": 0,
       "coursework_percent": 100,
@@ -11038,7 +11038,7 @@
     "prohibited_combinations": "",
     "academic_year": "Quota:  None",
     "course_start": "Block 5 (sem 2)",
-    "learning_activities": "Total Hours:\n600\n\n(\n\n\n\n\n\n\n\n\n\n\n\n\n Programme Level Learning and Teaching Hours 12,\n\nDirected Learning and Independent Learning Hours\n588 )",
+    "learning_activities": "Total Hours: 600 ( Programme Level Learning and Teaching Hours 12, Directed Learning and Independent Learning Hours 588 )",
     "assessment": {
       "written_exam_percent": 0,
       "coursework_percent": 100,
@@ -11112,7 +11112,7 @@
     "additional_costs": "Minor incidentals associated with travel and work in the field;Health and safety related expenditures Â»100 GBP;Incidentals while in the field (e.g. snacks, souvenirs)",
     "academic_year": "Quota:  55",
     "course_start": "Semester 2",
-    "learning_activities": "Total Hours:\n200\n\n(\n\n Seminar/Tutorial Hours 20,\n\n\n Fieldwork Hours 64,\n\n\n Feedback/Feedforward Hours 8,\n\n\n\n\n Programme Level Learning and Teaching Hours 4,\n\nDirected Learning and Independent Learning Hours\n104 )",
+    "learning_activities": "Total Hours: 200 ( Seminar/Tutorial Hours 20, Fieldwork Hours 64, Feedback/Feedforward Hours 8, Programme Level Learning and Teaching Hours 4, Directed Learning and Independent Learning Hours 104 )",
     "assessment": {
       "written_exam_percent": 0,
       "coursework_percent": 100,
@@ -11152,7 +11152,7 @@
     "prohibited_combinations": "",
     "academic_year": "Quota:  40",
     "course_start": "Semester 2",
-    "learning_activities": "Total Hours:\n200\n\n(\n Lecture Hours 20,\n Seminar/Tutorial Hours 10,\n\n Supervised Practical/Workshop/Studio Hours 10,\n\n\n\n\n Formative Assessment Hours 10,\n Summative Assessment Hours 10,\n\n\n Programme Level Learning and Teaching Hours 4,\n\nDirected Learning and Independent Learning Hours\n136 )",
+    "learning_activities": "Total Hours: 200 ( Lecture Hours 20, Seminar/Tutorial Hours 10, Supervised Practical/Workshop/Studio Hours 10, Formative Assessment Hours 10, Summative Assessment Hours 10, Programme Level Learning and Teaching Hours 4, Directed Learning and Independent Learning Hours 136 )",
     "assessment": {
       "written_exam_percent": 0,
       "coursework_percent": 100,
@@ -11191,7 +11191,7 @@
     "prohibited_combinations": "",
     "academic_year": "Quota:  40",
     "course_start": "13/01/2025",
-    "learning_activities": "Total Hours:\n200\n\n(\n\n\n\n\n\n\n\n\n\n\n\n\n Programme Level Learning and Teaching Hours 4,\n\nDirected Learning and Independent Learning Hours\n196 )",
+    "learning_activities": "Total Hours: 200 ( Programme Level Learning and Teaching Hours 4, Directed Learning and Independent Learning Hours 196 )",
     "assessment": {
       "written_exam_percent": 0,
       "coursework_percent": 100,
@@ -11230,7 +11230,7 @@
     "prohibited_combinations": "",
     "academic_year": "Quota:  0",
     "course_start": "Semester 1",
-    "learning_activities": "Total Hours:\n200\n\n(\n Lecture Hours 44,\n\n\n\n\n\n\n\n\n\n\n\n Programme Level Learning and Teaching Hours 4,\n\nDirected Learning and Independent Learning Hours\n152 )",
+    "learning_activities": "Total Hours: 200 ( Lecture Hours 44, Programme Level Learning and Teaching Hours 4, Directed Learning and Independent Learning Hours 152 )",
     "assessment": {
       "written_exam_percent": 50,
       "coursework_percent": 50,
@@ -11363,7 +11363,7 @@
     "prohibited_combinations": "",
     "academic_year": "Quota:  None",
     "course_start": "Semester 2",
-    "learning_activities": "Total Hours:\n200\n\n(\n\n\n\n Supervised Practical/Workshop/Studio Hours 10,\n Fieldwork Hours 80,\n\n\n\n\n\n\n\n Programme Level Learning and Teaching Hours 4,\n\nDirected Learning and Independent Learning Hours\n106 )",
+    "learning_activities": "Total Hours: 200 ( Supervised Practical/Workshop/Studio Hours 10, Fieldwork Hours 80, Programme Level Learning and Teaching Hours 4, Directed Learning and Independent Learning Hours 106 )",
     "assessment": {
       "written_exam_percent": 0,
       "coursework_percent": 100,
@@ -11402,7 +11402,7 @@
     "prohibited_combinations": "",
     "academic_year": "Quota:  41",
     "course_start": "Semester 1",
-    "learning_activities": "Total Hours:\n100\n\n(\n Lecture Hours 22,\n\n\n\n\n\n\n\n\n\n\n\n Programme Level Learning and Teaching Hours 2,\n\nDirected Learning and Independent Learning Hours\n76 )",
+    "learning_activities": "Total Hours: 100 ( Lecture Hours 22, Programme Level Learning and Teaching Hours 2, Directed Learning and Independent Learning Hours 76 )",
     "assessment": {
       "written_exam_percent": 0,
       "coursework_percent": 100,
@@ -11466,7 +11466,7 @@
     "prohibited_combinations": "",
     "academic_year": "Quota:  0",
     "course_start": "Semester 2",
-    "learning_activities": "Total Hours:\n200\n\n(\n\n\n\n\n\n\n\n\n\n\n\n\n Programme Level Learning and Teaching Hours 4,\n\nDirected Learning and Independent Learning Hours\n196 )",
+    "learning_activities": "Total Hours: 200 ( Programme Level Learning and Teaching Hours 4, Directed Learning and Independent Learning Hours 196 )",
     "assessment": {
       "written_exam_percent": 0,
       "coursework_percent": 100,
@@ -11507,7 +11507,7 @@
     "high_demand": "Yes",
     "academic_year": "Quota:  0",
     "course_start": "Semester 2",
-    "learning_activities": "Total Hours:\n200\n\n(\n Lecture Hours 44,\n\n\n\n\n\n\n\n\n\n\n\n Programme Level Learning and Teaching Hours 4,\n\nDirected Learning and Independent Learning Hours\n152 )",
+    "learning_activities": "Total Hours: 200 ( Lecture Hours 44, Programme Level Learning and Teaching Hours 4, Directed Learning and Independent Learning Hours 152 )",
     "assessment": {
       "written_exam_percent": 0,
       "coursework_percent": 100,
@@ -11547,7 +11547,7 @@
     "prohibited_combinations": "",
     "academic_year": "Quota:  40",
     "course_start": "Semester 1",
-    "learning_activities": "Total Hours:\n200\n\n(\n Lecture Hours 33,\n\n\n\n\n\n\n\n\n\n\n\n Programme Level Learning and Teaching Hours 4,\n\nDirected Learning and Independent Learning Hours\n163 )",
+    "learning_activities": "Total Hours: 200 ( Lecture Hours 33, Programme Level Learning and Teaching Hours 4, Directed Learning and Independent Learning Hours 163 )",
     "assessment": {
       "written_exam_percent": 0,
       "coursework_percent": 100,
@@ -11588,7 +11588,7 @@
     "high_demand": "Yes",
     "academic_year": "Quota:  0",
     "course_start": "Semester 2",
-    "learning_activities": "Total Hours:\n200\n\n(\n\n\n\n\n\n\n\n\n\n\n\n\n Programme Level Learning and Teaching Hours 4,\n\nDirected Learning and Independent Learning Hours\n196 )",
+    "learning_activities": "Total Hours: 200 ( Programme Level Learning and Teaching Hours 4, Directed Learning and Independent Learning Hours 196 )",
     "assessment": {
       "written_exam_percent": 0,
       "coursework_percent": 100,
@@ -11627,7 +11627,7 @@
     "prohibited_combinations": "",
     "academic_year": "Quota:  0",
     "course_start": "Semester 2",
-    "learning_activities": "Total Hours:\n200\n\n(\n\n\n\n\n\n\n\n\n\n\n\n\n Programme Level Learning and Teaching Hours 4,\n\nDirected Learning and Independent Learning Hours\n196 )",
+    "learning_activities": "Total Hours: 200 ( Programme Level Learning and Teaching Hours 4, Directed Learning and Independent Learning Hours 196 )",
     "assessment": {
       "written_exam_percent": 0,
       "coursework_percent": 100,
@@ -11668,7 +11668,7 @@
     "additional_costs": "No",
     "academic_year": "Quota:  40",
     "course_start": "Semester 1",
-    "learning_activities": "Total Hours:\n200\n\n(\n Lecture Hours 48,\n\n\n\n\n\n\n Feedback/Feedforward Hours 3,\n\n\n\n\n Programme Level Learning and Teaching Hours 4,\n\nDirected Learning and Independent Learning Hours\n145 )",
+    "learning_activities": "Total Hours: 200 ( Lecture Hours 48, Feedback/Feedforward Hours 3, Programme Level Learning and Teaching Hours 4, Directed Learning and Independent Learning Hours 145 )",
     "assessment": {
       "written_exam_percent": 0,
       "coursework_percent": 100,
@@ -11815,7 +11815,7 @@
     "high_demand": "Yes",
     "academic_year": "Quota:  41",
     "course_start": "Semester 1",
-    "learning_activities": "Total Hours:\n200\n\n(\n Lecture Hours 44,\n\n\n\n\n\n\n\n\n\n\n\n Programme Level Learning and Teaching Hours 4,\n\nDirected Learning and Independent Learning Hours\n152 )",
+    "learning_activities": "Total Hours: 200 ( Lecture Hours 44, Programme Level Learning and Teaching Hours 4, Directed Learning and Independent Learning Hours 152 )",
     "assessment": {
       "written_exam_percent": 0,
       "coursework_percent": 100,
@@ -11855,7 +11855,7 @@
     "prohibited_combinations": "",
     "academic_year": "Quota:  40",
     "course_start": "Semester 1",
-    "learning_activities": "Total Hours:\n200\n\n(\n Lecture Hours 10,\n Seminar/Tutorial Hours 30,\n\n\n\n\n\n\n\n\n\n Other Study Hours 10,\n Programme Level Learning and Teaching Hours 4,\n\nDirected Learning and Independent Learning Hours\n146 )",
+    "learning_activities": "Total Hours: 200 ( Lecture Hours 10, Seminar/Tutorial Hours 30, Other Study Hours 10, Programme Level Learning and Teaching Hours 4, Directed Learning and Independent Learning Hours 146 )",
     "assessment": {
       "written_exam_percent": 0,
       "coursework_percent": 100,
@@ -11894,7 +11894,7 @@
     "prohibited_combinations": "",
     "academic_year": "Quota:  42",
     "course_start": "Semester 1",
-    "learning_activities": "Total Hours:\n200\n\n(\n Lecture Hours 10,\n Seminar/Tutorial Hours 30,\n\n\n\n\n\n\n\n\n\n Other Study Hours 10,\n Programme Level Learning and Teaching Hours 4,\n\nDirected Learning and Independent Learning Hours\n146 )",
+    "learning_activities": "Total Hours: 200 ( Lecture Hours 10, Seminar/Tutorial Hours 30, Other Study Hours 10, Programme Level Learning and Teaching Hours 4, Directed Learning and Independent Learning Hours 146 )",
     "assessment": {
       "written_exam_percent": 0,
       "coursework_percent": 100,
@@ -11933,7 +11933,7 @@
     "prohibited_combinations": "",
     "academic_year": "Quota:  0",
     "course_start": "Semester 1",
-    "learning_activities": "Total Hours:\n200\n\n(\n Lecture Hours 33,\n\n\n\n\n\n\n\n\n\n\n\n Programme Level Learning and Teaching Hours 4,\n\nDirected Learning and Independent Learning Hours\n163 )",
+    "learning_activities": "Total Hours: 200 ( Lecture Hours 33, Programme Level Learning and Teaching Hours 4, Directed Learning and Independent Learning Hours 163 )",
     "assessment": {
       "written_exam_percent": 0,
       "coursework_percent": 100,
@@ -12008,7 +12008,7 @@
     "prohibited_combinations": "",
     "academic_year": "Quota:  0",
     "course_start": "Full Year",
-    "learning_activities": "Total Hours:\n200\n\n(\n\n\n\n\n\n\n\n\n\n\n\n\n Programme Level Learning and Teaching Hours 4,\n\nDirected Learning and Independent Learning Hours\n196 )",
+    "learning_activities": "Total Hours: 200 ( Programme Level Learning and Teaching Hours 4, Directed Learning and Independent Learning Hours 196 )",
     "assessment": {
       "written_exam_percent": 0,
       "coursework_percent": 100,
@@ -12050,7 +12050,7 @@
     "high_demand": "Yes",
     "academic_year": "Quota:  40",
     "course_start": "Semester 2",
-    "learning_activities": "Total Hours:\n200\n\n(\n\n\n\n\n\n\n\n\n\n\n\n\n Programme Level Learning and Teaching Hours 4,\n\nDirected Learning and Independent Learning Hours\n196 )",
+    "learning_activities": "Total Hours: 200 ( Programme Level Learning and Teaching Hours 4, Directed Learning and Independent Learning Hours 196 )",
     "assessment": {
       "written_exam_percent": 0,
       "coursework_percent": 100,
@@ -12124,7 +12124,7 @@
     "prohibited_combinations": "",
     "academic_year": "Quota:  40",
     "course_start": "Block 1 (Sem 1)",
-    "learning_activities": "Total Hours:\n100\n\n(\n Lecture Hours 5,\n\n\n Supervised Practical/Workshop/Studio Hours 4,\n Fieldwork Hours 10,\n\n\n\n\n\n Revision Session Hours 1,\n\n Programme Level Learning and Teaching Hours 2,\n\nDirected Learning and Independent Learning Hours\n78 )",
+    "learning_activities": "Total Hours: 100 ( Lecture Hours 5, Supervised Practical/Workshop/Studio Hours 4, Fieldwork Hours 10, Revision Session Hours 1, Programme Level Learning and Teaching Hours 2, Directed Learning and Independent Learning Hours 78 )",
     "assessment": {
       "written_exam_percent": 0,
       "coursework_percent": 100,
@@ -12306,7 +12306,7 @@
     "high_demand": "Yes",
     "academic_year": "Quota:  20",
     "course_start": "Semester 1",
-    "learning_activities": "Total Hours:\n200\n\n(\n\n\n\n\n\n\n\n\n\n\n\n\n Programme Level Learning and Teaching Hours 4,\n\nDirected Learning and Independent Learning Hours\n196 )",
+    "learning_activities": "Total Hours: 200 ( Programme Level Learning and Teaching Hours 4, Directed Learning and Independent Learning Hours 196 )",
     "assessment": {
       "written_exam_percent": 0,
       "coursework_percent": 100,
@@ -12381,7 +12381,7 @@
     "prohibited_combinations": "",
     "academic_year": "Quota:  40",
     "course_start": "Semester 2",
-    "learning_activities": "Total Hours:\n200\n\n(\n Lecture Hours 30,\n Seminar/Tutorial Hours 10,\n\n\n\n\n\n\n\n\n\n\n Programme Level Learning and Teaching Hours 4,\n\nDirected Learning and Independent Learning Hours\n156 )",
+    "learning_activities": "Total Hours: 200 ( Lecture Hours 30, Seminar/Tutorial Hours 10, Programme Level Learning and Teaching Hours 4, Directed Learning and Independent Learning Hours 156 )",
     "assessment": {
       "written_exam_percent": 0,
       "coursework_percent": 100,
@@ -12420,7 +12420,7 @@
     "prohibited_combinations": "",
     "academic_year": "Quota:  40",
     "course_start": "Semester 2",
-    "learning_activities": "Total Hours:\n200\n\n(\n Lecture Hours 33,\n\n\n\n\n\n\n\n\n\n\n\n Programme Level Learning and Teaching Hours 4,\n\nDirected Learning and Independent Learning Hours\n163 )",
+    "learning_activities": "Total Hours: 200 ( Lecture Hours 33, Programme Level Learning and Teaching Hours 4, Directed Learning and Independent Learning Hours 163 )",
     "assessment": {
       "written_exam_percent": 0,
       "coursework_percent": 100,
@@ -12460,7 +12460,7 @@
     "prohibited_combinations": "",
     "academic_year": "Quota:  40",
     "course_start": "Semester 2",
-    "learning_activities": "Total Hours:\n200\n\n(\n Lecture Hours 44,\n\n\n\n\n\n\n\n\n\n\n\n Programme Level Learning and Teaching Hours 4,\n\nDirected Learning and Independent Learning Hours\n152 )",
+    "learning_activities": "Total Hours: 200 ( Lecture Hours 44, Programme Level Learning and Teaching Hours 4, Directed Learning and Independent Learning Hours 152 )",
     "assessment": {
       "written_exam_percent": 0,
       "coursework_percent": 100,
@@ -12528,7 +12528,7 @@
     "high_demand": "Yes",
     "academic_year": "Quota:  40",
     "course_start": "Semester 1",
-    "learning_activities": "Total Hours:\n200\n\n(\n Lecture Hours 44,\n\n\n\n\n\n\n\n\n\n\n\n Programme Level Learning and Teaching Hours 4,\n\nDirected Learning and Independent Learning Hours\n152 )",
+    "learning_activities": "Total Hours: 200 ( Lecture Hours 44, Programme Level Learning and Teaching Hours 4, Directed Learning and Independent Learning Hours 152 )",
     "assessment": {
       "written_exam_percent": 0,
       "coursework_percent": 100,
@@ -12661,7 +12661,7 @@
     "prohibited_combinations": "",
     "academic_year": "Quota:  40",
     "course_start": "Semester 1",
-    "learning_activities": "Total Hours:\n200\n\n(\n\n\n\n\n\n\n\n\n\n\n\n\n Programme Level Learning and Teaching Hours 4,\n\nDirected Learning and Independent Learning Hours\n196 )",
+    "learning_activities": "Total Hours: 200 ( Programme Level Learning and Teaching Hours 4, Directed Learning and Independent Learning Hours 196 )",
     "assessment": {
       "written_exam_percent": 0,
       "coursework_percent": 100,
@@ -12809,7 +12809,7 @@
     "prohibited_combinations": "",
     "academic_year": "Quota:  0",
     "course_start": "Semester 2",
-    "learning_activities": "Total Hours:\n200\n\n(\n\n\n\n\n\n\n\n\n\n\n\n\n Programme Level Learning and Teaching Hours 4,\n\nDirected Learning and Independent Learning Hours\n196 )",
+    "learning_activities": "Total Hours: 200 ( Programme Level Learning and Teaching Hours 4, Directed Learning and Independent Learning Hours 196 )",
     "assessment": {
       "written_exam_percent": 0,
       "coursework_percent": 100,
@@ -12848,7 +12848,7 @@
     "prohibited_combinations": "",
     "academic_year": "Quota:  40",
     "course_start": "Block 5 (sem 2)",
-    "learning_activities": "Total Hours:\n200\n\n(\n Lecture Hours 40,\n Seminar/Tutorial Hours 20,\n\n\n\n\n\n\n\n\n\n\n Programme Level Learning and Teaching Hours 4,\n\nDirected Learning and Independent Learning Hours\n136 )",
+    "learning_activities": "Total Hours: 200 ( Lecture Hours 40, Seminar/Tutorial Hours 20, Programme Level Learning and Teaching Hours 4, Directed Learning and Independent Learning Hours 136 )",
     "assessment": {
       "written_exam_percent": 0,
       "coursework_percent": 100,
@@ -12890,7 +12890,7 @@
     "high_demand": "Yes",
     "academic_year": "Quota:  40",
     "course_start": "Block 4 (Sem 2)",
-    "learning_activities": "Total Hours:\n100\n\n(\n\n\n\n\n\n\n\n\n\n\n\n\n Programme Level Learning and Teaching Hours 2,\n\nDirected Learning and Independent Learning Hours\n98 )",
+    "learning_activities": "Total Hours: 100 ( Programme Level Learning and Teaching Hours 2, Directed Learning and Independent Learning Hours 98 )",
     "assessment": {
       "written_exam_percent": 0,
       "coursework_percent": 100,
@@ -12958,7 +12958,7 @@
     "prohibited_combinations": "",
     "academic_year": "Quota:  40",
     "course_start": "Semester 2",
-    "learning_activities": "Total Hours:\n200\n\n(\n Lecture Hours 10,\n Seminar/Tutorial Hours 15,\n\n Supervised Practical/Workshop/Studio Hours 15,\n\n\n\n Feedback/Feedforward Hours 5,\n\n Summative Assessment Hours 100,\n\n\n Programme Level Learning and Teaching Hours 4,\n\nDirected Learning and Independent Learning Hours\n51 )",
+    "learning_activities": "Total Hours: 200 ( Lecture Hours 10, Seminar/Tutorial Hours 15, Supervised Practical/Workshop/Studio Hours 15, Feedback/Feedforward Hours 5, Summative Assessment Hours 100, Programme Level Learning and Teaching Hours 4, Directed Learning and Independent Learning Hours 51 )",
     "assessment": {
       "written_exam_percent": 0,
       "coursework_percent": 100,
@@ -13000,7 +13000,7 @@
     "high_demand": "Yes",
     "academic_year": "Quota:  40",
     "course_start": "Semester 2",
-    "learning_activities": "Total Hours:\n200\n\n(\n Lecture Hours 14,\n Seminar/Tutorial Hours 7,\n\n Supervised Practical/Workshop/Studio Hours 15,\n Fieldwork Hours 8,\n\n\n\n\n\n\n\n Programme Level Learning and Teaching Hours 4,\n\nDirected Learning and Independent Learning Hours\n152 )",
+    "learning_activities": "Total Hours: 200 ( Lecture Hours 14, Seminar/Tutorial Hours 7, Supervised Practical/Workshop/Studio Hours 15, Fieldwork Hours 8, Programme Level Learning and Teaching Hours 4, Directed Learning and Independent Learning Hours 152 )",
     "assessment": {
       "written_exam_percent": 0,
       "coursework_percent": 100,
@@ -13075,7 +13075,7 @@
     "prohibited_combinations": "",
     "academic_year": "Quota:  40",
     "course_start": "Semester 2",
-    "learning_activities": "Total Hours:\n200\n\n(\n Lecture Hours 30,\n\n\n\n\n\n\n\n\n\n\n\n Programme Level Learning and Teaching Hours 4,\n\nDirected Learning and Independent Learning Hours\n166 )",
+    "learning_activities": "Total Hours: 200 ( Lecture Hours 30, Programme Level Learning and Teaching Hours 4, Directed Learning and Independent Learning Hours 166 )",
     "assessment": {
       "written_exam_percent": 0,
       "coursework_percent": 100,
@@ -13116,7 +13116,7 @@
     "high_demand": "Yes",
     "academic_year": "Quota:  40",
     "course_start": "Semester 1",
-    "learning_activities": "Total Hours:\n200\n\n(\n Lecture Hours 33,\n\n\n\n\n\n\n\n\n\n\n\n Programme Level Learning and Teaching Hours 4,\n\nDirected Learning and Independent Learning Hours\n163 )",
+    "learning_activities": "Total Hours: 200 ( Lecture Hours 33, Programme Level Learning and Teaching Hours 4, Directed Learning and Independent Learning Hours 163 )",
     "assessment": {
       "written_exam_percent": 0,
       "coursework_percent": 100,
@@ -13157,7 +13157,7 @@
     "high_demand": "Yes",
     "academic_year": "Quota:  46",
     "course_start": "Semester 1",
-    "learning_activities": "Total Hours:\n200\n\n(\n Lecture Hours 10,\n Seminar/Tutorial Hours 15,\n\n Supervised Practical/Workshop/Studio Hours 15,\n\n\n\n\n\n Summative Assessment Hours 100,\n\n\n Programme Level Learning and Teaching Hours 4,\n\nDirected Learning and Independent Learning Hours\n56 )",
+    "learning_activities": "Total Hours: 200 ( Lecture Hours 10, Seminar/Tutorial Hours 15, Supervised Practical/Workshop/Studio Hours 15, Summative Assessment Hours 100, Programme Level Learning and Teaching Hours 4, Directed Learning and Independent Learning Hours 56 )",
     "assessment": {
       "written_exam_percent": 60,
       "coursework_percent": 40,
@@ -13198,7 +13198,7 @@
     "high_demand": "Yes",
     "academic_year": "Quota:  40",
     "course_start": "Semester 1",
-    "learning_activities": "Total Hours:\n200\n\n(\n\n\n\n\n\n\n\n\n\n\n\n\n Programme Level Learning and Teaching Hours 4,\n\nDirected Learning and Independent Learning Hours\n196 )",
+    "learning_activities": "Total Hours: 200 ( Programme Level Learning and Teaching Hours 4, Directed Learning and Independent Learning Hours 196 )",
     "assessment": {
       "written_exam_percent": 0,
       "coursework_percent": 100,
@@ -13237,7 +13237,7 @@
     "prohibited_combinations": "",
     "academic_year": "Quota:  40",
     "course_start": "Semester 1",
-    "learning_activities": "Total Hours:\n200\n\n(\n Lecture Hours 20,\n Seminar/Tutorial Hours 10,\n\n\n\n\n\n\n\n\n\n\n Programme Level Learning and Teaching Hours 4,\n\nDirected Learning and Independent Learning Hours\n166 )",
+    "learning_activities": "Total Hours: 200 ( Lecture Hours 20, Seminar/Tutorial Hours 10, Programme Level Learning and Teaching Hours 4, Directed Learning and Independent Learning Hours 166 )",
     "assessment": {
       "written_exam_percent": 0,
       "coursework_percent": 100,
@@ -13278,7 +13278,7 @@
     "high_demand": "Yes",
     "academic_year": "Quota:  38",
     "course_start": "Semester 2",
-    "learning_activities": "Total Hours:\n200\n\n(\n\n\n\n\n\n\n\n\n\n\n\n\n Programme Level Learning and Teaching Hours 4,\n\nDirected Learning and Independent Learning Hours\n196 )",
+    "learning_activities": "Total Hours: 200 ( Programme Level Learning and Teaching Hours 4, Directed Learning and Independent Learning Hours 196 )",
     "assessment": {
       "written_exam_percent": 0,
       "coursework_percent": 100,
@@ -13318,7 +13318,7 @@
     "additional_costs": "Costs of travel, accommodation and subsistence on the study tour will be covered by the Programme fees paid, however incidental/personal expenses during the study tour will be met by the student concerned.",
     "academic_year": "Quota:  40",
     "course_start": "Full Year",
-    "learning_activities": "Total Hours:\n200\n\n(\n Lecture Hours 44,\n Seminar/Tutorial Hours 8,\n\n Supervised Practical/Workshop/Studio Hours 8,\n Fieldwork Hours 40,\n\n\n\n\n\n\n\n Programme Level Learning and Teaching Hours 4,\n\nDirected Learning and Independent Learning Hours\n96 )",
+    "learning_activities": "Total Hours: 200 ( Lecture Hours 44, Seminar/Tutorial Hours 8, Supervised Practical/Workshop/Studio Hours 8, Fieldwork Hours 40, Programme Level Learning and Teaching Hours 4, Directed Learning and Independent Learning Hours 96 )",
     "assessment": {
       "written_exam_percent": 0,
       "coursework_percent": 100,
@@ -13358,7 +13358,7 @@
     "prohibited_combinations": "",
     "academic_year": "Quota:  None",
     "course_start": "Full Year",
-    "learning_activities": "Total Hours:\n200\n\n(\n\n\n\n\n\n\n\n\n\n\n\n\n Programme Level Learning and Teaching Hours 4,\n\nDirected Learning and Independent Learning Hours\n196 )",
+    "learning_activities": "Total Hours: 200 ( Programme Level Learning and Teaching Hours 4, Directed Learning and Independent Learning Hours 196 )",
     "assessment": {
       "written_exam_percent": 0,
       "coursework_percent": 100,
@@ -13423,7 +13423,7 @@
     "visiting_prerequisites": "None",
     "academic_year": "Quota:  30",
     "course_start": "Semester 2",
-    "learning_activities": "Total Hours:\n200\n\n(\n Lecture Hours 50,\n\n\n\n\n\n\n\n\n\n\n\n Programme Level Learning and Teaching Hours 4,\n\nDirected Learning and Independent Learning Hours\n146 )",
+    "learning_activities": "Total Hours: 200 ( Lecture Hours 50, Programme Level Learning and Teaching Hours 4, Directed Learning and Independent Learning Hours 146 )",
     "assessment": {
       "written_exam_percent": 0,
       "coursework_percent": 100,
@@ -13462,7 +13462,7 @@
     "prohibited_combinations": "",
     "academic_year": "Quota:  1",
     "course_start": "Semester 1",
-    "learning_activities": "Total Hours:\n200\n\n(\n\n\n\n\n\n\n\n\n\n\n\n\n Programme Level Learning and Teaching Hours 4,\n\nDirected Learning and Independent Learning Hours\n196 )",
+    "learning_activities": "Total Hours: 200 ( Programme Level Learning and Teaching Hours 4, Directed Learning and Independent Learning Hours 196 )",
     "assessment": {
       "written_exam_percent": 0,
       "coursework_percent": 100,
@@ -13502,7 +13502,7 @@
     "additional_costs": "None.",
     "academic_year": "Quota:  0",
     "course_start": "Full Year",
-    "learning_activities": "Total Hours:\n200\n\n(\n Lecture Hours 22,\n\n\n\n Fieldwork Hours 11,\n\n\n\n\n\n\n\n Programme Level Learning and Teaching Hours 4,\n\nDirected Learning and Independent Learning Hours\n163 )",
+    "learning_activities": "Total Hours: 200 ( Lecture Hours 22, Fieldwork Hours 11, Programme Level Learning and Teaching Hours 4, Directed Learning and Independent Learning Hours 163 )",
     "assessment": {
       "written_exam_percent": 0,
       "coursework_percent": 100,
@@ -13577,7 +13577,7 @@
     "prohibited_combinations": "",
     "academic_year": "Quota:  None",
     "course_start": "",
-    "learning_activities": "Total Hours:\n600\n\n(\n\n\n\n\n\n\n\n\n\n\n\n\n Programme Level Learning and Teaching Hours 12,\n\nDirected Learning and Independent Learning Hours\n588 )",
+    "learning_activities": "Total Hours: 600 ( Programme Level Learning and Teaching Hours 12, Directed Learning and Independent Learning Hours 588 )",
     "assessment": {
       "written_exam_percent": 0,
       "coursework_percent": 100,
@@ -13617,7 +13617,7 @@
     "visiting_prerequisites": "None",
     "academic_year": "Quota:  40",
     "course_start": "Semester 1",
-    "learning_activities": "Total Hours:\n200\n\n(\n\n\n\n\n\n\n\n\n\n\n\n\n Programme Level Learning and Teaching Hours 4,\n\nDirected Learning and Independent Learning Hours\n196 )",
+    "learning_activities": "Total Hours: 200 ( Programme Level Learning and Teaching Hours 4, Directed Learning and Independent Learning Hours 196 )",
     "assessment": {
       "written_exam_percent": 0,
       "coursework_percent": 100,
@@ -13658,7 +13658,7 @@
     "high_demand": "Yes",
     "academic_year": "Quota:  24",
     "course_start": "Semester 1",
-    "learning_activities": "Total Hours:\n100\n\n(\n Lecture Hours 24,\n\n\n\n\n\n\n\n\n\n\n\n Programme Level Learning and Teaching Hours 2,\n\nDirected Learning and Independent Learning Hours\n74 )",
+    "learning_activities": "Total Hours: 100 ( Lecture Hours 24, Programme Level Learning and Teaching Hours 2, Directed Learning and Independent Learning Hours 74 )",
     "assessment": {
       "written_exam_percent": 0,
       "coursework_percent": 100,
@@ -13761,7 +13761,7 @@
     "prohibited_combinations": "",
     "academic_year": "Quota:  40",
     "course_start": "Semester 1",
-    "learning_activities": "Total Hours:\n200\n\n(\n Lecture Hours 33,\n\n\n\n\n\n\n\n\n\n\n\n Programme Level Learning and Teaching Hours 4,\n\nDirected Learning and Independent Learning Hours\n163 )",
+    "learning_activities": "Total Hours: 200 ( Lecture Hours 33, Programme Level Learning and Teaching Hours 4, Directed Learning and Independent Learning Hours 163 )",
     "assessment": {
       "written_exam_percent": 0,
       "coursework_percent": 100,
@@ -13800,7 +13800,7 @@
     "prohibited_combinations": "",
     "academic_year": "Quota:  40",
     "course_start": "Semester 1",
-    "learning_activities": "Total Hours:\n200\n\n(\n Lecture Hours 30,\n\n\n\n\n\n\n\n\n\n\n\n Programme Level Learning and Teaching Hours 4,\n\nDirected Learning and Independent Learning Hours\n166 )",
+    "learning_activities": "Total Hours: 200 ( Lecture Hours 30, Programme Level Learning and Teaching Hours 4, Directed Learning and Independent Learning Hours 166 )",
     "assessment": {
       "written_exam_percent": 0,
       "coursework_percent": 100,
@@ -13842,7 +13842,7 @@
     "high_demand": "Yes",
     "academic_year": "Quota:  44",
     "course_start": "Semester 1",
-    "learning_activities": "Total Hours:\n200\n\n(\n Lecture Hours 20,\n\n\n Supervised Practical/Workshop/Studio Hours 20,\n\n\n\n Feedback/Feedforward Hours 5,\n\n Summative Assessment Hours 100,\n\n\n Programme Level Learning and Teaching Hours 4,\n\nDirected Learning and Independent Learning Hours\n51 )",
+    "learning_activities": "Total Hours: 200 ( Lecture Hours 20, Supervised Practical/Workshop/Studio Hours 20, Feedback/Feedforward Hours 5, Summative Assessment Hours 100, Programme Level Learning and Teaching Hours 4, Directed Learning and Independent Learning Hours 51 )",
     "assessment": {
       "written_exam_percent": 0,
       "coursework_percent": 100,
@@ -13916,7 +13916,7 @@
     "high_demand": "Yes",
     "academic_year": "Quota:  40",
     "course_start": "Semester 2",
-    "learning_activities": "Total Hours:\n200\n\n(\n Lecture Hours 29,\n\n\n\n\n\n\n\n\n\n\n\n Programme Level Learning and Teaching Hours 4,\n\nDirected Learning and Independent Learning Hours\n167 )",
+    "learning_activities": "Total Hours: 200 ( Lecture Hours 29, Programme Level Learning and Teaching Hours 4, Directed Learning and Independent Learning Hours 167 )",
     "assessment": {
       "written_exam_percent": 0,
       "coursework_percent": 100,
@@ -13955,7 +13955,7 @@
     "prohibited_combinations": "",
     "academic_year": "Quota:  0",
     "course_start": "Semester 1",
-    "learning_activities": "Total Hours:\n200\n\n(\n\n\n\n\n\n\n\n\n\n\n\n\n Programme Level Learning and Teaching Hours 4,\n\nDirected Learning and Independent Learning Hours\n196 )",
+    "learning_activities": "Total Hours: 200 ( Programme Level Learning and Teaching Hours 4, Directed Learning and Independent Learning Hours 196 )",
     "assessment": {
       "written_exam_percent": 0,
       "coursework_percent": 100,
@@ -13995,7 +13995,7 @@
     "prohibited_combinations": "",
     "academic_year": "Quota:  20",
     "course_start": "Semester 1",
-    "learning_activities": "Total Hours:\n200\n\n(\n Lecture Hours 33,\n\n\n\n\n\n\n\n\n\n\n\n Programme Level Learning and Teaching Hours 4,\n\nDirected Learning and Independent Learning Hours\n163 )",
+    "learning_activities": "Total Hours: 200 ( Lecture Hours 33, Programme Level Learning and Teaching Hours 4, Directed Learning and Independent Learning Hours 163 )",
     "assessment": {
       "written_exam_percent": 0,
       "coursework_percent": 100,
@@ -14034,7 +14034,7 @@
     "prohibited_combinations": "",
     "academic_year": "Quota:  40",
     "course_start": "Semester 1",
-    "learning_activities": "Total Hours:\n200\n\n(\n\n\n\n\n\n\n\n\n\n\n\n\n Programme Level Learning and Teaching Hours 4,\n\nDirected Learning and Independent Learning Hours\n196 )",
+    "learning_activities": "Total Hours: 200 ( Programme Level Learning and Teaching Hours 4, Directed Learning and Independent Learning Hours 196 )",
     "assessment": {
       "written_exam_percent": 0,
       "coursework_percent": 100,
@@ -14075,7 +14075,7 @@
     "high_demand": "Yes",
     "academic_year": "Quota:  40",
     "course_start": "Semester 1",
-    "learning_activities": "Total Hours:\n200\n\n(\n Lecture Hours 20,\n\n\n Supervised Practical/Workshop/Studio Hours 20,\n\n\n\n Feedback/Feedforward Hours 5,\n\n Summative Assessment Hours 100,\n\n\n Programme Level Learning and Teaching Hours 4,\n\nDirected Learning and Independent Learning Hours\n51 )",
+    "learning_activities": "Total Hours: 200 ( Lecture Hours 20, Supervised Practical/Workshop/Studio Hours 20, Feedback/Feedforward Hours 5, Summative Assessment Hours 100, Programme Level Learning and Teaching Hours 4, Directed Learning and Independent Learning Hours 51 )",
     "assessment": {
       "written_exam_percent": 0,
       "coursework_percent": 100,
@@ -14143,7 +14143,7 @@
     "high_demand": "Yes",
     "academic_year": "Quota:  40",
     "course_start": "Semester 2",
-    "learning_activities": "Total Hours:\n200\n\n(\n\n\n\n\n\n\n\n\n\n\n\n\n Programme Level Learning and Teaching Hours 4,\n\nDirected Learning and Independent Learning Hours\n196 )",
+    "learning_activities": "Total Hours: 200 ( Programme Level Learning and Teaching Hours 4, Directed Learning and Independent Learning Hours 196 )",
     "assessment": {
       "written_exam_percent": 0,
       "coursework_percent": 100,
@@ -14182,7 +14182,7 @@
     "prohibited_combinations": "",
     "academic_year": "Quota:  40",
     "course_start": "Semester 1",
-    "learning_activities": "Total Hours:\n200\n\n(\n Lecture Hours 22,\n\n\n\n\n\n\n\n\n\n\n\n Programme Level Learning and Teaching Hours 4,\n Placement Study Abroad Hours 11,\nDirected Learning and Independent Learning Hours\n163 )",
+    "learning_activities": "Total Hours: 200 ( Lecture Hours 22, Programme Level Learning and Teaching Hours 4, Placement Study Abroad Hours 11, Directed Learning and Independent Learning Hours 163 )",
     "assessment": {
       "written_exam_percent": 0,
       "coursework_percent": 100,
@@ -14224,7 +14224,7 @@
     "high_demand": "Yes",
     "academic_year": "Quota:  35",
     "course_start": "Semester 2",
-    "learning_activities": "Total Hours:\n200\n\n(\n Lecture Hours 20,\n\n\n Supervised Practical/Workshop/Studio Hours 14,\n\n\n\n\n\n Summative Assessment Hours 100,\n\n\n Programme Level Learning and Teaching Hours 4,\n\nDirected Learning and Independent Learning Hours\n62 )",
+    "learning_activities": "Total Hours: 200 ( Lecture Hours 20, Supervised Practical/Workshop/Studio Hours 14, Summative Assessment Hours 100, Programme Level Learning and Teaching Hours 4, Directed Learning and Independent Learning Hours 62 )",
     "assessment": {
       "written_exam_percent": 0,
       "coursework_percent": 100,
@@ -14344,7 +14344,7 @@
     "high_demand": "Yes",
     "academic_year": "Quota:  20",
     "course_start": "Semester 1",
-    "learning_activities": "Total Hours:\n100\n\n(\n Lecture Hours 22,\n\n\n\n\n\n\n\n\n\n\n\n Programme Level Learning and Teaching Hours 2,\n\nDirected Learning and Independent Learning Hours\n76 )",
+    "learning_activities": "Total Hours: 100 ( Lecture Hours 22, Programme Level Learning and Teaching Hours 2, Directed Learning and Independent Learning Hours 76 )",
     "assessment": {
       "written_exam_percent": 50,
       "coursework_percent": 50,
@@ -14387,7 +14387,7 @@
     "high_demand": "Yes",
     "academic_year": "Quota:  None",
     "course_start": "Block 5 (sem 2)",
-    "learning_activities": "Total Hours:\n800\n\n(\n\n\n\n\n\n\n\n\n\n\n\n\n Programme Level Learning and Teaching Hours 16,\n\nDirected Learning and Independent Learning Hours\n784 )",
+    "learning_activities": "Total Hours: 800 ( Programme Level Learning and Teaching Hours 16, Directed Learning and Independent Learning Hours 784 )",
     "assessment": {
       "written_exam_percent": 0,
       "coursework_percent": 100,
@@ -14427,7 +14427,7 @@
     "prohibited_combinations": "",
     "academic_year": "Quota:  None",
     "course_start": "Semester 1",
-    "learning_activities": "Total Hours:\n100\n\n(\n\n\n\n\n\n\n\n\n\n\n\n\n Programme Level Learning and Teaching Hours 2,\n\nDirected Learning and Independent Learning Hours\n98 )",
+    "learning_activities": "Total Hours: 100 ( Programme Level Learning and Teaching Hours 2, Directed Learning and Independent Learning Hours 98 )",
     "assessment": {
       "written_exam_percent": 0,
       "coursework_percent": 100,
@@ -14469,7 +14469,7 @@
     "high_demand": "Yes",
     "academic_year": "Quota:  16",
     "course_start": "Semester 2",
-    "learning_activities": "Total Hours:\n200\n\n(\n Lecture Hours 22,\n\n\n\n\n\n\n\n\n\n\n\n Programme Level Learning and Teaching Hours 4,\n Placement Study Abroad Hours 11,\nDirected Learning and Independent Learning Hours\n163 )",
+    "learning_activities": "Total Hours: 200 ( Lecture Hours 22, Programme Level Learning and Teaching Hours 4, Placement Study Abroad Hours 11, Directed Learning and Independent Learning Hours 163 )",
     "assessment": {
       "written_exam_percent": 0,
       "coursework_percent": 100,
@@ -14510,7 +14510,7 @@
     "prohibited_combinations": "",
     "academic_year": "Quota:  None",
     "course_start": "16/09/2024",
-    "learning_activities": "Total Hours:\n100\n\n(\n\n\n\n Supervised Practical/Workshop/Studio Hours 16,\n\n\n\n\n\n\n\n\n Programme Level Learning and Teaching Hours 2,\n\nDirected Learning and Independent Learning Hours\n82 )",
+    "learning_activities": "Total Hours: 100 ( Supervised Practical/Workshop/Studio Hours 16, Programme Level Learning and Teaching Hours 2, Directed Learning and Independent Learning Hours 82 )",
     "assessment": {
       "written_exam_percent": 0,
       "coursework_percent": 100,
@@ -14549,7 +14549,7 @@
     "prohibited_combinations": "",
     "academic_year": "Quota:  None",
     "course_start": "Full Year",
-    "learning_activities": "Total Hours:\n1300\n\n(\n\n\n\n\n\n\n\n\n\n\n\n\n Programme Level Learning and Teaching Hours 26,\n\nDirected Learning and Independent Learning Hours\n1274 )",
+    "learning_activities": "Total Hours: 1300 ( Programme Level Learning and Teaching Hours 26, Directed Learning and Independent Learning Hours 1274 )",
     "assessment": {
       "written_exam_percent": 0,
       "coursework_percent": 100,
@@ -14589,7 +14589,7 @@
     "additional_costs": "N/A",
     "academic_year": "Quota:  40",
     "course_start": "Semester 1",
-    "learning_activities": "Total Hours:\n200\n\n(\n Lecture Hours 22,\n\n\n\n\n\n\n\n\n\n\n\n Programme Level Learning and Teaching Hours 4,\n\nDirected Learning and Independent Learning Hours\n174 )",
+    "learning_activities": "Total Hours: 200 ( Lecture Hours 22, Programme Level Learning and Teaching Hours 4, Directed Learning and Independent Learning Hours 174 )",
     "assessment": {
       "written_exam_percent": 0,
       "coursework_percent": 100,
@@ -14628,7 +14628,7 @@
     "prohibited_combinations": "",
     "academic_year": "Quota:  70",
     "course_start": "Semester 1",
-    "learning_activities": "Total Hours:\n200\n\n(\n Lecture Hours 21,\n\n\n\n\n\n\n\n\n\n\n\n Programme Level Learning and Teaching Hours 4,\n\nDirected Learning and Independent Learning Hours\n175 )",
+    "learning_activities": "Total Hours: 200 ( Lecture Hours 21, Programme Level Learning and Teaching Hours 4, Directed Learning and Independent Learning Hours 175 )",
     "assessment": {
       "written_exam_percent": 0,
       "coursework_percent": 100,

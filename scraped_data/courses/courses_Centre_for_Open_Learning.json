@@ -21,7 +21,7 @@
     "prohibited_combinations": "",
     "academic_year": "Quota:  10",
     "course_start": "Semester 1",
-    "learning_activities": "Total Hours:\n100\n\n(\n Lecture Hours 38,\n\n\n\n\n\n\n\n\n\n\n\n Programme Level Learning and Teaching Hours 2,\n\nDirected Learning and Independent Learning Hours\n60 )",
+    "learning_activities": "Total Hours: 100 ( Lecture Hours 38, Programme Level Learning and Teaching Hours 2, Directed Learning and Independent Learning Hours 60 )",
     "assessment": {
       "written_exam_percent": 0,
       "coursework_percent": 100,
@@ -60,7 +60,7 @@
     "prohibited_combinations": "",
     "academic_year": "Quota:  20",
     "course_start": "Semester 2",
-    "learning_activities": "Total Hours:\n200\n\n(\n Lecture Hours 36,\n\n\n\n\n\n\n\n\n\n\n\n Programme Level Learning and Teaching Hours 4,\n\nDirected Learning and Independent Learning Hours\n160 )",
+    "learning_activities": "Total Hours: 200 ( Lecture Hours 36, Programme Level Learning and Teaching Hours 4, Directed Learning and Independent Learning Hours 160 )",
     "assessment": {
       "written_exam_percent": 0,
       "coursework_percent": 100,
@@ -99,7 +99,7 @@
     "prohibited_combinations": "",
     "academic_year": "Quota:  None",
     "course_start": "Semester 1",
-    "learning_activities": "Total Hours:\n100\n\n(\n Lecture Hours 32,\n\n\n\n\n\n\n\n\n\n\n\n Programme Level Learning and Teaching Hours 2,\n\nDirected Learning and Independent Learning Hours\n66 )",
+    "learning_activities": "Total Hours: 100 ( Lecture Hours 32, Programme Level Learning and Teaching Hours 2, Directed Learning and Independent Learning Hours 66 )",
     "assessment": {
       "written_exam_percent": 0,
       "coursework_percent": 100,
@@ -138,7 +138,7 @@
     "prohibited_combinations": "",
     "academic_year": "Quota:  None",
     "course_start": "Semester 2",
-    "learning_activities": "Total Hours:\n200\n\n(\n Lecture Hours 60,\n\n\n\n\n\n\n\n\n\n\n\n Programme Level Learning and Teaching Hours 4,\n\nDirected Learning and Independent Learning Hours\n136 )",
+    "learning_activities": "Total Hours: 200 ( Lecture Hours 60, Programme Level Learning and Teaching Hours 4, Directed Learning and Independent Learning Hours 136 )",
     "assessment": {
       "written_exam_percent": 0,
       "coursework_percent": 100,
@@ -177,7 +177,7 @@
     "prohibited_combinations": "",
     "academic_year": "Quota:  20",
     "course_start": "Semester 1",
-    "learning_activities": "Total Hours:\n100\n\n(\n\n Seminar/Tutorial Hours 30,\n\n\n\n\n\n\n\n\n\n\n Programme Level Learning and Teaching Hours 2,\n\nDirected Learning and Independent Learning Hours\n68 )",
+    "learning_activities": "Total Hours: 100 ( Seminar/Tutorial Hours 30, Programme Level Learning and Teaching Hours 2, Directed Learning and Independent Learning Hours 68 )",
     "assessment": {
       "written_exam_percent": 0,
       "coursework_percent": 100,
@@ -216,7 +216,7 @@
     "prohibited_combinations": "",
     "academic_year": "Quota:  20",
     "course_start": "Semester 2",
-    "learning_activities": "Total Hours:\n200\n\n(\n\n Seminar/Tutorial Hours 40,\n\n\n\n\n\n\n\n\n\n\n Programme Level Learning and Teaching Hours 4,\n\nDirected Learning and Independent Learning Hours\n156 )",
+    "learning_activities": "Total Hours: 200 ( Seminar/Tutorial Hours 40, Programme Level Learning and Teaching Hours 4, Directed Learning and Independent Learning Hours 156 )",
     "assessment": {
       "written_exam_percent": 0,
       "coursework_percent": 100,
@@ -255,7 +255,7 @@
     "prohibited_combinations": "",
     "academic_year": "Quota:  None",
     "course_start": "Semester 1",
-    "learning_activities": "Total Hours:\n100\n\n(\n Lecture Hours 34,\n\n\n\n\n\n\n\n\n\n\n\n Programme Level Learning and Teaching Hours 2,\n\nDirected Learning and Independent Learning Hours\n64 )",
+    "learning_activities": "Total Hours: 100 ( Lecture Hours 34, Programme Level Learning and Teaching Hours 2, Directed Learning and Independent Learning Hours 64 )",
     "assessment": {
       "written_exam_percent": 0,
       "coursework_percent": 100,
@@ -294,7 +294,7 @@
     "prohibited_combinations": "",
     "academic_year": "Quota:  None",
     "course_start": "Semester 2",
-    "learning_activities": "Total Hours:\n200\n\n(\n Lecture Hours 60,\n\n\n\n\n\n\n\n\n\n\n\n Programme Level Learning and Teaching Hours 4,\n\nDirected Learning and Independent Learning Hours\n136 )",
+    "learning_activities": "Total Hours: 200 ( Lecture Hours 60, Programme Level Learning and Teaching Hours 4, Directed Learning and Independent Learning Hours 136 )",
     "assessment": {
       "written_exam_percent": 0,
       "coursework_percent": 100,
@@ -333,7 +333,7 @@
     "prohibited_combinations": "",
     "academic_year": "Quota:  20",
     "course_start": "Semester 2",
-    "learning_activities": "Total Hours:\n100\n\n(\n Lecture Hours 37.5,\n\n\n\n\n\n\n\n\n\n\n\n Programme Level Learning and Teaching Hours 2,\n\nDirected Learning and Independent Learning Hours\n60 )",
+    "learning_activities": "Total Hours: 100 ( Lecture Hours 37.5, Programme Level Learning and Teaching Hours 2, Directed Learning and Independent Learning Hours 60 )",
     "assessment": {
       "written_exam_percent": 0,
       "coursework_percent": 100,
@@ -372,7 +372,7 @@
     "prohibited_combinations": "",
     "academic_year": "Quota:  None",
     "course_start": "Full Year",
-    "learning_activities": "Total Hours:\n200\n\n(\n Lecture Hours 50,\n Seminar/Tutorial Hours 50,\n\n\n\n\n\n\n\n\n\n\n Programme Level Learning and Teaching Hours 4,\n\nDirected Learning and Independent Learning Hours\n96 )",
+    "learning_activities": "Total Hours: 200 ( Lecture Hours 50, Seminar/Tutorial Hours 50, Programme Level Learning and Teaching Hours 4, Directed Learning and Independent Learning Hours 96 )",
     "assessment": {
       "written_exam_percent": 0,
       "coursework_percent": 100,
@@ -505,7 +505,7 @@
     "additional_costs": "Unless otherwise stated, all students on this short course pay a published course fee per enrolment.Mono-printing equipment and materials.Newsprint.In addition to the course fee, students are expected to provide the following list of indicate tools, materials and equipment:- Graphite Stick 4b- Plastic rubber- Masking tape- Craft knife- Sketchbook A4- Chalk Pastels- Newsprint & Cartridge paper (as required)- Indian and/or Quink ink- One-sided card or painting Card or Acrylic Painting Paper.- Collage materials (to collect and use throughout the course)- Range of Acrylic paints: Cadmium Red, Cadmium Yellow, Ultramarine Blue, Cerulean, Black, White (at least 250ml pot), Yellow Ochre, Burnt Umber, (other colours as required during the course).- Mixing Palette- Palette Knife- Sponge and rags- A digital camera",
     "academic_year": "Quota:  12",
     "course_start": "Lifelong Learning - Session 1",
-    "learning_activities": "Total Hours:\n100\n\n(\n\n Seminar/Tutorial Hours 30,\n\n\n\n\n\n\n\n\n\n\n Programme Level Learning and Teaching Hours 2,\n\nDirected Learning and Independent Learning Hours\n68 )",
+    "learning_activities": "Total Hours: 100 ( Seminar/Tutorial Hours 30, Programme Level Learning and Teaching Hours 2, Directed Learning and Independent Learning Hours 68 )",
     "assessment": {
       "written_exam_percent": 0,
       "coursework_percent": 100,
@@ -1063,7 +1063,7 @@
     "additional_costs": "Unless otherwise stated, all students on this short course pay a published course fee per enrollment.In addition to the course fee, students are expected to provide the following list of indicate tools, materials and equipment:- A4 Sketchbook (at least 140gsm paper)- An A3 watercolour pad (Hot Pressed around 190gsm)- Paper: A range of papers as and when required from newsprint, printing paper such as South Bank, Bread and Butter paper. Watercolour Paper A2, NOT (cold pressed) and Hot Pressed between 190-250gsm.- Small set of drawing inks (either acrylic or shellac based)- Black Quink ink- Indian Ink- White ink- Pencil 2b and 4b- Graphite pencil 4B- A small set of gouache- A range of artist quality watercolours, (tubes for larger studies) such as: Cadmium Red, Cadmium Yellow, Ultramarine Blue, Lemon Yellow, Crimson, Cerulean blue, PayneÂ¿s Grey,- Pans (for more select colours): sap green, violet, yellow ochre, burnt and raw sienna, Prussian blue.- Chalk Pastels (and oil pastels as required)-Gum Arabic- Wax candle and Cling film- Masking Fluid- Gum Tape- Clean 9mm-12mm A3 plywood board (for stretching paper)- A set of watercolour brushes- Sponge- Mixing palette- Water pot- A camera",
     "academic_year": "Quota:  12",
     "course_start": "Lifelong Learning - Session 2",
-    "learning_activities": "Total Hours:\n100\n\n(\n\n\n\n\n\n\n\n\n\n\n\n\n Programme Level Learning and Teaching Hours 2,\n\nDirected Learning and Independent Learning Hours\n98 )",
+    "learning_activities": "Total Hours: 100 ( Programme Level Learning and Teaching Hours 2, Directed Learning and Independent Learning Hours 98 )",
     "assessment": {
       "written_exam_percent": 0,
       "coursework_percent": 100,
@@ -1171,7 +1171,7 @@
     "additional_costs": "Unless otherwise stated, all students on this short course pay a published course fee per enrollment.- Cutting matts- Limited supply of collage materials and PVA- mono-printing plates, black ink and rollers.In addition to the course fee, students are expected to provide the following list of indicate tools, materials and equipment:- An A4 or A5 sketchbook (hardback book -not soft cover)- a range of drawing materials - pencils, contÃ©, charcoal, fibre pens, dip pens- a starter set of acrylic paints (to include: red, blue, yellow, white, black- a range of hog hair brushes- a craft knife and scissors- masking tape- PVA glue, Pritt Stick- cartridge paper- any collected visual research - photographs, magazines, drawings, sketches and studies from previous classes or own work- an assortment of collage material - papers, fabrics, wrappings, newspapers, etc.- one sided card a bottle of black drawing ink- your own digital camera- further photocopying as required",
     "academic_year": "Quota:  12",
     "course_start": "Lifelong Learning - Session 2",
-    "learning_activities": "Total Hours:\n100\n\n(\n\n\n\n\n\n\n\n\n\n\n\n\n Programme Level Learning and Teaching Hours 2,\n\nDirected Learning and Independent Learning Hours\n98 )",
+    "learning_activities": "Total Hours: 100 ( Programme Level Learning and Teaching Hours 2, Directed Learning and Independent Learning Hours 98 )",
     "assessment": {
       "written_exam_percent": 0,
       "coursework_percent": 100,
@@ -1440,7 +1440,7 @@
     "additional_costs": "In addition to the course fee, students are expected to provide the following list of indicate tools, materials and equipment:(Estimated cost: Â£100 - Â£300 depending on usage)Essentials to bring to first session- Digital Camera with memory card(Entry level Digital SLR, Digital Hybrid Â¿BridgeÂ¿ camera, or Digital Compact Camera, all suitable)- USB cable for the camera and/or a card reader for downloading images- Optional: Digital camera manual - particularly recommended if using a new camera- Notebook and pen for notes and developing project ideasOne or more of the following for backing up work :- CDs or DVDs (DVD-R) USB pen drive- Optional - External or portable drive (compatible with, or formatted for use with Apple Macs and or PCs)For Photography sessions in class- Optional, but desirable - a light tripod, or 'gorillapod' type bendy camera support- Optional - objects chosen by student, or props from storeFor printing and mounting work- 1 -3 sheets of Mounting Card or Mounting BoardAdditional prints via the college repro shop or at external printers.",
     "academic_year": "Quota:  12",
     "course_start": "Lifelong Learning - Session 2",
-    "learning_activities": "Total Hours:\n100\n\n(\n\n\n\n\n\n\n\n\n\n\n\n\n Programme Level Learning and Teaching Hours 2,\n\nDirected Learning and Independent Learning Hours\n98 )",
+    "learning_activities": "Total Hours: 100 ( Programme Level Learning and Teaching Hours 2, Directed Learning and Independent Learning Hours 98 )",
     "assessment": {
       "written_exam_percent": 0,
       "coursework_percent": 100,
@@ -1480,7 +1480,7 @@
     "additional_costs": "Unless otherwise stated, all students on this short course pay a published course fee per enrolment which includes provision of:- Mono-printing equipment and materials.- Newsprint.In addition to the course fee, students are expected to provide the following list of indicate tools, materials and equipment:- Compressed and willow charcoal- Graphite Stick 4b- Pencil 2b & 6b- Plastic rubber- Masking tape- Craft knife- Sketchbook A4- Gum Arabic- Chalk pastels (small set)- Oil Pastels (small set)- Black Quink Ink or black Indian ink- Range of drawing paper i.e. good quality white cartridge paper, newsprint, other papers as required (such as bread & Butter paper,  tissue paper and card).- A digital camera- A smartphone / tablet",
     "academic_year": "Quota:  12",
     "course_start": "Lifelong Learning - Session 1",
-    "learning_activities": "Total Hours:\n100\n\n(\n\n Seminar/Tutorial Hours 30,\n\n\n\n\n\n\n\n\n\n\n Programme Level Learning and Teaching Hours 2,\n\nDirected Learning and Independent Learning Hours\n68 )",
+    "learning_activities": "Total Hours: 100 ( Seminar/Tutorial Hours 30, Programme Level Learning and Teaching Hours 2, Directed Learning and Independent Learning Hours 68 )",
     "assessment": {
       "written_exam_percent": 0,
       "coursework_percent": 100,
@@ -1853,7 +1853,7 @@
     "additional_costs": "Unless otherwise stated, all students on this short course pay a published course fee per enrolment.In addition to the learning and teaching resources and content, this fee also includes access to;Cutting matsPrinting inks and rollersOver-head projectorIn addition to the course fee, students are expected to provide the tools, materials and equipment to enable them to complete the practical investigations.  The following list details the materials that students will have been using in 'Introduction to Art and Design Practice', however students will be advised further on this depending on their ideas.Sketchbook A3 (recommended: a soft back book with medium/ heavy weight white cartridge paper available from a good art shop)Smaller sketchbook or note book to carry with you eg A4 OR A5A digital camera/ phone camera2 sheets tracing paper (A1)Charcoal (both willow and compressed) (3 sticks willow and 1 compressed to begin)Range of Graphite Pencils, B/ 2B/ 4B/ H (suggest 3 pencils to begin)A good rubber, plastic or putty1 roll good masking tapeA craft knife with retractable bladeA range of pens and markers, felt tips, for drawing and also to make notesColoured pencils OR small set of oil pastelsOverall or old shirtWhite chalkWhite Oil pastelBlack Quink InkA glue stickA basic range of colours in a range water based paints such as watercolour, acrylic or gouache eg: Burnt Umber, Black, cadmium Yellow, Cyan Blue, Ultramarine, Magenta Pink, Cadmium Red, WhiteTwo or three brushes of different sizes (soft 'sable type' brushes or acrylic equivalent)Pair of household scissors",
     "academic_year": "Quota:  24",
     "course_start": "Lifelong Learning - Session 2",
-    "learning_activities": "Total Hours:\n100\n\n(\n\n\n\n Supervised Practical/Workshop/Studio Hours 39,\n Fieldwork Hours 3,\n External Visit Hours 3,\nOnline Activities 20,\n\n Formative Assessment Hours 3,\n Summative Assessment Hours 3,\n\n\n Programme Level Learning and Teaching Hours 2,\n\nDirected Learning and Independent Learning Hours\n27 )",
+    "learning_activities": "Total Hours: 100 ( Supervised Practical/Workshop/Studio Hours 39, Fieldwork Hours 3, External Visit Hours 3, Online Activities 20, Formative Assessment Hours 3, Summative Assessment Hours 3, Programme Level Learning and Teaching Hours 2, Directed Learning and Independent Learning Hours 27 )",
     "assessment": {
       "written_exam_percent": 0,
       "coursework_percent": 100,
@@ -1952,7 +1952,7 @@
     "additional_costs": "Materials and equipment provided for students as part of the course and included in course fee:Access to intaglio printmaking workshop, tools and presses.Materials and equipment available for purchase during the course:(Estimated cost: Â£10 - Â£40 depending on usage)Zinc Etching Plates, cut to individual required dimensions.Proofing paper and newsprintFine Printing papersEssentials Materials and equipment students will need to provide themselves (Estimated cost: Â£15 - Â£30 depending on usage):SketchbookPair of inexpensive rubber glovesApron or old shirt to protect clothesSheet of Southbank Coarse paper",
     "academic_year": "Quota:  8",
     "course_start": "Lifelong Learning - Session 2",
-    "learning_activities": "Total Hours:\n100\n\n(\n\n\n\n\n\n\n\n\n\n\n\n\n Programme Level Learning and Teaching Hours 2,\n\nDirected Learning and Independent Learning Hours\n98 )",
+    "learning_activities": "Total Hours: 100 ( Programme Level Learning and Teaching Hours 2, Directed Learning and Independent Learning Hours 98 )",
     "assessment": {
       "written_exam_percent": 0,
       "coursework_percent": 100,
@@ -1991,7 +1991,7 @@
     "prohibited_combinations": "",
     "academic_year": "Quota:  None",
     "course_start": "Lifelong Learning - Session 2",
-    "learning_activities": "Total Hours:\n100\n\n(\n\n\n\n\n\n\n\n\n\n\n\n\n Programme Level Learning and Teaching Hours 2,\n\nDirected Learning and Independent Learning Hours\n98 )",
+    "learning_activities": "Total Hours: 100 ( Programme Level Learning and Teaching Hours 2, Directed Learning and Independent Learning Hours 98 )",
     "assessment": {
       "written_exam_percent": 0,
       "coursework_percent": 100,
@@ -2031,7 +2031,7 @@
     "additional_costs": "In addition to the learning and teaching resources and content, this fee also includes access to:Cutting matsPrinting inks and rollersOver head projectorIn addition to the course fee, students are expected to provide the following list of i tools, materials and equipment. There will be some ongoing expenses as the course progresses, particularly paper and other consumable materials, students will be given up to date instructions on week by week basis.Sketchbook A3* (recommend a soft back book with medium/ heavy weight white cartridge paper available from a good art shop)Smaller sketchbook or note book to carry with you eg A4 OR A5A digital camera / phone cameraTo begin, 3 sheets of medium weight drawing cartridge paper (size A1)2 sheets tracing paper (A1)Charcoal (both willow and compressed) (3 sticks willow and 1 compressed to begin)Range of Graphite Pencils, B / 2B / 4B / H (suggest 3 pencils to begin)A good rubber, plastic or putty1 roll good masking tapeCraft knife with retractable bladeRange of pens and markers, felt tips, for drawing and also to make notesColoured pencils or small set of oil pastelsOverall or old shirtWhite chalkWhite Oil pastelBlack Quink InkGlue stickBasic range of colours in a range water based paints such as watercolour, acrylic or gouache eg: Burnt Umber, Black, cadmium Yellow, Cyan Blue, Ultramarine, Magenta Pink, Cadmium Red, WhiteTwo or three brushes of different sizes (soft 'sable type' brushes or acrylic equivalent)Pair of household scissors",
     "academic_year": "Quota:  27",
     "course_start": "Lifelong Learning - Session 1",
-    "learning_activities": "Total Hours:\n100\n\n(\n\n\n\n Supervised Practical/Workshop/Studio Hours 39,\n Fieldwork Hours 3,\n External Visit Hours 3,\nOnline Activities 20,\n\n Formative Assessment Hours 3,\n Summative Assessment Hours 3,\n\n\n Programme Level Learning and Teaching Hours 2,\n\nDirected Learning and Independent Learning Hours\n27 )",
+    "learning_activities": "Total Hours: 100 ( Supervised Practical/Workshop/Studio Hours 39, Fieldwork Hours 3, External Visit Hours 3, Online Activities 20, Formative Assessment Hours 3, Summative Assessment Hours 3, Programme Level Learning and Teaching Hours 2, Directed Learning and Independent Learning Hours 27 )",
     "assessment": {
       "written_exam_percent": 0,
       "coursework_percent": 100,
@@ -2104,7 +2104,7 @@
     "prohibited_combinations": "",
     "academic_year": "Quota:  10",
     "course_start": "Lifelong Learning - Session 1",
-    "learning_activities": "Total Hours:\n100\n\n(\n\n Seminar/Tutorial Hours 30,\n\n\n\n\n\n\n\n\n\n\n Programme Level Learning and Teaching Hours 2,\n\nDirected Learning and Independent Learning Hours\n68 )",
+    "learning_activities": "Total Hours: 100 ( Seminar/Tutorial Hours 30, Programme Level Learning and Teaching Hours 2, Directed Learning and Independent Learning Hours 68 )",
     "assessment": {
       "written_exam_percent": 0,
       "coursework_percent": 100,
@@ -2143,7 +2143,7 @@
     "prohibited_combinations": "",
     "academic_year": "Quota:  13",
     "course_start": "Lifelong Learning - Session 1",
-    "learning_activities": "Total Hours:\n100\n\n(\n Lecture Hours 30,\n\n\n\n\n\n\n\n\n\n\n\n Programme Level Learning and Teaching Hours 2,\n\nDirected Learning and Independent Learning Hours\n68 )",
+    "learning_activities": "Total Hours: 100 ( Lecture Hours 30, Programme Level Learning and Teaching Hours 2, Directed Learning and Independent Learning Hours 68 )",
     "assessment": {
       "written_exam_percent": 0,
       "coursework_percent": 100,
@@ -2208,7 +2208,7 @@
     "additional_costs": "Unless otherwise stated, all students on this short course pay a published course fee per enrolment.Access to appropriate IT facilities and programmesPrinting credit of Â£10 per studentAdditional printing in excess of creditIn addition to the course fee, students are expected to provide the following list of indicate tools, materials and equipment:A4 or A3 layout padSketchbook (at least A5)Drawing materials: pencils, pens, coloured pencils / pens with varying tip sizes, rubber, sharpenerScissors or scalpel/craft knifeRuler (metal or plastic, up to 30cm)Pritt stick, tapeUSB key",
     "academic_year": "Quota:  12",
     "course_start": "Lifelong Learning - Session 2",
-    "learning_activities": "Total Hours:\n100\n\n(\n\n\n\n\n\n\n\n\n\n\n\n\n Programme Level Learning and Teaching Hours 2,\n\nDirected Learning and Independent Learning Hours\n98 )",
+    "learning_activities": "Total Hours: 100 ( Programme Level Learning and Teaching Hours 2, Directed Learning and Independent Learning Hours 98 )",
     "assessment": {
       "written_exam_percent": 0,
       "coursework_percent": 100,
@@ -2248,7 +2248,7 @@
     "additional_costs": "In addition to the course fee, students are expected to provide the following list of indicate tools, materials and equipment:Estimated cost: Â£20 - Â£50 depending on usage.An A4-sized sketchbook2B, 4B and 6B pencilsA dipping pen and a drawing nib (mapping nib is ideal)Black ink ( this can be Indian ink or acrylic ink)A selection of cheap watercolour brushesA few sheets of A2 or A1 cartridge paper; according to your personal preference, you can buy heavy or light-weight cartridge paper.Throughout the course you should have a selection of drawing materials available that you wish to work with, such as fine-liners, watercolours, acrylics or colour pencils.",
     "academic_year": "Quota:  10",
     "course_start": "Lifelong Learning - Session 1",
-    "learning_activities": "Total Hours:\n100\n\n(\n\n\n\n\n\n\n\n\n\n\n\n\n Programme Level Learning and Teaching Hours 2,\n\nDirected Learning and Independent Learning Hours\n98 )",
+    "learning_activities": "Total Hours: 100 ( Programme Level Learning and Teaching Hours 2, Directed Learning and Independent Learning Hours 98 )",
     "assessment": {
       "written_exam_percent": 0,
       "coursework_percent": 100,
@@ -2316,7 +2316,7 @@
     "high_demand": "Yes",
     "academic_year": "Quota:  8",
     "course_start": "Lifelong Learning - Session 2",
-    "learning_activities": "Total Hours:\n100\n\n(\n\n\n\n\n\n\n\n\n\n\n\n\n Programme Level Learning and Teaching Hours 2,\n\nDirected Learning and Independent Learning Hours\n98 )",
+    "learning_activities": "Total Hours: 100 ( Programme Level Learning and Teaching Hours 2, Directed Learning and Independent Learning Hours 98 )",
     "assessment": {
       "written_exam_percent": 0,
       "coursework_percent": 100,
@@ -2611,7 +2611,7 @@
     "additional_costs": "Unless otherwise stated, all students on this short course pay a published course fee per enrolment.In addition to the course fee, students are expected to provide the following list of indicate tools, materials and equipmentEssential materials throughout the course:- A selection of cartridge drawing papers.- Masking tape.- Sketchbook.- Willow charcoal.- Compressed charcoal.-Chalk pastels or conte sticks.- Black drawing ink.- Small and medium brushes.- Selection of pencils including HB, B, 2B and 4B.- Graphite stick.- Eraser.- Fixative.- Masking tape.- A3/ A4 sketchbook.- White acrylic paint.- Sponges.- Rags.- Apron or old shirt.- Scalpel.",
     "academic_year": "Quota:  13",
     "course_start": "Lifelong Learning - Session 1",
-    "learning_activities": "Total Hours:\n100\n\n(\n\n Seminar/Tutorial Hours 30,\n\n\n\n\n\n\n\n\n\n\n Programme Level Learning and Teaching Hours 2,\n\nDirected Learning and Independent Learning Hours\n68 )",
+    "learning_activities": "Total Hours: 100 ( Seminar/Tutorial Hours 30, Programme Level Learning and Teaching Hours 2, Directed Learning and Independent Learning Hours 68 )",
     "assessment": {
       "written_exam_percent": 0,
       "coursework_percent": 100,
@@ -2718,7 +2718,7 @@
     "prohibited_combinations": "",
     "academic_year": "Quota:  None",
     "course_start": "Lifelong Learning - Session 2",
-    "learning_activities": "Total Hours:\n100\n\n(\n\n\n\n\n\n\n\n\n\n\n\n\n Programme Level Learning and Teaching Hours 2,\n\nDirected Learning and Independent Learning Hours\n98 )",
+    "learning_activities": "Total Hours: 100 ( Programme Level Learning and Teaching Hours 2, Directed Learning and Independent Learning Hours 98 )",
     "assessment": {
       "written_exam_percent": 0,
       "coursework_percent": 100,
@@ -3030,7 +3030,7 @@
     "high_demand": "Yes",
     "academic_year": "Quota:  12",
     "course_start": "Lifelong Learning - Session 2",
-    "learning_activities": "Total Hours:\n100\n\n(\n\n\n\n\n\n\n\n\n\n\n\n\n Programme Level Learning and Teaching Hours 2,\n\nDirected Learning and Independent Learning Hours\n98 )",
+    "learning_activities": "Total Hours: 100 ( Programme Level Learning and Teaching Hours 2, Directed Learning and Independent Learning Hours 98 )",
     "assessment": {
       "written_exam_percent": 0,
       "coursework_percent": 100,
@@ -3071,7 +3071,7 @@
     "high_demand": "Yes",
     "academic_year": "Quota:  12",
     "course_start": "Lifelong Learning - Session 2",
-    "learning_activities": "Total Hours:\n100\n\n(\n\n\n\n\n\n\n\n\n\n\n\n\n Programme Level Learning and Teaching Hours 2,\n\nDirected Learning and Independent Learning Hours\n98 )",
+    "learning_activities": "Total Hours: 100 ( Programme Level Learning and Teaching Hours 2, Directed Learning and Independent Learning Hours 98 )",
     "assessment": {
       "written_exam_percent": 0,
       "coursework_percent": 100,
@@ -3673,7 +3673,7 @@
     "prohibited_combinations": "",
     "academic_year": "Quota:  10",
     "course_start": "Semester 1",
-    "learning_activities": "Total Hours:\n100\n\n(\n Lecture Hours 38,\n\n\n\n\n\n\n\n\n\n\n\n Programme Level Learning and Teaching Hours 2,\n\nDirected Learning and Independent Learning Hours\n60 )",
+    "learning_activities": "Total Hours: 100 ( Lecture Hours 38, Programme Level Learning and Teaching Hours 2, Directed Learning and Independent Learning Hours 60 )",
     "assessment": {
       "written_exam_percent": 0,
       "coursework_percent": 100,
@@ -3712,7 +3712,7 @@
     "prohibited_combinations": "",
     "academic_year": "Quota:  None",
     "course_start": "Lifelong Learning - Session 2",
-    "learning_activities": "Total Hours:\n100\n\n(\n\n\n\n\n\n\n\n\n\n\n\n\n Programme Level Learning and Teaching Hours 2,\n\nDirected Learning and Independent Learning Hours\n98 )",
+    "learning_activities": "Total Hours: 100 ( Programme Level Learning and Teaching Hours 2, Directed Learning and Independent Learning Hours 98 )",
     "assessment": {
       "written_exam_percent": 0,
       "coursework_percent": 100,
@@ -4221,7 +4221,7 @@
     "prohibited_combinations": "",
     "academic_year": "Quota:  16",
     "course_start": "Lifelong Learning - Session 1",
-    "learning_activities": "Total Hours:\n100\n\n(\n Lecture Hours 20,\n\n\n\n\n\n\n\n\n\n\n\n Programme Level Learning and Teaching Hours 2,\n\nDirected Learning and Independent Learning Hours\n78 )",
+    "learning_activities": "Total Hours: 100 ( Lecture Hours 20, Programme Level Learning and Teaching Hours 2, Directed Learning and Independent Learning Hours 78 )",
     "assessment": {
       "written_exam_percent": 0,
       "coursework_percent": 100,
@@ -4294,7 +4294,7 @@
     "prohibited_combinations": "",
     "academic_year": "Quota:  None",
     "course_start": "Lifelong Learning - Session 3",
-    "learning_activities": "Total Hours:\n100\n\n(\n\n Seminar/Tutorial Hours 29.3,\n\n\n\n\n\n\n\n\n\n\n Programme Level Learning and Teaching Hours 2,\n\nDirected Learning and Independent Learning Hours\n69 )",
+    "learning_activities": "Total Hours: 100 ( Seminar/Tutorial Hours 29.3, Programme Level Learning and Teaching Hours 2, Directed Learning and Independent Learning Hours 69 )",
     "assessment": {
       "written_exam_percent": 0,
       "coursework_percent": 100,
@@ -4541,7 +4541,7 @@
     "prohibited_combinations": "",
     "academic_year": "Quota:  16",
     "course_start": "Lifelong Learning - Session 1",
-    "learning_activities": "Total Hours:\n100\n\n(\n\n Seminar/Tutorial Hours 20,\n\n\n\n\n\n\n\n\n\n\n Programme Level Learning and Teaching Hours 2,\n\nDirected Learning and Independent Learning Hours\n78 )",
+    "learning_activities": "Total Hours: 100 ( Seminar/Tutorial Hours 20, Programme Level Learning and Teaching Hours 2, Directed Learning and Independent Learning Hours 78 )",
     "assessment": {
       "written_exam_percent": 0,
       "coursework_percent": 100,
@@ -4710,7 +4710,7 @@
     "prohibited_combinations": "",
     "academic_year": "Quota:  None",
     "course_start": "Lifelong Learning - Session 2",
-    "learning_activities": "Total Hours:\n100\n\n(\n\n\n\n\n\n\n\n\n\n\n\n\n Programme Level Learning and Teaching Hours 2,\n\nDirected Learning and Independent Learning Hours\n98 )",
+    "learning_activities": "Total Hours: 100 ( Programme Level Learning and Teaching Hours 2, Directed Learning and Independent Learning Hours 98 )",
     "assessment": {
       "written_exam_percent": 0,
       "coursework_percent": 100,
@@ -4749,7 +4749,7 @@
     "prohibited_combinations": "",
     "academic_year": "Quota:  None",
     "course_start": "Lifelong Learning - Session 2",
-    "learning_activities": "Total Hours:\n100\n\n(\n\n\n\n\n\n\n\n\n\n\n\n\n Programme Level Learning and Teaching Hours 2,\n\nDirected Learning and Independent Learning Hours\n98 )",
+    "learning_activities": "Total Hours: 100 ( Programme Level Learning and Teaching Hours 2, Directed Learning and Independent Learning Hours 98 )",
     "assessment": {
       "written_exam_percent": 0,
       "coursework_percent": 100,
@@ -4855,7 +4855,7 @@
     "prohibited_combinations": "",
     "academic_year": "Quota:  50",
     "course_start": "Lifelong Learning - Session 3",
-    "learning_activities": "Total Hours:\n100\n\n(\n\n Seminar/Tutorial Hours 29.3,\n\n\n\n\n\n\n\n\n\n\n Programme Level Learning and Teaching Hours 2,\n\nDirected Learning and Independent Learning Hours\n69 )",
+    "learning_activities": "Total Hours: 100 ( Seminar/Tutorial Hours 29.3, Programme Level Learning and Teaching Hours 2, Directed Learning and Independent Learning Hours 69 )",
     "assessment": {
       "written_exam_percent": 0,
       "coursework_percent": 100,
@@ -5102,7 +5102,7 @@
     "prohibited_combinations": "",
     "academic_year": "Quota:  None",
     "course_start": "Lifelong Learning - Session 2",
-    "learning_activities": "Total Hours:\n100\n\n(\n\n\n\n\n\n\n\n\n\n\n\n\n Programme Level Learning and Teaching Hours 2,\n\nDirected Learning and Independent Learning Hours\n98 )",
+    "learning_activities": "Total Hours: 100 ( Programme Level Learning and Teaching Hours 2, Directed Learning and Independent Learning Hours 98 )",
     "assessment": {
       "written_exam_percent": 0,
       "coursework_percent": 100,
@@ -5471,7 +5471,7 @@
     "prohibited_combinations": "",
     "academic_year": "Quota:  None",
     "course_start": "Lifelong Learning - Session 2",
-    "learning_activities": "Total Hours:\n100\n\n(\n\n\n\n\n\n\n\n\n\n\n\n\n Programme Level Learning and Teaching Hours 2,\n\nDirected Learning and Independent Learning Hours\n98 )",
+    "learning_activities": "Total Hours: 100 ( Programme Level Learning and Teaching Hours 2, Directed Learning and Independent Learning Hours 98 )",
     "assessment": {
       "written_exam_percent": 0,
       "coursework_percent": 100,
@@ -5510,7 +5510,7 @@
     "prohibited_combinations": "",
     "academic_year": "Quota:  None",
     "course_start": "Lifelong Learning - Session 2",
-    "learning_activities": "Total Hours:\n100\n\n(\n\n\n\n\n\n\n\n\n\n\n\n\n Programme Level Learning and Teaching Hours 2,\n\nDirected Learning and Independent Learning Hours\n98 )",
+    "learning_activities": "Total Hours: 100 ( Programme Level Learning and Teaching Hours 2, Directed Learning and Independent Learning Hours 98 )",
     "assessment": {
       "written_exam_percent": 0,
       "coursework_percent": 100,
@@ -5609,7 +5609,7 @@
     "prohibited_combinations": "",
     "academic_year": "Quota:  60",
     "course_start": "Flexible",
-    "learning_activities": "Total Hours:\n100\n\n(\n\n\n\n\n\n\n\n\n\n\n\n\n Programme Level Learning and Teaching Hours 2,\n\nDirected Learning and Independent Learning Hours\n98 )",
+    "learning_activities": "Total Hours: 100 ( Programme Level Learning and Teaching Hours 2, Directed Learning and Independent Learning Hours 98 )",
     "assessment": {
       "written_exam_percent": 0,
       "coursework_percent": 100,
@@ -5813,7 +5813,7 @@
     "high_demand": "Yes",
     "academic_year": "Quota:  28",
     "course_start": "Semester 1",
-    "learning_activities": "Total Hours:\n200\n\n(\n\n\n\n\n\n\n\n\n\n\n\n\n Programme Level Learning and Teaching Hours 4,\n\nDirected Learning and Independent Learning Hours\n196 )",
+    "learning_activities": "Total Hours: 200 ( Programme Level Learning and Teaching Hours 4, Directed Learning and Independent Learning Hours 196 )",
     "assessment": {
       "written_exam_percent": 0,
       "coursework_percent": 100,
@@ -5856,7 +5856,7 @@
     "high_demand": "Yes",
     "academic_year": "Quota:  28",
     "course_start": "Semester 2",
-    "learning_activities": "Total Hours:\n200\n\n(\n\n\n\n\n\n\n\n\n\n\n\n\n Programme Level Learning and Teaching Hours 4,\n\nDirected Learning and Independent Learning Hours\n196 )",
+    "learning_activities": "Total Hours: 200 ( Programme Level Learning and Teaching Hours 4, Directed Learning and Independent Learning Hours 196 )",
     "assessment": {
       "written_exam_percent": 0,
       "coursework_percent": 100,
@@ -6080,7 +6080,7 @@
     "prohibited_combinations": "",
     "academic_year": "Quota:  16",
     "course_start": "Lifelong Learning - Session 1",
-    "learning_activities": "Total Hours:\n100\n\n(\n\n\n\n\n\n\n\n\n\n\n\n\n Programme Level Learning and Teaching Hours 2,\n\nDirected Learning and Independent Learning Hours\n98 )",
+    "learning_activities": "Total Hours: 100 ( Programme Level Learning and Teaching Hours 2, Directed Learning and Independent Learning Hours 98 )",
     "assessment": {
       "written_exam_percent": 0,
       "coursework_percent": 100,
@@ -6677,7 +6677,7 @@
     "high_demand": "Yes",
     "academic_year": "Quota:  14",
     "course_start": "Semester 1",
-    "learning_activities": "Total Hours:\n200\n\n(\n\n\n\n\n\n\n\n\n\n\n\n\n Programme Level Learning and Teaching Hours 4,\n\nDirected Learning and Independent Learning Hours\n196 )",
+    "learning_activities": "Total Hours: 200 ( Programme Level Learning and Teaching Hours 4, Directed Learning and Independent Learning Hours 196 )",
     "assessment": {
       "written_exam_percent": 0,
       "coursework_percent": 100,
@@ -7222,7 +7222,7 @@
     "prohibited_combinations": "",
     "academic_year": "Quota:  50",
     "course_start": "16/09/2024",
-    "learning_activities": "Total Hours:\n200\n\n(\n Lecture Hours 88,\n\n\n\n\n\n\n\n\n\n\n\n Programme Level Learning and Teaching Hours 4,\n\nDirected Learning and Independent Learning Hours\n108 )",
+    "learning_activities": "Total Hours: 200 ( Lecture Hours 88, Programme Level Learning and Teaching Hours 4, Directed Learning and Independent Learning Hours 108 )",
     "assessment": {
       "written_exam_percent": 0,
       "coursework_percent": 100,
@@ -7261,7 +7261,7 @@
     "prohibited_combinations": "",
     "academic_year": "Quota:  62",
     "course_start": "Lifelong Learning - Session 1",
-    "learning_activities": "Total Hours:\n200\n\n(\n Lecture Hours 88,\n\n\n\n\n\n\n\n\n\n\n\n Programme Level Learning and Teaching Hours 4,\n\nDirected Learning and Independent Learning Hours\n108 )",
+    "learning_activities": "Total Hours: 200 ( Lecture Hours 88, Programme Level Learning and Teaching Hours 4, Directed Learning and Independent Learning Hours 108 )",
     "assessment": {
       "written_exam_percent": 0,
       "coursework_percent": 100,
@@ -7300,7 +7300,7 @@
     "prohibited_combinations": "",
     "academic_year": "Quota:  None",
     "course_start": "Lifelong Learning - Session 2",
-    "learning_activities": "Total Hours:\n150\n\n(\n Lecture Hours 66,\n\n\n\n\n\n\n\n\n\n\n\n Programme Level Learning and Teaching Hours 3,\n\nDirected Learning and Independent Learning Hours\n81 )",
+    "learning_activities": "Total Hours: 150 ( Lecture Hours 66, Programme Level Learning and Teaching Hours 3, Directed Learning and Independent Learning Hours 81 )",
     "assessment": {
       "written_exam_percent": 0,
       "coursework_percent": 100,
@@ -7339,7 +7339,7 @@
     "prohibited_combinations": "",
     "academic_year": "Quota:  None",
     "course_start": "Lifelong Learning - Session 2",
-    "learning_activities": "Total Hours:\n150\n\n(\n Lecture Hours 66,\n\n\n\n\n\n\n\n\n\n\n\n Programme Level Learning and Teaching Hours 3,\n\nDirected Learning and Independent Learning Hours\n81 )",
+    "learning_activities": "Total Hours: 150 ( Lecture Hours 66, Programme Level Learning and Teaching Hours 3, Directed Learning and Independent Learning Hours 81 )",
     "assessment": {
       "written_exam_percent": 0,
       "coursework_percent": 100,
@@ -7578,7 +7578,7 @@
     "prohibited_combinations": "",
     "academic_year": "Quota:  80",
     "course_start": "Lifelong Learning - Session 2",
-    "learning_activities": "Total Hours:\n100\n\n(\n Lecture Hours 20,\n\n\n\n\n\n\n\n\n\n\n\n Programme Level Learning and Teaching Hours 2,\n\nDirected Learning and Independent Learning Hours\n78 )",
+    "learning_activities": "Total Hours: 100 ( Lecture Hours 20, Programme Level Learning and Teaching Hours 2, Directed Learning and Independent Learning Hours 78 )",
     "assessment": {
       "written_exam_percent": 0,
       "coursework_percent": 100,
@@ -7684,7 +7684,7 @@
     "prohibited_combinations": "",
     "academic_year": "Quota:  None",
     "course_start": "Lifelong Learning - Session 2",
-    "learning_activities": "Total Hours:\n100\n\n(\n\n\n\n\n\n\n\n\n\n\n\n\n Programme Level Learning and Teaching Hours 2,\n\nDirected Learning and Independent Learning Hours\n98 )",
+    "learning_activities": "Total Hours: 100 ( Programme Level Learning and Teaching Hours 2, Directed Learning and Independent Learning Hours 98 )",
     "assessment": {
       "written_exam_percent": 0,
       "coursework_percent": 100,
@@ -8171,7 +8171,7 @@
     "prohibited_combinations": "",
     "academic_year": "Quota:  40",
     "course_start": "Lifelong Learning - Session 2",
-    "learning_activities": "Total Hours:\n100\n\n(\n Lecture Hours 50,\n\n\n\n\n\n\n\n\n\n\n\n Programme Level Learning and Teaching Hours 2,\n\nDirected Learning and Independent Learning Hours\n48 )",
+    "learning_activities": "Total Hours: 100 ( Lecture Hours 50, Programme Level Learning and Teaching Hours 2, Directed Learning and Independent Learning Hours 48 )",
     "assessment": {
       "written_exam_percent": 0,
       "coursework_percent": 100,
@@ -8275,7 +8275,7 @@
     "prohibited_combinations": "",
     "academic_year": "Quota:  16",
     "course_start": "Lifelong Learning - Session 1",
-    "learning_activities": "Total Hours:\n100\n\n(\n\n Seminar/Tutorial Hours 16,\n\n\n\n\n\n\n\n\n\n\n Programme Level Learning and Teaching Hours 2,\n\nDirected Learning and Independent Learning Hours\n82 )",
+    "learning_activities": "Total Hours: 100 ( Seminar/Tutorial Hours 16, Programme Level Learning and Teaching Hours 2, Directed Learning and Independent Learning Hours 82 )",
     "assessment": {
       "written_exam_percent": 0,
       "coursework_percent": 100,
@@ -9108,7 +9108,7 @@
     "prohibited_combinations": "",
     "academic_year": "Quota:  None",
     "course_start": "Lifelong Learning - Session 2",
-    "learning_activities": "Total Hours:\n100\n\n(\n\n\n\n\n\n\n\n\n\n\n\n\n Programme Level Learning and Teaching Hours 2,\n\nDirected Learning and Independent Learning Hours\n98 )",
+    "learning_activities": "Total Hours: 100 ( Programme Level Learning and Teaching Hours 2, Directed Learning and Independent Learning Hours 98 )",
     "assessment": {
       "written_exam_percent": 0,
       "coursework_percent": 100,
@@ -9681,7 +9681,7 @@
     "prohibited_combinations": "",
     "academic_year": "Quota:  None",
     "course_start": "Lifelong Learning - Session 2",
-    "learning_activities": "Total Hours:\n100\n\n(\n\n\n\n\n\n\n\n\n\n\n\n\n Programme Level Learning and Teaching Hours 2,\n\nDirected Learning and Independent Learning Hours\n98 )",
+    "learning_activities": "Total Hours: 100 ( Programme Level Learning and Teaching Hours 2, Directed Learning and Independent Learning Hours 98 )",
     "assessment": {
       "written_exam_percent": 0,
       "coursework_percent": 100,
@@ -9813,7 +9813,7 @@
     "prohibited_combinations": "",
     "academic_year": "Quota:  60",
     "course_start": "Lifelong Learning - Session 1",
-    "learning_activities": "Total Hours:\n100\n\n(\n Lecture Hours 50,\n\n\n\n\n\n\n\n\n\n\n\n Programme Level Learning and Teaching Hours 2,\n\nDirected Learning and Independent Learning Hours\n48 )",
+    "learning_activities": "Total Hours: 100 ( Lecture Hours 50, Programme Level Learning and Teaching Hours 2, Directed Learning and Independent Learning Hours 48 )",
     "assessment": {
       "written_exam_percent": 0,
       "coursework_percent": 100,
@@ -9853,7 +9853,7 @@
     "prohibited_combinations": "",
     "academic_year": "Quota:  40",
     "course_start": "Lifelong Learning - Session 1",
-    "learning_activities": "Total Hours:\n100\n\n(\n Lecture Hours 50,\n\n\n\n\n\n\n\n\n\n\n\n Programme Level Learning and Teaching Hours 2,\n\nDirected Learning and Independent Learning Hours\n48 )",
+    "learning_activities": "Total Hours: 100 ( Lecture Hours 50, Programme Level Learning and Teaching Hours 2, Directed Learning and Independent Learning Hours 48 )",
     "assessment": {
       "written_exam_percent": 0,
       "coursework_percent": 100,
@@ -10654,7 +10654,7 @@
     "prohibited_combinations": "",
     "academic_year": "Quota:  None",
     "course_start": "Lifelong Learning - Session 3",
-    "learning_activities": "Total Hours:\n100\n\n(\n\n Seminar/Tutorial Hours 49.5,\n\n\n\n\n\n\n\n\n\n\n Programme Level Learning and Teaching Hours 2,\n\nDirected Learning and Independent Learning Hours\n48 )",
+    "learning_activities": "Total Hours: 100 ( Seminar/Tutorial Hours 49.5, Programme Level Learning and Teaching Hours 2, Directed Learning and Independent Learning Hours 48 )",
     "assessment": {
       "written_exam_percent": 0,
       "coursework_percent": 100,
@@ -10693,7 +10693,7 @@
     "prohibited_combinations": "",
     "academic_year": "Quota:  40",
     "course_start": "Lifelong Learning - Session 2",
-    "learning_activities": "Total Hours:\n100\n\n(\n Lecture Hours 20,\n\n\n\n\n\n\n\n\n\n\n\n Programme Level Learning and Teaching Hours 2,\n\nDirected Learning and Independent Learning Hours\n78 )",
+    "learning_activities": "Total Hours: 100 ( Lecture Hours 20, Programme Level Learning and Teaching Hours 2, Directed Learning and Independent Learning Hours 78 )",
     "assessment": {
       "written_exam_percent": 0,
       "coursework_percent": 100,
@@ -10767,7 +10767,7 @@
     "prohibited_combinations": "",
     "academic_year": "Quota:  38",
     "course_start": "Lifelong Learning - Session 2",
-    "learning_activities": "Total Hours:\n100\n\n(\n\n Seminar/Tutorial Hours 49.5,\n\n\n\n\n\n\n\n\n\n\n Programme Level Learning and Teaching Hours 2,\n\nDirected Learning and Independent Learning Hours\n48 )",
+    "learning_activities": "Total Hours: 100 ( Seminar/Tutorial Hours 49.5, Programme Level Learning and Teaching Hours 2, Directed Learning and Independent Learning Hours 48 )",
     "assessment": {
       "written_exam_percent": 0,
       "coursework_percent": 100,
@@ -10806,7 +10806,7 @@
     "prohibited_combinations": "",
     "academic_year": "Quota:  60",
     "course_start": "Lifelong Learning - Session 1",
-    "learning_activities": "Total Hours:\n100\n\n(\n Lecture Hours 50,\n\n\n\n\n\n\n\n\n\n\n\n Programme Level Learning and Teaching Hours 2,\n\nDirected Learning and Independent Learning Hours\n48 )",
+    "learning_activities": "Total Hours: 100 ( Lecture Hours 50, Programme Level Learning and Teaching Hours 2, Directed Learning and Independent Learning Hours 48 )",
     "assessment": {
       "written_exam_percent": 0,
       "coursework_percent": 100,
@@ -10878,7 +10878,7 @@
     "prohibited_combinations": "",
     "academic_year": "Quota:  110",
     "course_start": "Full Year",
-    "learning_activities": "Total Hours:\n150\n\n(\n Lecture Hours 10,\n Seminar/Tutorial Hours 40,\n\n\n\n External Visit Hours 10,\n\n\n\n\n\n\n Programme Level Learning and Teaching Hours 3,\n\nDirected Learning and Independent Learning Hours\n87 )",
+    "learning_activities": "Total Hours: 150 ( Lecture Hours 10, Seminar/Tutorial Hours 40, External Visit Hours 10, Programme Level Learning and Teaching Hours 3, Directed Learning and Independent Learning Hours 87 )",
     "assessment": {
       "written_exam_percent": 0,
       "coursework_percent": 100,
@@ -11375,7 +11375,7 @@
     "high_demand": "Yes",
     "academic_year": "Quota:  10",
     "course_start": "Full Year",
-    "learning_activities": "Total Hours:\n100\n\n(\n\n\n\n\n\n\n\n\n\n\n\n\n Programme Level Learning and Teaching Hours 2,\n\nDirected Learning and Independent Learning Hours\n98 )",
+    "learning_activities": "Total Hours: 100 ( Programme Level Learning and Teaching Hours 2, Directed Learning and Independent Learning Hours 98 )",
     "assessment": {
       "written_exam_percent": 0,
       "coursework_percent": 100,
@@ -11480,7 +11480,7 @@
     "prohibited_combinations": "",
     "academic_year": "Quota:  None",
     "course_start": "Lifelong Learning - Session 3",
-    "learning_activities": "Total Hours:\n100\n\n(\n\n Seminar/Tutorial Hours 40,\n\n\n\n\n\n\n\n\n\n\n Programme Level Learning and Teaching Hours 2,\n\nDirected Learning and Independent Learning Hours\n58 )",
+    "learning_activities": "Total Hours: 100 ( Seminar/Tutorial Hours 40, Programme Level Learning and Teaching Hours 2, Directed Learning and Independent Learning Hours 58 )",
     "assessment": {
       "written_exam_percent": 0,
       "coursework_percent": 100,
@@ -11619,7 +11619,7 @@
     "prohibited_combinations": "",
     "academic_year": "Quota:  None",
     "course_start": "Lifelong Learning - Session 3",
-    "learning_activities": "Total Hours:\n100\n\n(\n Lecture Hours 32,\n\n\n\n\n\n\n\n\n\n\n\n Programme Level Learning and Teaching Hours 2,\n\nDirected Learning and Independent Learning Hours\n66 )",
+    "learning_activities": "Total Hours: 100 ( Lecture Hours 32, Programme Level Learning and Teaching Hours 2, Directed Learning and Independent Learning Hours 66 )",
     "assessment": {
       "written_exam_percent": 0,
       "coursework_percent": 100,
@@ -11809,7 +11809,7 @@
     "high_demand": "Yes",
     "academic_year": "Quota:  16",
     "course_start": "Semester 2",
-    "learning_activities": "Total Hours:\n200\n\n(\n\n\n\n\n\n\n\n\n\n\n\n\n Programme Level Learning and Teaching Hours 4,\n\nDirected Learning and Independent Learning Hours\n196 )",
+    "learning_activities": "Total Hours: 200 ( Programme Level Learning and Teaching Hours 4, Directed Learning and Independent Learning Hours 196 )",
     "assessment": {
       "written_exam_percent": 0,
       "coursework_percent": 100,
@@ -11850,7 +11850,7 @@
     "high_demand": "Yes",
     "academic_year": "Quota:  16",
     "course_start": "Semester 2",
-    "learning_activities": "Total Hours:\n200\n\n(\n\n\n\n\n\n\n\n\n\n\n\n\n Programme Level Learning and Teaching Hours 4,\n\nDirected Learning and Independent Learning Hours\n196 )",
+    "learning_activities": "Total Hours: 200 ( Programme Level Learning and Teaching Hours 4, Directed Learning and Independent Learning Hours 196 )",
     "assessment": {
       "written_exam_percent": 0,
       "coursework_percent": 100,
@@ -11891,7 +11891,7 @@
     "high_demand": "Yes",
     "academic_year": "Quota:  32",
     "course_start": "Semester 2",
-    "learning_activities": "Total Hours:\n200\n\n(\n Lecture Hours 44,\n\n\n\n\n\n\n\n\n\n\n\n Programme Level Learning and Teaching Hours 4,\n\nDirected Learning and Independent Learning Hours\n152 )",
+    "learning_activities": "Total Hours: 200 ( Lecture Hours 44, Programme Level Learning and Teaching Hours 4, Directed Learning and Independent Learning Hours 152 )",
     "assessment": {
       "written_exam_percent": 0,
       "coursework_percent": 100,
@@ -11986,7 +11986,7 @@
     "high_demand": "Yes",
     "academic_year": "Quota:  20",
     "course_start": "Semester 1",
-    "learning_activities": "Total Hours:\n200\n\n(\n\n\n\n\n\n\n\n\n\n\n\n\n Programme Level Learning and Teaching Hours 4,\n\nDirected Learning and Independent Learning Hours\n196 )",
+    "learning_activities": "Total Hours: 200 ( Programme Level Learning and Teaching Hours 4, Directed Learning and Independent Learning Hours 196 )",
     "assessment": {
       "written_exam_percent": 0,
       "coursework_percent": 100,
@@ -12054,7 +12054,7 @@
     "high_demand": "Yes",
     "academic_year": "Quota:  20",
     "course_start": "Semester 1",
-    "learning_activities": "Total Hours:\n200\n\n(\n\n\n\n\n\n\n\n\n\n\n\n\n Programme Level Learning and Teaching Hours 4,\n\nDirected Learning and Independent Learning Hours\n196 )",
+    "learning_activities": "Total Hours: 200 ( Programme Level Learning and Teaching Hours 4, Directed Learning and Independent Learning Hours 196 )",
     "assessment": {
       "written_exam_percent": 0,
       "coursework_percent": 100,
