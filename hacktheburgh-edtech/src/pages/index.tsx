@@ -5,6 +5,10 @@ import SearchBar from '../components/SearchBar';
 import CourseCard from '../components/CourseCard';
 import Pagination from '../components/Pagination';
 import Chatbot from '../components/Chatbot';
+import CompareTest from '@/components/CompareTest';
+import CompareOverlay from '@/components/CompareOverlay';
+import CompareButton from '@/components/CompareButton';
+import { useCompare } from '@/components/CompareContext';
 
 // Updated types to match the actual data structure
 type College = {
@@ -45,7 +49,7 @@ export default function Home() {
   const [selectedSchools, setSelectedSchools] = useState<string[]>([]);
   const [showCourseCards, setShowCourseCards] = useState(true);
   const [currentPage, setCurrentPage] = useState(1);
-  const coursesPerPage = 6;
+  const coursesPerPage = 12;
   
   // Courses state
   const [courses, setCourses] = useState<Course[]>([]);
@@ -67,6 +71,9 @@ export default function Home() {
   
   // Filter courses based on the active filters
   const [filteredCourses, setFilteredCourses] = useState<Course[]>([]);
+
+  // Add compare context
+  const { compareMode, selectedCards } = useCompare();
 
   useEffect(() => {
     const fetchData = async () => {
@@ -792,8 +799,12 @@ export default function Home() {
     // Scroll to top when changing pages
     window.scrollTo(0, 0);
     
-    // Dispatch a custom event to reset all course cards to collapsed state
-    document.dispatchEvent(new CustomEvent('resetCourseCards'));
+    // Only reset course cards if not in compare mode
+    // This prevents losing selected cards when navigating pages
+    if (!compareMode) {
+      // Dispatch a custom event to reset all course cards to collapsed state
+      document.dispatchEvent(new CustomEvent('resetCourseCards'));
+    }
   };
 
   return (
@@ -804,7 +815,10 @@ export default function Home() {
         <link rel="icon" href="/favicon.ico" />
       </Head>
 
-      <main className="max-w-7xl mx-auto py-12 px-4 sm:px-6 lg:px-8">
+      {/* CompareOverlay sits outside the main content so it doesn't get blurred */}
+      <CompareOverlay />
+
+      <main id="main-content" className="max-w-7xl mx-auto py-12 px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-12">
           <h1 className="text-4xl font-extrabold text-blue-900 sm:text-5xl sm:tracking-tight lg:text-6xl">
             University of Edinburgh Course Explorer
@@ -821,15 +835,20 @@ export default function Home() {
           currentFilters={activeFilters} 
         />
 
-        {/* View Toggle Button */}
-        <div className="flex justify-center mt-8 mb-4">
+        {/* View Toggle and Compare Button */}
+        <div className="flex justify-center mt-8 mb-4 space-x-4">
           <button 
             onClick={toggleView}
             className="px-4 py-2 bg-blue-700 text-white rounded-md hover:bg-blue-800 focus:outline-none focus:ring-2 focus:ring-blue-500"
           >
             {showCourseCards ? "View Colleges" : "View Course Cards"}
           </button>
+          
+          <CompareButton />
         </div>
+
+        {/* Testing component - remove in production */}
+        <CompareTest />
 
         {loading ? (
           <div className="flex justify-center">
@@ -849,15 +868,45 @@ export default function Home() {
             </div>
           </div>
         ) : showCourseCards ? (
-          // Course Cards Grid Layout with Pagination
-          <div className="mt-12">
-            <h2 className="text-2xl font-bold text-blue-900 mb-8">Filtered Courses ({filteredCourses.length})</h2>
+          // Course Grid */}
+          <div className="mt-8">
+            <div className="mb-4 flex flex-col sm:flex-row justify-between items-center">
+              <h2 className="text-xl font-semibold text-gray-800">
+                {filteredCourses.length === 0 
+                  ? 'No courses found' 
+                  : `Found ${filteredCourses.length} course${filteredCourses.length === 1 ? '' : 's'}`}
+              </h2>
+              
+              {filteredCourses.length > 0 && (
+                <p className="text-sm text-gray-600 mt-2 sm:mt-0">
+                  Showing {indexOfFirstCourse + 1} to {Math.min(indexOfLastCourse, filteredCourses.length)} of {filteredCourses.length} courses
+                </p>
+              )}
+            </div>
             
-            {currentCourses.length > 0 ? (
+            {/* Compare mode guidance message */}
+            {compareMode && (
+              <div className="bg-blue-50 border border-blue-200 rounded-md p-3 mb-4 text-blue-800">
+                <p>
+                  <span className="font-medium">Compare Mode Active:</span> You can select up to 2 courses to compare from any page. 
+                  Selected courses will stay selected as you navigate between pages.
+                  {selectedCards.length > 0 && (
+                    <span className="ml-2 font-medium">
+                      ({selectedCards.length}/2 courses selected)
+                      {selectedCards.length === 2 && (
+                        <span className="text-green-600"> Ready to compare!</span>
+                      )}
+                    </span>
+                  )}
+                </p>
+              </div>
+            )}
+            
+            {filteredCourses.length > 0 ? (
               <>
-                <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
-                  {currentCourses.map((course, index) => (
-                    <CourseCard key={index} course={course} />
+                <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+                  {currentCourses.map((course) => (
+                    <CourseCard key={course.code} course={course} />
                   ))}
                 </div>
                 
@@ -872,18 +921,32 @@ export default function Home() {
               <div className="text-center py-12">
                 <p className="text-gray-500 text-xl">No courses found matching your filters.</p>
                 <button 
-                  onClick={() => setActiveFilters({
-                    searchTerm: '',
-                    schools: [],
-                    subjects: [],
-                    creditLevels: [],
-                    credits: { min: '0', max: '120' },
-                    years: [],
-                    courseLevel: '',
-                    visitingStudents: false,
-                    deliveryMethod: '',
-                    showUnavailableCourses: false
-                  })} 
+                  onClick={() => {
+                    setActiveFilters({
+                      searchTerm: '',
+                      schools: [],
+                      subjects: [],
+                      creditLevels: [],
+                      credits: { min: '0', max: '120' },
+                      years: [],
+                      courseLevel: '',
+                      visitingStudents: false,
+                      deliveryMethod: '',
+                      showUnavailableCourses: false
+                    });
+                    handleFilterChange({
+                      searchTerm: '',
+                      schools: [],
+                      subjects: [],
+                      creditLevels: [],
+                      credits: { min: '0', max: '120' },
+                      years: [],
+                      courseLevel: '',
+                      visitingStudents: false,
+                      deliveryMethod: '',
+                      showUnavailableCourses: false
+                    });
+                  }} 
                   className="mt-4 px-4 py-2 bg-blue-600 text-white rounded-md hover:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-blue-500"
                 >
                   Clear Filters
@@ -945,6 +1008,9 @@ export default function Home() {
 
       {/* Add Chatbot component */}
       <Chatbot />
+
+      {/* Add CompareTest component */}
+      <CompareTest />
 
       <footer className="bg-blue-900 text-white py-8 mt-12">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">

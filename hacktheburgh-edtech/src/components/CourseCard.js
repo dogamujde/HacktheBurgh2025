@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import Link from 'next/link';
+import { useCompare } from './CompareContext';
 
 // Format the period value for use in the PATH.is URL
 const formatPeriodForURL = (period) => {
@@ -23,9 +24,40 @@ const getPathURL = (courseCode, availability, period) => {
 /**
  * CourseCard component displays a course in a card format with flip animation
  * @param {Object} course - The course object containing details
+ * @param {string} courseCode - The course code (alternative to providing full course object)
+ * @param {boolean} enableFlipping - Whether to enable flipping regardless of compare mode
+ * @param {boolean} inCompareOverlay - Whether the card is being displayed in the compare overlay
  */
-const CourseCard = ({ course }) => {
+const CourseCard = ({ course, courseCode: propCourseCode, enableFlipping, inCompareOverlay }) => {
   const [isFlipped, setIsFlipped] = useState(false);
+  const [courseData, setCourseData] = useState(course);
+  const [isLoading, setIsLoading] = useState(!course && propCourseCode);
+  // Import the compare context
+  const { compareMode, selectedCards, selectCard } = useCompare();
+
+  // If courseCode prop is provided but no course object, fetch the course data
+  useEffect(() => {
+    const fetchCourse = async () => {
+      if (propCourseCode && !course) {
+        setIsLoading(true);
+        try {
+          const response = await fetch(`/api/course?code=${propCourseCode}`);
+          if (response.ok) {
+            const data = await response.json();
+            setCourseData(data);
+          } else {
+            console.error('Failed to fetch course data');
+          }
+        } catch (error) {
+          console.error('Error fetching course:', error);
+        } finally {
+          setIsLoading(false);
+        }
+      }
+    };
+
+    fetchCourse();
+  }, [propCourseCode, course]);
 
   // Add event listener to reset card state when navigating between pages
   useEffect(() => {
@@ -36,35 +68,61 @@ const CourseCard = ({ course }) => {
     // Listen for the custom reset event
     document.addEventListener('resetCourseCards', resetCardState);
 
-    // Clean up the event listener when the component unmounts
+    // Clean up on unmount
     return () => {
       document.removeEventListener('resetCourseCards', resetCardState);
     };
   }, []);
 
-  // Handle potential null or undefined course
-  if (!course) {
+  // Extract course details
+  const courseCode = propCourseCode || (courseData?.code || '');
+  const courseTitle = courseData?.name || courseData?.course_name || '';
+  const courseDescription = courseData?.course_description || courseData?.summary || '';
+  const courseCredits = courseData?.credits || '';
+  const courseLevel = courseData?.level || '';
+  const deliveryPeriod = courseData?.period || '';
+  const schoolName = courseData?.school || courseData?.school_name || '';
+  const coursePeriod = courseData?.period || courseData?.delivery_period || 'Unknown period';
+  
+  // Check if the card is selected for comparison
+  const isSelected = compareMode && selectedCards.includes(courseCode);
+  
+  // Render loading state
+  if (isLoading) {
     return (
-      <div className="bg-white rounded-lg shadow-md p-4 h-64 flex items-center justify-center">
-        <p className="text-gray-500">Course information unavailable</p>
+      <div className="card-container" style={{ height: '320px', border: '1px solid #e5e7eb' }}>
+        <div className="w-full h-full flex items-center justify-center">
+          <div className="animate-pulse flex flex-col items-center space-y-4 w-full p-4">
+            <div className="h-6 bg-gray-200 rounded w-3/4"></div>
+            <div className="h-4 bg-gray-200 rounded w-1/2"></div>
+            <div className="space-y-2 w-full">
+              <div className="h-4 bg-gray-200 rounded w-full"></div>
+              <div className="h-4 bg-gray-200 rounded w-5/6"></div>
+              <div className="h-4 bg-gray-200 rounded w-4/6"></div>
+            </div>
+          </div>
+        </div>
       </div>
     );
   }
 
-  // Normalize course properties to handle inconsistencies in data structure
-  const courseCode = course.code || '';
-  const courseTitle = course.title || course.name || 'Untitled Course';
-  const courseDescription = course.course_description || course.description || '';
-  const courseCredits = course.credits || 'N/A';
-  const coursePeriod = course.period || course.semester || '';
-  const courseAvailability = course.availability || 'SV1';
-  
+  // Handle case where data isn't available
+  if (!courseData && !isLoading) {
+    return (
+      <div className="card-container" style={{ height: '320px', border: '1px solid #e5e7eb' }}>
+        <div className="w-full h-full flex items-center justify-center p-4">
+          <p className="text-gray-500 text-center">Course information not available</p>
+        </div>
+      </div>
+    );
+  }
+
   // Check for bullet points in either format (new format 'bulletpoints' or old format 'bullet_points')
-  const hasBulletPoints = (course.bulletpoints && course.bulletpoints.trim().length > 0) || 
-                          (course.bullet_points && course.bullet_points.trim().length > 0);
+  const hasBulletPoints = (courseData?.bulletpoints && courseData.bulletpoints.trim().length > 0) || 
+                          (courseData?.bullet_points && courseData.bullet_points.trim().length > 0);
   
   // Get the actual bullet points content
-  const bulletPointsContent = course.bulletpoints || course.bullet_points || '';
+  const bulletPointsContent = courseData?.bulletpoints || courseData?.bullet_points || '';
   
   // Parse bullet points from string to array
   const bulletPointsArray = bulletPointsContent ? 
@@ -76,7 +134,7 @@ const CourseCard = ({ course }) => {
     : 'No description available';
 
   // Determine the course level from credit_level or other properties
-  const fullLevelInfo = course.credit_level || course.level || course.scqf_level || '';
+  const fullLevelInfo = courseData?.credit_level || courseData?.level || courseData?.scqf_level || '';
   
   // Extract just the level number if possible
   let displayLevel = 'N/A';
@@ -102,371 +160,85 @@ const CourseCard = ({ course }) => {
   }
 
   // Check if course is online
-  const isOnline = course.delivery_method?.toLowerCase().includes('online') || 
-                  course.period?.toLowerCase().includes('online') ||
-                  course.summary?.toLowerCase().includes('online') ||
-                  course.course_description?.toLowerCase().includes('online delivery');
+  const isOnline = courseData?.delivery_method?.toLowerCase().includes('online') || 
+                  courseData?.period?.toLowerCase().includes('online') ||
+                  courseData?.summary?.toLowerCase().includes('online') ||
+                  courseData?.course_description?.toLowerCase().includes('online delivery');
 
-  // Handle card flip
+  // Modified handle card click to account for compare mode
   const handleCardClick = (e) => {
     // Prevent navigation when clicking the card
     e.preventDefault();
-    setIsFlipped(!isFlipped);
+    
+    // When in the CompareOverlay, only flip behavior is allowed
+    if (inCompareOverlay) {
+      setIsFlipped(!isFlipped);
+      return;
+    }
+    
+    // Check if we're in compare mode but not in the overlay
+    if (compareMode) {
+      // If card is already selected for comparison, allow flipping
+      if (selectedCards.includes(courseCode)) {
+        setIsFlipped(!isFlipped);
+      } else {
+        // If card is not selected, select it for comparison (no flipping)
+        selectCard(courseCode);
+      }
+    } else {
+      // Normal mode - respect the enableFlipping prop
+      // We should still check enableFlipping as it might be used for other purposes
+      if (enableFlipping) {
+        setIsFlipped(!isFlipped);
+      }
+    }
   };
 
-  // Generate activity data from actual course data
+  // Extracts activity data (lecture hours, tutorial hours, etc.) from the course
   const extractActivityData = () => {
-    // Debug: Log course code for tracking
-    console.log(`Extracting activities for course: ${courseCode}`);
-    
-    // Try to find activity data in multiple possible locations in the course object
     const activities = {
-      lectures: 0,
-      tutorials: 0,
-      lab: 0,
-      independent: 0
+      lectureHours: 0,
+      tutorialHours: 0,
+      labHours: 0,
+      independentHours: 0
     };
-    
-    // First check if we have a "learning_activities" field and parse it
-    if (course.learning_activities) {
-      console.log(`Found learning_activities for ${courseCode}:`, course.learning_activities);
-      try {
-        // If learning_activities is a string, try to parse it as JSON
-        let activitiesData = course.learning_activities;
-        if (typeof activitiesData === 'string') {
-          // Try to parse the string as JSON
-          try {
-            activitiesData = JSON.parse(activitiesData);
-            console.log(`Successfully parsed JSON for ${courseCode}:`, activitiesData);
-          } catch (e) {
-            console.log(`Not valid JSON for ${courseCode}, trying regex extraction`);
-            // If it's not valid JSON, check if it's a string with hours information
-            // Enhanced regex patterns to catch more variations
-            const lectureMatch = activitiesData.match(/(?:lecture|lectures|teaching|class)[s]?\s*(?:hours|time)?[:=\s-]+\s*(\d+)/i);
-            const tutorialMatch = activitiesData.match(/(?:tutorial|tutorials|seminar|seminars|workshop|workshops)[s]?\s*(?:hours|time)?[:=\s-]+\s*(\d+)/i);
-            const labMatch = activitiesData.match(/(?:lab|labs|practical|practicals|fieldwork)[s]?\s*(?:hours|time)?[:=\s-]+\s*(\d+)/i);
-            
-            // Expanded regex for independent learning to catch "Directed Learning and Independent Learning Hours" variations
-            const independentMatch = activitiesData.match(/(?:independent|self[\s-_]study|private|personal|unsupervised|directed(?:\s+learning)?(?:\s+and\s+independent(?:\s+learning)?)?)[s]?\s*(?:hours|time|work|learning)?[:=\s-]+\s*(\d+)/i);
-            
-            // Also check for total hours in case we need to calculate percentages
-            const totalHoursMatch = activitiesData.match(/(?:total\s+hours)[:=\s-]+\s*(\d+)/i);
-            
-            console.log(`Regex matches for ${courseCode}:`, {
-              lectureMatch, tutorialMatch, labMatch, independentMatch, totalHoursMatch
-            });
-            
-            if (lectureMatch) activities.lectures = parseInt(lectureMatch[1]);
-            if (tutorialMatch) activities.tutorials = parseInt(tutorialMatch[1]);
-            if (labMatch) activities.lab = parseInt(labMatch[1]);
-            if (independentMatch) activities.independent = parseInt(independentMatch[1]);
-            
-            // If we have a total hours specified and independent study isn't found,
-            // we can try to calculate it based on the difference
-            if (totalHoursMatch && activities.independent === 0) {
-              const totalFromText = parseInt(totalHoursMatch[1]);
-              const sumOfOthers = activities.lectures + activities.tutorials + activities.lab;
-              
-              if (totalFromText > sumOfOthers) {
-                activities.independent = totalFromText - sumOfOthers;
-                console.log(`Calculated independent hours for ${courseCode} from total: ${activities.independent}`);
-              }
-            }
-          }
+
+    // Check multiple paths to find activities
+    try {
+      // First try learning_activities from DRPS
+      if (courseData?.learning_activities) {
+        // Different formats of learning_activities
+        if (typeof courseData.learning_activities === 'string') {
+          // Parse string format
+          const lectureMatch = courseData.learning_activities.match(/Lecture:\s*(\d+(?:\.\d+)?)\s*hours/i);
+          const tutorialMatch = courseData.learning_activities.match(/Tutorial:\s*(\d+(?:\.\d+)?)\s*hours/i);
+          const labMatch = courseData.learning_activities.match(/Laboratory:\s*(\d+(?:\.\d+)?)\s*hours/i);
+          const independentMatch = courseData.learning_activities.match(/Independent Study:\s*(\d+(?:\.\d+)?)\s*hours/i);
+          
+          activities.lectureHours = lectureMatch ? parseFloat(lectureMatch[1]) : 0;
+          activities.tutorialHours = tutorialMatch ? parseFloat(tutorialMatch[1]) : 0;
+          activities.labHours = labMatch ? parseFloat(labMatch[1]) : 0;
+          activities.independentHours = independentMatch ? parseFloat(independentMatch[1]) : 0;
+        } else if (typeof courseData.learning_activities === 'object') {
+          // Parse object format
+          activities.lectureHours = parseFloat(courseData.learning_activities.lecture_hours || 0);
+          activities.tutorialHours = parseFloat(courseData.learning_activities.tutorial_hours || 0);
+          activities.labHours = parseFloat(courseData.learning_activities.lab_hours || 0);
+          activities.independentHours = parseFloat(courseData.learning_activities.independent_study_hours || 0);
         }
-        
-        // If we have parsed JSON or object, extract the values
-        if (typeof activitiesData === 'object' && activitiesData !== null) {
-          // Map different terms to our activity categories
-          const lectureTerms = ['lectures', 'lecture', 'lecture_hours', 'lectureHours', 
-                               'scheduled_lecture', 'lecture_scheduled', 'teaching', 'classes',
-                               'class_hours', 'classHours', 'teaching_hours', 'teachingHours'];
-          
-          const tutorialTerms = ['tutorials', 'tutorial', 'tutorial_hours', 'tutorialHours', 
-                                'scheduled_tutorial', 'tutorial_scheduled', 'seminars', 'seminar',
-                                'workshop', 'workshops', 'seminar_hours', 'seminarHours',
-                                'workshop_hours', 'workshopHours'];
-          
-          const labTerms = ['lab', 'practical', 'lab_hours', 'practical_hours', 
-                          'labHours', 'practicalHours', 'scheduled_lab', 'lab_scheduled',
-                          'scheduled_practical', 'practical_scheduled', 'fieldwork',
-                          'fieldwork_hours', 'fieldworkHours'];
-          
-          const independentTerms = ['independent', 'self_study', 'independent_hours', 'independentHours',
-                                   'self_study_hours', 'selfStudyHours', 'unscheduled', 'unsupervised',
-                                   'private_study', 'personal_study', 'privateStudy', 'personalStudy',
-                                   'directed_learning_and_independent_learning', 'directed_learning',
-                                   'directed_learning_hours', 'directedLearningHours'];
-          
-          // Look for lecture-type activities
-          for (const term of lectureTerms) {
-            if (activitiesData[term] !== undefined && !isNaN(parseInt(activitiesData[term]))) {
-              activities.lectures = parseInt(activitiesData[term]);
-              console.log(`Found lecture hours for ${courseCode} using term '${term}': ${activities.lectures}`);
-              break;
-            }
-          }
-          
-          // Look for tutorial-type activities
-          for (const term of tutorialTerms) {
-            if (activitiesData[term] !== undefined && !isNaN(parseInt(activitiesData[term]))) {
-              activities.tutorials = parseInt(activitiesData[term]);
-              console.log(`Found tutorial hours for ${courseCode} using term '${term}': ${activities.tutorials}`);
-              break;
-            }
-          }
-          
-          // Look for lab-type activities
-          for (const term of labTerms) {
-            if (activitiesData[term] !== undefined && !isNaN(parseInt(activitiesData[term]))) {
-              activities.lab = parseInt(activitiesData[term]);
-              console.log(`Found lab hours for ${courseCode} using term '${term}': ${activities.lab}`);
-              break;
-            }
-          }
-          
-          // Look for independent-type activities
-          for (const term of independentTerms) {
-            if (activitiesData[term] !== undefined && !isNaN(parseInt(activitiesData[term]))) {
-              activities.independent = parseInt(activitiesData[term]);
-              console.log(`Found independent hours for ${courseCode} using term '${term}': ${activities.independent}`);
-              break;
-            }
-          }
-          
-          // Also check for nested structures
-          const checkNestedObject = (obj, path, category) => {
-            const parts = path.split('.');
-            let current = obj;
-            
-            for (const part of parts) {
-              if (current[part] === undefined) return false;
-              current = current[part];
-            }
-            
-            if (!isNaN(parseInt(current))) {
-              activities[category] = parseInt(current);
-              console.log(`Found ${category} hours for ${courseCode} from nested path '${path}': ${activities[category]}`);
-              return true;
-            }
-            return false;
-          };
-          
-          // Check nested paths if we haven't found values yet
-          if (activities.lectures === 0) {
-            checkNestedObject(activitiesData, 'scheduled.lecture', 'lectures') || 
-            checkNestedObject(activitiesData, 'hours.lecture', 'lectures') ||
-            checkNestedObject(activitiesData, 'scheduled.teaching', 'lectures') ||
-            checkNestedObject(activitiesData, 'hours.teaching', 'lectures');
-          }
-          
-          if (activities.tutorials === 0) {
-            checkNestedObject(activitiesData, 'scheduled.tutorial', 'tutorials') || 
-            checkNestedObject(activitiesData, 'hours.tutorial', 'tutorials') ||
-            checkNestedObject(activitiesData, 'scheduled.seminar', 'tutorials') ||
-            checkNestedObject(activitiesData, 'hours.seminar', 'tutorials') ||
-            checkNestedObject(activitiesData, 'scheduled.workshop', 'tutorials') ||
-            checkNestedObject(activitiesData, 'hours.workshop', 'tutorials');
-          }
-          
-          if (activities.lab === 0) {
-            checkNestedObject(activitiesData, 'scheduled.lab', 'lab') || 
-            checkNestedObject(activitiesData, 'hours.lab', 'lab') ||
-            checkNestedObject(activitiesData, 'scheduled.practical', 'lab') ||
-            checkNestedObject(activitiesData, 'hours.practical', 'lab');
-          }
-          
-          if (activities.independent === 0) {
-            checkNestedObject(activitiesData, 'hours.independent', 'independent') || 
-            checkNestedObject(activitiesData, 'hours.self_study', 'independent');
-          }
-        }
-      } catch (error) {
-        // If any error occurs during parsing, we'll fall back to other methods
-        console.error(`Error parsing learning_activities for ${courseCode}:`, error);
+      } 
+      // Fallback to individual properties
+      else {
+        activities.lectureHours = parseFloat(courseData?.lecture_hours || 0);
+        activities.tutorialHours = parseFloat(courseData?.tutorial_hours || 0);
+        activities.labHours = parseFloat(courseData?.lab_hours || 0);
+        activities.independentHours = parseFloat(courseData?.independent_study_hours || 0);
       }
+    } catch (error) {
+      console.error('Error parsing learning activities:', error);
     }
-    
-    // If learning_activities didn't have data, try traditional methods as fallback
-    // For lectures
-    if (activities.lectures === 0) {
-      if (course.lecture_hours !== undefined) {
-        activities.lectures = parseInt(course.lecture_hours) || 0;
-        console.log(`Found lecture hours for ${courseCode} from lecture_hours: ${activities.lectures}`);
-      } else if (course.scheduled_hours?.lecture !== undefined) {
-        activities.lectures = parseInt(course.scheduled_hours.lecture) || 0;
-        console.log(`Found lecture hours for ${courseCode} from scheduled_hours.lecture: ${activities.lectures}`);
-      } else if (course.activities?.lectures !== undefined) {
-        activities.lectures = parseInt(course.activities.lectures) || 0;
-        console.log(`Found lecture hours for ${courseCode} from activities.lectures: ${activities.lectures}`);
-      } else if (course.hours?.lecture !== undefined) {
-        activities.lectures = parseInt(course.hours.lecture) || 0;
-        console.log(`Found lecture hours for ${courseCode} from hours.lecture: ${activities.lectures}`);
-      } else if (course.teaching_hours !== undefined) {
-        activities.lectures = parseInt(course.teaching_hours) || 0;
-        console.log(`Found lecture hours for ${courseCode} from teaching_hours: ${activities.lectures}`);
-      } else if (course.class_hours !== undefined) {
-        activities.lectures = parseInt(course.class_hours) || 0;
-        console.log(`Found lecture hours for ${courseCode} from class_hours: ${activities.lectures}`);
-      }
-    }
-    
-    // For tutorials
-    if (activities.tutorials === 0) {
-      if (course.tutorial_hours !== undefined) {
-        activities.tutorials = parseInt(course.tutorial_hours) || 0;
-        console.log(`Found tutorial hours for ${courseCode} from tutorial_hours: ${activities.tutorials}`);
-      } else if (course.scheduled_hours?.tutorial !== undefined) {
-        activities.tutorials = parseInt(course.scheduled_hours.tutorial) || 0;
-        console.log(`Found tutorial hours for ${courseCode} from scheduled_hours.tutorial: ${activities.tutorials}`);
-      } else if (course.activities?.tutorials !== undefined) {
-        activities.tutorials = parseInt(course.activities.tutorials) || 0;
-        console.log(`Found tutorial hours for ${courseCode} from activities.tutorials: ${activities.tutorials}`);
-      } else if (course.hours?.tutorial !== undefined) {
-        activities.tutorials = parseInt(course.hours.tutorial) || 0;
-        console.log(`Found tutorial hours for ${courseCode} from hours.tutorial: ${activities.tutorials}`);
-      } else if (course.seminar_hours !== undefined) {
-        activities.tutorials = parseInt(course.seminar_hours) || 0;
-        console.log(`Found tutorial hours for ${courseCode} from seminar_hours: ${activities.tutorials}`);
-      } else if (course.workshop_hours !== undefined) {
-        activities.tutorials = parseInt(course.workshop_hours) || 0;
-        console.log(`Found tutorial hours for ${courseCode} from workshop_hours: ${activities.tutorials}`);
-      }
-    }
-    
-    // For labs/practicals
-    if (activities.lab === 0) {
-      if (course.practical_hours !== undefined) {
-        activities.lab = parseInt(course.practical_hours) || 0;
-        console.log(`Found lab hours for ${courseCode} from practical_hours: ${activities.lab}`);
-      } else if (course.lab_hours !== undefined) {
-        activities.lab = parseInt(course.lab_hours) || 0;
-        console.log(`Found lab hours for ${courseCode} from lab_hours: ${activities.lab}`);
-      } else if (course.scheduled_hours?.practical !== undefined) {
-        activities.lab = parseInt(course.scheduled_hours.practical) || 0;
-        console.log(`Found lab hours for ${courseCode} from scheduled_hours.practical: ${activities.lab}`);
-      } else if (course.scheduled_hours?.lab !== undefined) {
-        activities.lab = parseInt(course.scheduled_hours.lab) || 0;
-        console.log(`Found lab hours for ${courseCode} from scheduled_hours.lab: ${activities.lab}`);
-      } else if (course.activities?.lab !== undefined) {
-        activities.lab = parseInt(course.activities.lab) || 0;
-        console.log(`Found lab hours for ${courseCode} from activities.lab: ${activities.lab}`);
-      } else if (course.activities?.practical !== undefined) {
-        activities.lab = parseInt(course.activities.practical) || 0;
-        console.log(`Found lab hours for ${courseCode} from activities.practical: ${activities.lab}`);
-      } else if (course.hours?.lab !== undefined) {
-        activities.lab = parseInt(course.hours.lab) || 0;
-        console.log(`Found lab hours for ${courseCode} from hours.lab: ${activities.lab}`);
-      } else if (course.hours?.practical !== undefined) {
-        activities.lab = parseInt(course.hours.practical) || 0;
-        console.log(`Found lab hours for ${courseCode} from hours.practical: ${activities.lab}`);
-      } else if (course.fieldwork_hours !== undefined) {
-        activities.lab = parseInt(course.fieldwork_hours) || 0;
-        console.log(`Found lab hours for ${courseCode} from fieldwork_hours: ${activities.lab}`);
-      }
-    }
-    
-    // For independent study
-    if (activities.independent === 0) {
-      if (course.independent_hours !== undefined) {
-        activities.independent = parseInt(course.independent_hours) || 0;
-        console.log(`Found independent hours for ${courseCode} from independent_hours: ${activities.independent}`);
-      } else if (course.self_study_hours !== undefined) {
-        activities.independent = parseInt(course.self_study_hours) || 0;
-        console.log(`Found independent hours for ${courseCode} from self_study_hours: ${activities.independent}`);
-      } else if (course.scheduled_hours?.independent !== undefined) {
-        activities.independent = parseInt(course.scheduled_hours.independent) || 0;
-        console.log(`Found independent hours for ${courseCode} from scheduled_hours.independent: ${activities.independent}`);
-      } else if (course.scheduled_hours?.self_study !== undefined) {
-        activities.independent = parseInt(course.scheduled_hours.self_study) || 0;
-        console.log(`Found independent hours for ${courseCode} from scheduled_hours.self_study: ${activities.independent}`);
-      } else if (course.activities?.independent !== undefined) {
-        activities.independent = parseInt(course.activities.independent) || 0;
-        console.log(`Found independent hours for ${courseCode} from activities.independent: ${activities.independent}`);
-      } else if (course.activities?.self_study !== undefined) {
-        activities.independent = parseInt(course.activities.self_study) || 0;
-        console.log(`Found independent hours for ${courseCode} from activities.self_study: ${activities.independent}`);
-      } else if (course.hours?.independent !== undefined) {
-        activities.independent = parseInt(course.hours.independent) || 0;
-        console.log(`Found independent hours for ${courseCode} from hours.independent: ${activities.independent}`);
-      } else if (course.hours?.self_study !== undefined) {
-        activities.independent = parseInt(course.hours.self_study) || 0;
-        console.log(`Found independent hours for ${courseCode} from hours.self_study: ${activities.independent}`);
-      } else if (course.private_study_hours !== undefined) {
-        activities.independent = parseInt(course.private_study_hours) || 0;
-        console.log(`Found independent hours for ${courseCode} from private_study_hours: ${activities.independent}`);
-      } else if (course.personal_study_hours !== undefined) {
-        activities.independent = parseInt(course.personal_study_hours) || 0;
-        console.log(`Found independent hours for ${courseCode} from personal_study_hours: ${activities.independent}`);
-      }
-    }
-    
-    // Calculate total hours
-    const totalHours = activities.lectures + activities.tutorials + activities.lab + activities.independent;
-    console.log(`Total hours for ${courseCode}: ${totalHours}`, activities);
-    
-    // If we have no data or total is 0, use some reasonable defaults based on credit value
-    if (totalHours === 0) {
-      // Estimate based on credits (10 hours per credit is standard)
-      const credits = parseInt(courseCredits) || 20;
-      const estimatedTotal = credits * 10;
-      
-      console.log(`No activity data found for ${courseCode}. Using defaults based on ${credits} credits (${estimatedTotal} hours total)`);
-      
-      // Split using typical ratios for university courses
-      const percentages = {
-        lectures: 20, // 20% lectures
-        tutorials: 10, // 10% tutorials
-        lab: 5, // 5% lab work
-        independent: 65 // 65% independent study
-      };
-      
-      console.log(`Default percentages for ${courseCode}:`, percentages);
-      return percentages;
-    }
-    
-    // Convert hours to percentages - use more precise calculations first
-    const rawPercentages = {
-      lectures: (activities.lectures / totalHours) * 100,
-      tutorials: (activities.tutorials / totalHours) * 100,
-      lab: (activities.lab / totalHours) * 100,
-      independent: (activities.independent / totalHours) * 100
-    };
-    
-    // Then round them while keeping track of the rounding errors
-    let percentages = {
-      lectures: Math.round(rawPercentages.lectures),
-      tutorials: Math.round(rawPercentages.tutorials),
-      lab: Math.round(rawPercentages.lab),
-      independent: Math.round(rawPercentages.independent)
-    };
-    
-    // Ensure percentages add up to exactly 100%
-    const totalPercentage = percentages.lectures + percentages.tutorials + percentages.lab + percentages.independent;
-    
-    if (totalPercentage !== 100) {
-      console.log(`Adjusting percentages for ${courseCode}: total was ${totalPercentage}%`);
-      
-      // Find the largest value to adjust (based on raw percentages to preserve proportions)
-      const largestKey = Object.keys(rawPercentages).reduce((a, b) => 
-        rawPercentages[a] > rawPercentages[b] ? a : b
-      );
-      
-      // Adjust the largest value to make total 100%
-      percentages[largestKey] += (100 - totalPercentage);
-      console.log(`Adjusted ${largestKey} by ${100 - totalPercentage} to make total 100%`);
-    }
-    
-    // Final validation - just to be absolutely certain we have 100%
-    const finalTotal = percentages.lectures + percentages.tutorials + percentages.lab + percentages.independent;
-    if (finalTotal !== 100) {
-      console.error(`Error: Percentages for ${courseCode} still don't add up to 100% (${finalTotal}%)`);
-      // Force correction on independent study as a last resort
-      percentages.independent += (100 - finalTotal);
-    }
-    
-    console.log(`Final percentages for ${courseCode}:`, percentages);
-    return percentages;
+
+    return activities;
   };
 
   // Get activity data for THIS SPECIFIC COURSE instance - ensures unique graph per course
@@ -481,65 +253,65 @@ const CourseCard = ({ course }) => {
   };
 
   // Check different possible assessment data sources, prioritizing assesment_formatted
-  if (course.assesment_formatted) {
+  if (courseData?.assesment_formatted) {
     // Parse from formatted assessment string with one 's'
-    const examMatch = course.assesment_formatted.match(/Written Exam (\d+) %/);
-    const courseworkMatch = course.assesment_formatted.match(/Coursework (\d+) %/);
-    const practicalMatch = course.assesment_formatted.match(/Practical Exam (\d+) %/);
+    const examMatch = courseData.assesment_formatted.match(/Written Exam (\d+) %/);
+    const courseworkMatch = courseData.assesment_formatted.match(/Coursework (\d+) %/);
+    const practicalMatch = courseData.assesment_formatted.match(/Practical Exam (\d+) %/);
     
     assessmentInfo = {
       written_exam_percent: examMatch ? parseInt(examMatch[1]) : 0,
       coursework_percent: courseworkMatch ? parseInt(courseworkMatch[1]) : 0,
       practical_exam_percent: practicalMatch ? parseInt(practicalMatch[1]) : 0,
-      full_text: course.assesment_formatted
+      full_text: courseData.assesment_formatted
     };
-  } else if (course.assessment_formatted) {
+  } else if (courseData?.assessment_formatted) {
     // Try parse from formatted assessment string with two 's'
-    const examMatch = course.assessment_formatted.match(/Written Exam (\d+) %/);
-    const courseworkMatch = course.assessment_formatted.match(/Coursework (\d+) %/);
-    const practicalMatch = course.assessment_formatted.match(/Practical Exam (\d+) %/);
+    const examMatch = courseData.assessment_formatted.match(/Written Exam (\d+) %/);
+    const courseworkMatch = courseData.assessment_formatted.match(/Coursework (\d+) %/);
+    const practicalMatch = courseData.assessment_formatted.match(/Practical Exam (\d+) %/);
     
     assessmentInfo = {
       written_exam_percent: examMatch ? parseInt(examMatch[1]) : 0,
       coursework_percent: courseworkMatch ? parseInt(courseworkMatch[1]) : 0,
       practical_exam_percent: practicalMatch ? parseInt(practicalMatch[1]) : 0,
-      full_text: course.assessment_formatted
+      full_text: courseData.assessment_formatted
     };
-  } else if (course.assesment && typeof course.assesment === 'object') {
+  } else if (courseData?.assesment && typeof courseData.assesment === 'object') {
     // Standard format from scraper with one 's' (assesment)
-    if (course.assesment.full_text) {
+    if (courseData.assesment.full_text) {
       // Access nested full_text if available
       assessmentInfo = {
         ...assessmentInfo,
-        ...course.assesment,
-        full_text: course.assesment.full_text
+        ...courseData.assesment,
+        full_text: courseData.assesment.full_text
       };
     } else {
-      assessmentInfo = course.assesment;
+      assessmentInfo = courseData.assesment;
     }
-  } else if (course.assessment && typeof course.assessment === 'object') {
+  } else if (courseData?.assessment && typeof courseData.assessment === 'object') {
     // Try with two 's' (assessment) as fallback
-    if (course.assessment.full_text) {
+    if (courseData.assessment.full_text) {
       // Access nested full_text if available
       assessmentInfo = {
         ...assessmentInfo,
-        ...course.assessment,
-        full_text: course.assessment.full_text
+        ...courseData.assessment,
+        full_text: courseData.assessment.full_text
       };
     } else {
-      assessmentInfo = course.assessment;
+      assessmentInfo = courseData.assessment;
     }
-  } else if (typeof course.assesment === 'string') {
+  } else if (typeof courseData.assesment === 'string') {
     // If assesment (one 's') is a string, use it as full_text
-    assessmentInfo.full_text = course.assesment;
-  } else if (typeof course.assessment === 'string') {
+    assessmentInfo.full_text = courseData.assesment;
+  } else if (typeof courseData.assessment === 'string') {
     // If assessment (two 's') is a string, use it as full_text
-    assessmentInfo.full_text = course.assessment;
+    assessmentInfo.full_text = courseData.assessment;
   }
 
   // If we have additional assessment info fields, use those as well
-  if (course.additional_assessment_info) {
-    assessmentInfo.full_text += " " + course.additional_assessment_info;
+  if (courseData?.additional_assessment_info) {
+    assessmentInfo.full_text += " " + courseData.additional_assessment_info;
   }
 
   // Special case: If all assessment values are zero, set appropriate message
@@ -618,13 +390,29 @@ const CourseCard = ({ course }) => {
 
   return (
     <div 
-      className={`card-container ${isFlipped ? 'flipped' : ''}`}
-      style={{ height: '320px' }}
+      className={`card-container ${isFlipped ? 'flipped' : ''} 
+                 ${compareMode ? 'compare-mode' : ''} 
+                 ${isSelected ? 'selected-for-compare' : ''}`}
+      style={{ 
+        height: '320px',
+        border: isSelected ? '2px solid #3b82f6' : '1px solid #e5e7eb',
+        boxShadow: isSelected ? '0 0 0 4px rgba(59, 130, 246, 0.2)' : ''
+      }}
       onClick={handleCardClick}
     >
       <div className="card-flipper">
         {/* Front Side */}
         <div className="card-front p-5 flex flex-col justify-between">
+          {/* Compare Mode Indicator - Only show when in compare mode */}
+          {compareMode && (
+            <div className="absolute top-2 right-2 z-10">
+              <div className={`w-5 h-5 rounded-full flex items-center justify-center 
+                              ${isSelected ? 'bg-blue-500 text-white' : 'bg-gray-200'}`}>
+                {isSelected ? '✓' : '+'}
+              </div>
+            </div>
+          )}
+          
           <div>
             {/* Course Title and Code */}
             <h3 className="text-xl font-bold text-blue-900 mb-1">
@@ -662,9 +450,11 @@ const CourseCard = ({ course }) => {
               {displayYear && ` • Year ${displayYear}`}
             </span>
             
-            {/* Call to action text */}
+            {/* Call to action text - different based on mode */}
             <span className="text-blue-600 text-sm hover:text-blue-800">
-              Click to see more →
+              {compareMode 
+                ? (isSelected ? 'Selected for compare' : 'Click to select') 
+                : 'Click to see more →'}
             </span>
           </div>
         </div>
@@ -742,9 +532,9 @@ const CourseCard = ({ course }) => {
               ) : (
                 <p className="text-sm text-gray-700">
                   {/* Try other possible assessment fields */}
-                  {course.assessment_details || course.assessment_method || course.assesment_details || 
-                   (course.assessment_formatted && course.assessment_formatted !== "Assessment (Further Info) Written Exam 0 %, Coursework 0 %, Practical Exam 0 %") ? 
-                    (course.assessment_details || course.assessment_method || course.assesment_details || course.assessment_formatted) : 
+                  {courseData?.assessment_details || courseData?.assessment_method || courseData?.assesment_details || 
+                   (courseData?.assessment_formatted && courseData?.assessment_formatted !== "Assessment (Further Info) Written Exam 0 %, Coursework 0 %, Practical Exam 0 %") ? 
+                    (courseData?.assessment_details || courseData?.assessment_method || courseData?.assesment_details || courseData?.assessment_formatted) : 
                     "Assessment information not provided by DRPS"}
                 </p>
               )}
@@ -758,15 +548,15 @@ const CourseCard = ({ course }) => {
             )}
             
             {/* Requirements - only show if there's actual content */}
-            {course.pre_requisites && (
+            {courseData?.pre_requisites && (
               <div className="mb-2">
                 <h4 className="text-md font-semibold mb-1">Prerequisites:</h4>
                 <p className="text-xs text-gray-700">
-                  {course.pre_requisites.trim() === "" ? 
+                  {courseData.pre_requisites.trim() === "" ? 
                     "None" : 
-                    course.pre_requisites.trim().startsWith("Students MUST have passed") ? 
-                      course.pre_requisites : 
-                      `Students MUST have passed: ${course.pre_requisites}`}
+                    courseData.pre_requisites.trim().startsWith("Students MUST have passed") ? 
+                      courseData.pre_requisites : 
+                      `Students MUST have passed: ${courseData.pre_requisites}`}
                 </p>
               </div>
             )}
@@ -819,7 +609,7 @@ const CourseCard = ({ course }) => {
       {/* Add proper Link for navigation separate from flip behavior */}
       <div className="mt-2 text-center">
         <a 
-          href={getPathURL(courseCode, courseAvailability, coursePeriod)}
+          href={getPathURL(courseCode, courseData?.availability, courseData?.period)}
           target="_blank"
           rel="noopener noreferrer"
           className="text-blue-600 text-xs hover:text-blue-800 hover:underline flex items-center justify-center"

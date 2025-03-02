@@ -108,4 +108,21 @@ a {
 .card-container:active {
   transform: scale(0.98);
   transition: transform 0.2s ease;
+}
+
+/* Blur effect for comparison overlay */
+.blur-background {
+  filter: blur(4px);
+  transition: filter 0.3s ease;
+  pointer-events: none;
+}
+
+/* Compare mode styles */
+.compare-mode {
+  transition: all 0.3s ease;
+}
+
+.selected-for-compare {
+  position: relative;
+  z-index: 10;
 } 
