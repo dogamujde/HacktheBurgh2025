@@ -8,10 +8,13 @@
     "start": "next start",
     "lint": "next lint",
     "scrape": "cd .. && python3 scraper.py",
-    "dev:with-scraper": "npm run scrape && npm run dev"
+    "dev:with-scraper": "npm run scrape && npm run dev",
+    "test:bulletpoints": "node -r dotenv/config src/scripts/testBulletPoints.js",
+    "generate:bulletpoints": "python3 generate_course_bullets.py"
   },
   "dependencies": {
     "next": "15.2.0",
+    "openai": "^4.24.1",
     "react": "^19.0.0",
     "react-dom": "^19.0.0"
   },
@@ -21,6 +24,7 @@
     "@types/react": "^19",
     "@types/react-dom": "^19",
     "autoprefixer": "^10.4.20",
+    "dotenv": "^16.4.7",
     "eslint": "^9",
     "eslint-config-next": "15.2.0",
     "postcss": "^8.5.3",

@@ -26,6 +26,17 @@ const getPathURL = (courseCode, availability, period) => {
 const CourseCard = ({ course }) => {
   const [isFlipped, setIsFlipped] = useState(false);
 
+  // Check for bullet points in either format (new format 'bulletpoints' or old format 'bullet_points')
+  const hasBulletPoints = (course.bulletpoints && course.bulletpoints.trim().length > 0) || 
+                          (course.bullet_points && course.bullet_points.trim().length > 0);
+  
+  // Get the actual bullet points content
+  const bulletPointsContent = course.bulletpoints || course.bullet_points || '';
+  
+  // Parse bullet points from string to array
+  const bulletPointsArray = bulletPointsContent ? 
+    bulletPointsContent.split('\n').filter(bp => bp.trim()) : [];
+
   // Safely truncate description to 150 characters if it exists
   const truncatedDescription = course.course_description 
     ? course.course_description.substring(0, 150) + (course.course_description.length > 150 ? '...' : '') 
@@ -592,10 +603,23 @@ const CourseCard = ({ course }) => {
               {course.period || 'No semester info'} • {course.school_name || 'Unknown School'}
             </p>
             
-            {/* Description */}
-            <p className="text-gray-700 mb-4 text-sm">
-              {truncatedDescription}
-            </p>
+            {/* Display Bullet Points if available, otherwise show description */}
+            {hasBulletPoints ? (
+              <div className="text-gray-700 mb-4">
+                <ul className="space-y-1 text-sm">
+                  {bulletPointsArray.map((point, index) => (
+                    <li key={index} className="flex items-start">
+                      <span className="text-blue-500 mr-2 font-bold">•</span>
+                      <span>{point.startsWith('•') ? point.substring(1).trim() : point}</span>
+                    </li>
+                  ))}
+                </ul>
+              </div>
+            ) : (
+              <p className="text-gray-700 mb-4 text-sm">
+                {truncatedDescription}
+              </p>
+            )}
           </div>
           
           {/* Credits Badge */}

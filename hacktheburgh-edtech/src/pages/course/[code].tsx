@@ -2,6 +2,14 @@ import { useState, useEffect } from 'react';
 import { useRouter } from 'next/router';
 import Head from 'next/head';
 import Link from 'next/link';
+import dynamic from 'next/dynamic';
+
+// Dynamically import the CourseBulletPoints component with SSR disabled
+// This ensures it only loads on the client side where the API can be called
+const CourseBulletPoints = dynamic(
+  () => import('../../components/CourseBulletPoints'),
+  { ssr: false }
+);
 
 type CourseDetail = {
   code: string;
@@ -18,6 +26,8 @@ type CourseDetail = {
   assessment_methods?: string;
   prerequisites?: string;
   contacts?: string[];
+  bulletpoints?: string;
+  bullet_points?: string;
   [key: string]: any;
 };
 
@@ -42,11 +52,7 @@ export default function CourseDetail() {
         }
         
         const data = await response.json();
-        if (data.course) {
-          setCourse(data.course);
-        } else {
-          setError('Course not found');
-        }
+        setCourse(data);
         setLoading(false);
       } catch (error) {
         console.error('Error fetching course details:', error);
@@ -199,8 +205,20 @@ export default function CourseDetail() {
               </a>
             </div>
             <div className="border-t border-gray-200 px-4 py-5 sm:px-6">
+              {/* AI-generated Bullet Points */}
+              {course && (
+                <div className="mb-6 p-4 bg-blue-50 rounded-lg">
+                  <h3 className="text-lg font-medium text-blue-900 mb-3">Course Overview</h3>
+                  <CourseBulletPoints 
+                    summary={course.name || ''}
+                    description={course.course_description || ''}
+                    bulletpoints={course.bulletpoints || ''}
+                    bullet_points={course.bullet_points || ''}
+                  />
+                </div>
+              )}
+              
               <dl className="divide-y divide-gray-200">
-                {renderAttribute("Course Description", course.course_description)}
                 {renderAttribute("Learning Outcomes", course.learning_outcomes)}
                 {renderAttribute("Assessment Methods", course.assessment_methods)}
                 {renderAttribute("Delivery", course.delivery)}

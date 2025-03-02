@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Test Course Bullet Points API</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="bg-gray-100 min-h-screen p-5">
+  <div class="max-w-2xl mx-auto bg-white p-6 rounded-lg shadow-md">
+    <h1 class="text-2xl font-bold mb-4 text-blue-900">Course Bullet Points Generator</h1>
+    
+    <form id="bulletPointsForm" class="space-y-4">
+      <div>
+        <label for="summary" class="block text-sm font-medium text-gray-700">Course Summary</label>
+        <textarea id="summary" name="summary" rows="2" class="mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-blue-500 focus:ring-blue-500 p-2 border"></textarea>
+      </div>
+      
+      <div>
+        <label for="courseDescription" class="block text-sm font-medium text-gray-700">Course Description</label>
+        <textarea id="courseDescription" name="courseDescription" rows="4" class="mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-blue-500 focus:ring-blue-500 p-2 border"></textarea>
+      </div>
+      
+      <div>
+        <button type="submit" class="inline-flex justify-center py-2 px-4 border border-transparent shadow-sm text-sm font-medium rounded-md text-white bg-blue-600 hover:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-blue-500">
+          Generate Bullet Points
+        </button>
+      </div>
+    </form>
+    
+    <div id="loadingIndicator" class="hidden mt-6 flex justify-center">
+      <div class="animate-spin rounded-full h-10 w-10 border-t-2 border-b-2 border-blue-500"></div>
+    </div>
+    
+    <div id="errorMessage" class="hidden mt-6 bg-red-50 border-l-4 border-red-500 p-4">
+      <div class="flex">
+        <div class="flex-shrink-0">
+          <svg class="h-5 w-5 text-red-400" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor">
+            <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zM8.707 7.293a1 1 0 00-1.414 1.414L8.586 10l-1.293 1.293a1 1 0 101.414 1.414L10 11.414l1.293 1.293a1 1 0 001.414-1.414L11.414 10l1.293-1.293a1 1 0 00-1.414-1.414L10 8.586 8.707 7.293z" clip-rule="evenodd" />
+          </svg>
+        </div>
+        <div class="ml-3">
+          <p class="text-sm text-red-700" id="errorText"></p>
+        </div>
+      </div>
+    </div>
+    
+    <div id="resultsContainer" class="hidden mt-6">
+      <h2 class="text-lg font-semibold mb-2 text-blue-900">Generated Bullet Points:</h2>
+      <ul id="bulletPointsList" class="space-y-2 pl-5 list-disc text-gray-700"></ul>
+    </div>
+  </div>
+  
+  <script>
+    document.getElementById('bulletPointsForm').addEventListener('submit', async (e) => {
+      e.preventDefault();
+      
+      const summary = document.getElementById('summary').value;
+      const courseDescription = document.getElementById('courseDescription').value;
+      
+      // Hide any previous results/errors
+      document.getElementById('resultsContainer').classList.add('hidden');
+      document.getElementById('errorMessage').classList.add('hidden');
+      
+      // Show loading indicator
+      document.getElementById('loadingIndicator').classList.remove('hidden');
+      
+      try {
+        // Check if we have at least one input
+        if (!summary && !courseDescription) {
+          throw new Error('Please provide either a course summary or description');
+        }
+        
+        // Call the API
+        const response = await fetch('/api/generateBullets', {
+          method: 'POST',
+          headers: {
+            'Content-Type': 'application/json',
+          },
+          body: JSON.stringify({
+            summary,
+            courseDescription
+          }),
+        });
+        
+        if (!response.ok) {
+          throw new Error(`Error ${response.status}: ${response.statusText}`);
+        }
+        
+        const data = await response.json();
+        
+        // Display the results
+        const bulletPointsList = document.getElementById('bulletPointsList');
+        bulletPointsList.innerHTML = '';
+        
+        if (data.bulletPoints && data.bulletPoints.length > 0) {
+          data.bulletPoints.forEach(bullet => {
+            const li = document.createElement('li');
+            // Remove the bullet character if it's already in the text
+            li.textContent = bullet.startsWith('•') ? bullet.substring(1).trim() : bullet;
+            bulletPointsList.appendChild(li);
+          });
+          
+          document.getElementById('resultsContainer').classList.remove('hidden');
+        } else {
+          throw new Error('No bullet points were generated');
+        }
+      } catch (error) {
+        // Display the error
+        document.getElementById('errorText').textContent = error.message;
+        document.getElementById('errorMessage').classList.remove('hidden');
+      } finally {
+        // Hide the loading indicator
+        document.getElementById('loadingIndicator').classList.add('hidden');
+      }
+    });
+  </script>
+</body>
+</html> 
