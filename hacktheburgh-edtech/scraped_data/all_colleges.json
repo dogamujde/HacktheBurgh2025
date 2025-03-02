@@ -1,0 +1,46 @@
+[
+  {
+    "name": "College of Arts, Humanities and Social Sciences",
+    "schools": [
+      "School of Economics",
+      "School of Divinity",
+      "School of History, Classics and Archaeology",
+      "School of Law",
+      "School of Literatures, Languages and Cultures",
+      "School of Philosophy, Psychology and Language Sciences",
+      "School of Social and Political Science",
+      "Edinburgh College of Art",
+      "Moray House School of Education and Sport",
+      "Business School"
+    ]
+  },
+  {
+    "name": "College of Science and Engineering",
+    "schools": [
+      "School of Biological Sciences",
+      "School of Chemistry",
+      "School of Engineering",
+      "School of Geosciences",
+      "School of Informatics",
+      "School of Mathematics",
+      "School of Physics and Astronomy"
+    ]
+  },
+  {
+    "name": "College of Medicine and Veterinary Medicine",
+    "schools": [
+      "Edinburgh Medical School",
+      "Royal Dick School of Veterinary Studies",
+      "Deanery of Biomedical Sciences",
+      "Deanery of Clinical Sciences",
+      "Deanery of Molecular Genetic and Population Health Sciences"
+    ]
+  },
+  {
+    "name": "Other",
+    "schools": [
+      "Centre for Open Learning",
+      "Edinburgh Futures Institute"
+    ]
+  }
+] 

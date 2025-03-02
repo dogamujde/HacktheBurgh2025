@@ -15,25 +15,60 @@ const Pagination = ({ currentPage, totalPages, onPageChange, maxPageButtons = 5 
   // Ensure current page is valid
   const current = Math.max(1, Math.min(currentPage, totalPages));
   
-  // Calculate range of page numbers to show
-  let startPage = Math.max(1, current - Math.floor(maxPageButtons / 2));
-  let endPage = Math.min(totalPages, startPage + maxPageButtons - 1);
-  
-  // Adjust if we're near the end
-  if (endPage - startPage + 1 < maxPageButtons) {
-    startPage = Math.max(1, endPage - maxPageButtons + 1);
-  }
-  
-  // Generate array of page numbers to display
-  const pageNumbers = Array.from(
-    { length: endPage - startPage + 1 },
-    (_, i) => startPage + i
-  );
+  // Calculate page numbers to display
+  const getPageNumbers = () => {
+    // If we have few enough pages to show all
+    if (totalPages <= maxPageButtons) {
+      return Array.from({ length: totalPages }, (_, i) => i + 1);
+    }
+    
+    // Always show first and last page
+    const pageNumbers = [];
+    const leftSiblingIndex = Math.max(current - 1, 1);
+    const rightSiblingIndex = Math.min(current + 1, totalPages);
+    
+    // Whether to show ellipses
+    const showLeftDots = leftSiblingIndex > 2;
+    const showRightDots = rightSiblingIndex < totalPages - 1;
+    
+    // If we're near the start
+    if (!showLeftDots && showRightDots) {
+      const leftRange = Array.from({ length: maxPageButtons - 1 }, (_, i) => i + 1);
+      return [...leftRange, '...', totalPages];
+    }
+    
+    // If we're near the end
+    if (showLeftDots && !showRightDots) {
+      const rightRange = Array.from(
+        { length: maxPageButtons - 1 }, 
+        (_, i) => totalPages - (maxPageButtons - 2) + i
+      );
+      return [1, '...', ...rightRange];
+    }
+    
+    // If we're in the middle
+    if (showLeftDots && showRightDots) {
+      const middleRange = Array.from(
+        { length: rightSiblingIndex - leftSiblingIndex + 1 },
+        (_, i) => leftSiblingIndex + i
+      );
+      return [1, '...', ...middleRange, '...', totalPages];
+    }
+  };
+
+  const pageNumbers = getPageNumbers();
 
   // Handle page click
   const handlePageClick = (page) => {
-    if (page !== current) {
+    if (page !== current && page !== '...') {
       onPageChange(page);
+    }
+  };
+
+  // Handle previous click
+  const handlePrevClick = () => {
+    if (current > 1) {
+      onPageChange(current - 1);
     }
   };
 
@@ -45,35 +80,62 @@ const Pagination = ({ currentPage, totalPages, onPageChange, maxPageButtons = 5 
   };
 
   return (
-    <nav className="flex justify-center my-8">
-      <ul className="flex flex-wrap items-center">
-        {pageNumbers.map((page) => (
-          <li key={page} className="mx-1">
-            <button
-              onClick={() => handlePageClick(page)}
-              className={`px-4 py-2 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500 transition-colors
-                ${
-                  page === current
-                    ? 'bg-blue-600 text-white font-medium'
-                    : 'bg-white text-gray-700 border border-gray-300 hover:bg-gray-100'
-                }`}
-              aria-current={page === current ? 'page' : undefined}
-            >
-              {page}
-            </button>
+    <nav className="flex justify-center my-8" aria-label="Pagination">
+      <ul className="flex flex-wrap items-center gap-2">
+        {/* Previous button */}
+        <li>
+          <button
+            onClick={handlePrevClick}
+            disabled={current === 1}
+            className={`px-4 py-2 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500 transition-colors
+              ${current === 1 
+                ? 'bg-gray-100 text-gray-400 cursor-not-allowed' 
+                : 'bg-white text-gray-700 border border-gray-300 hover:bg-gray-100'
+              }`}
+            aria-label="Previous page"
+          >
+            Previous
+          </button>
+        </li>
+        
+        {/* Page numbers */}
+        {pageNumbers.map((page, index) => (
+          <li key={index}>
+            {page === '...' ? (
+              <span className="px-2 py-1">...</span>
+            ) : (
+              <button
+                onClick={() => handlePageClick(page)}
+                className={`w-10 h-10 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500 transition-colors
+                  ${
+                    page === current
+                      ? 'bg-blue-600 text-white font-medium'
+                      : 'bg-white text-gray-700 border border-gray-300 hover:bg-gray-100'
+                  }`}
+                aria-current={page === current ? 'page' : undefined}
+                aria-label={`Page ${page}`}
+              >
+                {page}
+              </button>
+            )}
           </li>
         ))}
         
-        {current < totalPages && (
-          <li className="mx-1">
-            <button
-              onClick={handleNextClick}
-              className="px-4 py-2 rounded-md bg-white text-gray-700 border border-gray-300 hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-blue-500 transition-colors"
-            >
-              Next
-            </button>
-          </li>
-        )}
+        {/* Next button */}
+        <li>
+          <button
+            onClick={handleNextClick}
+            disabled={current === totalPages}
+            className={`px-4 py-2 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500 transition-colors
+              ${current === totalPages 
+                ? 'bg-gray-100 text-gray-400 cursor-not-allowed' 
+                : 'bg-white text-gray-700 border border-gray-300 hover:bg-gray-100'
+              }`}
+            aria-label="Next page"
+          >
+            Next
+          </button>
+        </li>
       </ul>
     </nav>
   );

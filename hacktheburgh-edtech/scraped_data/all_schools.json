@@ -1,0 +1,85 @@
+[
+  {
+    "name": "School of Informatics",
+    "url": "https://www.ed.ac.uk/informatics",
+    "college": "College of Science and Engineering",
+    "schedule": "Semester",
+    "code": "INFR",
+    "subjects": [
+      {
+        "name": "Computer Science",
+        "url": "https://www.ed.ac.uk/informatics/computer-science",
+        "school_name": "School of Informatics",
+        "school_code": "INFR",
+        "college": "College of Science and Engineering"
+      },
+      {
+        "name": "Artificial Intelligence",
+        "url": "https://www.ed.ac.uk/informatics/artificial-intelligence",
+        "school_name": "School of Informatics",
+        "school_code": "INFR",
+        "college": "College of Science and Engineering"
+      },
+      {
+        "name": "Data Science",
+        "url": "https://www.ed.ac.uk/informatics/data-science",
+        "school_name": "School of Informatics",
+        "school_code": "INFR",
+        "college": "College of Science and Engineering"
+      }
+    ]
+  },
+  {
+    "name": "School of Mathematics",
+    "url": "https://www.ed.ac.uk/mathematics",
+    "college": "College of Science and Engineering",
+    "schedule": "Semester",
+    "code": "MATH",
+    "subjects": [
+      {
+        "name": "Mathematics",
+        "url": "https://www.ed.ac.uk/mathematics/mathematics",
+        "school_name": "School of Mathematics",
+        "school_code": "MATH",
+        "college": "College of Science and Engineering"
+      },
+      {
+        "name": "Statistics",
+        "url": "https://www.ed.ac.uk/mathematics/statistics",
+        "school_name": "School of Mathematics",
+        "school_code": "MATH",
+        "college": "College of Science and Engineering"
+      }
+    ]
+  },
+  {
+    "name": "Business School",
+    "url": "https://www.business-school.ed.ac.uk/",
+    "college": "College of Arts, Humanities and Social Sciences",
+    "schedule": "Semester",
+    "code": "BUSI",
+    "subjects": [
+      {
+        "name": "Accounting",
+        "url": "https://www.business-school.ed.ac.uk/accounting",
+        "school_name": "Business School",
+        "school_code": "BUSI",
+        "college": "College of Arts, Humanities and Social Sciences"
+      },
+      {
+        "name": "Finance",
+        "url": "https://www.business-school.ed.ac.uk/finance",
+        "school_name": "Business School",
+        "school_code": "BUSI",
+        "college": "College of Arts, Humanities and Social Sciences"
+      },
+      {
+        "name": "Business",
+        "url": "https://www.business-school.ed.ac.uk/business",
+        "school_name": "Business School",
+        "school_code": "BUSI",
+        "college": "College of Arts, Humanities and Social Sciences"
+      }
+    ]
+  }
+] 

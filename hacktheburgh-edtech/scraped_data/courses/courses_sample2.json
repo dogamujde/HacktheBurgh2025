@@ -1,0 +1,79 @@
+[
+  {
+    "code": "INFR11145",
+    "name": "Neural Information Processing",
+    "period": "Semester 1",
+    "school_name": "School of Informatics",
+    "course_description": "This course covers computational and theoretical approaches to understanding neural information processing. Students will learn about neural networks, deep learning architectures, and biologically-inspired computing models. Topics include supervised and unsupervised learning, convolutional neural networks, recurrent neural networks, and generative models.",
+    "credits": "20",
+    "level": "SCQF Level 11 (Year 5 Postgraduate)",
+    "keywords": ["neural networks", "deep learning", "artificial intelligence", "computational neuroscience"],
+    "bullet_points": ["Understand fundamental principles of neural computation", "Implement modern deep learning architectures", "Explore connections between biological and artificial neural systems"]
+  },
+  {
+    "code": "INFR10052",
+    "name": "Computer Security",
+    "period": "Semester 2",
+    "school_name": "School of Informatics",
+    "course_description": "This course provides an introduction to the principles and practice of computer security. Topics include cryptography, authentication, access control, software security, network security, web security, and security management. Students will gain hands-on experience with security tools and techniques through practical exercises.",
+    "credits": "20",
+    "level": "SCQF Level 10 (Year 3/4 Undergraduate)",
+    "keywords": ["cybersecurity", "cryptography", "network security", "software security"],
+    "bullet_points": ["Learn core principles of computer security", "Develop skills in security analysis and implementation", "Understand threats and countermeasures in modern systems"]
+  },
+  {
+    "code": "COMP09088",
+    "name": "Software Engineering",
+    "period": "Semester 1",
+    "school_name": "School of Informatics",
+    "course_description": "This course introduces software engineering principles and practices for the systematic development of software systems. Topics include requirements analysis, software design, implementation, testing, and maintenance. Students will work in teams on a software project, applying agile development methods and tools.",
+    "credits": "20",
+    "level": "SCQF Level 9 (Year 2 Undergraduate)",
+    "keywords": ["software engineering", "agile development", "teamwork", "software design"],
+    "bullet_points": ["Learn systematic approaches to software development", "Practice teamwork and collaboration skills", "Apply software engineering methods to real problems"]
+  },
+  {
+    "code": "PHYS10105",
+    "name": "Computational Physics",
+    "period": "Semester 2",
+    "school_name": "School of Physics and Astronomy",
+    "course_description": "This course introduces computational methods for solving physical problems. Students will learn programming techniques and numerical methods for simulating physical systems, analyzing data, and visualizing results. Applications include mechanics, electromagnetism, quantum physics, and statistical physics.",
+    "credits": "20",
+    "level": "SCQF Level 10 (Year 3 Undergraduate)",
+    "keywords": ["computational physics", "simulations", "numerical methods", "physics modeling"],
+    "bullet_points": ["Develop computational skills for physics applications", "Implement numerical solutions to physical problems", "Visualize and analyze physics simulation data"]
+  },
+  {
+    "code": "GEOG10082",
+    "name": "Geographical Information Systems",
+    "period": "Semester 1",
+    "school_name": "School of GeoSciences",
+    "course_description": "This course provides an introduction to the concepts and applications of Geographical Information Systems (GIS). Students will learn to collect, manage, analyze, and visualize spatial data. The course covers spatial data models, cartography, spatial analysis, and the use of GIS software for solving geographical problems.",
+    "credits": "20",
+    "level": "SCQF Level 10 (Year 3 Undergraduate)",
+    "keywords": ["GIS", "spatial analysis", "cartography", "geospatial data"],
+    "bullet_points": ["Learn fundamental GIS concepts and techniques", "Develop skills in spatial data analysis", "Apply GIS to solve real-world geographical problems"]
+  },
+  {
+    "code": "BUSI08046",
+    "name": "Business Analytics",
+    "period": "Semester 2",
+    "school_name": "Business School",
+    "course_description": "This course introduces the concepts and tools of business analytics for data-driven decision making. Students will learn methods for descriptive, predictive, and prescriptive analytics, including data visualization, statistical analysis, and optimization techniques. The course emphasizes practical applications in business contexts.",
+    "credits": "20",
+    "level": "SCQF Level 8 (Year 1 Undergraduate)",
+    "keywords": ["business analytics", "data-driven decision making", "optimization", "business intelligence"],
+    "bullet_points": ["Understand key concepts in business analytics", "Apply analytical techniques to business problems", "Develop skills in data-driven decision making"]
+  },
+  {
+    "code": "MATH10934",
+    "name": "Data Mining and Machine Learning",
+    "period": "Semester 2",
+    "school_name": "School of Mathematics",
+    "course_description": "This course covers the principles and techniques of data mining and machine learning for extracting knowledge from data. Topics include classification, clustering, association rules, regression, feature selection, and model evaluation. Students will gain hands-on experience with data mining tools and algorithms.",
+    "credits": "20",
+    "level": "SCQF Level 10 (Year 3/4 Undergraduate)",
+    "keywords": ["data mining", "machine learning", "pattern recognition", "predictive modeling"],
+    "bullet_points": ["Learn core data mining algorithms and techniques", "Implement machine learning models for prediction", "Develop skills in data preparation and feature engineering"]
+  }
+] 

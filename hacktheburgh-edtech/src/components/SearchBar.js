@@ -390,9 +390,6 @@ const SearchBar = ({ onSearch, onFilterChange, currentFilters }) => {
     
     // Call onFilterChange to update parent component
     onFilterChange(updatedFilters);
-    
-    // Close the advanced search dropdown
-    setAdvancedSearchOpen(false);
   };
   
   const resetAdvancedSearch = () => {
@@ -445,8 +442,8 @@ const SearchBar = ({ onSearch, onFilterChange, currentFilters }) => {
         
         const matches = schoolLower.includes(searchTermLower) && !isAlreadySelected;
         
-        // Debug logging
-        if (matches && filteredSchools && filteredSchools.length < 5) {
+        // Debug logging - removed the self-reference to filteredSchools
+        if (matches) {
           console.log('School match in dropdown:', {
             school,
             searchTerm: schoolSearchTerm,
@@ -573,24 +570,36 @@ const SearchBar = ({ onSearch, onFilterChange, currentFilters }) => {
             </div>
           )}
         </div>
+      </div>
+      
+      {/* Advanced Search Button - Now in its own row */}
+      <div className="w-full mt-4" ref={advancedSearchRef}>
+        <button
+          onClick={() => setAdvancedSearchOpen(!advancedSearchOpen)}
+          className={`w-full p-3 ${hasAdvancedFilters ? 'bg-blue-800' : 'bg-blue-700'} text-white rounded-lg shadow-sm focus:outline-none focus:ring-2 focus:ring-blue-500 hover:bg-blue-800 transition-colors flex items-center justify-center`}
+        >
+          {hasAdvancedFilters && (
+            <span className="inline-flex items-center justify-center w-5 h-5 mr-2 text-xs bg-white text-blue-800 rounded-full">
+              {selectedSubjects.length + creditLevels.length + yearFilters.length + (courseLevel ? 1 : 0) + (visitingStudents ? 1 : 0) + (deliveryMethod ? 1 : 0) + ((minCredits !== '0' || maxCredits !== '120') ? 1 : 0) + (showUnavailableCourses ? 1 : 0)}
+            </span>
+          )}
+          Advanced Search
+        </button>
         
-        {/* Advanced Search Button */}
-        <div className="w-full md:w-auto relative" ref={advancedSearchRef}>
-          <button
-            onClick={() => setAdvancedSearchOpen(!advancedSearchOpen)}
-            className={`w-full p-3 ${hasAdvancedFilters ? 'bg-blue-800' : 'bg-blue-700'} text-white rounded-lg shadow-sm focus:outline-none focus:ring-2 focus:ring-blue-500 hover:bg-blue-800 transition-colors flex items-center`}
-          >
-            {hasAdvancedFilters && (
-              <span className="inline-flex items-center justify-center w-5 h-5 mr-2 text-xs bg-white text-blue-800 rounded-full">
-                {selectedSubjects.length + creditLevels.length + yearFilters.length + (courseLevel ? 1 : 0) + (visitingStudents ? 1 : 0) + (deliveryMethod ? 1 : 0) + ((minCredits !== '0' || maxCredits !== '120') ? 1 : 0) + (showUnavailableCourses ? 1 : 0)}
-              </span>
-            )}
-            Advanced Search
-          </button>
-          
-          {/* Advanced Search Dropdown Panel */}
-          {advancedSearchOpen && (
-            <div className="absolute right-0 mt-2 w-96 bg-white border border-gray-300 rounded-lg shadow-lg z-20 p-4">
+        {/* Advanced Search Modal */}
+        {advancedSearchOpen && (
+          <div className="fixed inset-0 bg-black bg-opacity-25 z-50 flex items-center justify-center overflow-y-auto">
+            <div className="relative bg-white border border-gray-300 rounded-lg shadow-lg p-6 w-96 max-w-[95%] max-h-[90vh] overflow-y-auto m-4">
+              <button
+                onClick={() => setAdvancedSearchOpen(false)}
+                className="absolute top-3 right-3 text-gray-500 hover:text-gray-700"
+                aria-label="Close advanced search"
+              >
+                <svg xmlns="http://www.w3.org/2000/svg" className="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M6 18L18 6M6 6l12 12" />
+                </svg>
+              </button>
+              
               <h3 className="text-lg font-medium text-blue-900 mb-4 border-b pb-2">Advanced Search Options</h3>
               
               {/* Search Term */}
@@ -828,15 +837,18 @@ const SearchBar = ({ onSearch, onFilterChange, currentFilters }) => {
                   Reset
                 </button>
                 <button
-                  onClick={applyAdvancedSearch}
+                  onClick={() => {
+                    applyAdvancedSearch();
+                    setAdvancedSearchOpen(false);
+                  }}
                   className="px-4 py-2 bg-blue-700 text-white rounded-lg hover:bg-blue-800 focus:outline-none focus:ring-2 focus:ring-blue-500"
                 >
                   Apply Filters
                 </button>
               </div>
             </div>
-          )}
-        </div>
+          </div>
+        )}
       </div>
 
       {/* Selected Filters Display Section */}

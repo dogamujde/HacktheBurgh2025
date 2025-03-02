@@ -4,6 +4,10 @@ import Link from 'next/link';
 import SearchBar from '../components/SearchBar';
 import CourseCard from '../components/CourseCard';
 import Pagination from '../components/Pagination';
+import Chatbot from '../components/Chatbot';
+import CompareOverlay from '@/components/CompareOverlay';
+import CompareButton from '@/components/CompareButton';
+import { useCompare } from '@/components/CompareContext';
 
 // Updated types to match the actual data structure
 type College = {
@@ -44,7 +48,7 @@ export default function Home() {
   const [selectedSchools, setSelectedSchools] = useState<string[]>([]);
   const [showCourseCards, setShowCourseCards] = useState(true);
   const [currentPage, setCurrentPage] = useState(1);
-  const coursesPerPage = 3;
+  const coursesPerPage = 12;
   
   // Courses state
   const [courses, setCourses] = useState<Course[]>([]);
@@ -66,6 +70,9 @@ export default function Home() {
   
   // Filter courses based on the active filters
   const [filteredCourses, setFilteredCourses] = useState<Course[]>([]);
+
+  // Add compare context
+  const { compareMode, selectedCards } = useCompare();
 
   useEffect(() => {
     const fetchData = async () => {
@@ -209,10 +216,34 @@ export default function Home() {
           params.append('years', activeFilters.years.join(','));
         }
         
+        // Add credit levels if present
+        if (activeFilters.creditLevels && activeFilters.creditLevels.length > 0) {
+          params.append('creditLevels', activeFilters.creditLevels.join(','));
+          console.log('Filtering by SCQF credit levels:', activeFilters.creditLevels.join(','));
+        }
+        
+        // Add courseLevel if present
+        if (activeFilters.courseLevel) {
+          params.append('courseLevel', activeFilters.courseLevel);
+          console.log('Filtering by course level:', activeFilters.courseLevel);
+        }
+        
         // Add showUnavailableCourses parameter if true
         if (activeFilters.showUnavailableCourses) {
           params.append('showUnavailableCourses', 'true');
           console.log('Including unavailable courses in API request');
+        }
+        
+        // Add visitingStudents parameter if true
+        if (activeFilters.visitingStudents) {
+          params.append('visitingStudents', 'true');
+          console.log('Filtering for visiting student courses in API request');
+        }
+        
+        // Add deliveryMethod if present
+        if (activeFilters.deliveryMethod) {
+          params.append('deliveryMethod', activeFilters.deliveryMethod);
+          console.log('Filtering by delivery method:', activeFilters.deliveryMethod);
         }
         
         const requestUrl = `/api/courses?${params.toString()}`;
@@ -261,7 +292,8 @@ export default function Home() {
       activeFilters.years.length > 0 || 
       activeFilters.searchTerm || 
       activeFilters.schools.length > 0 ||
-      activeFilters.showUnavailableCourses
+      activeFilters.showUnavailableCourses ||
+      activeFilters.courseLevel
     )) {
       fetchFilteredCourses();
     } else if (courses.length > 0) {
@@ -338,9 +370,40 @@ export default function Home() {
     // Filter based on credit levels
     if (activeFilters.creditLevels && activeFilters.creditLevels.length > 0) {
       filteredCourses = filteredCourses.filter(course => {
-        if (!course.level) return false;
+        // First check credit_level which is the most reliable source
+        if (course.credit_level && typeof course.credit_level === 'string') {
+          const creditLevelLower = course.credit_level.toLowerCase();
+          
+          // Check if the credit_level matches any of the selected SCQF levels
+          return activeFilters.creditLevels.some(level => {
+            // Convert level to number if it's a string
+            const numericLevel = typeof level === 'string' ? parseInt(level) : level;
+            
+            // Look for various SCQF level patterns in the credit_level string
+            return creditLevelLower.includes(`scqf level ${numericLevel}`) || 
+                   creditLevelLower.includes(`scqf level ${numericLevel.toString().padStart(2, '0')}`) ||  // For "SCQF Level 07"
+                   creditLevelLower.includes(`scqf${numericLevel}`) ||
+                   creditLevelLower.includes(`level ${numericLevel}`) ||
+                   creditLevelLower.includes(`level${numericLevel}`);
+          });
+        } else if (course.level && typeof course.level === 'string') {
+          const levelLower = course.level.toLowerCase();
+          
+          // Check if the course level matches any of the selected SCQF levels
+          return activeFilters.creditLevels.some(level => {
+            // Convert level to number if it's a string
+            const numericLevel = typeof level === 'string' ? parseInt(level) : level;
+            
+            // Look for various SCQF level patterns in the course level string
+            return levelLower.includes(`scqf level ${numericLevel}`) || 
+                   levelLower.includes(`scqf level ${numericLevel.toString().padStart(2, '0')}`) ||  // For "SCQF Level 07"
+                   levelLower.includes(`scqf${numericLevel}`) ||
+                   levelLower.includes(`level ${numericLevel}`) ||
+                   levelLower.includes(`level${numericLevel}`);
+          });
+        }
         
-        return activeFilters.creditLevels.includes(course.level);
+        return false; // If no level information is available
       });
       console.log(`After credit levels filter: ${filteredCourses.length} courses`);
     }
@@ -357,6 +420,348 @@ export default function Home() {
         return !isNaN(courseCredits) && courseCredits >= minCredits && courseCredits <= maxCredits;
       });
       console.log(`After credits range filter: ${filteredCourses.length} courses`);
+    }
+    
+    // Filter based on course level (undergraduate/postgraduate)
+    if (activeFilters.courseLevel) {
+      filteredCourses = filteredCourses.filter(course => {
+        const courseLevelLower = activeFilters.courseLevel.toLowerCase();
+        
+        // First check credit_level which is the most reliable source
+        if (course.credit_level && typeof course.credit_level === 'string') {
+          const creditLevelLower = course.credit_level.toLowerCase();
+          
+          if (courseLevelLower === 'undergraduate') {
+            // Check for undergraduate indicators in credit_level
+            return creditLevelLower.includes('undergraduate') || 
+                   creditLevelLower.match(/scqf level 0?[7-9]/) ||
+                   creditLevelLower.match(/scqf level 10/) ||
+                   creditLevelLower.includes('year 1') ||
+                   creditLevelLower.includes('year 2') ||
+                   creditLevelLower.includes('year 3') ||
+                   creditLevelLower.includes('year 4') ||
+                   creditLevelLower.includes('1st year') ||
+                   creditLevelLower.includes('2nd year') ||
+                   creditLevelLower.includes('3rd year') ||
+                   creditLevelLower.includes('4th year');
+          } else if (courseLevelLower === 'postgraduate') {
+            // Check for postgraduate indicators in credit_level
+            return creditLevelLower.includes('postgraduate') || 
+                   creditLevelLower.match(/scqf level 1[1-2]/) ||
+                   creditLevelLower.includes('masters') ||
+                   creditLevelLower.includes('doctorate') ||
+                   creditLevelLower.includes('doctoral') ||
+                   creditLevelLower.includes('phd');
+          }
+        } else if (course.level && typeof course.level === 'string') {
+          const levelLower = course.level.toLowerCase();
+          
+          if (courseLevelLower === 'undergraduate') {
+            // Check for undergraduate indicators including SCQF levels 7-10
+            return levelLower.includes('undergraduate') || 
+                   levelLower.includes('ug') ||
+                   levelLower.match(/scqf level 0?[7-9]/) ||
+                   levelLower.match(/scqf level 10/) ||
+                   levelLower.includes('scqf 7') ||
+                   levelLower.includes('scqf 8') ||
+                   levelLower.includes('scqf 9') ||
+                   levelLower.includes('scqf 10') ||
+                   levelLower.includes('year 1') ||
+                   levelLower.includes('year 2') ||
+                   levelLower.includes('year 3') ||
+                   levelLower.includes('year 4') ||
+                   levelLower.includes('1st year') ||
+                   levelLower.includes('2nd year') ||
+                   levelLower.includes('3rd year') ||
+                   levelLower.includes('4th year') ||
+                   levelLower.includes('first year') ||
+                   levelLower.includes('second year') ||
+                   levelLower.includes('third year') ||
+                   levelLower.includes('fourth year') ||
+                   levelLower.includes('bachelors') ||
+                   levelLower.includes('honours') ||
+                   levelLower.includes('ordinary');
+          } else if (courseLevelLower === 'postgraduate') {
+            // Check for postgraduate indicators including SCQF levels 11-12
+            return levelLower.includes('postgraduate') || 
+                   levelLower.includes('pg') ||
+                   levelLower.match(/scqf level 1[1-2]/) ||
+                   levelLower.includes('scqf 11') ||
+                   levelLower.includes('scqf 12') ||
+                   levelLower.includes('msc') ||
+                   levelLower.includes('phd') ||
+                   levelLower.includes('masters') ||
+                   levelLower.includes('doctorate') ||
+                   levelLower.includes('doctoral') ||
+                   levelLower.includes('graduate') ||
+                   levelLower.includes('research degree');
+          }
+        }
+        
+        // Try to determine level from course name or code if available
+        const courseName = (course.name || '').toLowerCase();
+        const courseCode = (course.code || '').toLowerCase();
+        
+        if (courseLevelLower === 'undergraduate') {
+          // For undergraduate, check patterns in name and code
+          return courseName.includes('undergraduate') || 
+                 courseCode.includes('ug') ||
+                 /^[a-z]+[1-4]\d{3}$/i.test(courseCode) || // Like MATH1001 (1-4 indicates undergrad year)
+                 courseName.includes('bachelors') ||
+                 courseName.includes('bsc') ||
+                 courseName.includes('ba ') ||
+                 courseName.includes('b.a.') ||
+                 courseName.includes('b.sc') ||
+                 courseName.includes('year 1') ||
+                 courseName.includes('year 2') ||
+                 courseName.includes('year 3') ||
+                 courseName.includes('year 4') ||
+                 courseName.includes('1st year') ||
+                 courseName.includes('2nd year') ||
+                 courseName.includes('3rd year') ||
+                 courseName.includes('4th year') ||
+                 courseName.includes('honours');
+        } else if (courseLevelLower === 'postgraduate') {
+          // For postgraduate, check patterns in name and code 
+          return courseName.includes('postgraduate') || 
+                 courseName.includes('msc') || 
+                 courseName.includes('phd') || 
+                 courseName.includes('masters') || 
+                 courseName.includes('m.sc') ||
+                 courseName.includes('m.a.') ||
+                 courseName.includes('ma ') ||
+                 courseName.includes('graduate') ||
+                 courseName.includes('pgce') ||
+                 courseName.includes('pgde') ||
+                 courseName.includes('doctoral') ||
+                 courseName.includes('doctorate') ||
+                 courseName.includes('research');
+        }
+        
+        return false;
+      });
+      console.log(`After course level filter: ${filteredCourses.length} courses`);
+    }
+    
+    // Filter for visiting students if not already handled by API
+    if (activeFilters.visitingStudents && coursesToFilter) {
+      filteredCourses = filteredCourses.filter(course => {
+        const courseDesc = (course.course_description || '').toLowerCase();
+        const courseName = (course.name || '').toLowerCase();
+        
+        return courseDesc.includes('visiting student') || 
+               courseDesc.includes('exchange') || 
+               courseName.includes('visiting') || 
+               courseName.includes('exchange');
+      });
+      console.log(`After visiting students filter: ${filteredCourses.length} courses`);
+    }
+    
+    // Filter based on delivery method if not already handled by API
+    if (activeFilters.deliveryMethod && coursesToFilter) {
+      const deliveryMethodLower = activeFilters.deliveryMethod.toLowerCase();
+      
+      filteredCourses = filteredCourses.filter(course => {
+        // Check course delivery field
+        const courseDelivery = (course.delivery_method || course.delivery || '').toLowerCase();
+        // Check course name which often contains delivery info
+        const courseName = (course.name || '').toLowerCase();
+        // Also check descriptions for delivery method info
+        const courseDescription = (course.course_description || '').toLowerCase();
+        
+        if (deliveryMethodLower === 'on-campus') {
+          return courseDelivery.includes('campus') || 
+                 courseDelivery.includes('in person') || 
+                 courseDelivery.includes('face-to-face') ||
+                 courseDelivery.includes('in-person') ||
+                 courseDelivery.includes('on site') ||
+                 courseDelivery.includes('on-site') ||
+                 courseDelivery.includes('classroom') ||
+                 // Check course name for delivery info
+                 courseName.includes('campus') ||
+                 courseName.includes('in person') ||
+                 courseName.includes('in-person') ||
+                 courseName.includes('on site') ||
+                 courseName.includes('face-to-face') ||
+                 // Also check description
+                 courseDescription.includes('campus') ||
+                 courseDescription.includes('in person') ||
+                 courseDescription.includes('in-person') ||
+                 courseDescription.includes('on site') ||
+                 courseDescription.includes('on-site') ||
+                 courseDescription.includes('face-to-face') ||
+                 courseDescription.includes('classroom');
+        } else if (deliveryMethodLower === 'online') {
+          return courseDelivery.includes('online') || 
+                 courseDelivery.includes('remote') || 
+                 courseDelivery.includes('distance') ||
+                 courseDelivery.includes('virtual') ||
+                 courseDelivery.includes('web-based') ||
+                 courseDelivery.includes('digital') ||
+                 // Check course name for delivery info
+                 courseName.includes('online') ||
+                 courseName.includes('remote') ||
+                 courseName.includes('distance learning') ||
+                 courseName.includes('distance-learning') ||
+                 courseName.includes('virtual') ||
+                 courseName.includes('web-based') ||
+                 courseName.includes('digital') ||
+                 // Also check description
+                 courseDescription.includes('online') ||
+                 courseDescription.includes('remote') ||
+                 courseDescription.includes('distance') ||
+                 courseDescription.includes('virtual') ||
+                 courseDescription.includes('web-based') ||
+                 courseDescription.includes('digital');
+        } else if (deliveryMethodLower === 'hybrid') {
+          return courseDelivery.includes('hybrid') || 
+                 courseDelivery.includes('blended') ||
+                 courseDelivery.includes('mix of') ||
+                 courseDelivery.includes('mixed') ||
+                 courseDelivery.includes('combination') ||
+                 courseDelivery.includes('both online and') ||
+                 // Check course name for delivery info
+                 courseName.includes('hybrid') ||
+                 courseName.includes('blended') ||
+                 courseName.includes('mixed mode') ||
+                 courseName.includes('combined') ||
+                 // Also check description
+                 courseDescription.includes('hybrid') ||
+                 courseDescription.includes('blended') ||
+                 courseDescription.includes('mix of') ||
+                 courseDescription.includes('mixed') ||
+                 courseDescription.includes('combination') ||
+                 courseDescription.includes('both online and');
+        }
+        
+        return true; // If no delivery method specified or no match criteria
+      });
+      console.log(`After delivery method filter: ${filteredCourses.length} courses`);
+    }
+    
+    // Filter based on years
+    if (activeFilters.years && activeFilters.years.length > 0) {
+      filteredCourses = filteredCourses.filter(course => {
+        // First check credit_level which is the most reliable source
+        if (course.credit_level && typeof course.credit_level === 'string') {
+          const creditLevelLower = course.credit_level.toLowerCase();
+          
+          // Look for year indicators in credit_level
+          const hasExplicitYear = activeFilters.years.some(year => {
+            // Convert year to number if it's a string
+            const numericYear = typeof year === 'string' ? parseInt(year) : year;
+            
+            // Look for explicit year indicators in credit_level (e.g., "SCQF Level 10 (Year 3 Undergraduate)")
+            return creditLevelLower.includes(`year ${numericYear}`) || 
+                   creditLevelLower.includes(`(year ${numericYear})`) ||
+                   creditLevelLower.includes(`year${numericYear}`) ||
+                   creditLevelLower.includes(`${numericYear}st year`) ||
+                   creditLevelLower.includes(`${numericYear}nd year`) ||
+                   creditLevelLower.includes(`${numericYear}rd year`) ||
+                   creditLevelLower.includes(`${numericYear}th year`);
+          });
+          
+          if (hasExplicitYear) {
+            return true;
+          }
+          
+          // If no explicit year, check SCQF level to infer year
+          return activeFilters.years.some(year => {
+            const numericYear = typeof year === 'string' ? parseInt(year) : year;
+            
+            // Map years to SCQF levels
+            return (numericYear === 1 && (
+                    creditLevelLower.includes('scqf level 07') || 
+                    creditLevelLower.includes('scqf level 08') || 
+                    creditLevelLower.includes('scqf level 7') || 
+                    creditLevelLower.includes('scqf level 8')
+                  )) ||
+                  (numericYear === 2 && (
+                    creditLevelLower.includes('scqf level 09') || 
+                    creditLevelLower.includes('scqf level 9')
+                  )) ||
+                  (numericYear === 3 && (
+                    creditLevelLower.includes('scqf level 10')
+                  )) ||
+                  (numericYear === 4 && (
+                    creditLevelLower.includes('scqf level 11')
+                  )) ||
+                  (numericYear === 5 && (
+                    creditLevelLower.includes('scqf level 12')
+                  ));
+          });
+        } else if (course.level && typeof course.level === 'string') {
+          const levelLower = course.level.toLowerCase();
+          
+          return activeFilters.years.some(year => {
+            const numericYear = typeof year === 'string' ? parseInt(year) : year;
+            
+            // Check various year indicators in the level text
+            return levelLower.includes(`year ${numericYear}`) || 
+                   levelLower.includes(`(year ${numericYear})`) ||
+                   levelLower.includes(`year${numericYear}`) ||
+                   levelLower.includes(`${numericYear}st year`) ||
+                   levelLower.includes(`${numericYear}nd year`) ||
+                   levelLower.includes(`${numericYear}rd year`) ||
+                   levelLower.includes(`${numericYear}th year`) ||
+                   levelLower.includes(`level ${numericYear}`) ||
+                   // Improved SCQF level mapping
+                   (numericYear === 1 && (
+                     levelLower.includes('scqf level 07') || 
+                     levelLower.includes('scqf level 08') || 
+                     levelLower.includes('scqf level 7') || 
+                     levelLower.includes('scqf level 8') ||
+                     levelLower.includes('scqf 7') ||
+                     levelLower.includes('scqf 8') ||
+                     levelLower.includes('level 7') ||
+                     levelLower.includes('level 8')
+                   )) ||
+                   (numericYear === 2 && (
+                     levelLower.includes('scqf level 09') || 
+                     levelLower.includes('scqf level 9') ||
+                     levelLower.includes('scqf 9') ||
+                     levelLower.includes('level 9')
+                   )) ||
+                   (numericYear === 3 && (
+                     levelLower.includes('scqf level 10') ||
+                     levelLower.includes('scqf 10') ||
+                     levelLower.includes('level 10')
+                   )) ||
+                   (numericYear === 4 && (
+                     levelLower.includes('scqf level 11') ||
+                     levelLower.includes('scqf 11') ||
+                     levelLower.includes('level 11')
+                   )) ||
+                   (numericYear === 5 && (
+                     levelLower.includes('scqf level 12') ||
+                     levelLower.includes('scqf 12') ||
+                     levelLower.includes('level 12')
+                   ));
+          });
+        } else {
+          // Try to infer year from course code or name
+          const courseCode = (course.code || '').toLowerCase();
+          const matchesYearCode = activeFilters.years.some(year => {
+            const numericYear = typeof year === 'string' ? parseInt(year) : year;
+            const regex = new RegExp(`^[a-z]+${numericYear}\\d{2,3}$`, 'i');
+            return regex.test(courseCode);
+          });
+          
+          if (matchesYearCode) return true;
+          
+          // Check the course name/title too
+          const courseName = (course.name || '').toLowerCase();
+          return activeFilters.years.some(year => {
+            const numericYear = typeof year === 'string' ? parseInt(year) : year;
+            return courseName.includes(`year ${numericYear}`) || 
+                   courseName.includes(`${numericYear}st year`) ||
+                   courseName.includes(`${numericYear}nd year`) ||
+                   courseName.includes(`${numericYear}rd year`) ||
+                   courseName.includes(`${numericYear}th year`);
+          });
+        }
+      });
+      console.log(`After years filter: ${filteredCourses.length} courses`);
     }
     
     return filteredCourses;
@@ -392,6 +797,13 @@ export default function Home() {
     setCurrentPage(pageNumber);
     // Scroll to top when changing pages
     window.scrollTo(0, 0);
+    
+    // Only reset course cards if not in compare mode
+    // This prevents losing selected cards when navigating pages
+    if (!compareMode) {
+      // Dispatch a custom event to reset all course cards to collapsed state
+      document.dispatchEvent(new CustomEvent('resetCourseCards'));
+    }
   };
 
   return (
@@ -402,7 +814,10 @@ export default function Home() {
         <link rel="icon" href="/favicon.ico" />
       </Head>
 
-      <main className="max-w-7xl mx-auto py-12 px-4 sm:px-6 lg:px-8">
+      {/* CompareOverlay sits outside the main content so it doesn't get blurred */}
+      <CompareOverlay />
+
+      <main id="main-content" className="max-w-7xl mx-auto py-12 px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-12">
           <h1 className="text-4xl font-extrabold text-blue-900 sm:text-5xl sm:tracking-tight lg:text-6xl">
             University of Edinburgh Course Explorer
@@ -419,14 +834,16 @@ export default function Home() {
           currentFilters={activeFilters} 
         />
 
-        {/* View Toggle Button */}
-        <div className="flex justify-center mt-8 mb-4">
+        {/* View Toggle and Compare Button */}
+        <div className="flex justify-center mt-8 mb-4 space-x-4">
           <button 
             onClick={toggleView}
             className="px-4 py-2 bg-blue-700 text-white rounded-md hover:bg-blue-800 focus:outline-none focus:ring-2 focus:ring-blue-500"
           >
             {showCourseCards ? "View Colleges" : "View Course Cards"}
           </button>
+          
+          <CompareButton />
         </div>
 
         {loading ? (
@@ -447,15 +864,45 @@ export default function Home() {
             </div>
           </div>
         ) : showCourseCards ? (
-          // Course Cards Grid Layout with Pagination
-          <div className="mt-12">
-            <h2 className="text-2xl font-bold text-blue-900 mb-8">Filtered Courses ({filteredCourses.length})</h2>
+          // Course Grid */}
+          <div className="mt-8">
+            <div className="mb-4 flex flex-col sm:flex-row justify-between items-center">
+              <h2 className="text-xl font-semibold text-gray-800">
+                {filteredCourses.length === 0 
+                  ? 'No courses found' 
+                  : `Found ${filteredCourses.length} course${filteredCourses.length === 1 ? '' : 's'}`}
+              </h2>
+              
+              {filteredCourses.length > 0 && (
+                <p className="text-sm text-gray-600 mt-2 sm:mt-0">
+                  Showing {indexOfFirstCourse + 1} to {Math.min(indexOfLastCourse, filteredCourses.length)} of {filteredCourses.length} courses
+                </p>
+              )}
+            </div>
             
-            {currentCourses.length > 0 ? (
+            {/* Compare mode guidance message */}
+            {compareMode && (
+              <div className="bg-blue-50 border border-blue-200 rounded-md p-3 mb-4 text-blue-800">
+                <p>
+                  <span className="font-medium">Compare Mode Active:</span> You can select up to 2 courses to compare from any page. 
+                  Selected courses will stay selected as you navigate between pages.
+                  {selectedCards.length > 0 && (
+                    <span className="ml-2 font-medium">
+                      ({selectedCards.length}/2 courses selected)
+                      {selectedCards.length === 2 && (
+                        <span className="text-green-600"> Ready to compare!</span>
+                      )}
+                    </span>
+                  )}
+                </p>
+              </div>
+            )}
+            
+            {filteredCourses.length > 0 ? (
               <>
-                <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
-                  {currentCourses.map((course, index) => (
-                    <CourseCard key={index} course={course} />
+                <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+                  {currentCourses.map((course) => (
+                    <CourseCard key={course.code} course={course} enableFlipping={true} />
                   ))}
                 </div>
                 
@@ -470,7 +917,20 @@ export default function Home() {
               <div className="text-center py-12">
                 <p className="text-gray-500 text-xl">No courses found matching your filters.</p>
                 <button 
-                  onClick={() => setActiveFilters({
+                  onClick={() => {
+                    setActiveFilters({
+                      searchTerm: '',
+                      schools: [],
+                      subjects: [],
+                      creditLevels: [],
+                      credits: { min: '0', max: '120' },
+                      years: [],
+                      courseLevel: '',
+                      visitingStudents: false,
+                      deliveryMethod: '',
+                      showUnavailableCourses: false
+                    });
+                    handleFilterChange({
                     searchTerm: '',
                     schools: [],
                     subjects: [],
@@ -479,9 +939,10 @@ export default function Home() {
                     years: [],
                     courseLevel: '',
                     visitingStudents: false,
-                    deliveryMethod: '',
-                    showUnavailableCourses: false
-                  })} 
+                      deliveryMethod: '',
+                      showUnavailableCourses: false
+                    });
+                  }} 
                   className="mt-4 px-4 py-2 bg-blue-600 text-white rounded-md hover:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-blue-500"
                 >
                   Clear Filters
@@ -540,6 +1001,9 @@ export default function Home() {
           </div>
         )}
       </main>
+
+      {/* Add Chatbot component */}
+      <Chatbot />
 
       <footer className="bg-blue-900 text-white py-8 mt-12">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
