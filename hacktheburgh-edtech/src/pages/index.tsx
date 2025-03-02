@@ -5,7 +5,6 @@ import SearchBar from '../components/SearchBar';
 import CourseCard from '../components/CourseCard';
 import Pagination from '../components/Pagination';
 import Chatbot from '../components/Chatbot';
-import CompareTest from '@/components/CompareTest';
 import CompareOverlay from '@/components/CompareOverlay';
 import CompareButton from '@/components/CompareButton';
 import { useCompare } from '@/components/CompareContext';
@@ -847,9 +846,6 @@ export default function Home() {
           <CompareButton />
         </div>
 
-        {/* Testing component - remove in production */}
-        <CompareTest />
-
         {loading ? (
           <div className="flex justify-center">
             <div className="animate-spin rounded-full h-12 w-12 border-t-2 border-b-2 border-blue-900"></div>
@@ -1008,9 +1004,6 @@ export default function Home() {
 
       {/* Add Chatbot component */}
       <Chatbot />
-
-      {/* Add CompareTest component */}
-      <CompareTest />
 
       <footer className="bg-blue-900 text-white py-8 mt-12">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
