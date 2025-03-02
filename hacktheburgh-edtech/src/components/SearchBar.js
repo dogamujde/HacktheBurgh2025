@@ -390,9 +390,6 @@ const SearchBar = ({ onSearch, onFilterChange, currentFilters }) => {
     
     // Call onFilterChange to update parent component
     onFilterChange(updatedFilters);
-    
-    // Close the advanced search dropdown
-    setAdvancedSearchOpen(false);
   };
   
   const resetAdvancedSearch = () => {
@@ -589,251 +586,266 @@ const SearchBar = ({ onSearch, onFilterChange, currentFilters }) => {
           Advanced Search
         </button>
         
-        {/* Advanced Search Dropdown Panel */}
+        {/* Advanced Search Modal */}
         {advancedSearchOpen && (
-          <div className="absolute right-0 mt-2 w-96 bg-white border border-gray-300 rounded-lg shadow-lg z-20 p-4">
-            <h3 className="text-lg font-medium text-blue-900 mb-4 border-b pb-2">Advanced Search Options</h3>
-            
-            {/* Search Term */}
-            <div className="mb-4">
-              <label className="block text-sm font-medium text-gray-700 mb-1">Search Term</label>
-              <input 
-                type="text" 
-                className="w-full p-2 border border-gray-300 rounded focus:ring-2 focus:ring-blue-500 focus:border-blue-500"
-                placeholder="Enter keywords..."
-                value={searchTerm}
-                onChange={handleSearchChange}
-              />
-            </div>
-            
-            {/* Subject Multi-select */}
-            <div className="mb-4">
-              <label className="block text-sm font-medium text-gray-700 mb-1">Subjects</label>
-              <div className="relative">
+          <div className="fixed inset-0 bg-black bg-opacity-25 z-50 flex items-center justify-center overflow-y-auto">
+            <div className="relative bg-white border border-gray-300 rounded-lg shadow-lg p-6 w-96 max-w-[95%] max-h-[90vh] overflow-y-auto m-4">
+              <button
+                onClick={() => setAdvancedSearchOpen(false)}
+                className="absolute top-3 right-3 text-gray-500 hover:text-gray-700"
+                aria-label="Close advanced search"
+              >
+                <svg xmlns="http://www.w3.org/2000/svg" className="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M6 18L18 6M6 6l12 12" />
+                </svg>
+              </button>
+              
+              <h3 className="text-lg font-medium text-blue-900 mb-4 border-b pb-2">Advanced Search Options</h3>
+              
+              {/* Search Term */}
+              <div className="mb-4">
+                <label className="block text-sm font-medium text-gray-700 mb-1">Search Term</label>
                 <input 
                   type="text" 
                   className="w-full p-2 border border-gray-300 rounded focus:ring-2 focus:ring-blue-500 focus:border-blue-500"
-                  placeholder="Search subjects..."
-                  value={subjectSearchTerm}
-                  onChange={(e) => setSubjectSearchTerm(e.target.value)}
-                  onClick={(e) => e.stopPropagation()}
+                  placeholder="Enter keywords..."
+                  value={searchTerm}
+                  onChange={handleSearchChange}
                 />
+              </div>
+              
+              {/* Subject Multi-select */}
+              <div className="mb-4">
+                <label className="block text-sm font-medium text-gray-700 mb-1">Subjects</label>
+                <div className="relative">
+                  <input 
+                    type="text" 
+                    className="w-full p-2 border border-gray-300 rounded focus:ring-2 focus:ring-blue-500 focus:border-blue-500"
+                    placeholder="Search subjects..."
+                    value={subjectSearchTerm}
+                    onChange={(e) => setSubjectSearchTerm(e.target.value)}
+                    onClick={(e) => e.stopPropagation()}
+                  />
+                  
+                  {subjectSearchTerm && (
+                    <div className="absolute z-10 mt-1 w-full bg-white border border-gray-300 rounded-lg shadow-lg max-h-40 overflow-y-auto">
+                      {filteredSubjects.length > 0 ? (
+                        filteredSubjects.map((subject, index) => (
+                          <button
+                            key={index}
+                            className="w-full text-left px-4 py-2 hover:bg-gray-100 focus:outline-none focus:bg-gray-100"
+                            onClick={() => handleSubjectSelection(subject)}
+                          >
+                            {subject}
+                          </button>
+                        ))
+                      ) : (
+                        <div className="px-4 py-2 text-gray-500 italic">
+                          No matching subjects found
+                        </div>
+                      )}
+                    </div>
+                  )}
+                </div>
                 
-                {subjectSearchTerm && (
-                  <div className="absolute z-10 mt-1 w-full bg-white border border-gray-300 rounded-lg shadow-lg max-h-40 overflow-y-auto">
-                    {filteredSubjects.length > 0 ? (
-                      filteredSubjects.map((subject, index) => (
+                {/* Selected Subjects Tags */}
+                {selectedSubjects.length > 0 && (
+                  <div className="mt-2 flex flex-wrap gap-2">
+                    {selectedSubjects.map((subject, index) => (
+                      <div 
+                        key={index}
+                        className="inline-flex items-center bg-blue-100 text-blue-800 px-3 py-1 rounded-full text-sm"
+                      >
+                        {subject}
                         <button
-                          key={index}
-                          className="w-full text-left px-4 py-2 hover:bg-gray-100 focus:outline-none focus:bg-gray-100"
-                          onClick={() => handleSubjectSelection(subject)}
+                          onClick={() => handleRemoveSubject(subject)}
+                          className="ml-2 text-blue-600 hover:text-blue-800 focus:outline-none"
                         >
-                          {subject}
+                          <svg xmlns="http://www.w3.org/2000/svg" className="h-4 w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M6 18L18 6M6 6l12 12" />
+                          </svg>
                         </button>
-                      ))
-                    ) : (
-                      <div className="px-4 py-2 text-gray-500 italic">
-                        No matching subjects found
                       </div>
-                    )}
+                    ))}
                   </div>
                 )}
               </div>
               
-              {/* Selected Subjects Tags */}
-              {selectedSubjects.length > 0 && (
-                <div className="mt-2 flex flex-wrap gap-2">
-                  {selectedSubjects.map((subject, index) => (
-                    <div 
-                      key={index}
-                      className="inline-flex items-center bg-blue-100 text-blue-800 px-3 py-1 rounded-full text-sm"
-                    >
-                      {subject}
-                      <button
-                        onClick={() => handleRemoveSubject(subject)}
-                        className="ml-2 text-blue-600 hover:text-blue-800 focus:outline-none"
-                      >
-                        <svg xmlns="http://www.w3.org/2000/svg" className="h-4 w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M6 18L18 6M6 6l12 12" />
-                        </svg>
-                      </button>
+              {/* SCQF Credit Level */}
+              <div className="mb-4">
+                <label className="block text-sm font-medium text-gray-700 mb-1 flex items-center">
+                  SCQF Credit Level
+                  <div className="relative ml-1 group">
+                    <span className="cursor-help text-gray-500">
+                      <svg xmlns="http://www.w3.org/2000/svg" className="h-4 w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 16h-1v-4h-1m1-4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
+                      </svg>
+                    </span>
+                    <div className="absolute left-0 bottom-full mb-2 w-64 bg-black text-white text-xs rounded p-2 hidden group-hover:block z-10">
+                      <p>SCQF Level 7-10: Undergraduate levels</p>
+                      <p>SCQF Level 11-12: Postgraduate levels</p>
+                      <p>Level 7 = Year 1, Level 8 = Year 2, etc.</p>
+                      <div className="absolute left-0 top-full w-3 h-3 bg-black transform rotate-45"></div>
                     </div>
+                  </div>
+                </label>
+                <div className="flex flex-wrap gap-2">
+                  {[7, 8, 9, 10, 11, 12].map((level) => (
+                    <label key={level} className="inline-flex items-center">
+                      <input 
+                        type="checkbox" 
+                        checked={creditLevels.includes(level)} 
+                        onChange={() => handleCreditLevelToggle(level)}
+                        className="h-4 w-4 text-blue-600 focus:ring-blue-500 border-gray-300 rounded"
+                      />
+                      <span className="ml-2 text-sm text-gray-700">{level}</span>
+                    </label>
                   ))}
                 </div>
-              )}
-            </div>
-            
-            {/* SCQF Credit Level */}
-            <div className="mb-4">
-              <label className="block text-sm font-medium text-gray-700 mb-1 flex items-center">
-                SCQF Credit Level
-                <div className="relative ml-1 group">
-                  <span className="cursor-help text-gray-500">
-                    <svg xmlns="http://www.w3.org/2000/svg" className="h-4 w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 16h-1v-4h-1m1-4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
-                    </svg>
-                  </span>
-                  <div className="absolute left-0 bottom-full mb-2 w-64 bg-black text-white text-xs rounded p-2 hidden group-hover:block z-10">
-                    <p>SCQF Level 7-10: Undergraduate levels</p>
-                    <p>SCQF Level 11-12: Postgraduate levels</p>
-                    <p>Level 7 = Year 1, Level 8 = Year 2, etc.</p>
-                    <div className="absolute left-0 top-full w-3 h-3 bg-black transform rotate-45"></div>
-                  </div>
+              </div>
+              
+              {/* Credit Volume Range */}
+              <div className="mb-4">
+                <label className="block text-sm font-medium text-gray-700 mb-1">SCQF Credit Volume</label>
+                <div className="flex items-center gap-2">
+                  <input
+                    type="number"
+                    min="0"
+                    max="120"
+                    value={minCredits}
+                    onChange={handleMinCreditsChange}
+                    className="w-20 p-2 border border-gray-300 rounded focus:ring-2 focus:ring-blue-500 focus:border-blue-500"
+                  />
+                  <span>to</span>
+                  <input
+                    type="number"
+                    min="0"
+                    max="120"
+                    value={maxCredits}
+                    onChange={handleMaxCreditsChange}
+                    className="w-20 p-2 border border-gray-300 rounded focus:ring-2 focus:ring-blue-500 focus:border-blue-500"
+                  />
                 </div>
-              </label>
-              <div className="flex flex-wrap gap-2">
-                {[7, 8, 9, 10, 11, 12].map((level) => (
-                  <label key={level} className="inline-flex items-center">
+              </div>
+              
+              {/* Year Filter */}
+              <div className="mb-4">
+                <label className="block text-sm font-medium text-gray-700 mb-1">Year</label>
+                <div className="flex flex-wrap gap-2">
+                  {[1, 2, 3, 4, 5].map((year) => (
+                    <label key={year} className="inline-flex items-center">
+                      <input 
+                        type="checkbox" 
+                        checked={yearFilters.includes(year)} 
+                        onChange={() => handleYearFilterToggle(year)}
+                        className="h-4 w-4 text-blue-600 focus:ring-blue-500 border-gray-300 rounded"
+                      />
+                      <span className="ml-2 text-sm text-gray-700">Year {year}</span>
+                    </label>
+                  ))}
+                </div>
+              </div>
+              
+              {/* Course Level */}
+              <div className="mb-4">
+                <label className="block text-sm font-medium text-gray-700 mb-1">Course Level</label>
+                <div className="flex gap-4">
+                  <label className="inline-flex items-center">
                     <input 
-                      type="checkbox" 
-                      checked={creditLevels.includes(level)} 
-                      onChange={() => handleCreditLevelToggle(level)}
-                      className="h-4 w-4 text-blue-600 focus:ring-blue-500 border-gray-300 rounded"
+                      type="radio" 
+                      name="courseLevel" 
+                      value="undergraduate"
+                      checked={courseLevel === 'undergraduate'} 
+                      onChange={() => handleCourseLevelChange('undergraduate')}
+                      className="h-4 w-4 text-blue-600 focus:ring-blue-500 border-gray-300"
                     />
-                    <span className="ml-2 text-sm text-gray-700">{level}</span>
+                    <span className="ml-2 text-sm text-gray-700">Undergraduate</span>
                   </label>
-                ))}
-              </div>
-            </div>
-            
-            {/* Credit Volume Range */}
-            <div className="mb-4">
-              <label className="block text-sm font-medium text-gray-700 mb-1">SCQF Credit Volume</label>
-              <div className="flex items-center gap-2">
-                <input
-                  type="number"
-                  min="0"
-                  max="120"
-                  value={minCredits}
-                  onChange={handleMinCreditsChange}
-                  className="w-20 p-2 border border-gray-300 rounded focus:ring-2 focus:ring-blue-500 focus:border-blue-500"
-                />
-                <span>to</span>
-                <input
-                  type="number"
-                  min="0"
-                  max="120"
-                  value={maxCredits}
-                  onChange={handleMaxCreditsChange}
-                  className="w-20 p-2 border border-gray-300 rounded focus:ring-2 focus:ring-blue-500 focus:border-blue-500"
-                />
-              </div>
-            </div>
-            
-            {/* Year Filter */}
-            <div className="mb-4">
-              <label className="block text-sm font-medium text-gray-700 mb-1">Year</label>
-              <div className="flex flex-wrap gap-2">
-                {[1, 2, 3, 4, 5].map((year) => (
-                  <label key={year} className="inline-flex items-center">
+                  <label className="inline-flex items-center">
                     <input 
-                      type="checkbox" 
-                      checked={yearFilters.includes(year)} 
-                      onChange={() => handleYearFilterToggle(year)}
-                      className="h-4 w-4 text-blue-600 focus:ring-blue-500 border-gray-300 rounded"
+                      type="radio" 
+                      name="courseLevel" 
+                      value="postgraduate"
+                      checked={courseLevel === 'postgraduate'} 
+                      onChange={() => handleCourseLevelChange('postgraduate')}
+                      className="h-4 w-4 text-blue-600 focus:ring-blue-500 border-gray-300"
                     />
-                    <span className="ml-2 text-sm text-gray-700">Year {year}</span>
+                    <span className="ml-2 text-sm text-gray-700">Postgraduate</span>
                   </label>
-                ))}
+                </div>
               </div>
-            </div>
-            
-            {/* Course Level */}
-            <div className="mb-4">
-              <label className="block text-sm font-medium text-gray-700 mb-1">Course Level</label>
-              <div className="flex gap-4">
+              
+              {/* Visiting Students */}
+              <div className="mb-4">
                 <label className="inline-flex items-center">
                   <input 
-                    type="radio" 
-                    name="courseLevel" 
-                    value="undergraduate"
-                    checked={courseLevel === 'undergraduate'} 
-                    onChange={() => handleCourseLevelChange('undergraduate')}
-                    className="h-4 w-4 text-blue-600 focus:ring-blue-500 border-gray-300"
+                    type="checkbox" 
+                    checked={visitingStudents} 
+                    onChange={handleVisitingStudentsChange}
+                    className="h-4 w-4 text-blue-600 focus:ring-blue-500 border-gray-300 rounded"
                   />
-                  <span className="ml-2 text-sm text-gray-700">Undergraduate</span>
-                </label>
-                <label className="inline-flex items-center">
-                  <input 
-                    type="radio" 
-                    name="courseLevel" 
-                    value="postgraduate"
-                    checked={courseLevel === 'postgraduate'} 
-                    onChange={() => handleCourseLevelChange('postgraduate')}
-                    className="h-4 w-4 text-blue-600 focus:ring-blue-500 border-gray-300"
-                  />
-                  <span className="ml-2 text-sm text-gray-700">Postgraduate</span>
+                  <span className="ml-2 text-sm text-gray-700">Available to Visiting Students</span>
                 </label>
               </div>
-            </div>
-            
-            {/* Visiting Students */}
-            <div className="mb-4">
-              <label className="inline-flex items-center">
-                <input 
-                  type="checkbox" 
-                  checked={visitingStudents} 
-                  onChange={handleVisitingStudentsChange}
-                  className="h-4 w-4 text-blue-600 focus:ring-blue-500 border-gray-300 rounded"
-                />
-                <span className="ml-2 text-sm text-gray-700">Available to Visiting Students</span>
-              </label>
-            </div>
-            
-            {/* Delivery Method */}
-            <div className="mb-4">
-              <label className="block text-sm font-medium text-gray-700 mb-1">Delivery Method</label>
-              <select 
-                value={deliveryMethod} 
-                onChange={handleDeliveryMethodChange}
-                className="w-full p-2 border border-gray-300 rounded focus:ring-2 focus:ring-blue-500 focus:border-blue-500"
-              >
-                <option value="">Any</option>
-                <option value="in-person">In-Person</option>
-                <option value="online">Online</option>
-                <option value="hybrid">Hybrid</option>
-              </select>
-            </div>
-            
-            {/* Show Unavailable Courses */}
-            <div className="mb-4">
-              <label className="inline-flex items-center">
-                <input 
-                  type="checkbox" 
-                  checked={showUnavailableCourses} 
-                  onChange={handleShowUnavailableCoursesChange}
-                  className="h-4 w-4 text-blue-600 focus:ring-blue-500 border-gray-300 rounded"
-                />
-                <span className="ml-2 text-sm text-gray-700">Show Unavailable Courses</span>
-                <div className="relative ml-1 group">
-                  <span className="cursor-help text-gray-500">
-                    <svg xmlns="http://www.w3.org/2000/svg" className="h-4 w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 16h-1v-4h-1m1-4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
-                    </svg>
-                  </span>
-                  <div className="absolute left-0 bottom-full mb-2 w-64 bg-black text-white text-xs rounded p-2 hidden group-hover:block z-10">
-                    <p>Include courses with "Not delivered this year" status.</p>
-                    <p>By default, these courses are hidden.</p>
-                    <div className="absolute left-0 top-full w-3 h-3 bg-black transform rotate-45"></div>
+              
+              {/* Delivery Method */}
+              <div className="mb-4">
+                <label className="block text-sm font-medium text-gray-700 mb-1">Delivery Method</label>
+                <select 
+                  value={deliveryMethod} 
+                  onChange={handleDeliveryMethodChange}
+                  className="w-full p-2 border border-gray-300 rounded focus:ring-2 focus:ring-blue-500 focus:border-blue-500"
+                >
+                  <option value="">Any</option>
+                  <option value="in-person">In-Person</option>
+                  <option value="online">Online</option>
+                  <option value="hybrid">Hybrid</option>
+                </select>
+              </div>
+              
+              {/* Show Unavailable Courses */}
+              <div className="mb-4">
+                <label className="inline-flex items-center">
+                  <input 
+                    type="checkbox" 
+                    checked={showUnavailableCourses} 
+                    onChange={handleShowUnavailableCoursesChange}
+                    className="h-4 w-4 text-blue-600 focus:ring-blue-500 border-gray-300 rounded"
+                  />
+                  <span className="ml-2 text-sm text-gray-700">Show Unavailable Courses</span>
+                  <div className="relative ml-1 group">
+                    <span className="cursor-help text-gray-500">
+                      <svg xmlns="http://www.w3.org/2000/svg" className="h-4 w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 16h-1v-4h-1m1-4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
+                      </svg>
+                    </span>
+                    <div className="absolute left-0 bottom-full mb-2 w-64 bg-black text-white text-xs rounded p-2 hidden group-hover:block z-10">
+                      <p>Include courses with "Not delivered this year" status.</p>
+                      <p>By default, these courses are hidden.</p>
+                      <div className="absolute left-0 top-full w-3 h-3 bg-black transform rotate-45"></div>
+                    </div>
                   </div>
-                </div>
-              </label>
-            </div>
-            
-            {/* Action Buttons */}
-            <div className="flex justify-between mt-6">
-              <button
-                onClick={resetAdvancedSearch}
-                className="px-4 py-2 border border-gray-300 rounded-lg text-gray-700 hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-gray-500"
-              >
-                Reset
-              </button>
-              <button
-                onClick={applyAdvancedSearch}
-                className="px-4 py-2 bg-blue-700 text-white rounded-lg hover:bg-blue-800 focus:outline-none focus:ring-2 focus:ring-blue-500"
-              >
-                Apply Filters
-              </button>
+                </label>
+              </div>
+              
+              {/* Action Buttons */}
+              <div className="flex justify-between mt-6">
+                <button
+                  onClick={resetAdvancedSearch}
+                  className="px-4 py-2 border border-gray-300 rounded-lg text-gray-700 hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-gray-500"
+                >
+                  Reset
+                </button>
+                <button
+                  onClick={() => {
+                    applyAdvancedSearch();
+                    setAdvancedSearchOpen(false);
+                  }}
+                  className="px-4 py-2 bg-blue-700 text-white rounded-lg hover:bg-blue-800 focus:outline-none focus:ring-2 focus:ring-blue-500"
+                >
+                  Apply Filters
+                </button>
+              </div>
             </div>
           </div>
         )}
