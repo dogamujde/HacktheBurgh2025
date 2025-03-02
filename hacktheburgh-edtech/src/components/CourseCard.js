@@ -46,6 +46,16 @@ const CourseCard = ({ course }) => {
       displayLevel = fullLevelInfo;
     }
   }
+  
+  // Extract the year information if available
+  let displayYear = null;
+  if (fullLevelInfo) {
+    // Try to extract year from formats like "SCQF Level 8 (Year 2 Undergraduate)"
+    const yearMatch = fullLevelInfo.match(/Year (\d+)/i);
+    if (yearMatch && yearMatch[1]) {
+      displayYear = yearMatch[1];
+    }
+  }
 
   // Check if course is online
   const isOnline = course.delivery_method?.toLowerCase().includes('online') || 
@@ -183,6 +193,7 @@ const CourseCard = ({ course }) => {
           <div className="flex items-center justify-between mt-auto">
             <span className="inline-flex items-center px-3 py-1 text-sm font-medium rounded-full bg-blue-100 text-blue-800">
               {course.credits || 'N/A'} Credits • Level {displayLevel}
+              {displayYear && ` • Year ${displayYear}`}
             </span>
             
             {/* Call to action text */}
