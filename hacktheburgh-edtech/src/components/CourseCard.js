@@ -1,6 +1,24 @@
 import React, { useState } from 'react';
 import Link from 'next/link';
 
+// Format the period value for use in the PATH.is URL
+const formatPeriodForURL = (period) => {
+  if (!period) return "";
+  return period
+    .replace("Semester 1", "SEM1")
+    .replace("Semester 2", "SEM2")
+    .replace("Full Year", "YR") // Full Year should be "YR"
+    .replace(/\s+/g, ""); // Remove any spaces
+};
+
+// Construct the official course URL for PATH
+const getPathURL = (courseCode, availability, period) => {
+  const formattedPeriod = formatPeriodForURL(period);
+  // Use availability or default to SV1 if not available
+  const formattedAvailability = availability || "SV1";
+  return `https://path.is.ed.ac.uk/courses/${courseCode}_${formattedAvailability}_${formattedPeriod}`;
+};
+
 /**
  * CourseCard component displays a course in a card format with flip animation
  * @param {Object} course - The course object containing details
@@ -266,9 +284,18 @@ const CourseCard = ({ course }) => {
       
       {/* Add proper Link for navigation separate from flip behavior */}
       <div className="mt-2 text-center">
-        <Link href={`/course/${course.code}`} className="text-blue-600 text-xs hover:text-blue-800 hover:underline">
-          View full course details →
-        </Link>
+        <a 
+          href={getPathURL(course.code, course.availability, course.period)}
+          target="_blank"
+          rel="noopener noreferrer"
+          className="text-blue-600 text-xs hover:text-blue-800 hover:underline flex items-center justify-center"
+          onClick={(e) => e.stopPropagation()} // Prevent card flip when clicking the link
+        >
+          View on PATH
+          <svg xmlns="http://www.w3.org/2000/svg" className="h-3 w-3 ml-1" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14" />
+          </svg>
+        </a>
       </div>
     </div>
   );

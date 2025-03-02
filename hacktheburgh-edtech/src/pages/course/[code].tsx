@@ -11,6 +11,8 @@ type CourseDetail = {
   semester: string;
   year: string;
   delivery: string;
+  availability: string;
+  period: string;
   course_description?: string;
   learning_outcomes?: string[];
   assessment_methods?: string;
@@ -55,6 +57,24 @@ export default function CourseDetail() {
 
     fetchCourseDetails();
   }, [code]);
+
+  // Format the period value for use in the PATH.is URL
+  const formatPeriodForURL = (period) => {
+    if (!period) return "";
+    return period
+      .replace("Semester 1", "SEM1")
+      .replace("Semester 2", "SEM2")
+      .replace("Full Year", "YR") // Full Year should be "YR"
+      .replace(/\s+/g, ""); // Remove any spaces
+  };
+
+  // Construct the official course URL for PATH
+  const getPathURL = (courseCode, availability, period) => {
+    const formattedPeriod = formatPeriodForURL(period);
+    // Use availability or default to SV1 if not available
+    const formattedAvailability = availability || "SV1";
+    return `https://path.is.ed.ac.uk/courses/${courseCode}_${formattedAvailability}_${formattedPeriod}`;
+  };
 
   // Helper function to render course attributes
   const renderAttribute = (label: string, value: string | string[] | undefined) => {
@@ -164,6 +184,19 @@ export default function CourseDetail() {
             <div className="px-4 py-5 sm:px-6 bg-blue-900 text-white">
               <h1 className="text-2xl font-bold">{course.code} - {course.title}</h1>
               <p className="mt-1 max-w-2xl text-lg">{course.credits} Credits • Level {course.level}</p>
+              
+              {/* Add the PATH.is external link button */}
+              <a 
+                href={getPathURL(course.code, course.availability, course.period)}
+                target="_blank" 
+                rel="noopener noreferrer"
+                className="mt-3 inline-flex items-center px-4 py-2 border border-transparent text-sm font-medium rounded-md shadow-sm text-blue-900 bg-white hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-blue-500"
+              >
+                <svg xmlns="http://www.w3.org/2000/svg" className="h-4 w-4 mr-2" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14" />
+                </svg>
+                View on PATH
+              </a>
             </div>
             <div className="border-t border-gray-200 px-4 py-5 sm:px-6">
               <dl className="divide-y divide-gray-200">

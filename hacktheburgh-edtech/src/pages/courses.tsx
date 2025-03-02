@@ -10,6 +10,26 @@ type Course = {
   level: string;
   semester: string;
   year: string;
+  availability?: string;
+  period?: string;
+};
+
+// Format the period value for use in the PATH.is URL
+const formatPeriodForURL = (period) => {
+  if (!period) return "";
+  return period
+    .replace("Semester 1", "SEM1")
+    .replace("Semester 2", "SEM2")
+    .replace("Full Year", "YR") // Full Year should be "YR"
+    .replace(/\s+/g, ""); // Remove any spaces
+};
+
+// Construct the official course URL for PATH
+const getPathURL = (courseCode, availability, period) => {
+  const formattedPeriod = formatPeriodForURL(period);
+  // Use availability or default to SV1 if not available
+  const formattedAvailability = availability || "SV1";
+  return `https://path.is.ed.ac.uk/courses/${courseCode}_${formattedAvailability}_${formattedPeriod}`;
 };
 
 export default function Courses() {
@@ -113,9 +133,17 @@ export default function Courses() {
                 {courses.map((course, index) => (
                   <tr key={index} className="hover:bg-gray-50">
                     <td className="whitespace-nowrap py-4 pl-4 pr-3 text-sm font-medium text-blue-600 sm:pl-6">
-                      <Link href={`/course/${course.code}`}>
-                        <span className="hover:underline">{course.code}</span>
-                      </Link>
+                      <a 
+                        href={getPathURL(course.code, course.availability, course.period || course.semester)}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="hover:underline flex items-center"
+                      >
+                        {course.code}
+                        <svg xmlns="http://www.w3.org/2000/svg" className="h-3.5 w-3.5 ml-1" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14" />
+                        </svg>
+                      </a>
                     </td>
                     <td className="whitespace-nowrap px-3 py-4 text-sm text-gray-900">{course.title}</td>
                     <td className="whitespace-nowrap px-3 py-4 text-sm text-gray-500">{course.credits}</td>
