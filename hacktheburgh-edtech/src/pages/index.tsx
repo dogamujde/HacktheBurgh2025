@@ -44,7 +44,7 @@ export default function Home() {
   const [selectedSchools, setSelectedSchools] = useState<string[]>([]);
   const [showCourseCards, setShowCourseCards] = useState(true);
   const [currentPage, setCurrentPage] = useState(1);
-  const coursesPerPage = 3;
+  const coursesPerPage = 6;
   
   // Courses state
   const [courses, setCourses] = useState<Course[]>([]);
@@ -790,6 +790,9 @@ export default function Home() {
     setCurrentPage(pageNumber);
     // Scroll to top when changing pages
     window.scrollTo(0, 0);
+    
+    // Dispatch a custom event to reset all course cards to collapsed state
+    document.dispatchEvent(new CustomEvent('resetCourseCards'));
   };
 
   return (

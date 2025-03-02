@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import Link from 'next/link';
 
 // Format the period value for use in the PATH.is URL
@@ -26,6 +26,21 @@ const getPathURL = (courseCode, availability, period) => {
  */
 const CourseCard = ({ course }) => {
   const [isFlipped, setIsFlipped] = useState(false);
+
+  // Add event listener to reset card state when navigating between pages
+  useEffect(() => {
+    const resetCardState = () => {
+      setIsFlipped(false);
+    };
+
+    // Listen for the custom reset event
+    document.addEventListener('resetCourseCards', resetCardState);
+
+    // Clean up the event listener when the component unmounts
+    return () => {
+      document.removeEventListener('resetCourseCards', resetCardState);
+    };
+  }, []);
 
   // Handle potential null or undefined course
   if (!course) {
