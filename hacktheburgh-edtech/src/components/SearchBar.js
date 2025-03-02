@@ -1,6 +1,6 @@
 import { useState, useEffect, useRef, useCallback } from 'react';
 
-const SearchBar = ({ onSearch, onFilterChange }) => {
+const SearchBar = ({ onSearch, onFilterChange, currentFilters }) => {
   // Basic search states
   const [searchTerm, setSearchTerm] = useState('');
   const [selectedSchools, setSelectedSchools] = useState([]);
@@ -24,6 +24,24 @@ const SearchBar = ({ onSearch, onFilterChange }) => {
   const [courseLevel, setCourseLevel] = useState('');
   const [visitingStudents, setVisitingStudents] = useState(false);
   const [deliveryMethod, setDeliveryMethod] = useState('');
+  const [showUnavailableCourses, setShowUnavailableCourses] = useState(false);
+  
+  // Synchronize with parent component filters when they change
+  useEffect(() => {
+    if (currentFilters) {
+      setSearchTerm(currentFilters.searchTerm || '');
+      setSelectedSchools(currentFilters.schools || []);
+      setSelectedSubjects(currentFilters.subjects || []);
+      setCreditLevels(currentFilters.creditLevels || []);
+      setMinCredits(currentFilters.credits?.min || '0');
+      setMaxCredits(currentFilters.credits?.max || '120');
+      setYearFilters(currentFilters.years || []);
+      setCourseLevel(currentFilters.courseLevel || '');
+      setVisitingStudents(currentFilters.visitingStudents || false);
+      setDeliveryMethod(currentFilters.deliveryMethod || '');
+      setShowUnavailableCourses(currentFilters.showUnavailableCourses || false);
+    }
+  }, [currentFilters]);
   
   // Combined filters state
   const [activeFilters, setActiveFilters] = useState({
@@ -35,7 +53,8 @@ const SearchBar = ({ onSearch, onFilterChange }) => {
     years: [],
     courseLevel: '',
     visitingStudents: false,
-    deliveryMethod: ''
+    deliveryMethod: '',
+    showUnavailableCourses: false
   });
   
   // Fetch schools for the dropdown
@@ -118,12 +137,16 @@ const SearchBar = ({ onSearch, onFilterChange }) => {
     console.log(`Selected school: "${school}"`);
     
     // First check if it's already in the selected schools list
-    if (selectedSchools.some(s => s.toLowerCase() === school.toLowerCase())) {
+    if (selectedSchools.some(s => 
+      typeof s === 'string' 
+        ? s.toLowerCase() === school.toLowerCase()
+        : s.name.toLowerCase() === school.toLowerCase()
+    )) {
       console.log(`School "${school}" already selected, skipping`);
       return;
     }
     
-    // Add the school to the list
+    // Add the school to the list as a string
     const updatedSchools = [...selectedSchools, school];
     setSelectedSchools(updatedSchools);
     
@@ -148,10 +171,16 @@ const SearchBar = ({ onSearch, onFilterChange }) => {
   const handleRemoveSchool = (schoolToRemove) => {
     console.log(`Removing school: "${schoolToRemove}"`);
     
-    // Remove the school from the list
-    const updatedSchools = selectedSchools.filter(
-      school => school.toLowerCase() !== schoolToRemove.toLowerCase()
-    );
+    // Remove the school from the list, handling both string and object schools
+    const updatedSchools = selectedSchools.filter(school => {
+      if (typeof school === 'string') {
+        return school.toLowerCase() !== schoolToRemove.toLowerCase();
+      } else if (school && school.name) {
+        return school.name.toLowerCase() !== schoolToRemove.toLowerCase();
+      }
+      return true;
+    });
+    
     setSelectedSchools(updatedSchools);
     
     // Update active filters
@@ -180,9 +209,10 @@ const SearchBar = ({ onSearch, onFilterChange }) => {
     setCourseLevel('');
     setVisitingStudents(false);
     setDeliveryMethod('');
+    setShowUnavailableCourses(false);
     
     // Reset all active filters
-    setActiveFilters({
+    const resetFilters = {
       searchTerm: '',
       schools: [],
       subjects: [],
@@ -191,9 +221,18 @@ const SearchBar = ({ onSearch, onFilterChange }) => {
       years: [],
       courseLevel: '',
       visitingStudents: false,
-      deliveryMethod: ''
-    });
-  }, []);
+      deliveryMethod: '',
+      showUnavailableCourses: false
+    };
+    
+    setActiveFilters(resetFilters);
+    
+    // Call onFilterChange to update parent component
+    onFilterChange(resetFilters);
+    
+    // Call onSearch to immediately update search results
+    onSearch('', []);
+  }, [onFilterChange, onSearch]);
   
   const handleSubjectSelection = (subject) => {
     if (!selectedSubjects.includes(subject)) {
@@ -310,6 +349,17 @@ const SearchBar = ({ onSearch, onFilterChange }) => {
     }));
   };
   
+  const handleShowUnavailableCoursesChange = () => {
+    const newValue = !showUnavailableCourses;
+    setShowUnavailableCourses(newValue);
+    
+    // Update active filters with the new availability option
+    setActiveFilters(prev => ({
+      ...prev,
+      showUnavailableCourses: newValue
+    }));
+  };
+  
   const handleDeliveryMethodChange = (e) => {
     const value = e.target.value;
     setDeliveryMethod(value);
@@ -323,7 +373,7 @@ const SearchBar = ({ onSearch, onFilterChange }) => {
   
   const applyAdvancedSearch = () => {
     // Update active filters with all current filter states
-    setActiveFilters({
+    const updatedFilters = {
       searchTerm,
       schools: selectedSchools,
       subjects: selectedSubjects,
@@ -332,8 +382,14 @@ const SearchBar = ({ onSearch, onFilterChange }) => {
       years: yearFilters,
       courseLevel,
       visitingStudents,
-      deliveryMethod
-    });
+      deliveryMethod,
+      showUnavailableCourses
+    };
+    
+    setActiveFilters(updatedFilters);
+    
+    // Call onFilterChange to update parent component
+    onFilterChange(updatedFilters);
     
     // Close the advanced search dropdown
     setAdvancedSearchOpen(false);
@@ -349,18 +405,25 @@ const SearchBar = ({ onSearch, onFilterChange }) => {
     setCourseLevel('');
     setVisitingStudents(false);
     setDeliveryMethod('');
+    setShowUnavailableCourses(false);
     
     // Update active filters with reset advanced search values
-    setActiveFilters(prev => ({
-      ...prev,
+    const updatedFilters = {
+      ...activeFilters,
       subjects: [],
       creditLevels: [],
       credits: { min: '0', max: '120' },
       years: [],
       courseLevel: '',
       visitingStudents: false,
-      deliveryMethod: ''
-    }));
+      deliveryMethod: '',
+      showUnavailableCourses: false
+    };
+    
+    setActiveFilters(updatedFilters);
+    
+    // Call onFilterChange to update parent component
+    onFilterChange(updatedFilters);
   };
   
   // Filter schools based on search term - make sure we handle case sensitivity properly
@@ -371,9 +434,14 @@ const SearchBar = ({ onSearch, onFilterChange }) => {
         const searchTermLower = schoolSearchTerm.toLowerCase();
         
         // Check if it's already selected - with proper case-insensitive comparison
-        const isAlreadySelected = selectedSchools.some(
-          selected => selected.toLowerCase() === schoolLower
-        );
+        const isAlreadySelected = selectedSchools.some(selected => {
+          if (typeof selected === 'string') {
+            return selected.toLowerCase() === schoolLower;
+          } else if (selected && selected.name) {
+            return selected.name.toLowerCase() === schoolLower;
+          }
+          return false;
+        });
         
         const matches = schoolLower.includes(searchTermLower) && !isAlreadySelected;
         
@@ -391,9 +459,14 @@ const SearchBar = ({ onSearch, onFilterChange }) => {
     : schools.filter(school => {
         // Check if it's already selected - with case insensitivity
         const schoolLower = school.toLowerCase();
-        const isAlreadySelected = selectedSchools.some(
-          selected => selected.toLowerCase() === schoolLower
-        );
+        const isAlreadySelected = selectedSchools.some(selected => {
+          if (typeof selected === 'string') {
+            return selected.toLowerCase() === schoolLower;
+          } else if (selected && selected.name) {
+            return selected.name.toLowerCase() === schoolLower;
+          }
+          return false;
+        });
         
         return !isAlreadySelected;
       });
@@ -402,7 +475,10 @@ const SearchBar = ({ onSearch, onFilterChange }) => {
   const getSchoolButtonText = () => {
     if (isLoading) return 'Loading schools...';
     if (selectedSchools.length === 0) return 'Select schools';
-    if (selectedSchools.length === 1) return selectedSchools[0];
+    if (selectedSchools.length === 1) {
+      const school = selectedSchools[0];
+      return typeof school === 'string' ? school : (school && school.name ? school.name : 'School');
+    }
     return `${selectedSchools.length} schools selected`;
   };
   
@@ -421,7 +497,8 @@ const SearchBar = ({ onSearch, onFilterChange }) => {
                              visitingStudents || 
                              deliveryMethod !== '' ||
                              minCredits !== '0' || 
-                             maxCredits !== '120';
+                             maxCredits !== '120' ||
+                             showUnavailableCourses;
 
   return (
     <div className="w-full max-w-4xl mx-auto my-6 px-4">
@@ -505,7 +582,7 @@ const SearchBar = ({ onSearch, onFilterChange }) => {
           >
             {hasAdvancedFilters && (
               <span className="inline-flex items-center justify-center w-5 h-5 mr-2 text-xs bg-white text-blue-800 rounded-full">
-                {selectedSubjects.length + creditLevels.length + yearFilters.length + (courseLevel ? 1 : 0) + (visitingStudents ? 1 : 0) + (deliveryMethod ? 1 : 0) + ((minCredits !== '0' || maxCredits !== '120') ? 1 : 0)}
+                {selectedSubjects.length + creditLevels.length + yearFilters.length + (courseLevel ? 1 : 0) + (visitingStudents ? 1 : 0) + (deliveryMethod ? 1 : 0) + ((minCredits !== '0' || maxCredits !== '120') ? 1 : 0) + (showUnavailableCourses ? 1 : 0)}
               </span>
             )}
             Advanced Search
@@ -717,6 +794,31 @@ const SearchBar = ({ onSearch, onFilterChange }) => {
                 </select>
               </div>
               
+              {/* Show Unavailable Courses */}
+              <div className="mb-4">
+                <label className="inline-flex items-center">
+                  <input 
+                    type="checkbox" 
+                    checked={showUnavailableCourses} 
+                    onChange={handleShowUnavailableCoursesChange}
+                    className="h-4 w-4 text-blue-600 focus:ring-blue-500 border-gray-300 rounded"
+                  />
+                  <span className="ml-2 text-sm text-gray-700">Show Unavailable Courses</span>
+                  <div className="relative ml-1 group">
+                    <span className="cursor-help text-gray-500">
+                      <svg xmlns="http://www.w3.org/2000/svg" className="h-4 w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 16h-1v-4h-1m1-4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
+                      </svg>
+                    </span>
+                    <div className="absolute left-0 bottom-full mb-2 w-64 bg-black text-white text-xs rounded p-2 hidden group-hover:block z-10">
+                      <p>Include courses with "Not delivered this year" status.</p>
+                      <p>By default, these courses are hidden.</p>
+                      <div className="absolute left-0 top-full w-3 h-3 bg-black transform rotate-45"></div>
+                    </div>
+                  </div>
+                </label>
+              </div>
+              
               {/* Action Buttons */}
               <div className="flex justify-between mt-6">
                 <button
@@ -742,23 +844,26 @@ const SearchBar = ({ onSearch, onFilterChange }) => {
         {/* Selected Schools Tags */}
         {selectedSchools.length > 0 && (
           <div className="flex flex-wrap gap-2 mb-2">
-            {selectedSchools.map((school, index) => (
-              <div 
-                key={index}
-                className="inline-flex items-center bg-gray-200 text-gray-800 px-3 py-1 rounded-full text-sm"
-              >
-                {school}
-                <button
-                  onClick={() => handleRemoveSchool(school)}
-                  className="ml-2 text-gray-600 hover:text-gray-800 focus:outline-none"
-                  aria-label={`Remove ${school}`}
+            {selectedSchools.map((school, index) => {
+              const schoolName = typeof school === 'string' ? school : (school && school.name ? school.name : 'School');
+              return (
+                <div 
+                  key={index}
+                  className="inline-flex items-center bg-gray-200 text-gray-800 px-3 py-1 rounded-full text-sm"
                 >
-                  <svg xmlns="http://www.w3.org/2000/svg" className="h-4 w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M6 18L18 6M6 6l12 12" />
-                  </svg>
-                </button>
-              </div>
-            ))}
+                  {schoolName}
+                  <button
+                    onClick={() => handleRemoveSchool(schoolName)}
+                    className="ml-2 text-gray-600 hover:text-gray-800 focus:outline-none"
+                    aria-label={`Remove ${schoolName}`}
+                  >
+                    <svg xmlns="http://www.w3.org/2000/svg" className="h-4 w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M6 18L18 6M6 6l12 12" />
+                    </svg>
+                  </button>
+                </div>
+              );
+            })}
           </div>
         )}
         
@@ -825,6 +930,13 @@ const SearchBar = ({ onSearch, onFilterChange }) => {
             {deliveryMethod && (
               <div className="inline-flex items-center bg-teal-100 text-teal-800 px-3 py-1 rounded-full text-sm">
                 {deliveryMethod === 'in-person' ? 'In-Person' : deliveryMethod === 'online' ? 'Online' : 'Hybrid'}
+              </div>
+            )}
+            
+            {/* Show Unavailable Courses */}
+            {showUnavailableCourses && (
+              <div className="inline-flex items-center bg-orange-100 text-orange-800 px-3 py-1 rounded-full text-sm">
+                Including Unavailable Courses
               </div>
             )}
           </div>

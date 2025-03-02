@@ -31,7 +31,34 @@ export default async function handler(
   }
 
   try {
-    const { school, search } = req.query;
+    const { 
+      schools, 
+      search,
+      subjects,
+      creditLevels,
+      minCredits,
+      maxCredits,
+      years,
+      courseLevel,
+      visitingStudents,
+      deliveryMethod,
+      showUnavailableCourses 
+    } = req.query;
+    
+    console.log('API request received:', { 
+      schools, 
+      search,
+      subjects,
+      creditLevels,
+      minCredits,
+      maxCredits,
+      years,
+      courseLevel,
+      visitingStudents,
+      deliveryMethod,
+      showUnavailableCourses
+    });
+
     const coursesDir = path.join(process.cwd(), '..', 'scraped_data', 'courses');
     
     // Check if directory exists
@@ -56,7 +83,7 @@ export default async function handler(
     let totalInvalid = 0;
     let schoolsChecked: string[] = [];
     
-    const schoolsList = school ? (school as string).split(',') : [];
+    const schoolsList = schools ? (schools as string).split(',') : [];
     console.log('Requested schools:', schoolsList);
     
     // If schools are requested, first check all files regardless of name
@@ -91,6 +118,13 @@ export default async function handler(
                 });
                 
                 if (!matchesRequestedSchool) {
+                  return false;
+                }
+              }
+              
+              // Filter out courses not delivered this year unless showUnavailableCourses is true
+              if (showUnavailableCourses !== 'true') {
+                if (course.period && course.period === "Not delivered this year") {
                   return false;
                 }
               }
@@ -135,10 +169,36 @@ export default async function handler(
 // Helper function to handle the alternative path
 function altPathHandler(req: NextApiRequest, res: NextApiResponse<ResponseData>) {
   try {
-    const { school, search } = req.query;
+    const { 
+      schools, 
+      search,
+      subjects,
+      creditLevels,
+      minCredits,
+      maxCredits,
+      years,
+      courseLevel,
+      visitingStudents,
+      deliveryMethod,
+      showUnavailableCourses 
+    } = req.query;
+    
     const coursesDir = path.join(process.cwd(), 'scraped_data', 'courses');
     
     console.log(`Using path: ${coursesDir}`);
+    console.log('API request received:', { 
+      schools, 
+      search,
+      subjects,
+      creditLevels,
+      minCredits,
+      maxCredits,
+      years,
+      courseLevel,
+      visitingStudents,
+      deliveryMethod,
+      showUnavailableCourses
+    });
     
     const files = fs.readdirSync(coursesDir);
     let allCourses: Course[] = [];
@@ -146,7 +206,7 @@ function altPathHandler(req: NextApiRequest, res: NextApiResponse<ResponseData>)
     let totalInvalid = 0;
     let schoolsChecked: string[] = [];
     
-    const schoolsList = school ? (school as string).split(',') : [];
+    const schoolsList = schools ? (schools as string).split(',') : [];
     console.log('Requested schools:', schoolsList);
     
     // If schools are requested, first check all files regardless of name
@@ -179,6 +239,13 @@ function altPathHandler(req: NextApiRequest, res: NextApiResponse<ResponseData>)
                 });
                 
                 if (!matchesRequestedSchool) {
+                  return false;
+                }
+              }
+              
+              // Filter out courses not delivered this year unless showUnavailableCourses is true
+              if (showUnavailableCourses !== 'true') {
+                if (course.period && course.period === "Not delivered this year") {
                   return false;
                 }
               }

@@ -1,6 +1,7 @@
 #!/usr/bin/env python3
 """
 Generate bullet points for courses in a JSON file using OpenAI API.
+Also filters out courses with "period" set to "Not delivered this year".
 
 Usage:
     python generate_bullet_points.py path/to/courses.json
@@ -28,7 +29,7 @@ def generate_bullet_points(text):
     
     try:
         response = client.chat.completions.create(
-            model="gpt-3.5-turbo",
+            model="gpt-4o-mini-2024-07-18",
             messages=[
                 {"role": "system", "content": "You are a helpful academic assistant that creates concise bullet points about university courses."},
                 {"role": "user", "content": f"Generate EXACTLY 3 bullet points that summarize the key aspects of this course. Return ONLY the 3 bullet points without any additional text or numbering. Each bullet point should be prefixed with '• ' and be on a new line.\n\nCourse information: {text}"}
@@ -65,7 +66,9 @@ def generate_bullet_points(text):
 
 def process_json_file(file_path):
     """
-    Process a JSON file containing course information and add bullet points.
+    Process a JSON file containing course information:
+    1. Filter out courses with period "Not delivered this year"
+    2. Add bullet points to remaining courses
     
     Args:
         file_path (str): Path to the JSON file
@@ -90,14 +93,31 @@ def process_json_file(file_path):
             print(f"Error: Expected a list of courses in {file_path}, but got {type(courses)}")
             sys.exit(1)
         
-        total_courses = len(courses)
+        total_courses_original = len(courses)
+        
+        # Filter out courses with period "Not delivered this year"
+        filtered_courses = []
+        removed_courses = 0
+        
+        for course in courses:
+            period = course.get("period", "")
+            if period == "Not delivered this year":
+                removed_courses += 1
+                course_name = course.get('name', course.get('title', 'Unknown'))
+                print(f"Skipping non-delivered course: {course_name}")
+            else:
+                filtered_courses.append(course)
+        
+        # Report on filtered courses
+        total_courses = len(filtered_courses)
+        print(f"\nFiltered out {removed_courses} courses that are not delivered this year.")
+        print(f"Processing {total_courses} remaining courses...")
+        
         updated_courses = 0
         skipped_courses = 0
         
-        print(f"Processing {total_courses} courses...")
-        
-        # Process each course
-        for i, course in enumerate(courses, 1):
+        # Process each remaining course
+        for i, course in enumerate(filtered_courses, 1):
             # Status update
             course_name = course.get('name', course.get('title', 'Unknown'))
             print(f"Processing course {i}/{total_courses}: {course_name}")
@@ -145,10 +165,10 @@ def process_json_file(file_path):
         except Exception as e:
             print(f"Warning: Could not create backup file: {e}")
             
-        # Write updated data back to the file
+        # Write updated data back to the file (using filtered courses)
         try:
             with open(file_path, 'w', encoding='utf-8') as file:
-                json.dump(courses, file, indent=2, ensure_ascii=False)
+                json.dump(filtered_courses, file, indent=2, ensure_ascii=False)
                 file.flush()
                 os.fsync(file.fileno())  # Force write to disk
             print(f"File saved successfully!")
@@ -161,15 +181,20 @@ def process_json_file(file_path):
             with open(file_path, 'r', encoding='utf-8') as file:
                 verify_courses = json.load(file)
                 
-            # Check if the first course has bullet points
-            if verify_courses and len(verify_courses) > 0 and "bullet_points" in verify_courses[0]:
-                print("Verification successful: Bullet points were saved correctly")
+            # Check if the filtered number of courses matches
+            if len(verify_courses) == total_courses:
+                print(f"Verification successful: Saved {total_courses} courses (removed {removed_courses})")
             else:
-                print("WARNING: Verification failed - Could not find bullet points in the saved file")
+                print(f"WARNING: Verification found {len(verify_courses)} courses, expected {total_courses}")
         except Exception as e:
             print(f"Error during verification: {e}")
             
-        print(f"\nSuccess! Updated {updated_courses} courses, skipped {skipped_courses} courses.")
+        print(f"\nSuccess!")
+        print(f"- Original course count: {total_courses_original}")
+        print(f"- Courses removed (not delivered): {removed_courses}")
+        print(f"- Remaining courses: {total_courses}")
+        print(f"- Courses updated with bullet points: {updated_courses}")
+        print(f"- Courses skipped (already had bullet points): {skipped_courses}")
         print(f"File saved: {file_path}")
         
     except Exception as e:
