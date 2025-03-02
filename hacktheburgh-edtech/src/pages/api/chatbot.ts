@@ -33,151 +33,88 @@ type Course = {
  * Load all courses from JSON files in the scraped_data/courses directory
  */
 async function loadAllCourses(): Promise<Course[]> {
+  let allCourses: Course[] = [];
+  let foundAnyDirectory = false;
+  
   try {
-    // Collect all possible directories where course data might be stored
-    const allPossibleDirs = [
-      // Primary paths to check first (these are the most commonly successful paths from logs)
-      path.join(process.cwd(), '..', 'scraped_data', 'courses'),
-      path.join(process.cwd(), 'scraped_data', 'courses'),
-      // Paths extracted from actual log output showing success
-      '/Users/dogamujde/Desktop/hacktheburghEdTech/scraped_data/courses',
-      // Secondary paths
-      path.join(process.cwd(), 'hacktheburgh-edtech', 'scraped_data', 'courses'),
-      path.join(process.cwd(), '..', 'hacktheburgh-edtech', 'scraped_data', 'courses'),
-      path.join(process.cwd(), '..', '..', 'scraped_data', 'courses'),
-      // Additional possible paths based on the project structure
-      path.join(process.cwd(), '..', 'hacktheburghEdTech', 'scraped_data', 'courses'),
-      path.join(process.cwd(), '..', 'Desktop', 'hacktheburghEdTech', 'scraped_data', 'courses'),
-      path.join(process.cwd(), '..', 'Desktop', 'hacktheburghEdTech', 'hacktheburgh-edtech', 'scraped_data', 'courses'),
-      // Sample course directories as a fallback
-      path.join(process.cwd(), 'data', 'courses'),
-      path.join(process.cwd(), 'data'),
-      path.join(process.cwd(), 'samples')
-    ];
+    // First try the path relative to the project root
+    const coursesDir = path.join(process.cwd(), 'scraped_data', 'courses');
     
-    // Ensure we have unique paths
-    const uniquePaths = [...new Set(allPossibleDirs)];
-    
-    let allCourses: Course[] = [];
-    let foundAnyDirectory = false;
-    let foundDirectories: string[] = [];
-    
-    // Detailed logging of the current working directory
-    console.log(`Current working directory: ${process.cwd()}`);
-    
-    // Check all directories and load courses from all that exist
-    for (const coursesDir of uniquePaths) {
-      if (fs.existsSync(coursesDir)) {
-        console.log(`Found primary courses directory: ${coursesDir}`);
-        foundAnyDirectory = true;
-        foundDirectories.push(coursesDir);
+    if (fs.existsSync(coursesDir)) {
+      foundAnyDirectory = true;
+      try {
+        const files = fs.readdirSync(coursesDir).filter(file => file.endsWith('.json'));
         
+        for (const file of files) {
+          try {
+            const filePath = path.join(coursesDir, file);
+            const fileContent = fs.readFileSync(filePath, 'utf8');
+            const courses = JSON.parse(fileContent);
+            
+            if (Array.isArray(courses)) {
+              allCourses = [...allCourses, ...courses];
+              console.log(`Found ${courses.length} matching courses in ${file}`);
+            }
+          } catch (error) {
+            console.error(`Error processing file ${file}:`, error);
+          }
+        }
+      } catch (error) {
+        console.error(`Error reading directory ${coursesDir}:`, error);
+      }
+    } else {
+      // Try the path without the hacktheburgh-edtech prefix
+      const altCoursesDir = path.join(process.cwd(), '..', 'scraped_data', 'courses');
+      
+      if (fs.existsSync(altCoursesDir)) {
+        foundAnyDirectory = true;
         try {
-          const files = fs.readdirSync(coursesDir).filter(file => file.endsWith('.json'));
-          console.log(`Found ${files.length} JSON files in ${coursesDir}`);
+          const files = fs.readdirSync(altCoursesDir).filter(file => file.endsWith('.json'));
           
           for (const file of files) {
-            const filePath = path.join(coursesDir, file);
             try {
+              const filePath = path.join(altCoursesDir, file);
               const fileContent = fs.readFileSync(filePath, 'utf8');
               const courses = JSON.parse(fileContent);
+              
               if (Array.isArray(courses)) {
-                console.log(`Adding ${courses.length} courses from ${file}`);
                 allCourses = [...allCourses, ...courses];
-              } else {
-                console.warn(`File ${file} does not contain an array of courses`);
+                console.log(`Found ${courses.length} matching courses in ${file}`);
               }
             } catch (error) {
-              console.error(`Error reading or parsing file ${file}:`, error);
+              console.error(`Error processing file ${file}:`, error);
             }
           }
         } catch (error) {
-          console.error(`Error reading directory ${coursesDir}:`, error);
+          console.error(`Error reading directory ${altCoursesDir}:`, error);
         }
       } else {
-        console.log(`Directory not found: ${coursesDir}`);
+        console.log(`Directories not found: ${coursesDir} or ${altCoursesDir}`);
       }
     }
-    
-    // If we couldn't find any directories with courses, create a sample course
-    if (!foundAnyDirectory || allCourses.length === 0) {
-      console.warn('No course directories found or no courses loaded, adding a sample course');
-      
-      // Create a sample "Proofs and Problem Solving" course - this was mentioned in previous code
-      const proofsCourse: Course = {
-        code: 'MATH08064',
-        name: 'Proofs and Problem Solving',
-        level: 'SCQF Level 8',
-        credits: '20 credits',
-        year: 'Year 1',
-        course_description: 'This course introduces the fundamental mathematical concepts of proof, problem-solving, and logical reasoning. It covers various proof techniques including direct proof, proof by contradiction, and mathematical induction. The course emphasizes critical thinking and analytical skills essential for higher-level mathematics. Topics include set theory, number theory, combinatorics, and introductory abstract algebra.',
-        bullet_points: [
-          'Learn various proof techniques and logical reasoning',
-          'Develop problem-solving skills through challenging exercises',
-          'Explore fundamental mathematical structures',
-          'Build a foundation for advanced mathematical studies'
-        ],
-        keywords: ['proofs', 'mathematics', 'logic', 'problem solving', 'set theory', 'number theory'],
-        school: 'School of Mathematics',
-        school_name: 'School of Mathematics',
-        availability: 'Available',
-        semester: 'Semester 1',
-        period: 'Full Year',
-        _debug: true  // Mark this as a debug sample course
-      };
-      
-      allCourses.push(proofsCourse);
-      console.log('Added sample Proofs and Problem Solving course');
-    }
-    
-    // Remove duplicate courses by course code
-    const uniqueCourses: { [key: string]: Course } = {};
-    allCourses.forEach(course => {
-      if (course.code) {
-        // If we already have this course, only replace it if the new one has a description
-        if (!uniqueCourses[course.code] || 
-            (!uniqueCourses[course.code].course_description && course.course_description) ||
-            uniqueCourses[course.code]._debug) {  // Always replace debug courses with real data
-          uniqueCourses[course.code] = course;
-        }
-      } else {
-        // For courses without a code, use name as a fallback key
-        const key = `name_${course.name}`;
-        if (!uniqueCourses[key] || 
-            (!uniqueCourses[key].course_description && course.course_description) ||
-            uniqueCourses[key]._debug) {
-          uniqueCourses[key] = course;
-        }
-      }
-    });
-    
-    const dedupedCourses = Object.values(uniqueCourses);
-    
-    console.log(`Loaded ${dedupedCourses.length} unique courses in total from ${allCourses.length} total courses`);
-    
-    if (foundDirectories.length > 0) {
-      console.log(`Successfully loaded from directories: ${foundDirectories.join(', ')}`);
-    }
-    
-    return dedupedCourses;
   } catch (error) {
     console.error('Error loading courses:', error);
+  }
+  
+  // If we couldn't find any directories with courses, create a sample course
+  if (!foundAnyDirectory || allCourses.length === 0) {
+    console.warn('No course directories found or no courses loaded, adding a sample course');
     
-    // Create a sample course in case of errors
+    // Create a sample "Proofs and Problem Solving" course - this was mentioned in previous code
     const proofsCourse: Course = {
       code: 'MATH08064',
       name: 'Proofs and Problem Solving',
       level: 'SCQF Level 8',
       credits: '20 credits',
       year: 'Year 1',
-      course_description: 'This course introduces the fundamental mathematical concepts of proof, problem-solving, and logical reasoning. It covers various proof techniques including direct proof, proof by contradiction, and mathematical induction. The course emphasizes critical thinking and analytical skills essential for higher-level mathematics.',
+      course_description: 'This course introduces the fundamental mathematical concepts of proof, problem-solving, and logical reasoning. It covers various proof techniques including direct proof, proof by contradiction, and mathematical induction. The course emphasizes critical thinking and analytical skills essential for higher-level mathematics. Topics include set theory, number theory, combinatorics, and introductory abstract algebra.',
       bullet_points: [
         'Learn various proof techniques and logical reasoning',
         'Develop problem-solving skills through challenging exercises',
         'Explore fundamental mathematical structures',
         'Build a foundation for advanced mathematical studies'
       ],
-      keywords: ['proofs', 'mathematics', 'logic', 'problem solving'],
+      keywords: ['proofs', 'mathematics', 'logic', 'problem solving', 'set theory', 'number theory'],
       school: 'School of Mathematics',
       school_name: 'School of Mathematics',
       availability: 'Available',
@@ -186,8 +123,39 @@ async function loadAllCourses(): Promise<Course[]> {
       _debug: true  // Mark this as a debug sample course
     };
     
-    return [proofsCourse];
+    allCourses.push(proofsCourse);
+    console.log('Added sample Proofs and Problem Solving course');
+    
+    // Also try to use the sample courses we created earlier
+    try {
+      const samplePath = path.join(process.cwd(), 'scraped_data', 'courses_sample.json');
+      if (fs.existsSync(samplePath)) {
+        const fileContent = fs.readFileSync(samplePath, 'utf8');
+        const courses = JSON.parse(fileContent);
+        
+        if (Array.isArray(courses)) {
+          allCourses = [...allCourses, ...courses];
+          console.log(`Added ${courses.length} courses from courses_sample.json`);
+        }
+      }
+      
+      const samplePath2 = path.join(process.cwd(), 'scraped_data', 'courses_sample2.json');
+      if (fs.existsSync(samplePath2)) {
+        const fileContent = fs.readFileSync(samplePath2, 'utf8');
+        const courses = JSON.parse(fileContent);
+        
+        if (Array.isArray(courses)) {
+          allCourses = [...allCourses, ...courses];
+          console.log(`Added ${courses.length} courses from courses_sample2.json`);
+        }
+      }
+    } catch (error) {
+      console.error('Error loading sample courses:', error);
+    }
   }
+  
+  console.log(`Found ${allCourses.length} total courses`);
+  return allCourses;
 }
 
 /**

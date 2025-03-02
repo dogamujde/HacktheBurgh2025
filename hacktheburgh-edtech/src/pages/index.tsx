@@ -935,14 +935,14 @@ export default function Home() {
                       showUnavailableCourses: false
                     });
                     handleFilterChange({
-                      searchTerm: '',
-                      schools: [],
-                      subjects: [],
-                      creditLevels: [],
-                      credits: { min: '0', max: '120' },
-                      years: [],
-                      courseLevel: '',
-                      visitingStudents: false,
+                    searchTerm: '',
+                    schools: [],
+                    subjects: [],
+                    creditLevels: [],
+                    credits: { min: '0', max: '120' },
+                    years: [],
+                    courseLevel: '',
+                    visitingStudents: false,
                       deliveryMethod: '',
                       showUnavailableCourses: false
                     });

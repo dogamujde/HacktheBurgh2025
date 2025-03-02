@@ -30,7 +30,7 @@ const getPathURL = (courseCode, availability, period) => {
  */
 const CourseCard = ({ course, courseCode: propCourseCode, enableFlipping, inCompareOverlay }) => {
   const [isFlipped, setIsFlipped] = useState(false);
-  const [courseData, setCourseData] = useState(course);
+  const [courseData, setCourseData] = useState(course || null);
   const [isLoading, setIsLoading] = useState(!course && propCourseCode);
   // Import the compare context
   const { compareMode, selectedCards, selectCard } = useCompare();
@@ -42,51 +42,160 @@ const CourseCard = ({ course, courseCode: propCourseCode, enableFlipping, inComp
         setIsLoading(true);
         try {
           const response = await fetch(`/api/course?code=${propCourseCode}`);
-          if (response.ok) {
-            const data = await response.json();
+          if (!response.ok) {
+            throw new Error(`API returned status: ${response.status}`);
+          }
+          const data = await response.json();
+          // Use the data directly without looking for a course property
+          if (data) {
             setCourseData(data);
           } else {
-            console.error('Failed to fetch course data');
+            // Create a placeholder course if API returns no data
+            setCourseData({
+              code: propCourseCode,
+              title: 'Sample Course',
+              name: 'Sample Course',
+              description: 'This is a sample course for demonstration purposes.',
+              course_description: 'This is a sample course for demonstration purposes.',
+              school_name: 'N/A',
+              credits: '20',
+              level: '10',
+              period: 'Semester 1',
+              learning_activities: {
+                lecture_hours: 22,
+                tutorial_hours: 11,
+                lab_hours: 0,
+                independent_study_hours: 167
+              },
+              bullet_points: '• Sample bullet point 1\n• Sample bullet point 2\n• Sample bullet point 3',
+              assessment_formatted: 'Written Exam 70%, Coursework 30%, Practical Exam 0%'
+            });
           }
         } catch (error) {
           console.error('Error fetching course:', error);
+          // Create a placeholder on error
+          setCourseData({
+            code: propCourseCode,
+            title: 'Error Loading Course',
+            name: 'Error Loading Course',
+            description: 'There was an error loading this course.',
+            course_description: 'There was an error loading this course.',
+            school_name: 'N/A',
+            credits: '20',
+            level: '10',
+            period: 'Semester 1'
+          });
         } finally {
           setIsLoading(false);
         }
+      } else if (course) {
+        // If course is provided directly, use it without API call
+        setCourseData(course);
+        setIsLoading(false);
       }
     };
 
     fetchCourse();
-  }, [propCourseCode, course]);
 
-  // Add event listener to reset card state when navigating between pages
-  useEffect(() => {
+    // Reset card state when navigating between pages
     const resetCardState = () => {
       setIsFlipped(false);
     };
 
-    // Listen for the custom reset event
-    document.addEventListener('resetCourseCards', resetCardState);
-
-    // Clean up on unmount
+    window.addEventListener('popstate', resetCardState);
     return () => {
-      document.removeEventListener('resetCourseCards', resetCardState);
+      window.removeEventListener('popstate', resetCardState);
     };
-  }, []);
+  }, [propCourseCode, course]);
 
-  // Extract course details
-  const courseCode = propCourseCode || (courseData?.code || '');
-  const courseTitle = courseData?.name || courseData?.course_name || '';
-  const courseDescription = courseData?.course_description || courseData?.summary || '';
-  const courseCredits = courseData?.credits || '';
-  const courseLevel = courseData?.level || '';
-  const deliveryPeriod = courseData?.period || '';
-  const schoolName = courseData?.school || courseData?.school_name || '';
-  const coursePeriod = courseData?.period || courseData?.delivery_period || 'Unknown period';
-  
-  // Check if the card is selected for comparison
-  const isSelected = compareMode && selectedCards.includes(courseCode);
-  
+  // Extracts activity data (lecture hours, tutorial hours, etc.) from the course
+  const extractActivityData = () => {
+    // If no course data is available yet, return default values
+    if (!courseData) {
+      return {
+        lectureHours: 0,
+        tutorialHours: 0,
+        labHours: 0,
+        independentHours: 0
+      };
+    }
+
+    const activities = {
+      lectureHours: 0,
+      tutorialHours: 0,
+      labHours: 0,
+      independentHours: 0
+    };
+
+    // Check multiple paths to find activities
+    try {
+      // First try learning_activities from DRPS
+      if (courseData?.learning_activities) {
+        // Different formats of learning_activities
+        if (typeof courseData.learning_activities === 'string') {
+          // Parse string format
+          const lectureMatch = courseData.learning_activities.match(/Lecture:\s*(\d+(?:\.\d+)?)\s*hours/i);
+          const tutorialMatch = courseData.learning_activities.match(/Tutorial:\s*(\d+(?:\.\d+)?)\s*hours/i);
+          const labMatch = courseData.learning_activities.match(/Laboratory:\s*(\d+(?:\.\d+)?)\s*hours/i);
+          const independentMatch = courseData.learning_activities.match(/Independent Study:\s*(\d+(?:\.\d+)?)\s*hours/i);
+          
+          activities.lectureHours = lectureMatch ? parseFloat(lectureMatch[1]) : 0;
+          activities.tutorialHours = tutorialMatch ? parseFloat(tutorialMatch[1]) : 0;
+          activities.labHours = labMatch ? parseFloat(labMatch[1]) : 0;
+          activities.independentHours = independentMatch ? parseFloat(independentMatch[1]) : 0;
+        } else if (typeof courseData.learning_activities === 'object') {
+          // Parse object format
+          activities.lectureHours = parseFloat(courseData.learning_activities.lecture_hours || 0);
+          activities.tutorialHours = parseFloat(courseData.learning_activities.tutorial_hours || 0);
+          activities.labHours = parseFloat(courseData.learning_activities.lab_hours || 0);
+          activities.independentHours = parseFloat(courseData.learning_activities.independent_study_hours || 0);
+        }
+      } 
+      // Fallback to individual properties
+      else {
+        activities.lectureHours = parseFloat(courseData?.lecture_hours || 0);
+        activities.tutorialHours = parseFloat(courseData?.tutorial_hours || 0);
+        activities.labHours = parseFloat(courseData?.lab_hours || 0);
+        activities.independentHours = parseFloat(courseData?.independent_study_hours || 0);
+      }
+
+      // Calculate percentages based on total hours
+      const totalHours = activities.lectureHours + activities.tutorialHours + 
+                         activities.labHours + activities.independentHours;
+      
+      if (totalHours > 0) {
+        activities.lectureHours = Math.round((activities.lectureHours / totalHours) * 100);
+        activities.tutorialHours = Math.round((activities.tutorialHours / totalHours) * 100);
+        activities.labHours = Math.round((activities.labHours / totalHours) * 100);
+        activities.independentHours = Math.round((activities.independentHours / totalHours) * 100);
+        
+        // Ensure percentages add up to 100%
+        const sum = activities.lectureHours + activities.tutorialHours + 
+                    activities.labHours + activities.independentHours;
+        
+        if (sum !== 100 && sum > 0) {
+          // Adjust the largest value to make sum 100%
+          const diff = 100 - sum;
+          let largest = 'lectureHours';
+          ['tutorialHours', 'labHours', 'independentHours'].forEach(key => {
+            if (activities[key] > activities[largest]) {
+              largest = key;
+            }
+          });
+          activities[largest] += diff;
+        }
+      }
+    } catch (error) {
+      console.error('Error parsing learning activities:', error);
+    }
+
+    return activities;
+  };
+
+  // Get activity data for THIS SPECIFIC COURSE instance - ensures unique graph per course
+  // Always call useMemo regardless of course data availability
+  const activityData = React.useMemo(() => extractActivityData(), [courseData, propCourseCode]);
+
   // Render loading state
   if (isLoading) {
     return (
@@ -95,38 +204,42 @@ const CourseCard = ({ course, courseCode: propCourseCode, enableFlipping, inComp
           <div className="animate-pulse flex flex-col items-center space-y-4 w-full p-4">
             <div className="h-6 bg-gray-200 rounded w-3/4"></div>
             <div className="h-4 bg-gray-200 rounded w-1/2"></div>
-            <div className="space-y-2 w-full">
-              <div className="h-4 bg-gray-200 rounded w-full"></div>
-              <div className="h-4 bg-gray-200 rounded w-5/6"></div>
-              <div className="h-4 bg-gray-200 rounded w-4/6"></div>
-            </div>
+            <div className="h-24 bg-gray-200 rounded w-full"></div>
+            <div className="h-4 bg-gray-200 rounded w-3/4"></div>
+            <div className="h-4 bg-gray-200 rounded w-1/2"></div>
           </div>
         </div>
       </div>
     );
   }
 
-  // Handle case where data isn't available
-  if (!courseData && !isLoading) {
+  // Handle potential null or undefined course
+  if (!courseData) {
     return (
-      <div className="card-container" style={{ height: '320px', border: '1px solid #e5e7eb' }}>
-        <div className="w-full h-full flex items-center justify-center p-4">
-          <p className="text-gray-500 text-center">Course information not available</p>
-        </div>
+      <div className="bg-white rounded-lg shadow-md p-4 h-64 flex items-center justify-center">
+        <p className="text-gray-500">Course information unavailable</p>
       </div>
     );
   }
 
-  // Check for bullet points in either format (new format 'bulletpoints' or old format 'bullet_points')
-  const hasBulletPoints = (courseData?.bulletpoints && courseData.bulletpoints.trim().length > 0) || 
-                          (courseData?.bullet_points && courseData.bullet_points.trim().length > 0);
+  // Normalize course properties to handle inconsistencies in data structure
+  const courseCodeValue = courseData.code || propCourseCode || '';
+  const courseTitle = courseData.title || courseData.name || 'Untitled Course';
+  const courseDescription = courseData.course_description || courseData.description || '';
+  const schoolName = courseData.school_name || courseData.school || 'Unknown School';
+  const coursePeriod = courseData.period || courseData.delivery_period || '';
+  const bulletPointsContent = courseData.bullet_points || courseData.bulletpoints || '';
   
-  // Get the actual bullet points content
-  const bulletPointsContent = courseData?.bulletpoints || courseData?.bullet_points || '';
-  
-  // Parse bullet points from string to array
+  // Parse bullet points from string to array - handle both newline and bullet point formats
   const bulletPointsArray = bulletPointsContent ? 
-    bulletPointsContent.split('\n').filter(bp => bp.trim()) : [];
+    (bulletPointsContent.includes('\n') ? 
+      bulletPointsContent
+        .split(/[\n•]/) // Split by newlines or bullet points
+        .map(point => point.trim())
+        .filter(point => point.length > 0) 
+      : 
+      bulletPointsContent.split('•').filter(point => point.trim().length > 0).map(point => point.trim())
+    ) : [];
 
   // Safely truncate description to 150 characters if it exists
   const truncatedDescription = courseDescription 
@@ -179,11 +292,11 @@ const CourseCard = ({ course, courseCode: propCourseCode, enableFlipping, inComp
     // Check if we're in compare mode but not in the overlay
     if (compareMode) {
       // If card is already selected for comparison, allow flipping
-      if (selectedCards.includes(courseCode)) {
+      if (selectedCards.includes(courseCodeValue)) {
         setIsFlipped(!isFlipped);
       } else {
         // If card is not selected, select it for comparison (no flipping)
-        selectCard(courseCode);
+        selectCard(courseCodeValue);
       }
     } else {
       // Normal mode - respect the enableFlipping prop
@@ -193,56 +306,6 @@ const CourseCard = ({ course, courseCode: propCourseCode, enableFlipping, inComp
       }
     }
   };
-
-  // Extracts activity data (lecture hours, tutorial hours, etc.) from the course
-  const extractActivityData = () => {
-    const activities = {
-      lectureHours: 0,
-      tutorialHours: 0,
-      labHours: 0,
-      independentHours: 0
-    };
-
-    // Check multiple paths to find activities
-    try {
-      // First try learning_activities from DRPS
-      if (courseData?.learning_activities) {
-        // Different formats of learning_activities
-        if (typeof courseData.learning_activities === 'string') {
-          // Parse string format
-          const lectureMatch = courseData.learning_activities.match(/Lecture:\s*(\d+(?:\.\d+)?)\s*hours/i);
-          const tutorialMatch = courseData.learning_activities.match(/Tutorial:\s*(\d+(?:\.\d+)?)\s*hours/i);
-          const labMatch = courseData.learning_activities.match(/Laboratory:\s*(\d+(?:\.\d+)?)\s*hours/i);
-          const independentMatch = courseData.learning_activities.match(/Independent Study:\s*(\d+(?:\.\d+)?)\s*hours/i);
-          
-          activities.lectureHours = lectureMatch ? parseFloat(lectureMatch[1]) : 0;
-          activities.tutorialHours = tutorialMatch ? parseFloat(tutorialMatch[1]) : 0;
-          activities.labHours = labMatch ? parseFloat(labMatch[1]) : 0;
-          activities.independentHours = independentMatch ? parseFloat(independentMatch[1]) : 0;
-        } else if (typeof courseData.learning_activities === 'object') {
-          // Parse object format
-          activities.lectureHours = parseFloat(courseData.learning_activities.lecture_hours || 0);
-          activities.tutorialHours = parseFloat(courseData.learning_activities.tutorial_hours || 0);
-          activities.labHours = parseFloat(courseData.learning_activities.lab_hours || 0);
-          activities.independentHours = parseFloat(courseData.learning_activities.independent_study_hours || 0);
-        }
-      } 
-      // Fallback to individual properties
-      else {
-        activities.lectureHours = parseFloat(courseData?.lecture_hours || 0);
-        activities.tutorialHours = parseFloat(courseData?.tutorial_hours || 0);
-        activities.labHours = parseFloat(courseData?.lab_hours || 0);
-        activities.independentHours = parseFloat(courseData?.independent_study_hours || 0);
-      }
-    } catch (error) {
-      console.error('Error parsing learning activities:', error);
-    }
-
-    return activities;
-  };
-
-  // Get activity data for THIS SPECIFIC COURSE instance - ensures unique graph per course
-  const activityData = React.useMemo(() => extractActivityData(), [courseCode]);
 
   // Get assessment info - handle multiple possible formats
   let assessmentInfo = {
@@ -392,11 +455,11 @@ const CourseCard = ({ course, courseCode: propCourseCode, enableFlipping, inComp
     <div 
       className={`card-container ${isFlipped ? 'flipped' : ''} 
                  ${compareMode ? 'compare-mode' : ''} 
-                 ${isSelected ? 'selected-for-compare' : ''}`}
+                 ${selectedCards.includes(courseCodeValue) ? 'selected-for-compare' : ''}`}
       style={{ 
         height: '320px',
-        border: isSelected ? '2px solid #3b82f6' : '1px solid #e5e7eb',
-        boxShadow: isSelected ? '0 0 0 4px rgba(59, 130, 246, 0.2)' : ''
+        border: selectedCards.includes(courseCodeValue) ? '2px solid #3b82f6' : '1px solid #e5e7eb',
+        boxShadow: selectedCards.includes(courseCodeValue) ? '0 0 0 4px rgba(59, 130, 246, 0.2)' : ''
       }}
       onClick={handleCardClick}
     >
@@ -407,8 +470,8 @@ const CourseCard = ({ course, courseCode: propCourseCode, enableFlipping, inComp
           {compareMode && (
             <div className="absolute top-2 right-2 z-10">
               <div className={`w-5 h-5 rounded-full flex items-center justify-center 
-                              ${isSelected ? 'bg-blue-500 text-white' : 'bg-gray-200'}`}>
-                {isSelected ? '✓' : '+'}
+                              ${selectedCards.includes(courseCodeValue) ? 'bg-blue-500 text-white' : 'bg-gray-200'}`}>
+                {selectedCards.includes(courseCodeValue) ? '✓' : '+'}
               </div>
             </div>
           )}
@@ -416,22 +479,22 @@ const CourseCard = ({ course, courseCode: propCourseCode, enableFlipping, inComp
           <div>
             {/* Course Title and Code */}
             <h3 className="text-xl font-bold text-blue-900 mb-1">
-              {courseTitle} <span className="font-normal">({courseCode})</span>
+              {courseTitle} <span className="font-normal">({courseCodeValue})</span>
             </h3>
             
             {/* Semester and school info */}
             <p className="text-sm text-gray-500 mb-3">
-              {coursePeriod || 'No semester info'} • {course.school_name || 'Unknown School'}
+              {coursePeriod || 'No semester info'} • {schoolName}
             </p>
             
             {/* Display Bullet Points if available, otherwise show description */}
-            {hasBulletPoints ? (
+            {bulletPointsArray.length > 0 ? (
               <div className="text-gray-700 mb-4">
                 <ul className="space-y-1 text-sm">
                   {bulletPointsArray.map((point, index) => (
                     <li key={index} className="flex items-start">
                       <span className="text-blue-500 mr-2 font-bold">•</span>
-                      <span>{point.startsWith('•') ? point.substring(1).trim() : point}</span>
+                      <span>{point}</span>
                     </li>
                   ))}
                 </ul>
@@ -446,14 +509,14 @@ const CourseCard = ({ course, courseCode: propCourseCode, enableFlipping, inComp
           {/* Credits Badge */}
           <div className="flex items-center justify-between mt-auto">
             <span className="inline-flex items-center px-3 py-1 text-sm font-medium rounded-full bg-blue-100 text-blue-800">
-              {courseCredits} Credits • Level {displayLevel}
+              {courseData?.credits || 'N/A'} Credits • Level {displayLevel}
               {displayYear && ` • Year ${displayYear}`}
             </span>
             
             {/* Call to action text - different based on mode */}
             <span className="text-blue-600 text-sm hover:text-blue-800">
               {compareMode 
-                ? (isSelected ? 'Selected for compare' : 'Click to select') 
+                ? (selectedCards.includes(courseCodeValue) ? 'Selected for compare' : 'Click to select') 
                 : 'Click to see more →'}
             </span>
           </div>
@@ -463,7 +526,7 @@ const CourseCard = ({ course, courseCode: propCourseCode, enableFlipping, inComp
         <div className="card-back p-5 flex flex-col justify-between">
           <div>
             <h3 className="text-lg font-semibold text-blue-900 mb-2">
-              {courseTitle} <span className="text-sm">({courseCode})</span>
+              {courseTitle} <span className="text-sm">({courseCodeValue})</span>
             </h3>
             
             {/* Assessment Information */}
@@ -568,35 +631,35 @@ const CourseCard = ({ course, courseCode: propCourseCode, enableFlipping, inComp
             {/* Activity bars with percentage widths */}
             <div className="flex items-center space-x-1">
               <div className="h-4 bg-blue-500 rounded-l" 
-                style={{ width: `${activityData.lectures}%`, minWidth: activityData.lectures > 0 ? '8px' : '0' }} 
-                title={`Lectures: ${activityData.lectures}%`}>
+                style={{ width: `${activityData.lectureHours}%`, minWidth: activityData.lectureHours > 0 ? '8px' : '0' }} 
+                title={`Lectures: ${activityData.lectureHours}%`}>
               </div>
               <div className="h-4 bg-green-500" 
-                style={{ width: `${activityData.tutorials}%`, minWidth: activityData.tutorials > 0 ? '8px' : '0' }} 
-                title={`Tutorials: ${activityData.tutorials}%`}>
+                style={{ width: `${activityData.tutorialHours}%`, minWidth: activityData.tutorialHours > 0 ? '8px' : '0' }} 
+                title={`Tutorials: ${activityData.tutorialHours}%`}>
               </div>
               <div className="h-4 bg-yellow-500" 
-                style={{ width: `${activityData.lab}%`, minWidth: activityData.lab > 0 ? '8px' : '0' }} 
-                title={`Lab: ${activityData.lab}%`}>
+                style={{ width: `${activityData.labHours}%`, minWidth: activityData.labHours > 0 ? '8px' : '0' }} 
+                title={`Lab: ${activityData.labHours}%`}>
               </div>
               <div className="h-4 bg-purple-500 rounded-r" 
-                style={{ width: `${activityData.independent}%`, minWidth: activityData.independent > 0 ? '8px' : '0' }} 
-                title={`Independent: ${activityData.independent}%`}>
+                style={{ width: `${activityData.independentHours}%`, minWidth: activityData.independentHours > 0 ? '8px' : '0' }} 
+                title={`Independent: ${activityData.independentHours}%`}>
               </div>
             </div>
             {/* Activity labels with percentages */}
             <div className="flex justify-between text-xs mt-1">
-              <span className={`${activityData.lectures > 0 ? 'text-blue-500' : 'text-gray-400'}`}>
-                {activityData.lectures}% Lectures
+              <span className={`${activityData.lectureHours > 0 ? 'text-blue-500' : 'text-gray-400'}`}>
+                {activityData.lectureHours}% Lectures
               </span>
-              <span className={`${activityData.tutorials > 0 ? 'text-green-500' : 'text-gray-400'}`}>
-                {activityData.tutorials}% Tutorials
+              <span className={`${activityData.tutorialHours > 0 ? 'text-green-500' : 'text-gray-400'}`}>
+                {activityData.tutorialHours}% Tutorials
               </span>
-              <span className={`${activityData.lab > 0 ? 'text-yellow-500' : 'text-gray-400'}`}>
-                {activityData.lab}% Lab
+              <span className={`${activityData.labHours > 0 ? 'text-yellow-500' : 'text-gray-400'}`}>
+                {activityData.labHours}% Lab
               </span>
-              <span className={`${activityData.independent > 0 ? 'text-purple-500' : 'text-gray-400'}`}>
-                {activityData.independent}% Independent
+              <span className={`${activityData.independentHours > 0 ? 'text-purple-500' : 'text-gray-400'}`}>
+                {activityData.independentHours}% Independent
               </span>
             </div>
             <div className="text-center text-gray-500 text-xs mt-3">
@@ -609,7 +672,7 @@ const CourseCard = ({ course, courseCode: propCourseCode, enableFlipping, inComp
       {/* Add proper Link for navigation separate from flip behavior */}
       <div className="mt-2 text-center">
         <a 
-          href={getPathURL(courseCode, courseData?.availability, courseData?.period)}
+          href={getPathURL(courseCodeValue, courseData?.availability, courseData?.period)}
           target="_blank"
           rel="noopener noreferrer"
           className="text-blue-600 text-xs hover:text-blue-800 hover:underline flex items-center justify-center"
