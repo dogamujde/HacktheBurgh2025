@@ -9,6 +9,7 @@ const SearchBar = ({ onSearch, onFilterChange }) => {
   const [dropdownOpen, setDropdownOpen] = useState(false);
   const [schoolSearchTerm, setSchoolSearchTerm] = useState('');
   const dropdownRef = useRef(null);
+  const [fetchError, setFetchError] = useState(null);
   
   // Advanced search states
   const [advancedSearchOpen, setAdvancedSearchOpen] = useState(false);
@@ -42,11 +43,12 @@ const SearchBar = ({ onSearch, onFilterChange }) => {
     const fetchSchools = async () => {
       try {
         setIsLoading(true);
+        setFetchError(null);
         const response = await fetch('/api/subjects');
         if (response.ok) {
           const data = await response.json();
           // Extract unique school names
-          const uniqueSchools = [...new Set(data.map(school => school.name))];
+          const uniqueSchools = [...new Set(data.map(school => school.name))].filter(Boolean);
           setSchools(uniqueSchools);
           
           // Mock subjects for the demo - in a real app, you'd fetch these
@@ -57,8 +59,12 @@ const SearchBar = ({ onSearch, onFilterChange }) => {
             'History', 'Philosophy', 'Literature', 'Linguistics'
           ];
           setSubjects(mockSubjects);
+        } else {
+          setFetchError(`Error fetching schools: ${response.status}`);
+          console.error('Error fetching schools:', response.statusText);
         }
       } catch (error) {
+        setFetchError('Failed to fetch schools data');
         console.error('Error fetching schools:', error);
       } finally {
         setIsLoading(false);
@@ -88,11 +94,11 @@ const SearchBar = ({ onSearch, onFilterChange }) => {
   
   // Apply all filters whenever activeFilters changes
   useEffect(() => {
-    if (onSearch) {
+    if (onSearch && typeof onSearch === 'function') {
       onSearch(activeFilters.searchTerm, activeFilters.schools);
     }
     
-    if (onFilterChange) {
+    if (onFilterChange && typeof onFilterChange === 'function') {
       onFilterChange(activeFilters);
     }
   }, [activeFilters, onSearch, onFilterChange]);

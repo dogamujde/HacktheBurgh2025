@@ -173,6 +173,59 @@ export default function Home() {
     // Filter courses based on all active filters
     filterCourses();
   }, [collegesWithSchools, activeFilters]);
+
+  // Effect to fetch courses when year filter or other advanced filters change
+  useEffect(() => {
+    const fetchFilteredCourses = async () => {
+      try {
+        setLoading(true);
+        
+        // Build query parameters for the API request
+        const params = new URLSearchParams();
+        
+        if (activeFilters.searchTerm) {
+          params.append('search', activeFilters.searchTerm);
+        }
+        
+        if (activeFilters.schools.length > 0) {
+          // Just use the first school for simplicity (API limitation)
+          params.append('school', activeFilters.schools[0]);
+        }
+        
+        if (activeFilters.years.length > 0) {
+          params.append('years', activeFilters.years.join(','));
+        }
+        
+        // Fetch courses with filters applied
+        const url = `/api/courses${params.toString() ? `?${params.toString()}` : ''}`;
+        const response = await fetch(url);
+        
+        if (!response.ok) {
+          throw new Error(`Error fetching filtered courses: ${response.status}`);
+        }
+        
+        const data = await response.json();
+        
+        // Update courses with filtered results from API
+        if (activeFilters.years.length > 0 || activeFilters.searchTerm || activeFilters.schools.length > 0) {
+          setFilteredCourses(data.courses || []);
+        } else {
+          // If no filters are active, just filter the existing courses
+          filterCourses();
+        }
+        
+        setLoading(false);
+      } catch (error) {
+        console.error('Error fetching filtered courses:', error);
+        setLoading(false);
+      }
+    };
+    
+    // Only fetch from API when year filters change or when specific filters are applied
+    if (courses.length > 0 && (activeFilters.years.length > 0 || activeFilters.searchTerm || activeFilters.schools.length > 0)) {
+      fetchFilteredCourses();
+    }
+  }, [activeFilters.years, activeFilters.searchTerm, activeFilters.schools]);
   
   // Function to filter courses based on all active filters
   const filterCourses = () => {
@@ -181,17 +234,38 @@ export default function Home() {
     // Filter by search term
     if (activeFilters.searchTerm) {
       const searchLower = activeFilters.searchTerm.toLowerCase();
-      filtered = filtered.filter(course => 
-        course.name.toLowerCase().includes(searchLower) || 
-        course.code.toLowerCase().includes(searchLower) ||
-        (course.course_description && course.course_description.toLowerCase().includes(searchLower))
-      );
+      filtered = filtered.filter(course => {
+        const name = course.name || course.title || '';
+        const description = course.course_description || '';
+        const code = course.code || '';
+        
+        return name.toLowerCase().includes(searchLower) || 
+               code.toLowerCase().includes(searchLower) ||
+               description.toLowerCase().includes(searchLower);
+      });
+      
+      // Sort filtered courses to prioritize matches in the name
+      filtered.sort((a, b) => {
+        const nameA = (a.name || a.title || '').toLowerCase();
+        const nameB = (b.name || b.title || '').toLowerCase();
+        
+        // Check if search term is in the name
+        const searchInNameA = nameA.includes(searchLower);
+        const searchInNameB = nameB.includes(searchLower);
+        
+        // Prioritize courses with search term in name
+        if (searchInNameA && !searchInNameB) return -1;
+        if (!searchInNameA && searchInNameB) return 1;
+        
+        // If both have or don't have the search term in name, keep original order
+        return 0;
+      });
     }
     
     // Filter by schools
     if (activeFilters.schools.length > 0) {
       filtered = filtered.filter(course => 
-        activeFilters.schools.includes(course.school_name)
+        course.school_name && activeFilters.schools.includes(course.school_name)
       );
     }
     
@@ -201,10 +275,44 @@ export default function Home() {
       // This is a placeholder that simulates subject filtering
       filtered = filtered.filter(course => {
         // Simulate matching subjects with course name or description
+        const name = course.name || course.title || '';
+        const description = course.course_description || '';
+        
         return activeFilters.subjects.some(subject => 
-          course.name.includes(subject) || 
-          (course.course_description && course.course_description.includes(subject))
+          name.includes(subject) || 
+          description.includes(subject)
         );
+      });
+    }
+    
+    // Filter by year
+    if (activeFilters.years.length > 0) {
+      filtered = filtered.filter(course => {
+        // Extract year from credit_level or level string (e.g., "SCQF Level 8 (Year 1 Undergraduate)" -> 1)
+        const levelString = course.credit_level || course.level || '';
+        const yearMatch = levelString.match(/Year (\d+)/i);
+        
+        // If there's a direct year match, use it
+        if (yearMatch) {
+          const year = parseInt(yearMatch[1]);
+          return activeFilters.years.includes(year);
+        }
+        
+        // Alternative: Try to infer year from the SCQF level for undergraduate courses
+        const levelMatch = levelString.match(/Level (\d+)/);
+        if (levelMatch && levelString.toLowerCase().includes('undergraduate')) {
+          const level = parseInt(levelMatch[1]);
+          // Map SCQF levels to years (approximate mapping: level 7-8 -> year 1, 9-10 -> year 2, etc.)
+          const year = level >= 7 ? Math.min(Math.ceil((level - 6) / 2), 4) : null;
+          return year && activeFilters.years.includes(year);
+        }
+        
+        // For postgraduate courses, assume they're year 5 if the filter includes year 5
+        if (levelString.toLowerCase().includes('postgraduate')) {
+          return activeFilters.years.includes(5);
+        }
+        
+        return false;
       });
     }
     
@@ -212,7 +320,7 @@ export default function Home() {
     if (activeFilters.creditLevels.length > 0) {
       filtered = filtered.filter(course => {
         // Extract level number from credit_level string (e.g., "SCQF Level 8 (Year 1 Undergraduate)" -> 8)
-        const levelString = course.credit_level || '';
+        const levelString = course.credit_level || course.level || '';
         const levelMatch = levelString.match(/Level (\d+)/);
         const level = levelMatch ? parseInt(levelMatch[1]) : null;
         
@@ -223,8 +331,9 @@ export default function Home() {
     // Filter by credit range
     if (activeFilters.credits.min !== '0' || activeFilters.credits.max !== '120') {
       filtered = filtered.filter(course => {
-        const courseCredits = parseInt(course.credits);
-        return courseCredits >= parseInt(activeFilters.credits.min) && 
+        const courseCredits = parseInt(course.credits || '0');
+        return !isNaN(courseCredits) && 
+               courseCredits >= parseInt(activeFilters.credits.min) && 
                courseCredits <= parseInt(activeFilters.credits.max);
       });
     }
@@ -233,7 +342,7 @@ export default function Home() {
     if (activeFilters.courseLevel) {
       filtered = filtered.filter(course => {
         // Extract level number from credit_level string
-        const levelString = course.credit_level || '';
+        const levelString = course.credit_level || course.level || '';
         const levelMatch = levelString.match(/Level (\d+)/);
         const level = levelMatch ? parseInt(levelMatch[1]) : null;
         

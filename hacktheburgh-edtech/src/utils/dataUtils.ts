@@ -32,7 +32,7 @@ export function filterCourses(
     creditLevel?: string;
   }
 ): Course[] {
-  return courses.filter(course => {
+  let filtered = courses.filter(course => {
     // Check each filter
     if (filters.college && !course.college.toLowerCase().includes(filters.college.toLowerCase())) {
       return false;
@@ -73,6 +73,28 @@ export function filterCourses(
     
     return true;
   });
+  
+  // Sort results if search term is provided to prioritize courses with search term in name
+  if (filters.search) {
+    const searchTerm = filters.search.toLowerCase();
+    filtered.sort((a, b) => {
+      const nameA = a.name.toLowerCase();
+      const nameB = b.name.toLowerCase();
+      
+      // Check if search term is in the name
+      const searchInNameA = nameA.includes(searchTerm);
+      const searchInNameB = nameB.includes(searchTerm);
+      
+      // Prioritize courses with search term in name
+      if (searchInNameA && !searchInNameB) return -1;
+      if (!searchInNameA && searchInNameB) return 1;
+      
+      // If both have or don't have the search term in name, sort alphabetically
+      return nameA.localeCompare(nameB);
+    });
+  }
+  
+  return filtered;
 }
 
 /**
