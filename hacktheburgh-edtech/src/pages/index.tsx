@@ -193,39 +193,71 @@ export default function Home() {
         }
         
         if (activeFilters.years.length > 0) {
+          // Convert years to a comma-separated string - already validated as numeric in SearchBar
           params.append('years', activeFilters.years.join(','));
         }
         
         // Fetch courses with filters applied
         const url = `/api/courses${params.toString() ? `?${params.toString()}` : ''}`;
+        
         const response = await fetch(url);
         
         if (!response.ok) {
-          throw new Error(`Error fetching filtered courses: ${response.status}`);
+          throw new Error(`Error fetching filtered courses: ${response.status} ${response.statusText}`);
         }
         
         const data = await response.json();
         
-        // Update courses with filtered results from API
-        if (activeFilters.years.length > 0 || activeFilters.searchTerm || activeFilters.schools.length > 0) {
-          setFilteredCourses(data.courses || []);
-        } else {
-          // If no filters are active, just filter the existing courses
-          filterCourses();
+        // Apply any client-side filters that aren't handled by the API
+        let filteredResults = data.courses || [];
+        
+        // Filter by additional criteria not handled by the API
+        if (activeFilters.subjects.length > 0 || 
+            activeFilters.creditLevels.length > 0 || 
+            activeFilters.credits.min !== '0' || 
+            activeFilters.credits.max !== '120' ||
+            activeFilters.courseLevel ||
+            activeFilters.visitingStudents ||
+            activeFilters.deliveryMethod) {
+          
+          // Apply these filters client-side
+          if (activeFilters.subjects.length > 0) {
+            filteredResults = filteredResults.filter(course => {
+              const name = course.name || course.title || '';
+              const description = course.course_description || '';
+              return activeFilters.subjects.some(subject => 
+                name.includes(subject) || description.includes(subject)
+              );
+            });
+          }
+          
+          // Continue with other filters as needed...
         }
         
+        // Update the filtered courses state
+        setFilteredCourses(filteredResults);
         setLoading(false);
       } catch (error) {
         console.error('Error fetching filtered courses:', error);
         setLoading(false);
+        
+        // Fallback to client-side filtering if API fails
+        filterCourses();
       }
     };
     
-    // Only fetch from API when year filters change or when specific filters are applied
-    if (courses.length > 0 && (activeFilters.years.length > 0 || activeFilters.searchTerm || activeFilters.schools.length > 0)) {
+    // Only fetch from API when specific filters are applied and we have courses
+    if (courses.length > 0 && (
+      activeFilters.years.length > 0 || 
+      activeFilters.searchTerm || 
+      activeFilters.schools.length > 0
+    )) {
       fetchFilteredCourses();
+    } else if (courses.length > 0) {
+      // Apply filters client-side for other cases
+      filterCourses();
     }
-  }, [activeFilters.years, activeFilters.searchTerm, activeFilters.schools]);
+  }, [activeFilters, courses]);
   
   // Function to filter courses based on all active filters
   const filterCourses = () => {
@@ -289,27 +321,48 @@ export default function Home() {
     if (activeFilters.years.length > 0) {
       filtered = filtered.filter(course => {
         // Extract year from credit_level or level string (e.g., "SCQF Level 8 (Year 1 Undergraduate)" -> 1)
-        const levelString = course.credit_level || course.level || '';
-        const yearMatch = levelString.match(/Year (\d+)/i);
+        const levelString = (course.credit_level || course.level || '').toString();
         
-        // If there's a direct year match, use it
+        // Skip courses with no level information
+        if (!levelString) {
+          return false;
+        }
+        
+        // Direct year pattern matching - this is the most reliable method
+        const yearMatch = levelString.match(/Year (\d+)/i);
         if (yearMatch) {
           const year = parseInt(yearMatch[1]);
           return activeFilters.years.includes(year);
         }
         
-        // Alternative: Try to infer year from the SCQF level for undergraduate courses
-        const levelMatch = levelString.match(/Level (\d+)/);
-        if (levelMatch && levelString.toLowerCase().includes('undergraduate')) {
-          const level = parseInt(levelMatch[1]);
-          // Map SCQF levels to years (approximate mapping: level 7-8 -> year 1, 9-10 -> year 2, etc.)
-          const year = level >= 7 ? Math.min(Math.ceil((level - 6) / 2), 4) : null;
-          return year && activeFilters.years.includes(year);
-        }
-        
-        // For postgraduate courses, assume they're year 5 if the filter includes year 5
+        // For postgraduate courses
         if (levelString.toLowerCase().includes('postgraduate')) {
           return activeFilters.years.includes(5);
+        }
+        
+        // Try to infer year from SCQF level
+        const levelMatch = levelString.match(/Level (\d+)/i);
+        if (levelMatch) {
+          const level = parseInt(levelMatch[1]);
+          
+          // For undergraduate courses
+          if (levelString.toLowerCase().includes('undergraduate')) {
+            // Map SCQF levels to years:
+            // Level 7-8 → Year 1
+            // Level 9 → Year 2
+            // Level 10 → Year 3/4
+            // Level 11+ → Postgraduate
+            if (level === 7 || level === 8) return activeFilters.years.includes(1);
+            if (level === 9) return activeFilters.years.includes(2);
+            if (level === 10) return activeFilters.years.includes(3) || activeFilters.years.includes(4);
+            if (level >= 11) return activeFilters.years.includes(5);
+          }
+          
+          // More general mapping as fallback
+          if (level >= 7 && level <= 10) {
+            const year = Math.min(Math.ceil((level - 6) / 2), 4);
+            return activeFilters.years.includes(year);
+          }
         }
         
         return false;

@@ -215,16 +215,23 @@ const SearchBar = ({ onSearch, onFilterChange }) => {
   };
   
   const handleYearFilterToggle = (year) => {
+    // Ensure we're working with numeric years 
+    const numericYear = parseInt(year);
+    if (isNaN(numericYear)) {
+      console.error('Invalid year value:', year);
+      return;
+    }
+    
     let newYearFilters;
-    if (yearFilters.includes(year)) {
-      newYearFilters = yearFilters.filter(y => y !== year);
+    if (yearFilters.includes(numericYear)) {
+      newYearFilters = yearFilters.filter(y => y !== numericYear);
     } else {
-      newYearFilters = [...yearFilters, year];
+      newYearFilters = [...yearFilters, numericYear];
     }
     
     setYearFilters(newYearFilters);
     
-    // Update active filters with the new year filters
+    // Update active filters with the new year filters (already numeric)
     setActiveFilters(prev => ({
       ...prev,
       years: newYearFilters

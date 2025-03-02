@@ -20,7 +20,7 @@ type ResponseData = {
   error?: string;
 };
 
-export default function handler(
+export default async function handler(
   req: NextApiRequest,
   res: NextApiResponse<ResponseData>
 ) {
@@ -30,43 +30,43 @@ export default function handler(
 
   try {
     const { school, code, search, years } = req.query;
+    
+    console.log('API Request Query Parameters:', {
+      school: school || 'not provided',
+      code: code || 'not provided',
+      search: search || 'not provided',
+      years: years || 'not provided'
+    });
+
     const coursesDir = path.resolve(backendConfig.scrapedDataDir, 'courses');
+    let allCourses: Course[] = [];
     
-    if (!fs.existsSync(coursesDir)) {
-      return res.status(404).json({ error: 'Course data not found' });
-    }
-
-    let courses: Course[] = [];
-
-    // Read all course files
-    const courseFiles = fs.readdirSync(coursesDir);
+    // Read all course data from JSON files
+    const files = fs.readdirSync(coursesDir);
     
-    for (const file of courseFiles) {
-      if (file.endsWith('.json') && !file.endsWith('.bak')) {
-        const filePath = path.join(coursesDir, file);
+    for (const file of files) {
+      if (file.endsWith('.json')) {
         try {
-          const fileContent = fs.readFileSync(filePath, 'utf8');
-          const fileData = JSON.parse(fileContent);
+          const filePath = path.join(coursesDir, file);
+          const fileData = JSON.parse(fs.readFileSync(filePath, 'utf8'));
           
           // Filter by school if provided
-          if (school && !file.includes(school as string)) {
+          if (school && !file.toLowerCase().includes((school as string).toLowerCase())) {
             continue;
           }
           
-          // Add courses from this file to our list
           if (Array.isArray(fileData)) {
-            courses.push(...fileData);
-          } else if (typeof fileData === 'object') {
-            // Handle case where file contains a single course
-            courses.push(fileData);
+            allCourses = [...allCourses, ...fileData];
           }
-        } catch (error) {
-          console.error(`Error reading or parsing ${file}:`, error);
-          // Continue with other files even if one fails
+        } catch (fileError) {
+          console.error(`Error reading/parsing file ${file}:`, fileError);
+          // Continue with other files instead of breaking the entire API
           continue;
         }
       }
     }
+    
+    let courses = allCourses;
     
     // Filter by course code if provided
     if (code) {
@@ -78,36 +78,78 @@ export default function handler(
     
     // Filter by years if provided
     if (years) {
-      // Parse the years from the comma-separated string and convert to numbers
-      const yearValues = (years as string).split(',').map(y => parseInt(y.trim())).filter(y => !isNaN(y));
-      
-      if (yearValues.length > 0) {
-        courses = courses.filter(course => {
-          const levelString = course.level || '';
+      try {
+        // Parse the years from the comma-separated string and convert to numbers
+        const yearValues = (years as string)
+          .split(',')
+          .map(year => year.trim())
+          .map(year => parseInt(year))
+          .filter(year => !isNaN(year));
+        
+        console.log('Years filter (parsed values):', yearValues);
+        
+        if (yearValues.length > 0) {
+          const originalCount = courses.length;
           
-          // Try to extract year directly from the level string
-          const yearMatch = levelString.match(/Year (\d+)/i);
-          if (yearMatch) {
-            const year = parseInt(yearMatch[1]);
-            return yearValues.includes(year);
-          }
+          // Enhanced year extraction and filtering logic
+          courses = courses.filter(course => {
+            // Skip courses without necessary data
+            if (!course) return false;
+            
+            // Extract year from credit_level or level string (e.g., "SCQF Level 8 (Year 1 Undergraduate)" -> 1)
+            const levelString = (course.credit_level || course.level || '').toString();
+            
+            // Skip courses with no level information
+            if (!levelString) {
+              return false;
+            }
+            
+            // Direct year pattern matching - this is the most reliable method
+            const yearMatch = levelString.match(/Year (\d+)/i);
+            if (yearMatch) {
+              const year = parseInt(yearMatch[1]);
+              return yearValues.includes(year);
+            }
+            
+            // For postgraduate courses
+            if (levelString.toLowerCase().includes('postgraduate')) {
+              return yearValues.includes(5);
+            }
+            
+            // Try to infer year from SCQF level
+            const levelMatch = levelString.match(/Level (\d+)/i);
+            if (levelMatch) {
+              const level = parseInt(levelMatch[1]);
+              
+              // For undergraduate courses
+              if (levelString.toLowerCase().includes('undergraduate')) {
+                // Map SCQF levels to years:
+                // Level 7-8 → Year 1
+                // Level 9 → Year 2
+                // Level 10 → Year 3/4
+                // Level 11+ → Postgraduate
+                if (level === 7 || level === 8) return yearValues.includes(1);
+                if (level === 9) return yearValues.includes(2);
+                if (level === 10) return yearValues.includes(3) || yearValues.includes(4);
+                if (level >= 11) return yearValues.includes(5);
+              }
+              
+              // More general mapping as fallback
+              if (level >= 7 && level <= 10) {
+                const year = Math.min(Math.ceil((level - 6) / 2), 4);
+                return yearValues.includes(year);
+              }
+            }
+            
+            return false;
+          });
           
-          // Try to infer year from the SCQF level for undergraduate courses
-          const levelMatch = levelString.match(/Level (\d+)/);
-          if (levelMatch && levelString.toLowerCase().includes('undergraduate')) {
-            const level = parseInt(levelMatch[1]);
-            // Map SCQF levels to years (approximate mapping: level 7-8 -> year 1, 9-10 -> year 2, etc.)
-            const year = level >= 7 ? Math.min(Math.ceil((level - 6) / 2), 4) : null;
-            return year && yearValues.includes(year);
-          }
-          
-          // For postgraduate courses, assume they're year 5 if the filter includes year 5
-          if (levelString.toLowerCase().includes('postgraduate')) {
-            return yearValues.includes(5);
-          }
-          
-          return false;
-        });
+          console.log(`Filtered from ${originalCount} to ${courses.length} courses based on year filter`);
+        } else {
+          console.log('No valid year values provided in years parameter');
+        }
+      } catch (error) {
+        console.error('Error processing years filter:', error);
       }
     }
     
