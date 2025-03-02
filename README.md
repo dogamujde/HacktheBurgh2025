@@ -1,3 +1,27 @@
+# On The Right PATH
+## A Student Experience Project for Hack the Burgh XI
+
+# Intro
+Students have a problem. With over 10,000 courses available at UoE, finding which ones to enrol in is a headache. We want to turn choosing electives into a curiosity-driven delightful experience.
+
+We have access to very rich course data on DRPS and PATH, but navigation is complex and frustrating. At Team 404, we are transforming this complex process into a streamlined, delightful experience. Navigating through course choices now presents you with a smorgasboard of tailored options, with key course info displayed without additional clicks, links, or tiny text.
+
+We worked with a diverse team of students to distill the real pain-points they experience when going through the course selection process. Working collaboratively, we've focused on these key features:
+
+- A modern interface that is highly portable between device sizes enables students to investigate their course choices on the go.
+- Easy to read key information about courses, with links to the full text versions for those who really want to deep dive into reading lists and other info.
+- Critical information that informs real student decision making in an easy-to-digest format. Want to know whether you're going to have to split your time between Central campus and King's next semester? _We got you!_ Clearly visible campus tags help you navigate your courses and the city. Need to plan your workload in advance so you can figure out plans for commuting, part-time work and childcare? _See all assessment modalities for a course up front, so you can make an informed choice._
+
+Team 404's techy & non-technical members are answering real student needs, together!
+
+# Technical Features
+Our stack includes:
+- Python
+- Next JS
+- Tailwind
+- Cursor IDE
+- you.com for logo generation
+
 # University of Edinburgh DRPS Scraper
 
 A web scraper for the University of Edinburgh's Degree Regulations & Programmes of Study (DRPS) website.
