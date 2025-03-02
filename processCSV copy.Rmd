@@ -1,0 +1,31 @@
+---
+title: "Get info from provided datasets"
+output: html_notebook
+---
+
+```{r}
+library(tidyverse)
+library(stringr)
+```
+
+Get cohort sizes
+
+```{r}
+dat <- read.csv("courseAssStructures.cv", sep = ",")
+sdat <- select(dat, Course.Code, Course.Cohort)%>%
+  distinct()
+colnames(sdat)<- c("courseCode", "cohortSize")
+write_csv(sdat, "courseCohortData.csv", quote = "none")
+```
+Get campus info
+
+```{r}
+camp <- read.csv("42 TT Child Data - Sem1 23-24(Sem1 TT).csv")
+scamp <- select(camp, "Module.ID", "Campus")
+scampnew <- scamp %>%
+  separate(Module.ID, into = c("courseCode", "Section", "Term"), sep = "_") %>%
+  select(courseCode, Campus)
+scampnew <- inner_join(sdat, scampnew)
+write_csv(scampnew, "courseLocationData.csv", quote = "none")
+```
+
