@@ -442,8 +442,8 @@ const SearchBar = ({ onSearch, onFilterChange, currentFilters }) => {
         
         const matches = schoolLower.includes(searchTermLower) && !isAlreadySelected;
         
-        // Debug logging
-        if (matches && filteredSchools && filteredSchools.length < 5) {
+        // Debug logging - removed the self-reference to filteredSchools
+        if (matches) {
           console.log('School match in dropdown:', {
             school,
             searchTerm: schoolSearchTerm,

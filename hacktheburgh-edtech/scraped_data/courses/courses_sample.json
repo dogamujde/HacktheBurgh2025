@@ -1,0 +1,79 @@
+[
+  {
+    "code": "INFR11182",
+    "name": "Data Science: Principles and Practice",
+    "period": "Semester 2",
+    "school_name": "School of Informatics",
+    "course_description": "This course will introduce the topics of data science and machine learning by covering foundational statistical principles for handling and learning from data. The course will teach statistical techniques for making more informed decisions and interpreting those results through visualization. The student will learn to implement these techniques in Python, while gaining programming skills such as version control, testing, and efficient programming practices.",
+    "credits": "20",
+    "level": "SCQF Level 11 (Year 5 Postgraduate)",
+    "keywords": ["data science", "machine learning", "statistics", "python"],
+    "bullet_points": ["Learn foundational statistical principles for data science", "Implement machine learning techniques in Python", "Develop skills in data visualization and interpretation"]
+  },
+  {
+    "code": "INFR10069",
+    "name": "Introductory Applied Machine Learning",
+    "period": "Semester 1",
+    "school_name": "School of Informatics",
+    "course_description": "Introduction to the basic principles of machine learning and the kinds of problems that can be solved by such techniques. This course provides an overview of many concepts, techniques, and algorithms in machine learning, beginning with topics such as classification and linear regression and ending up with more recent topics such as boosting, support vector machines, hidden Markov models, and Bayesian networks.",
+    "credits": "20",
+    "level": "SCQF Level 10 (Year 3/4 Undergraduate)",
+    "keywords": ["machine learning", "algorithms", "classification", "regression"],
+    "bullet_points": ["Learn fundamental concepts of machine learning", "Implement classification and regression models", "Gain practical experience with modern ML algorithms"]
+  },
+  {
+    "code": "MATH10093",
+    "name": "Statistical Methods",
+    "period": "Semester 1",
+    "school_name": "School of Mathematics",
+    "course_description": "This course provides an introduction to core statistical concepts and methods with an emphasis on applications. Topics include: exploratory data analysis; probability distributions; estimation; hypothesis testing; p-values; correlation and regression; analysis of categorical data; Bayesian methods; and nonparametric methods.",
+    "credits": "20",
+    "level": "SCQF Level 10 (Year 3 Undergraduate)",
+    "keywords": ["statistics", "data analysis", "probability", "hypothesis testing"],
+    "bullet_points": ["Develop core statistical skills for data analysis", "Learn practical methods for hypothesis testing", "Apply statistical concepts to real-world problems"]
+  },
+  {
+    "code": "INFR09051",
+    "name": "Informatics 2D - Databases",
+    "period": "Semester 2",
+    "school_name": "School of Informatics",
+    "course_description": "This course introduces key concepts and techniques of database management systems, including data modeling, database design, and data querying. The course covers the relational model, SQL, normalization, transaction management, and explores new trends in database technology such as NoSQL databases, distributed databases, and data warehousing.",
+    "credits": "10",
+    "level": "SCQF Level 9 (Year 2 Undergraduate)",
+    "keywords": ["databases", "SQL", "data modeling", "data management"],
+    "bullet_points": ["Understand foundational database concepts", "Develop skills in SQL and data modeling", "Explore trends in modern database technologies"]
+  },
+  {
+    "code": "INFR08025",
+    "name": "Introduction to Data Science",
+    "period": "Semester 1",
+    "school_name": "School of Informatics",
+    "course_description": "This course provides a foundation in data science concepts, tools, and techniques. Students will learn to collect, analyze, and visualize data using Python. The course covers principles of data cleaning, exploratory data analysis, statistical inference, and introduces basic machine learning concepts. Students will work on practical projects to gain hands-on experience.",
+    "credits": "20",
+    "level": "SCQF Level 8 (Year 1 Undergraduate)",
+    "keywords": ["data science", "python", "data analysis", "visualization"],
+    "bullet_points": ["Learn data science fundamentals with Python", "Practice data cleaning and exploratory analysis", "Develop skills in data visualization and presentation"]
+  },
+  {
+    "code": "IMES11019",
+    "name": "Big Data in Marketing",
+    "period": "Semester 2",
+    "school_name": "Business School",
+    "course_description": "This course explores how big data analytics is transforming marketing practices. Students will learn about sources of marketing data, methods for analyzing large datasets, and applications for marketing decision-making. Topics include customer segmentation, predictive analytics, recommendation systems, and ethical considerations in marketing analytics.",
+    "credits": "20",
+    "level": "SCQF Level 11 (Year 5 Postgraduate)",
+    "keywords": ["big data", "marketing analytics", "customer segmentation", "predictive analytics"],
+    "bullet_points": ["Understand how big data is revolutionizing marketing", "Learn analytical methods for customer insights", "Apply big data concepts to marketing problems"]
+  },
+  {
+    "code": "MATH11176",
+    "name": "Statistical Programming",
+    "period": "Semester 1",
+    "school_name": "School of Mathematics",
+    "course_description": "This course provides a practical introduction to statistical programming using R. Students will learn to implement various statistical methods, create visualizations, and develop reproducible analyses. The course covers data manipulation, exploratory data analysis, statistical modeling, and the creation of interactive reports.",
+    "credits": "10",
+    "level": "SCQF Level 11 (Year 5 Postgraduate)",
+    "keywords": ["statistics", "R programming", "data visualization", "statistical computing"],
+    "bullet_points": ["Develop proficiency in R for statistical analysis", "Create effective data visualizations", "Build reproducible statistical workflows"]
+  }
+] 

@@ -3,16 +3,13 @@ import React, { useState, useRef, useEffect } from 'react';
 const Chatbot = () => {
   const [isOpen, setIsOpen] = useState(false);
   const [messages, setMessages] = useState([
-    { 
-      role: 'assistant', 
-      content: 'Hello! I\'m your Edinburgh Course Explorer assistant. How can I help you find the right courses?' 
-    }
+    { role: 'assistant', content: 'Hi there! I can help you find courses based on your interests and year. Just tell me what you\'re interested in and which year you\'re in.' }
   ]);
   const [inputValue, setInputValue] = useState('');
   const [isLoading, setIsLoading] = useState(false);
   const messagesEndRef = useRef(null);
 
-  const toggleChatbot = () => {
+  const toggleChat = () => {
     setIsOpen(!isOpen);
   };
 
@@ -31,57 +28,51 @@ const Chatbot = () => {
   const handleSubmit = async (e) => {
     e.preventDefault();
     
-    if (inputValue.trim() === '') return;
+    if (!inputValue.trim()) return;
     
-    // Add user message to chat
     const userMessage = { role: 'user', content: inputValue };
-    setMessages(prevMessages => [...prevMessages, userMessage]);
+    setMessages(prev => [...prev, userMessage]);
+    
     setInputValue('');
+    
     setIsLoading(true);
     
     try {
-      // Call API endpoint to get response from OpenAI
       const response = await fetch('/api/chatbot', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
         },
-        body: JSON.stringify({ 
+        body: JSON.stringify({
           messages: [...messages, userMessage]
         }),
       });
       
       if (!response.ok) {
-        throw new Error('Failed to get response from chatbot');
+        throw new Error(`Error: ${response.status}`);
       }
       
       const data = await response.json();
       
-      // Add assistant response to chat
-      setMessages(prevMessages => [
-        ...prevMessages, 
-        { role: 'assistant', content: data.message }
-      ]);
+      setMessages(prev => [...prev, { role: 'assistant', content: data.message }]);
     } catch (error) {
-      console.error('Error:', error);
-      setMessages(prevMessages => [
-        ...prevMessages,
-        { 
-          role: 'assistant', 
-          content: 'Sorry, I encountered an error. Please try again later.' 
-        }
-      ]);
+      console.error('Error sending message:', error);
+      
+      setMessages(prev => [...prev, { 
+        role: 'assistant', 
+        content: 'Sorry, I encountered an error. Please try again later.' 
+      }]);
     } finally {
       setIsLoading(false);
     }
   };
 
   return (
-    <div className="fixed bottom-4 right-4 z-50">
-      {/* Chat button */}
+    <div className="fixed bottom-5 right-5 z-50">
       <button
-        onClick={toggleChatbot}
-        className="bg-blue-600 hover:bg-blue-700 text-white rounded-full p-3 shadow-lg focus:outline-none"
+        onClick={toggleChat}
+        className="bg-blue-600 hover:bg-blue-700 text-white p-3 rounded-full shadow-lg flex items-center justify-center"
+        aria-label="Open chat"
       >
         {isOpen ? (
           <svg xmlns="http://www.w3.org/2000/svg" className="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
@@ -94,15 +85,14 @@ const Chatbot = () => {
         )}
       </button>
 
-      {/* Chat window */}
       {isOpen && (
-        <div className="absolute bottom-16 right-0 w-80 sm:w-96 h-96 bg-white rounded-lg shadow-xl overflow-hidden flex flex-col border border-gray-200">
-          {/* Chat header */}
+        <div className="absolute bottom-16 right-0 w-80 sm:w-96 bg-white rounded-lg shadow-xl border border-gray-200 overflow-hidden flex flex-col">
           <div className="bg-blue-600 text-white px-4 py-3 flex justify-between items-center">
-            <h3 className="font-medium">Course Explorer Assistant</h3>
+            <h3 className="font-medium">Edinburgh Course Assistant</h3>
             <button 
-              onClick={toggleChatbot}
-              className="focus:outline-none"
+              onClick={toggleChat}
+              className="text-white hover:text-gray-200"
+              aria-label="Close chat"
             >
               <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M6 18L18 6M6 6l12 12" />
@@ -110,56 +100,56 @@ const Chatbot = () => {
             </button>
           </div>
           
-          {/* Chat messages */}
-          <div className="flex-1 p-4 overflow-y-auto bg-gray-50">
+          <div className="flex-1 p-4 overflow-y-auto max-h-96 bg-gray-50">
             {messages.map((message, index) => (
               <div 
                 key={index} 
-                className={`mb-3 ${
-                  message.role === 'user' ? 'text-right' : 'text-left'
-                }`}
+                className={`mb-3 ${message.role === 'assistant' ? 'text-left' : 'text-right'}`}
               >
                 <div 
-                  className={`inline-block p-2 rounded-lg max-w-[80%] ${
-                    message.role === 'user' 
-                      ? 'bg-blue-600 text-white rounded-tr-none' 
-                      : 'bg-gray-200 text-gray-800 rounded-tl-none'
+                  className={`inline-block px-4 py-2 rounded-lg ${
+                    message.role === 'assistant' 
+                      ? 'bg-white border border-gray-200' 
+                      : 'bg-blue-600 text-white'
                   }`}
                 >
                   {message.content}
                 </div>
               </div>
             ))}
+            
             {isLoading && (
-              <div className="text-left mb-3">
-                <div className="inline-block p-2 rounded-lg max-w-[80%] bg-gray-200 text-gray-800 rounded-tl-none">
-                  <div className="flex space-x-2">
-                    <div className="w-2 h-2 rounded-full bg-gray-500 animate-bounce"></div>
-                    <div className="w-2 h-2 rounded-full bg-gray-500 animate-bounce delay-100"></div>
-                    <div className="w-2 h-2 rounded-full bg-gray-500 animate-bounce delay-200"></div>
+              <div className="mb-3 text-left">
+                <div className="inline-block px-4 py-2 rounded-lg bg-white border border-gray-200">
+                  <div className="flex items-center">
+                    <span className="mr-2">Thinking</span>
+                    <span className="animate-bounce inline-block mx-0.5">.</span>
+                    <span className="animate-bounce inline-block mx-0.5 animation-delay-200">.</span>
+                    <span className="animate-bounce inline-block mx-0.5 animation-delay-400">.</span>
                   </div>
                 </div>
               </div>
             )}
+            
             <div ref={messagesEndRef} />
           </div>
           
-          {/* Chat input */}
-          <form onSubmit={handleSubmit} className="border-t border-gray-200 p-2 flex">
+          <form onSubmit={handleSubmit} className="border-t border-gray-200 p-3 flex">
             <input
               type="text"
               value={inputValue}
               onChange={handleInputChange}
-              placeholder="Type your message..."
-              className="flex-1 p-2 border border-gray-300 rounded-l-lg focus:outline-none focus:ring-2 focus:ring-blue-500"
+              placeholder="Ask about courses..."
+              className="flex-1 border border-gray-300 rounded-l-lg px-3 py-2 focus:outline-none focus:ring-2 focus:ring-blue-500"
+              disabled={isLoading}
             />
             <button
               type="submit"
+              className="bg-blue-600 text-white px-4 py-2 rounded-r-lg hover:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-blue-500"
               disabled={isLoading}
-              className="bg-blue-600 hover:bg-blue-700 text-white p-2 rounded-r-lg disabled:bg-blue-400"
             >
               <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M14 5l7 7m0 0l-7 7m7-7H3" />
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 5l7 7-7 7M5 5l7 7-7 7" />
               </svg>
             </button>
           </form>

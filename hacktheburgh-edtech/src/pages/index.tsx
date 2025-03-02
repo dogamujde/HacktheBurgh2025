@@ -4,6 +4,7 @@ import Link from 'next/link';
 import SearchBar from '../components/SearchBar';
 import CourseCard from '../components/CourseCard';
 import Pagination from '../components/Pagination';
+import Chatbot from '../components/Chatbot';
 
 // Updated types to match the actual data structure
 type College = {
@@ -941,6 +942,9 @@ export default function Home() {
           </div>
         )}
       </main>
+
+      {/* Add Chatbot component */}
+      <Chatbot />
 
       <footer className="bg-blue-900 text-white py-8 mt-12">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
