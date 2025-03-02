@@ -1,0 +1,30 @@
+[
+  {
+    "code": "ARCH10003",
+    "name": "Architectural Design: Tectonics",
+    "url": "http://www.drps.ed.ac.uk/24-25/dpt/cxarch10003.htm",
+    "availability": "SS1",
+    "period": "Semester 2",
+    "credits": "40",
+    "subject": "Architecture and Landscape Architecture",
+    "school_name": "Edinburgh College of Art",
+    "college": "College of Arts, Humanities and Social Sciences",
+    "summary": "This course is focused on extending students' capacity to operate with different approaches to architectural design. Students are asked to develop specific approaches to design problems in a coherent manner, deploying skills in architectural design and communication gained in earlier Stages. The course concentrates on developing architectural designs that integrate programmatic, formal, material, structural and budgetary considerations.",
+    "course_description": "This course is taught through a number of parallel design Studios, focussed on distinctive sub-themes, which students elect to follow. Through a series of design exercises students are supported to research and investigate defined technological themes for architectural exploration, culminating in an architectural design proposal for a specified site and programme.",
+    "bulletpoints": "• Taught through parallel design Studios with distinctive sub-themes\n• Research and investigate technological themes for architectural exploration\n• Culminates in architectural design proposal for a specific site and program"
+  },
+  {
+    "code": "ARTX08001",
+    "name": "Art and Design",
+    "url": "http://www.drps.ed.ac.uk/24-25/dpt/cxartx08001.htm",
+    "availability": "SS1",
+    "period": "Semester 1",
+    "credits": "20",
+    "subject": "Art",
+    "school_name": "Edinburgh College of Art",
+    "college": "College of Arts, Humanities and Social Sciences",
+    "summary": "This course introduces students to a range of art and design disciplines through lectures, studio-based activities and independent exploration of art historical and contemporary contexts. Students develop creative responses to themes and briefs, gaining practical skills in drawing, colour theory, composition and visual communication.",
+    "course_description": "The course comprises a series of lectures and studio workshops that introduce students to a range of art and design disciplines. Students will develop basic skills in research, ideation and development of designs relevant to the different disciplines through response to themes and briefs.",
+    "bulletpoints": "• Series of lectures and studio workshops\n• Introduction to various art and design disciplines\n• Develop basic skills in research, ideation, and design development"
+  }
+]
