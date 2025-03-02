@@ -116,7 +116,11 @@ const CourseCard = ({ course, courseCode: propCourseCode, enableFlipping, inComp
         lectureHours: 0,
         tutorialHours: 0,
         labHours: 0,
-        independentHours: 0
+        independentHours: 0,
+        lecturePercentage: 0,
+        tutorialPercentage: 0,
+        labPercentage: 0,
+        independentPercentage: 0
       };
     }
 
@@ -124,7 +128,11 @@ const CourseCard = ({ course, courseCode: propCourseCode, enableFlipping, inComp
       lectureHours: 0,
       tutorialHours: 0,
       labHours: 0,
-      independentHours: 0
+      independentHours: 0,
+      lecturePercentage: 0,
+      tutorialPercentage: 0,
+      labPercentage: 0,
+      independentPercentage: 0
     };
 
     // Check multiple paths to find activities
@@ -184,20 +192,20 @@ const CourseCard = ({ course, courseCode: propCourseCode, enableFlipping, inComp
                          activities.labHours + activities.independentHours;
       
       if (totalHours > 0) {
-        activities.lectureHours = Math.round((activities.lectureHours / totalHours) * 100);
-        activities.tutorialHours = Math.round((activities.tutorialHours / totalHours) * 100);
-        activities.labHours = Math.round((activities.labHours / totalHours) * 100);
-        activities.independentHours = Math.round((activities.independentHours / totalHours) * 100);
+        activities.lecturePercentage = Math.round((activities.lectureHours / totalHours) * 100);
+        activities.tutorialPercentage = Math.round((activities.tutorialHours / totalHours) * 100);
+        activities.labPercentage = Math.round((activities.labHours / totalHours) * 100);
+        activities.independentPercentage = Math.round((activities.independentHours / totalHours) * 100);
         
         // Ensure percentages add up to 100%
-        const sum = activities.lectureHours + activities.tutorialHours + 
-                    activities.labHours + activities.independentHours;
+        const sum = activities.lecturePercentage + activities.tutorialPercentage + 
+                    activities.labPercentage + activities.independentPercentage;
         
         if (sum !== 100 && sum > 0) {
           // Adjust the largest value to make sum 100%
           const diff = 100 - sum;
-          let largest = 'lectureHours';
-          ['tutorialHours', 'labHours', 'independentHours'].forEach(key => {
+          let largest = 'independentPercentage'; // Default to independent study as it's usually largest
+          ['lecturePercentage', 'tutorialPercentage', 'labPercentage'].forEach(key => {
             if (activities[key] > activities[largest]) {
               largest = key;
             }
@@ -208,10 +216,10 @@ const CourseCard = ({ course, courseCode: propCourseCode, enableFlipping, inComp
     } catch (error) {
       console.error('Error parsing learning activities:', error);
       // Provide fallback data in case of error
-      activities.lectureHours = 30;
-      activities.tutorialHours = 15;
-      activities.labHours = 10;
-      activities.independentHours = 45;
+      activities.lecturePercentage = 30;
+      activities.tutorialPercentage = 15;
+      activities.labPercentage = 10;
+      activities.independentPercentage = 45;
     }
 
     return activities;
@@ -248,13 +256,53 @@ const CourseCard = ({ course, courseCode: propCourseCode, enableFlipping, inComp
   }
 
   // Normalize course properties to handle inconsistencies in data structure
-  const courseCodeValue = courseData.code || propCourseCode || '';
-  const courseTitle = courseData.title || courseData.name || 'Untitled Course';
-  const courseDescription = courseData.course_description || courseData.description || '';
-  const schoolName = courseData.school_name || courseData.school || 'Unknown School';
-  const coursePeriod = courseData.period || courseData.delivery_period || '';
-  const bulletPointsContent = courseData.bullet_points || courseData.bulletpoints || '';
+  const currentCourse = course || courseData;
+  console.log("Processing course data:", currentCourse);
   
+  const courseCodeValue = currentCourse.code || "";
+  const courseTitle = currentCourse.name || "";
+  const courseDescription = currentCourse.course_description || "";
+  const schoolName = currentCourse.school_name || "";
+  const coursePeriod = currentCourse.period || "";
+  const bulletPointsContent = currentCourse.bulletpoints || "";
+  
+  // Normalize campuses to ensure it's always an array
+  let campusesData = currentCourse.campuses || [];
+  
+  // Handle different formats of campus data
+  if (typeof campusesData === 'string') {
+    // If it's a string, convert it to an array with one element
+    campusesData = [campusesData];
+  } else if (!Array.isArray(campusesData)) {
+    // If it's neither a string nor an array, make it an empty array
+    campusesData = [];
+  }
+  
+  console.log(`[${courseCodeValue}] Campus data type:`, typeof campusesData);
+  console.log(`[${courseCodeValue}] Campus data:`, campusesData);
+  
+  // Filter out invalid campuses
+  const validCampuses = campusesData.filter(
+    campus => campus && 
+    campus !== "0" && 
+    campus !== "" && 
+    campus.toLowerCase() !== "not specified"
+  );
+  
+  console.log(`[${courseCodeValue}] Valid campuses:`, validCampuses);
+  console.log(`[${courseCodeValue}] Has valid campuses:`, validCampuses.length > 0);
+  
+  const hasValidCampuses = validCampuses.length > 0;
+  
+  // More detailed debug campus information
+  console.log(`CourseCard ${courseCodeValue} - Processed Campus Data:`, {
+    courseCode: courseCodeValue,
+    originalCampuses: currentCourse?.campuses,
+    normalizedCampusesArray: campusesData,
+    validCampuses,
+    hasValidCampuses
+  });
+
   // Parse bullet points from string to array - handle both newline and bullet point formats
   const bulletPointsArray = bulletPointsContent ? 
     (bulletPointsContent.includes('\n') ? 
@@ -272,7 +320,7 @@ const CourseCard = ({ course, courseCode: propCourseCode, enableFlipping, inComp
     : 'No description available';
 
   // Determine the course level from credit_level or other properties
-  const fullLevelInfo = courseData?.credit_level || courseData?.level || courseData?.scqf_level || '';
+  const fullLevelInfo = currentCourse?.credit_level || currentCourse?.level || currentCourse?.scqf_level || '';
   
   // Extract just the level number if possible
   let displayLevel = 'N/A';
@@ -298,10 +346,10 @@ const CourseCard = ({ course, courseCode: propCourseCode, enableFlipping, inComp
   }
 
   // Check if course is online
-  const isOnline = courseData?.delivery_method?.toLowerCase().includes('online') || 
-                  courseData?.period?.toLowerCase().includes('online') ||
-                  courseData?.summary?.toLowerCase().includes('online') ||
-                  courseData?.course_description?.toLowerCase().includes('online delivery');
+  const isOnline = currentCourse?.delivery_method?.toLowerCase().includes('online') || 
+                  currentCourse?.period?.toLowerCase().includes('online') ||
+                  currentCourse?.summary?.toLowerCase().includes('online') ||
+                  currentCourse?.course_description?.toLowerCase().includes('online delivery');
 
   // Modified handle card click to account for compare mode
   const handleCardClick = (e) => {
@@ -341,65 +389,65 @@ const CourseCard = ({ course, courseCode: propCourseCode, enableFlipping, inComp
   };
 
   // Check different possible assessment data sources, prioritizing assesment_formatted
-  if (courseData?.assesment_formatted) {
+  if (currentCourse?.assesment_formatted) {
     // Parse from formatted assessment string with one 's'
-    const examMatch = courseData.assesment_formatted.match(/Written Exam (\d+) %/);
-    const courseworkMatch = courseData.assesment_formatted.match(/Coursework (\d+) %/);
-    const practicalMatch = courseData.assesment_formatted.match(/Practical Exam (\d+) %/);
+    const examMatch = currentCourse.assesment_formatted.match(/Written Exam (\d+) %/);
+    const courseworkMatch = currentCourse.assesment_formatted.match(/Coursework (\d+) %/);
+    const practicalMatch = currentCourse.assesment_formatted.match(/Practical Exam (\d+) %/);
     
     assessmentInfo = {
       written_exam_percent: examMatch ? parseInt(examMatch[1]) : 0,
       coursework_percent: courseworkMatch ? parseInt(courseworkMatch[1]) : 0,
       practical_exam_percent: practicalMatch ? parseInt(practicalMatch[1]) : 0,
-      full_text: courseData.assesment_formatted
+      full_text: currentCourse.assesment_formatted
     };
-  } else if (courseData?.assessment_formatted) {
+  } else if (currentCourse?.assessment_formatted) {
     // Try parse from formatted assessment string with two 's'
-    const examMatch = courseData.assessment_formatted.match(/Written Exam (\d+) %/);
-    const courseworkMatch = courseData.assessment_formatted.match(/Coursework (\d+) %/);
-    const practicalMatch = courseData.assessment_formatted.match(/Practical Exam (\d+) %/);
+    const examMatch = currentCourse.assessment_formatted.match(/Written Exam (\d+) %/);
+    const courseworkMatch = currentCourse.assessment_formatted.match(/Coursework (\d+) %/);
+    const practicalMatch = currentCourse.assessment_formatted.match(/Practical Exam (\d+) %/);
     
     assessmentInfo = {
       written_exam_percent: examMatch ? parseInt(examMatch[1]) : 0,
       coursework_percent: courseworkMatch ? parseInt(courseworkMatch[1]) : 0,
       practical_exam_percent: practicalMatch ? parseInt(practicalMatch[1]) : 0,
-      full_text: courseData.assessment_formatted
+      full_text: currentCourse.assessment_formatted
     };
-  } else if (courseData?.assesment && typeof courseData.assesment === 'object') {
+  } else if (currentCourse?.assesment && typeof currentCourse.assesment === 'object') {
     // Standard format from scraper with one 's' (assesment)
-    if (courseData.assesment.full_text) {
+    if (currentCourse.assesment.full_text) {
       // Access nested full_text if available
       assessmentInfo = {
         ...assessmentInfo,
-        ...courseData.assesment,
-        full_text: courseData.assesment.full_text
+        ...currentCourse.assesment,
+        full_text: currentCourse.assesment.full_text
       };
     } else {
-      assessmentInfo = courseData.assesment;
+      assessmentInfo = currentCourse.assesment;
     }
-  } else if (courseData?.assessment && typeof courseData.assessment === 'object') {
+  } else if (currentCourse?.assessment && typeof currentCourse.assessment === 'object') {
     // Try with two 's' (assessment) as fallback
-    if (courseData.assessment.full_text) {
+    if (currentCourse.assessment.full_text) {
       // Access nested full_text if available
       assessmentInfo = {
         ...assessmentInfo,
-        ...courseData.assessment,
-        full_text: courseData.assessment.full_text
+        ...currentCourse.assessment,
+        full_text: currentCourse.assessment.full_text
       };
     } else {
-      assessmentInfo = courseData.assessment;
+      assessmentInfo = currentCourse.assessment;
     }
-  } else if (typeof courseData.assesment === 'string') {
+  } else if (typeof currentCourse.assesment === 'string') {
     // If assesment (one 's') is a string, use it as full_text
-    assessmentInfo.full_text = courseData.assesment;
-  } else if (typeof courseData.assessment === 'string') {
+    assessmentInfo.full_text = currentCourse.assesment;
+  } else if (typeof currentCourse.assessment === 'string') {
     // If assessment (two 's') is a string, use it as full_text
-    assessmentInfo.full_text = courseData.assessment;
+    assessmentInfo.full_text = currentCourse.assessment;
   }
 
   // If we have additional assessment info fields, use those as well
-  if (courseData?.additional_assessment_info) {
-    assessmentInfo.full_text += " " + courseData.additional_assessment_info;
+  if (currentCourse?.additional_assessment_info) {
+    assessmentInfo.full_text += " " + currentCourse.additional_assessment_info;
   }
 
   // Special case: If all assessment values are zero, set appropriate message
@@ -504,7 +552,17 @@ const CourseCard = ({ course, courseCode: propCourseCode, enableFlipping, inComp
           <div>
             {/* Course Title and Code */}
             <h3 className="text-xl font-bold text-blue-900 mb-1">
-              {courseTitle} <span className="font-normal">({courseCodeValue})</span>
+              {courseTitle} {hasValidCampuses ? (
+                <span className="font-normal flex items-center inline-flex">
+                  <svg xmlns="http://www.w3.org/2000/svg" className="h-3 w-3 mr-1 text-gray-600" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z" />
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 11a3 3 0 11-6 0 3 3 0 016 0z" />
+                  </svg>
+                  ({validCampuses.join(", ")})
+                </span>
+              ) : (
+                <span className="font-normal text-gray-500">({courseCodeValue})</span>
+              )}
             </h3>
             
             {/* Semester and school info */}
@@ -534,7 +592,7 @@ const CourseCard = ({ course, courseCode: propCourseCode, enableFlipping, inComp
           {/* Credits Badge */}
           <div className="flex items-center justify-between mt-auto">
             <span className="inline-flex items-center px-3 py-1 text-sm font-medium rounded-full bg-blue-100 text-blue-800">
-              {courseData?.credits || 'N/A'} Credits • Level {displayLevel}
+              {currentCourse?.credits || 'N/A'} Credits • Level {displayLevel}
               {displayYear && ` • Year ${displayYear}`}
             </span>
             
@@ -551,8 +609,36 @@ const CourseCard = ({ course, courseCode: propCourseCode, enableFlipping, inComp
         <div className="card-back p-5 flex flex-col justify-between">
           <div>
             <h3 className="text-lg font-semibold text-blue-900 mb-2">
-              {courseTitle} <span className="text-sm">({courseCodeValue})</span>
+              {courseTitle} 
+              {hasValidCampuses ? (
+                <span className="text-sm flex items-center inline-flex">
+                  <svg xmlns="http://www.w3.org/2000/svg" className="h-3 w-3 mr-1 text-gray-600" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z" />
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 11a3 3 0 11-6 0 3 3 0 016 0z" />
+                  </svg>
+                  ({validCampuses.join(", ")})
+                </span>
+              ) : null}
             </h3>
+            
+            {/* Location Information */}
+            {hasValidCampuses ? (
+              <p className="text-sm text-gray-600 mb-2">
+                <svg xmlns="http://www.w3.org/2000/svg" className="h-3 w-3 mr-1 text-gray-600 inline" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z" />
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 11a3 3 0 11-6 0 3 3 0 016 0z" />
+                </svg>
+                Location: {validCampuses.join(", ")}
+              </p>
+            ) : (
+              <p className="text-sm text-gray-500 mb-2">
+                <svg xmlns="http://www.w3.org/2000/svg" className="h-3 w-3 mr-1 text-gray-600 inline" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z" />
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 11a3 3 0 11-6 0 3 3 0 016 0z" />
+                </svg>
+                Location not specified
+              </p>
+            )}
             
             {/* Assessment Information */}
             <div className="mb-2">
@@ -620,9 +706,9 @@ const CourseCard = ({ course, courseCode: propCourseCode, enableFlipping, inComp
               ) : (
                 <p className="text-sm text-gray-700">
                   {/* Try other possible assessment fields */}
-                  {courseData?.assessment_details || courseData?.assessment_method || courseData?.assesment_details || 
-                   (courseData?.assessment_formatted && courseData?.assessment_formatted !== "Assessment (Further Info) Written Exam 0 %, Coursework 0 %, Practical Exam 0 %") ? 
-                    (courseData?.assessment_details || courseData?.assessment_method || courseData?.assesment_details || courseData?.assessment_formatted) : 
+                  {currentCourse?.assessment_details || currentCourse?.assessment_method || currentCourse?.assesment_details || 
+                   (currentCourse?.assessment_formatted && currentCourse?.assessment_formatted !== "Assessment (Further Info) Written Exam 0 %, Coursework 0 %, Practical Exam 0 %") ? 
+                    (currentCourse?.assessment_details || currentCourse?.assessment_method || currentCourse?.assesment_details || currentCourse?.assessment_formatted) : 
                     "Assessment information not provided by DRPS"}
                 </p>
               )}
@@ -636,15 +722,20 @@ const CourseCard = ({ course, courseCode: propCourseCode, enableFlipping, inComp
             )}
             
             {/* Requirements - only show if there's actual content */}
-            {courseData?.pre_requisites && (
+            {currentCourse?.pre_requisites && (
               <div className="mb-2">
-                <h4 className="text-md font-semibold mb-1">Prerequisites:</h4>
-                <p className="text-xs text-gray-700">
-                  {courseData.pre_requisites.trim() === "" ? 
+                <h4 className="text-sm font-semibold mb-1 flex items-center">
+                  <svg xmlns="http://www.w3.org/2000/svg" className="h-4 w-4 mr-1 text-gray-600" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
+                  </svg>
+                  Prerequisites:
+                </h4>
+                <p className="text-xs text-gray-700 ml-5">
+                  {currentCourse.pre_requisites.trim() === "" ? 
                     "None" : 
-                    courseData.pre_requisites.trim().startsWith("Students MUST have passed") ? 
-                      courseData.pre_requisites : 
-                      `Students MUST have passed: ${courseData.pre_requisites}`}
+                    currentCourse.pre_requisites.trim().startsWith("Students MUST have passed") ? 
+                      currentCourse.pre_requisites : 
+                      `Students MUST have passed: ${currentCourse.pre_requisites}`}
                 </p>
               </div>
             )}
@@ -659,7 +750,7 @@ const CourseCard = ({ course, courseCode: propCourseCode, enableFlipping, inComp
                 <>
                   {/* Horizontal bar visualization */}
                   <div className="relative h-3 bg-gray-200 rounded-full overflow-hidden mb-1">
-                    {activityData.lectureHours > 0 && (
+                    {activityData.lecturePercentage > 0 && (
                       <div 
                         className="absolute top-0 left-0 h-full bg-blue-500"
                         style={{ 
@@ -669,7 +760,7 @@ const CourseCard = ({ course, courseCode: propCourseCode, enableFlipping, inComp
                         title={`Lectures: ${activityData.lecturePercentage}%`}
                       ></div>
                     )}
-                    {activityData.tutorialHours > 0 && (
+                    {activityData.tutorialPercentage > 0 && (
                       <div 
                         className="absolute top-0 h-full bg-green-500"
                         style={{ 
@@ -680,7 +771,7 @@ const CourseCard = ({ course, courseCode: propCourseCode, enableFlipping, inComp
                         title={`Tutorials: ${activityData.tutorialPercentage}%`}
                       ></div>
                     )}
-                    {activityData.labHours > 0 && (
+                    {activityData.labPercentage > 0 && (
                       <div 
                         className="absolute top-0 h-full bg-yellow-500"
                         style={{ 
@@ -691,7 +782,7 @@ const CourseCard = ({ course, courseCode: propCourseCode, enableFlipping, inComp
                         title={`Labs: ${activityData.labPercentage}%`}
                       ></div>
                     )}
-                    {activityData.independentHours > 0 && (
+                    {activityData.independentPercentage > 0 && (
                       <div 
                         className="absolute top-0 h-full bg-purple-500"
                         style={{ 
@@ -702,23 +793,23 @@ const CourseCard = ({ course, courseCode: propCourseCode, enableFlipping, inComp
                         title={`Independent Study: ${activityData.independentPercentage}%`}
                       ></div>
                     )}
-                  </div>
+              </div>
                   
                   {/* Percentages as text */}
                   <div className="text-xs flex flex-wrap gap-x-2 gap-y-1">
-                    {activityData.lectureHours > 0 && (
+                    {activityData.lecturePercentage > 0 && (
                       <span><span className="inline-block w-2 h-2 rounded-full bg-blue-500 mr-1"></span>{activityData.lecturePercentage}% Lectures</span>
                     )}
-                    {activityData.tutorialHours > 0 && (
+                    {activityData.tutorialPercentage > 0 && (
                       <span><span className="inline-block w-2 h-2 rounded-full bg-green-500 mr-1"></span>{activityData.tutorialPercentage}% Tutorials</span>
                     )}
-                    {activityData.labHours > 0 && (
+                    {activityData.labPercentage > 0 && (
                       <span><span className="inline-block w-2 h-2 rounded-full bg-yellow-500 mr-1"></span>{activityData.labPercentage}% Lab</span>
                     )}
-                    {activityData.independentHours > 0 && (
+                    {activityData.independentPercentage > 0 && (
                       <span><span className="inline-block w-2 h-2 rounded-full bg-purple-500 mr-1"></span>{activityData.independentPercentage}% Independent</span>
                     )}
-                  </div>
+              </div>
                 </>
               ) : (
                 <p className="text-xs text-gray-500 italic">No activity data available</p>
@@ -733,7 +824,7 @@ const CourseCard = ({ course, courseCode: propCourseCode, enableFlipping, inComp
       {/* Add proper Link for navigation separate from flip behavior */}
       <div className="mt-2 text-center">
         <a 
-          href={getPathURL(courseCodeValue, courseData?.availability, courseData?.period)}
+          href={getPathURL(courseCodeValue, currentCourse?.availability, currentCourse?.period)}
           target="_blank"
           rel="noopener noreferrer"
           className="text-blue-600 text-xs hover:text-blue-800 hover:underline flex items-center justify-center"
