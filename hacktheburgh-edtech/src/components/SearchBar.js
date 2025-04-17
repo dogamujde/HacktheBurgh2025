@@ -362,13 +362,20 @@ const SearchBar = ({ onSearch, onFilterChange, currentFilters }) => {
   
   const handleDeliveryMethodChange = (e) => {
     const value = e.target.value;
+    console.log('Delivery method changed to:', value);
     setDeliveryMethod(value);
     
-    // Update active filters with the new delivery method
-    setActiveFilters(prev => ({
-      ...prev,
+    // Update active filters with the new delivery method and trigger parent update immediately
+    const updatedFilters = {
+      ...activeFilters,
       deliveryMethod: value
-    }));
+    };
+    setActiveFilters(updatedFilters);
+    
+    // Immediately notify parent of the change
+    if (onFilterChange) {
+      onFilterChange(updatedFilters);
+    }
   };
   
   const applyAdvancedSearch = () => {
@@ -732,7 +739,7 @@ const SearchBar = ({ onSearch, onFilterChange, currentFilters }) => {
               <div className="mb-4">
                 <label className="block text-sm font-medium text-gray-700 mb-1">Year</label>
                 <div className="flex flex-wrap gap-2">
-                  {[1, 2, 3, 4, 5].map((year) => (
+                  {[1, 2, 3, 4].map((year) => (
                     <label key={year} className="inline-flex items-center">
                       <input 
                         type="checkbox" 
@@ -797,9 +804,9 @@ const SearchBar = ({ onSearch, onFilterChange, currentFilters }) => {
                   className="w-full p-2 border border-gray-300 rounded focus:ring-2 focus:ring-blue-500 focus:border-blue-500"
                 >
                   <option value="">Any</option>
-                  <option value="in-person">In-Person</option>
-                  <option value="online">Online</option>
-                  <option value="hybrid">Hybrid</option>
+                  <option value="In-Person">In-Person</option>
+                  <option value="Online">Online</option>
+                  <option value="Hybrid">Hybrid</option>
                 </select>
               </div>
               
@@ -941,7 +948,7 @@ const SearchBar = ({ onSearch, onFilterChange, currentFilters }) => {
             {/* Delivery Method */}
             {deliveryMethod && (
               <div className="inline-flex items-center bg-teal-100 text-teal-800 px-3 py-1 rounded-full text-sm">
-                {deliveryMethod === 'in-person' ? 'In-Person' : deliveryMethod === 'online' ? 'Online' : 'Hybrid'}
+                {deliveryMethod}
               </div>
             )}
             

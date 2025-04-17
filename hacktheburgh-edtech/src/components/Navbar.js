@@ -46,7 +46,7 @@ const Navbar = () => {
             <form onSubmit={handleSearch} className="relative hidden md:block">
               <input
                 type="text"
-                placeholder="Search courses..."
+                placeholder="Search..."
                 className="bg-blue-800 text-white px-4 py-2 rounded-full focus:outline-none focus:ring-2 focus:ring-blue-400 w-56"
                 value={searchQuery}
                 onChange={(e) => setSearchQuery(e.target.value)}
@@ -91,7 +91,7 @@ const Navbar = () => {
           <form onSubmit={handleSearch} className="relative mt-2">
             <input
               type="text"
-              placeholder="Search courses..."
+              placeholder="Search..."
               className="bg-blue-700 text-white px-4 py-2 rounded-full focus:outline-none focus:ring-2 focus:ring-blue-400 w-full"
               value={searchQuery}
               onChange={(e) => setSearchQuery(e.target.value)}

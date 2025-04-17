@@ -164,6 +164,67 @@ export default async function handler(
     console.log(`Processed ${totalProcessed} files, ${totalInvalid} invalid, found ${allCourses.length} courses`);
     console.log('Schools checked:', schoolsChecked);
     
+    // Filter based on years
+    if (years && Array.isArray(years) && years.length > 0) {
+      allCourses = allCourses.filter(course => {
+        return years.some(year => {
+          const yearNum = parseInt(year);
+          if (isNaN(yearNum)) return false;
+
+          // Check course code pattern (e.g., INFR08XXX for Year 1)
+          if (course.code) {
+            const codeYear = parseInt(course.code.substring(4, 6));
+            if (!isNaN(codeYear)) {
+              // Map course code years to actual years (e.g., 08 -> Year 1)
+              const mappedYear = codeYear - 7;
+              if (mappedYear === yearNum) {
+                return true;
+              }
+            }
+          }
+
+          // Check explicit year mentions in various fields
+          const fields = [
+            course.name,
+            course.course_description,
+            course.credit_level,
+            course.level
+          ].filter(Boolean).map(field => field.toLowerCase());
+
+          for (const field of fields) {
+            // Check for various year patterns
+            if (
+              field.includes(`year ${yearNum}`) ||
+              field.includes(`${yearNum} year`) ||
+              field.includes(`${yearNum}st year`) ||
+              field.includes(`${yearNum}nd year`) ||
+              field.includes(`${yearNum}rd year`) ||
+              field.includes(`${yearNum}th year`) ||
+              field.includes(`year${yearNum}`) ||
+              field.includes(`y${yearNum}`)
+            ) {
+              return true;
+            }
+          }
+
+          return false;
+        });
+      });
+    }
+    
+    // Filter by delivery method
+    if (deliveryMethod) {
+      const deliveryMethodLower = deliveryMethod.toLowerCase();
+      
+      if (deliveryMethodLower === 'online') {
+        // If additional_class_delivery_information exists, it's an online course
+        allCourses = allCourses.filter(course => Boolean(course.additional_class_delivery_information));
+      } else if (deliveryMethodLower === 'in-person') {
+        // If additional_class_delivery_information doesn't exist, it's an in-person course
+        allCourses = allCourses.filter(course => !course.additional_class_delivery_information);
+      }
+    }
+    
     // Score and sort all matching courses
     if (search && typeof search === 'string') {
       const searchTerms = search.toLowerCase().split(' ').filter(term => term.length > 0);
@@ -343,6 +404,67 @@ function altPathHandler(req: NextApiRequest, res: NextApiResponse<ResponseData>)
     
     console.log(`Processed ${totalProcessed} files, ${totalInvalid} invalid, found ${allCourses.length} courses`);
     console.log('Schools checked:', schoolsChecked);
+    
+    // Filter based on years
+    if (years && Array.isArray(years) && years.length > 0) {
+      allCourses = allCourses.filter(course => {
+        return years.some(year => {
+          const yearNum = parseInt(year);
+          if (isNaN(yearNum)) return false;
+
+          // Check course code pattern (e.g., INFR08XXX for Year 1)
+          if (course.code) {
+            const codeYear = parseInt(course.code.substring(4, 6));
+            if (!isNaN(codeYear)) {
+              // Map course code years to actual years (e.g., 08 -> Year 1)
+              const mappedYear = codeYear - 7;
+              if (mappedYear === yearNum) {
+                return true;
+              }
+            }
+          }
+
+          // Check explicit year mentions in various fields
+          const fields = [
+            course.name,
+            course.course_description,
+            course.credit_level,
+            course.level
+          ].filter(Boolean).map(field => field.toLowerCase());
+
+          for (const field of fields) {
+            // Check for various year patterns
+            if (
+              field.includes(`year ${yearNum}`) ||
+              field.includes(`${yearNum} year`) ||
+              field.includes(`${yearNum}st year`) ||
+              field.includes(`${yearNum}nd year`) ||
+              field.includes(`${yearNum}rd year`) ||
+              field.includes(`${yearNum}th year`) ||
+              field.includes(`year${yearNum}`) ||
+              field.includes(`y${yearNum}`)
+            ) {
+              return true;
+            }
+          }
+
+          return false;
+        });
+      });
+    }
+    
+    // Filter by delivery method
+    if (deliveryMethod) {
+      const deliveryMethodLower = deliveryMethod.toLowerCase();
+      
+      if (deliveryMethodLower === 'online') {
+        // If additional_class_delivery_information exists, it's an online course
+        allCourses = allCourses.filter(course => Boolean(course.additional_class_delivery_information));
+      } else if (deliveryMethodLower === 'in-person') {
+        // If additional_class_delivery_information doesn't exist, it's an in-person course
+        allCourses = allCourses.filter(course => !course.additional_class_delivery_information);
+      }
+    }
     
     // Score and sort all matching courses
     if (search && typeof search === 'string') {

@@ -561,205 +561,114 @@ export default function Home() {
     if (activeFilters.deliveryMethod && coursesToFilter) {
       const deliveryMethodLower = activeFilters.deliveryMethod.toLowerCase();
       
-      filteredCourses = filteredCourses.filter(course => {
-        // Check course delivery field
-        const courseDelivery = (course.delivery_method || course.delivery || '').toLowerCase();
-        // Check course name which often contains delivery info
-        const courseName = (course.name || '').toLowerCase();
-        // Also check descriptions for delivery method info
-        const courseDescription = (course.course_description || '').toLowerCase();
-        
-        if (deliveryMethodLower === 'on-campus') {
-          return courseDelivery.includes('campus') || 
-                 courseDelivery.includes('in person') || 
-                 courseDelivery.includes('face-to-face') ||
-                 courseDelivery.includes('in-person') ||
-                 courseDelivery.includes('on site') ||
-                 courseDelivery.includes('on-site') ||
-                 courseDelivery.includes('classroom') ||
-                 // Check course name for delivery info
-                 courseName.includes('campus') ||
-                 courseName.includes('in person') ||
-                 courseName.includes('in-person') ||
-                 courseName.includes('on site') ||
-                 courseName.includes('face-to-face') ||
-                 // Also check description
-                 courseDescription.includes('campus') ||
-                 courseDescription.includes('in person') ||
-                 courseDescription.includes('in-person') ||
-                 courseDescription.includes('on site') ||
-                 courseDescription.includes('on-site') ||
-                 courseDescription.includes('face-to-face') ||
-                 courseDescription.includes('classroom');
-        } else if (deliveryMethodLower === 'online') {
-          return courseDelivery.includes('online') || 
-                 courseDelivery.includes('remote') || 
-                 courseDelivery.includes('distance') ||
-                 courseDelivery.includes('virtual') ||
-                 courseDelivery.includes('web-based') ||
-                 courseDelivery.includes('digital') ||
-                 // Check course name for delivery info
-                 courseName.includes('online') ||
-                 courseName.includes('remote') ||
-                 courseName.includes('distance learning') ||
-                 courseName.includes('distance-learning') ||
-                 courseName.includes('virtual') ||
-                 courseName.includes('web-based') ||
-                 courseName.includes('digital') ||
-                 // Also check description
-                 courseDescription.includes('online') ||
-                 courseDescription.includes('remote') ||
-                 courseDescription.includes('distance') ||
-                 courseDescription.includes('virtual') ||
-                 courseDescription.includes('web-based') ||
-                 courseDescription.includes('digital');
-        } else if (deliveryMethodLower === 'hybrid') {
-          return courseDelivery.includes('hybrid') || 
-                 courseDelivery.includes('blended') ||
-                 courseDelivery.includes('mix of') ||
-                 courseDelivery.includes('mixed') ||
-                 courseDelivery.includes('combination') ||
-                 courseDelivery.includes('both online and') ||
-                 // Check course name for delivery info
-                 courseName.includes('hybrid') ||
-                 courseName.includes('blended') ||
-                 courseName.includes('mixed mode') ||
-                 courseName.includes('combined') ||
-                 // Also check description
-                 courseDescription.includes('hybrid') ||
-                 courseDescription.includes('blended') ||
-                 courseDescription.includes('mix of') ||
-                 courseDescription.includes('mixed') ||
-                 courseDescription.includes('combination') ||
-                 courseDescription.includes('both online and');
-        }
-        
-        return true; // If no delivery method specified or no match criteria
-      });
+      if (deliveryMethodLower === 'online') {
+        filteredCourses = filteredCourses.filter(course => {
+          // Check all possible fields for online indicators
+          const description = (course.description || course.course_description || '').toLowerCase();
+          const additionalInfo = (course.additional_class_delivery_information || '').toLowerCase();
+          const additionalCosts = (course.additional_costs || '').toLowerCase();
+          
+          const onlinePatterns = [
+            'taught entirely online',
+            'distance learning',
+            'delivered online',
+            'online course',
+            'online module',
+            'online learning',
+            'online teaching',
+            'virtual learning',
+            'online distance',
+            'internet access required',
+            'computer equipment and internet access'
+          ];
+          
+          // Check if any online pattern is found in any field
+          return onlinePatterns.some(pattern => 
+            description.includes(pattern) || 
+            additionalInfo.includes(pattern) || 
+            additionalCosts.includes(pattern)
+          );
+        });
+      } else if (deliveryMethodLower === 'in-person') {
+        filteredCourses = filteredCourses.filter(course => {
+          const description = (course.description || course.course_description || '').toLowerCase();
+          const additionalInfo = (course.additional_class_delivery_information || '').toLowerCase();
+          const additionalCosts = (course.additional_costs || '').toLowerCase();
+          
+          // First check for online indicators
+          const onlinePatterns = [
+            'taught entirely online',
+            'distance learning',
+            'delivered online',
+            'online course',
+            'online module',
+            'online learning',
+            'online teaching',
+            'virtual learning',
+            'online distance',
+            'internet access required',
+            'computer equipment and internet access'
+          ];
+          
+          // If any online pattern is found, it's not in-person
+          const hasOnlineIndicators = onlinePatterns.some(pattern => 
+            description.includes(pattern) || 
+            additionalInfo.includes(pattern) || 
+            additionalCosts.includes(pattern)
+          );
+          
+          if (hasOnlineIndicators) {
+            return false;
+          }
+          
+          // Look for in-person indicators
+          const inPersonPatterns = [
+            'lecture',
+            'tutorial',
+            'workshop',
+            'seminar',
+            'laboratory',
+            'studio',
+            'classroom',
+            'on campus'
+          ];
+          
+          // Must have at least one in-person indicator
+          return inPersonPatterns.some(pattern =>
+            description.includes(pattern) || 
+            additionalInfo.includes(pattern)
+          );
+        });
+      }
+      
       console.log(`After delivery method filter: ${filteredCourses.length} courses`);
     }
     
     // Filter based on years
     if (activeFilters.years && activeFilters.years.length > 0) {
       filteredCourses = filteredCourses.filter(course => {
-        // First check credit_level which is the most reliable source
+        // Check credit_level for explicit year information - most reliable source
         if (course.credit_level && typeof course.credit_level === 'string') {
           const creditLevelLower = course.credit_level.toLowerCase();
           
-          // Look for year indicators in credit_level
-          const hasExplicitYear = activeFilters.years.some(year => {
-            // Convert year to number if it's a string
-            const numericYear = typeof year === 'string' ? parseInt(year) : year;
-            
-            // Look for explicit year indicators in credit_level (e.g., "SCQF Level 10 (Year 3 Undergraduate)")
-            return creditLevelLower.includes(`year ${numericYear}`) || 
-                   creditLevelLower.includes(`(year ${numericYear})`) ||
-                   creditLevelLower.includes(`year${numericYear}`) ||
-                   creditLevelLower.includes(`${numericYear}st year`) ||
-                   creditLevelLower.includes(`${numericYear}nd year`) ||
-                   creditLevelLower.includes(`${numericYear}rd year`) ||
-                   creditLevelLower.includes(`${numericYear}th year`);
-          });
-          
-          if (hasExplicitYear) {
-            return true;
-          }
-          
-          // If no explicit year, check SCQF level to infer year
+          // First check for explicit year mentions in credit_level like "(Year 1 Undergraduate)"
           return activeFilters.years.some(year => {
             const numericYear = typeof year === 'string' ? parseInt(year) : year;
-            
-            // Map years to SCQF levels
-            return (numericYear === 1 && (
-                    creditLevelLower.includes('scqf level 07') || 
-                    creditLevelLower.includes('scqf level 08') || 
-                    creditLevelLower.includes('scqf level 7') || 
-                    creditLevelLower.includes('scqf level 8')
-                  )) ||
-                  (numericYear === 2 && (
-                    creditLevelLower.includes('scqf level 09') || 
-                    creditLevelLower.includes('scqf level 9')
-                  )) ||
-                  (numericYear === 3 && (
-                    creditLevelLower.includes('scqf level 10')
-                  )) ||
-                  (numericYear === 4 && (
-                    creditLevelLower.includes('scqf level 11')
-                  )) ||
-                  (numericYear === 5 && (
-                    creditLevelLower.includes('scqf level 12')
-                  ));
-          });
-        } else if (course.level && typeof course.level === 'string') {
-          const levelLower = course.level.toLowerCase();
-          
-          return activeFilters.years.some(year => {
-            const numericYear = typeof year === 'string' ? parseInt(year) : year;
-            
-            // Check various year indicators in the level text
-            return levelLower.includes(`year ${numericYear}`) || 
-                   levelLower.includes(`(year ${numericYear})`) ||
-                   levelLower.includes(`year${numericYear}`) ||
-                   levelLower.includes(`${numericYear}st year`) ||
-                   levelLower.includes(`${numericYear}nd year`) ||
-                   levelLower.includes(`${numericYear}rd year`) ||
-                   levelLower.includes(`${numericYear}th year`) ||
-                   levelLower.includes(`level ${numericYear}`) ||
-                   // Improved SCQF level mapping
-                   (numericYear === 1 && (
-                     levelLower.includes('scqf level 07') || 
-                     levelLower.includes('scqf level 08') || 
-                     levelLower.includes('scqf level 7') || 
-                     levelLower.includes('scqf level 8') ||
-                     levelLower.includes('scqf 7') ||
-                     levelLower.includes('scqf 8') ||
-                     levelLower.includes('level 7') ||
-                     levelLower.includes('level 8')
-                   )) ||
-                   (numericYear === 2 && (
-                     levelLower.includes('scqf level 09') || 
-                     levelLower.includes('scqf level 9') ||
-                     levelLower.includes('scqf 9') ||
-                     levelLower.includes('level 9')
-                   )) ||
-                   (numericYear === 3 && (
-                     levelLower.includes('scqf level 10') ||
-                     levelLower.includes('scqf 10') ||
-                     levelLower.includes('level 10')
-                   )) ||
-                   (numericYear === 4 && (
-                     levelLower.includes('scqf level 11') ||
-                     levelLower.includes('scqf 11') ||
-                     levelLower.includes('level 11')
-                   )) ||
-                   (numericYear === 5 && (
-                     levelLower.includes('scqf level 12') ||
-                     levelLower.includes('scqf 12') ||
-                     levelLower.includes('level 12')
-                   ));
-          });
-        } else {
-          // Try to infer year from course code or name
-          const courseCode = (course.code || '').toLowerCase();
-          const matchesYearCode = activeFilters.years.some(year => {
-            const numericYear = typeof year === 'string' ? parseInt(year) : year;
-            const regex = new RegExp(`^[a-z]+${numericYear}\\d{2,3}$`, 'i');
-            return regex.test(courseCode);
-          });
-          
-          if (matchesYearCode) return true;
-          
-          // Check the course name/title too
-          const courseName = (course.name || '').toLowerCase();
-          return activeFilters.years.some(year => {
-            const numericYear = typeof year === 'string' ? parseInt(year) : year;
-            return courseName.includes(`year ${numericYear}`) || 
-                   courseName.includes(`${numericYear}st year`) ||
-                   courseName.includes(`${numericYear}nd year`) ||
-                   courseName.includes(`${numericYear}rd year`) ||
-                   courseName.includes(`${numericYear}th year`);
+            return creditLevelLower.includes(`(year ${numericYear}`) ||
+                   creditLevelLower.includes(`year ${numericYear}`);
           });
         }
+
+        // If no credit_level or no match found, check course name as fallback
+        const courseName = (course.name || '').toLowerCase();
+        return activeFilters.years.some(year => {
+          const numericYear = typeof year === 'string' ? parseInt(year) : year;
+          return courseName.includes(`year ${numericYear}`) ||
+                 courseName.includes(`${numericYear}st year`) ||
+                 courseName.includes(`${numericYear}nd year`) ||
+                 courseName.includes(`${numericYear}rd year`) ||
+                 courseName.includes(`${numericYear}th year`);
+        });
       });
       console.log(`After years filter: ${filteredCourses.length} courses`);
     }
