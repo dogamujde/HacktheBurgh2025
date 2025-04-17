@@ -131,12 +131,17 @@ export default async function handler(
               
               // Search filter
               if (search && typeof search === 'string') {
-                const searchLower = search.toLowerCase();
-                const nameMatch = (course.name || course.title || '').toLowerCase().includes(searchLower);
-                const codeMatch = (course.code || '').toLowerCase().includes(searchLower);
-                const descMatch = (course.course_description || '').toLowerCase().includes(searchLower);
+                const searchTerms = search.toLowerCase().split(' ').filter(term => term.length > 0);
+                const courseName = (course.name || course.title || '').toLowerCase();
+                const courseCode = (course.code || '').toLowerCase();
+                const courseDesc = (course.course_description || '').toLowerCase();
                 
-                return nameMatch || codeMatch || descMatch;
+                // Check if any search term matches any field
+                return searchTerms.some(term => 
+                  courseName.includes(term) ||
+                  courseCode.includes(term) ||
+                  (courseDesc && courseDesc.includes(term))
+                );
               }
               
               return true;
@@ -158,6 +163,60 @@ export default async function handler(
     
     console.log(`Processed ${totalProcessed} files, ${totalInvalid} invalid, found ${allCourses.length} courses`);
     console.log('Schools checked:', schoolsChecked);
+    
+    // Score and sort all matching courses
+    if (search && typeof search === 'string') {
+      const searchTerms = search.toLowerCase().split(' ').filter(term => term.length > 0);
+      
+      allCourses = allCourses.map(course => {
+        const courseName = (course.name || course.title || '').toLowerCase();
+        const courseCode = (course.code || '').toLowerCase();
+        const courseDesc = (course.course_description || '').toLowerCase();
+        
+        let score = 0;
+        
+        // Calculate score for each search term
+        searchTerms.forEach(term => {
+          // Exact title match
+          if (courseName === term) {
+            score += 1000;
+          }
+          // Title starts with term
+          else if (courseName.startsWith(term)) {
+            score += 500;
+          }
+          // Title contains term as a whole word
+          else if (new RegExp(`\\b${term}\\b`).test(courseName)) {
+            score += 200;
+          }
+          // Title contains term
+          else if (courseName.includes(term)) {
+            score += 100;
+          }
+          // Code contains term
+          if (courseCode.includes(term)) {
+            score += 50;
+          }
+          // Description contains term as a whole word
+          if (courseDesc && new RegExp(`\\b${term}\\b`).test(courseDesc)) {
+            score += 20;
+          }
+          // Description contains term
+          else if (courseDesc && courseDesc.includes(term)) {
+            score += 10;
+          }
+        });
+
+        // Bonus for matching all terms in title
+        if (searchTerms.every(term => courseName.includes(term))) {
+          score += 300;
+        }
+
+        return { ...course, searchScore: score };
+      })
+      .sort((a, b) => (b.searchScore || 0) - (a.searchScore || 0))
+      .map(({ searchScore, ...course }) => course);
+    }
     
     res.status(200).json({ courses: allCourses });
   } catch (error) {
@@ -252,12 +311,17 @@ function altPathHandler(req: NextApiRequest, res: NextApiResponse<ResponseData>)
               
               // Search filter
               if (search && typeof search === 'string') {
-                const searchLower = search.toLowerCase();
-                const nameMatch = (course.name || course.title || '').toLowerCase().includes(searchLower);
-                const codeMatch = (course.code || '').toLowerCase().includes(searchLower);
-                const descMatch = (course.course_description || '').toLowerCase().includes(searchLower);
+                const searchTerms = search.toLowerCase().split(' ').filter(term => term.length > 0);
+                const courseName = (course.name || course.title || '').toLowerCase();
+                const courseCode = (course.code || '').toLowerCase();
+                const courseDesc = (course.course_description || '').toLowerCase();
                 
-                return nameMatch || codeMatch || descMatch;
+                // Check if any search term matches any field
+                return searchTerms.some(term => 
+                  courseName.includes(term) ||
+                  courseCode.includes(term) ||
+                  (courseDesc && courseDesc.includes(term))
+                );
               }
               
               return true;
@@ -279,6 +343,60 @@ function altPathHandler(req: NextApiRequest, res: NextApiResponse<ResponseData>)
     
     console.log(`Processed ${totalProcessed} files, ${totalInvalid} invalid, found ${allCourses.length} courses`);
     console.log('Schools checked:', schoolsChecked);
+    
+    // Score and sort all matching courses
+    if (search && typeof search === 'string') {
+      const searchTerms = search.toLowerCase().split(' ').filter(term => term.length > 0);
+      
+      allCourses = allCourses.map(course => {
+        const courseName = (course.name || course.title || '').toLowerCase();
+        const courseCode = (course.code || '').toLowerCase();
+        const courseDesc = (course.course_description || '').toLowerCase();
+        
+        let score = 0;
+        
+        // Calculate score for each search term
+        searchTerms.forEach(term => {
+          // Exact title match
+          if (courseName === term) {
+            score += 1000;
+          }
+          // Title starts with term
+          else if (courseName.startsWith(term)) {
+            score += 500;
+          }
+          // Title contains term as a whole word
+          else if (new RegExp(`\\b${term}\\b`).test(courseName)) {
+            score += 200;
+          }
+          // Title contains term
+          else if (courseName.includes(term)) {
+            score += 100;
+          }
+          // Code contains term
+          if (courseCode.includes(term)) {
+            score += 50;
+          }
+          // Description contains term as a whole word
+          if (courseDesc && new RegExp(`\\b${term}\\b`).test(courseDesc)) {
+            score += 20;
+          }
+          // Description contains term
+          else if (courseDesc && courseDesc.includes(term)) {
+            score += 10;
+          }
+        });
+
+        // Bonus for matching all terms in title
+        if (searchTerms.every(term => courseName.includes(term))) {
+          score += 300;
+        }
+
+        return { ...course, searchScore: score };
+      })
+      .sort((a, b) => (b.searchScore || 0) - (a.searchScore || 0))
+      .map(({ searchScore, ...course }) => course);
+    }
     
     res.status(200).json({ courses: allCourses });
   } catch (error) {
